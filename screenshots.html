@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Privaro — App Store screenshots</title>
+<style>
+  :root{
+    --bg:#070810; --text:#f4f6fa; --muted:#aab0c0; --muted2:#6b7280;
+    --accent:#6d83ff; --accent2:#a07bff; --line:rgba(255,255,255,.10);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#05060a;color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Inter",system-ui,sans-serif;-webkit-font-smoothing:antialiased;padding:28px 20px 50px}
+  .pagehead{text-align:center;color:var(--muted2);font-size:13px;letter-spacing:.05em;text-transform:uppercase;margin-bottom:26px}
+  .accent{background:linear-gradient(120deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .strip{display:flex;flex-wrap:wrap;gap:22px;justify-content:center;align-items:flex-start}
+
+  .shot{width:300px;height:650px;border-radius:30px;overflow:hidden;position:relative;display:flex;flex-direction:column;align-items:center;padding:34px 22px 0;background:radial-gradient(130% 80% at 50% 0%,#1a1f3a 0%,#0c0e1a 55%,#070810 100%);border:1px solid var(--line)}
+  .shot .hl{font-size:23px;font-weight:700;line-height:1.13;letter-spacing:-.02em;text-align:center}
+  .shot .sub{font-size:12px;color:var(--muted);text-align:center;margin-top:8px;max-width:220px;line-height:1.45}
+
+  .phone{margin-top:auto;width:218px;height:430px;border-radius:34px;background:#0a0c13;border:1px solid rgba(255,255,255,.16);box-shadow:0 24px 60px rgba(0,0,0,.5);padding:9px;position:absolute;bottom:-22px;left:50%;transform:translateX(-50%)}
+  .scr{width:100%;height:100%;border-radius:26px;overflow:hidden;position:relative;background:#0a0c11;display:flex;flex-direction:column}
+  .island{width:62px;height:17px;background:#000;border-radius:10px;position:absolute;top:8px;left:50%;transform:translateX(-50%);z-index:5}
+
+  .lockwrap{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding-bottom:40px}
+  .lockmark{width:62px;height:62px;border-radius:50%;background:rgba(255,255,255,.05);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;position:relative}
+  .lockmark::before{content:"";position:absolute;width:108px;height:108px;border-radius:50%;background:radial-gradient(circle,rgba(109,131,255,.30),transparent 68%);z-index:-1}
+  .lockmark svg{width:30px;height:30px}
+  .lt{font-size:17px;font-weight:700;margin-top:14px}
+  .ls{font-size:11px;color:var(--muted);margin-top:3px}
+  .faceidbtn{position:absolute;bottom:46px;left:16px;right:16px;background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:13px;padding:11px;text-align:center;font-size:12px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:7px}
+  .usepass{position:absolute;bottom:22px;left:0;right:0;text-align:center;font-size:11px;font-weight:600;color:var(--accent)}
+
+  .topbar{display:flex;align-items:center;justify-content:space-between;padding:28px 14px 6px}
+  .topbar h4{font-size:17px;font-weight:700}
+  .topbar .circ{width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center}
+  .search{margin:8px 14px;background:rgba(255,255,255,.06);border-radius:10px;padding:8px 12px;font-size:11px;color:var(--muted2);display:flex;align-items:center;gap:7px}
+  .chips{display:flex;gap:6px;padding:2px 14px 10px;font-size:10px}
+  .chips .c{background:rgba(255,255,255,.07);border-radius:999px;padding:5px 10px;color:var(--muted)}
+  .chips .c.on{background:linear-gradient(120deg,var(--accent),var(--accent2));color:#fff}
+  .pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;padding:0 14px}
+  .pgrid div{aspect-ratio:1;border-radius:3px}
+  .tabbar{position:absolute;bottom:0;left:0;right:0;height:54px;background:rgba(12,14,20,.92);border-top:1px solid var(--line);display:flex;justify-content:space-around;align-items:center;padding-bottom:8px}
+  .tab{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:9px;color:var(--muted2)}
+  .tab.on{color:var(--accent)}
+  .tab svg{width:18px;height:18px}
+
+  .dots{display:flex;gap:12px;margin:18px 0}
+  .dots span{width:11px;height:11px;border-radius:50%;border:1.5px solid var(--muted)}
+  .dots span.f{background:var(--accent);border-color:var(--accent)}
+  .keypad{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .keypad div{width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:500}
+
+  .seccard{margin:0 14px 8px;background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:12px;padding:11px;display:flex;gap:10px;align-items:center}
+  .seccard .ic{width:30px;height:30px;border-radius:9px;background:rgba(109,131,255,.14);border:1px solid rgba(109,131,255,.3);display:flex;align-items:center;justify-content:center;flex:none}
+  .seccard .ic svg{width:16px;height:16px;color:var(--accent)}
+  .seccard b{font-size:10.5px;font-weight:600;display:block}
+  .seccard p{font-size:9px;color:var(--muted);line-height:1.35;margin-top:1px}
+
+  .arow{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid rgba(255,255,255,.05)}
+  .arow .ai{width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex:none}
+  .arow .ai svg{width:16px;height:16px;color:#fff}
+  .arow b{font-size:10.5px;font-weight:600;display:block}
+  .arow span{font-size:9px;color:var(--muted2)}
+  .sectlabel{font-size:10px;font-weight:600;color:var(--muted2);text-transform:uppercase;letter-spacing:.05em;padding:14px 14px 6px}
+</style>
+</head>
+<body>
+<div class="pagehead">Privaro · App Store screenshots (concept)</div>
+<div class="strip">
+
+  <div class="shot">
+    <div class="hl">For your <span class="accent">eyes only</span></div>
+    <div class="sub">Locked behind Face ID and a passcode only you know.</div>
+    <div class="phone"><div class="scr"><div class="island"></div>
+      <div class="lockwrap">
+        <div class="lockmark"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2 L20 5.2 V11 C20 16.2 16.4 20.2 12 22 C7.6 20.2 4 16.2 4 11 V5.2 Z" fill="#fff" opacity=".95"/><rect x="9" y="11" width="6" height="5.5" rx="1.3" fill="#0a0c11"/><path d="M10 11 V9.6 a2 2 0 0 1 4 0 V11" stroke="#0a0c11" stroke-width="1.4" fill="none"/></svg></div>
+        <div class="lt">Privaro</div><div class="ls">Your vault is locked</div>
+      </div>
+      <div class="faceidbtn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="9" cy="10" r="1"/><circle cx="15" cy="10" r="1"/><path d="M9 15c1 1 5 1 6 0"/></svg>Unlock with Face ID</div>
+      <div class="usepass">Use Passcode</div>
+    </div></div>
+  </div>
+
+  <div class="shot">
+    <div class="hl">Your <span class="accent">private</span> gallery</div>
+    <div class="sub">Every photo and video, encrypted on your device.</div>
+    <div class="phone"><div class="scr"><div class="island"></div>
+      <div class="topbar"><h4>Vault</h4><div class="circ"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></div></div>
+      <div class="search"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg>Search by filename or tag</div>
+      <div class="chips"><div class="c on">All</div><div class="c">Photos</div><div class="c">Videos</div><div class="c">Favorites</div></div>
+      <div class="pgrid">
+        <div style="background:linear-gradient(135deg,#2a2030,#191320)"></div><div style="background:linear-gradient(135deg,#1d2a33,#12202a)"></div><div style="background:linear-gradient(135deg,#332a1d,#241c12)"></div>
+        <div style="background:linear-gradient(135deg,#2a1d2f,#1c1320)"></div><div style="background:linear-gradient(135deg,#1d3328,#12241a)"></div><div style="background:linear-gradient(135deg,#33291d,#241c12)"></div>
+        <div style="background:linear-gradient(135deg,#222a33,#141d26)"></div><div style="background:linear-gradient(135deg,#2f2333,#1f1424)"></div><div style="background:linear-gradient(135deg,#1d2d33,#122026)"></div>
+      </div>
+      <div class="tabbar">
+        <div class="tab on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Vault</div>
+        <div class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></svg>Albums</div>
+        <div class="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19 12a7 7 0 0 0-.1-1l2-1.5-2-3.4-2.3 1a7 7 0 0 0-1.7-1l-.3-2.6H10l-.3 2.6a7 7 0 0 0-1.7 1l-2.3-1-2 3.4 2 1.5a7 7 0 0 0 0 2l-2 1.5 2 3.4 2.3-1a7 7 0 0 0 1.7 1l.3 2.6h3.4l.3-2.6a7 7 0 0 0 1.7-1l2.3 1 2-3.4-2-1.5a7 7 0 0 0 .1-1Z"/></svg>Settings</div>
+      </div>
+    </div></div>
+  </div>
+
+  <div class="shot">
+    <div class="hl">A vault within a <span class="accent">vault</span></div>
+    <div class="sub">A second passcode opens a believable decoy, so you never reveal your real one.</div>
+    <div class="phone"><div class="scr"><div class="island"></div>
+      <div class="lockwrap" style="justify-content:flex-start;padding-top:50px">
+        <div class="lockmark" style="width:46px;height:46px"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2 L20 5.2 V11 C20 16.2 16.4 20.2 12 22 C7.6 20.2 4 16.2 4 11 V5.2 Z" fill="#fff" opacity=".95"/></svg></div>
+        <div class="ls" style="margin-top:12px;font-size:12px;color:#fff">Enter passcode</div>
+        <div class="dots"><span class="f"></span><span class="f"></span><span class="f"></span><span></span><span></span><span></span></div>
+        <div class="keypad">
+          <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div style="background:none"></div><div>0</div><div style="background:none"></div>
+        </div>
+      </div>
+    </div></div>
+  </div>
+
+  <div class="shot">
+    <div class="hl"><span class="accent">Serious</span> encryption, built in</div>
+    <div class="sub">AES-256, guarded by Face ID, and never in the cloud.</div>
+    <div class="phone"><div class="scr"><div class="island"></div>
+      <div class="sectlabel" style="padding-top:30px">How Privaro protects you</div>
+      <div class="seccard"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></div><div><b>Sealed with AES-256</b><p>Photos, captions, and filenames are encrypted on disk.</p></div></div>
+      <div class="seccard"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="9" cy="10" r="1"/><circle cx="15" cy="10" r="1"/><path d="M9 15c1 1 5 1 6 0"/></svg></div><div><b>Locked behind Face ID</b><p>The key is guarded by your device and never leaves it.</p></div></div>
+      <div class="seccard"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 18a4 4 0 0 1 0-8 6 6 0 0 1 11.5-2A4.5 4.5 0 0 1 18 18Z"/><path d="m3 3 18 18"/></svg></div><div><b>Nothing in the cloud</b><p>No account, no servers, and out of every backup.</p></div></div>
+      <div class="seccard"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l8 3v5c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6Z"/><path d="m9 12 2 2 4-4"/></svg></div><div><b>A vault within a vault</b><p>A decoy passcode keeps your real photos hidden.</p></div></div>
+    </div></div>
+  </div>
+
+  <div class="shot">
+    <div class="hl">Organize <span class="accent">everything</span></div>
+    <div class="sub">Albums, folders, and tags, all yours to arrange.</div>
+    <div class="phone"><div class="scr"><div class="island"></div>
+      <div class="topbar" style="padding-top:30px"><h4>Albums</h4><div class="circ"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></div></div>
+      <div class="sectlabel">Smart albums</div>
+      <div class="arow"><div class="ai" style="background:#3a3550"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg></div><div style="flex:1"><b>All Items</b><span>312 items</span></div></div>
+      <div class="arow"><div class="ai" style="background:#2c4a3a"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="m4 18 5-4 4 3 3-2 4 3"/></svg></div><div style="flex:1"><b>Photos</b><span>248</span></div></div>
+      <div class="arow"><div class="ai" style="background:#3a2c4a"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="m16 10 5-3v10l-5-3Z"/></svg></div><div style="flex:1"><b>Videos</b><span>64</span></div></div>
+      <div class="sectlabel">My albums</div>
+      <div class="arow"><div class="ai" style="background:#4a3a2c"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></svg></div><div style="flex:1"><b>Travel</b><span>41</span></div><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#6b7280" stroke-width="2"><path d="m9 6 6 6-6 6"/></svg></div>
+      <div class="arow"><div class="ai" style="background:#2c3a4a"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></svg><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" style="position:absolute;margin-left:18px;margin-top:-8px"><rect x="6" y="11" width="12" height="9" rx="2"/><path d="M9 11V8a3 3 0 0 1 6 0v3"/></svg></div><div style="flex:1"><b>Documents</b><span>Locked</span></div><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#6b7280" stroke-width="2"><path d="m9 6 6 6-6 6"/></svg></div>
+    </div></div>
+  </div>
+
+</div>
+</body>
+</html>
