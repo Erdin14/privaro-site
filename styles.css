@@ -247,3 +247,8 @@ footer .legal { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(-
 .feat { display: flex; gap: 16px; align-items: flex-start; }
 .feat h3 { font-size: 17.5px; margin-bottom: 6px; }
 .feat p { font-size: 14.5px; color: var(--muted); line-height: 1.6; }
+
+/* Official Apple "Download on the App Store" badge */
+.appstore-badge { display: inline-block; line-height: 0; transition: opacity .15s ease; }
+.appstore-badge:hover { opacity: .85; }
+.appstore-badge img { height: 54px; width: auto; display: block; }
