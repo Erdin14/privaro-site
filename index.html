@@ -90,12 +90,12 @@
       <span class="funfact-badge">Fun fact</span>
       <h2>To break into your vault, someone would have to:</h2>
       <ul class="funfact-list">
-        <li><span>1</span><p>Physically get your iPhone. There's no account and no server, so there's nothing to hack remotely.</p></li>
-        <li><span>2</span><p>Unlock the phone past your device passcode and Face ID.</p></li>
-        <li><span>3</span><p>Get past Privaro's own separate passcode and Face ID.</p></li>
-        <li><span>4</span><p>Lift your encryption key out of the iOS Keychain, where it's bound to that one device and won't budge without you.</p></li>
-        <li><span>5</span><p>Brute-force AES-256 encryption, which would take longer than the universe has existed.</p></li>
-        <li><span>6</span><p>And do all of it without tripping your duress passcode, which can wipe the real vault on the spot.</p></li>
+        <li><span>1</span><div class="funfact-step"><p>Physically get their hands on your iPhone.</p><p class="funfact-note">No account, no cloud, no server, so there's nothing to hack remotely. They'd need the actual device.</p></div></li>
+        <li><span>2</span><div class="funfact-step"><p>Unlock the phone past your device passcode and Face ID.</p><p class="funfact-note">iOS slows down repeated guesses and can erase the phone after too many failed attempts.</p></div></li>
+        <li><span>3</span><div class="funfact-step"><p>Get past Privaro's own separate passcode and Face ID.</p><p class="funfact-note">Separate from your phone's passcode, so unlocking the iPhone still leaves the vault locked.</p></div></li>
+        <li><span>4</span><div class="funfact-step"><p>Lift your encryption key out of the iOS Keychain.</p><p class="funfact-note">It's bound to that one iPhone and gated by Face ID, so it can't be copied off or pulled out by forensic tools.</p></div></li>
+        <li><span>5</span><div class="funfact-step"><p>Brute-force AES-256 encryption.</p><p class="funfact-note">Using every computer on Earth at once, this would still take far longer than the universe has existed.</p></div></li>
+        <li><span>6</span><div class="funfact-step"><p>And do all of it without tripping your duress passcode.</p><p class="funfact-note">Enter the wrong code under pressure and the real vault is erased instantly, with no recovery.</p></div></li>
       </ul>
       <p class="funfact-kicker">Realistically? It's easier to just ask you nicely.</p>
     </div>

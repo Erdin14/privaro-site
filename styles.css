@@ -262,3 +262,5 @@ footer .legal { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(-
 .funfact-list li span { flex: 0 0 28px; height: 28px; width: 28px; display: grid; place-items: center; border-radius: 50%; background: linear-gradient(115deg, var(--accent), var(--accent-2)); color: #fff; font-weight: 700; font-size: .85rem; margin-top: 1px; }
 .funfact-list li p { color: var(--muted); line-height: 1.5; margin: 0; }
 .funfact-kicker { margin-top: 22px; font-style: italic; color: var(--muted-2); text-align: center; }
+.funfact-step { flex: 1; }
+.funfact-list .funfact-note { font-size: .82rem; color: var(--muted-2); line-height: 1.45; margin-top: 3px; }
