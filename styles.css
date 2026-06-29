@@ -194,15 +194,18 @@ nav .row { display: flex; align-items: center; justify-content: space-between; h
 .cta-band p { font-size: 18px; color: var(--muted); max-width: 540px; margin: 0 auto 30px; }
 
 /* Footer */
-footer { border-top: 1px solid var(--line); padding: 48px 0 56px; }
-footer .row { display: flex; justify-content: space-between; gap: 28px; flex-wrap: wrap; }
+footer { padding: 48px 0 56px; }
+footer .row { display: flex; justify-content: center; align-items: center; gap: 56px; flex-wrap: wrap; text-align: left; }
+footer .fcol-left { max-width: 280px; }
+footer .fdivider { align-self: stretch; width: 1px; background: linear-gradient(to bottom, transparent, var(--line) 18%, var(--line) 82%, transparent); }
 footer .brand { font-size: 17px; }
-footer .tagline { font-size: 14px; color: var(--muted); margin-top: 10px; max-width: 280px; }
+footer .tagline { font-size: 14px; color: var(--muted); margin-top: 10px; }
 footer .cols { display: flex; gap: 64px; flex-wrap: wrap; }
 footer .col h4 { font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted-2); margin-bottom: 14px; font-weight: 600; }
 footer .col a { display: block; font-size: 15px; color: var(--muted); margin-bottom: 10px; }
 footer .col a:hover { color: var(--ink); }
-footer .legal { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 13.5px; color: var(--muted-2); }
+footer .legal { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 13.5px; color: var(--muted-2); text-align: center; }
+@media (max-width: 560px) { footer .fdivider { display: none; } footer .row { text-align: center; flex-direction: column; } }
 
 /* Scroll reveal */
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
