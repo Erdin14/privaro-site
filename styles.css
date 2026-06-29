@@ -12,6 +12,7 @@
   --accent: #3b76e0;
   --accent-2: #5b9bf0;
   --accent-ink: #2c5fc4;
+  --accent-soft: #e7f0fd;
   --radius: 16px;
   --radius-sm: 12px;
   --radius-lg: 24px;
@@ -153,7 +154,7 @@ nav .row { display: flex; align-items: center; justify-content: space-between; h
 .card:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: var(--line-strong); }
 .card .ic {
   width: 44px; height: 44px; border-radius: 12px;
-  background: #e7f0fd; color: var(--accent-ink);
+  background: var(--accent-soft); color: var(--accent-ink);
   display: flex; align-items: center; justify-content: center; margin-bottom: 16px;
 }
 .card .ic svg { width: 23px; height: 23px; }
@@ -238,7 +239,7 @@ footer .legal { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(-
 /* Feature list (open layout, not boxed panels) */
 .ic {
   width: 46px; height: 46px; border-radius: 13px;
-  background: #e7f0fd; color: var(--accent-ink);
+  background: var(--accent-soft); color: var(--accent-ink);
   display: flex; align-items: center; justify-content: center; flex-shrink: 0;
 }
 .ic svg { width: 24px; height: 24px; }
@@ -255,11 +256,11 @@ footer .legal { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(-
 
 /* Fun fact section */
 .funfact { max-width: 720px; margin: 0 auto; background: var(--bg-soft); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 34px; box-shadow: var(--shadow-sm); }
-.funfact-badge { display: inline-block; font-weight: 700; font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: #fff; background: var(--ink-soft); padding: 5px 12px; border-radius: 999px; margin-bottom: 14px; }
+.funfact-badge { display: inline-block; font-weight: 700; font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--bg); background: var(--ink-soft); padding: 5px 12px; border-radius: 999px; margin-bottom: 14px; }
 .funfact h2 { font-size: 1.4rem; line-height: 1.3; color: var(--ink); margin-bottom: 20px; }
 .funfact-list { list-style: none; display: flex; flex-direction: column; gap: 14px; margin: 0; padding: 0; }
 .funfact-list li { display: flex; gap: 13px; align-items: flex-start; }
-.funfact-list li span { flex: 0 0 28px; height: 28px; width: 28px; display: grid; place-items: center; border-radius: 50%; background: var(--ink-soft); color: #fff; font-weight: 700; font-size: .85rem; margin-top: 1px; }
+.funfact-list li span { flex: 0 0 28px; height: 28px; width: 28px; display: grid; place-items: center; border-radius: 50%; background: var(--ink-soft); color: var(--bg); font-weight: 700; font-size: .85rem; margin-top: 1px; }
 .funfact-list li p { color: var(--muted); line-height: 1.5; margin: 0; }
 .funfact-kicker { margin-top: 22px; font-style: italic; color: var(--muted-2); text-align: center; }
 .funfact-step { flex: 1; }
@@ -274,3 +275,28 @@ footer .legal { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(-
   .feat-split { flex-direction: column; gap: 40px; }
   .feat-split .funfact { flex: none; width: 100%; }
 }
+
+/* ===== Dark mode ===== */
+:root { color-scheme: light; }
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0b0d12; --bg-soft: #14171d; --surface: #161a21;
+  --ink: #f3f5f9; --ink-soft: #d6dae2; --muted: #9aa3b2; --muted-2: #717a88;
+  --line: #262b34; --line-strong: #343b47;
+  --accent: #5b9bf0; --accent-2: #7db0f5; --accent-ink: #9cc3f8;
+  --accent-soft: #182234;
+}
+[data-theme="dark"] nav { background: rgba(11, 13, 18, .8); }
+
+/* Theme toggle button */
+.theme-toggle { position: fixed; top: 16px; right: 16px; z-index: 60; width: 42px; height: 42px; display: grid; place-items: center; border-radius: 50%; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; box-shadow: var(--shadow-sm); transition: background .15s ease, border-color .15s ease, transform .15s ease; }
+.theme-toggle:hover { border-color: var(--line-strong); transform: translateY(-1px); }
+.theme-toggle svg { width: 20px; height: 20px; display: block; }
+.theme-toggle .icon-sun { display: none; }
+[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+
+/* App Store badge: black on light, white on dark */
+.appstore-badge .badge-dark { display: none; }
+[data-theme="dark"] .appstore-badge .badge-light { display: none; }
+[data-theme="dark"] .appstore-badge .badge-dark { display: block; }

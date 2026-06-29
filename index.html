@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script>(function(){try{var t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark'){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 <title>Privaro: Your photos &amp; videos, for your eyes only</title>
 <meta name="description" content="Privaro is a private, encrypted photo and video vault for iPhone. Everything is encrypted on your device. No account, no servers, no tracking." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,6 +12,10 @@
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+<button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle theme">
+  <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+  <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+</button>
 
 <!-- HERO -->
 <section class="hero hero-center">
@@ -21,7 +26,8 @@
     <p class="lead">A private, encrypted photo &amp; video vault for iPhone. Everything is locked behind strong encryption, right on your device. No account, no servers, no one but you.</p>
     <div class="cta-row">
       <a class="appstore-badge" href="#" aria-label="Download Privaro on the App Store">
-        <img src="appstore-badge.svg" alt="Download on the App Store" />
+        <img class="badge-light" src="appstore-badge.svg" alt="Download on the App Store" />
+        <img class="badge-dark" src="appstore-badge-white.svg" alt="Download on the App Store" />
       </a>
     </div>
     <p class="fineprint">Free to start · iOS 17.6 or later · optional Pro upgrade · (App Store link coming soon)</p>
@@ -132,5 +138,6 @@
   document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
 </script>
 
+<script src="theme.js"></script>
 </body>
 </html>
