@@ -3,38 +3,50 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<script>(function(){try{var t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark'){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 <title>Privaro: Your photos &amp; videos, for your eyes only</title>
 <meta name="description" content="Privaro is a private, encrypted photo and video vault for iPhone. Everything is encrypted on your device. No account, no servers, no tracking." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle theme">
-  <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-  <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-</button>
 
 <!-- HERO -->
-<section class="hero hero-center">
-  <div class="wrap reveal">
-    <img class="applogo" src="logo.png" width="92" height="92" alt="Privaro app icon" />
-    <div class="wordmark">Privaro</div>
-    <h1>Your photos &amp; videos,<br /><span class="gradient-text">for your eyes only.</span></h1>
-    <p class="lead">A private, encrypted photo &amp; video vault for iPhone. Everything is locked behind strong encryption, right on your device. No account, no servers, no one but you.</p>
-    <div class="cta-row">
-      <a class="appstore-badge" href="#" aria-label="Download Privaro on the App Store">
-        <img class="badge-light" src="appstore-badge.svg" alt="Download on the App Store" />
-        <img class="badge-dark" src="appstore-badge-white.svg" alt="Download on the App Store" />
+<section class="hero">
+  <div class="wrap">
+    <header class="site-head">
+      <a class="brand" href="#top">
+        <img class="applogo" src="logo.png" width="26" height="26" alt="" />
+        Privaro
       </a>
-    </div>
-    <p class="fineprint">Free to start · iOS 17.6 or later · optional Pro upgrade · (App Store link coming soon)</p>
-    <div class="trust" style="margin-top:26px;">
-      <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg> End-to-end encrypted</div>
-      <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h12a4 4 0 0 1 0 8H2"/></svg> No account needed</div>
-      <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"/><path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"/><path d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"/><line x1="2" y1="2" x2="22" y2="22"/></svg> No tracking, no data sold</div>
+      <nav class="headlinks">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </header>
+
+    <div class="hero-grid">
+      <div class="reveal">
+        <span class="eyebrow">on-device encryption</span>
+        <h1>Your photos and videos,<br /><span class="hl">for your eyes only.</span></h1>
+        <p class="lead">A private, encrypted vault for iPhone. Everything is locked behind strong encryption, right on your device. No account, no servers, no one but you.</p>
+        <a class="appstore-badge" href="#" aria-label="Download Privaro on the App Store">
+          <img src="appstore-badge-white.svg" alt="Download on the App Store" />
+        </a>
+        <p class="fineprint">free to start · iOS 17.6 or later · optional Pro · app store link coming soon</p>
+      </div>
+
+      <aside class="proof reveal" aria-label="What it takes to break in">
+        <div class="proof-title">to break in, someone would need to</div>
+        <ul class="proof-list">
+          <li><span class="n">01</span><span class="t">Physically hold your iPhone</span></li>
+          <li><span class="n">02</span><span class="t">Get past the phone's Face ID and passcode</span></li>
+          <li><span class="n">03</span><span class="t">Get past Privaro's own separate passcode</span></li>
+          <li><span class="n">04</span><span class="t">Brute-force AES-256 encryption</span></li>
+        </ul>
+        <div class="proof-foot">≈ 10<sup>50</sup> years at a trillion guesses per second</div>
+      </aside>
     </div>
   </div>
 </section>
@@ -42,63 +54,92 @@
 <!-- FEATURES -->
 <section class="section">
   <div class="wrap">
-    <div class="feat-split">
-      <div class="feat-list">
+    <div class="section-head reveal">
+      <span class="eyebrow">what's inside</span>
+      <h2>Built like a vault.</h2>
+      <p>Every layer runs on your iPhone. Nothing to hack remotely, because there's nothing out there to reach.</p>
+    </div>
+    <div class="features">
       <div class="feat reveal">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div>
-        <div>
-          <h3>On-device encryption</h3>
-          <p>Every photo, video and album is encrypted with AES-256 on your iPhone. The key never leaves your device.</p>
-        </div>
+        <h3>On-device encryption</h3>
+        <p>Every photo, video and album is encrypted with AES-256 on your iPhone. The key never leaves your device.</p>
       </div>
       <div class="feat reveal">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2M9 10v1M15 10v1M9.5 15.5a3 3 0 0 0 5 0"/></svg></div>
-        <div>
-          <h3>Face ID &amp; passcode</h3>
-          <p>Unlock with Face ID or a private passcode separate from your phone's. It locks the moment you leave.</p>
-        </div>
+        <h3>Face ID &amp; passcode</h3>
+        <p>Unlock with Face ID or a private passcode separate from your phone's. It locks the moment you leave.</p>
       </div>
       <div class="feat reveal">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 8.6 8 11 4.6-2.4 8-6 8-11V5z"/><path d="M9 12l2 2 4-4"/></svg></div>
-        <div>
-          <h3>Decoy vault</h3>
-          <p>A second passcode opens a believable decoy vault, so a passcode under pressure never reveals the real one.</p>
-        </div>
+        <h3>Decoy vault</h3>
+        <p>A second passcode opens a believable decoy vault, so a passcode under pressure never reveals the real one.</p>
       </div>
       <div class="feat reveal">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/><path d="M12 19v-7"/><path d="m8.5 14.5 3.5-3.5 3.5 3.5"/></svg></div>
-        <div>
-          <h3>Encrypted iCloud backup</h3>
-          <p>Optionally back up to your own iCloud, encrypted before it leaves your device. Even we can't read it.</p>
-        </div>
+        <h3>Encrypted iCloud backup</h3>
+        <p>Optionally back up to your own iCloud, encrypted before it leaves your device. Even we can't read it.</p>
       </div>
       <div class="feat reveal">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h20v14H2z"/><path d="M8 21h8M12 17v4"/><path d="M3 3l18 14"/></svg></div>
-        <div>
-          <h3>Hidden from screenshots</h3>
-          <p>Your vault is shielded from screenshots, screen recording and AirPlay, so nothing slips out by accident.</p>
-        </div>
+        <h3>Hidden from screenshots</h3>
+        <p>Your vault is shielded from screenshots, screen recording and AirPlay, so nothing slips out by accident.</p>
       </div>
       <div class="feat reveal">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3z"/><circle cx="12" cy="13" r="3.5"/></svg></div>
-        <div>
-          <h3>Stealth camera</h3>
-          <p>Capture photos and videos straight into the vault, so they never touch your regular camera roll.</p>
-        </div>
+        <h3>Stealth camera</h3>
+        <p>Capture photos and videos straight into the vault, so they never touch your regular camera roll.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- BREAK-IN DEEP DIVE -->
+<section class="section">
+  <div class="wrap">
+    <div class="breakin">
+      <div class="reveal">
+        <span class="eyebrow">the math</span>
+        <h2>To break into your vault, someone would have to:</h2>
+        <p class="kicker">Realistically? It's easier to just ask you nicely.</p>
       </div>
-      <div class="funfact reveal">
-      <span class="funfact-badge">Fun fact</span>
-      <h2>To break into your vault, someone would have to:</h2>
-      <ul class="funfact-list">
-        <li><span>1</span><div class="funfact-step"><p>Physically get their hands on your iPhone.</p><p class="funfact-note">No account, no cloud, no server, so there's nothing to hack remotely. They'd need the actual device.</p></div></li>
-        <li><span>2</span><div class="funfact-step"><p>Unlock the phone past your device passcode and Face ID.</p><p class="funfact-note">iOS slows down repeated guesses and can erase the phone after too many failed attempts.</p></div></li>
-        <li><span>3</span><div class="funfact-step"><p>Get past Privaro's own separate passcode and Face ID.</p><p class="funfact-note">Separate from your phone's passcode, so unlocking the iPhone still leaves the vault locked.</p></div></li>
-        <li><span>4</span><div class="funfact-step"><p>Brute-force AES-256 encryption.</p><p class="funfact-note">Even at a trillion guesses per second, trying every possible key would take over <strong>10<sup>50</sup> years</strong>, vastly longer than the universe has existed.</p></div></li>
-        <li><span>5</span><div class="funfact-step"><p>And do all of it without tripping your duress passcode.</p><p class="funfact-note">Enter the wrong code under pressure and the real vault is erased instantly, with no recovery.</p></div></li>
-      </ul>
-      <p class="funfact-kicker">Realistically? It's easier to just ask you nicely.</p>
-      </div>
+      <ol class="steps reveal">
+        <li>
+          <span class="num">01</span>
+          <div>
+            <div class="s-title">Physically get their hands on your iPhone.</div>
+            <p class="s-note">No account, no cloud, no server, so there's nothing to hack remotely. They'd need the actual device.</p>
+          </div>
+        </li>
+        <li>
+          <span class="num">02</span>
+          <div>
+            <div class="s-title">Unlock the phone past your device passcode and Face ID.</div>
+            <p class="s-note">iOS slows down repeated guesses and can erase the phone after too many failed attempts.</p>
+          </div>
+        </li>
+        <li>
+          <span class="num">03</span>
+          <div>
+            <div class="s-title">Get past Privaro's own separate passcode and Face ID.</div>
+            <p class="s-note">Separate from your phone's passcode, so unlocking the iPhone still leaves the vault locked.</p>
+          </div>
+        </li>
+        <li>
+          <span class="num">04</span>
+          <div>
+            <div class="s-title">Brute-force AES-256 encryption.</div>
+            <p class="s-note">Even at a trillion guesses per second, trying every possible key would take over <strong>10<sup>50</sup> years</strong>, vastly longer than the universe has existed.</p>
+          </div>
+        </li>
+        <li>
+          <span class="num">05</span>
+          <div>
+            <div class="s-title">And do all of it without tripping your duress passcode.</div>
+            <p class="s-note">Enter the wrong code under pressure and the real vault is erased instantly, with no recovery.</p>
+          </div>
+        </li>
+      </ol>
     </div>
   </div>
 </section>
@@ -109,7 +150,7 @@
     <div class="row">
       <div class="fcol-left">
         <a class="brand" href="#top">
-          <img class="applogo" src="logo.png" width="30" height="30" alt="" />
+          <img class="applogo" src="logo.png" width="26" height="26" alt="" />
           Privaro
         </a>
         <p class="tagline">A private, encrypted photo &amp; video vault for iPhone.</p>
@@ -139,6 +180,5 @@
   document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
 </script>
 
-<script src="theme.js"></script>
 </body>
 </html>
