@@ -1,20 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{LANG}}">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Pro features · Privaro</title>
-<meta name="description" content="Exactly what each Privaro Pro feature does: unlimited storage, decoy vault, duress wipe, screenshot protection, encrypted backup and more." />
-<link rel="alternate" hreflang="en" href="https://privaro-site.vercel.app/pro" />
-<link rel="alternate" hreflang="es" href="https://privaro-site.vercel.app/es/pro" />
-<link rel="alternate" hreflang="fr" href="https://privaro-site.vercel.app/fr/pro" />
-<link rel="alternate" hreflang="de" href="https://privaro-site.vercel.app/de/pro" />
-<link rel="alternate" hreflang="it" href="https://privaro-site.vercel.app/it/pro" />
-<link rel="alternate" hreflang="pt-BR" href="https://privaro-site.vercel.app/pt-br/pro" />
-<link rel="alternate" hreflang="zh-Hans" href="https://privaro-site.vercel.app/zh/pro" />
-<link rel="alternate" hreflang="ko" href="https://privaro-site.vercel.app/ko/pro" />
-<link rel="alternate" hreflang="nl" href="https://privaro-site.vercel.app/nl/pro" />
-<link rel="alternate" hreflang="x-default" href="https://privaro-site.vercel.app/pro" />
+<title>{{meta_title_pro}}</title>
+<meta name="description" content="{{meta_desc_pro}}" />
+{{HREFLANG}}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -24,59 +15,59 @@
 
 <main class="legal-page legal-page--wide">
   <div class="pro-top">
-    <a class="back" href="/">
+    <a class="back" href="{{HOME_URL}}">
       <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-      Back to home
+      {{back_home}}
     </a>
-    <details class="lang"><summary aria-label="Language"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>English</span></summary><div class="lang-menu"><a href="/pro" class="active">English</a><a href="/es/pro">Español</a><a href="/fr/pro">Français</a><a href="/de/pro">Deutsch</a><a href="/it/pro">Italiano</a><a href="/pt-br/pro">Português</a><a href="/zh/pro">简体中文</a><a href="/ko/pro">한국어</a><a href="/nl/pro">Nederlands</a></div></details>
+    {{SWITCHER}}
   </div>
 
-  <span class="eyebrow">pro features</span>
-  <h1>Everything Pro unlocks.</h1>
-  <p class="intro">The vault is free to use. Pro lifts the limits and turns on the full security toolkit. Here is exactly what each feature does. Everything still runs on your device, encrypted, with no account.</p>
+  <span class="eyebrow">{{pro_eyebrow}}</span>
+  <h1>{{pro_h1}}</h1>
+  <p class="intro">{{pro_intro}}</p>
 
   <div class="pro-cols">
     <ol class="pro-list">
     <li class="pro-item">
       <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m4.9 4.9 14.2 14.2"/></svg></div>
       <div>
-        <h2>No ads, ever</h2>
-        <p>The free vault shows a single non-personalized banner on low-sensitivity screens like Settings, never inside your photos. Pro removes ads completely, everywhere in the app.</p>
+        <h2>{{prof1_t}}</h2>
+        <p>{{prof1_d}}</p>
       </div>
     </li>
     <li class="pro-item">
       <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" x2="2" y1="12" y2="12"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/><line x1="6" x2="6.01" y1="16" y2="16"/><line x1="10" x2="10.01" y1="16" y2="16"/></svg></div>
       <div>
-        <h2>Unlimited storage</h2>
-        <p>The free vault holds up to 2.5 GB. Pro removes the cap, so you can move your entire photo and video library into the vault without running out of room.</p>
+        <h2>{{prof2_t}}</h2>
+        <p>{{prof2_d}}</p>
       </div>
     </li>
     <li class="pro-item">
       <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"/><line x1="12" x2="12" y1="10" y2="16"/><line x1="9" x2="15" y1="13" y2="13"/></svg></div>
       <div>
-        <h2>Unlimited albums and folders</h2>
-        <p>Free includes up to 5 albums. Pro lets you create as many albums and nested folders as you like, so you can organize everything exactly how you want.</p>
+        <h2>{{prof3_t}}</h2>
+        <p>{{prof3_d}}</p>
       </div>
     </li>
     <li class="pro-item">
       <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"/><path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"/><path d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"/><line x1="2" y1="2" x2="22" y2="22"/></svg></div>
       <div>
-        <h2>Screenshot and recording protection</h2>
-        <p>Stops your vault from being captured by screenshots, screen recording or AirPlay while the app is open, so nothing leaks to your camera roll or to a screen mirror by accident.</p>
+        <h2>{{prof4_t}}</h2>
+        <p>{{prof4_d}}</p>
       </div>
     </li>
     <li class="pro-item">
       <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3z"/><circle cx="12" cy="13" r="3.5"/></svg></div>
       <div>
-        <h2>Break-in capture</h2>
-        <p>If someone enters the wrong passcode, Privaro can silently take a photo with the front camera and log the attempt with a timestamp, so you know if anyone has tried to get into your vault.</p>
+        <h2>{{prof5_t}}</h2>
+        <p>{{prof5_d}}</p>
       </div>
     </li>
     <li class="pro-item">
       <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/><path d="M12 19v-7"/><path d="m8.5 14.5 3.5-3.5 3.5 3.5"/></svg></div>
       <div>
-        <h2>Encrypted iCloud backup and export</h2>
-        <p>Back up your vault to your own iCloud, or export it as a single encrypted file. Both are encrypted on your device before they leave, so no one (including us) can read them. Restoring a backup is always free, even without Pro.</p>
+        <h2>{{prof6_t}}</h2>
+        <p>{{prof6_d}}</p>
       </div>
     </li>
     </ol>
@@ -85,63 +76,63 @@
     <li class="pro-item">
       <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6"/><path d="m15.5 7.5 3 3L22 7l-3-3"/></svg></div>
       <div>
-        <h2>Per-album passwords</h2>
-        <p>Put a separate code on individual albums. Even if your vault is open, your most private albums stay sealed behind their own lock.</p>
+        <h2>{{prof7_t}}</h2>
+        <p>{{prof7_d}}</p>
       </div>
     </li>
     <li class="pro-item">
       <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="2" rx="2"/><path d="M4 8a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2"/></svg></div>
       <div>
-        <h2>Decoy vault</h2>
-        <p>Set a second passcode that opens a believable, separate vault with its own harmless photos. If you are ever pressured to unlock, the decoy opens and your real vault stays completely hidden.</p>
+        <h2>{{prof8_t}}</h2>
+        <p>{{prof8_d}}</p>
       </div>
     </li>
     <li class="pro-item">
       <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></div>
       <div>
-        <h2>Duress wipe</h2>
-        <p>Set a special passcode that, when entered, instantly and permanently erases the vault, including the decoy. For worst-case situations where the safest thing is to leave nothing behind. This cannot be undone.</p>
+        <h2>{{prof9_t}}</h2>
+        <p>{{prof9_d}}</p>
       </div>
     </li>
     <li class="pro-item">
       <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13a10 10 0 0 1 14 0"/><path d="M8.5 16.5a5 5 0 0 1 7 0"/><path d="M2 8.82a15 15 0 0 1 20 0"/><line x1="12" x2="12.01" y1="20" y2="20"/></svg></div>
       <div>
-        <h2>Wi-Fi transfer</h2>
-        <p>Send files into the vault from any computer's web browser over your local network. No cable, no cloud, and no extra app to install on your computer.</p>
+        <h2>{{prof10_t}}</h2>
+        <p>{{prof10_d}}</p>
       </div>
     </li>
     <li class="pro-item">
       <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
       <div>
-        <h2>Location-based lock</h2>
-        <p>Only allow the vault to unlock in places you trust, like your home. Anywhere else, it stays locked even with the right passcode.</p>
+        <h2>{{prof11_t}}</h2>
+        <p>{{prof11_d}}</p>
       </div>
     </li>
     <li class="pro-item">
       <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg></div>
       <div>
-        <h2>Disguise app icon</h2>
-        <p>Hide Privaro behind an everyday icon and name, like Calculator or Notes, so it does not stand out on your home screen. Color icon variants are free; the disguises are Pro.</p>
+        <h2>{{prof12_t}}</h2>
+        <p>{{prof12_d}}</p>
       </div>
     </li>
     </ol>
   </div>
 
   <div class="callout" style="margin-top:44px">
-    <strong>Free or Pro, the basics never change:</strong> everything is encrypted on your device with AES-256, there is no account, and no one but you can open your vault. Pro from $9.99 per year or $14.99 once, with a 1-week free trial.
+    <strong>{{pro_callout_strong}}</strong> {{pro_callout_rest}}
   </div>
 
   <div class="pricing-cta">
     <a class="appstore-badge" href="#" aria-label="Download Privaro on the App Store">
       <img src="/appstore-badge-white.svg" alt="Download on the App Store" />
     </a>
-    <p class="fineprint">app store link coming soon</p>
+    <p class="fineprint">{{appstore_soon}}</p>
   </div>
 </main>
 
 <footer>
   <div class="wrap">
-    <div class="legal">© <span id="year">2026</span> Privaro. All rights reserved. · <a href="/" style="color:var(--muted)">Back to home</a> · <a href="/privacy" style="color:var(--muted)">Privacy</a> · <a href="/terms" style="color:var(--muted)">Terms</a></div>
+    <div class="legal">© <span id="year">2026</span> Privaro. {{footer_rights}} · <a href="{{HOME_URL}}" style="color:var(--muted)">{{back_home}}</a> · <a href="/privacy" style="color:var(--muted)">{{nav_privacy}}</a> · <a href="/terms" style="color:var(--muted)">{{nav_terms}}</a></div>
   </div>
 </footer>
 

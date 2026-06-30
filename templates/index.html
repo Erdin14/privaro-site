@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="{{LANG}}">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{{meta_title_home}}</title>
+<meta name="description" content="{{meta_desc_home}}" />
+{{HREFLANG}}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <header class="site-head">
+      <a class="brand" href="#top">
+        <img class="applogo" src="/logo.png" width="26" height="26" alt="" />
+        Privaro
+      </a>
+      <nav class="headlinks">
+        <a href="/privacy">{{nav_privacy}}</a>
+        <a href="/terms">{{nav_terms}}</a>
+        {{SWITCHER}}
+      </nav>
+    </header>
+
+    <div class="hero-grid">
+      <div class="reveal">
+        <span class="eyebrow">{{hero_eyebrow}}</span>
+        <h1>{{hero_h1_line1}}<br /><span class="hl">{{hero_h1_line2}}</span></h1>
+        <p class="lead">{{hero_lead}}</p>
+        <a class="appstore-badge" href="#" aria-label="Download Privaro on the App Store">
+          <img src="/appstore-badge-white.svg" alt="Download on the App Store" />
+        </a>
+        <p class="fineprint">{{hero_fineprint}}</p>
+      </div>
+
+      <aside class="proof reveal" aria-label="What it takes to break in">
+        <div class="proof-title">{{proof_title}}</div>
+        <ul class="proof-list">
+          <li><span class="n">01</span><span class="t">{{proof_1}}</span></li>
+          <li><span class="n">02</span><span class="t">{{proof_2}}</span></li>
+          <li><span class="n">03</span><span class="t">{{proof_3}}</span></li>
+          <li><span class="n">04</span><span class="t">{{proof_4}}</span></li>
+        </ul>
+        <div class="proof-foot">≈ 10<sup>50</sup> {{proof_foot}}</div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- SCREENSHOTS -->
+<section class="section showcase">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">{{showcase_eyebrow}}</span>
+      <h2>{{showcase_h2}}</h2>
+      <p>{{showcase_p}}</p>
+    </div>
+    <div class="shots">
+      <figure class="shot reveal">
+        <div class="device"><img src="/shots/shot-albums.jpg" width="700" height="1521" alt="Privaro albums, with smart albums and your own albums" loading="lazy" /></div>
+        <figcaption class="cap">{{cap_albums}}</figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <div class="device"><img src="/shots/shot-vault.jpg" width="700" height="1521" alt="The Privaro vault, showing photos in a grid by month" loading="lazy" /></div>
+        <figcaption class="cap">{{cap_vault}}</figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <div class="device"><img src="/shots/shot-pro.jpg" width="700" height="1521" alt="Privaro Pro, listing the upgrade features and pricing" loading="lazy" /></div>
+        <figcaption class="cap">{{cap_pro}}</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">{{feat_eyebrow}}</span>
+      <h2>{{feat_h2}}</h2>
+      <p>{{feat_p}}</p>
+    </div>
+    <div class="features">
+      <div class="feat reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div>
+        <h3>{{feat1_t}}</h3>
+        <p>{{feat1_d}}</p>
+      </div>
+      <div class="feat reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2M9 10v1M15 10v1M9.5 15.5a3 3 0 0 0 5 0"/></svg></div>
+        <h3>{{feat2_t}}</h3>
+        <p>{{feat2_d}}</p>
+      </div>
+      <div class="feat reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 8.6 8 11 4.6-2.4 8-6 8-11V5z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>{{feat3_t}}</h3>
+        <p>{{feat3_d}}</p>
+      </div>
+      <div class="feat reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/><path d="M12 19v-7"/><path d="m8.5 14.5 3.5-3.5 3.5 3.5"/></svg></div>
+        <h3>{{feat4_t}}</h3>
+        <p>{{feat4_d}}</p>
+      </div>
+      <div class="feat reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h20v14H2z"/><path d="M8 21h8M12 17v4"/><path d="M3 3l18 14"/></svg></div>
+        <h3>{{feat5_t}}</h3>
+        <p>{{feat5_d}}</p>
+      </div>
+      <div class="feat reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3z"/><circle cx="12" cy="13" r="3.5"/></svg></div>
+        <h3>{{feat6_t}}</h3>
+        <p>{{feat6_d}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">{{pricing_eyebrow}}</span>
+      <h2>{{pricing_h2}}</h2>
+      <p>{{pricing_p}}</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="plan reveal">
+        <div class="pname">{{plan_free_name}}</div>
+        <div class="price">$0 <span>{{plan_free_period}}</span></div>
+        <p class="pnote">{{plan_free_note}}</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>{{free_1}}</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>{{free_2}}</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>{{free_3}}</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>{{free_4}}</li>
+        </ul>
+      </div>
+      <div class="plan plan--pro reveal">
+        <div class="badge">{{plan_pro_badge}}</div>
+        <div class="pname">{{plan_pro_name}}</div>
+        <div class="price">$9.99 <span>{{plan_pro_period}}</span></div>
+        <p class="pnote">{{plan_pro_note}}</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>{{pro_1}}</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>{{pro_2}}</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>{{pro_3}}</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>{{pro_4}}</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>{{pro_5}}</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>{{pro_6}}</li>
+        </ul>
+      </div>
+    </div>
+    <p class="pricing-more reveal"><a href="{{PRO_URL}}">{{pricing_more}}</a></p>
+    <div class="pricing-cta reveal">
+      <a class="appstore-badge" href="#" aria-label="Download Privaro on the App Store">
+        <img src="/appstore-badge-white.svg" alt="Download on the App Store" />
+      </a>
+      <p class="fineprint">{{appstore_soon}}</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="row">
+      <div class="fcol-left">
+        <a class="brand" href="#top">
+          <img class="applogo" src="/logo.png" width="26" height="26" alt="" />
+          Privaro
+        </a>
+        <p class="tagline">{{footer_tagline}}</p>
+      </div>
+      <div class="fdivider" aria-hidden="true"></div>
+      <div class="cols">
+        <div class="col">
+          <h4>{{footer_product}}</h4>
+          <a href="{{PRO_URL}}">{{footer_pro}}</a>
+        </div>
+        <div class="col">
+          <h4>{{footer_legal}}</h4>
+          <a href="/privacy">{{footer_privacy}}</a>
+          <a href="/terms">{{footer_terms}}</a>
+        </div>
+        <div class="col">
+          <h4>{{footer_support}}</h4>
+          <a href="mailto:erdincdubu@icloud.com">{{footer_contact}}</a>
+        </div>
+      </div>
+    </div>
+    <div class="legal">© <span id="year">2026</span> Privaro. {{footer_rights}}</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+</script>
+
+</body>
+</html>

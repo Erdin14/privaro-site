@@ -3,12 +3,22 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Privaro: Your photos &amp; videos, for your eyes only</title>
+<title>Privaro: Your photos and videos, for your eyes only</title>
 <meta name="description" content="Privaro is a private, encrypted photo and video vault for iPhone. Everything is encrypted on your device. No account, no servers, no tracking." />
+<link rel="alternate" hreflang="en" href="https://privaro-site.vercel.app/" />
+<link rel="alternate" hreflang="es" href="https://privaro-site.vercel.app/es" />
+<link rel="alternate" hreflang="fr" href="https://privaro-site.vercel.app/fr" />
+<link rel="alternate" hreflang="de" href="https://privaro-site.vercel.app/de" />
+<link rel="alternate" hreflang="it" href="https://privaro-site.vercel.app/it" />
+<link rel="alternate" hreflang="pt-BR" href="https://privaro-site.vercel.app/pt-br" />
+<link rel="alternate" hreflang="zh-Hans" href="https://privaro-site.vercel.app/zh" />
+<link rel="alternate" hreflang="ko" href="https://privaro-site.vercel.app/ko" />
+<link rel="alternate" hreflang="nl" href="https://privaro-site.vercel.app/nl" />
+<link rel="alternate" hreflang="x-default" href="https://privaro-site.vercel.app/" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
 
@@ -17,12 +27,13 @@
   <div class="wrap">
     <header class="site-head">
       <a class="brand" href="#top">
-        <img class="applogo" src="logo.png" width="26" height="26" alt="" />
+        <img class="applogo" src="/logo.png" width="26" height="26" alt="" />
         Privaro
       </a>
       <nav class="headlinks">
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+        <details class="lang"><summary aria-label="Language"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>English</span></summary><div class="lang-menu"><a href="/" class="active">English</a><a href="/es">Español</a><a href="/fr">Français</a><a href="/de">Deutsch</a><a href="/it">Italiano</a><a href="/pt-br">Português</a><a href="/zh">简体中文</a><a href="/ko">한국어</a><a href="/nl">Nederlands</a></div></details>
       </nav>
     </header>
 
@@ -32,7 +43,7 @@
         <h1>Your photos and videos,<br /><span class="hl">for your eyes only.</span></h1>
         <p class="lead">A private, encrypted vault for iPhone. Everything is locked behind strong encryption, right on your device. No account, no servers, no one but you.</p>
         <a class="appstore-badge" href="#" aria-label="Download Privaro on the App Store">
-          <img src="appstore-badge-white.svg" alt="Download on the App Store" />
+          <img src="/appstore-badge-white.svg" alt="Download on the App Store" />
         </a>
         <p class="fineprint">free to start · iOS 17.6 or later · optional Pro · app store link coming soon</p>
       </div>
@@ -61,15 +72,15 @@
     </div>
     <div class="shots">
       <figure class="shot reveal">
-        <div class="device"><img src="shots/shot-albums.jpg" width="700" height="1521" alt="Privaro albums, with smart albums and your own albums" loading="lazy" /></div>
+        <div class="device"><img src="/shots/shot-albums.jpg" width="700" height="1521" alt="Privaro albums, with smart albums and your own albums" loading="lazy" /></div>
         <figcaption class="cap">albums</figcaption>
       </figure>
       <figure class="shot reveal">
-        <div class="device"><img src="shots/shot-vault.jpg" width="700" height="1521" alt="The Privaro vault, showing photos in a grid by month" loading="lazy" /></div>
+        <div class="device"><img src="/shots/shot-vault.jpg" width="700" height="1521" alt="The Privaro vault, showing photos in a grid by month" loading="lazy" /></div>
         <figcaption class="cap">the vault</figcaption>
       </figure>
       <figure class="shot reveal">
-        <div class="device"><img src="shots/shot-pro.jpg" width="700" height="1521" alt="Privaro Pro, listing the upgrade features and pricing" loading="lazy" /></div>
+        <div class="device"><img src="/shots/shot-pro.jpg" width="700" height="1521" alt="Privaro Pro, listing the upgrade features and pricing" loading="lazy" /></div>
         <figcaption class="cap">privaro pro</figcaption>
       </figure>
     </div>
@@ -92,7 +103,7 @@
       </div>
       <div class="feat reveal">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2M9 10v1M15 10v1M9.5 15.5a3 3 0 0 0 5 0"/></svg></div>
-        <h3>Face ID &amp; passcode</h3>
+        <h3>Face ID and passcode</h3>
         <p>Unlock with Face ID or a private passcode separate from your phone's. It locks the moment you leave.</p>
       </div>
       <div class="feat reveal">
@@ -154,10 +165,10 @@
         </ul>
       </div>
     </div>
-    <p class="pricing-more reveal"><a href="pro.html">See exactly what each Pro feature does →</a></p>
+    <p class="pricing-more reveal"><a href="/pro">See exactly what each Pro feature does →</a></p>
     <div class="pricing-cta reveal">
       <a class="appstore-badge" href="#" aria-label="Download Privaro on the App Store">
-        <img src="appstore-badge-white.svg" alt="Download on the App Store" />
+        <img src="/appstore-badge-white.svg" alt="Download on the App Store" />
       </a>
       <p class="fineprint">app store link coming soon</p>
     </div>
@@ -170,21 +181,21 @@
     <div class="row">
       <div class="fcol-left">
         <a class="brand" href="#top">
-          <img class="applogo" src="logo.png" width="26" height="26" alt="" />
+          <img class="applogo" src="/logo.png" width="26" height="26" alt="" />
           Privaro
         </a>
-        <p class="tagline">A private, encrypted photo &amp; video vault for iPhone.</p>
+        <p class="tagline">A private, encrypted photo and video vault for iPhone.</p>
       </div>
       <div class="fdivider" aria-hidden="true"></div>
       <div class="cols">
         <div class="col">
           <h4>Product</h4>
-          <a href="pro.html">Pro features</a>
+          <a href="/pro">Pro features</a>
         </div>
         <div class="col">
           <h4>Legal</h4>
-          <a href="privacy.html">Privacy Policy</a>
-          <a href="terms.html">Terms of Use</a>
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms of Use</a>
         </div>
         <div class="col">
           <h4>Support</h4>
