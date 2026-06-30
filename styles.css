@@ -166,18 +166,14 @@ h1, h2, h3 { color: var(--ink); letter-spacing: -.02em; line-height: 1.1; font-w
 
 /* Footer */
 footer { padding: 56px 0 64px; }
-footer .row { display: flex; justify-content: center; align-items: center; gap: 56px; flex-wrap: wrap; text-align: left; }
-footer .fcol-left { max-width: 280px; }
-footer .fdivider { align-self: stretch; width: 1px; background: linear-gradient(to bottom, transparent, var(--line-strong) 18%, var(--line-strong) 82%, transparent); }
-footer .brand { font-size: 16px; }
-footer .tagline { font-size: 13.5px; color: var(--muted); margin-top: 10px; }
-footer .cols { display: flex; gap: 56px; flex-wrap: wrap; }
+footer .row { display: flex; justify-content: center; align-items: center; gap: 56px; flex-wrap: wrap; }
+footer .cols { display: flex; gap: 56px; flex-wrap: wrap; justify-content: center; }
 footer .col h4 { font-family: var(--mono); font-size: 11px; letter-spacing: .1em; color: var(--faint); margin-bottom: 14px; font-weight: 400; }
 footer .col a { display: block; font-size: 14.5px; color: var(--muted); margin-bottom: 10px; }
 footer .col a:hover { color: var(--ink); }
 footer .legal { margin-top: 40px; font-family: var(--mono); font-size: 12.5px; color: var(--faint); text-align: center; }
 footer .legal a:hover { color: var(--ink); }
-@media (max-width: 560px) { footer .fdivider { display: none; } footer .row { flex-direction: column; text-align: center; } }
+@media (max-width: 560px) { footer .row { flex-direction: column; text-align: center; } }
 
 /* Scroll reveal */
 .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
