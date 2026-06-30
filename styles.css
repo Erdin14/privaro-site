@@ -52,7 +52,9 @@ h1, h2, h3 { color: var(--ink); letter-spacing: -.02em; line-height: 1.1; font-w
 .applogo { display: block; border-radius: 23%; }
 
 /* Top header (lives inside the hero) */
-.site-head { display: flex; align-items: center; justify-content: space-between; padding-top: 28px; }
+.site-head { display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; padding-top: 28px; }
+.head-div { width: 1px; height: 18px; background: var(--line-strong); }
+@media (max-width: 560px) { .head-div { display: none; } }
 .brand { display: flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 500; color: var(--ink); letter-spacing: .01em; }
 .brand .applogo { width: 26px; height: 26px; }
 .headlinks { display: flex; gap: 22px; font-size: 14px; color: var(--muted); }
