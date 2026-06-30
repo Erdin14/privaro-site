@@ -139,6 +139,23 @@ h1, h2, h3 { color: var(--ink); letter-spacing: -.02em; line-height: 1.1; font-w
 @media (max-width: 860px) { .shot:nth-child(2) { transform: none; } }
 @media (max-width: 560px) { .device { width: 220px; } .shots { gap: 40px; } }
 
+/* Pricing (Free vs Pro) */
+.pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 760px; margin: 0 auto; }
+@media (max-width: 680px) { .pricing-grid { grid-template-columns: 1fr; } }
+.plan { position: relative; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 32px 30px; }
+.plan--pro { border-color: var(--acc-line); background: rgba(217, 162, 76, .05); }
+.plan .badge { position: absolute; top: -11px; right: 24px; font-family: var(--mono); font-size: 11px; letter-spacing: .06em; color: #0a0b0e; background: var(--acc); padding: 4px 11px; border-radius: 999px; }
+.plan .pname { font-family: var(--mono); font-size: 12px; letter-spacing: .1em; color: var(--muted); margin-bottom: 16px; }
+.plan--pro .pname { color: var(--acc); }
+.plan .price { font-family: var(--serif); font-size: 42px; font-weight: 500; letter-spacing: -.02em; line-height: 1; }
+.plan .price span { font-family: var(--sans); font-size: 15px; font-weight: 400; color: var(--muted); letter-spacing: 0; }
+.plan .pnote { font-size: 13px; color: var(--faint); margin-top: 8px; }
+.plan ul { list-style: none; display: grid; gap: 11px; margin-top: 26px; }
+.plan li { display: flex; gap: 10px; align-items: flex-start; font-size: 14.5px; color: var(--ink-soft); line-height: 1.45; }
+.plan li svg { width: 18px; height: 18px; color: var(--acc); flex-shrink: 0; margin-top: 2px; }
+.pricing-cta { display: flex; flex-direction: column; align-items: center; gap: 12px; margin-top: 40px; }
+.pricing-cta .fineprint { font-family: var(--mono); font-size: 12px; color: var(--faint); }
+
 /* Footer */
 footer { padding: 56px 0 64px; }
 footer .row { display: flex; justify-content: center; align-items: center; gap: 56px; flex-wrap: wrap; text-align: left; }
