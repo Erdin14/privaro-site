@@ -153,6 +153,9 @@ h1, h2, h3 { color: var(--ink); letter-spacing: -.02em; line-height: 1.1; font-w
 .plan ul { list-style: none; display: grid; gap: 11px; margin-top: 26px; }
 .plan li { display: flex; gap: 10px; align-items: flex-start; font-size: 14.5px; color: var(--ink-soft); line-height: 1.45; }
 .plan li svg { width: 18px; height: 18px; color: var(--acc); flex-shrink: 0; margin-top: 2px; }
+.pricing-more { text-align: center; margin-top: 26px; }
+.pricing-more a { font-family: var(--mono); font-size: 13px; color: var(--muted); border-bottom: 1px solid var(--line-strong); padding-bottom: 3px; transition: color .2s ease, border-color .2s ease; }
+.pricing-more a:hover { color: var(--acc); border-color: var(--acc-line); }
 .pricing-cta { display: flex; flex-direction: column; align-items: center; gap: 12px; margin-top: 40px; }
 .pricing-cta .fineprint { font-family: var(--mono); font-size: 12px; color: var(--faint); }
 
@@ -190,3 +193,16 @@ footer .legal a:hover { color: var(--ink); }
 .legal-page a { color: var(--acc); text-decoration: underline; text-underline-offset: 2px; }
 .callout { background: var(--surface); border: 1px solid var(--line); border-left: 2px solid var(--acc); border-radius: var(--radius); padding: 20px 22px; margin: 0 0 32px; }
 .callout strong { color: var(--ink); }
+
+/* Pro features page */
+.legal-page .eyebrow { display: block; margin-bottom: 16px; }
+.pro-list { list-style: none; display: flex; flex-direction: column; margin: 44px 0 0; counter-reset: pro; }
+.pro-item { position: relative; display: flex; gap: 20px; padding: 28px 0; border-top: 1px solid var(--line); counter-increment: pro; }
+.pro-item:first-child { border-top: none; padding-top: 0; }
+.pro-item .ic { width: 46px; height: 46px; border-radius: 12px; background: var(--acc-soft); border: 1px solid var(--acc-line); color: var(--acc); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.pro-item .ic svg { width: 23px; height: 23px; }
+.pro-item h2 { font-size: 19px; font-weight: 600; letter-spacing: -.01em; margin: 2px 0 7px; }
+.pro-item p { color: var(--muted); font-size: 15px; line-height: 1.65; margin: 0; max-width: 60ch; }
+.pro-item::after { content: counter(pro, decimal-leading-zero); font-family: var(--mono); font-size: 12px; color: var(--faint); position: absolute; top: 30px; right: 0; }
+.pro-item:first-child::after { top: 2px; }
+@media (max-width: 560px) { .pro-item::after { display: none; } }
