@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="{{LANG}}">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{{meta_title_privacy}}</title>
+<meta name="description" content="{{meta_desc_privacy}}" />
+{{HREFLANG}}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+
+<main class="legal-page">
+  <div class="legal-top">
+    <a class="back" href="{{HOME_URL}}">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      {{priv_back}}
+    </a>
+    {{SWITCHER}}
+  </div>
+
+  <h1>{{priv_h1}}</h1>
+  <p class="updated">{{priv_updated}}</p>
+
+  <p class="intro">{{priv_intro}}</p>
+
+  <div class="callout">
+    <strong>{{priv_short_label}}</strong> {{priv_short_body}}
+  </div>
+
+  <h2>{{priv_s1_h}}</h2>
+  <ul>
+    <li>{{priv_s1_li1}}</li>
+    <li>{{priv_s1_li2}}</li>
+    <li>{{priv_s1_li3}}</li>
+    <li>{{priv_s1_li4}}</li>
+    <li>{{priv_s1_li5}}</li>
+    <li>{{priv_s1_li6}}</li>
+  </ul>
+
+  <h2>{{priv_s2_h}}</h2>
+  <p>{{priv_s2_p1}}</p>
+  <p>{{priv_s2_p2}}</p>
+
+  <h2>{{priv_s3_h}}</h2>
+  <p>{{priv_s3_lead}}</p>
+  <ul>
+    <li>{{priv_s3_li1}}</li>
+    <li>{{priv_s3_li2}}</li>
+    <li>{{priv_s3_li3}}</li>
+  </ul>
+
+  <h2>{{priv_s4_h}}</h2>
+  <p>{{priv_s4_lead}}</p>
+  <ul>
+    <li>{{priv_s4_li1}}</li>
+    <li>{{priv_s4_li2}}</li>
+    <li>{{priv_s4_li3}}</li>
+    <li>{{priv_s4_li4}}</li>
+    <li>{{priv_s4_li5}}</li>
+    <li>{{priv_s4_li6}}</li>
+  </ul>
+
+  <h2>{{priv_s5_h}}</h2>
+  <p>{{priv_s5_p1}}</p>
+  <ul>
+    <li>{{priv_s5_li1}}</li>
+    <li>{{priv_s5_li2}}</li>
+    <li>{{priv_s5_li3}}</li>
+    <li>{{priv_s5_li4}}</li>
+    <li>{{priv_s5_li5}}</li>
+  </ul>
+
+  <h2>{{priv_s6_h}}</h2>
+  <p>{{priv_s6_p1}}</p>
+
+  <h2>{{priv_s7_h}}</h2>
+  <p>{{priv_s7_p1}}</p>
+
+  <h2>{{priv_s8_h}}</h2>
+  <p>{{priv_s8_p1}}</p>
+
+  <h2>{{priv_s9_h}}</h2>
+  <p>{{priv_s9_p1}}</p>
+
+  <h2>{{priv_s10_h}}</h2>
+  <p>{{priv_s10_p1}}</p>
+
+  <h2>{{priv_s11_h}}</h2>
+  <p>{{priv_s11_p1}}</p>
+
+  <h2>{{priv_s12_h}}</h2>
+  <p>{{priv_s12_p1}}<br />
+  <a href="mailto:erdincdubu@icloud.com">erdincdubu@icloud.com</a></p>
+
+  <p class="authoritative">{{priv_authoritative}}</p>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="legal">© <span id="year">2026</span> Privaro. {{priv_rights}} · <a href="{{HOME_URL}}" style="color:var(--muted)">{{footer_home}}</a> · <a href="/terms" style="color:var(--muted)">{{footer_terms}}</a></div>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
