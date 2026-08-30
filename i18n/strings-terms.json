@@ -4,272 +4,350 @@
     "de": "Nutzungsbedingungen · Privaro",
     "nl": "Gebruiksvoorwaarden · Privaro",
     "es": "Términos de uso · Privaro",
-    "fr": "Conditions d’utilisation · Privaro"
+    "fr": "Conditions d’utilisation · Privaro",
+    "it": "Condizioni d’uso · Privaro",
+    "pt-BR": "Termos de Uso · Privaro"
   },
   "meta_desc_terms": {
     "en": "The terms that govern your use of Privaro, including what happens if you lose your passcode and recovery key.",
     "de": "Die Bedingungen für die Nutzung von Privaro, einschließlich der Folgen, wenn du Code und Wiederherstellungsschlüssel verlierst.",
     "nl": "De voorwaarden voor het gebruik van Privaro, inclusief wat er gebeurt als je je toegangscode en herstelsleutel kwijtraakt.",
     "es": "Los términos que rigen tu uso de Privaro, incluido qué ocurre si pierdes tu código y tu clave de recuperación.",
-    "fr": "Les conditions régissant votre utilisation de Privaro, y compris ce qui se passe si vous perdez votre code et votre clé de récupération."
+    "fr": "Les conditions régissant votre utilisation de Privaro, y compris ce qui se passe si vous perdez votre code et votre clé de récupération.",
+    "it": "Le condizioni che regolano l’uso di Privaro, incluso cosa succede se perdi il codice e la chiave di recupero.",
+    "pt-BR": "Os termos que regem seu uso do Privaro, incluindo o que acontece se você perder sua senha e sua chave de recuperação."
   },
   "terms_h1": {
     "en": "Terms of Use",
     "de": "Nutzungsbedingungen",
     "nl": "Gebruiksvoorwaarden",
     "es": "Términos de uso",
-    "fr": "Conditions d’utilisation"
+    "fr": "Conditions d’utilisation",
+    "it": "Condizioni d’uso",
+    "pt-BR": "Termos de Uso"
   },
   "terms_intro": {
     "en": "These Terms of Use (\"Terms\") govern your use of the Privaro app (\"Privaro,\" \"the app\") provided by Erdinc Zarbo (\"we,\" \"us,\" or \"our\"). By downloading or using Privaro, you agree to these Terms. If you do not agree, please do not use the app.",
     "de": "Diese Nutzungsbedingungen („Bedingungen“) regeln deine Nutzung der App Privaro („Privaro“, „die App“), bereitgestellt von Erdinc Zarbo („wir“, „uns“ oder „unser“). Mit dem Laden oder Nutzen von Privaro stimmst du diesen Bedingungen zu. Wenn du nicht zustimmst, nutze die App bitte nicht.",
     "nl": "Deze gebruiksvoorwaarden (‘voorwaarden’) gelden voor je gebruik van de Privaro-app (‘Privaro’, ‘de app’), aangeboden door Erdinc Zarbo (‘wij’, ‘ons’ of ‘onze’). Door Privaro te downloaden of te gebruiken ga je akkoord met deze voorwaarden. Ga je niet akkoord, gebruik de app dan niet.",
     "es": "Estos Términos de uso («Términos») rigen tu uso de la app Privaro («Privaro», «la app»), ofrecida por Erdinc Zarbo («nosotros» o «nuestro»). Al descargar o usar Privaro, aceptas estos Términos. Si no los aceptas, no uses la app.",
-    "fr": "Les présentes conditions d’utilisation (« Conditions ») régissent votre utilisation de l’application Privaro (« Privaro », « l’app ») fournie par Erdinc Zarbo (« nous », « notre »). En téléchargeant ou en utilisant Privaro, vous acceptez ces Conditions. Si vous ne les acceptez pas, n’utilisez pas l’app."
+    "fr": "Les présentes conditions d’utilisation (« Conditions ») régissent votre utilisation de l’application Privaro (« Privaro », « l’app ») fournie par Erdinc Zarbo (« nous », « notre »). En téléchargeant ou en utilisant Privaro, vous acceptez ces Conditions. Si vous ne les acceptez pas, n’utilisez pas l’app.",
+    "it": "Le presenti Condizioni d’uso («Condizioni») regolano l’uso dell’app Privaro («Privaro», «l’app») fornita da Erdinc Zarbo («noi», «nostro»). Scaricando o usando Privaro accetti queste Condizioni. Se non le accetti, non usare l’app.",
+    "pt-BR": "Estes Termos de Uso (“Termos”) regem seu uso do app Privaro (“Privaro”, “o app”), fornecido por Erdinc Zarbo (“nós” ou “nosso”). Ao baixar ou usar o Privaro, você concorda com estes Termos. Se não concordar, não use o app."
   },
   "terms_callout_label": {
     "en": "Please read this carefully.",
     "de": "Bitte sorgfältig lesen.",
     "nl": "Lees dit aandachtig.",
     "es": "Léelo con atención.",
-    "fr": "À lire attentivement."
+    "fr": "À lire attentivement.",
+    "it": "Leggi con attenzione.",
+    "pt-BR": "Leia com atenção."
   },
   "terms_callout_body": {
     "en": "Privaro encrypts your content on your device with a key only you control. This means that if you lose your passcode and your recovery key, <strong>no one, including us, can recover your data.</strong> Privaro also includes features that permanently erase data on purpose. You are responsible for keeping your passcode and recovery key safe, for how you configure the app, and for maintaining your own backups.",
     "de": "Privaro verschlüsselt deine Inhalte auf deinem Gerät mit einem Schlüssel, den nur du kontrollierst. Das bedeutet: Wenn du deinen Code und deinen Wiederherstellungsschlüssel verlierst, <strong>kann niemand deine Daten wiederherstellen – auch wir nicht.</strong> Privaro enthält außerdem Funktionen, die Daten absichtlich dauerhaft löschen. Du bist dafür verantwortlich, Code und Wiederherstellungsschlüssel sicher aufzubewahren, die App zu konfigurieren und eigene Backups zu führen.",
     "nl": "Privaro versleutelt je inhoud op je apparaat met een sleutel die alleen jij beheert. Dat betekent dat als je je toegangscode én je herstelsleutel kwijtraakt, <strong>niemand je gegevens kan herstellen, ook wij niet.</strong> Privaro bevat daarnaast functies die gegevens met opzet definitief wissen. Jij bent verantwoordelijk voor het veilig bewaren van je toegangscode en herstelsleutel, voor hoe je de app instelt en voor je eigen reservekopieën.",
     "es": "Privaro cifra tu contenido en tu dispositivo con una clave que solo tú controlas. Esto significa que si pierdes tu código y tu clave de recuperación, <strong>nadie, ni siquiera nosotros, puede recuperar tus datos.</strong> Privaro también incluye funciones que borran datos de forma permanente a propósito. Eres responsable de guardar tu código y tu clave de recuperación, de cómo configuras la app y de mantener tus propias copias de seguridad.",
-    "fr": "Privaro chiffre votre contenu sur votre appareil avec une clé que vous seul contrôlez. Autrement dit, si vous perdez votre code et votre clé de récupération, <strong>personne, pas même nous, ne peut récupérer vos données.</strong> Privaro comporte aussi des fonctions qui effacent des données de façon permanente, volontairement. Il vous appartient de conserver votre code et votre clé de récupération en lieu sûr, de choisir la configuration de l’app et de maintenir vos propres sauvegardes."
+    "fr": "Privaro chiffre votre contenu sur votre appareil avec une clé que vous seul contrôlez. Autrement dit, si vous perdez votre code et votre clé de récupération, <strong>personne, pas même nous, ne peut récupérer vos données.</strong> Privaro comporte aussi des fonctions qui effacent des données de façon permanente, volontairement. Il vous appartient de conserver votre code et votre clé de récupération en lieu sûr, de choisir la configuration de l’app et de maintenir vos propres sauvegardes.",
+    "it": "Privaro cifra i tuoi contenuti sul dispositivo con una chiave che controlli solo tu. Ciò significa che se perdi il codice e la chiave di recupero, <strong>nessuno, noi compresi, può recuperare i tuoi dati.</strong> Privaro include inoltre funzioni che cancellano i dati in modo permanente e intenzionale. Sei responsabile di custodire codice e chiave di recupero, di come configuri l’app e di mantenere i tuoi backup.",
+    "pt-BR": "O Privaro criptografa seu conteúdo no seu aparelho com uma chave que só você controla. Isso significa que, se você perder sua senha e sua chave de recuperação, <strong>ninguém, nem mesmo nós, poderá recuperar seus dados.</strong> O Privaro também inclui recursos que apagam dados permanentemente de propósito. Você é responsável por guardar sua senha e sua chave de recuperação, por como configura o app e por manter seus próprios backups."
   },
   "terms_s1_h": {
     "en": "License",
     "de": "Lizenz",
     "nl": "Licentie",
     "es": "Licencia",
-    "fr": "Licence"
+    "fr": "Licence",
+    "it": "Licenza",
+    "pt-BR": "Licença"
   },
   "terms_s1_p1": {
     "en": "We grant you a personal, non-exclusive, non-transferable, revocable license to use Privaro on Apple devices that you own or control, in accordance with these Terms and the Apple App Store Terms of Service. You may not copy, modify, reverse-engineer, decompile, sell, sublicense, or distribute the app except as permitted by law.",
     "de": "Wir gewähren dir eine persönliche, nicht exklusive, nicht übertragbare, widerrufliche Lizenz zur Nutzung von Privaro auf Apple-Geräten, die du besitzt oder kontrollierst, gemäß diesen Bedingungen und den Nutzungsbedingungen des Apple App Store. Du darfst die App nicht kopieren, verändern, zurückentwickeln, dekompilieren, verkaufen, unterlizenzieren oder verbreiten, außer soweit gesetzlich erlaubt.",
     "nl": "We verlenen je een persoonlijke, niet-exclusieve, niet-overdraagbare, herroepbare licentie om Privaro te gebruiken op Apple-apparaten die je bezit of beheert, in overeenstemming met deze voorwaarden en de servicevoorwaarden van de Apple App Store. Je mag de app niet kopiëren, wijzigen, reverse-engineeren, decompileren, verkopen, in sublicentie geven of verspreiden, behalve voor zover de wet dat toestaat.",
     "es": "Te concedemos una licencia personal, no exclusiva, intransferible y revocable para usar Privaro en dispositivos Apple de tu propiedad o bajo tu control, conforme a estos Términos y a los Términos de servicio de la App Store de Apple. No puedes copiar, modificar, aplicar ingeniería inversa, descompilar, vender, sublicenciar ni distribuir la app salvo en la medida permitida por la ley.",
-    "fr": "Nous vous accordons une licence personnelle, non exclusive, non transférable et révocable pour utiliser Privaro sur des appareils Apple que vous possédez ou contrôlez, conformément aux présentes Conditions et aux Conditions de service de l’App Store d’Apple. Vous ne pouvez pas copier, modifier, rétroconcevoir, décompiler, vendre, sous-licencier ni distribuer l’app, sauf dans la mesure permise par la loi."
+    "fr": "Nous vous accordons une licence personnelle, non exclusive, non transférable et révocable pour utiliser Privaro sur des appareils Apple que vous possédez ou contrôlez, conformément aux présentes Conditions et aux Conditions de service de l’App Store d’Apple. Vous ne pouvez pas copier, modifier, rétroconcevoir, décompiler, vendre, sous-licencier ni distribuer l’app, sauf dans la mesure permise par la loi.",
+    "it": "Ti concediamo una licenza personale, non esclusiva, non trasferibile e revocabile per usare Privaro su dispositivi Apple di tua proprietà o sotto il tuo controllo, in conformità a queste Condizioni e ai Termini di servizio dell’App Store di Apple. Non puoi copiare, modificare, decompilare, sottoporre a reverse engineering, vendere, concedere in sublicenza o distribuire l’app se non nei limiti consentiti dalla legge.",
+    "pt-BR": "Concedemos a você uma licença pessoal, não exclusiva, intransferível e revogável para usar o Privaro em aparelhos Apple que você possua ou controle, de acordo com estes Termos e com os Termos de Serviço da App Store da Apple. Você não pode copiar, modificar, fazer engenharia reversa, descompilar, vender, sublicenciar ou distribuir o app, exceto quando permitido por lei."
   },
   "terms_s2_h": {
     "en": "Your responsibilities",
     "de": "Deine Pflichten",
     "nl": "Jouw verantwoordelijkheden",
     "es": "Tus responsabilidades",
-    "fr": "Vos responsabilités"
+    "fr": "Vos responsabilités",
+    "it": "Le tue responsabilità",
+    "pt-BR": "Suas responsabilidades"
   },
   "terms_s2_li1": {
     "en": "You are responsible for safeguarding your passcode, recovery key, and device.",
     "de": "Du bist für den Schutz deines Codes, deines Wiederherstellungsschlüssels und deines Geräts verantwortlich.",
     "nl": "Je bent verantwoordelijk voor het beschermen van je toegangscode, herstelsleutel en apparaat.",
     "es": "Eres responsable de proteger tu código, tu clave de recuperación y tu dispositivo.",
-    "fr": "Vous êtes responsable de la protection de votre code, de votre clé de récupération et de votre appareil."
+    "fr": "Vous êtes responsable de la protection de votre code, de votre clé de récupération et de votre appareil.",
+    "it": "Sei responsabile della protezione del tuo codice, della chiave di recupero e del dispositivo.",
+    "pt-BR": "Você é responsável por proteger sua senha, sua chave de recuperação e seu aparelho."
   },
   "terms_s2_li2": {
     "en": "You are responsible for the content you store in the app and for ensuring you have the right to store it.",
     "de": "Du bist für die in der App gespeicherten Inhalte verantwortlich und dafür, dass du zu deren Speicherung berechtigt bist.",
     "nl": "Je bent verantwoordelijk voor de inhoud die je in de app bewaart en ervoor dat je het recht hebt die te bewaren.",
     "es": "Eres responsable del contenido que guardas en la app y de tener derecho a guardarlo.",
-    "fr": "Vous êtes responsable du contenu que vous stockez dans l’app et du fait que vous avez le droit de le stocker."
+    "fr": "Vous êtes responsable du contenu que vous stockez dans l’app et du fait que vous avez le droit de le stocker.",
+    "it": "Sei responsabile dei contenuti che conservi nell’app e del diritto di conservarli.",
+    "pt-BR": "Você é responsável pelo conteúdo que guarda no app e por ter o direito de guardá-lo."
   },
   "terms_s2_li3": {
     "en": "You are responsible for how you enable and configure the app's features, including its security and data-erasing features.",
     "de": "Du bist dafür verantwortlich, wie du die Funktionen der App aktivierst und konfigurierst, einschließlich der Sicherheits- und Löschfunktionen.",
     "nl": "Je bent verantwoordelijk voor hoe je de functies van de app inschakelt en instelt, inclusief de beveiligings- en wisfuncties.",
     "es": "Eres responsable de cómo activas y configuras las funciones de la app, incluidas las de seguridad y borrado.",
-    "fr": "Vous êtes responsable de la manière dont vous activez et configurez les fonctions de l’app, y compris ses fonctions de sécurité et d’effacement."
+    "fr": "Vous êtes responsable de la manière dont vous activez et configurez les fonctions de l’app, y compris ses fonctions de sécurité et d’effacement.",
+    "it": "Sei responsabile di come attivi e configuri le funzioni dell’app, comprese quelle di sicurezza e di cancellazione.",
+    "pt-BR": "Você é responsável por como ativa e configura os recursos do app, incluindo os de segurança e de apagamento."
   },
   "terms_s2_li4": {
     "en": "You agree not to use Privaro to store or share any content that is illegal, or that infringes the rights of others.",
     "de": "Du verpflichtest dich, Privaro nicht zum Speichern oder Teilen rechtswidriger Inhalte oder von Inhalten zu nutzen, die Rechte Dritter verletzen.",
     "nl": "Je gaat ermee akkoord Privaro niet te gebruiken voor het bewaren of delen van illegale inhoud of inhoud die de rechten van anderen schendt.",
     "es": "Aceptas no usar Privaro para guardar o compartir contenido ilegal o que infrinja los derechos de terceros.",
-    "fr": "Vous vous engagez à ne pas utiliser Privaro pour stocker ou partager des contenus illégaux ou portant atteinte aux droits d’autrui."
+    "fr": "Vous vous engagez à ne pas utiliser Privaro pour stocker ou partager des contenus illégaux ou portant atteinte aux droits d’autrui.",
+    "it": "Accetti di non usare Privaro per conservare o condividere contenuti illegali o lesivi dei diritti altrui.",
+    "pt-BR": "Você concorda em não usar o Privaro para guardar ou compartilhar conteúdo ilegal ou que viole direitos de terceiros."
   },
   "terms_s2_li5": {
     "en": "You agree not to use the app for any unlawful purpose or in violation of any applicable law.",
     "de": "Du verpflichtest dich, die App nicht für rechtswidrige Zwecke oder unter Verstoß gegen geltendes Recht zu nutzen.",
     "nl": "Je gaat ermee akkoord de app niet te gebruiken voor onwettige doeleinden of in strijd met toepasselijk recht.",
     "es": "Aceptas no usar la app con fines ilícitos ni en infracción de ninguna ley aplicable.",
-    "fr": "Vous vous engagez à ne pas utiliser l’app à des fins illicites ni en violation de la loi applicable."
+    "fr": "Vous vous engagez à ne pas utiliser l’app à des fins illicites ni en violation de la loi applicable.",
+    "it": "Accetti di non usare l’app per scopi illeciti o in violazione della legge applicabile.",
+    "pt-BR": "Você concorda em não usar o app para fins ilícitos nem em violação de qualquer lei aplicável."
   },
   "terms_s3_h": {
     "en": "Data loss and backups",
     "de": "Datenverlust und Backups",
     "nl": "Gegevensverlies en reservekopieën",
     "es": "Pérdida de datos y copias de seguridad",
-    "fr": "Perte de données et sauvegardes"
+    "fr": "Perte de données et sauvegardes",
+    "it": "Perdita di dati e backup",
+    "pt-BR": "Perda de dados e backups"
   },
   "terms_s3_p1": {
     "en": "Because of Privaro's zero-knowledge, on-device encryption, we cannot reset your passcode, recover your encryption key, or restore your content for you. Any of the following may result in permanent, unrecoverable loss of your content: losing or forgetting your passcode and recovery key; loss, theft, damage, repair, reset, or replacement of your device; deletion of the app or its data; operating system or hardware failures; or failure to maintain a current, working backup. You are solely responsible for maintaining your own backups. You use the app's optional backup, restore, and transfer features at your own discretion and risk, and we do not guarantee their availability, completeness, or success.",
     "de": "Aufgrund der Zero-Knowledge-Verschlüsselung auf dem Gerät können wir deinen Code nicht zurücksetzen, deinen Schlüssel nicht wiederherstellen und deine Inhalte nicht für dich wiederherstellen. Jedes der folgenden Ereignisse kann zu dauerhaftem, nicht behebbarem Verlust deiner Inhalte führen: Verlust oder Vergessen von Code und Wiederherstellungsschlüssel; Verlust, Diebstahl, Beschädigung, Reparatur, Zurücksetzen oder Austausch deines Geräts; Löschen der App oder ihrer Daten; Betriebssystem- oder Hardwarefehler; oder das Fehlen eines aktuellen, funktionierenden Backups. Für eigene Backups bist allein du verantwortlich. Die optionalen Backup-, Wiederherstellungs- und Übertragungsfunktionen nutzt du nach eigenem Ermessen und auf eigenes Risiko; wir garantieren weder deren Verfügbarkeit noch Vollständigkeit oder Erfolg.",
     "nl": "Door de zero-knowledge-versleuteling op het apparaat kunnen wij je toegangscode niet resetten, je sleutel niet herstellen en je inhoud niet voor je terughalen. Elk van de volgende situaties kan leiden tot definitief, onherstelbaar verlies van je inhoud: het kwijtraken of vergeten van je toegangscode en herstelsleutel; verlies, diefstal, schade, reparatie, reset of vervanging van je apparaat; het verwijderen van de app of de gegevens ervan; storingen in het besturingssysteem of de hardware; of het ontbreken van een actuele, werkende reservekopie. Je bent zelf verantwoordelijk voor je eigen reservekopieën. Je gebruikt de optionele functies voor reservekopie, herstel en overdracht naar eigen inzicht en op eigen risico; wij garanderen niet dat ze beschikbaar, volledig of succesvol zijn.",
     "es": "Debido al cifrado de conocimiento cero en el dispositivo, no podemos restablecer tu código, recuperar tu clave de cifrado ni restaurar tu contenido. Cualquiera de estas situaciones puede provocar la pérdida permanente e irrecuperable de tu contenido: perder u olvidar tu código y tu clave de recuperación; pérdida, robo, daño, reparación, restablecimiento o sustitución de tu dispositivo; eliminación de la app o de sus datos; fallos del sistema operativo o del hardware; o no mantener una copia de seguridad actual y funcional. Mantener tus propias copias de seguridad es responsabilidad exclusivamente tuya. Usas las funciones opcionales de copia, restauración y transferencia a tu criterio y por tu cuenta y riesgo, y no garantizamos su disponibilidad, integridad ni éxito.",
-    "fr": "En raison du chiffrement à divulgation nulle réalisé sur l’appareil, nous ne pouvons ni réinitialiser votre code, ni récupérer votre clé de chiffrement, ni restaurer votre contenu à votre place. Chacune des situations suivantes peut entraîner une perte définitive et irrécupérable de votre contenu : perte ou oubli de votre code et de votre clé de récupération ; perte, vol, dommage, réparation, réinitialisation ou remplacement de votre appareil ; suppression de l’app ou de ses données ; défaillance du système d’exploitation ou du matériel ; ou absence de sauvegarde à jour et fonctionnelle. Vous êtes seul responsable de vos propres sauvegardes. Vous utilisez les fonctions facultatives de sauvegarde, de restauration et de transfert à votre discrétion et à vos risques, et nous n’en garantissons ni la disponibilité, ni l’exhaustivité, ni le succès."
+    "fr": "En raison du chiffrement à divulgation nulle réalisé sur l’appareil, nous ne pouvons ni réinitialiser votre code, ni récupérer votre clé de chiffrement, ni restaurer votre contenu à votre place. Chacune des situations suivantes peut entraîner une perte définitive et irrécupérable de votre contenu : perte ou oubli de votre code et de votre clé de récupération ; perte, vol, dommage, réparation, réinitialisation ou remplacement de votre appareil ; suppression de l’app ou de ses données ; défaillance du système d’exploitation ou du matériel ; ou absence de sauvegarde à jour et fonctionnelle. Vous êtes seul responsable de vos propres sauvegardes. Vous utilisez les fonctions facultatives de sauvegarde, de restauration et de transfert à votre discrétion et à vos risques, et nous n’en garantissons ni la disponibilité, ni l’exhaustivité, ni le succès.",
+    "it": "A causa della cifratura zero-knowledge sul dispositivo, non possiamo reimpostare il tuo codice, recuperare la chiave di cifratura o ripristinare i tuoi contenuti al posto tuo. Ognuna delle seguenti situazioni può comportare la perdita permanente e irrecuperabile dei tuoi contenuti: smarrimento o dimenticanza di codice e chiave di recupero; perdita, furto, danno, riparazione, ripristino o sostituzione del dispositivo; eliminazione dell’app o dei suoi dati; guasti del sistema operativo o dell’hardware; oppure la mancanza di un backup aggiornato e funzionante. Sei l’unico responsabile dei tuoi backup. Usi le funzioni facoltative di backup, ripristino e trasferimento a tua discrezione e a tuo rischio; non ne garantiamo disponibilità, completezza o riuscita.",
+    "pt-BR": "Por causa da criptografia de conhecimento zero no aparelho, não podemos redefinir sua senha, recuperar sua chave de criptografia nem restaurar seu conteúdo. Qualquer uma das situações a seguir pode resultar em perda permanente e irrecuperável do seu conteúdo: perder ou esquecer sua senha e sua chave de recuperação; perda, roubo, dano, reparo, redefinição ou substituição do aparelho; exclusão do app ou de seus dados; falhas do sistema operacional ou do hardware; ou não manter um backup atual e funcional. Manter seus próprios backups é responsabilidade exclusivamente sua. Você usa os recursos opcionais de backup, restauração e transferência a seu critério e por sua conta e risco, e não garantimos sua disponibilidade, integridade ou sucesso."
   },
   "terms_s4_h": {
     "en": "Security and data-erasing features",
     "de": "Sicherheits- und Löschfunktionen",
     "nl": "Beveiligings- en wisfuncties",
     "es": "Funciones de seguridad y borrado",
-    "fr": "Fonctions de sécurité et d’effacement"
+    "fr": "Fonctions de sécurité et d’effacement",
+    "it": "Funzioni di sicurezza e cancellazione",
+    "pt-BR": "Recursos de segurança e apagamento"
   },
   "terms_s4_p1": {
     "en": "Privaro includes optional features that are designed, on purpose, to delete your data or change how it can be accessed, including Duress Wipe, Decoy Vault, Panic Lock, and similar tools. These features work exactly as described and can cause intentional, permanent data loss.",
     "de": "Privaro enthält optionale Funktionen, die bewusst dafür ausgelegt sind, deine Daten zu löschen oder den Zugriff darauf zu verändern, darunter Notfall-Löschung, Täuschungstresor, Panik-Sperre und ähnliche Werkzeuge. Diese Funktionen arbeiten genau wie beschrieben und können absichtlichen, dauerhaften Datenverlust verursachen.",
     "nl": "Privaro bevat optionele functies die er bewust op zijn gericht je gegevens te wissen of de toegang ertoe te wijzigen, waaronder Noodwissing, Lokkluis, Paniekvergrendeling en vergelijkbare hulpmiddelen. Deze functies werken precies zoals beschreven en kunnen opzettelijk, definitief gegevensverlies veroorzaken.",
     "es": "Privaro incluye funciones opcionales diseñadas a propósito para borrar tus datos o cambiar cómo se puede acceder a ellos, entre ellas Borrado de coacción, Bóveda señuelo, Bloqueo de pánico y herramientas similares. Estas funciones se comportan exactamente como se describe y pueden causar pérdida de datos intencionada y permanente.",
-    "fr": "Privaro comporte des fonctions facultatives conçues, volontairement, pour supprimer vos données ou modifier les conditions d’accès à celles-ci, notamment l’Effacement sous contrainte, le Coffre leurre, le Verrouillage panique et des outils similaires. Ces fonctions se comportent exactement comme décrit et peuvent provoquer une perte de données intentionnelle et définitive."
+    "fr": "Privaro comporte des fonctions facultatives conçues, volontairement, pour supprimer vos données ou modifier les conditions d’accès à celles-ci, notamment l’Effacement sous contrainte, le Coffre leurre, le Verrouillage panique et des outils similaires. Ces fonctions se comportent exactement comme décrit et peuvent provoquer une perte de données intentionnelle et définitive.",
+    "it": "Privaro include funzioni facoltative progettate deliberatamente per cancellare i tuoi dati o modificarne l’accessibilità, tra cui Cancellazione di emergenza, Cassaforte esca, Blocco panico e strumenti simili. Queste funzioni si comportano esattamente come descritto e possono causare perdita di dati intenzionale e permanente.",
+    "pt-BR": "O Privaro inclui recursos opcionais projetados propositalmente para apagar seus dados ou alterar como eles podem ser acessados, incluindo Apagamento sob coação, Cofre falso, Bloqueio de pânico e ferramentas semelhantes. Esses recursos funcionam exatamente como descrito e podem causar perda de dados intencional e permanente."
   },
   "terms_s4_p2": {
     "en": "In particular, if you enable <strong>Duress Wipe</strong>, entering the duress passcode (for example, at the lock screen) will immediately, permanently, and irreversibly erase your real vault and everything inside it, by design, with no confirmation prompt, no undo, and no recovery, including in circumstances you did not anticipate. You decide whether to enable these features and how to configure them; you are solely responsible for that decision and for any resulting loss of, or inability to access, your data; and you agree that we are not liable for any data erased, hidden, or made inaccessible through your use of these features. Do not enable these features unless you fully understand and accept how they behave.",
     "de": "Insbesondere gilt: Wenn du die <strong>Notfall-Löschung</strong> aktivierst, wird durch Eingabe des Notfallcodes (etwa am Sperrbildschirm) dein echter Tresor samt Inhalt sofort, dauerhaft und unwiderruflich gelöscht – so vorgesehen, ohne Bestätigungsabfrage, ohne Rückgängigmachen und ohne Wiederherstellung, auch in Situationen, die du nicht vorhergesehen hast. Du entscheidest, ob und wie du diese Funktionen aktivierst; du allein trägst die Verantwortung für diese Entscheidung und für jeden daraus folgenden Verlust deiner Daten oder deren Unzugänglichkeit; und du erkennst an, dass wir für Daten, die durch deine Nutzung dieser Funktionen gelöscht, verborgen oder unzugänglich gemacht werden, nicht haften. Aktiviere diese Funktionen nur, wenn du ihr Verhalten vollständig verstehst und akzeptierst.",
     "nl": "In het bijzonder geldt: als je <strong>Noodwissing</strong> inschakelt, wist het invoeren van de noodcode (bijvoorbeeld op het vergrendelscherm) je echte kluis en alles daarin onmiddellijk, definitief en onherroepelijk — zo bedoeld, zonder bevestiging, zonder ongedaan maken en zonder herstel, ook in situaties die je niet had voorzien. Jij beslist of en hoe je deze functies inschakelt; jij alleen bent verantwoordelijk voor die beslissing en voor elk daaruit voortvloeiend verlies van of gebrek aan toegang tot je gegevens; en je gaat ermee akkoord dat wij niet aansprakelijk zijn voor gegevens die door je gebruik van deze functies zijn gewist, verborgen of ontoegankelijk gemaakt. Schakel deze functies alleen in als je volledig begrijpt en aanvaardt hoe ze werken.",
     "es": "En particular, si activas el <strong>Borrado de coacción</strong>, introducir el código de coacción (por ejemplo, en la pantalla de bloqueo) borrará tu bóveda real y todo su contenido de forma inmediata, permanente e irreversible, por diseño, sin aviso de confirmación, sin deshacer y sin recuperación, incluso en circunstancias que no hubieras previsto. Tú decides si activas estas funciones y cómo las configuras; eres el único responsable de esa decisión y de cualquier pérdida de datos o imposibilidad de acceder a ellos que se derive; y aceptas que no somos responsables de los datos borrados, ocultados o inaccesibles por tu uso de estas funciones. No las actives salvo que comprendas y aceptes plenamente cómo se comportan.",
-    "fr": "En particulier, si vous activez l’<strong>Effacement sous contrainte</strong>, la saisie du code sous contrainte (par exemple sur l’écran de verrouillage) effacera immédiatement, définitivement et irréversiblement votre coffre réel et tout ce qu’il contient, par conception, sans confirmation, sans annulation et sans récupération possible, y compris dans des circonstances que vous n’aviez pas anticipées. Vous décidez d’activer ou non ces fonctions et de leur configuration ; vous êtes seul responsable de ce choix et de toute perte de données ou impossibilité d’y accéder qui en découlerait ; et vous acceptez que nous ne soyons pas responsables des données effacées, masquées ou rendues inaccessibles par votre usage de ces fonctions. N’activez ces fonctions que si vous comprenez et acceptez pleinement leur comportement."
+    "fr": "En particulier, si vous activez l’<strong>Effacement sous contrainte</strong>, la saisie du code sous contrainte (par exemple sur l’écran de verrouillage) effacera immédiatement, définitivement et irréversiblement votre coffre réel et tout ce qu’il contient, par conception, sans confirmation, sans annulation et sans récupération possible, y compris dans des circonstances que vous n’aviez pas anticipées. Vous décidez d’activer ou non ces fonctions et de leur configuration ; vous êtes seul responsable de ce choix et de toute perte de données ou impossibilité d’y accéder qui en découlerait ; et vous acceptez que nous ne soyons pas responsables des données effacées, masquées ou rendues inaccessibles par votre usage de ces fonctions. N’activez ces fonctions que si vous comprenez et acceptez pleinement leur comportement.",
+    "it": "In particolare, se attivi la <strong>Cancellazione di emergenza</strong>, l’inserimento del codice di emergenza (ad esempio nella schermata di blocco) cancellerà immediatamente, in modo permanente e irreversibile la tua cassaforte reale e tutto il suo contenuto, per progettazione, senza richiesta di conferma, senza annullamento e senza recupero, anche in circostanze che non avevi previsto. Sei tu a decidere se attivare queste funzioni e come configurarle; sei l’unico responsabile di tale scelta e di qualsiasi conseguente perdita dei dati o impossibilità di accedervi; e accetti che non siamo responsabili per i dati cancellati, nascosti o resi inaccessibili dal tuo uso di queste funzioni. Non attivarle se non ne comprendi e accetti pienamente il funzionamento.",
+    "pt-BR": "Em particular, se você ativar o <strong>Apagamento sob coação</strong>, digitar a senha de coação (por exemplo, na tela de bloqueio) apagará imediatamente, de forma permanente e irreversível, seu cofre real e tudo que há nele, por design, sem confirmação, sem desfazer e sem recuperação, inclusive em circunstâncias que você não previu. Você decide se ativa esses recursos e como os configura; você é o único responsável por essa decisão e por qualquer perda de dados ou impossibilidade de acesso resultante; e concorda que não somos responsáveis por dados apagados, ocultados ou tornados inacessíveis pelo seu uso desses recursos. Não os ative a menos que compreenda e aceite plenamente como funcionam."
   },
   "terms_s5_h": {
     "en": "Purchases",
     "de": "Käufe",
     "nl": "Aankopen",
     "es": "Compras",
-    "fr": "Achats"
+    "fr": "Achats",
+    "it": "Acquisti",
+    "pt-BR": "Compras"
   },
   "terms_s5_p1": {
     "en": "Privaro offers an optional paid upgrade (“Privaro Pro”) as a one-time purchase, sold through the Apple App Store. There is no subscription and nothing renews. Payment is charged to your Apple Account at confirmation of purchase, and the upgrade applies to every device signed in to that Apple Account. Prices may vary by region and are shown at the point of purchase. Except where required by law or by Apple’s policies, payments are non-refundable; refund requests are handled by Apple.",
     "de": "Privaro bietet ein optionales kostenpflichtiges Upgrade („Privaro Pro“) als einmaligen Kauf über den Apple App Store an. Es gibt kein Abo und nichts verlängert sich. Die Zahlung wird bei Kaufbestätigung über deinen Apple Account abgerechnet, und das Upgrade gilt für alle Geräte, die bei diesem Apple Account angemeldet sind. Preise können je nach Region variieren und werden beim Kauf angezeigt. Soweit nicht gesetzlich oder durch Apples Richtlinien vorgeschrieben, sind Zahlungen nicht erstattungsfähig; Erstattungsanfragen bearbeitet Apple.",
     "nl": "Privaro biedt een optionele betaalde upgrade (‘Privaro Pro’) aan als eenmalige aankoop via de Apple App Store. Er is geen abonnement en er verlengt niets. Het bedrag wordt bij bevestiging van de aankoop van je Apple Account afgeschreven, en de upgrade geldt voor elk apparaat dat bij die Apple Account is aangemeld. Prijzen kunnen per regio verschillen en worden getoond op het moment van aankoop. Behalve waar de wet of het beleid van Apple dat vereist, worden betalingen niet terugbetaald; verzoeken om terugbetaling worden door Apple afgehandeld.",
     "es": "Privaro ofrece una mejora de pago opcional («Privaro Pro») como compra única a través de la App Store de Apple. No hay suscripción y nada se renueva. El pago se carga a tu Apple Account al confirmar la compra, y la mejora se aplica a todos los dispositivos con esa Apple Account. Los precios pueden variar por región y se muestran en el momento de la compra. Salvo cuando lo exija la ley o las políticas de Apple, los pagos no son reembolsables; las solicitudes de reembolso las gestiona Apple.",
-    "fr": "Privaro propose une amélioration payante facultative (« Privaro Pro ») sous forme d’achat unique, vendue via l’App Store d’Apple. Il n’y a pas d’abonnement et rien ne se renouvelle. Le paiement est débité de votre compte Apple à la confirmation de l’achat, et l’amélioration s’applique à tous les appareils connectés à ce compte Apple. Les prix peuvent varier selon les régions et sont affichés au moment de l’achat. Sauf lorsque la loi ou les règles d’Apple l’exigent, les paiements ne sont pas remboursables ; les demandes de remboursement sont traitées par Apple."
+    "fr": "Privaro propose une amélioration payante facultative (« Privaro Pro ») sous forme d’achat unique, vendue via l’App Store d’Apple. Il n’y a pas d’abonnement et rien ne se renouvelle. Le paiement est débité de votre compte Apple à la confirmation de l’achat, et l’amélioration s’applique à tous les appareils connectés à ce compte Apple. Les prix peuvent varier selon les régions et sont affichés au moment de l’achat. Sauf lorsque la loi ou les règles d’Apple l’exigent, les paiements ne sont pas remboursables ; les demandes de remboursement sont traitées par Apple.",
+    "it": "Privaro offre un upgrade a pagamento facoltativo («Privaro Pro») come acquisto una tantum, venduto tramite l’App Store di Apple. Non esiste alcun abbonamento e nulla si rinnova. Il pagamento viene addebitato sul tuo Apple Account alla conferma dell’acquisto e l’upgrade vale per ogni dispositivo collegato a quell’Apple Account. I prezzi possono variare per regione e sono mostrati al momento dell’acquisto. Salvo quanto richiesto dalla legge o dalle politiche di Apple, i pagamenti non sono rimborsabili; le richieste di rimborso sono gestite da Apple.",
+    "pt-BR": "O Privaro oferece uma melhoria paga opcional (“Privaro Pro”) como compra única, vendida pela App Store da Apple. Não há assinatura e nada é renovado. O pagamento é cobrado da sua Apple Account na confirmação da compra, e a melhoria vale para todos os aparelhos conectados a essa Apple Account. Os preços podem variar por região e são exibidos no momento da compra. Exceto quando exigido por lei ou pelas políticas da Apple, os pagamentos não são reembolsáveis; os pedidos de reembolso são tratados pela Apple."
   },
   "terms_s6_h": {
     "en": "Disclaimers",
     "de": "Haftungsausschlüsse",
     "nl": "Uitsluitingen",
     "es": "Exenciones de responsabilidad",
-    "fr": "Exclusions de garantie"
+    "fr": "Exclusions de garantie",
+    "it": "Esclusioni di garanzia",
+    "pt-BR": "Isenções de responsabilidade"
   },
   "terms_s6_p1": {
     "en": "Privaro is provided \"as is\" and \"as available\" without warranties of any kind, whether express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, and non-infringement. While we use strong, industry-standard encryption, we do not warrant that the app will be uninterrupted, error-free, or that it will meet your requirements, and no security measure is guaranteed to be impenetrable. You use features such as Wi-Fi Transfer, which is not encrypted in transit, at your own risk and only on networks you trust.",
     "de": "Privaro wird „wie besehen“ und „wie verfügbar“ bereitgestellt, ohne ausdrückliche oder stillschweigende Gewährleistungen jeglicher Art, einschließlich stillschweigender Gewährleistungen der Marktgängigkeit, der Eignung für einen bestimmten Zweck und der Nichtverletzung von Rechten. Zwar verwenden wir starke, branchenübliche Verschlüsselung, wir gewährleisten jedoch nicht, dass die App unterbrechungsfrei oder fehlerfrei läuft oder deinen Anforderungen entspricht; keine Sicherheitsmaßnahme ist garantiert undurchdringlich. Funktionen wie die WLAN-Übertragung, die während der Übertragung nicht verschlüsselt ist, nutzt du auf eigenes Risiko und nur in Netzwerken, denen du vertraust.",
     "nl": "Privaro wordt geleverd ‘zoals het is’ en ‘zoals beschikbaar’, zonder enige uitdrukkelijke of stilzwijgende garantie, waaronder stilzwijgende garanties van verkoopbaarheid, geschiktheid voor een bepaald doel en niet-inbreuk. Hoewel we sterke, industriestandaard versleuteling gebruiken, garanderen we niet dat de app ononderbroken of foutloos werkt of aan je eisen voldoet, en geen enkele beveiligingsmaatregel is gegarandeerd ondoordringbaar. Functies zoals wifi-overdracht, die tijdens de overdracht niet versleuteld is, gebruik je op eigen risico en alleen op netwerken die je vertrouwt.",
     "es": "Privaro se ofrece «tal cual» y «según disponibilidad», sin garantías de ningún tipo, expresas o implícitas, incluidas entre otras las garantías implícitas de comerciabilidad, idoneidad para un fin concreto y no infracción. Aunque usamos cifrado sólido y estándar del sector, no garantizamos que la app funcione sin interrupciones ni errores, ni que cumpla tus requisitos, y ninguna medida de seguridad es impenetrable por garantía. Usas funciones como la transferencia por Wi-Fi, que no está cifrada en tránsito, por tu cuenta y riesgo y solo en redes de confianza.",
-    "fr": "Privaro est fourni « en l’état » et « selon disponibilité », sans garantie d’aucune sorte, expresse ou implicite, y compris les garanties implicites de qualité marchande, d’adéquation à un usage particulier et d’absence de contrefaçon. Bien que nous utilisions un chiffrement robuste et standard, nous ne garantissons pas que l’app fonctionnera sans interruption ni erreur, ni qu’elle répondra à vos besoins, et aucune mesure de sécurité n’est garantie inviolable. Vous utilisez des fonctions telles que le transfert Wi-Fi, non chiffré pendant le transit, à vos propres risques et uniquement sur des réseaux de confiance."
+    "fr": "Privaro est fourni « en l’état » et « selon disponibilité », sans garantie d’aucune sorte, expresse ou implicite, y compris les garanties implicites de qualité marchande, d’adéquation à un usage particulier et d’absence de contrefaçon. Bien que nous utilisions un chiffrement robuste et standard, nous ne garantissons pas que l’app fonctionnera sans interruption ni erreur, ni qu’elle répondra à vos besoins, et aucune mesure de sécurité n’est garantie inviolable. Vous utilisez des fonctions telles que le transfert Wi-Fi, non chiffré pendant le transit, à vos propres risques et uniquement sur des réseaux de confiance.",
+    "it": "Privaro è fornito «così com’è» e «come disponibile», senza garanzie di alcun tipo, esplicite o implicite, incluse le garanzie implicite di commerciabilità, idoneità a uno scopo specifico e non violazione di diritti. Pur usando una cifratura robusta e standard del settore, non garantiamo che l’app sia priva di interruzioni o errori né che soddisfi le tue esigenze, e nessuna misura di sicurezza è garantita inviolabile. Usi funzioni come il trasferimento Wi-Fi, non cifrato durante il transito, a tuo rischio e solo su reti di cui ti fidi.",
+    "pt-BR": "O Privaro é fornecido “no estado em que se encontra” e “conforme disponível”, sem garantias de qualquer tipo, expressas ou implícitas, incluindo, entre outras, garantias implícitas de comercialização, adequação a uma finalidade específica e não violação. Embora usemos criptografia forte e padrão do setor, não garantimos que o app funcionará sem interrupções ou erros, nem que atenderá às suas necessidades, e nenhuma medida de segurança é garantidamente impenetrável. Você usa recursos como a transferência por Wi-Fi, que não é criptografada em trânsito, por sua conta e risco e apenas em redes confiáveis."
   },
   "terms_s6_p2": {
     "en": "Privaro is a consumer software tool, not a guarantee of safety. We do not warrant that it will protect your content against all threats, including determined attackers, forensic examination of a device, malware, vulnerabilities in the operating system or third-party components, or legal or physical compulsion. You are responsible for evaluating whether the app is suitable for your particular needs and threat model.",
     "de": "Privaro ist ein Verbrauchersoftware-Werkzeug, keine Sicherheitsgarantie. Wir gewährleisten nicht, dass es deine Inhalte vor allen Bedrohungen schützt, einschließlich entschlossener Angreifer, forensischer Untersuchung eines Geräts, Schadsoftware, Schwachstellen im Betriebssystem oder in Komponenten Dritter oder rechtlichem beziehungsweise physischem Zwang. Du bist dafür verantwortlich zu beurteilen, ob die App für deine Bedürfnisse und dein Bedrohungsmodell geeignet ist.",
     "nl": "Privaro is consumentensoftware, geen garantie op veiligheid. We garanderen niet dat het je inhoud beschermt tegen alle dreigingen, waaronder vastberaden aanvallers, forensisch onderzoek van een apparaat, malware, kwetsbaarheden in het besturingssysteem of onderdelen van derden, of juridische dan wel fysieke dwang. Jij bent verantwoordelijk voor de afweging of de app geschikt is voor jouw behoeften en dreigingsmodel.",
     "es": "Privaro es una herramienta de software de consumo, no una garantía de seguridad. No garantizamos que proteja tu contenido frente a todas las amenazas, incluidos atacantes decididos, análisis forense de un dispositivo, malware, vulnerabilidades del sistema operativo o de componentes de terceros, o coacción legal o física. Eres responsable de evaluar si la app es adecuada para tus necesidades y tu modelo de amenaza.",
-    "fr": "Privaro est un logiciel grand public, pas une garantie de sécurité. Nous ne garantissons pas qu’il protégera votre contenu contre toutes les menaces, y compris des attaquants déterminés, l’analyse forensique d’un appareil, des logiciels malveillants, des vulnérabilités du système d’exploitation ou de composants tiers, ou une contrainte légale ou physique. Il vous appartient d’évaluer si l’app convient à vos besoins et à votre modèle de menace."
+    "fr": "Privaro est un logiciel grand public, pas une garantie de sécurité. Nous ne garantissons pas qu’il protégera votre contenu contre toutes les menaces, y compris des attaquants déterminés, l’analyse forensique d’un appareil, des logiciels malveillants, des vulnérabilités du système d’exploitation ou de composants tiers, ou une contrainte légale ou physique. Il vous appartient d’évaluer si l’app convient à vos besoins et à votre modèle de menace.",
+    "it": "Privaro è uno strumento software di consumo, non una garanzia di sicurezza. Non garantiamo che protegga i tuoi contenuti da ogni minaccia, inclusi aggressori determinati, analisi forense di un dispositivo, malware, vulnerabilità del sistema operativo o di componenti di terzi, oppure costrizione legale o fisica. Sei responsabile di valutare se l’app sia adatta alle tue esigenze e al tuo modello di minaccia.",
+    "pt-BR": "O Privaro é uma ferramenta de software de consumo, não uma garantia de segurança. Não garantimos que ele protegerá seu conteúdo contra todas as ameaças, incluindo atacantes determinados, exame forense de um aparelho, malware, vulnerabilidades do sistema operacional ou de componentes de terceiros, ou coação legal ou física. Você é responsável por avaliar se o app é adequado às suas necessidades e ao seu modelo de ameaça."
   },
   "terms_s7_h": {
     "en": "Limitation of liability",
     "de": "Haftungsbeschränkung",
     "nl": "Beperking van aansprakelijkheid",
     "es": "Limitación de responsabilidad",
-    "fr": "Limitation de responsabilité"
+    "fr": "Limitation de responsabilité",
+    "it": "Limitazione di responsabilità",
+    "pt-BR": "Limitação de responsabilidade"
   },
   "terms_s7_p1": {
     "en": "To the maximum extent permitted by law, in no event will we be liable for any indirect, incidental, special, consequential, or punitive damages, or for any loss of data, profits, or content, arising out of or relating to your use of (or inability to use) Privaro, even if advised of the possibility of such damages. Our total liability for any claim relating to the app will not exceed the amount you paid us for the app in the twelve months before the claim, or, where no amount was paid, a nominal sum.",
     "de": "Soweit gesetzlich zulässig, haften wir in keinem Fall für indirekte, zufällige, besondere, Folge- oder Strafschäden oder für den Verlust von Daten, Gewinnen oder Inhalten, die sich aus deiner Nutzung (oder der Unmöglichkeit der Nutzung) von Privaro ergeben, selbst wenn auf die Möglichkeit solcher Schäden hingewiesen wurde. Unsere Gesamthaftung für Ansprüche im Zusammenhang mit der App übersteigt nicht den Betrag, den du in den zwölf Monaten vor dem Anspruch für die App an uns gezahlt hast, oder – falls nichts gezahlt wurde – einen symbolischen Betrag.",
     "nl": "Voor zover wettelijk toegestaan zijn wij in geen geval aansprakelijk voor indirecte, incidentele, bijzondere, gevolg- of punitieve schade, of voor verlies van gegevens, winst of inhoud, voortvloeiend uit of verband houdend met je gebruik van (of onvermogen tot gebruik van) Privaro, zelfs als op de mogelijkheid van zulke schade is gewezen. Onze totale aansprakelijkheid voor enige claim met betrekking tot de app bedraagt niet meer dan het bedrag dat je ons in de twaalf maanden vóór de claim voor de app hebt betaald, of, als er niets is betaald, een symbolisch bedrag.",
     "es": "En la máxima medida permitida por la ley, en ningún caso seremos responsables de daños indirectos, incidentales, especiales, consecuentes o punitivos, ni de la pérdida de datos, beneficios o contenido, derivados de tu uso (o de la imposibilidad de usar) Privaro, incluso si se advirtió de la posibilidad de tales daños. Nuestra responsabilidad total por cualquier reclamación relacionada con la app no superará el importe que nos hayas pagado por ella en los doce meses anteriores a la reclamación o, si no se pagó nada, una cantidad simbólica.",
-    "fr": "Dans toute la mesure permise par la loi, nous ne serons en aucun cas responsables de dommages indirects, accessoires, spéciaux, consécutifs ou punitifs, ni de la perte de données, de bénéfices ou de contenu, découlant de votre utilisation (ou de l’impossibilité d’utiliser) Privaro, même si la possibilité de tels dommages a été signalée. Notre responsabilité totale pour toute réclamation liée à l’app n’excédera pas le montant que vous nous avez versé pour l’app au cours des douze mois précédant la réclamation ou, si aucun montant n’a été versé, une somme symbolique."
+    "fr": "Dans toute la mesure permise par la loi, nous ne serons en aucun cas responsables de dommages indirects, accessoires, spéciaux, consécutifs ou punitifs, ni de la perte de données, de bénéfices ou de contenu, découlant de votre utilisation (ou de l’impossibilité d’utiliser) Privaro, même si la possibilité de tels dommages a été signalée. Notre responsabilité totale pour toute réclamation liée à l’app n’excédera pas le montant que vous nous avez versé pour l’app au cours des douze mois précédant la réclamation ou, si aucun montant n’a été versé, une somme symbolique.",
+    "it": "Nella massima misura consentita dalla legge, non saremo in alcun caso responsabili per danni indiretti, incidentali, speciali, consequenziali o punitivi, né per la perdita di dati, profitti o contenuti derivanti dall’uso (o dall’impossibilità di usare) Privaro, anche se avvisati della possibilità di tali danni. La nostra responsabilità complessiva per qualsiasi pretesa relativa all’app non supererà l’importo che ci hai pagato per l’app nei dodici mesi precedenti la pretesa o, se nulla è stato pagato, una somma simbolica.",
+    "pt-BR": "Na máxima extensão permitida por lei, em nenhuma hipótese seremos responsáveis por danos indiretos, incidentais, especiais, consequenciais ou punitivos, nem por perda de dados, lucros ou conteúdo, decorrentes do seu uso (ou da impossibilidade de uso) do Privaro, mesmo se avisados da possibilidade de tais danos. Nossa responsabilidade total por qualquer reivindicação relacionada ao app não excederá o valor que você nos pagou pelo app nos doze meses anteriores à reivindicação ou, se nada foi pago, uma quantia simbólica."
   },
   "terms_s7_p2": {
     "en": "Some jurisdictions do not allow the exclusion of implied warranties or the limitation of certain damages, so some of the above may not apply to you. In that case, our liability is limited to the maximum extent permitted by applicable law, and nothing in these Terms limits or excludes any rights you have that cannot be waived under the mandatory law of your country of residence.",
     "de": "In manchen Rechtsordnungen sind der Ausschluss stillschweigender Gewährleistungen oder die Beschränkung bestimmter Schäden unzulässig, sodass Teile des Vorstehenden für dich möglicherweise nicht gelten. In diesem Fall ist unsere Haftung auf das gesetzlich zulässige Höchstmaß beschränkt, und nichts in diesen Bedingungen beschränkt oder schließt Rechte aus, auf die nach zwingendem Recht deines Wohnsitzlandes nicht verzichtet werden kann.",
     "nl": "In sommige rechtsgebieden is het uitsluiten van stilzwijgende garanties of het beperken van bepaalde schade niet toegestaan, waardoor een deel van het bovenstaande mogelijk niet op jou van toepassing is. In dat geval is onze aansprakelijkheid beperkt tot het maximum dat het toepasselijke recht toestaat, en niets in deze voorwaarden beperkt of sluit rechten uit waarvan volgens het dwingende recht van je woonland geen afstand kan worden gedaan.",
     "es": "Algunas jurisdicciones no permiten la exclusión de garantías implícitas ni la limitación de ciertos daños, por lo que parte de lo anterior podría no aplicarse a ti. En ese caso, nuestra responsabilidad se limita al máximo permitido por la ley aplicable, y nada en estos Términos limita ni excluye derechos irrenunciables que te correspondan según la ley imperativa de tu país de residencia.",
-    "fr": "Certaines juridictions n’autorisent pas l’exclusion des garanties implicites ni la limitation de certains dommages ; une partie de ce qui précède peut donc ne pas s’appliquer à vous. Dans ce cas, notre responsabilité est limitée au maximum permis par la loi applicable, et rien dans les présentes Conditions ne limite ni n’exclut les droits auxquels vous ne pouvez renoncer en vertu du droit impératif de votre pays de résidence."
+    "fr": "Certaines juridictions n’autorisent pas l’exclusion des garanties implicites ni la limitation de certains dommages ; une partie de ce qui précède peut donc ne pas s’appliquer à vous. Dans ce cas, notre responsabilité est limitée au maximum permis par la loi applicable, et rien dans les présentes Conditions ne limite ni n’exclut les droits auxquels vous ne pouvez renoncer en vertu du droit impératif de votre pays de résidence.",
+    "it": "Alcune giurisdizioni non consentono l’esclusione delle garanzie implicite o la limitazione di determinati danni, pertanto alcune delle disposizioni precedenti potrebbero non applicarsi a te. In tal caso, la nostra responsabilità è limitata nella massima misura consentita dalla legge applicabile e nulla in queste Condizioni limita o esclude diritti irrinunciabili spettanti in base alle norme imperative del tuo Paese di residenza.",
+    "pt-BR": "Algumas jurisdições não permitem a exclusão de garantias implícitas nem a limitação de certos danos, portanto parte do disposto acima pode não se aplicar a você. Nesse caso, nossa responsabilidade é limitada ao máximo permitido pela lei aplicável, e nada nestes Termos limita ou exclui direitos irrenunciáveis previstos na legislação imperativa do seu país de residência."
   },
   "terms_s8_h": {
     "en": "Indemnification",
     "de": "Freistellung",
     "nl": "Vrijwaring",
     "es": "Indemnización",
-    "fr": "Indemnisation"
+    "fr": "Indemnisation",
+    "it": "Manleva",
+    "pt-BR": "Indenização"
   },
   "terms_s8_p1": {
     "en": "To the maximum extent permitted by law, you agree to indemnify and hold harmless Erdinc Zarbo from and against any claims, damages, losses, liabilities, and expenses (including reasonable legal fees) arising out of or related to: the content you store or share; your use or misuse of the app; your violation of these Terms; or your violation of any law or the rights of any third party.",
     "de": "Soweit gesetzlich zulässig, stellst du Erdinc Zarbo von allen Ansprüchen, Schäden, Verlusten, Verbindlichkeiten und Kosten (einschließlich angemessener Anwaltskosten) frei, die sich ergeben aus oder zusammenhängen mit: den von dir gespeicherten oder geteilten Inhalten; deiner Nutzung oder missbräuchlichen Nutzung der App; deinem Verstoß gegen diese Bedingungen; oder deinem Verstoß gegen Gesetze oder Rechte Dritter.",
     "nl": "Voor zover wettelijk toegestaan vrijwaar je Erdinc Zarbo van alle claims, schade, verliezen, aansprakelijkheden en kosten (waaronder redelijke advocaatkosten) die voortvloeien uit of verband houden met: de inhoud die je bewaart of deelt; je gebruik of misbruik van de app; je schending van deze voorwaarden; of je schending van enige wet of van rechten van derden.",
     "es": "En la máxima medida permitida por la ley, aceptas indemnizar y mantener indemne a Erdinc Zarbo frente a reclamaciones, daños, pérdidas, responsabilidades y gastos (incluidos honorarios legales razonables) derivados de o relacionados con: el contenido que guardas o compartes; tu uso o uso indebido de la app; tu incumplimiento de estos Términos; o tu infracción de cualquier ley o de los derechos de terceros.",
-    "fr": "Dans toute la mesure permise par la loi, vous acceptez d’indemniser et de garantir Erdinc Zarbo contre toute réclamation, tout dommage, perte, responsabilité et frais (y compris des frais juridiques raisonnables) découlant de ou liés à : le contenu que vous stockez ou partagez ; votre utilisation ou votre usage abusif de l’app ; votre violation des présentes Conditions ; ou votre violation d’une loi ou des droits d’un tiers."
+    "fr": "Dans toute la mesure permise par la loi, vous acceptez d’indemniser et de garantir Erdinc Zarbo contre toute réclamation, tout dommage, perte, responsabilité et frais (y compris des frais juridiques raisonnables) découlant de ou liés à : le contenu que vous stockez ou partagez ; votre utilisation ou votre usage abusif de l’app ; votre violation des présentes Conditions ; ou votre violation d’une loi ou des droits d’un tiers.",
+    "it": "Nella massima misura consentita dalla legge, accetti di manlevare e tenere indenne Erdinc Zarbo da qualsiasi pretesa, danno, perdita, responsabilità e spesa (incluse ragionevoli spese legali) derivante da o connessa a: i contenuti che conservi o condividi; il tuo uso o uso improprio dell’app; la tua violazione di queste Condizioni; oppure la tua violazione di leggi o diritti di terzi.",
+    "pt-BR": "Na máxima extensão permitida por lei, você concorda em indenizar e isentar Erdinc Zarbo de quaisquer reivindicações, danos, perdas, responsabilidades e despesas (incluindo honorários advocatícios razoáveis) decorrentes de ou relacionados a: o conteúdo que você guarda ou compartilha; seu uso ou uso indevido do app; sua violação destes Termos; ou sua violação de qualquer lei ou de direitos de terceiros."
   },
   "terms_s9_h": {
     "en": "Apple",
     "de": "Apple",
     "nl": "Apple",
     "es": "Apple",
-    "fr": "Apple"
+    "fr": "Apple",
+    "it": "Apple",
+    "pt-BR": "Apple"
   },
   "terms_s9_p1": {
     "en": "These Terms are between you and us, not with Apple. Apple is not responsible for the app or its content. Apple and its subsidiaries are third-party beneficiaries of these Terms and may enforce them against you. Your use of the app must also comply with the Apple Media Services Terms and Conditions.",
     "de": "Diese Bedingungen bestehen zwischen dir und uns, nicht mit Apple. Apple ist nicht für die App oder ihre Inhalte verantwortlich. Apple und seine Tochtergesellschaften sind Drittbegünstigte dieser Bedingungen und können sie dir gegenüber durchsetzen. Deine Nutzung der App muss außerdem den Apple-Media-Services-Geschäftsbedingungen entsprechen.",
     "nl": "Deze voorwaarden gelden tussen jou en ons, niet met Apple. Apple is niet verantwoordelijk voor de app of de inhoud ervan. Apple en haar dochterondernemingen zijn derde-begunstigden van deze voorwaarden en kunnen deze tegenover jou afdwingen. Je gebruik van de app moet daarnaast voldoen aan de Apple Media Services-voorwaarden.",
     "es": "Estos Términos son entre tú y nosotros, no con Apple. Apple no es responsable de la app ni de su contenido. Apple y sus filiales son terceros beneficiarios de estos Términos y pueden hacerlos valer frente a ti. Tu uso de la app también debe cumplir los Términos y condiciones de Apple Media Services.",
-    "fr": "Les présentes Conditions vous lient à nous, et non à Apple. Apple n’est pas responsable de l’app ni de son contenu. Apple et ses filiales sont tiers bénéficiaires des présentes Conditions et peuvent les faire valoir à votre encontre. Votre utilisation de l’app doit également respecter les Conditions générales des services Apple Media."
+    "fr": "Les présentes Conditions vous lient à nous, et non à Apple. Apple n’est pas responsable de l’app ni de son contenu. Apple et ses filiales sont tiers bénéficiaires des présentes Conditions et peuvent les faire valoir à votre encontre. Votre utilisation de l’app doit également respecter les Conditions générales des services Apple Media.",
+    "it": "Queste Condizioni intercorrono tra te e noi, non con Apple. Apple non è responsabile dell’app né dei suoi contenuti. Apple e le sue controllate sono terzi beneficiari di queste Condizioni e possono farle valere nei tuoi confronti. L’uso dell’app deve inoltre rispettare i Termini e condizioni dei servizi Apple Media.",
+    "pt-BR": "Estes Termos são entre você e nós, não com a Apple. A Apple não é responsável pelo app nem por seu conteúdo. A Apple e suas subsidiárias são terceiros beneficiários destes Termos e podem exigi-los de você. Seu uso do app também deve cumprir os Termos e Condições dos Serviços de Mídia da Apple."
   },
   "terms_s10_h": {
     "en": "Changes to these Terms",
     "de": "Änderungen dieser Bedingungen",
     "nl": "Wijzigingen in deze voorwaarden",
     "es": "Cambios en estos Términos",
-    "fr": "Modifications des Conditions"
+    "fr": "Modifications des Conditions",
+    "it": "Modifiche a queste Condizioni",
+    "pt-BR": "Alterações nestes Termos"
   },
   "terms_s10_p1": {
     "en": "We may update these Terms from time to time. We will revise the \"Last updated\" date above, and significant changes will be reflected in the app or on our website. Your continued use of the app after changes take effect constitutes acceptance of the updated Terms.",
     "de": "Wir können diese Bedingungen von Zeit zu Zeit aktualisieren. Wir passen das oben stehende Datum „Zuletzt aktualisiert“ an, und wesentliche Änderungen werden in der App oder auf unserer Website kenntlich gemacht. Deine fortgesetzte Nutzung der App nach Inkrafttreten der Änderungen gilt als Zustimmung zu den aktualisierten Bedingungen.",
     "nl": "We kunnen deze voorwaarden van tijd tot tijd bijwerken. We passen dan de datum ‘Laatst bijgewerkt’ hierboven aan, en belangrijke wijzigingen worden in de app of op onze website vermeld. Als je de app blijft gebruiken nadat wijzigingen van kracht zijn geworden, aanvaard je de bijgewerkte voorwaarden.",
     "es": "Podemos actualizar estos Términos de vez en cuando. Revisaremos la fecha de «Última actualización» de arriba, y los cambios significativos se reflejarán en la app o en nuestro sitio web. Si sigues usando la app después de que los cambios entren en vigor, aceptas los Términos actualizados.",
-    "fr": "Nous pouvons mettre à jour ces Conditions de temps à autre. Nous modifierons la date de « Dernière mise à jour » ci-dessus, et les changements importants seront signalés dans l’app ou sur notre site web. Le fait de continuer à utiliser l’app après l’entrée en vigueur des modifications vaut acceptation des Conditions mises à jour."
+    "fr": "Nous pouvons mettre à jour ces Conditions de temps à autre. Nous modifierons la date de « Dernière mise à jour » ci-dessus, et les changements importants seront signalés dans l’app ou sur notre site web. Le fait de continuer à utiliser l’app après l’entrée en vigueur des modifications vaut acceptation des Conditions mises à jour.",
+    "it": "Possiamo aggiornare queste Condizioni di tanto in tanto. Aggiorneremo la data di «Ultimo aggiornamento» qui sopra e le modifiche significative saranno indicate nell’app o sul nostro sito web. Continuando a usare l’app dopo l’entrata in vigore delle modifiche, accetti le Condizioni aggiornate.",
+    "pt-BR": "Podemos atualizar estes Termos de tempos em tempos. Vamos revisar a data de “Última atualização” acima, e alterações significativas serão informadas no app ou no nosso site. Continuar usando o app após as alterações entrarem em vigor significa que você aceita os Termos atualizados."
   },
   "terms_s11_h": {
     "en": "Governing law",
     "de": "Anwendbares Recht",
     "nl": "Toepasselijk recht",
     "es": "Ley aplicable",
-    "fr": "Droit applicable"
+    "fr": "Droit applicable",
+    "it": "Legge applicabile",
+    "pt-BR": "Lei aplicável"
   },
   "terms_s11_p1": {
     "en": "These Terms are governed by the laws of the Netherlands, without regard to its conflict-of-laws rules, except where mandatory consumer-protection laws of your country of residence apply.",
     "de": "Diese Bedingungen unterliegen dem Recht der Niederlande unter Ausschluss seiner Kollisionsnormen, soweit nicht zwingende Verbraucherschutzvorschriften deines Wohnsitzlandes gelten.",
     "nl": "Op deze voorwaarden is Nederlands recht van toepassing, met uitsluiting van de regels van internationaal privaatrecht, behalve waar dwingende consumentenbeschermingsregels van je woonland gelden.",
     "es": "Estos Términos se rigen por las leyes de los Países Bajos, sin atender a sus normas de conflicto de leyes, salvo cuando se apliquen normas imperativas de protección al consumidor de tu país de residencia.",
-    "fr": "Les présentes Conditions sont régies par le droit des Pays-Bas, sans égard à ses règles de conflit de lois, sauf lorsque s’appliquent les dispositions impératives de protection des consommateurs de votre pays de résidence."
+    "fr": "Les présentes Conditions sont régies par le droit des Pays-Bas, sans égard à ses règles de conflit de lois, sauf lorsque s’appliquent les dispositions impératives de protection des consommateurs de votre pays de résidence.",
+    "it": "Queste Condizioni sono regolate dalla legge dei Paesi Bassi, senza riguardo alle norme sui conflitti di legge, salvo dove si applichino norme imperative di tutela del consumatore del tuo Paese di residenza.",
+    "pt-BR": "Estes Termos são regidos pelas leis dos Países Baixos, sem considerar suas regras de conflito de leis, exceto quando se aplicarem normas imperativas de proteção ao consumidor do seu país de residência."
   },
   "terms_s12_h": {
     "en": "Severability",
     "de": "Salvatorische Klausel",
     "nl": "Deelbaarheid",
     "es": "Divisibilidad",
-    "fr": "Divisibilité"
+    "fr": "Divisibilité",
+    "it": "Clausola salvatoria",
+    "pt-BR": "Autonomia das disposições"
   },
   "terms_s12_p1": {
     "en": "If any provision of these Terms is found to be invalid or unenforceable, that provision will be limited or removed to the minimum extent necessary, and the remaining provisions will remain in full force and effect.",
     "de": "Sollte eine Bestimmung dieser Bedingungen unwirksam oder undurchsetzbar sein, wird sie im geringstmöglichen Umfang eingeschränkt oder gestrichen; die übrigen Bestimmungen bleiben in vollem Umfang wirksam.",
     "nl": "Als een bepaling van deze voorwaarden ongeldig of niet-afdwingbaar blijkt, wordt die bepaling tot het strikt noodzakelijke beperkt of geschrapt; de overige bepalingen blijven volledig van kracht.",
     "es": "Si alguna disposición de estos Términos se considera inválida o inaplicable, se limitará o eliminará en la mínima medida necesaria, y las demás disposiciones seguirán plenamente vigentes.",
-    "fr": "Si une disposition des présentes Conditions est jugée invalide ou inapplicable, elle sera limitée ou supprimée dans la mesure minimale nécessaire, et les autres dispositions resteront pleinement en vigueur."
+    "fr": "Si une disposition des présentes Conditions est jugée invalide ou inapplicable, elle sera limitée ou supprimée dans la mesure minimale nécessaire, et les autres dispositions resteront pleinement en vigueur.",
+    "it": "Se una disposizione di queste Condizioni risultasse invalida o inapplicabile, sarà limitata o rimossa nella misura minima necessaria e le restanti disposizioni resteranno pienamente efficaci.",
+    "pt-BR": "Se qualquer disposição destes Termos for considerada inválida ou inexequível, ela será limitada ou removida na medida mínima necessária, e as demais disposições permanecerão em pleno vigor."
   },
   "terms_s13_h": {
     "en": "Contact",
     "de": "Kontakt",
     "nl": "Contact",
     "es": "Contacto",
-    "fr": "Contact"
+    "fr": "Contact",
+    "it": "Contatti",
+    "pt-BR": "Contato"
   },
   "terms_s13_p1": {
     "en": "Questions about these Terms? Contact us at",
     "de": "Fragen zu diesen Bedingungen? Kontaktiere uns unter",
     "nl": "Vragen over deze voorwaarden? Neem contact met ons op via",
     "es": "¿Dudas sobre estos Términos? Escríbenos a",
-    "fr": "Des questions sur ces Conditions ? Écrivez-nous à"
+    "fr": "Des questions sur ces Conditions ? Écrivez-nous à",
+    "it": "Domande su queste Condizioni? Scrivici a",
+    "pt-BR": "Dúvidas sobre estes Termos? Fale conosco pelo"
   }
 }
