@@ -27,7 +27,7 @@ LANGS = [
 FOLDER = {code: folder for code, folder, _, _ in LANGS}
 AUTONYM = {code: name for code, _, _, name in LANGS}
 
-PAGES = {"index": "index.html", "pro": "pro.html", "privacy": "privacy.html"}
+PAGES = {"index": "index.html", "pro": "pro.html", "privacy": "privacy.html", "terms": "terms.html"}
 
 GLOBE = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
          'stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/>'
@@ -37,7 +37,7 @@ GLOBE = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-widt
 def load_strings():
     strings = {}
     for fname in ("i18n/strings.json", "i18n/strings-pro.json",
-                  "i18n/strings-privacy.json"):
+                  "i18n/strings-privacy.json", "i18n/strings-terms.json"):
         with open(os.path.join(ROOT, fname), encoding="utf-8") as f:
             strings.update(json.load(f))
     return strings

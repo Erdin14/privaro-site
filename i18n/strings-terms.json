@@ -1,0 +1,119 @@
+{
+  "meta_title_terms": {
+    "en": "Terms of Use · Privaro"
+  },
+  "meta_desc_terms": {
+    "en": "The terms that govern your use of Privaro, including what happens if you lose your passcode and recovery key."
+  },
+  "terms_h1": {
+    "en": "Terms of Use"
+  },
+  "terms_intro": {
+    "en": "These Terms of Use (\"Terms\") govern your use of the Privaro app (\"Privaro,\" \"the app\") provided by Erdinc Zarbo (\"we,\" \"us,\" or \"our\"). By downloading or using Privaro, you agree to these Terms. If you do not agree, please do not use the app."
+  },
+  "terms_callout_label": {
+    "en": "Please read this carefully."
+  },
+  "terms_callout_body": {
+    "en": "Privaro encrypts your content on your device with a key only you control. This means that if you lose your passcode and your recovery key, <strong>no one, including us, can recover your data.</strong> Privaro also includes features that permanently erase data on purpose. You are responsible for keeping your passcode and recovery key safe, for how you configure the app, and for maintaining your own backups."
+  },
+  "terms_s1_h": {
+    "en": "License"
+  },
+  "terms_s1_p1": {
+    "en": "We grant you a personal, non-exclusive, non-transferable, revocable license to use Privaro on Apple devices that you own or control, in accordance with these Terms and the Apple App Store Terms of Service. You may not copy, modify, reverse-engineer, decompile, sell, sublicense, or distribute the app except as permitted by law."
+  },
+  "terms_s2_h": {
+    "en": "Your responsibilities"
+  },
+  "terms_s2_li1": {
+    "en": "You are responsible for safeguarding your passcode, recovery key, and device."
+  },
+  "terms_s2_li2": {
+    "en": "You are responsible for the content you store in the app and for ensuring you have the right to store it."
+  },
+  "terms_s2_li3": {
+    "en": "You are responsible for how you enable and configure the app's features, including its security and data-erasing features."
+  },
+  "terms_s2_li4": {
+    "en": "You agree not to use Privaro to store or share any content that is illegal, or that infringes the rights of others."
+  },
+  "terms_s2_li5": {
+    "en": "You agree not to use the app for any unlawful purpose or in violation of any applicable law."
+  },
+  "terms_s3_h": {
+    "en": "Data loss and backups"
+  },
+  "terms_s3_p1": {
+    "en": "Because of Privaro's zero-knowledge, on-device encryption, we cannot reset your passcode, recover your encryption key, or restore your content for you. Any of the following may result in permanent, unrecoverable loss of your content: losing or forgetting your passcode and recovery key; loss, theft, damage, repair, reset, or replacement of your device; deletion of the app or its data; operating system or hardware failures; or failure to maintain a current, working backup. You are solely responsible for maintaining your own backups. You use the app's optional backup, restore, and transfer features at your own discretion and risk, and we do not guarantee their availability, completeness, or success."
+  },
+  "terms_s4_h": {
+    "en": "Security and data-erasing features"
+  },
+  "terms_s4_p1": {
+    "en": "Privaro includes optional features that are designed, on purpose, to delete your data or change how it can be accessed, including Duress Wipe, Decoy Vault, Panic Lock, and similar tools. These features work exactly as described and can cause intentional, permanent data loss."
+  },
+  "terms_s4_p2": {
+    "en": "In particular, if you enable <strong>Duress Wipe</strong>, entering the duress passcode (for example, at the lock screen) will immediately, permanently, and irreversibly erase your real vault and everything inside it, by design, with no confirmation prompt, no undo, and no recovery, including in circumstances you did not anticipate. You decide whether to enable these features and how to configure them; you are solely responsible for that decision and for any resulting loss of, or inability to access, your data; and you agree that we are not liable for any data erased, hidden, or made inaccessible through your use of these features. Do not enable these features unless you fully understand and accept how they behave."
+  },
+  "terms_s5_h": {
+    "en": "Purchases"
+  },
+  "terms_s5_p1": {
+    "en": "Privaro offers an optional paid upgrade (“Privaro Pro”) as a one-time purchase, sold through the Apple App Store. There is no subscription and nothing renews. Payment is charged to your Apple Account at confirmation of purchase, and the upgrade applies to every device signed in to that Apple Account. Prices may vary by region and are shown at the point of purchase. Except where required by law or by Apple’s policies, payments are non-refundable; refund requests are handled by Apple."
+  },
+  "terms_s6_h": {
+    "en": "Disclaimers"
+  },
+  "terms_s6_p1": {
+    "en": "Privaro is provided \"as is\" and \"as available\" without warranties of any kind, whether express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, and non-infringement. While we use strong, industry-standard encryption, we do not warrant that the app will be uninterrupted, error-free, or that it will meet your requirements, and no security measure is guaranteed to be impenetrable. You use features such as Wi-Fi Transfer, which is not encrypted in transit, at your own risk and only on networks you trust."
+  },
+  "terms_s6_p2": {
+    "en": "Privaro is a consumer software tool, not a guarantee of safety. We do not warrant that it will protect your content against all threats, including determined attackers, forensic examination of a device, malware, vulnerabilities in the operating system or third-party components, or legal or physical compulsion. You are responsible for evaluating whether the app is suitable for your particular needs and threat model."
+  },
+  "terms_s7_h": {
+    "en": "Limitation of liability"
+  },
+  "terms_s7_p1": {
+    "en": "To the maximum extent permitted by law, in no event will we be liable for any indirect, incidental, special, consequential, or punitive damages, or for any loss of data, profits, or content, arising out of or relating to your use of (or inability to use) Privaro, even if advised of the possibility of such damages. Our total liability for any claim relating to the app will not exceed the amount you paid us for the app in the twelve months before the claim, or, where no amount was paid, a nominal sum."
+  },
+  "terms_s7_p2": {
+    "en": "Some jurisdictions do not allow the exclusion of implied warranties or the limitation of certain damages, so some of the above may not apply to you. In that case, our liability is limited to the maximum extent permitted by applicable law, and nothing in these Terms limits or excludes any rights you have that cannot be waived under the mandatory law of your country of residence."
+  },
+  "terms_s8_h": {
+    "en": "Indemnification"
+  },
+  "terms_s8_p1": {
+    "en": "To the maximum extent permitted by law, you agree to indemnify and hold harmless Erdinc Zarbo from and against any claims, damages, losses, liabilities, and expenses (including reasonable legal fees) arising out of or related to: the content you store or share; your use or misuse of the app; your violation of these Terms; or your violation of any law or the rights of any third party."
+  },
+  "terms_s9_h": {
+    "en": "Apple"
+  },
+  "terms_s9_p1": {
+    "en": "These Terms are between you and us, not with Apple. Apple is not responsible for the app or its content. Apple and its subsidiaries are third-party beneficiaries of these Terms and may enforce them against you. Your use of the app must also comply with the Apple Media Services Terms and Conditions."
+  },
+  "terms_s10_h": {
+    "en": "Changes to these Terms"
+  },
+  "terms_s10_p1": {
+    "en": "We may update these Terms from time to time. We will revise the \"Last updated\" date above, and significant changes will be reflected in the app or on our website. Your continued use of the app after changes take effect constitutes acceptance of the updated Terms."
+  },
+  "terms_s11_h": {
+    "en": "Governing law"
+  },
+  "terms_s11_p1": {
+    "en": "These Terms are governed by the laws of the Netherlands, without regard to its conflict-of-laws rules, except where mandatory consumer-protection laws of your country of residence apply."
+  },
+  "terms_s12_h": {
+    "en": "Severability"
+  },
+  "terms_s12_p1": {
+    "en": "If any provision of these Terms is found to be invalid or unenforceable, that provision will be limited or removed to the minimum extent necessary, and the remaining provisions will remain in full force and effect."
+  },
+  "terms_s13_h": {
+    "en": "Contact"
+  },
+  "terms_s13_p1": {
+    "en": "Questions about these Terms? Contact us at"
+  }
+}
