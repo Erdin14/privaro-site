@@ -240,3 +240,31 @@ footer .legal a:hover { color: var(--ink); }
 .lang-menu a { font-size: 14px; color: var(--muted); padding: 8px 12px; border-radius: 8px; }
 .lang-menu a:hover { background: var(--bg-soft); color: var(--ink); }
 .lang-menu a.active { color: var(--acc); }
+
+/* ---------------------------------------------------------------------------
+   Minimal pass: the feature grid and the two pricing cards were the two most
+   templated shapes on the page. Both are now type on hairlines — the content
+   is identical, the furniture is gone.
+   --------------------------------------------------------------------------- */
+
+.ledger { margin: 0; border-top: 1px solid var(--line); }
+.ledger-row {
+  display: grid; grid-template-columns: minmax(0, 15rem) minmax(0, 1fr);
+  gap: 8px 48px; padding: 26px 0; border-bottom: 1px solid var(--line);
+}
+.ledger dt { font-size: 17px; font-weight: 600; color: var(--ink); margin: 0; }
+.ledger dd { margin: 0; color: var(--muted); font-size: 15.5px; line-height: 1.62; max-width: 60ch; }
+
+.price-line { display: flex; align-items: baseline; gap: 18px; flex-wrap: wrap; padding-bottom: 10px; }
+.price-amount { font-family: var(--serif); font-size: clamp(44px, 7vw, 72px); line-height: 1; color: var(--ink); }
+.price-once { font-family: var(--mono); font-size: 13px; color: var(--acc); letter-spacing: .04em; }
+.price-note { margin: 0; color: var(--muted); font-size: 15px; }
+
+.tiers { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; margin-top: 38px; border-top: 1px solid var(--line); padding-top: 28px; }
+.tier h3 { font-family: var(--mono); font-size: 12px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--acc); margin: 0 0 10px; }
+.tier p { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.7; }
+
+@media (max-width: 720px) {
+  .ledger-row { grid-template-columns: 1fr; gap: 6px; padding: 22px 0; }
+  .tiers { grid-template-columns: 1fr; gap: 26px; }
+}

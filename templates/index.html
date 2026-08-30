@@ -84,42 +84,35 @@
 <section class="section">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="eyebrow">{{feat_eyebrow}}</span>
       <h2>{{feat_h2}}</h2>
       <p>{{feat_p}}</p>
     </div>
-    <div class="features">
-      <div class="feat reveal">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div>
-        <h3>{{feat1_t}}</h3>
-        <p>{{feat1_d}}</p>
+    <dl class="ledger">
+      <div class="ledger-row reveal">
+        <dt>{{feat1_t}}</dt>
+        <dd>{{feat1_d}}</dd>
       </div>
-      <div class="feat reveal">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2M9 10v1M15 10v1M9.5 15.5a3 3 0 0 0 5 0"/></svg></div>
-        <h3>{{feat2_t}}</h3>
-        <p>{{feat2_d}}</p>
+      <div class="ledger-row reveal">
+        <dt>{{feat2_t}}</dt>
+        <dd>{{feat2_d}}</dd>
       </div>
-      <div class="feat reveal">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 8.6 8 11 4.6-2.4 8-6 8-11V5z"/><path d="M9 12l2 2 4-4"/></svg></div>
-        <h3>{{feat3_t}}</h3>
-        <p>{{feat3_d}}</p>
+      <div class="ledger-row reveal">
+        <dt>{{feat3_t}}</dt>
+        <dd>{{feat3_d}}</dd>
       </div>
-      <div class="feat reveal">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/><path d="M12 19v-7"/><path d="m8.5 14.5 3.5-3.5 3.5 3.5"/></svg></div>
-        <h3>{{feat4_t}}</h3>
-        <p>{{feat4_d}}</p>
+      <div class="ledger-row reveal">
+        <dt>{{feat4_t}}</dt>
+        <dd>{{feat4_d}}</dd>
       </div>
-      <div class="feat reveal">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h20v14H2z"/><path d="M8 21h8M12 17v4"/><path d="M3 3l18 14"/></svg></div>
-        <h3>{{feat5_t}}</h3>
-        <p>{{feat5_d}}</p>
+      <div class="ledger-row reveal">
+        <dt>{{feat5_t}}</dt>
+        <dd>{{feat5_d}}</dd>
       </div>
-      <div class="feat reveal">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3z"/><circle cx="12" cy="13" r="3.5"/></svg></div>
-        <h3>{{feat6_t}}</h3>
-        <p>{{feat6_d}}</p>
+      <div class="ledger-row reveal">
+        <dt>{{feat6_t}}</dt>
+        <dd>{{feat6_d}}</dd>
       </div>
-    </div>
+    </dl>
   </div>
 </section>
 
@@ -127,35 +120,24 @@
 <section class="section">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="eyebrow">{{pricing_eyebrow}}</span>
       <h2>{{pricing_h2}}</h2>
       <p>{{pricing_p}}</p>
     </div>
-    <div class="pricing-grid">
-      <div class="plan reveal">
-        <div class="pname">{{plan_free_name}}</div>
-        <div class="price">$0 <span>{{plan_free_period}}</span></div>
-        <p class="pnote">{{plan_free_note}}</p>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>{{free_1}}</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>{{free_2}}</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>{{free_3}}</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>{{free_4}}</li>
-        </ul>
+    <div class="price-line reveal">
+      <div class="price-figure">
+        <span class="price-amount">€11.99</span>
+        <span class="price-once">{{plan_pro_period}}</span>
       </div>
-      <div class="plan plan--pro reveal">
-        <div class="badge">{{plan_pro_badge}}</div>
-        <div class="pname">{{plan_pro_name}}</div>
-        <div class="price">$9.99 <span>{{plan_pro_period}}</span></div>
-        <p class="pnote">{{plan_pro_note}}</p>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>{{pro_1}}</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>{{pro_2}}</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>{{pro_3}}</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>{{pro_4}}</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>{{pro_5}}</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>{{pro_6}}</li>
-        </ul>
+      <p class="price-note">{{plan_pro_note}}</p>
+    </div>
+    <div class="tiers reveal">
+      <div class="tier">
+        <h3>{{plan_free_name}}</h3>
+        <p>{{free_1}} · {{free_2}} · {{free_3}} · {{free_4}}</p>
+      </div>
+      <div class="tier">
+        <h3>{{plan_pro_name}}</h3>
+        <p>{{pro_2}} · {{pro_3}} · {{pro_4}} · {{pro_5}} · {{pro_6}} · {{pro_1}}</p>
       </div>
     </div>
     <p class="pricing-more reveal"><a href="{{PRO_URL}}">{{pricing_more}}</a></p>
