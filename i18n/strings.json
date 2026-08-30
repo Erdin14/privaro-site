@@ -550,15 +550,15 @@
     "nl": "Eén keer kopen en houden. Geen verlenging en geen proefperiode die je moet onthouden."
   },
   "pro_1": {
-    "en": "Everything in Free, with no ads",
-    "es": "Todo lo de Gratis, sin anuncios",
-    "fr": "Tout de la version gratuite, sans publicité",
-    "de": "Alles aus Kostenlos, ohne Werbung",
-    "it": "Tutto della versione gratis, senza pubblicità",
-    "pt-BR": "Tudo do Grátis, sem anúncios",
-    "zh-Hans": "免费版的全部功能，且无广告",
-    "ko": "무료의 모든 기능, 광고 없이",
-    "nl": "Alles uit Gratis, zonder advertenties"
+    "en": "Everything in Free, unlocked",
+    "es": "Todo lo de Free, desbloqueado",
+    "fr": "Tout le gratuit, débloqué",
+    "de": "Alles aus Free, freigeschaltet",
+    "it": "Tutto della versione Free, sbloccato",
+    "pt-BR": "Tudo do plano gratuito, liberado",
+    "zh-Hans": "免费版的全部功能，全部解锁",
+    "ko": "무료 버전의 모든 기능 잠금 해제",
+    "nl": "Alles uit Gratis, ontgrendeld"
   },
   "pro_2": {
     "en": "Unlimited storage and albums",

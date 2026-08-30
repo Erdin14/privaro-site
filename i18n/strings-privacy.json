@@ -77,26 +77,26 @@
     "zh-Hans": "简而言之："
   },
   "priv_short_body": {
-    "en": "Privaro is built to be private by design. Your photos, videos, albums, captions, and tags are encrypted on your device and never sent to us. We have no account system, we do not operate servers that store your content, and we cannot see what is in your vault. The only data that leaves your device is what’s required to show ads (which you can remove) and to process purchases through Apple.",
-    "de": "Privaro ist von Grund auf auf Privatsphäre ausgelegt. Deine Fotos, Videos, Alben, Bildunterschriften und Tags werden auf deinem Gerät verschlüsselt und nie an uns gesendet. Es gibt kein Kontosystem, wir betreiben keine Server, die deine Inhalte speichern, und wir können nicht sehen, was in deinem Tresor liegt. Die einzigen Daten, die dein Gerät verlassen, sind die, die zum Anzeigen von Werbung (die du entfernen kannst) und zur Abwicklung von Käufen über Apple erforderlich sind.",
-    "nl": "Privaro is ontworpen met privacy als uitgangspunt. Je foto’s, video’s, albums, bijschriften en tags worden op je apparaat versleuteld en nooit naar ons verzonden. Er is geen accountsysteem, we beheren geen servers die je inhoud opslaan, en we kunnen niet zien wat er in je kluis zit. De enige gegevens die je apparaat verlaten, zijn de gegevens die nodig zijn om advertenties te tonen (die je kunt verwijderen) en om aankopen via Apple te verwerken.",
-    "es": "Privaro está diseñado para ser privado desde su base. Tus fotos, vídeos, álbumes, descripciones y etiquetas se cifran en tu dispositivo y nunca se nos envían. No hay sistema de cuentas, no operamos servidores que almacenen tu contenido y no podemos ver qué hay en tu bóveda. Los únicos datos que salen de tu dispositivo son los necesarios para mostrar anuncios (que puedes eliminar) y para procesar compras a través de Apple.",
-    "fr": "Privaro est conçu pour être privé par nature. Vos photos, vidéos, albums, légendes et tags sont chiffrés sur votre appareil et ne nous sont jamais transmis. Il n’y a pas de système de comptes, nous n’exploitons aucun serveur stockant votre contenu et nous ne pouvons pas voir ce que contient votre coffre. Les seules données qui quittent votre appareil sont celles nécessaires à l’affichage des publicités (que vous pouvez supprimer) et au traitement des achats via Apple.",
-    "it": "Privaro è progettato per essere privato fin dalle fondamenta. Le tue foto, i video, gli album, le didascalie e i tag sono cifrati sul tuo dispositivo e non ci vengono mai inviati. Non esiste un sistema di account, non gestiamo server che archiviano i tuoi contenuti e non possiamo vedere cosa c’è nella tua cassaforte. Gli unici dati che lasciano il dispositivo sono quelli necessari a mostrare gli annunci (che puoi rimuovere) e a gestire gli acquisti tramite Apple.",
-    "pt-BR": "O Privaro foi feito para ser privado por padrão. Suas fotos, vídeos, álbuns, legendas e tags são criptografados no seu aparelho e nunca são enviados para nós. Não há sistema de contas, não operamos servidores que armazenem seu conteúdo e não conseguimos ver o que há no seu cofre. Os únicos dados que saem do seu aparelho são os necessários para exibir anúncios (que você pode remover) e para processar compras pela Apple.",
-    "ko": "Privaro는 설계 단계부터 프라이버시를 전제로 만들어졌습니다. 사진, 동영상, 앨범, 설명, 태그는 기기에서 암호화되며 당사로 전송되지 않습니다. 계정 시스템이 없고, 콘텐츠를 저장하는 서버를 운영하지 않으며, 보관함 안에 무엇이 있는지 확인할 수 없습니다. 기기를 벗어나는 데이터는 광고 표시(제거 가능)와 Apple을 통한 결제 처리에 필요한 것뿐입니다.",
-    "zh-Hans": "Privaro 从设计之初就以隐私为前提。你的照片、视频、相簿、说明和标签均在设备上加密，绝不会发送给我们。我们没有账户系统，不运营存储你内容的服务器，也无法看到保险库中的内容。唯一离开设备的数据，是展示广告（可移除）以及通过 Apple 处理购买所必需的信息。"
+    "en": "Privaro is built to be private by design. Your photos, videos, albums, captions, and tags are encrypted on your device and never sent to us. We have no account system, we do not operate servers that store your content, and we cannot see what is in your vault. There are no ads and no tracking. The only data that ever leaves your device is what Apple needs to process a purchase.",
+    "de": "Privaro ist von Grund auf auf Privatsphäre ausgelegt. Deine Fotos, Videos, Alben, Bildunterschriften und Tags werden auf deinem Gerät verschlüsselt und nie an uns gesendet. Es gibt kein Kontosystem, wir betreiben keine Server, die deine Inhalte speichern, und wir können nicht sehen, was in deinem Tresor liegt. Es gibt keine Werbung und kein Tracking. Die einzigen Daten, die dein Gerät jemals verlassen, sind die, die Apple zur Abwicklung eines Kaufs benötigt.",
+    "nl": "Privaro is ontworpen met privacy als uitgangspunt. Je foto’s, video’s, albums, bijschriften en tags worden op je apparaat versleuteld en nooit naar ons verzonden. Er is geen accountsysteem, we beheren geen servers die je inhoud opslaan, en we kunnen niet zien wat er in je kluis zit. Er zijn geen advertenties en geen tracking. De enige gegevens die je apparaat verlaten, zijn de gegevens die Apple nodig heeft om een aankoop te verwerken.",
+    "es": "Privaro está diseñado para ser privado desde su base. Tus fotos, vídeos, álbumes, descripciones y etiquetas se cifran en tu dispositivo y nunca se nos envían. No hay sistema de cuentas, no operamos servidores que almacenen tu contenido y no podemos ver qué hay en tu bóveda. No hay anuncios ni rastreo. Los únicos datos que salen de tu dispositivo son los que Apple necesita para procesar una compra.",
+    "fr": "Privaro est conçu pour être privé par nature. Vos photos, vidéos, albums, légendes et tags sont chiffrés sur votre appareil et ne nous sont jamais transmis. Il n’y a pas de système de comptes, nous n’exploitons aucun serveur stockant votre contenu et nous ne pouvons pas voir ce que contient votre coffre. Il n’y a ni publicité ni suivi. Les seules données qui quittent votre appareil sont celles dont Apple a besoin pour traiter un achat.",
+    "it": "Privaro è progettato per essere privato fin dalle fondamenta. Le tue foto, i video, gli album, le didascalie e i tag sono cifrati sul tuo dispositivo e non ci vengono mai inviati. Non esiste un sistema di account, non gestiamo server che archiviano i tuoi contenuti e non possiamo vedere cosa c’è nella tua cassaforte. Non ci sono pubblicità né tracciamento. Gli unici dati che lasciano il dispositivo sono quelli necessari ad Apple per gestire un acquisto.",
+    "pt-BR": "O Privaro foi feito para ser privado por padrão. Suas fotos, vídeos, álbuns, legendas e tags são criptografados no seu aparelho e nunca são enviados para nós. Não há sistema de contas, não operamos servidores que armazenem seu conteúdo e não conseguimos ver o que há no seu cofre. Não há anúncios nem rastreamento. Os únicos dados que saem do seu aparelho são os que a Apple precisa para processar uma compra.",
+    "ko": "Privaro는 설계 단계부터 프라이버시를 전제로 만들어졌습니다. 사진, 동영상, 앨범, 설명, 태그는 기기에서 암호화되며 당사로 전송되지 않습니다. 계정 시스템이 없고, 콘텐츠를 저장하는 서버를 운영하지 않으며, 보관함 안에 무엇이 있는지 확인할 수 없습니다. 광고도, 추적도 없습니다. 기기를 벗어나는 데이터는 Apple이 결제를 처리하는 데 필요한 정보뿐입니다.",
+    "zh-Hans": "Privaro 从设计之初就以隐私为前提。你的照片、视频、相簿、说明和标签均在设备上加密，绝不会发送给我们。我们没有账户系统，不运营存储你内容的服务器，也无法看到保险库中的内容。没有广告，也没有跟踪。唯一离开设备的数据，只有 Apple 处理购买所需的信息。"
   },
   "priv_s1_h": {
-    "en": "1. Information we do not collect",
-    "de": "1. Daten, die wir nicht erheben",
-    "nl": "1. Gegevens die we niet verzamelen",
-    "es": "1. Información que no recopilamos",
-    "fr": "1. Informations que nous ne collectons pas",
-    "it": "1. Informazioni che non raccogliamo",
-    "pt-BR": "1. Informações que não coletamos",
-    "ko": "1. 수집하지 않는 정보",
-    "zh-Hans": "1. 我们不收集的信息"
+    "en": "Information we do not collect",
+    "de": "Daten, die wir nicht erheben",
+    "nl": "Gegevens die we niet verzamelen",
+    "es": "Información que no recopilamos",
+    "fr": "Informations que nous ne collectons pas",
+    "it": "Informazioni che non raccogliamo",
+    "pt-BR": "Informações que não coletamos",
+    "ko": "수집하지 않는 정보",
+    "zh-Hans": "我们不收集的信息"
   },
   "priv_s1_li1": {
     "en": "We do <strong>not</strong> collect, see, or store your photos, videos, or any vault content.",
@@ -165,15 +165,15 @@
     "zh-Hans": "我们<strong>不会</strong>跨其他应用或网站跟踪你。"
   },
   "priv_s2_h": {
-    "en": "2. Your content stays on your device (and is encrypted)",
-    "de": "2. Deine Inhalte bleiben auf deinem Gerät (und sind verschlüsselt)",
-    "nl": "2. Je inhoud blijft op je apparaat (en is versleuteld)",
-    "es": "2. Tu contenido permanece en tu dispositivo (y está cifrado)",
-    "fr": "2. Votre contenu reste sur votre appareil (et il est chiffré)",
-    "it": "2. I tuoi contenuti restano sul dispositivo (e sono cifrati)",
-    "pt-BR": "2. Seu conteúdo fica no seu aparelho (e é criptografado)",
-    "ko": "2. 콘텐츠는 기기에 남으며 암호화됩니다",
-    "zh-Hans": "2. 你的内容留在设备上（并且已加密）"
+    "en": "Your content stays on your device (and is encrypted)",
+    "de": "Deine Inhalte bleiben auf deinem Gerät (und sind verschlüsselt)",
+    "nl": "Je inhoud blijft op je apparaat (en is versleuteld)",
+    "es": "Tu contenido permanece en tu dispositivo (y está cifrado)",
+    "fr": "Votre contenu reste sur votre appareil (et il est chiffré)",
+    "it": "I tuoi contenuti restano sul dispositivo (e sono cifrati)",
+    "pt-BR": "Seu conteúdo fica no seu aparelho (e é criptografado)",
+    "ko": "콘텐츠는 기기에 남으며 암호화됩니다",
+    "zh-Hans": "你的内容留在设备上（并且已加密）"
   },
   "priv_s2_p1": {
     "en": "Everything you add to Privaro (photos, videos, thumbnails, albums, captions, tags, and file names) is encrypted on your device using industry-standard AES-256-GCM encryption. The encryption key is generated on your device and stored in the iOS Keychain; it is protected by your device passcode/biometrics and your Privaro passcode. Encrypted files are stored in the app’s private storage with full file protection and are excluded from unencrypted device backups.",
@@ -198,15 +198,15 @@
     "zh-Hans": "由于加密在你的设备上完成且密钥从不离开设备，我们无法访问、解密或恢复你的保险库内容。如果你同时忘记密码和恢复密钥，我们以及任何人都无法恢复你的数据。"
   },
   "priv_s3_h": {
-    "en": "3. Optional features that involve data leaving your device",
-    "de": "3. Optionale Funktionen, bei denen Daten dein Gerät verlassen",
-    "nl": "3. Optionele functies waarbij gegevens je apparaat verlaten",
-    "es": "3. Funciones opcionales en las que los datos salen de tu dispositivo",
-    "fr": "3. Fonctionnalités optionnelles impliquant une sortie de données",
-    "it": "3. Funzioni opzionali in cui i dati lasciano il dispositivo",
-    "pt-BR": "3. Recursos opcionais em que dados saem do aparelho",
-    "ko": "3. 데이터가 기기를 벗어나는 선택 기능",
-    "zh-Hans": "3. 会让数据离开设备的可选功能"
+    "en": "Optional features that involve data leaving your device",
+    "de": "Optionale Funktionen, bei denen Daten dein Gerät verlassen",
+    "nl": "Optionele functies waarbij gegevens je apparaat verlaten",
+    "es": "Funciones opcionales en las que los datos salen de tu dispositivo",
+    "fr": "Fonctionnalités optionnelles impliquant une sortie de données",
+    "it": "Funzioni opzionali in cui i dati lasciano il dispositivo",
+    "pt-BR": "Recursos opcionais em que dados saem do aparelho",
+    "ko": "데이터가 기기를 벗어나는 선택 기능",
+    "zh-Hans": "会让数据离开设备的可选功能"
   },
   "priv_s3_lead": {
     "en": "These features are off by default and only operate when you choose to use them:",
@@ -253,15 +253,15 @@
     "zh-Hans": "<strong>Wi-Fi 传输（可选）。</strong>可在你的设备与同一局域网中的浏览器之间传输文件。该连接为本地连接，传输过程中未加密，因此请仅在你信任的网络中使用。文件一旦导入保险库即被加密。传输过程中不会向我们或通过互联网发送任何数据。"
   },
   "priv_s4_h": {
-    "en": "4. Device permissions and why we ask",
-    "de": "4. Geräteberechtigungen und warum wir sie brauchen",
-    "nl": "4. Apparaatrechten en waarom we ze vragen",
-    "es": "4. Permisos del dispositivo y por qué los pedimos",
-    "fr": "4. Autorisations de l’appareil et raisons",
-    "it": "4. Autorizzazioni del dispositivo e motivi",
-    "pt-BR": "4. Permissões do aparelho e por que pedimos",
-    "ko": "4. 기기 권한과 요청 이유",
-    "zh-Hans": "4. 设备权限及申请原因"
+    "en": "Device permissions and why we ask",
+    "de": "Geräteberechtigungen und warum wir sie brauchen",
+    "nl": "Apparaatrechten en waarom we ze vragen",
+    "es": "Permisos del dispositivo y por qué los pedimos",
+    "fr": "Autorisations de l’appareil et raisons",
+    "it": "Autorizzazioni del dispositivo e motivi",
+    "pt-BR": "Permissões do aparelho e por que pedimos",
+    "ko": "기기 권한과 요청 이유",
+    "zh-Hans": "设备权限及申请原因"
   },
   "priv_s4_lead": {
     "en": "Privaro requests these only when needed, and the data is used on your device for the stated purpose:",
@@ -340,237 +340,6 @@
     "ko": "<strong>로컬 네트워크</strong>: 위에서 설명한 선택 기능인 Wi-Fi 전송을 위해 사용합니다.",
     "zh-Hans": "<strong>本地网络</strong>：用于上文所述的可选 Wi-Fi 传输功能。"
   },
-  "priv_s5_h": {
-    "en": "5. Advertising (Google AdMob)",
-    "de": "5. Werbung (Google AdMob)",
-    "nl": "5. Advertenties (Google AdMob)",
-    "es": "5. Publicidad (Google AdMob)",
-    "fr": "5. Publicité (Google AdMob)",
-    "it": "5. Pubblicità (Google AdMob)",
-    "pt-BR": "5. Publicidade (Google AdMob)",
-    "ko": "5. 광고(Google AdMob)",
-    "zh-Hans": "5. 广告（Google AdMob）"
-  },
-  "priv_s5_p1": {
-    "en": "Privaro displays limited banner ads on low-sensitivity screens (such as Settings) to support the free version. Ads are provided by Google AdMob.",
-    "de": "Privaro zeigt begrenzt Bannerwerbung auf wenig sensiblen Bildschirmen (etwa den Einstellungen), um die kostenlose Version zu finanzieren. Die Werbung wird von Google AdMob bereitgestellt.",
-    "nl": "Privaro toont beperkt banneradvertenties op weinig gevoelige schermen (zoals Instellingen) om de gratis versie te ondersteunen. De advertenties worden geleverd door Google AdMob.",
-    "es": "Privaro muestra anuncios de banner limitados en pantallas poco sensibles (como Ajustes) para sostener la versión gratuita. Los anuncios los proporciona Google AdMob.",
-    "fr": "Privaro affiche des bannières publicitaires limitées sur des écrans peu sensibles (comme les Réglages) afin de financer la version gratuite. Les publicités sont fournies par Google AdMob.",
-    "it": "Privaro mostra banner pubblicitari limitati su schermate poco sensibili (come le Impostazioni) per sostenere la versione gratuita. Gli annunci sono forniti da Google AdMob.",
-    "pt-BR": "O Privaro exibe banners limitados em telas pouco sensíveis (como os Ajustes) para sustentar a versão gratuita. Os anúncios são fornecidos pelo Google AdMob.",
-    "ko": "Privaro는 무료 버전을 유지하기 위해 민감도가 낮은 화면(예: 설정)에 제한적으로 배너 광고를 표시합니다. 광고는 Google AdMob이 제공합니다.",
-    "zh-Hans": "Privaro 会在敏感度较低的界面（如“设置”）展示有限的横幅广告，以支持免费版本。广告由 Google AdMob 提供。"
-  },
-  "priv_s5_li1": {
-    "en": "We request non-personalized ads only. This means ads are not based on a profile of your interests.",
-    "de": "Wir fordern ausschließlich nicht personalisierte Werbung an. Das bedeutet, dass die Anzeigen nicht auf einem Profil deiner Interessen beruhen.",
-    "nl": "We vragen uitsluitend niet-gepersonaliseerde advertenties aan. Dat betekent dat de advertenties niet zijn gebaseerd op een profiel van je interesses.",
-    "es": "Solicitamos únicamente anuncios no personalizados. Esto significa que los anuncios no se basan en un perfil de tus intereses.",
-    "fr": "Nous demandons uniquement des publicités non personnalisées. Elles ne reposent donc pas sur un profil de vos centres d’intérêt.",
-    "it": "Richiediamo esclusivamente annunci non personalizzati. Ciò significa che non si basano su un profilo dei tuoi interessi.",
-    "pt-BR": "Solicitamos apenas anúncios não personalizados. Ou seja, os anúncios não se baseiam em um perfil dos seus interesses.",
-    "ko": "비개인화 광고만 요청합니다. 즉, 광고가 사용자의 관심사 프로필을 기반으로 하지 않습니다.",
-    "zh-Hans": "我们仅请求非个性化广告。这意味着广告不会基于你的兴趣画像。"
-  },
-  "priv_s5_li2": {
-    "en": "To serve even non-personalized ads, Google may process limited information such as your device’s IP address, general device information, and identifiers, as described in <a href=\"https://policies.google.com/privacy\">Google’s Privacy Policy</a> and <a href=\"https://policies.google.com/technologies/partner-sites\">how Google uses information from sites or apps that use its services</a>.",
-    "de": "Auch für nicht personalisierte Werbung kann Google begrenzte Informationen verarbeiten, etwa die IP-Adresse deines Geräts, allgemeine Geräteinformationen und Kennungen, wie in <a href=\"https://policies.google.com/privacy\">Googles Datenschutzerklärung</a> und unter <a href=\"https://policies.google.com/technologies/partner-sites\">wie Google Daten von Websites oder Apps verwendet, die seine Dienste nutzen</a> beschrieben.",
-    "nl": "Ook voor niet-gepersonaliseerde advertenties kan Google beperkte informatie verwerken, zoals het IP-adres van je apparaat, algemene apparaatinformatie en identificatiegegevens, zoals beschreven in <a href=\"https://policies.google.com/privacy\">Googles privacybeleid</a> en in <a href=\"https://policies.google.com/technologies/partner-sites\">hoe Google gegevens gebruikt van sites of apps die zijn diensten gebruiken</a>.",
-    "es": "Incluso para mostrar anuncios no personalizados, Google puede tratar información limitada como la dirección IP de tu dispositivo, información general del dispositivo e identificadores, según se describe en la <a href=\"https://policies.google.com/privacy\">Política de privacidad de Google</a> y en <a href=\"https://policies.google.com/technologies/partner-sites\">cómo usa Google la información de sitios o apps que utilizan sus servicios</a>.",
-    "fr": "Même pour des publicités non personnalisées, Google peut traiter des informations limitées telles que l’adresse IP de votre appareil, des informations générales sur l’appareil et des identifiants, comme décrit dans les <a href=\"https://policies.google.com/privacy\">règles de confidentialité de Google</a> et dans <a href=\"https://policies.google.com/technologies/partner-sites\">la façon dont Google utilise les informations provenant de sites ou d’applications qui utilisent ses services</a>.",
-    "it": "Anche per gli annunci non personalizzati, Google può trattare informazioni limitate come l’indirizzo IP del dispositivo, informazioni generali sul dispositivo e identificatori, come descritto nelle <a href=\"https://policies.google.com/privacy\">norme sulla privacy di Google</a> e in <a href=\"https://policies.google.com/technologies/partner-sites\">come Google utilizza le informazioni dei siti o delle app che usano i suoi servizi</a>.",
-    "pt-BR": "Mesmo para anúncios não personalizados, o Google pode tratar informações limitadas, como o endereço IP do aparelho, informações gerais do dispositivo e identificadores, conforme descrito na <a href=\"https://policies.google.com/privacy\">Política de Privacidade do Google</a> e em <a href=\"https://policies.google.com/technologies/partner-sites\">como o Google usa informações de sites ou apps que utilizam seus serviços</a>.",
-    "ko": "비개인화 광고를 게재할 때에도 Google은 기기의 IP 주소, 일반적인 기기 정보, 식별자 등 제한적인 정보를 처리할 수 있습니다. 자세한 내용은 <a href=\"https://policies.google.com/privacy\">Google 개인정보처리방침</a>과 <a href=\"https://policies.google.com/technologies/partner-sites\">Google 서비스를 사용하는 사이트나 앱의 정보를 Google이 사용하는 방식</a>을 참고하세요.",
-    "zh-Hans": "即便是投放非个性化广告，Google 也可能处理有限的信息，例如设备的 IP 地址、一般设备信息和标识符，具体见 <a href=\"https://policies.google.com/privacy\">Google 隐私政策</a>以及<a href=\"https://policies.google.com/technologies/partner-sites\">Google 如何使用使用其服务的网站或应用的信息</a>。"
-  },
-  "priv_s5_li3": {
-    "en": "In the EEA, UK, and Switzerland, we present a consent prompt (Google’s User Messaging Platform) before ads are loaded, so you can make your choices in line with applicable law.",
-    "de": "Im EWR, im Vereinigten Königreich und in der Schweiz zeigen wir vor dem Laden der Werbung einen Einwilligungsdialog (Googles User Messaging Platform), damit du deine Wahl im Einklang mit dem geltenden Recht treffen kannst.",
-    "nl": "In de EER, het Verenigd Koninkrijk en Zwitserland tonen we vóór het laden van advertenties een toestemmingsvenster (Googles User Messaging Platform), zodat je je keuzes kunt maken in lijn met de geldende wetgeving.",
-    "es": "En el EEE, el Reino Unido y Suiza mostramos un aviso de consentimiento (la User Messaging Platform de Google) antes de cargar los anuncios, para que puedas decidir conforme a la legislación aplicable.",
-    "fr": "Dans l’EEE, au Royaume-Uni et en Suisse, nous affichons une demande de consentement (User Messaging Platform de Google) avant le chargement des publicités, afin que vous puissiez choisir conformément à la loi applicable.",
-    "it": "Nel SEE, nel Regno Unito e in Svizzera mostriamo una richiesta di consenso (User Messaging Platform di Google) prima di caricare gli annunci, così puoi scegliere in linea con la legge applicabile.",
-    "pt-BR": "No EEE, no Reino Unido e na Suíça, exibimos um aviso de consentimento (User Messaging Platform do Google) antes de carregar os anúncios, para que você possa decidir conforme a legislação aplicável.",
-    "ko": "EEA, 영국, 스위스에서는 광고를 불러오기 전에 동의 안내(Google User Messaging Platform)를 표시하여 관련 법률에 따라 선택할 수 있도록 합니다.",
-    "zh-Hans": "在欧洲经济区、英国和瑞士，我们会在加载广告前显示同意提示（Google 的 User Messaging Platform），以便你依照适用法律作出选择。"
-  },
-  "priv_s5_li4": {
-    "en": "Ads are never shown on the lock screen, in the vault, in the media viewer, or on the paywall.",
-    "de": "Werbung wird nie auf dem Sperrbildschirm, im Tresor, im Medienbetrachter oder auf der Paywall angezeigt.",
-    "nl": "Er worden nooit advertenties getoond op het vergrendelscherm, in de kluis, in de mediaviewer of op de betaalpagina.",
-    "es": "Nunca se muestran anuncios en la pantalla de bloqueo, dentro de la bóveda, en el visor multimedia ni en la pantalla de compra.",
-    "fr": "Aucune publicité n’est affichée sur l’écran de verrouillage, dans le coffre, dans la visionneuse ni sur l’écran d’achat.",
-    "it": "Gli annunci non compaiono mai nella schermata di blocco, nella cassaforte, nel visualizzatore multimediale o nella schermata di acquisto.",
-    "pt-BR": "Nunca exibimos anúncios na tela de bloqueio, dentro do cofre, no visualizador de mídia ou na tela de compra.",
-    "ko": "잠금 화면, 보관함 내부, 미디어 뷰어, 결제 화면에는 광고를 표시하지 않습니다.",
-    "zh-Hans": "锁定界面、保险库内、媒体查看器和购买页面绝不会展示广告。"
-  },
-  "priv_s5_li5": {
-    "en": "Privaro Pro removes all ads. Upgrading stops ad requests entirely.",
-    "de": "Privaro Pro entfernt sämtliche Werbung. Nach dem Upgrade werden keine Anzeigen mehr angefordert.",
-    "nl": "Privaro Pro verwijdert alle advertenties. Na een upgrade worden er helemaal geen advertenties meer opgevraagd.",
-    "es": "Privaro Pro elimina toda la publicidad. Al mejorar, dejan de solicitarse anuncios por completo.",
-    "fr": "Privaro Pro supprime toute publicité. Après l’achat, plus aucune publicité n’est demandée.",
-    "it": "Privaro Pro rimuove tutta la pubblicità. Dopo l’acquisto non viene più richiesto alcun annuncio.",
-    "pt-BR": "O Privaro Pro remove toda a publicidade. Após a compra, nenhum anúncio é solicitado.",
-    "ko": "Privaro Pro는 모든 광고를 제거합니다. 업그레이드하면 광고 요청 자체가 중단됩니다.",
-    "zh-Hans": "Privaro Pro 会移除所有广告。升级后将完全停止广告请求。"
-  },
-  "priv_s6_h": {
-    "en": "6. Purchases (Apple)",
-    "de": "6. Käufe (Apple)",
-    "nl": "6. Aankopen (Apple)",
-    "es": "6. Compras (Apple)",
-    "fr": "6. Achats (Apple)",
-    "it": "6. Acquisti (Apple)",
-    "pt-BR": "6. Compras (Apple)",
-    "ko": "6. 구매(Apple)",
-    "zh-Hans": "6. 购买（Apple）"
-  },
-  "priv_s6_p1": {
-    "en": "Privaro Pro is sold as a one-time purchase through Apple’s StoreKit / App Store. Apple processes the transaction and your payment; we do not receive your payment details. Purchase status is handled through your Apple Account. See <a href=\"https://www.apple.com/legal/privacy/\">Apple’s Privacy Policy</a>.",
-    "de": "Privaro Pro wird als einmaliger Kauf über Apples StoreKit / den App Store verkauft. Apple wickelt die Transaktion und deine Zahlung ab; wir erhalten deine Zahlungsdaten nicht. Der Kaufstatus wird über deinen Apple Account verwaltet. Siehe <a href=\"https://www.apple.com/legal/privacy/\">Apples Datenschutzrichtlinie</a>.",
-    "nl": "Privaro Pro wordt verkocht als eenmalige aankoop via Apples StoreKit / de App Store. Apple verwerkt de transactie en je betaling; wij ontvangen je betaalgegevens niet. De aankoopstatus wordt afgehandeld via je Apple Account. Zie <a href=\"https://www.apple.com/legal/privacy/\">Apples privacybeleid</a>.",
-    "es": "Privaro Pro se vende como compra única a través de StoreKit / la App Store de Apple. Apple procesa la transacción y tu pago; nosotros no recibimos tus datos de pago. El estado de la compra se gestiona mediante tu Apple Account. Consulta la <a href=\"https://www.apple.com/legal/privacy/\">Política de privacidad de Apple</a>.",
-    "fr": "Privaro Pro est vendu sous forme d’achat unique via StoreKit / l’App Store d’Apple. Apple traite la transaction et votre paiement ; nous ne recevons pas vos informations de paiement. Le statut de l’achat est géré par votre compte Apple. Consultez la <a href=\"https://www.apple.com/legal/privacy/\">politique de confidentialité d’Apple</a>.",
-    "it": "Privaro Pro è venduto come acquisto una tantum tramite StoreKit / App Store di Apple. Apple gestisce la transazione e il pagamento; noi non riceviamo i tuoi dati di pagamento. Lo stato dell’acquisto è gestito tramite il tuo Apple Account. Consulta l’<a href=\"https://www.apple.com/legal/privacy/\">informativa sulla privacy di Apple</a>.",
-    "pt-BR": "O Privaro Pro é vendido como compra única pela StoreKit / App Store da Apple. A Apple processa a transação e o pagamento; não recebemos seus dados de pagamento. O status da compra é gerenciado pela sua Apple Account. Consulte a <a href=\"https://www.apple.com/legal/privacy/\">Política de Privacidade da Apple</a>.",
-    "ko": "Privaro Pro는 Apple의 StoreKit / App Store를 통해 일회성 구매로 판매됩니다. 거래와 결제는 Apple이 처리하며, 당사는 결제 정보를 받지 않습니다. 구매 상태는 Apple 계정을 통해 관리됩니다. <a href=\"https://www.apple.com/legal/privacy/\">Apple 개인정보 처리방침</a>을 참고하세요.",
-    "zh-Hans": "Privaro Pro 通过 Apple 的 StoreKit / App Store 以一次性购买的方式出售。交易与付款由 Apple 处理，我们不会收到你的付款信息。购买状态通过你的 Apple 账户管理。请参阅 <a href=\"https://www.apple.com/legal/privacy/\">Apple 隐私政策</a>。"
-  },
-  "priv_s7_h": {
-    "en": "7. Data retention and deletion",
-    "de": "7. Aufbewahrung und Löschung von Daten",
-    "nl": "7. Bewaren en verwijderen van gegevens",
-    "es": "7. Conservación y eliminación de datos",
-    "fr": "7. Conservation et suppression des données",
-    "it": "7. Conservazione ed eliminazione dei dati",
-    "pt-BR": "7. Retenção e exclusão de dados",
-    "ko": "7. 데이터 보존 및 삭제",
-    "zh-Hans": "7. 数据保留与删除"
-  },
-  "priv_s7_p1": {
-    "en": "Your content stays on your device until you delete it. Deleting items moves them to “Recently Deleted,” and they are permanently removed after 30 days (or immediately if you choose). Deleting the app removes its app data; if you enabled iCloud Backup, you can remove that from within the app or via your iCloud storage settings. Because we don’t hold your data, there is nothing for us to delete on our side.",
-    "de": "Deine Inhalte bleiben auf deinem Gerät, bis du sie löschst. Gelöschte Objekte wandern in „Zuletzt gelöscht“ und werden nach 30 Tagen endgültig entfernt (oder sofort, wenn du das wählst). Beim Löschen der App werden ihre Daten entfernt; falls du das iCloud-Backup aktiviert hast, kannst du dieses in der App oder über deine iCloud-Speichereinstellungen entfernen. Da wir deine Daten nicht vorhalten, gibt es auf unserer Seite nichts zu löschen.",
-    "nl": "Je inhoud blijft op je apparaat totdat je die verwijdert. Verwijderde items gaan naar ‘Recent verwijderd’ en worden na 30 dagen definitief gewist (of meteen, als je daarvoor kiest). Door de app te verwijderen wis je de appgegevens; als je de iCloud-reservekopie hebt ingeschakeld, kun je die verwijderen in de app of via je iCloud-opslaginstellingen. Omdat wij je gegevens niet bewaren, valt er aan onze kant niets te verwijderen.",
-    "es": "Tu contenido permanece en tu dispositivo hasta que lo borres. Al eliminar elementos, pasan a «Eliminados recientemente» y se borran definitivamente a los 30 días (o de inmediato, si así lo eliges). Al eliminar la app se borran sus datos; si activaste la copia de seguridad en iCloud, puedes eliminarla desde la app o desde los ajustes de almacenamiento de iCloud. Como no guardamos tus datos, no hay nada que podamos borrar por nuestra parte.",
-    "fr": "Votre contenu reste sur votre appareil jusqu’à ce que vous le supprimiez. Les éléments supprimés passent dans « Supprimés récemment » et sont effacés définitivement au bout de 30 jours (ou immédiatement, si vous le choisissez). Supprimer l’app efface ses données ; si vous avez activé la sauvegarde iCloud, vous pouvez la supprimer depuis l’app ou depuis les réglages de stockage iCloud. Comme nous ne détenons pas vos données, il n’y a rien à supprimer de notre côté.",
-    "it": "I tuoi contenuti restano sul dispositivo finché non li elimini. Gli elementi eliminati passano in «Eliminati di recente» e vengono rimossi definitivamente dopo 30 giorni (o subito, se lo scegli). Eliminando l’app se ne rimuovono i dati; se hai attivato il backup iCloud, puoi rimuoverlo dall’app o dalle impostazioni di archiviazione iCloud. Poiché non conserviamo i tuoi dati, dalla nostra parte non c’è nulla da eliminare.",
-    "pt-BR": "Seu conteúdo fica no seu aparelho até você excluí-lo. Itens excluídos vão para “Apagados recentemente” e são removidos definitivamente após 30 dias (ou na hora, se você preferir). Excluir o app remove os dados dele; se você ativou o backup no iCloud, pode removê-lo pelo app ou nos ajustes de armazenamento do iCloud. Como não guardamos seus dados, não há nada para excluirmos do nosso lado.",
-    "ko": "콘텐츠는 사용자가 삭제할 때까지 기기에 남아 있습니다. 삭제한 항목은 ‘최근 삭제된 항목’으로 이동하며 30일 후(또는 사용자가 원하면 즉시) 영구 삭제됩니다. 앱을 삭제하면 앱 데이터도 삭제되며, iCloud 백업을 사용 중이라면 앱 내에서 또는 iCloud 저장 공간 설정에서 제거할 수 있습니다. 당사는 데이터를 보유하지 않으므로 당사 측에서 삭제할 것은 없습니다.",
-    "zh-Hans": "你的内容会一直保留在设备上，直到你删除它。删除的项目会移入“最近删除”，并在 30 天后永久移除（如果你选择，也可立即移除）。删除应用会清除其应用数据；若你启用了 iCloud 备份，可在应用内或通过 iCloud 存储设置将其移除。由于我们不持有你的数据，我们这边没有任何内容需要删除。"
-  },
-  "priv_s8_h": {
-    "en": "8. Children’s privacy",
-    "de": "8. Datenschutz für Kinder",
-    "nl": "8. Privacy van kinderen",
-    "es": "8. Privacidad de los menores",
-    "fr": "8. Confidentialité des enfants",
-    "it": "8. Privacy dei minori",
-    "pt-BR": "8. Privacidade de crianças",
-    "ko": "8. 아동의 개인정보",
-    "zh-Hans": "8. 儿童隐私"
-  },
-  "priv_s8_p1": {
-    "en": "Privaro is not directed to children under 13 (or the minimum age required in your country) and we do not knowingly collect personal information from children.",
-    "de": "Privaro richtet sich nicht an Kinder unter 13 Jahren (oder das in deinem Land geltende Mindestalter), und wir erheben wissentlich keine personenbezogenen Daten von Kindern.",
-    "nl": "Privaro is niet gericht op kinderen jonger dan 13 jaar (of de minimumleeftijd die in jouw land geldt) en we verzamelen niet bewust persoonsgegevens van kinderen.",
-    "es": "Privaro no está dirigido a menores de 13 años (o la edad mínima exigida en tu país) y no recopilamos conscientemente información personal de menores.",
-    "fr": "Privaro ne s’adresse pas aux enfants de moins de 13 ans (ou l’âge minimum requis dans votre pays) et nous ne collectons pas sciemment d’informations personnelles auprès d’enfants.",
-    "it": "Privaro non è rivolto a bambini di età inferiore a 13 anni (o all’età minima richiesta nel tuo Paese) e non raccogliamo consapevolmente informazioni personali da minori.",
-    "pt-BR": "O Privaro não é destinado a crianças menores de 13 anos (ou a idade mínima exigida no seu país) e não coletamos intencionalmente informações pessoais de crianças.",
-    "ko": "Privaro는 만 13세 미만(또는 해당 국가에서 요구하는 최소 연령 미만) 아동을 대상으로 하지 않으며, 아동의 개인정보를 고의로 수집하지 않습니다.",
-    "zh-Hans": "Privaro 并非面向 13 周岁以下（或你所在国家/地区要求的最低年龄以下）的儿童，我们也不会在知情的情况下收集儿童的个人信息。"
-  },
-  "priv_s9_h": {
-    "en": "9. Your rights",
-    "de": "9. Deine Rechte",
-    "nl": "9. Jouw rechten",
-    "es": "9. Tus derechos",
-    "fr": "9. Vos droits",
-    "it": "9. I tuoi diritti",
-    "pt-BR": "9. Seus direitos",
-    "ko": "9. 사용자의 권리",
-    "zh-Hans": "9. 你的权利"
-  },
-  "priv_s9_p1": {
-    "en": "Depending on where you live (for example, under the EU/UK GDPR or the California CCPA/CPRA), you may have rights to access, correct, delete, or restrict the processing of your personal information. Because Privaro stores your content only on your device and we do not maintain personal data about you on our servers, you can exercise most of these rights directly by managing or deleting data in the app. For advertising data, you can use the in-app consent controls and the resources in <a href=\"https://policies.google.com/privacy\">Google’s Privacy Policy</a>. For any questions or requests, contact us using the details below.",
-    "de": "Je nachdem, wo du lebst (etwa nach der EU-/UK-DSGVO oder dem kalifornischen CCPA/CPRA), hast du möglicherweise das Recht, auf deine personenbezogenen Daten zuzugreifen, sie zu berichtigen, zu löschen oder deren Verarbeitung einzuschränken. Da Privaro deine Inhalte ausschließlich auf deinem Gerät speichert und wir keine personenbezogenen Daten über dich auf unseren Servern vorhalten, kannst du die meisten dieser Rechte direkt ausüben, indem du Daten in der App verwaltest oder löschst. Für Werbedaten kannst du die Einwilligungseinstellungen in der App sowie die Hinweise in <a href=\"https://policies.google.com/privacy\">Googles Datenschutzerklärung</a> nutzen. Bei Fragen oder Anliegen kontaktiere uns über die unten stehenden Angaben.",
-    "nl": "Afhankelijk van waar je woont (bijvoorbeeld onder de AVG in de EU/het VK of de CCPA/CPRA in Californië) heb je mogelijk het recht om je persoonsgegevens in te zien, te corrigeren, te verwijderen of de verwerking ervan te beperken. Omdat Privaro je inhoud uitsluitend op je apparaat bewaart en wij geen persoonsgegevens over jou op onze servers houden, kun je de meeste van deze rechten rechtstreeks uitoefenen door gegevens in de app te beheren of te verwijderen. Voor advertentiegegevens kun je de toestemmingsinstellingen in de app gebruiken en de informatie in <a href=\"https://policies.google.com/privacy\">Googles privacybeleid</a>. Neem bij vragen of verzoeken contact met ons op via de gegevens hieronder.",
-    "es": "Según dónde vivas (por ejemplo, bajo el RGPD de la UE/Reino Unido o la CCPA/CPRA de California), puedes tener derecho a acceder a tu información personal, corregirla, eliminarla o limitar su tratamiento. Como Privaro almacena tu contenido únicamente en tu dispositivo y no mantenemos datos personales tuyos en nuestros servidores, puedes ejercer la mayoría de estos derechos directamente gestionando o eliminando datos en la app. Para los datos publicitarios, puedes usar los controles de consentimiento de la app y los recursos de la <a href=\"https://policies.google.com/privacy\">Política de privacidad de Google</a>. Para cualquier duda o solicitud, escríbenos usando los datos de abajo.",
-    "fr": "Selon votre lieu de résidence (par exemple sous le RGPD de l’UE/du Royaume-Uni ou la CCPA/CPRA californienne), vous pouvez disposer de droits d’accès, de rectification, de suppression ou de limitation du traitement de vos informations personnelles. Comme Privaro conserve votre contenu uniquement sur votre appareil et que nous ne détenons aucune donnée personnelle vous concernant sur nos serveurs, vous pouvez exercer la plupart de ces droits directement en gérant ou en supprimant des données dans l’app. Pour les données publicitaires, vous pouvez utiliser les réglages de consentement de l’app ainsi que les ressources des <a href=\"https://policies.google.com/privacy\">règles de confidentialité de Google</a>. Pour toute question ou demande, contactez-nous via les coordonnées ci-dessous.",
-    "it": "A seconda di dove vivi (ad esempio ai sensi del GDPR UE/Regno Unito o del CCPA/CPRA della California), potresti avere il diritto di accedere alle tue informazioni personali, correggerle, eliminarle o limitarne il trattamento. Poiché Privaro conserva i tuoi contenuti solo sul dispositivo e non manteniamo dati personali su di te sui nostri server, puoi esercitare la maggior parte di questi diritti direttamente gestendo o eliminando i dati nell’app. Per i dati pubblicitari puoi usare i controlli di consenso nell’app e le risorse nelle <a href=\"https://policies.google.com/privacy\">norme sulla privacy di Google</a>. Per domande o richieste, contattaci usando i recapiti qui sotto.",
-    "pt-BR": "Dependendo de onde você mora (por exemplo, sob o GDPR da UE/Reino Unido ou a CCPA/CPRA da Califórnia), você pode ter direito a acessar, corrigir, excluir ou restringir o tratamento das suas informações pessoais. Como o Privaro armazena seu conteúdo apenas no seu aparelho e não mantemos dados pessoais sobre você em nossos servidores, você pode exercer a maioria desses direitos diretamente, gerenciando ou excluindo dados no app. Para dados de publicidade, use os controles de consentimento no app e os recursos da <a href=\"https://policies.google.com/privacy\">Política de Privacidade do Google</a>. Em caso de dúvidas ou solicitações, fale conosco pelos contatos abaixo.",
-    "ko": "거주 지역에 따라(예: EU/영국 GDPR, 캘리포니아 CCPA/CPRA) 개인정보에 대한 열람, 정정, 삭제, 처리 제한을 요구할 권리가 있을 수 있습니다. Privaro는 콘텐츠를 기기에만 저장하고 당사 서버에 사용자의 개인정보를 보유하지 않으므로, 대부분의 권리는 앱에서 데이터를 직접 관리하거나 삭제하여 행사할 수 있습니다. 광고 데이터의 경우 앱 내 동의 설정과 <a href=\"https://policies.google.com/privacy\">Google 개인정보처리방침</a>의 안내를 이용할 수 있습니다. 문의나 요청은 아래 연락처로 보내주세요.",
-    "zh-Hans": "根据你的居住地（例如欧盟/英国 GDPR 或加州 CCPA/CPRA），你可能有权访问、更正、删除或限制处理你的个人信息。由于 Privaro 仅将内容存储在你的设备上，且我们的服务器不保存关于你的个人数据，你可以直接在应用中管理或删除数据来行使其中大部分权利。关于广告数据，你可以使用应用内的同意设置以及 <a href=\"https://policies.google.com/privacy\">Google 隐私政策</a>中的资源。如有任何疑问或请求，请通过下方联系方式与我们联系。"
-  },
-  "priv_s10_h": {
-    "en": "10. Security",
-    "de": "10. Sicherheit",
-    "nl": "10. Beveiliging",
-    "es": "10. Seguridad",
-    "fr": "10. Sécurité",
-    "it": "10. Sicurezza",
-    "pt-BR": "10. Segurança",
-    "ko": "10. 보안",
-    "zh-Hans": "10. 安全"
-  },
-  "priv_s10_p1": {
-    "en": "We use on-device AES-256-GCM encryption, the iOS Keychain for key storage, PBKDF2 passcode hashing, and iOS file protection. No method of storage or transmission is 100% secure, and features like Wi-Fi Transfer that you choose to use have the limitations described above. You are responsible for keeping your passcode and recovery key safe.",
-    "de": "Wir verwenden AES-256-GCM-Verschlüsselung auf dem Gerät, den iOS-Schlüsselbund zur Schlüsselspeicherung, PBKDF2-Code-Hashing und den iOS-Dateischutz. Keine Speicher- oder Übertragungsmethode ist zu 100 % sicher, und Funktionen wie die WLAN-Übertragung, die du selbst nutzt, unterliegen den oben beschriebenen Einschränkungen. Für die sichere Aufbewahrung deines Codes und deines Wiederherstellungsschlüssels bist du selbst verantwortlich.",
-    "nl": "We gebruiken AES-256-GCM-versleuteling op het apparaat, de iOS-sleutelhanger voor sleutelopslag, PBKDF2-hashing van de toegangscode en de bestandsbeveiliging van iOS. Geen enkele opslag- of verzendmethode is 100% veilig, en functies zoals wifi-overdracht die je zelf kiest te gebruiken kennen de hierboven beschreven beperkingen. Je bent zelf verantwoordelijk voor het veilig bewaren van je toegangscode en je herstelsleutel.",
-    "es": "Usamos cifrado AES-256-GCM en el dispositivo, el Llavero de iOS para guardar la clave, hash del código con PBKDF2 y la protección de archivos de iOS. Ningún método de almacenamiento o transmisión es 100 % seguro, y funciones como la transferencia por Wi-Fi que decidas usar tienen las limitaciones descritas arriba. Eres responsable de guardar a buen recaudo tu código y tu clave de recuperación.",
-    "fr": "Nous utilisons le chiffrement AES-256-GCM sur l’appareil, le trousseau iOS pour le stockage de la clé, le hachage du code par PBKDF2 et la protection des fichiers iOS. Aucune méthode de stockage ou de transmission n’est sûre à 100 %, et les fonctions telles que le transfert Wi-Fi que vous choisissez d’utiliser comportent les limites décrites ci-dessus. Il vous appartient de conserver en lieu sûr votre code et votre clé de récupération.",
-    "it": "Usiamo la cifratura AES-256-GCM sul dispositivo, il portachiavi iOS per la conservazione della chiave, l’hashing del codice con PBKDF2 e la protezione file di iOS. Nessun metodo di archiviazione o trasmissione è sicuro al 100% e funzioni come il trasferimento Wi-Fi che scegli di usare hanno i limiti descritti sopra. Sei responsabile di custodire in modo sicuro il tuo codice e la tua chiave di recupero.",
-    "pt-BR": "Usamos criptografia AES-256-GCM no aparelho, as Chaves do iOS para guardar a chave, hash de senha com PBKDF2 e a proteção de arquivos do iOS. Nenhum método de armazenamento ou transmissão é 100% seguro, e recursos como a transferência por Wi-Fi que você escolher usar têm as limitações descritas acima. Você é responsável por manter sua senha e sua chave de recuperação em segurança.",
-    "ko": "당사는 기기 내 AES-256-GCM 암호화, 키 저장을 위한 iOS 키체인, PBKDF2 암호 해싱, iOS 파일 보호를 사용합니다. 어떤 저장·전송 방식도 100% 안전하지는 않으며, 사용자가 선택해 사용하는 Wi-Fi 전송 같은 기능에는 위에 설명한 제약이 있습니다. 암호와 복구 키의 안전한 보관은 사용자 책임입니다.",
-    "zh-Hans": "我们采用设备端 AES-256-GCM 加密、使用 iOS 钥匙串存储密钥、以 PBKDF2 对密码进行哈希，并启用 iOS 文件保护。没有任何存储或传输方式是 100% 安全的，你选择使用的 Wi-Fi 传输等功能也存在上文所述的限制。妥善保管你的密码和恢复密钥是你的责任。"
-  },
-  "priv_s11_h": {
-    "en": "11. Changes to this policy",
-    "de": "11. Änderungen dieser Erklärung",
-    "nl": "11. Wijzigingen in dit beleid",
-    "es": "11. Cambios en esta política",
-    "fr": "11. Modifications de cette politique",
-    "it": "11. Modifiche a questa informativa",
-    "pt-BR": "11. Alterações nesta política",
-    "ko": "11. 방침 변경",
-    "zh-Hans": "11. 本政策的变更"
-  },
-  "priv_s11_p1": {
-    "en": "We may update this Privacy Policy from time to time. We’ll revise the “Last updated” date above, and significant changes will be reflected in the app or on our website.",
-    "de": "Wir können diese Datenschutzerklärung von Zeit zu Zeit aktualisieren. Wir passen dann das oben stehende Datum „Zuletzt aktualisiert“ an; wesentliche Änderungen werden in der App oder auf unserer Website kenntlich gemacht.",
-    "nl": "We kunnen dit privacybeleid van tijd tot tijd bijwerken. We passen dan de datum ‘Laatst bijgewerkt’ hierboven aan, en belangrijke wijzigingen worden in de app of op onze website vermeld.",
-    "es": "Podemos actualizar esta Política de privacidad de vez en cuando. Actualizaremos la fecha de «Última actualización» de arriba, y los cambios significativos se reflejarán en la app o en nuestro sitio web.",
-    "fr": "Nous pouvons mettre à jour cette politique de confidentialité de temps à autre. Nous modifierons la date de « Dernière mise à jour » ci-dessus, et les changements importants seront signalés dans l’app ou sur notre site web.",
-    "it": "Potremmo aggiornare questa informativa di tanto in tanto. Aggiorneremo la data di «Ultimo aggiornamento» qui sopra e le modifiche significative saranno indicate nell’app o sul nostro sito web.",
-    "pt-BR": "Podemos atualizar esta Política de Privacidade de tempos em tempos. Vamos revisar a data de “Última atualização” acima, e alterações significativas serão informadas no app ou no nosso site.",
-    "ko": "본 개인정보 처리방침은 수시로 업데이트될 수 있습니다. 위의 ‘최종 업데이트’ 날짜를 갱신하며, 중요한 변경 사항은 앱이나 웹사이트에 안내합니다.",
-    "zh-Hans": "我们可能会不时更新本隐私政策。届时将修改上方的“最后更新”日期，重大变更也会在应用内或我们的网站上说明。"
-  },
-  "priv_s12_h": {
-    "en": "12. Contact us",
-    "de": "12. Kontakt",
-    "nl": "12. Contact",
-    "es": "12. Contacto",
-    "fr": "12. Nous contacter",
-    "it": "12. Contatti",
-    "pt-BR": "12. Fale conosco",
-    "ko": "12. 문의",
-    "zh-Hans": "12. 联系我们"
-  },
-  "priv_s12_p1": {
-    "en": "If you have questions about this Privacy Policy or your privacy, contact us at:",
-    "de": "Wenn du Fragen zu dieser Datenschutzerklärung oder zu deiner Privatsphäre hast, erreichst du uns unter:",
-    "nl": "Heb je vragen over dit privacybeleid of over je privacy, neem dan contact met ons op via:",
-    "es": "Si tienes preguntas sobre esta Política de privacidad o sobre tu privacidad, escríbenos a:",
-    "fr": "Pour toute question sur cette politique de confidentialité ou sur votre vie privée, contactez-nous à :",
-    "it": "Se hai domande su questa informativa o sulla tua privacy, scrivici a:",
-    "pt-BR": "Se tiver dúvidas sobre esta Política de Privacidade ou sobre sua privacidade, fale conosco pelo:",
-    "ko": "본 방침이나 개인정보에 대한 문의는 아래로 연락해 주세요.",
-    "zh-Hans": "如果你对本隐私政策或你的隐私有任何疑问，请通过以下方式联系我们："
-  },
   "priv_authoritative": {
     "en": "This policy is also available in other languages. In case of any discrepancy, the English version is authoritative.",
     "de": "Diese Erklärung ist auch in anderen Sprachen verfügbar. Bei Abweichungen ist die englische Fassung maßgeblich.",
@@ -603,5 +372,159 @@
     "pt-BR": "Início",
     "ko": "홈",
     "zh-Hans": "首页"
+  },
+  "priv_s5_h": {
+    "en": "Purchases (Apple)",
+    "de": "Käufe (Apple)",
+    "nl": "Aankopen (Apple)",
+    "es": "Compras (Apple)",
+    "fr": "Achats (Apple)",
+    "it": "Acquisti (Apple)",
+    "pt-BR": "Compras (Apple)",
+    "ko": "구매(Apple)",
+    "zh-Hans": "购买（Apple）"
+  },
+  "priv_s5_p1": {
+    "en": "Privaro Pro is sold as a one-time purchase through Apple’s StoreKit / App Store. Apple processes the transaction and your payment; we do not receive your payment details. Purchase status is handled through your Apple Account. See <a href=\"https://www.apple.com/legal/privacy/\">Apple’s Privacy Policy</a>.",
+    "de": "Privaro Pro wird als einmaliger Kauf über Apples StoreKit / den App Store verkauft. Apple wickelt die Transaktion und deine Zahlung ab; wir erhalten deine Zahlungsdaten nicht. Der Kaufstatus wird über deinen Apple Account verwaltet. Siehe <a href=\"https://www.apple.com/legal/privacy/\">Apples Datenschutzrichtlinie</a>.",
+    "nl": "Privaro Pro wordt verkocht als eenmalige aankoop via Apples StoreKit / de App Store. Apple verwerkt de transactie en je betaling; wij ontvangen je betaalgegevens niet. De aankoopstatus wordt afgehandeld via je Apple Account. Zie <a href=\"https://www.apple.com/legal/privacy/\">Apples privacybeleid</a>.",
+    "es": "Privaro Pro se vende como compra única a través de StoreKit / la App Store de Apple. Apple procesa la transacción y tu pago; nosotros no recibimos tus datos de pago. El estado de la compra se gestiona mediante tu Apple Account. Consulta la <a href=\"https://www.apple.com/legal/privacy/\">Política de privacidad de Apple</a>.",
+    "fr": "Privaro Pro est vendu sous forme d’achat unique via StoreKit / l’App Store d’Apple. Apple traite la transaction et votre paiement ; nous ne recevons pas vos informations de paiement. Le statut de l’achat est géré par votre compte Apple. Consultez la <a href=\"https://www.apple.com/legal/privacy/\">politique de confidentialité d’Apple</a>.",
+    "it": "Privaro Pro è venduto come acquisto una tantum tramite StoreKit / App Store di Apple. Apple gestisce la transazione e il pagamento; noi non riceviamo i tuoi dati di pagamento. Lo stato dell’acquisto è gestito tramite il tuo Apple Account. Consulta l’<a href=\"https://www.apple.com/legal/privacy/\">informativa sulla privacy di Apple</a>.",
+    "pt-BR": "O Privaro Pro é vendido como compra única pela StoreKit / App Store da Apple. A Apple processa a transação e o pagamento; não recebemos seus dados de pagamento. O status da compra é gerenciado pela sua Apple Account. Consulte a <a href=\"https://www.apple.com/legal/privacy/\">Política de Privacidade da Apple</a>.",
+    "ko": "Privaro Pro는 Apple의 StoreKit / App Store를 통해 일회성 구매로 판매됩니다. 거래와 결제는 Apple이 처리하며, 당사는 결제 정보를 받지 않습니다. 구매 상태는 Apple 계정을 통해 관리됩니다. <a href=\"https://www.apple.com/legal/privacy/\">Apple 개인정보 처리방침</a>을 참고하세요.",
+    "zh-Hans": "Privaro Pro 通过 Apple 的 StoreKit / App Store 以一次性购买的方式出售。交易与付款由 Apple 处理，我们不会收到你的付款信息。购买状态通过你的 Apple 账户管理。请参阅 <a href=\"https://www.apple.com/legal/privacy/\">Apple 隐私政策</a>。"
+  },
+  "priv_s6_h": {
+    "en": "Data retention and deletion",
+    "de": "Aufbewahrung und Löschung von Daten",
+    "nl": "Bewaren en verwijderen van gegevens",
+    "es": "Conservación y eliminación de datos",
+    "fr": "Conservation et suppression des données",
+    "it": "Conservazione ed eliminazione dei dati",
+    "pt-BR": "Retenção e exclusão de dados",
+    "ko": "데이터 보존 및 삭제",
+    "zh-Hans": "数据保留与删除"
+  },
+  "priv_s6_p1": {
+    "en": "Your content stays on your device until you delete it. Deleting items moves them to “Recently Deleted,” and they are permanently removed after 30 days (or immediately if you choose). Deleting the app removes its app data; if you enabled iCloud Backup, you can remove that from within the app or via your iCloud storage settings. Because we don’t hold your data, there is nothing for us to delete on our side.",
+    "de": "Deine Inhalte bleiben auf deinem Gerät, bis du sie löschst. Gelöschte Objekte wandern in „Zuletzt gelöscht“ und werden nach 30 Tagen endgültig entfernt (oder sofort, wenn du das wählst). Beim Löschen der App werden ihre Daten entfernt; falls du das iCloud-Backup aktiviert hast, kannst du dieses in der App oder über deine iCloud-Speichereinstellungen entfernen. Da wir deine Daten nicht vorhalten, gibt es auf unserer Seite nichts zu löschen.",
+    "nl": "Je inhoud blijft op je apparaat totdat je die verwijdert. Verwijderde items gaan naar ‘Recent verwijderd’ en worden na 30 dagen definitief gewist (of meteen, als je daarvoor kiest). Door de app te verwijderen wis je de appgegevens; als je de iCloud-reservekopie hebt ingeschakeld, kun je die verwijderen in de app of via je iCloud-opslaginstellingen. Omdat wij je gegevens niet bewaren, valt er aan onze kant niets te verwijderen.",
+    "es": "Tu contenido permanece en tu dispositivo hasta que lo borres. Al eliminar elementos, pasan a «Eliminados recientemente» y se borran definitivamente a los 30 días (o de inmediato, si así lo eliges). Al eliminar la app se borran sus datos; si activaste la copia de seguridad en iCloud, puedes eliminarla desde la app o desde los ajustes de almacenamiento de iCloud. Como no guardamos tus datos, no hay nada que podamos borrar por nuestra parte.",
+    "fr": "Votre contenu reste sur votre appareil jusqu’à ce que vous le supprimiez. Les éléments supprimés passent dans « Supprimés récemment » et sont effacés définitivement au bout de 30 jours (ou immédiatement, si vous le choisissez). Supprimer l’app efface ses données ; si vous avez activé la sauvegarde iCloud, vous pouvez la supprimer depuis l’app ou depuis les réglages de stockage iCloud. Comme nous ne détenons pas vos données, il n’y a rien à supprimer de notre côté.",
+    "it": "I tuoi contenuti restano sul dispositivo finché non li elimini. Gli elementi eliminati passano in «Eliminati di recente» e vengono rimossi definitivamente dopo 30 giorni (o subito, se lo scegli). Eliminando l’app se ne rimuovono i dati; se hai attivato il backup iCloud, puoi rimuoverlo dall’app o dalle impostazioni di archiviazione iCloud. Poiché non conserviamo i tuoi dati, dalla nostra parte non c’è nulla da eliminare.",
+    "pt-BR": "Seu conteúdo fica no seu aparelho até você excluí-lo. Itens excluídos vão para “Apagados recentemente” e são removidos definitivamente após 30 dias (ou na hora, se você preferir). Excluir o app remove os dados dele; se você ativou o backup no iCloud, pode removê-lo pelo app ou nos ajustes de armazenamento do iCloud. Como não guardamos seus dados, não há nada para excluirmos do nosso lado.",
+    "ko": "콘텐츠는 사용자가 삭제할 때까지 기기에 남아 있습니다. 삭제한 항목은 ‘최근 삭제된 항목’으로 이동하며 30일 후(또는 사용자가 원하면 즉시) 영구 삭제됩니다. 앱을 삭제하면 앱 데이터도 삭제되며, iCloud 백업을 사용 중이라면 앱 내에서 또는 iCloud 저장 공간 설정에서 제거할 수 있습니다. 당사는 데이터를 보유하지 않으므로 당사 측에서 삭제할 것은 없습니다.",
+    "zh-Hans": "你的内容会一直保留在设备上，直到你删除它。删除的项目会移入“最近删除”，并在 30 天后永久移除（如果你选择，也可立即移除）。删除应用会清除其应用数据；若你启用了 iCloud 备份，可在应用内或通过 iCloud 存储设置将其移除。由于我们不持有你的数据，我们这边没有任何内容需要删除。"
+  },
+  "priv_s7_h": {
+    "en": "Children’s privacy",
+    "de": "Datenschutz für Kinder",
+    "nl": "Privacy van kinderen",
+    "es": "Privacidad de los menores",
+    "fr": "Confidentialité des enfants",
+    "it": "Privacy dei minori",
+    "pt-BR": "Privacidade de crianças",
+    "ko": "아동의 개인정보",
+    "zh-Hans": "儿童隐私"
+  },
+  "priv_s7_p1": {
+    "en": "Privaro is not directed to children under 13 (or the minimum age required in your country) and we do not knowingly collect personal information from children.",
+    "de": "Privaro richtet sich nicht an Kinder unter 13 Jahren (oder das in deinem Land geltende Mindestalter), und wir erheben wissentlich keine personenbezogenen Daten von Kindern.",
+    "nl": "Privaro is niet gericht op kinderen jonger dan 13 jaar (of de minimumleeftijd die in jouw land geldt) en we verzamelen niet bewust persoonsgegevens van kinderen.",
+    "es": "Privaro no está dirigido a menores de 13 años (o la edad mínima exigida en tu país) y no recopilamos conscientemente información personal de menores.",
+    "fr": "Privaro ne s’adresse pas aux enfants de moins de 13 ans (ou l’âge minimum requis dans votre pays) et nous ne collectons pas sciemment d’informations personnelles auprès d’enfants.",
+    "it": "Privaro non è rivolto a bambini di età inferiore a 13 anni (o all’età minima richiesta nel tuo Paese) e non raccogliamo consapevolmente informazioni personali da minori.",
+    "pt-BR": "O Privaro não é destinado a crianças menores de 13 anos (ou a idade mínima exigida no seu país) e não coletamos intencionalmente informações pessoais de crianças.",
+    "ko": "Privaro는 만 13세 미만(또는 해당 국가에서 요구하는 최소 연령 미만) 아동을 대상으로 하지 않으며, 아동의 개인정보를 고의로 수집하지 않습니다.",
+    "zh-Hans": "Privaro 并非面向 13 周岁以下（或你所在国家/地区要求的最低年龄以下）的儿童，我们也不会在知情的情况下收集儿童的个人信息。"
+  },
+  "priv_s8_h": {
+    "en": "Your rights",
+    "de": "Deine Rechte",
+    "nl": "Jouw rechten",
+    "es": "Tus derechos",
+    "fr": "Vos droits",
+    "it": "I tuoi diritti",
+    "pt-BR": "Seus direitos",
+    "ko": "사용자의 권리",
+    "zh-Hans": "你的权利"
+  },
+  "priv_s8_p1": {
+    "en": "Depending on where you live (for example, under the EU/UK GDPR or the California CCPA/CPRA), you may have rights to access, correct, delete, or restrict the processing of your personal information. Because Privaro stores your content only on your device and we do not maintain personal data about you on our servers, you can exercise most of these rights directly by managing or deleting data in the app. For any questions or requests, contact us using the details below.",
+    "de": "Je nachdem, wo du lebst (etwa nach der EU-/UK-DSGVO oder dem kalifornischen CCPA/CPRA), hast du möglicherweise das Recht, auf deine personenbezogenen Daten zuzugreifen, sie zu berichtigen, zu löschen oder deren Verarbeitung einzuschränken. Da Privaro deine Inhalte ausschließlich auf deinem Gerät speichert und wir keine personenbezogenen Daten über dich auf unseren Servern vorhalten, kannst du die meisten dieser Rechte direkt ausüben, indem du Daten in der App verwaltest oder löschst. Bei Fragen oder Anliegen kontaktiere uns über die unten stehenden Angaben.",
+    "nl": "Afhankelijk van waar je woont (bijvoorbeeld onder de AVG in de EU/het VK of de CCPA/CPRA in Californië) heb je mogelijk het recht om je persoonsgegevens in te zien, te corrigeren, te verwijderen of de verwerking ervan te beperken. Omdat Privaro je inhoud uitsluitend op je apparaat bewaart en wij geen persoonsgegevens over jou op onze servers houden, kun je de meeste van deze rechten rechtstreeks uitoefenen door gegevens in de app te beheren of te verwijderen. Neem bij vragen of verzoeken contact met ons op via de gegevens hieronder.",
+    "es": "Según dónde vivas (por ejemplo, bajo el RGPD de la UE/Reino Unido o la CCPA/CPRA de California), puedes tener derecho a acceder a tu información personal, corregirla, eliminarla o limitar su tratamiento. Como Privaro almacena tu contenido únicamente en tu dispositivo y no mantenemos datos personales tuyos en nuestros servidores, puedes ejercer la mayoría de estos derechos directamente gestionando o eliminando datos en la app. Para cualquier duda o solicitud, escríbenos usando los datos de abajo.",
+    "fr": "Selon votre lieu de résidence (par exemple sous le RGPD de l’UE/du Royaume-Uni ou la CCPA/CPRA californienne), vous pouvez disposer de droits d’accès, de rectification, de suppression ou de limitation du traitement de vos informations personnelles. Comme Privaro conserve votre contenu uniquement sur votre appareil et que nous ne détenons aucune donnée personnelle vous concernant sur nos serveurs, vous pouvez exercer la plupart de ces droits directement en gérant ou en supprimant des données dans l’app. Pour toute question ou demande, contactez-nous via les coordonnées ci-dessous.",
+    "it": "A seconda di dove vivi (ad esempio ai sensi del GDPR UE/Regno Unito o del CCPA/CPRA della California), potresti avere il diritto di accedere alle tue informazioni personali, correggerle, eliminarle o limitarne il trattamento. Poiché Privaro conserva i tuoi contenuti solo sul dispositivo e non manteniamo dati personali su di te sui nostri server, puoi esercitare la maggior parte di questi diritti direttamente gestendo o eliminando i dati nell’app. Per domande o richieste, contattaci usando i recapiti qui sotto.",
+    "pt-BR": "Dependendo de onde você mora (por exemplo, sob o GDPR da UE/Reino Unido ou a CCPA/CPRA da Califórnia), você pode ter direito a acessar, corrigir, excluir ou restringir o tratamento das suas informações pessoais. Como o Privaro armazena seu conteúdo apenas no seu aparelho e não mantemos dados pessoais sobre você em nossos servidores, você pode exercer a maioria desses direitos diretamente, gerenciando ou excluindo dados no app. Em caso de dúvidas ou solicitações, fale conosco pelos contatos abaixo.",
+    "ko": "거주 지역에 따라(예: EU/영국 GDPR, 캘리포니아 CCPA/CPRA) 개인정보에 대한 열람, 정정, 삭제, 처리 제한을 요구할 권리가 있을 수 있습니다. Privaro는 콘텐츠를 기기에만 저장하고 당사 서버에 사용자의 개인정보를 보유하지 않으므로, 대부분의 권리는 앱에서 데이터를 직접 관리하거나 삭제하여 행사할 수 있습니다. 문의나 요청은 아래 연락처로 보내주세요.",
+    "zh-Hans": "根据你的居住地（例如欧盟/英国 GDPR 或加州 CCPA/CPRA），你可能有权访问、更正、删除或限制处理你的个人信息。由于 Privaro 仅将内容存储在你的设备上，且我们的服务器不保存关于你的个人数据，你可以直接在应用中管理或删除数据来行使其中大部分权利。如有任何疑问或请求，请通过下方联系方式与我们联系。"
+  },
+  "priv_s9_h": {
+    "en": "Security",
+    "de": "Sicherheit",
+    "nl": "Beveiliging",
+    "es": "Seguridad",
+    "fr": "Sécurité",
+    "it": "Sicurezza",
+    "pt-BR": "Segurança",
+    "ko": "보안",
+    "zh-Hans": "安全"
+  },
+  "priv_s9_p1": {
+    "en": "We use on-device AES-256-GCM encryption, the iOS Keychain for key storage, PBKDF2 passcode hashing, and iOS file protection. No method of storage or transmission is 100% secure, and features like Wi-Fi Transfer that you choose to use have the limitations described above. You are responsible for keeping your passcode and recovery key safe.",
+    "de": "Wir verwenden AES-256-GCM-Verschlüsselung auf dem Gerät, den iOS-Schlüsselbund zur Schlüsselspeicherung, PBKDF2-Code-Hashing und den iOS-Dateischutz. Keine Speicher- oder Übertragungsmethode ist zu 100 % sicher, und Funktionen wie die WLAN-Übertragung, die du selbst nutzt, unterliegen den oben beschriebenen Einschränkungen. Für die sichere Aufbewahrung deines Codes und deines Wiederherstellungsschlüssels bist du selbst verantwortlich.",
+    "nl": "We gebruiken AES-256-GCM-versleuteling op het apparaat, de iOS-sleutelhanger voor sleutelopslag, PBKDF2-hashing van de toegangscode en de bestandsbeveiliging van iOS. Geen enkele opslag- of verzendmethode is 100% veilig, en functies zoals wifi-overdracht die je zelf kiest te gebruiken kennen de hierboven beschreven beperkingen. Je bent zelf verantwoordelijk voor het veilig bewaren van je toegangscode en je herstelsleutel.",
+    "es": "Usamos cifrado AES-256-GCM en el dispositivo, el Llavero de iOS para guardar la clave, hash del código con PBKDF2 y la protección de archivos de iOS. Ningún método de almacenamiento o transmisión es 100 % seguro, y funciones como la transferencia por Wi-Fi que decidas usar tienen las limitaciones descritas arriba. Eres responsable de guardar a buen recaudo tu código y tu clave de recuperación.",
+    "fr": "Nous utilisons le chiffrement AES-256-GCM sur l’appareil, le trousseau iOS pour le stockage de la clé, le hachage du code par PBKDF2 et la protection des fichiers iOS. Aucune méthode de stockage ou de transmission n’est sûre à 100 %, et les fonctions telles que le transfert Wi-Fi que vous choisissez d’utiliser comportent les limites décrites ci-dessus. Il vous appartient de conserver en lieu sûr votre code et votre clé de récupération.",
+    "it": "Usiamo la cifratura AES-256-GCM sul dispositivo, il portachiavi iOS per la conservazione della chiave, l’hashing del codice con PBKDF2 e la protezione file di iOS. Nessun metodo di archiviazione o trasmissione è sicuro al 100% e funzioni come il trasferimento Wi-Fi che scegli di usare hanno i limiti descritti sopra. Sei responsabile di custodire in modo sicuro il tuo codice e la tua chiave di recupero.",
+    "pt-BR": "Usamos criptografia AES-256-GCM no aparelho, as Chaves do iOS para guardar a chave, hash de senha com PBKDF2 e a proteção de arquivos do iOS. Nenhum método de armazenamento ou transmissão é 100% seguro, e recursos como a transferência por Wi-Fi que você escolher usar têm as limitações descritas acima. Você é responsável por manter sua senha e sua chave de recuperação em segurança.",
+    "ko": "당사는 기기 내 AES-256-GCM 암호화, 키 저장을 위한 iOS 키체인, PBKDF2 암호 해싱, iOS 파일 보호를 사용합니다. 어떤 저장·전송 방식도 100% 안전하지는 않으며, 사용자가 선택해 사용하는 Wi-Fi 전송 같은 기능에는 위에 설명한 제약이 있습니다. 암호와 복구 키의 안전한 보관은 사용자 책임입니다.",
+    "zh-Hans": "我们采用设备端 AES-256-GCM 加密、使用 iOS 钥匙串存储密钥、以 PBKDF2 对密码进行哈希，并启用 iOS 文件保护。没有任何存储或传输方式是 100% 安全的，你选择使用的 Wi-Fi 传输等功能也存在上文所述的限制。妥善保管你的密码和恢复密钥是你的责任。"
+  },
+  "priv_s10_h": {
+    "en": "Changes to this policy",
+    "de": "Änderungen dieser Erklärung",
+    "nl": "Wijzigingen in dit beleid",
+    "es": "Cambios en esta política",
+    "fr": "Modifications de cette politique",
+    "it": "Modifiche a questa informativa",
+    "pt-BR": "Alterações nesta política",
+    "ko": "방침 변경",
+    "zh-Hans": "本政策的变更"
+  },
+  "priv_s10_p1": {
+    "en": "We may update this Privacy Policy from time to time. We’ll revise the “Last updated” date above, and significant changes will be reflected in the app or on our website.",
+    "de": "Wir können diese Datenschutzerklärung von Zeit zu Zeit aktualisieren. Wir passen dann das oben stehende Datum „Zuletzt aktualisiert“ an; wesentliche Änderungen werden in der App oder auf unserer Website kenntlich gemacht.",
+    "nl": "We kunnen dit privacybeleid van tijd tot tijd bijwerken. We passen dan de datum ‘Laatst bijgewerkt’ hierboven aan, en belangrijke wijzigingen worden in de app of op onze website vermeld.",
+    "es": "Podemos actualizar esta Política de privacidad de vez en cuando. Actualizaremos la fecha de «Última actualización» de arriba, y los cambios significativos se reflejarán en la app o en nuestro sitio web.",
+    "fr": "Nous pouvons mettre à jour cette politique de confidentialité de temps à autre. Nous modifierons la date de « Dernière mise à jour » ci-dessus, et les changements importants seront signalés dans l’app ou sur notre site web.",
+    "it": "Potremmo aggiornare questa informativa di tanto in tanto. Aggiorneremo la data di «Ultimo aggiornamento» qui sopra e le modifiche significative saranno indicate nell’app o sul nostro sito web.",
+    "pt-BR": "Podemos atualizar esta Política de Privacidade de tempos em tempos. Vamos revisar a data de “Última atualização” acima, e alterações significativas serão informadas no app ou no nosso site.",
+    "ko": "본 개인정보 처리방침은 수시로 업데이트될 수 있습니다. 위의 ‘최종 업데이트’ 날짜를 갱신하며, 중요한 변경 사항은 앱이나 웹사이트에 안내합니다.",
+    "zh-Hans": "我们可能会不时更新本隐私政策。届时将修改上方的“最后更新”日期，重大变更也会在应用内或我们的网站上说明。"
+  },
+  "priv_s11_h": {
+    "en": "Contact us",
+    "de": "Kontakt",
+    "nl": "Contact",
+    "es": "Contacto",
+    "fr": "Nous contacter",
+    "it": "Contatti",
+    "pt-BR": "Fale conosco",
+    "ko": "문의",
+    "zh-Hans": "联系我们"
+  },
+  "priv_s11_p1": {
+    "en": "If you have questions about this Privacy Policy or your privacy, contact us at:",
+    "de": "Wenn du Fragen zu dieser Datenschutzerklärung oder zu deiner Privatsphäre hast, erreichst du uns unter:",
+    "nl": "Heb je vragen over dit privacybeleid of over je privacy, neem dan contact met ons op via:",
+    "es": "Si tienes preguntas sobre esta Política de privacidad o sobre tu privacidad, escríbenos a:",
+    "fr": "Pour toute question sur cette politique de confidentialité ou sur votre vie privée, contactez-nous à :",
+    "it": "Se hai domande su questa informativa o sulla tua privacy, scrivici a:",
+    "pt-BR": "Se tiver dúvidas sobre esta Política de Privacidade ou sobre sua privacidade, fale conosco pelo:",
+    "ko": "본 방침이나 개인정보에 대한 문의는 아래로 연락해 주세요.",
+    "zh-Hans": "如果你对本隐私政策或你的隐私有任何疑问，请通过以下方式联系我们："
   }
 }

@@ -268,3 +268,9 @@ footer .legal a:hover { color: var(--ink); }
   .ledger-row { grid-template-columns: 1fr; gap: 6px; padding: 22px 0; }
   .tiers { grid-template-columns: 1fr; gap: 26px; }
 }
+
+/* Legal section numbers come from CSS, not the translated strings, so adding
+   or removing a section never means re-translating nine headings. */
+.legal-page { counter-reset: legal-section; }
+.legal-page h2 { counter-increment: legal-section; }
+.legal-page h2::before { content: counter(legal-section) ". "; color: var(--acc); }
