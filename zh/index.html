@@ -3,8 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Privaro：你的照片和视频，只供你自己查看</title>
-<meta name="description" content="Privaro 是一款适用于 iPhone 的私密加密照片和视频保险库。一切都在你的设备上加密。无需账户，没有服务器，没有跟踪。" />
+<title>Privaro：iPhone 上的私密照片与视频保险库</title>
+<meta name="description" content="Privaro 将你的私密照片和视频加密保存在 iPhone 上，由面容 ID 和它自己的密码保护。无需账户，不上传任何内容。" />
+<meta name="apple-itunes-app" content="app-id=6783131829" />
+<meta name="color-scheme" content="light dark" />
 <link rel="alternate" hreflang="en" href="https://privaro-site.vercel.app/" />
 <link rel="alternate" hreflang="es" href="https://privaro-site.vercel.app/es" />
 <link rel="alternate" hreflang="fr" href="https://privaro-site.vercel.app/fr" />
@@ -15,181 +17,160 @@
 <link rel="alternate" hreflang="ko" href="https://privaro-site.vercel.app/ko" />
 <link rel="alternate" hreflang="nl" href="https://privaro-site.vercel.app/nl" />
 <link rel="alternate" hreflang="x-default" href="https://privaro-site.vercel.app/" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="/logo.png" />
+<link rel="apple-touch-icon" href="/logo.png" />
 <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
 
-<!-- HERO -->
-<section class="hero">
+<header class="site-head">
   <div class="wrap">
-    <header class="site-head">
-      <a class="brand" href="#top">
-        <img class="applogo" src="/logo.png" width="26" height="26" alt="" />
-        Privaro
-      </a>
-      <span class="head-div" aria-hidden="true"></span>
-      <nav class="headlinks">
-        <a href="/privacy">隐私</a>
-        <a href="/terms">条款</a>
-      </nav>
-      <span class="head-div" aria-hidden="true"></span>
+    <a class="brand" href="/zh">
+      <img src="/logo.png" width="28" height="28" alt="" />
+      Privaro
+    </a>
+    <span class="head-divider" aria-hidden="true"></span>
+    <nav class="site-nav">
+      <a href="/zh/pro">Pro</a>
+      <a href="/zh/privacy">隐私</a>
       <details class="lang"><summary aria-label="语言"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>简体中文</span></summary><div class="lang-menu"><a href="/">English</a><a href="/es">Español</a><a href="/fr">Français</a><a href="/de">Deutsch</a><a href="/it">Italiano</a><a href="/pt-br">Português</a><a href="/zh" class="active">简体中文</a><a href="/ko">한국어</a><a href="/nl">Nederlands</a></div></details>
-    </header>
-
-    <div class="hero-grid">
-      <div class="reveal">
-        <span class="eyebrow">设备端加密</span>
-        <h1>你的照片和视频，<br /><span class="hl">只供你自己查看。</span></h1>
-        <p class="lead">一款适用于 iPhone 的私密加密保险库。一切都通过强加密锁定，就在你的设备上。无需账户，没有服务器，只有你自己。</p>
-        <a class="appstore-badge" href="#" aria-label="Download Privaro on the App Store">
-          <img src="/appstore-badge-white.svg" alt="Download on the App Store" />
-        </a>
-        <p class="fineprint">免费开始 · 需 iOS 17.6 或更高版本 · Pro 为一次性购买</p>
-      </div>
-
-      <aside class="proof reveal" aria-label="What it takes to break in">
-        <div class="proof-title">想要访问，需要：</div>
-        <ul class="proof-list">
-          <li><span class="n">01</span><span class="t">实际拿到你的 iPhone。</span></li>
-          <li><span class="n">02</span><span class="t">绕过手机的面容 ID 和密码。</span></li>
-          <li><span class="n">03</span><span class="t">绕过 Privaro 的独立密码。</span></li>
-          <li><span class="n">04</span><span class="t">用暴力破解 AES-256 加密。</span></li>
-        </ul>
-        <div class="proof-foot">≈ 10<sup>50</sup> 年（每秒一万亿次尝试）。</div>
-      </aside>
-    </div>
+      <a class="nav-get" href="https://apps.apple.com/app/id6783131829">下载</a>
+    </nav>
   </div>
-</section>
+</header>
 
-<!-- SCREENSHOTS -->
-<section class="section showcase">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">应用</span>
-      <h2>看起来像「照片」。锁得像保险库。</h2>
-      <p>一个熟悉、快速的相册，用来存放你想留给自己的内容。浏览、整理、收藏，全都在你自己的锁后面。</p>
-    </div>
-    <div class="shots">
-      <figure class="shot reveal">
-        <div class="device"><img src="/shots/shot-albums.jpg" width="700" height="1521" alt="Privaro albums, with smart albums and your own albums" loading="lazy" /></div>
-        <figcaption class="cap">相簿</figcaption>
-      </figure>
-      <figure class="shot reveal">
-        <div class="device"><img src="/shots/shot-vault.jpg" width="700" height="1521" alt="The Privaro vault, showing photos in a grid by month" loading="lazy" /></div>
-        <figcaption class="cap">保险库</figcaption>
-      </figure>
-      <figure class="shot reveal">
-        <div class="device"><img src="/shots/shot-pro.jpg" width="700" height="1521" alt="Privaro Pro, listing the upgrade features and pricing" loading="lazy" /></div>
-        <figcaption class="cap">privaro pro</figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
+<main>
 
-<!-- FEATURES -->
-<section class="section">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <h2>像保险库一样打造。</h2>
-      <p>每一层都在你的 iPhone 上运行。没有什么可被远程入侵，因为外面根本没有可触及的东西。</p>
-    </div>
-    <dl class="ledger">
-      <div class="ledger-row reveal">
-        <dt>设备端加密</dt>
-        <dd>每一张照片、视频和相簿都在你的 iPhone 上用 AES-256 加密。密钥永远不会离开你的设备。</dd>
-      </div>
-      <div class="ledger-row reveal">
-        <dt>面容 ID 与密码</dt>
-        <dd>用面容 ID 或独立于手机的私人密码解锁。你一离开就立即锁定。</dd>
-      </div>
-      <div class="ledger-row reveal">
-        <dt>诱饵保险库</dt>
-        <dd>第二个密码会打开一个以假乱真的诱饵保险库，这样在被迫交出密码时也不会暴露真正的保险库。</dd>
-      </div>
-      <div class="ledger-row reveal">
-        <dt>加密的 iCloud 备份</dt>
-        <dd>可选择备份到你自己的 iCloud，在离开设备前就已加密。连我们也无法读取。</dd>
-      </div>
-      <div class="ledger-row reveal">
-        <dt>防截屏</dt>
-        <dd>你的保险库可防止截屏、录屏和 AirPlay，确保不会有内容意外泄露。</dd>
-      </div>
-      <div class="ledger-row reveal">
-        <dt>隐秘相机</dt>
-        <dd>直接把照片和视频拍进保险库，永远不会进入你的普通相机胶卷。</dd>
-      </div>
-    </dl>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section class="section">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <h2>一次付款，就这么简单。</h2>
-      <p>无需账户，没有订阅，也无需取消。Privaro 可免费使用；Pro 一次性解锁全部功能，并在登录同一 Apple 账户的所有设备上生效。</p>
-    </div>
-    <div class="price-line reveal">
-      <div class="price-figure">
-        <span class="price-amount">€11.99</span>
-        <span class="price-once">一次性</span>
-      </div>
-      <p class="price-note">一次购买，长期拥有。无需续订，也没有需要记着取消的试用。</p>
-    </div>
-    <div class="tiers reveal">
-      <div class="tier">
-        <h3>免费</h3>
-        <p>设备端 AES-256 加密 · 面容 ID 和私人密码 · 最多 2.5 GB 和 5 个相簿 · 隐秘相机、标签和搜索</p>
-      </div>
-      <div class="tier">
-        <h3>Pro</h3>
-        <p>无限存储与相簿 · 防截屏与防录屏保护 · 诱饵保险库与胁迫抹除 · 加密 iCloud 备份与按相簿加锁 · Wi-Fi 传输、按位置锁定、伪装图标 · 免费版的全部功能，全部解锁</p>
-      </div>
-    </div>
-    <p class="pricing-more reveal"><a href="/zh/pro">查看每项 Pro 功能的具体作用 →</a></p>
-    <div class="pricing-cta reveal">
-      <a class="appstore-badge" href="#" aria-label="Download Privaro on the App Store">
-        <img src="/appstore-badge-white.svg" alt="Download on the App Store" />
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <h1>让私密的照片和视频保持私密。</h1>
+      <p class="lead">Privaro 是 iPhone 上的保险库。放进去的内容会直接在手机上加密，只能用面容 ID 或 Privaro 自己的密码打开。无需账户，也不会上传任何内容。</p>
+      <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="在 App Store 下载 Privaro">
+        <picture>
+          <source srcset="/appstore-badge-white.svg" media="(prefers-color-scheme: dark)" />
+          <img src="/appstore-badge.svg" alt="在 App Store 下载 Privaro" />
+        </picture>
       </a>
-      <p class="fineprint">App Store 链接即将上线</p>
+      <p class="hero-meta">免费 · iOS 17.6 或更高版本 · Pro 为一次性购买</p>
+    </div>
+    <div class="hero-phone">
+      <div class="phone"><img src="/shots/shot-lock.jpg" width="700" height="1521" alt="Privaro 的锁定屏幕，等待面容 ID" /></div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer>
+<section class="news">
   <div class="wrap">
-    <div class="row">
-      <div class="cols">
-        <div class="col">
-          <h4>产品</h4>
-          <a href="/zh/pro">Pro 功能</a>
-        </div>
-        <div class="col">
-          <h4>法律</h4>
-          <a href="/privacy">隐私政策</a>
-          <a href="/terms">使用条款</a>
-        </div>
-        <div class="col">
-          <h4>支持</h4>
-          <a href="mailto:erdincdubu@icloud.com">联系</a>
-        </div>
+    <p><span class="news-label">新功能</span> 不再有文件大小限制。任意长度的视频都能添加，而且立即开始播放。</p>
+  </div>
+</section>
+
+<section class="features">
+  <div class="wrap">
+    <div class="feature">
+      <div class="phone"><img src="/shots/shot-vault.jpg" width="700" height="1521" alt="保险库：照片以网格显示，按月份排列" loading="lazy" /></div>
+      <div class="feature-text">
+        <h2>就像你的照片图库</h2>
+        <p>照片和视频以熟悉的网格排列，按月份分组。创建相簿、添加说明和标签、标记个人收藏并搜索，所有内容都不会离开保险库。</p>
       </div>
     </div>
-    <div class="legal">© <span id="year">2026</span> Privaro. 保留所有权利。</div>
+    <div class="feature">
+      <div class="phone"><img src="/shots/shot-privacy.jpg" width="700" height="1521" alt="隐私模式设置：在家、外出与旅行" loading="lazy" /></div>
+      <div class="feature-text">
+        <h2>需要时更严格</h2>
+        <p>隐私模式决定 Privaro 有多谨慎。在家时照常分享；外出时，任何内容离开保险库前都会要求输入密码；旅行时，什么都不能带出。</p>
+      </div>
+    </div>
+    <div class="feature">
+      <div class="phone"><img src="/shots/shot-albums.jpg" width="700" height="1521" alt="Privaro 中的相簿" loading="lazy" /></div>
+      <div class="feature-text">
+        <h2>保持锁定的相簿</h2>
+        <p>把所有内容整理到相簿和文件夹中。使用 Pro 可为相簿单独设置密码，即使保险库已打开，它也保持锁定。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="also">
+  <div class="wrap">
+    <h2>还有这些</h2>
+    <ul class="also-list">
+      <li><h3>自动锁定</h3><p>切换到其他 App，保险库就会在身后关上。重新进入需要面容 ID 或你的密码。</p></li>
+      <li><h3>不限文件大小</h3><p>添加任意大小的照片和视频。长视频也会立即开始播放。</p></li>
+      <li><h3>隐秘相机</h3><p>直接拍进保险库，照片和视频永远不会出现在你的相机胶卷里。</p></li>
+      <li><h3>元数据保护</h3><p>分享照片时，自己决定附带哪些信息：全部保留、去掉位置，或全部去掉。</p></li>
+      <li><h3>查找敏感照片</h3><p>Privaro 会直接在手机上检查你选择的照片，找出证件、银行卡和文件等内容，并提供移入保险库的选项。</p></li>
+      <li><h3>诱饵保险库 <span class="pro-tag">Pro</span></h3><p>第二个密码会打开另一个只有普通照片的保险库，以防有人逼你解锁。</p></li>
+      <li><h3>加密备份 <span class="pro-tag">Pro</span></h3><p>备份到你自己的 iCloud，先在手机上加密。恢复始终免费。</p></li>
+      <li><h3>闯入抓拍 <span class="pro-tag">Pro</span></h3><p>有人输错密码时，Privaro 可以悄悄拍下他的照片。</p></li>
+      <li><h3>伪装图标 <span class="pro-tag">Pro</span></h3><p>让 Privaro 在主屏幕上看起来像计算器或备忘录 App。</p></li>
+    </ul>
+    <p class="more"><a href="/zh/pro">Pro 增加的全部功能 →</a></p>
+  </div>
+</section>
+
+<section class="pricing">
+  <div class="wrap">
+    <h2>免费使用，一次性升级</h2>
+    <p class="section-lead">免费版没有广告，也没有时间限制。Pro 解除限制并增加额外保护。只需付款一次，你的 Apple 账户下的所有设备都能使用。</p>
+    <div class="plans">
+      <div class="plan">
+        <h3>免费</h3>
+        <p class="plan-price">€0</p>
+        <ul>
+          <li>加密、面容 ID 和密码</li>
+          <li>最多 2.5 GB 和 5 个相簿</li>
+          <li>隐私模式和元数据保护</li>
+          <li>隐秘相机、标签和搜索</li>
+        </ul>
+      </div>
+      <div class="plan plan-pro">
+        <h3>Pro</h3>
+        <p class="plan-price">€11.99 <span>一次性</span></p>
+        <ul>
+          <li>无限存储与相簿</li>
+          <li>诱饵保险库与胁迫抹除</li>
+          <li>加密的 iCloud 备份</li>
+          <li>防截屏与防录屏保护</li>
+          <li>闯入抓拍与相簿密码</li>
+          <li>Wi-Fi 传输、按位置锁定、伪装图标</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>常见问题</h2>
+    <details><summary>别人能看到我的照片吗？</summary><p>不能。照片在你的 iPhone 上用一把从不离开手机的密钥加密。没有 Privaro 账户，也没有存放照片的服务器，所以任何人都看不到，包括我们。</p></details>
+    <details><summary>忘记密码怎么办？</summary><p>设置 Privaro 时，你会得到一个恢复密钥。请妥善保管：它可以让你设置新密码。没有密码或恢复密钥，保险库就无法打开，我们也不行。</p></details>
+    <details><summary>如果手机丢了怎么办？</summary><p>如果你开启了加密的 iCloud 备份（Pro），就能用密码在新 iPhone 上恢复保险库，恢复是免费的。没有备份的话，照片会一直锁在旧手机上。</p></details>
+    <details><summary>视频有大小限制吗？</summary><p>单个文件没有限制，只要 iPhone 有空间，多大都可以。免费版总共可存 2.5 GB，Pro 没有上限。</p></details>
+    <details><summary>需要联网吗？</summary><p>不需要。保险库可完全离线使用，除非你开启 iCloud 备份，否则照片永远不会上网。</p></details>
+    <details><summary>Pro 是订阅吗？</summary><p>不是。Pro 是一次性付款 €11.99，不会续费，也无需取消。</p></details>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-brand">
+      <img src="/logo.png" width="22" height="22" alt="" />
+      <span>一款适用于 iPhone 的私密加密照片和视频保险库。</span>
+    </div>
+    <nav class="foot-links">
+      <a href="/zh/pro">Pro 功能</a>
+      <a href="/zh/privacy">隐私政策</a>
+      <a href="/zh/terms">使用条款</a>
+      <a href="mailto:erdincdubu@icloud.com">联系</a>
+    </nav>
+    <p class="foot-legal">© <span id="year">2026</span> Privaro. 保留所有权利。</p>
   </div>
 </footer>
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
-</script>
-
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

@@ -3,8 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Privaro: jouw foto's en video's, alleen voor jouw ogen</title>
-<meta name="description" content="Privaro is een privé, versleutelde kluis voor foto's en video's op de iPhone. Alles wordt op je apparaat versleuteld. Geen account, geen servers, geen tracking." />
+<title>Privaro: een privékluis voor je foto’s en video’s op de iPhone</title>
+<meta name="description" content="Privaro bewaart je privéfoto’s en -video’s versleuteld op je iPhone, achter Face ID en een eigen toegangscode. Geen account, niets wordt geüpload." />
+<meta name="apple-itunes-app" content="app-id=6783131829" />
+<meta name="color-scheme" content="light dark" />
 <link rel="alternate" hreflang="en" href="https://privaro-site.vercel.app/" />
 <link rel="alternate" hreflang="es" href="https://privaro-site.vercel.app/es" />
 <link rel="alternate" hreflang="fr" href="https://privaro-site.vercel.app/fr" />
@@ -15,181 +17,160 @@
 <link rel="alternate" hreflang="ko" href="https://privaro-site.vercel.app/ko" />
 <link rel="alternate" hreflang="nl" href="https://privaro-site.vercel.app/nl" />
 <link rel="alternate" hreflang="x-default" href="https://privaro-site.vercel.app/" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="/logo.png" />
+<link rel="apple-touch-icon" href="/logo.png" />
 <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
 
-<!-- HERO -->
-<section class="hero">
+<header class="site-head">
   <div class="wrap">
-    <header class="site-head">
-      <a class="brand" href="#top">
-        <img class="applogo" src="/logo.png" width="26" height="26" alt="" />
-        Privaro
-      </a>
-      <span class="head-div" aria-hidden="true"></span>
-      <nav class="headlinks">
-        <a href="/privacy">Privacy</a>
-        <a href="/terms">Voorwaarden</a>
-      </nav>
-      <span class="head-div" aria-hidden="true"></span>
+    <a class="brand" href="/nl">
+      <img src="/logo.png" width="28" height="28" alt="" />
+      Privaro
+    </a>
+    <span class="head-divider" aria-hidden="true"></span>
+    <nav class="site-nav">
+      <a href="/nl/pro">Pro</a>
+      <a href="/nl/privacy">Privacy</a>
       <details class="lang"><summary aria-label="Taal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>Nederlands</span></summary><div class="lang-menu"><a href="/">English</a><a href="/es">Español</a><a href="/fr">Français</a><a href="/de">Deutsch</a><a href="/it">Italiano</a><a href="/pt-br">Português</a><a href="/zh">简体中文</a><a href="/ko">한국어</a><a href="/nl" class="active">Nederlands</a></div></details>
-    </header>
-
-    <div class="hero-grid">
-      <div class="reveal">
-        <span class="eyebrow">versleuteling op het apparaat</span>
-        <h1>Jouw foto's en video's,<br /><span class="hl">alleen voor jouw ogen.</span></h1>
-        <p class="lead">Een privé, versleutelde kluis voor de iPhone. Alles is vergrendeld met sterke versleuteling, direct op je apparaat. Geen account, geen servers, niemand behalve jij.</p>
-        <a class="appstore-badge" href="#" aria-label="Download Privaro on the App Store">
-          <img src="/appstore-badge-white.svg" alt="Download on the App Store" />
-        </a>
-        <p class="fineprint">gratis beginnen · iOS 17.6 of nieuwer · Pro is een eenmalige aankoop</p>
-      </div>
-
-      <aside class="proof reveal" aria-label="What it takes to break in">
-        <div class="proof-title">Om toegang te krijgen, moet iemand:</div>
-        <ul class="proof-list">
-          <li><span class="n">01</span><span class="t">Je iPhone fysiek in handen hebben.</span></li>
-          <li><span class="n">02</span><span class="t">Je Face ID of toegangscode omzeilen.</span></li>
-          <li><span class="n">03</span><span class="t">De aparte toegangscode van Privaro omzeilen.</span></li>
-          <li><span class="n">04</span><span class="t">De AES-256-versleuteling met brute force kraken.</span></li>
-        </ul>
-        <div class="proof-foot">≈ 10<sup>50</sup> jaar bij één biljoen pogingen per seconde.</div>
-      </aside>
-    </div>
+      <a class="nav-get" href="https://apps.apple.com/app/id6783131829">Download</a>
+    </nav>
   </div>
-</section>
+</header>
 
-<!-- SCREENSHOTS -->
-<section class="section showcase">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">de app</span>
-      <h2>Voelt als Foto's. Vergrendeld als een kluis.</h2>
-      <p>Een vertrouwde, snelle galerij voor wat je liever voor jezelf houdt. Bladeren, ordenen en favoriet maken, allemaal achter je eigen slot.</p>
-    </div>
-    <div class="shots">
-      <figure class="shot reveal">
-        <div class="device"><img src="/shots/shot-albums.jpg" width="700" height="1521" alt="Privaro albums, with smart albums and your own albums" loading="lazy" /></div>
-        <figcaption class="cap">albums</figcaption>
-      </figure>
-      <figure class="shot reveal">
-        <div class="device"><img src="/shots/shot-vault.jpg" width="700" height="1521" alt="The Privaro vault, showing photos in a grid by month" loading="lazy" /></div>
-        <figcaption class="cap">de kluis</figcaption>
-      </figure>
-      <figure class="shot reveal">
-        <div class="device"><img src="/shots/shot-pro.jpg" width="700" height="1521" alt="Privaro Pro, listing the upgrade features and pricing" loading="lazy" /></div>
-        <figcaption class="cap">privaro pro</figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
+<main>
 
-<!-- FEATURES -->
-<section class="section">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <h2>Gebouwd als een kluis.</h2>
-      <p>Elke laag draait op je iPhone. Niets om op afstand te hacken, want er is buiten niets te bereiken.</p>
-    </div>
-    <dl class="ledger">
-      <div class="ledger-row reveal">
-        <dt>Versleuteling op het apparaat</dt>
-        <dd>Elke foto, video en album wordt met AES-256 op je iPhone versleuteld. De sleutel verlaat nooit je apparaat.</dd>
-      </div>
-      <div class="ledger-row reveal">
-        <dt>Face ID en toegangscode</dt>
-        <dd>Ontgrendel met Face ID of een privécode los van die van je telefoon. Het vergrendelt zodra je weggaat.</dd>
-      </div>
-      <div class="ledger-row reveal">
-        <dt>Lokkluis</dt>
-        <dd>Een tweede toegangscode opent een geloofwaardige lokkluis, zodat een code onder druk nooit de echte prijsgeeft.</dd>
-      </div>
-      <div class="ledger-row reveal">
-        <dt>Versleutelde iCloud-back-up</dt>
-        <dd>Maak desgewenst een back-up naar je eigen iCloud, versleuteld voordat het je apparaat verlaat. Zelfs wij kunnen het niet lezen.</dd>
-      </div>
-      <div class="ledger-row reveal">
-        <dt>Verborgen voor schermafbeeldingen</dt>
-        <dd>Je kluis is afgeschermd tegen schermafbeeldingen, schermopname en AirPlay, zodat er niets per ongeluk uitlekt.</dd>
-      </div>
-      <div class="ledger-row reveal">
-        <dt>Stealthcamera</dt>
-        <dd>Maak foto's en video's rechtstreeks in de kluis, zodat ze nooit in je gewone filmrol komen.</dd>
-      </div>
-    </dl>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section class="section">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <h2>Eén betaling. Dat is het hele model.</h2>
-      <p>Geen account, geen abonnement, niets op te zeggen. Privaro is gratis te gebruiken; Pro ontgrendelt alles, eenmalig, op elk apparaat dat bij je Apple Account is aangemeld.</p>
-    </div>
-    <div class="price-line reveal">
-      <div class="price-figure">
-        <span class="price-amount">€11.99</span>
-        <span class="price-once">eenmalig</span>
-      </div>
-      <p class="price-note">Eén keer kopen en houden. Geen verlenging en geen proefperiode die je moet onthouden.</p>
-    </div>
-    <div class="tiers reveal">
-      <div class="tier">
-        <h3>Gratis</h3>
-        <p>AES-256-versleuteling op het apparaat · Face ID en een privécode · Tot 2,5 GB en 5 albums · Stealthcamera, tags en zoeken</p>
-      </div>
-      <div class="tier">
-        <h3>Pro</h3>
-        <p>Onbeperkte opslag en albums · Bescherming tegen schermafbeeldingen en opnames · Lokkluis en noodwissing · Versleutelde iCloud-back-up en sloten per album · Wifi-overdracht, locatievergrendeling, vermomd icoon · Alles uit Gratis, ontgrendeld</p>
-      </div>
-    </div>
-    <p class="pricing-more reveal"><a href="/nl/pro">Bekijk precies wat elke Pro-functie doet →</a></p>
-    <div class="pricing-cta reveal">
-      <a class="appstore-badge" href="#" aria-label="Download Privaro on the App Store">
-        <img src="/appstore-badge-white.svg" alt="Download on the App Store" />
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <h1>Houd privéfoto’s en -video’s privé.</h1>
+      <p class="lead">Privaro is een kluis voor je iPhone. Wat je erin zet, wordt op de telefoon zelf versleuteld en gaat alleen open met Face ID of de eigen code van Privaro. Geen account, en er wordt niets geüpload.</p>
+      <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="Download Privaro in de App Store">
+        <picture>
+          <source srcset="/appstore-badge-white.svg" media="(prefers-color-scheme: dark)" />
+          <img src="/appstore-badge.svg" alt="Download Privaro in de App Store" />
+        </picture>
       </a>
-      <p class="fineprint">App Store-link binnenkort</p>
+      <p class="hero-meta">Gratis · iOS 17.6 of nieuwer · Pro is een eenmalige aankoop</p>
+    </div>
+    <div class="hero-phone">
+      <div class="phone"><img src="/shots/shot-lock.jpg" width="700" height="1521" alt="Het vergrendelscherm van Privaro, klaar voor Face ID" /></div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer>
+<section class="news">
   <div class="wrap">
-    <div class="row">
-      <div class="cols">
-        <div class="col">
-          <h4>Product</h4>
-          <a href="/nl/pro">Pro-functies</a>
-        </div>
-        <div class="col">
-          <h4>Juridisch</h4>
-          <a href="/privacy">Privacybeleid</a>
-          <a href="/terms">Gebruiksvoorwaarden</a>
-        </div>
-        <div class="col">
-          <h4>Ondersteuning</h4>
-          <a href="mailto:erdincdubu@icloud.com">Contact</a>
-        </div>
+    <p><span class="news-label">Nieuw</span> Geen limiet meer voor bestandsgrootte. Voeg video’s van elke lengte toe, ze spelen meteen af.</p>
+  </div>
+</section>
+
+<section class="features">
+  <div class="wrap">
+    <div class="feature">
+      <div class="phone"><img src="/shots/shot-vault.jpg" width="700" height="1521" alt="De kluis: foto’s in een raster, per maand" loading="lazy" /></div>
+      <div class="feature-text">
+        <h2>Net als je fotobibliotheek</h2>
+        <p>Foto’s en video’s staan in een vertrouwd raster, per maand. Maak albums, voeg bijschriften en tags toe, markeer favorieten en zoek, zonder dat er iets de kluis verlaat.</p>
       </div>
     </div>
-    <div class="legal">© <span id="year">2026</span> Privaro. Alle rechten voorbehouden.</div>
+    <div class="feature">
+      <div class="phone"><img src="/shots/shot-privacy.jpg" width="700" height="1521" alt="Instellingen voor privacymodus: Thuis, Onderweg en Reis" loading="lazy" /></div>
+      <div class="feature-text">
+        <h2>Strenger als het moet</h2>
+        <p>Met de privacymodi bepaal je hoe voorzichtig Privaro is. Thuis deel je zoals altijd. Onderweg vraagt het je code voordat er iets de kluis verlaat. Op reis kan er niets uit.</p>
+      </div>
+    </div>
+    <div class="feature">
+      <div class="phone"><img src="/shots/shot-albums.jpg" width="700" height="1521" alt="Albums in Privaro" loading="lazy" /></div>
+      <div class="feature-text">
+        <h2>Albums die dicht blijven</h2>
+        <p>Orden alles in albums en mappen. Met Pro geef je een album een eigen wachtwoord, zodat het op slot blijft, ook als de kluis open is.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="also">
+  <div class="wrap">
+    <h2>En nog een paar dingen</h2>
+    <ul class="also-list">
+      <li><h3>Vergrendelt zichzelf</h3><p>Ga naar een andere app en de kluis gaat achter je dicht. Terugkomen kan alleen met Face ID of je code.</p></li>
+      <li><h3>Elke bestandsgrootte</h3><p>Voeg foto’s en video’s van elke grootte toe. Lange video’s beginnen meteen.</p></li>
+      <li><h3>Stealthcamera</h3><p>Maak foto’s en video’s direct in de kluis, zodat ze nooit in je filmrol belanden.</p></li>
+      <li><h3>Metadatabescherming</h3><p>Kies wat er meegaat als je een foto deelt: alles, zonder locatie of helemaal niets.</p></li>
+      <li><h3>Gevoelige foto’s vinden</h3><p>Privaro bekijkt de foto’s die je kiest op je eigen telefoon op dingen als identiteitsbewijzen, passen en documenten, en biedt aan ze naar de kluis te verplaatsen.</p></li>
+      <li><h3>Lokkluis <span class="pro-tag">Pro</span></h3><p>Een tweede code opent een aparte kluis met onschuldige foto’s, voor als iemand je ooit dwingt hem te openen.</p></li>
+      <li><h3>Versleutelde back-up <span class="pro-tag">Pro</span></h3><p>Maak een back-up in je eigen iCloud, eerst versleuteld op je telefoon. Terugzetten is altijd gratis.</p></li>
+      <li><h3>Inbraakfoto’s <span class="pro-tag">Pro</span></h3><p>Voert iemand de verkeerde code in, dan kan Privaro ongemerkt een foto van diegene maken.</p></li>
+      <li><h3>Vermomd icoon <span class="pro-tag">Pro</span></h3><p>Laat Privaro er op je beginscherm uitzien als een rekenmachine of notitie-app.</p></li>
+    </ul>
+    <p class="more"><a href="/nl/pro">Alles wat Pro toevoegt →</a></p>
+  </div>
+</section>
+
+<section class="pricing">
+  <div class="wrap">
+    <h2>Gratis, met een eenmalige upgrade</h2>
+    <p class="section-lead">De gratis versie heeft geen advertenties en geen tijdslimiet. Pro heft de limieten op en voegt extra bescherming toe. Je betaalt één keer en het werkt op al je apparaten met je Apple-account.</p>
+    <div class="plans">
+      <div class="plan">
+        <h3>Gratis</h3>
+        <p class="plan-price">€ 0</p>
+        <ul>
+          <li>Versleuteling, Face ID en code</li>
+          <li>Tot 2,5 GB en 5 albums</li>
+          <li>Privacymodi en metadatabescherming</li>
+          <li>Stealthcamera, tags en zoeken</li>
+        </ul>
+      </div>
+      <div class="plan plan-pro">
+        <h3>Pro</h3>
+        <p class="plan-price">€11.99 <span>eenmalig</span></p>
+        <ul>
+          <li>Onbeperkte opslag en albums</li>
+          <li>Lokkluis en noodwissing</li>
+          <li>Versleutelde iCloud-back-up</li>
+          <li>Bescherming tegen schermafbeeldingen en opnames</li>
+          <li>Inbraakfoto’s en albumwachtwoorden</li>
+          <li>Wifi-overdracht, locatievergrendeling, vermomd icoon</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>Vragen</h2>
+    <details><summary>Kan iemand anders mijn foto’s zien?</summary><p>Nee. Ze worden op je iPhone versleuteld met een sleutel die daar blijft. Er is geen Privaro-account en geen server met je foto’s, dus er valt voor niemand iets te zien, ook niet voor ons.</p></details>
+    <details><summary>Wat als ik mijn code vergeet?</summary><p>Bij het instellen van Privaro krijg je een herstelsleutel. Bewaar die goed: daarmee stel je een nieuwe code in. Zonder code of herstelsleutel kan de kluis niet open, ook niet door ons.</p></details>
+    <details><summary>Wat gebeurt er als ik mijn telefoon kwijtraak?</summary><p>Had je de versleutelde iCloud-back-up (Pro) aan, dan zet je de kluis met je code terug op je nieuwe iPhone. Terugzetten is gratis. Zonder back-up blijven de foto’s op de oude telefoon op slot.</p></details>
+    <details><summary>Is er een limiet voor de grootte van video’s?</summary><p>Niet per bestand. Elke grootte werkt zolang je iPhone ruimte heeft. De gratis versie bewaart tot 2,5 GB in totaal, Pro heeft geen limiet.</p></details>
+    <details><summary>Heb je een internetverbinding nodig?</summary><p>Nee. Je kluis werkt volledig offline, en je foto’s gaan nooit online tenzij je de iCloud-back-up aanzet.</p></details>
+    <details><summary>Is Pro een abonnement?</summary><p>Nee. Pro is een eenmalige betaling van € 11,99. Er wordt niets verlengd en er valt niets op te zeggen.</p></details>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-brand">
+      <img src="/logo.png" width="22" height="22" alt="" />
+      <span>Een privé, versleutelde foto- en videokluis voor de iPhone.</span>
+    </div>
+    <nav class="foot-links">
+      <a href="/nl/pro">Pro-functies</a>
+      <a href="/nl/privacy">Privacybeleid</a>
+      <a href="/nl/terms">Gebruiksvoorwaarden</a>
+      <a href="mailto:erdincdubu@icloud.com">Contact</a>
+    </nav>
+    <p class="foot-legal">© <span id="year">2026</span> Privaro. Alle rechten voorbehouden.</p>
   </div>
 </footer>
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
-</script>
-
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

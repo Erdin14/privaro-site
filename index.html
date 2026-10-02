@@ -3,8 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Privaro: Your photos and videos, for your eyes only</title>
-<meta name="description" content="Privaro is a private, encrypted photo and video vault for iPhone. Everything is encrypted on your device. No account, no servers, no tracking." />
+<title>Privaro: a private photo and video vault for iPhone</title>
+<meta name="description" content="Privaro keeps your private photos and videos encrypted on your iPhone, behind Face ID and a passcode of its own. No account, nothing uploaded." />
+<meta name="apple-itunes-app" content="app-id=6783131829" />
+<meta name="color-scheme" content="light dark" />
 <link rel="alternate" hreflang="en" href="https://privaro-site.vercel.app/" />
 <link rel="alternate" hreflang="es" href="https://privaro-site.vercel.app/es" />
 <link rel="alternate" hreflang="fr" href="https://privaro-site.vercel.app/fr" />
@@ -15,181 +17,160 @@
 <link rel="alternate" hreflang="ko" href="https://privaro-site.vercel.app/ko" />
 <link rel="alternate" hreflang="nl" href="https://privaro-site.vercel.app/nl" />
 <link rel="alternate" hreflang="x-default" href="https://privaro-site.vercel.app/" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="/logo.png" />
+<link rel="apple-touch-icon" href="/logo.png" />
 <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
 
-<!-- HERO -->
-<section class="hero">
+<header class="site-head">
   <div class="wrap">
-    <header class="site-head">
-      <a class="brand" href="#top">
-        <img class="applogo" src="/logo.png" width="26" height="26" alt="" />
-        Privaro
-      </a>
-      <span class="head-div" aria-hidden="true"></span>
-      <nav class="headlinks">
-        <a href="/privacy">Privacy</a>
-        <a href="/terms">Terms</a>
-      </nav>
-      <span class="head-div" aria-hidden="true"></span>
+    <a class="brand" href="/">
+      <img src="/logo.png" width="28" height="28" alt="" />
+      Privaro
+    </a>
+    <span class="head-divider" aria-hidden="true"></span>
+    <nav class="site-nav">
+      <a href="/pro">Pro</a>
+      <a href="/privacy">Privacy</a>
       <details class="lang"><summary aria-label="Language"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>English</span></summary><div class="lang-menu"><a href="/" class="active">English</a><a href="/es">Español</a><a href="/fr">Français</a><a href="/de">Deutsch</a><a href="/it">Italiano</a><a href="/pt-br">Português</a><a href="/zh">简体中文</a><a href="/ko">한국어</a><a href="/nl">Nederlands</a></div></details>
-    </header>
-
-    <div class="hero-grid">
-      <div class="reveal">
-        <span class="eyebrow">on-device encryption</span>
-        <h1>Your photos and videos,<br /><span class="hl">for your eyes only.</span></h1>
-        <p class="lead">A private, encrypted vault for iPhone. Everything is locked behind strong encryption, right on your device. No account, no servers, no one but you.</p>
-        <a class="appstore-badge" href="#" aria-label="Download Privaro on the App Store">
-          <img src="/appstore-badge-white.svg" alt="Download on the App Store" />
-        </a>
-        <p class="fineprint">free to start · iOS 17.6 or later · Pro is a one-time purchase</p>
-      </div>
-
-      <aside class="proof reveal" aria-label="What it takes to break in">
-        <div class="proof-title">To break in, someone would have to:</div>
-        <ul class="proof-list">
-          <li><span class="n">01</span><span class="t">Physically hold your iPhone.</span></li>
-          <li><span class="n">02</span><span class="t">Bypass your phone's Face ID and passcode.</span></li>
-          <li><span class="n">03</span><span class="t">Bypass Privaro's separate passcode.</span></li>
-          <li><span class="n">04</span><span class="t">Brute-force the AES-256 encryption.</span></li>
-        </ul>
-        <div class="proof-foot">≈ 10<sup>50</sup> years at one trillion guesses per second.</div>
-      </aside>
-    </div>
+      <a class="nav-get" href="https://apps.apple.com/app/id6783131829">Get the app</a>
+    </nav>
   </div>
-</section>
+</header>
 
-<!-- SCREENSHOTS -->
-<section class="section showcase">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">the app</span>
-      <h2>Looks like Photos. Locked like a vault.</h2>
-      <p>A familiar, fast gallery for the things you'd rather keep to yourself. Browse, organize and favorite, all behind your own lock.</p>
-    </div>
-    <div class="shots">
-      <figure class="shot reveal">
-        <div class="device"><img src="/shots/shot-albums.jpg" width="700" height="1521" alt="Privaro albums, with smart albums and your own albums" loading="lazy" /></div>
-        <figcaption class="cap">albums</figcaption>
-      </figure>
-      <figure class="shot reveal">
-        <div class="device"><img src="/shots/shot-vault.jpg" width="700" height="1521" alt="The Privaro vault, showing photos in a grid by month" loading="lazy" /></div>
-        <figcaption class="cap">the vault</figcaption>
-      </figure>
-      <figure class="shot reveal">
-        <div class="device"><img src="/shots/shot-pro.jpg" width="700" height="1521" alt="Privaro Pro, listing the upgrade features and pricing" loading="lazy" /></div>
-        <figcaption class="cap">privaro pro</figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
+<main>
 
-<!-- FEATURES -->
-<section class="section">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <h2>Built like a vault.</h2>
-      <p>Every layer runs on your iPhone. Nothing to hack remotely, because there's nothing out there to reach.</p>
-    </div>
-    <dl class="ledger">
-      <div class="ledger-row reveal">
-        <dt>On-device encryption</dt>
-        <dd>Every photo, video and album is encrypted with AES-256 on your iPhone. The key never leaves your device.</dd>
-      </div>
-      <div class="ledger-row reveal">
-        <dt>Face ID and passcode</dt>
-        <dd>Unlock with Face ID or a private passcode separate from your phone's. It locks the moment you leave.</dd>
-      </div>
-      <div class="ledger-row reveal">
-        <dt>Decoy vault</dt>
-        <dd>A second passcode opens a believable decoy vault, so a passcode under pressure never reveals the real one.</dd>
-      </div>
-      <div class="ledger-row reveal">
-        <dt>Encrypted iCloud backup</dt>
-        <dd>Optionally back up to your own iCloud, encrypted before it leaves your device. Even we can't read it.</dd>
-      </div>
-      <div class="ledger-row reveal">
-        <dt>Hidden from screenshots</dt>
-        <dd>Your vault is shielded from screenshots, screen recording and AirPlay, so nothing slips out by accident.</dd>
-      </div>
-      <div class="ledger-row reveal">
-        <dt>Stealth camera</dt>
-        <dd>Capture photos and videos straight into the vault, so they never touch your regular camera roll.</dd>
-      </div>
-    </dl>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section class="section">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <h2>One payment. That's the whole model.</h2>
-      <p>No account, no subscription, nothing to cancel. Privaro is free to use; Pro unlocks everything, once, on every device signed in to your Apple Account.</p>
-    </div>
-    <div class="price-line reveal">
-      <div class="price-figure">
-        <span class="price-amount">€11.99</span>
-        <span class="price-once">once</span>
-      </div>
-      <p class="price-note">Buy once, keep it. No renewal, no trial to forget about.</p>
-    </div>
-    <div class="tiers reveal">
-      <div class="tier">
-        <h3>Free</h3>
-        <p>AES-256 on-device encryption · Face ID and a private passcode · Up to 2.5 GB and 5 albums · Stealth camera, tags and search</p>
-      </div>
-      <div class="tier">
-        <h3>Pro</h3>
-        <p>Unlimited storage and albums · Screenshot and recording protection · Decoy vault and duress wipe · Encrypted iCloud backup and per-album locks · Wi-Fi transfer, location lock, disguise icon · Everything in Free, unlocked</p>
-      </div>
-    </div>
-    <p class="pricing-more reveal"><a href="/pro">See exactly what each Pro feature does →</a></p>
-    <div class="pricing-cta reveal">
-      <a class="appstore-badge" href="#" aria-label="Download Privaro on the App Store">
-        <img src="/appstore-badge-white.svg" alt="Download on the App Store" />
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <h1>Keep private photos and videos private.</h1>
+      <p class="lead">Privaro is a vault for your iPhone. What you put in it is encrypted on the phone itself and only opens with Face ID or Privaro’s own passcode. There’s no account, and nothing is uploaded.</p>
+      <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="Download Privaro on the App Store">
+        <picture>
+          <source srcset="/appstore-badge-white.svg" media="(prefers-color-scheme: dark)" />
+          <img src="/appstore-badge.svg" alt="Download Privaro on the App Store" />
+        </picture>
       </a>
-      <p class="fineprint">app store link coming soon</p>
+      <p class="hero-meta">Free · iOS 17.6 or later · Pro is a one-time purchase</p>
+    </div>
+    <div class="hero-phone">
+      <div class="phone"><img src="/shots/shot-lock.jpg" width="700" height="1521" alt="Privaro’s lock screen, ready for Face ID" /></div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer>
+<section class="news">
   <div class="wrap">
-    <div class="row">
-      <div class="cols">
-        <div class="col">
-          <h4>Product</h4>
-          <a href="/pro">Pro features</a>
-        </div>
-        <div class="col">
-          <h4>Legal</h4>
-          <a href="/privacy">Privacy Policy</a>
-          <a href="/terms">Terms of Use</a>
-        </div>
-        <div class="col">
-          <h4>Support</h4>
-          <a href="mailto:erdincdubu@icloud.com">Contact</a>
-        </div>
+    <p><span class="news-label">New</span> No more file size limit. Add videos of any length, and they start playing right away.</p>
+  </div>
+</section>
+
+<section class="features">
+  <div class="wrap">
+    <div class="feature">
+      <div class="phone"><img src="/shots/shot-vault.jpg" width="700" height="1521" alt="The vault: photos in a grid, sorted by month" loading="lazy" /></div>
+      <div class="feature-text">
+        <h2>Looks like your photo library</h2>
+        <p>Photos and videos sit in a familiar grid, sorted by month. Make albums, add captions and tags, mark favorites and search, all without anything leaving the vault.</p>
       </div>
     </div>
-    <div class="legal">© <span id="year">2026</span> Privaro. All rights reserved.</div>
+    <div class="feature">
+      <div class="phone"><img src="/shots/shot-privacy.jpg" width="700" height="1521" alt="Privacy Mode settings: Home, Away and Travel" loading="lazy" /></div>
+      <div class="feature-text">
+        <h2>Stricter when you need it</h2>
+        <p>Privacy Modes change how careful Privaro is. At home, share as usual. Away, it asks for your passcode before anything leaves the vault. On a trip, nothing can leave at all.</p>
+      </div>
+    </div>
+    <div class="feature">
+      <div class="phone"><img src="/shots/shot-albums.jpg" width="700" height="1521" alt="Albums in Privaro" loading="lazy" /></div>
+      <div class="feature-text">
+        <h2>Albums that stay shut</h2>
+        <p>Sort everything into albums and folders. With Pro, give an album its own password, so it stays locked even while the vault is open.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="also">
+  <div class="wrap">
+    <h2>And a few more things</h2>
+    <ul class="also-list">
+      <li><h3>Locks itself</h3><p>Switch to another app and the vault closes behind you. Getting back in takes Face ID or your passcode.</p></li>
+      <li><h3>Any file size</h3><p>Add photos and videos of any size. Long videos start playing straight away.</p></li>
+      <li><h3>Stealth camera</h3><p>Take photos and videos straight into the vault, so they never end up in your camera roll.</p></li>
+      <li><h3>Metadata protection</h3><p>Choose what goes along when you share a photo: everything, no location, or nothing at all.</p></li>
+      <li><h3>Find sensitive photos</h3><p>Privaro can check the photos you pick for things like IDs, cards and documents, right on your phone, and offer to move them into the vault.</p></li>
+      <li><h3>Decoy vault <span class="pro-tag">Pro</span></h3><p>A second passcode opens a separate vault with harmless photos, in case you’re ever pushed to unlock it.</p></li>
+      <li><h3>Encrypted backup <span class="pro-tag">Pro</span></h3><p>Back up to your own iCloud, encrypted on your phone first. Restoring is always free.</p></li>
+      <li><h3>Break-in photos <span class="pro-tag">Pro</span></h3><p>If someone enters the wrong passcode, Privaro can quietly take their picture.</p></li>
+      <li><h3>Disguised icon <span class="pro-tag">Pro</span></h3><p>Make Privaro look like a calculator or notes app on your Home Screen.</p></li>
+    </ul>
+    <p class="more"><a href="/pro">Everything Pro adds →</a></p>
+  </div>
+</section>
+
+<section class="pricing">
+  <div class="wrap">
+    <h2>Free, with a one-time upgrade</h2>
+    <p class="section-lead">The free version has no ads and no time limit. Pro lifts the limits and adds extra protection. You pay once, and it works on every device with your Apple Account.</p>
+    <div class="plans">
+      <div class="plan">
+        <h3>Free</h3>
+        <p class="plan-price">€0</p>
+        <ul>
+          <li>Encryption, Face ID and passcode</li>
+          <li>Up to 2.5 GB and 5 albums</li>
+          <li>Privacy Modes and metadata protection</li>
+          <li>Stealth camera, tags and search</li>
+        </ul>
+      </div>
+      <div class="plan plan-pro">
+        <h3>Pro</h3>
+        <p class="plan-price">€11.99 <span>once</span></p>
+        <ul>
+          <li>Unlimited storage and albums</li>
+          <li>Decoy vault and duress wipe</li>
+          <li>Encrypted iCloud backup</li>
+          <li>Screenshot and recording protection</li>
+          <li>Break-in photos and album passwords</li>
+          <li>Wi-Fi transfer, location lock, disguise icon</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>Questions</h2>
+    <details><summary>Can anyone else see my photos?</summary><p>No. They’re encrypted on your iPhone with a key that stays on it. There’s no Privaro account and no server holding your photos, so there’s nothing for anyone to look at, us included.</p></details>
+    <details><summary>What if I forget my passcode?</summary><p>When you set up Privaro you get a recovery key. Keep it somewhere safe: it lets you set a new passcode. Without the passcode or the recovery key, the vault can’t be opened, not even by us.</p></details>
+    <details><summary>What happens if I lose my phone?</summary><p>If you turned on encrypted iCloud backup (Pro), you can restore the vault on your new iPhone with your passcode. Restoring is free. Without a backup, the photos stay locked on the old phone.</p></details>
+    <details><summary>Is there a limit on video size?</summary><p>Not per file. Any size works as long as your iPhone has room. The free version holds up to 2.5 GB in total, and Pro has no limit.</p></details>
+    <details><summary>Does it need an internet connection?</summary><p>No. Your vault works completely offline, and your photos never go online unless you turn on iCloud backup.</p></details>
+    <details><summary>Is Pro a subscription?</summary><p>No. Pro is a single payment of €11.99. Nothing renews and there’s nothing to cancel.</p></details>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-brand">
+      <img src="/logo.png" width="22" height="22" alt="" />
+      <span>A private, encrypted photo and video vault for iPhone.</span>
+    </div>
+    <nav class="foot-links">
+      <a href="/pro">Pro features</a>
+      <a href="/privacy">Privacy Policy</a>
+      <a href="/terms">Terms of Use</a>
+      <a href="mailto:erdincdubu@icloud.com">Contact</a>
+    </nav>
+    <p class="foot-legal">© <span id="year">2026</span> Privaro. All rights reserved.</p>
   </div>
 </footer>
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
-</script>
-
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

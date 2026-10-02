@@ -88,6 +88,8 @@ def main():
             html = html.replace("{{SWITCHER}}", switcher_block(page, code, label))
             html = html.replace("{{HOME_URL}}", page_url("index", code))
             html = html.replace("{{PRO_URL}}", page_url("pro", code))
+            html = html.replace("{{PRIVACY_URL}}", page_url("privacy", code))
+            html = html.replace("{{TERMS_URL}}", page_url("terms", code))
             for key, vals in strings.items():
                 html = html.replace("{{" + key + "}}", vals.get(code, vals["en"]))
             if "{{" in html:

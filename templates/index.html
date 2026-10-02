@@ -5,182 +5,163 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>{{meta_title_home}}</title>
 <meta name="description" content="{{meta_desc_home}}" />
+<meta name="apple-itunes-app" content="app-id=6783131829" />
+<meta name="color-scheme" content="light dark" />
 {{HREFLANG}}
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="/logo.png" />
+<link rel="apple-touch-icon" href="/logo.png" />
 <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
 
-<!-- HERO -->
-<section class="hero">
+<header class="site-head">
   <div class="wrap">
-    <header class="site-head">
-      <a class="brand" href="#top">
-        <img class="applogo" src="/logo.png" width="26" height="26" alt="" />
-        Privaro
-      </a>
-      <span class="head-div" aria-hidden="true"></span>
-      <nav class="headlinks">
-        <a href="/privacy">{{nav_privacy}}</a>
-        <a href="/terms">{{nav_terms}}</a>
-      </nav>
-      <span class="head-div" aria-hidden="true"></span>
+    <a class="brand" href="{{HOME_URL}}">
+      <img src="/logo.png" width="28" height="28" alt="" />
+      Privaro
+    </a>
+    <span class="head-divider" aria-hidden="true"></span>
+    <nav class="site-nav">
+      <a href="{{PRO_URL}}">{{nav_pro}}</a>
+      <a href="{{PRIVACY_URL}}">{{nav_privacy}}</a>
       {{SWITCHER}}
-    </header>
-
-    <div class="hero-grid">
-      <div class="reveal">
-        <span class="eyebrow">{{hero_eyebrow}}</span>
-        <h1>{{hero_h1_line1}}<br /><span class="hl">{{hero_h1_line2}}</span></h1>
-        <p class="lead">{{hero_lead}}</p>
-        <a class="appstore-badge" href="#" aria-label="Download Privaro on the App Store">
-          <img src="/appstore-badge-white.svg" alt="Download on the App Store" />
-        </a>
-        <p class="fineprint">{{hero_fineprint}}</p>
-      </div>
-
-      <aside class="proof reveal" aria-label="What it takes to break in">
-        <div class="proof-title">{{proof_title}}</div>
-        <ul class="proof-list">
-          <li><span class="n">01</span><span class="t">{{proof_1}}</span></li>
-          <li><span class="n">02</span><span class="t">{{proof_2}}</span></li>
-          <li><span class="n">03</span><span class="t">{{proof_3}}</span></li>
-          <li><span class="n">04</span><span class="t">{{proof_4}}</span></li>
-        </ul>
-        <div class="proof-foot">≈ 10<sup>50</sup> {{proof_foot}}</div>
-      </aside>
-    </div>
+      <a class="nav-get" href="https://apps.apple.com/app/id6783131829">{{nav_download}}</a>
+    </nav>
   </div>
-</section>
+</header>
 
-<!-- SCREENSHOTS -->
-<section class="section showcase">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">{{showcase_eyebrow}}</span>
-      <h2>{{showcase_h2}}</h2>
-      <p>{{showcase_p}}</p>
-    </div>
-    <div class="shots">
-      <figure class="shot reveal">
-        <div class="device"><img src="/shots/shot-albums.jpg" width="700" height="1521" alt="Privaro albums, with smart albums and your own albums" loading="lazy" /></div>
-        <figcaption class="cap">{{cap_albums}}</figcaption>
-      </figure>
-      <figure class="shot reveal">
-        <div class="device"><img src="/shots/shot-vault.jpg" width="700" height="1521" alt="The Privaro vault, showing photos in a grid by month" loading="lazy" /></div>
-        <figcaption class="cap">{{cap_vault}}</figcaption>
-      </figure>
-      <figure class="shot reveal">
-        <div class="device"><img src="/shots/shot-pro.jpg" width="700" height="1521" alt="Privaro Pro, listing the upgrade features and pricing" loading="lazy" /></div>
-        <figcaption class="cap">{{cap_pro}}</figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
+<main>
 
-<!-- FEATURES -->
-<section class="section">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <h2>{{feat_h2}}</h2>
-      <p>{{feat_p}}</p>
-    </div>
-    <dl class="ledger">
-      <div class="ledger-row reveal">
-        <dt>{{feat1_t}}</dt>
-        <dd>{{feat1_d}}</dd>
-      </div>
-      <div class="ledger-row reveal">
-        <dt>{{feat2_t}}</dt>
-        <dd>{{feat2_d}}</dd>
-      </div>
-      <div class="ledger-row reveal">
-        <dt>{{feat3_t}}</dt>
-        <dd>{{feat3_d}}</dd>
-      </div>
-      <div class="ledger-row reveal">
-        <dt>{{feat4_t}}</dt>
-        <dd>{{feat4_d}}</dd>
-      </div>
-      <div class="ledger-row reveal">
-        <dt>{{feat5_t}}</dt>
-        <dd>{{feat5_d}}</dd>
-      </div>
-      <div class="ledger-row reveal">
-        <dt>{{feat6_t}}</dt>
-        <dd>{{feat6_d}}</dd>
-      </div>
-    </dl>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section class="section">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <h2>{{pricing_h2}}</h2>
-      <p>{{pricing_p}}</p>
-    </div>
-    <div class="price-line reveal">
-      <div class="price-figure">
-        <span class="price-amount">€11.99</span>
-        <span class="price-once">{{plan_pro_period}}</span>
-      </div>
-      <p class="price-note">{{plan_pro_note}}</p>
-    </div>
-    <div class="tiers reveal">
-      <div class="tier">
-        <h3>{{plan_free_name}}</h3>
-        <p>{{free_1}} · {{free_2}} · {{free_3}} · {{free_4}}</p>
-      </div>
-      <div class="tier">
-        <h3>{{plan_pro_name}}</h3>
-        <p>{{pro_2}} · {{pro_3}} · {{pro_4}} · {{pro_5}} · {{pro_6}} · {{pro_1}}</p>
-      </div>
-    </div>
-    <p class="pricing-more reveal"><a href="{{PRO_URL}}">{{pricing_more}}</a></p>
-    <div class="pricing-cta reveal">
-      <a class="appstore-badge" href="#" aria-label="Download Privaro on the App Store">
-        <img src="/appstore-badge-white.svg" alt="Download on the App Store" />
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <h1>{{hero_h1}}</h1>
+      <p class="lead">{{hero_lead}}</p>
+      <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="{{badge_label}}">
+        <picture>
+          <source srcset="/appstore-badge-white.svg" media="(prefers-color-scheme: dark)" />
+          <img src="/appstore-badge.svg" alt="{{badge_label}}" />
+        </picture>
       </a>
-      <p class="fineprint">{{appstore_soon}}</p>
+      <p class="hero-meta">{{hero_meta}}</p>
+    </div>
+    <div class="hero-phone">
+      <div class="phone"><img src="/shots/shot-lock.jpg" width="700" height="1521" alt="{{alt_lock}}" /></div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer>
+<section class="news">
   <div class="wrap">
-    <div class="row">
-      <div class="cols">
-        <div class="col">
-          <h4>{{footer_product}}</h4>
-          <a href="{{PRO_URL}}">{{footer_pro}}</a>
-        </div>
-        <div class="col">
-          <h4>{{footer_legal}}</h4>
-          <a href="/privacy">{{footer_privacy}}</a>
-          <a href="/terms">{{footer_terms}}</a>
-        </div>
-        <div class="col">
-          <h4>{{footer_support}}</h4>
-          <a href="mailto:erdincdubu@icloud.com">{{footer_contact}}</a>
-        </div>
+    <p><span class="news-label">{{new_label}}</span> {{new_text}}</p>
+  </div>
+</section>
+
+<section class="features">
+  <div class="wrap">
+    <div class="feature">
+      <div class="phone"><img src="/shots/shot-vault.jpg" width="700" height="1521" alt="{{alt_vault}}" loading="lazy" /></div>
+      <div class="feature-text">
+        <h2>{{f1_t}}</h2>
+        <p>{{f1_d}}</p>
       </div>
     </div>
-    <div class="legal">© <span id="year">2026</span> Privaro. {{footer_rights}}</div>
+    <div class="feature">
+      <div class="phone"><img src="/shots/shot-privacy.jpg" width="700" height="1521" alt="{{alt_privacy}}" loading="lazy" /></div>
+      <div class="feature-text">
+        <h2>{{f2_t}}</h2>
+        <p>{{f2_d}}</p>
+      </div>
+    </div>
+    <div class="feature">
+      <div class="phone"><img src="/shots/shot-albums.jpg" width="700" height="1521" alt="{{alt_albums}}" loading="lazy" /></div>
+      <div class="feature-text">
+        <h2>{{f3_t}}</h2>
+        <p>{{f3_d}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="also">
+  <div class="wrap">
+    <h2>{{also_h2}}</h2>
+    <ul class="also-list">
+      <li><h3>{{also_lock_t}}</h3><p>{{also_lock_d}}</p></li>
+      <li><h3>{{also_size_t}}</h3><p>{{also_size_d}}</p></li>
+      <li><h3>{{also_camera_t}}</h3><p>{{also_camera_d}}</p></li>
+      <li><h3>{{also_meta_t}}</h3><p>{{also_meta_d}}</p></li>
+      <li><h3>{{also_scan_t}}</h3><p>{{also_scan_d}}</p></li>
+      <li><h3>{{also_decoy_t}} <span class="pro-tag">Pro</span></h3><p>{{also_decoy_d}}</p></li>
+      <li><h3>{{also_backup_t}} <span class="pro-tag">Pro</span></h3><p>{{also_backup_d}}</p></li>
+      <li><h3>{{also_breakin_t}} <span class="pro-tag">Pro</span></h3><p>{{also_breakin_d}}</p></li>
+      <li><h3>{{also_disguise_t}} <span class="pro-tag">Pro</span></h3><p>{{also_disguise_d}}</p></li>
+    </ul>
+    <p class="more"><a href="{{PRO_URL}}">{{also_more}}</a></p>
+  </div>
+</section>
+
+<section class="pricing">
+  <div class="wrap">
+    <h2>{{pricing_h2}}</h2>
+    <p class="section-lead">{{pricing_p}}</p>
+    <div class="plans">
+      <div class="plan">
+        <h3>{{plan_free_name}}</h3>
+        <p class="plan-price">{{plan_free_price}}</p>
+        <ul>
+          <li>{{free_li1}}</li>
+          <li>{{free_li2}}</li>
+          <li>{{free_li3}}</li>
+          <li>{{free_li4}}</li>
+        </ul>
+      </div>
+      <div class="plan plan-pro">
+        <h3>{{plan_pro_name}}</h3>
+        <p class="plan-price">€11.99 <span>{{plan_pro_once}}</span></p>
+        <ul>
+          <li>{{pro_li1}}</li>
+          <li>{{pro_li2}}</li>
+          <li>{{pro_li3}}</li>
+          <li>{{pro_li4}}</li>
+          <li>{{pro_li5}}</li>
+          <li>{{pro_li6}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>{{faq_h2}}</h2>
+    <details><summary>{{faq1_q}}</summary><p>{{faq1_a}}</p></details>
+    <details><summary>{{faq2_q}}</summary><p>{{faq2_a}}</p></details>
+    <details><summary>{{faq3_q}}</summary><p>{{faq3_a}}</p></details>
+    <details><summary>{{faq4_q}}</summary><p>{{faq4_a}}</p></details>
+    <details><summary>{{faq5_q}}</summary><p>{{faq5_a}}</p></details>
+    <details><summary>{{faq6_q}}</summary><p>{{faq6_a}}</p></details>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-brand">
+      <img src="/logo.png" width="22" height="22" alt="" />
+      <span>{{footer_tagline}}</span>
+    </div>
+    <nav class="foot-links">
+      <a href="{{PRO_URL}}">{{footer_pro}}</a>
+      <a href="{{PRIVACY_URL}}">{{footer_privacy}}</a>
+      <a href="{{TERMS_URL}}">{{footer_terms}}</a>
+      <a href="mailto:erdincdubu@icloud.com">{{footer_contact}}</a>
+    </nav>
+    <p class="foot-legal">© <span id="year">2026</span> Privaro. {{footer_rights}}</p>
   </div>
 </footer>
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
-</script>
-
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

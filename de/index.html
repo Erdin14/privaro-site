@@ -3,8 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Privaro: Deine Fotos und Videos, nur für deine Augen</title>
-<meta name="description" content="Privaro ist ein privater, verschlüsselter Tresor für Fotos und Videos auf dem iPhone. Alles wird auf deinem Gerät verschlüsselt. Kein Konto, keine Server, kein Tracking." />
+<title>Privaro: ein privater Tresor für deine Fotos und Videos auf dem iPhone</title>
+<meta name="description" content="Privaro speichert deine privaten Fotos und Videos verschlüsselt auf deinem iPhone, geschützt durch Face ID und einen eigenen Code. Kein Konto, kein Upload." />
+<meta name="apple-itunes-app" content="app-id=6783131829" />
+<meta name="color-scheme" content="light dark" />
 <link rel="alternate" hreflang="en" href="https://privaro-site.vercel.app/" />
 <link rel="alternate" hreflang="es" href="https://privaro-site.vercel.app/es" />
 <link rel="alternate" hreflang="fr" href="https://privaro-site.vercel.app/fr" />
@@ -15,181 +17,160 @@
 <link rel="alternate" hreflang="ko" href="https://privaro-site.vercel.app/ko" />
 <link rel="alternate" hreflang="nl" href="https://privaro-site.vercel.app/nl" />
 <link rel="alternate" hreflang="x-default" href="https://privaro-site.vercel.app/" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="/logo.png" />
+<link rel="apple-touch-icon" href="/logo.png" />
 <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
 
-<!-- HERO -->
-<section class="hero">
+<header class="site-head">
   <div class="wrap">
-    <header class="site-head">
-      <a class="brand" href="#top">
-        <img class="applogo" src="/logo.png" width="26" height="26" alt="" />
-        Privaro
-      </a>
-      <span class="head-div" aria-hidden="true"></span>
-      <nav class="headlinks">
-        <a href="/privacy">Datenschutz</a>
-        <a href="/terms">Nutzungsbedingungen</a>
-      </nav>
-      <span class="head-div" aria-hidden="true"></span>
+    <a class="brand" href="/de">
+      <img src="/logo.png" width="28" height="28" alt="" />
+      Privaro
+    </a>
+    <span class="head-divider" aria-hidden="true"></span>
+    <nav class="site-nav">
+      <a href="/de/pro">Pro</a>
+      <a href="/de/privacy">Datenschutz</a>
       <details class="lang"><summary aria-label="Sprache"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>Deutsch</span></summary><div class="lang-menu"><a href="/">English</a><a href="/es">Español</a><a href="/fr">Français</a><a href="/de" class="active">Deutsch</a><a href="/it">Italiano</a><a href="/pt-br">Português</a><a href="/zh">简体中文</a><a href="/ko">한국어</a><a href="/nl">Nederlands</a></div></details>
-    </header>
-
-    <div class="hero-grid">
-      <div class="reveal">
-        <span class="eyebrow">verschlüsselung auf dem gerät</span>
-        <h1>Deine Fotos und Videos,<br /><span class="hl">nur für deine Augen.</span></h1>
-        <p class="lead">Ein privater, verschlüsselter Tresor für das iPhone. Alles ist durch starke Verschlüsselung geschützt, direkt auf deinem Gerät. Kein Konto, keine Server, niemand außer dir.</p>
-        <a class="appstore-badge" href="#" aria-label="Download Privaro on the App Store">
-          <img src="/appstore-badge-white.svg" alt="Download on the App Store" />
-        </a>
-        <p class="fineprint">kostenlos starten · iOS 17.6 oder neuer · Pro ist ein einmaliger Kauf</p>
-      </div>
-
-      <aside class="proof reveal" aria-label="What it takes to break in">
-        <div class="proof-title">Um Zugriff zu erhalten, müsste jemand:</div>
-        <ul class="proof-list">
-          <li><span class="n">01</span><span class="t">Dein iPhone physisch in den Händen halten.</span></li>
-          <li><span class="n">02</span><span class="t">Face ID und Code des Telefons umgehen.</span></li>
-          <li><span class="n">03</span><span class="t">Den separaten Code von Privaro umgehen.</span></li>
-          <li><span class="n">04</span><span class="t">Die AES-256-Verschlüsselung per Brute Force knacken.</span></li>
-        </ul>
-        <div class="proof-foot">≈ 10<sup>50</sup> Jahre bei einer Billion Versuchen pro Sekunde.</div>
-      </aside>
-    </div>
+      <a class="nav-get" href="https://apps.apple.com/app/id6783131829">Laden</a>
+    </nav>
   </div>
-</section>
+</header>
 
-<!-- SCREENSHOTS -->
-<section class="section showcase">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">die app</span>
-      <h2>Sieht aus wie Fotos. Verschlossen wie ein Tresor.</h2>
-      <p>Eine vertraute, schnelle Galerie für das, was du lieber für dich behältst. Durchsehen, ordnen und favorisieren, alles hinter deinem eigenen Schloss.</p>
-    </div>
-    <div class="shots">
-      <figure class="shot reveal">
-        <div class="device"><img src="/shots/shot-albums.jpg" width="700" height="1521" alt="Privaro albums, with smart albums and your own albums" loading="lazy" /></div>
-        <figcaption class="cap">alben</figcaption>
-      </figure>
-      <figure class="shot reveal">
-        <div class="device"><img src="/shots/shot-vault.jpg" width="700" height="1521" alt="The Privaro vault, showing photos in a grid by month" loading="lazy" /></div>
-        <figcaption class="cap">der tresor</figcaption>
-      </figure>
-      <figure class="shot reveal">
-        <div class="device"><img src="/shots/shot-pro.jpg" width="700" height="1521" alt="Privaro Pro, listing the upgrade features and pricing" loading="lazy" /></div>
-        <figcaption class="cap">privaro pro</figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
+<main>
 
-<!-- FEATURES -->
-<section class="section">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <h2>Gebaut wie ein Tresor.</h2>
-      <p>Jede Ebene läuft auf deinem iPhone. Nichts aus der Ferne zu hacken, weil es da draußen nichts zu erreichen gibt.</p>
-    </div>
-    <dl class="ledger">
-      <div class="ledger-row reveal">
-        <dt>Verschlüsselung auf dem Gerät</dt>
-        <dd>Jedes Foto, Video und Album wird mit AES-256 auf deinem iPhone verschlüsselt. Der Schlüssel verlässt dein Gerät nie.</dd>
-      </div>
-      <div class="ledger-row reveal">
-        <dt>Face ID und Code</dt>
-        <dd>Entsperre mit Face ID oder einem privaten Code, getrennt von dem deines Telefons. Es sperrt, sobald du es verlässt.</dd>
-      </div>
-      <div class="ledger-row reveal">
-        <dt>Schein-Tresor</dt>
-        <dd>Ein zweiter Code öffnet einen glaubwürdigen Schein-Tresor, damit ein unter Druck verratener Code nie den echten preisgibt.</dd>
-      </div>
-      <div class="ledger-row reveal">
-        <dt>Verschlüsseltes iCloud-Backup</dt>
-        <dd>Sichere optional in deinem eigenen iCloud, verschlüsselt, bevor es dein Gerät verlässt. Selbst wir können es nicht lesen.</dd>
-      </div>
-      <div class="ledger-row reveal">
-        <dt>Vor Screenshots geschützt</dt>
-        <dd>Dein Tresor ist vor Screenshots, Bildschirmaufnahme und AirPlay geschützt, damit nichts versehentlich nach außen gelangt.</dd>
-      </div>
-      <div class="ledger-row reveal">
-        <dt>Tarnkamera</dt>
-        <dd>Nimm Fotos und Videos direkt im Tresor auf, sodass sie nie in deinen normalen Aufnahmen landen.</dd>
-      </div>
-    </dl>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section class="section">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <h2>Eine Zahlung. Das ist das ganze Modell.</h2>
-      <p>Kein Account, kein Abo, nichts zu kündigen. Privaro ist kostenlos nutzbar; Pro schaltet einmalig alles frei – auf allen Geräten, die bei deinem Apple Account angemeldet sind.</p>
-    </div>
-    <div class="price-line reveal">
-      <div class="price-figure">
-        <span class="price-amount">€11.99</span>
-        <span class="price-once">einmalig</span>
-      </div>
-      <p class="price-note">Einmal kaufen, behalten. Keine Verlängerung, kein Testzeitraum, den man vergisst.</p>
-    </div>
-    <div class="tiers reveal">
-      <div class="tier">
-        <h3>Kostenlos</h3>
-        <p>AES-256-Verschlüsselung auf dem Gerät · Face ID und ein privater Code · Bis zu 2,5 GB und 5 Alben · Tarnkamera, Tags und Suche</p>
-      </div>
-      <div class="tier">
-        <h3>Pro</h3>
-        <p>Unbegrenzter Speicher und Alben · Schutz vor Screenshots und Aufnahmen · Schein-Tresor und Notlöschung · Verschlüsseltes iCloud-Backup und Sperren pro Album · WLAN-Übertragung, Standortsperre, getarntes Symbol · Alles aus Free, freigeschaltet</p>
-      </div>
-    </div>
-    <p class="pricing-more reveal"><a href="/de/pro">Sieh genau, was jede Pro-Funktion macht →</a></p>
-    <div class="pricing-cta reveal">
-      <a class="appstore-badge" href="#" aria-label="Download Privaro on the App Store">
-        <img src="/appstore-badge-white.svg" alt="Download on the App Store" />
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <h1>Private Fotos und Videos bleiben privat.</h1>
+      <p class="lead">Privaro ist ein Tresor für dein iPhone. Was du hineinlegst, wird direkt auf dem Gerät verschlüsselt und öffnet sich nur mit Face ID oder dem eigenen Code von Privaro. Kein Konto, kein Upload.</p>
+      <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="Privaro im App Store laden">
+        <picture>
+          <source srcset="/appstore-badge-white.svg" media="(prefers-color-scheme: dark)" />
+          <img src="/appstore-badge.svg" alt="Privaro im App Store laden" />
+        </picture>
       </a>
-      <p class="fineprint">App-Store-Link folgt in Kürze</p>
+      <p class="hero-meta">Kostenlos · iOS 17.6 oder neuer · Pro ist ein Einmalkauf</p>
+    </div>
+    <div class="hero-phone">
+      <div class="phone"><img src="/shots/shot-lock.jpg" width="700" height="1521" alt="Der Sperrbildschirm von Privaro, bereit für Face ID" /></div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer>
+<section class="news">
   <div class="wrap">
-    <div class="row">
-      <div class="cols">
-        <div class="col">
-          <h4>Produkt</h4>
-          <a href="/de/pro">Pro-Funktionen</a>
-        </div>
-        <div class="col">
-          <h4>Rechtliches</h4>
-          <a href="/privacy">Datenschutzerklärung</a>
-          <a href="/terms">Nutzungsbedingungen</a>
-        </div>
-        <div class="col">
-          <h4>Support</h4>
-          <a href="mailto:erdincdubu@icloud.com">Kontakt</a>
-        </div>
+    <p><span class="news-label">Neu</span> Keine Größenbeschränkung mehr. Füge Videos jeder Länge hinzu, sie starten sofort.</p>
+  </div>
+</section>
+
+<section class="features">
+  <div class="wrap">
+    <div class="feature">
+      <div class="phone"><img src="/shots/shot-vault.jpg" width="700" height="1521" alt="Der Tresor: Fotos im Raster, nach Monat sortiert" loading="lazy" /></div>
+      <div class="feature-text">
+        <h2>Wie deine Fotomediathek</h2>
+        <p>Fotos und Videos liegen in einem vertrauten Raster, nach Monat sortiert. Erstelle Alben, füge Beschreibungen und Tags hinzu, markiere Favoriten und suche, ohne dass etwas den Tresor verlässt.</p>
       </div>
     </div>
-    <div class="legal">© <span id="year">2026</span> Privaro. Alle Rechte vorbehalten.</div>
+    <div class="feature">
+      <div class="phone"><img src="/shots/shot-privacy.jpg" width="700" height="1521" alt="Einstellungen für den Datenschutzmodus: Zuhause, Unterwegs und Reise" loading="lazy" /></div>
+      <div class="feature-text">
+        <h2>Strenger, wenn es nötig ist</h2>
+        <p>Mit den Datenschutzmodi legst du fest, wie vorsichtig Privaro ist. Zuhause teilst du wie gewohnt. Unterwegs fragt es nach deinem Code, bevor etwas den Tresor verlässt. Auf Reisen kann gar nichts heraus.</p>
+      </div>
+    </div>
+    <div class="feature">
+      <div class="phone"><img src="/shots/shot-albums.jpg" width="700" height="1521" alt="Alben in Privaro" loading="lazy" /></div>
+      <div class="feature-text">
+        <h2>Alben, die zu bleiben</h2>
+        <p>Ordne alles in Alben und Ordner. Mit Pro bekommt ein Album ein eigenes Passwort und bleibt gesperrt, selbst wenn der Tresor offen ist.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="also">
+  <div class="wrap">
+    <h2>Und noch ein paar Dinge</h2>
+    <ul class="also-list">
+      <li><h3>Sperrt sich selbst</h3><p>Wechselst du in eine andere App, schließt sich der Tresor hinter dir. Zurück geht es nur mit Face ID oder deinem Code.</p></li>
+      <li><h3>Jede Dateigröße</h3><p>Füge Fotos und Videos jeder Größe hinzu. Auch lange Videos starten sofort.</p></li>
+      <li><h3>Tarnkamera</h3><p>Nimm Fotos und Videos direkt im Tresor auf, sodass sie nie in deinen Aufnahmen landen.</p></li>
+      <li><h3>Metadatenschutz</h3><p>Bestimme, was beim Teilen mitgeht: alles, alles ohne Ort oder gar nichts.</p></li>
+      <li><h3>Sensible Fotos finden</h3><p>Privaro prüft ausgewählte Fotos direkt auf deinem iPhone auf Ausweise, Karten und Dokumente und bietet an, sie in den Tresor zu verschieben.</p></li>
+      <li><h3>Schein-Tresor <span class="pro-tag">Pro</span></h3><p>Ein zweiter Code öffnet einen separaten Tresor mit harmlosen Fotos, falls dich jemand zum Entsperren drängt.</p></li>
+      <li><h3>Verschlüsseltes Backup <span class="pro-tag">Pro</span></h3><p>Sichere in deine eigene iCloud, vorher auf dem iPhone verschlüsselt. Wiederherstellen ist immer kostenlos.</p></li>
+      <li><h3>Einbruchsfotos <span class="pro-tag">Pro</span></h3><p>Gibt jemand einen falschen Code ein, kann Privaro unbemerkt ein Foto von ihm machen.</p></li>
+      <li><h3>Getarntes Symbol <span class="pro-tag">Pro</span></h3><p>Lass Privaro auf dem Home-Bildschirm wie einen Rechner oder eine Notizen-App aussehen.</p></li>
+    </ul>
+    <p class="more"><a href="/de/pro">Alles, was Pro mitbringt →</a></p>
+  </div>
+</section>
+
+<section class="pricing">
+  <div class="wrap">
+    <h2>Kostenlos, mit einem einmaligen Upgrade</h2>
+    <p class="section-lead">Die kostenlose Version hat keine Werbung und kein Zeitlimit. Pro hebt die Grenzen auf und bringt zusätzlichen Schutz. Du zahlst einmal, und es gilt auf allen Geräten mit deinem Apple Account.</p>
+    <div class="plans">
+      <div class="plan">
+        <h3>Kostenlos</h3>
+        <p class="plan-price">0 €</p>
+        <ul>
+          <li>Verschlüsselung, Face ID und Code</li>
+          <li>Bis zu 2,5 GB und 5 Alben</li>
+          <li>Datenschutzmodi und Metadatenschutz</li>
+          <li>Tarnkamera, Tags und Suche</li>
+        </ul>
+      </div>
+      <div class="plan plan-pro">
+        <h3>Pro</h3>
+        <p class="plan-price">€11.99 <span>einmalig</span></p>
+        <ul>
+          <li>Unbegrenzter Speicher und Alben</li>
+          <li>Schein-Tresor und Notlöschung</li>
+          <li>Verschlüsseltes iCloud-Backup</li>
+          <li>Schutz vor Screenshots und Aufnahmen</li>
+          <li>Einbruchsfotos und Album-Passwörter</li>
+          <li>WLAN-Übertragung, Standortsperre, getarntes Symbol</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>Fragen</h2>
+    <details><summary>Kann jemand anderes meine Fotos sehen?</summary><p>Nein. Sie werden auf deinem iPhone mit einem Schlüssel verschlüsselt, der dort bleibt. Es gibt kein Privaro-Konto und keinen Server mit deinen Fotos, also gibt es für niemanden etwas zu sehen, auch nicht für uns.</p></details>
+    <details><summary>Was ist, wenn ich meinen Code vergesse?</summary><p>Bei der Einrichtung bekommst du einen Wiederherstellungsschlüssel. Bewahre ihn sicher auf: Damit kannst du einen neuen Code festlegen. Ohne Code oder Schlüssel lässt sich der Tresor nicht öffnen, auch nicht von uns.</p></details>
+    <details><summary>Was passiert, wenn ich mein iPhone verliere?</summary><p>Hast du das verschlüsselte iCloud-Backup (Pro) aktiviert, stellst du den Tresor mit deinem Code auf dem neuen iPhone wieder her. Das Wiederherstellen ist kostenlos. Ohne Backup bleiben die Fotos auf dem alten Gerät verschlossen.</p></details>
+    <details><summary>Gibt es eine Größenbeschränkung für Videos?</summary><p>Nicht pro Datei. Jede Größe geht, solange dein iPhone Platz hat. Die kostenlose Version fasst insgesamt bis zu 2,5 GB, Pro hat keine Grenze.</p></details>
+    <details><summary>Braucht es eine Internetverbindung?</summary><p>Nein. Dein Tresor funktioniert komplett offline, und deine Fotos gehen nie ins Internet, außer du aktivierst das iCloud-Backup.</p></details>
+    <details><summary>Ist Pro ein Abo?</summary><p>Nein. Pro ist eine einmalige Zahlung von 11,99 €. Nichts verlängert sich, nichts muss gekündigt werden.</p></details>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-brand">
+      <img src="/logo.png" width="22" height="22" alt="" />
+      <span>Ein privater, verschlüsselter Foto- und Video-Tresor für das iPhone.</span>
+    </div>
+    <nav class="foot-links">
+      <a href="/de/pro">Pro-Funktionen</a>
+      <a href="/de/privacy">Datenschutzerklärung</a>
+      <a href="/de/terms">Nutzungsbedingungen</a>
+      <a href="mailto:erdincdubu@icloud.com">Kontakt</a>
+    </nav>
+    <p class="foot-legal">© <span id="year">2026</span> Privaro. Alle Rechte vorbehalten.</p>
   </div>
 </footer>
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
-</script>
-
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

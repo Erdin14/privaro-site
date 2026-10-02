@@ -32,17 +32,6 @@
     "ko": "홈으로 돌아가기",
     "nl": "Terug naar home"
   },
-  "pro_eyebrow": {
-    "en": "pro features",
-    "es": "funciones pro",
-    "fr": "fonctions pro",
-    "de": "pro-funktionen",
-    "it": "funzioni pro",
-    "pt-BR": "recursos pro",
-    "zh-Hans": "pro 功能",
-    "ko": "pro 기능",
-    "nl": "pro-functies"
-  },
   "pro_h1": {
     "en": "Everything Pro unlocks.",
     "es": "Todo lo que desbloquea Pro.",
@@ -341,14 +330,36 @@
     "nl": "Gratis of Pro, de basis verandert nooit:"
   },
   "pro_callout_rest": {
-    "en": "everything is encrypted on your device with AES-256, there is no account, and no one but you can open your vault. Pro from $9.99 per year or $14.99 once, with a 1-week free trial.",
-    "es": "todo se cifra en tu dispositivo con AES-256, no hay cuenta y nadie más que tú puede abrir tu caja fuerte. Pro desde $9.99 al año o $14.99 una vez, con prueba gratis de 1 semana.",
-    "fr": "tout est chiffré sur votre appareil avec AES-256, il n'y a pas de compte et personne d'autre que vous ne peut ouvrir votre coffre-fort. Pro à partir de $9.99 par an ou $14.99 une fois, avec un essai gratuit d'une semaine.",
-    "de": "alles wird auf deinem Gerät mit AES-256 verschlüsselt, es gibt kein Konto und niemand außer dir kann deinen Tresor öffnen. Pro ab $9.99 pro Jahr oder $14.99 einmalig, mit 1 Woche kostenloser Testphase.",
-    "it": "tutto è cifrato sul tuo dispositivo con AES-256, non c'è alcun account e nessuno tranne te può aprire la cassaforte. Pro da $9.99 all'anno o $14.99 una tantum, con 1 settimana di prova gratuita.",
-    "pt-BR": "tudo é criptografado no seu dispositivo com AES-256, não há conta e ninguém além de você pode abrir o seu cofre. Pro a partir de $9.99 por ano ou $14.99 uma vez, com 1 semana de teste grátis.",
-    "zh-Hans": "一切都在你的设备上用 AES-256 加密，没有账户，除你之外无人能打开你的保险库。Pro 每年 $9.99 起，或一次性 $14.99，含 1 周免费试用。",
-    "ko": "모든 것이 기기에서 AES-256으로 암호화되고, 계정이 없으며, 당신 외에는 누구도 보관함을 열 수 없습니다. Pro는 연 $9.99부터 또는 1회 $14.99이며, 1주 무료 체험이 제공됩니다.",
-    "nl": "alles wordt op je apparaat versleuteld met AES-256, er is geen account en niemand behalve jij kan je kluis openen. Pro vanaf $9.99 per jaar of $14.99 eenmalig, met 1 week gratis proberen."
+    "en": "everything is encrypted on your device with AES-256, there is no account, and no one but you can open your vault. Pro is a one-time purchase of €11.99, with nothing to renew.",
+    "es": "todo se cifra en tu dispositivo con AES-256, no hay cuenta y nadie más que tú puede abrir tu caja fuerte. Pro es un pago único de 11,99 €, sin nada que renovar.",
+    "fr": "tout est chiffré sur votre appareil avec AES-256, il n’y a pas de compte, et personne d’autre que vous ne peut ouvrir votre coffre. Pro est un achat unique de 11,99 €, sans renouvellement.",
+    "de": "Alles wird auf deinem Gerät mit AES-256 verschlüsselt, es gibt kein Konto, und niemand außer dir kann deinen Tresor öffnen. Pro ist ein Einmalkauf für 11,99 €, ohne Verlängerung.",
+    "it": "tutto è cifrato sul tuo dispositivo con AES-256, non c’è un account e nessuno tranne te può aprire la tua cassaforte. Pro è un acquisto unico da 11,99 €, senza rinnovi.",
+    "pt-BR": "tudo é criptografado no seu aparelho com AES-256, não há conta e ninguém além de você pode abrir o seu cofre. O Pro é uma compra única de € 11,99, sem renovação.",
+    "zh-Hans": "所有内容都在你的设备上用 AES-256 加密，无需账户，除了你没人能打开保险库。Pro 是一次性购买，价格 €11.99，无需续费。",
+    "ko": "모든 것이 기기에서 AES-256으로 암호화되고, 계정이 없으며, 나 외에는 아무도 보관함을 열 수 없습니다. Pro는 €11.99 일회성 구매이며 갱신되지 않습니다.",
+    "nl": "alles wordt op je apparaat versleuteld met AES-256, er is geen account en niemand behalve jij kan je kluis openen. Pro is een eenmalige aankoop van € 11,99, zonder verlenging."
+  },
+  "prof13_t": {
+    "en": "Secure share",
+    "es": "Compartir seguro",
+    "fr": "Partage sécurisé",
+    "de": "Sicheres Teilen",
+    "it": "Condivisione sicura",
+    "pt-BR": "Compartilhamento seguro",
+    "zh-Hans": "安全分享",
+    "ko": "보안 공유",
+    "nl": "Veilig delen"
+  },
+  "prof13_d": {
+    "en": "Send photos or videos to another Privaro user as an encrypted file that only opens with a passphrase you choose. Nothing passes through us on the way.",
+    "es": "Envía fotos o vídeos a otra persona que use Privaro como un archivo cifrado que solo se abre con la frase de contraseña que elijas. Nada pasa por nosotros.",
+    "fr": "Envoyez des photos ou des vidéos à un autre utilisateur de Privaro sous forme de fichier chiffré, qui ne s’ouvre qu’avec la phrase secrète de votre choix. Rien ne passe par nous.",
+    "de": "Schicke Fotos oder Videos an andere Privaro-Nutzer als verschlüsselte Datei, die sich nur mit einer von dir gewählten Passphrase öffnen lässt. Nichts läuft dabei über uns.",
+    "it": "Invia foto o video a un altro utente di Privaro come file cifrato, che si apre solo con una passphrase scelta da te. Nulla passa da noi.",
+    "pt-BR": "Envie fotos ou vídeos para outra pessoa que usa o Privaro como um arquivo criptografado que só abre com uma frase secreta escolhida por você. Nada passa por nós.",
+    "zh-Hans": "把照片或视频作为加密文件发给另一位 Privaro 用户，只有用你设定的口令才能打开。传输过程中不会经过我们。",
+    "ko": "사진이나 동영상을 다른 Privaro 사용자에게 암호화된 파일로 보내세요. 내가 정한 암호 문구로만 열립니다. 중간에 저희를 거치지 않습니다.",
+    "nl": "Stuur foto’s of video’s naar een andere Privaro-gebruiker als versleuteld bestand dat alleen opengaat met een wachtzin die jij kiest. Er gaat niets via ons."
   }
 }

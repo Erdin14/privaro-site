@@ -3,8 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Privaro : vos photos et vidéos, pour vos yeux seulement</title>
-<meta name="description" content="Privaro est un coffre-fort privé et chiffré pour vos photos et vidéos sur iPhone. Tout est chiffré sur votre appareil. Sans compte, sans serveur, sans suivi." />
+<title>Privaro : un coffre-fort privé pour vos photos et vidéos sur iPhone</title>
+<meta name="description" content="Privaro garde vos photos et vidéos privées chiffrées sur votre iPhone, protégées par Face ID et un code qui lui est propre. Sans compte, rien n’est envoyé." />
+<meta name="apple-itunes-app" content="app-id=6783131829" />
+<meta name="color-scheme" content="light dark" />
 <link rel="alternate" hreflang="en" href="https://privaro-site.vercel.app/" />
 <link rel="alternate" hreflang="es" href="https://privaro-site.vercel.app/es" />
 <link rel="alternate" hreflang="fr" href="https://privaro-site.vercel.app/fr" />
@@ -15,181 +17,160 @@
 <link rel="alternate" hreflang="ko" href="https://privaro-site.vercel.app/ko" />
 <link rel="alternate" hreflang="nl" href="https://privaro-site.vercel.app/nl" />
 <link rel="alternate" hreflang="x-default" href="https://privaro-site.vercel.app/" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="/logo.png" />
+<link rel="apple-touch-icon" href="/logo.png" />
 <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
 
-<!-- HERO -->
-<section class="hero">
+<header class="site-head">
   <div class="wrap">
-    <header class="site-head">
-      <a class="brand" href="#top">
-        <img class="applogo" src="/logo.png" width="26" height="26" alt="" />
-        Privaro
-      </a>
-      <span class="head-div" aria-hidden="true"></span>
-      <nav class="headlinks">
-        <a href="/privacy">Confidentialité</a>
-        <a href="/terms">Conditions</a>
-      </nav>
-      <span class="head-div" aria-hidden="true"></span>
+    <a class="brand" href="/fr">
+      <img src="/logo.png" width="28" height="28" alt="" />
+      Privaro
+    </a>
+    <span class="head-divider" aria-hidden="true"></span>
+    <nav class="site-nav">
+      <a href="/fr/pro">Pro</a>
+      <a href="/fr/privacy">Confidentialité</a>
       <details class="lang"><summary aria-label="Langue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>Français</span></summary><div class="lang-menu"><a href="/">English</a><a href="/es">Español</a><a href="/fr" class="active">Français</a><a href="/de">Deutsch</a><a href="/it">Italiano</a><a href="/pt-br">Português</a><a href="/zh">简体中文</a><a href="/ko">한국어</a><a href="/nl">Nederlands</a></div></details>
-    </header>
-
-    <div class="hero-grid">
-      <div class="reveal">
-        <span class="eyebrow">chiffrement sur l'appareil</span>
-        <h1>Vos photos et vidéos,<br /><span class="hl">pour vos yeux seulement.</span></h1>
-        <p class="lead">Un coffre-fort privé et chiffré pour iPhone. Tout est protégé par un chiffrement solide, directement sur votre appareil. Sans compte, sans serveur, personne d'autre que vous.</p>
-        <a class="appstore-badge" href="#" aria-label="Download Privaro on the App Store">
-          <img src="/appstore-badge-white.svg" alt="Download on the App Store" />
-        </a>
-        <p class="fineprint">gratuit au départ · iOS 17.6 ou version ultérieure · Pro est un achat unique</p>
-      </div>
-
-      <aside class="proof reveal" aria-label="What it takes to break in">
-        <div class="proof-title">Pour y accéder, il faudrait :</div>
-        <ul class="proof-list">
-          <li><span class="n">01</span><span class="t">Avoir physiquement votre iPhone.</span></li>
-          <li><span class="n">02</span><span class="t">Contourner le Face ID et le code du téléphone.</span></li>
-          <li><span class="n">03</span><span class="t">Contourner le code distinct de Privaro.</span></li>
-          <li><span class="n">04</span><span class="t">Casser le chiffrement AES-256 par force brute.</span></li>
-        </ul>
-        <div class="proof-foot">≈ 10<sup>50</sup> ans à mille milliards d'essais par seconde.</div>
-      </aside>
-    </div>
+      <a class="nav-get" href="https://apps.apple.com/app/id6783131829">Télécharger</a>
+    </nav>
   </div>
-</section>
+</header>
 
-<!-- SCREENSHOTS -->
-<section class="section showcase">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">l'app</span>
-      <h2>Comme Photos. Verrouillé comme un coffre-fort.</h2>
-      <p>Une galerie rapide et familière pour ce que vous préférez garder pour vous. Parcourez, organisez et ajoutez aux favoris, le tout derrière votre propre verrou.</p>
-    </div>
-    <div class="shots">
-      <figure class="shot reveal">
-        <div class="device"><img src="/shots/shot-albums.jpg" width="700" height="1521" alt="Privaro albums, with smart albums and your own albums" loading="lazy" /></div>
-        <figcaption class="cap">albums</figcaption>
-      </figure>
-      <figure class="shot reveal">
-        <div class="device"><img src="/shots/shot-vault.jpg" width="700" height="1521" alt="The Privaro vault, showing photos in a grid by month" loading="lazy" /></div>
-        <figcaption class="cap">le coffre-fort</figcaption>
-      </figure>
-      <figure class="shot reveal">
-        <div class="device"><img src="/shots/shot-pro.jpg" width="700" height="1521" alt="Privaro Pro, listing the upgrade features and pricing" loading="lazy" /></div>
-        <figcaption class="cap">privaro pro</figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
+<main>
 
-<!-- FEATURES -->
-<section class="section">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <h2>Conçu comme un coffre-fort.</h2>
-      <p>Chaque couche fonctionne sur votre iPhone. Rien à pirater à distance, car il n'y a rien à atteindre ailleurs.</p>
-    </div>
-    <dl class="ledger">
-      <div class="ledger-row reveal">
-        <dt>Chiffrement sur l'appareil</dt>
-        <dd>Chaque photo, vidéo et album est chiffré avec AES-256 sur votre iPhone. La clé ne quitte jamais votre appareil.</dd>
-      </div>
-      <div class="ledger-row reveal">
-        <dt>Face ID et code</dt>
-        <dd>Déverrouillez avec Face ID ou un code privé distinct de celui du téléphone. Il se verrouille dès que vous quittez.</dd>
-      </div>
-      <div class="ledger-row reveal">
-        <dt>Coffre-fort leurre</dt>
-        <dd>Un second code ouvre un coffre-fort leurre crédible, pour qu'un code donné sous la contrainte ne révèle jamais le vrai.</dd>
-      </div>
-      <div class="ledger-row reveal">
-        <dt>Sauvegarde iCloud chiffrée</dt>
-        <dd>Sauvegardez si vous le souhaitez sur votre propre iCloud, chiffrée avant de quitter votre appareil. Même nous ne pouvons pas la lire.</dd>
-      </div>
-      <div class="ledger-row reveal">
-        <dt>Protégé des captures d'écran</dt>
-        <dd>Votre coffre-fort est protégé contre les captures d'écran, l'enregistrement de l'écran et AirPlay, pour que rien ne s'échappe par accident.</dd>
-      </div>
-      <div class="ledger-row reveal">
-        <dt>Appareil photo furtif</dt>
-        <dd>Capturez photos et vidéos directement dans le coffre-fort, pour qu'elles ne passent jamais par votre pellicule habituelle.</dd>
-      </div>
-    </dl>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section class="section">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <h2>Un seul paiement. C’est tout le modèle.</h2>
-      <p>Aucun compte, aucun abonnement, rien à résilier. Privaro est gratuit ; Pro débloque tout, une seule fois, sur tous les appareils liés à votre compte Apple.</p>
-    </div>
-    <div class="price-line reveal">
-      <div class="price-figure">
-        <span class="price-amount">€11.99</span>
-        <span class="price-once">une fois</span>
-      </div>
-      <p class="price-note">Achetez-le une fois, il est à vous. Aucun renouvellement, aucun essai à ne pas oublier.</p>
-    </div>
-    <div class="tiers reveal">
-      <div class="tier">
-        <h3>Gratuit</h3>
-        <p>Chiffrement AES-256 sur l'appareil · Face ID et un code privé · Jusqu'à 2,5 Go et 5 albums · Appareil photo furtif, étiquettes et recherche</p>
-      </div>
-      <div class="tier">
-        <h3>Pro</h3>
-        <p>Stockage et albums illimités · Protection contre les captures et l'enregistrement · Coffre-fort leurre et effacement sous contrainte · Sauvegarde iCloud chiffrée et verrous par album · Transfert Wi-Fi, verrou par lieu, icône déguisée · Tout le gratuit, débloqué</p>
-      </div>
-    </div>
-    <p class="pricing-more reveal"><a href="/fr/pro">Découvrez précisément ce que fait chaque fonction Pro →</a></p>
-    <div class="pricing-cta reveal">
-      <a class="appstore-badge" href="#" aria-label="Download Privaro on the App Store">
-        <img src="/appstore-badge-white.svg" alt="Download on the App Store" />
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <h1>Vos photos et vidéos privées restent privées.</h1>
+      <p class="lead">Privaro est un coffre-fort pour votre iPhone. Ce que vous y placez est chiffré sur le téléphone lui-même et ne s’ouvre qu’avec Face ID ou le code de Privaro. Pas de compte, et rien n’est envoyé.</p>
+      <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="Télécharger Privaro sur l’App Store">
+        <picture>
+          <source srcset="/appstore-badge-white.svg" media="(prefers-color-scheme: dark)" />
+          <img src="/appstore-badge.svg" alt="Télécharger Privaro sur l’App Store" />
+        </picture>
       </a>
-      <p class="fineprint">lien App Store bientôt disponible</p>
+      <p class="hero-meta">Gratuit · iOS 17.6 ou ultérieur · Pro s’achète une seule fois</p>
+    </div>
+    <div class="hero-phone">
+      <div class="phone"><img src="/shots/shot-lock.jpg" width="700" height="1521" alt="L’écran de verrouillage de Privaro, prêt pour Face ID" /></div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer>
+<section class="news">
   <div class="wrap">
-    <div class="row">
-      <div class="cols">
-        <div class="col">
-          <h4>Produit</h4>
-          <a href="/fr/pro">Fonctions Pro</a>
-        </div>
-        <div class="col">
-          <h4>Mentions légales</h4>
-          <a href="/privacy">Politique de confidentialité</a>
-          <a href="/terms">Conditions d'utilisation</a>
-        </div>
-        <div class="col">
-          <h4>Assistance</h4>
-          <a href="mailto:erdincdubu@icloud.com">Contact</a>
-        </div>
+    <p><span class="news-label">Nouveau</span> Plus de limite de taille. Ajoutez des vidéos de n’importe quelle durée, elles se lancent aussitôt.</p>
+  </div>
+</section>
+
+<section class="features">
+  <div class="wrap">
+    <div class="feature">
+      <div class="phone"><img src="/shots/shot-vault.jpg" width="700" height="1521" alt="Le coffre-fort : photos en grille, triées par mois" loading="lazy" /></div>
+      <div class="feature-text">
+        <h2>Comme votre photothèque</h2>
+        <p>Photos et vidéos s’affichent dans une grille familière, triées par mois. Créez des albums, ajoutez légendes et étiquettes, marquez vos favoris et cherchez, sans que rien ne quitte le coffre-fort.</p>
       </div>
     </div>
-    <div class="legal">© <span id="year">2026</span> Privaro. Tous droits réservés.</div>
+    <div class="feature">
+      <div class="phone"><img src="/shots/shot-privacy.jpg" width="700" height="1521" alt="Réglages du mode de confidentialité : Maison, Absent et Voyage" loading="lazy" /></div>
+      <div class="feature-text">
+        <h2>Plus strict quand il le faut</h2>
+        <p>Les modes de confidentialité règlent la prudence de Privaro. À la maison, vous partagez comme d’habitude. En déplacement, votre code est demandé avant que quoi que ce soit ne sorte du coffre. En voyage, rien ne peut en sortir.</p>
+      </div>
+    </div>
+    <div class="feature">
+      <div class="phone"><img src="/shots/shot-albums.jpg" width="700" height="1521" alt="Albums dans Privaro" loading="lazy" /></div>
+      <div class="feature-text">
+        <h2>Des albums qui restent fermés</h2>
+        <p>Rangez tout dans des albums et des dossiers. Avec Pro, donnez à un album son propre mot de passe : il reste verrouillé même quand le coffre est ouvert.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="also">
+  <div class="wrap">
+    <h2>Et encore quelques petites choses</h2>
+    <ul class="also-list">
+      <li><h3>Se verrouille seul</h3><p>Passez à une autre app et le coffre se referme derrière vous. Pour revenir, il faut Face ID ou votre code.</p></li>
+      <li><h3>Toutes les tailles</h3><p>Ajoutez des photos et des vidéos de toute taille. Les longues vidéos démarrent tout de suite.</p></li>
+      <li><h3>Appareil photo furtif</h3><p>Prenez photos et vidéos directement dans le coffre, sans qu’elles passent par votre pellicule.</p></li>
+      <li><h3>Protection des métadonnées</h3><p>Choisissez ce qui accompagne une photo partagée : tout, sans le lieu, ou rien du tout.</p></li>
+      <li><h3>Trouver les photos sensibles</h3><p>Privaro examine, sur votre téléphone, les photos que vous choisissez pour repérer pièces d’identité, cartes et documents, et propose de les placer dans le coffre.</p></li>
+      <li><h3>Coffre-fort leurre <span class="pro-tag">Pro</span></h3><p>Un second code ouvre un autre coffre rempli de photos anodines, au cas où l’on vous forcerait à le déverrouiller.</p></li>
+      <li><h3>Sauvegarde chiffrée <span class="pro-tag">Pro</span></h3><p>Sauvegardez dans votre propre iCloud, après chiffrement sur votre téléphone. La restauration est toujours gratuite.</p></li>
+      <li><h3>Photos d’intrusion <span class="pro-tag">Pro</span></h3><p>Si quelqu’un entre un mauvais code, Privaro peut discrètement le prendre en photo.</p></li>
+      <li><h3>Icône déguisée <span class="pro-tag">Pro</span></h3><p>Faites passer Privaro pour une calculatrice ou une app de notes sur votre écran d’accueil.</p></li>
+    </ul>
+    <p class="more"><a href="/fr/pro">Tout ce qu’apporte Pro →</a></p>
+  </div>
+</section>
+
+<section class="pricing">
+  <div class="wrap">
+    <h2>Gratuit, avec une mise à niveau unique</h2>
+    <p class="section-lead">La version gratuite n’a ni publicité ni limite de durée. Pro lève les limites et ajoute une protection supplémentaire. Vous payez une fois, et c’est valable sur tous les appareils de votre compte Apple.</p>
+    <div class="plans">
+      <div class="plan">
+        <h3>Gratuit</h3>
+        <p class="plan-price">0 €</p>
+        <ul>
+          <li>Chiffrement, Face ID et code</li>
+          <li>Jusqu'à 2,5 Go et 5 albums</li>
+          <li>Modes de confidentialité et protection des métadonnées</li>
+          <li>Appareil photo furtif, étiquettes et recherche</li>
+        </ul>
+      </div>
+      <div class="plan plan-pro">
+        <h3>Pro</h3>
+        <p class="plan-price">€11.99 <span>une fois</span></p>
+        <ul>
+          <li>Stockage et albums illimités</li>
+          <li>Coffre-fort leurre et effacement sous contrainte</li>
+          <li>Sauvegarde iCloud chiffrée</li>
+          <li>Protection contre les captures et l'enregistrement</li>
+          <li>Photos d’intrusion et mots de passe d’album</li>
+          <li>Transfert Wi-Fi, verrou par lieu, icône déguisée</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>Questions</h2>
+    <details><summary>Quelqu’un d’autre peut-il voir mes photos ?</summary><p>Non. Elles sont chiffrées sur votre iPhone avec une clé qui ne le quitte pas. Il n’y a ni compte Privaro ni serveur qui stocke vos photos : personne n’a rien à voir, nous non plus.</p></details>
+    <details><summary>Et si j’oublie mon code ?</summary><p>En configurant Privaro, vous recevez une clé de récupération. Gardez-la en lieu sûr : elle permet de définir un nouveau code. Sans le code ni la clé, le coffre ne peut pas être ouvert, même par nous.</p></details>
+    <details><summary>Que se passe-t-il si je perds mon téléphone ?</summary><p>Si vous avez activé la sauvegarde iCloud chiffrée (Pro), vous pouvez restaurer le coffre sur votre nouvel iPhone avec votre code. La restauration est gratuite. Sans sauvegarde, les photos restent verrouillées sur l’ancien téléphone.</p></details>
+    <details><summary>Y a-t-il une limite de taille pour les vidéos ?</summary><p>Pas par fichier. Toutes les tailles passent tant que votre iPhone a de la place. La version gratuite contient jusqu’à 2,5 Go au total, Pro n’a pas de limite.</p></details>
+    <details><summary>Faut-il une connexion internet ?</summary><p>Non. Le coffre fonctionne entièrement hors ligne, et vos photos ne vont jamais en ligne sauf si vous activez la sauvegarde iCloud.</p></details>
+    <details><summary>Pro est-il un abonnement ?</summary><p>Non. Pro est un paiement unique de 11,99 €. Rien ne se renouvelle, rien à résilier.</p></details>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-brand">
+      <img src="/logo.png" width="22" height="22" alt="" />
+      <span>Un coffre-fort privé et chiffré pour photos et vidéos sur iPhone.</span>
+    </div>
+    <nav class="foot-links">
+      <a href="/fr/pro">Fonctions Pro</a>
+      <a href="/fr/privacy">Politique de confidentialité</a>
+      <a href="/fr/terms">Conditions d'utilisation</a>
+      <a href="mailto:erdincdubu@icloud.com">Contact</a>
+    </nav>
+    <p class="foot-legal">© <span id="year">2026</span> Privaro. Tous droits réservés.</p>
   </div>
 </footer>
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
-</script>
-
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
