@@ -84,6 +84,28 @@
   </figure>
 </section>
 
+<section class="sec wrap grid" id="demo" hidden>
+  <div class="label">
+    <h2>So sieht es verschlüsselt aus</h2>
+    <p>Wähle ein Foto. Dein Browser verschlüsselt es mit AES-256-GCM, demselben Verfahren wie Privaro, und zeigt die verschlüsselten Bytes als Pixel. Das Foto verlässt diese Seite nie.</p>
+  </div>
+  <div class="sec-body demo">
+    <figure>
+      <canvas class="demo-before" width="295" height="640"></canvas>
+      <figcaption>Dein Foto</figcaption>
+    </figure>
+    <figure>
+      <canvas class="demo-after" width="295" height="640" tabindex="0" role="button" aria-label="gedrückt halten zum Entschlüsseln"></canvas>
+      <figcaption><b>Verschlüsselt</b> · gedrückt halten zum Entschlüsseln</figcaption>
+    </figure>
+    <div class="demo-controls">
+      <label class="btn"><input class="demo-file" type="file" accept="image/*" />Foto auswählen</label>
+      <button class="btn demo-rekey" type="button">Neuer Schlüssel</button>
+    </div>
+    <p class="demo-key">Schlüssel, gerade eben in diesem Browser erzeugt: <code></code></p>
+  </div>
+</section>
+
 <section class="sec wrap grid">
   <h2 class="label">Und noch ein paar Dinge</h2>
   <div class="sec-body">
@@ -95,7 +117,7 @@
       <li><span class="num">09</span><div><h3>Schein-Tresor <span class="pro-tag">Pro</span></h3><p>Ein zweiter Code öffnet einen separaten Tresor mit harmlosen Fotos, falls dich jemand zum Entsperren drängt.</p></div></li>
       <li><span class="num">10</span><div><h3>Verschlüsseltes Backup <span class="pro-tag">Pro</span></h3><p>Sichere in deine eigene iCloud, vorher auf dem iPhone verschlüsselt. Wiederherstellen ist immer kostenlos.</p></div></li>
       <li><span class="num">11</span><div><h3>Einbruchsfotos <span class="pro-tag">Pro</span></h3><p>Gibt jemand einen falschen Code ein, kann Privaro unbemerkt ein Foto von ihm machen.</p></div></li>
-      <li><span class="num">12</span><div><h3>Getarntes Symbol <span class="pro-tag">Pro</span></h3><p>Lass Privaro auf dem Home-Bildschirm wie einen Rechner oder eine Notizen-App aussehen.</p></div></li>
+      <li><span class="num">12</span><div><h3>Getarntes Symbol <span class="pro-tag">Pro</span></h3><p>Lass Privaro auf dem Home-Bildschirm wie einen Rechner oder eine Notizen-App aussehen.</p><button class="link-btn disguise" type="button" data-name="Rechner" data-undo="Zurücksetzen" hidden>Probier es in diesem Tab aus</button></div></li>
     </ol>
     <p class="more"><a href="/de/pro">Alles, was Pro mitbringt →</a></p>
   </div>
@@ -163,5 +185,6 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && lang.open) { lang.open = false; lang.querySelector('summary').focus(); }
 });
 </script>
+<script src="/demo.js" defer></script>
 </body>
 </html>

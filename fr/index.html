@@ -84,6 +84,28 @@
   </figure>
 </section>
 
+<section class="sec wrap grid" id="demo" hidden>
+  <div class="label">
+    <h2>Voyez-la chiffrée</h2>
+    <p>Choisissez une photo. Votre navigateur la chiffre avec AES-256-GCM, l’algorithme qu’utilise Privaro, et affiche les octets chiffrés sous forme de pixels. La photo ne quitte jamais cette page.</p>
+  </div>
+  <div class="sec-body demo">
+    <figure>
+      <canvas class="demo-before" width="295" height="640"></canvas>
+      <figcaption>Votre photo</figcaption>
+    </figure>
+    <figure>
+      <canvas class="demo-after" width="295" height="640" tabindex="0" role="button" aria-label="maintenez appuyé pour déchiffrer"></canvas>
+      <figcaption><b>Chiffrée</b> · maintenez appuyé pour déchiffrer</figcaption>
+    </figure>
+    <div class="demo-controls">
+      <label class="btn"><input class="demo-file" type="file" accept="image/*" />Choisir une photo</label>
+      <button class="btn demo-rekey" type="button">Nouvelle clé</button>
+    </div>
+    <p class="demo-key">Clé, créée à l’instant dans ce navigateur : <code></code></p>
+  </div>
+</section>
+
 <section class="sec wrap grid">
   <h2 class="label">Et encore quelques petites choses</h2>
   <div class="sec-body">
@@ -95,7 +117,7 @@
       <li><span class="num">09</span><div><h3>Coffre-fort leurre <span class="pro-tag">Pro</span></h3><p>Un second code ouvre un autre coffre rempli de photos anodines, au cas où l’on vous forcerait à le déverrouiller.</p></div></li>
       <li><span class="num">10</span><div><h3>Sauvegarde chiffrée <span class="pro-tag">Pro</span></h3><p>Sauvegardez dans votre propre iCloud, après chiffrement sur votre téléphone. La restauration est toujours gratuite.</p></div></li>
       <li><span class="num">11</span><div><h3>Photos d’intrusion <span class="pro-tag">Pro</span></h3><p>Si quelqu’un entre un mauvais code, Privaro peut discrètement le prendre en photo.</p></div></li>
-      <li><span class="num">12</span><div><h3>Icône déguisée <span class="pro-tag">Pro</span></h3><p>Faites passer Privaro pour une calculatrice ou une app de notes sur votre écran d’accueil.</p></div></li>
+      <li><span class="num">12</span><div><h3>Icône déguisée <span class="pro-tag">Pro</span></h3><p>Faites passer Privaro pour une calculatrice ou une app de notes sur votre écran d’accueil.</p><button class="link-btn disguise" type="button" data-name="Calculatrice" data-undo="Revenir en arrière" hidden>Essayez sur cet onglet</button></div></li>
     </ol>
     <p class="more"><a href="/fr/pro">Tout ce qu’apporte Pro →</a></p>
   </div>
@@ -163,5 +185,6 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && lang.open) { lang.open = false; lang.querySelector('summary').focus(); }
 });
 </script>
+<script src="/demo.js" defer></script>
 </body>
 </html>

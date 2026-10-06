@@ -56,6 +56,28 @@
   </figure>
 </section>
 
+<section class="sec wrap grid" id="demo" hidden>
+  <div class="label">
+    <h2>{{demo_h2}}</h2>
+    <p>{{demo_p}}</p>
+  </div>
+  <div class="sec-body demo">
+    <figure>
+      <canvas class="demo-before" width="295" height="640"></canvas>
+      <figcaption>{{demo_before}}</figcaption>
+    </figure>
+    <figure>
+      <canvas class="demo-after" width="295" height="640" tabindex="0" role="button" aria-label="{{demo_hold}}"></canvas>
+      <figcaption><b>{{demo_after}}</b> · {{demo_hold}}</figcaption>
+    </figure>
+    <div class="demo-controls">
+      <label class="btn"><input class="demo-file" type="file" accept="image/*" />{{demo_pick}}</label>
+      <button class="btn demo-rekey" type="button">{{demo_rekey}}</button>
+    </div>
+    <p class="demo-key">{{demo_key}} <code></code></p>
+  </div>
+</section>
+
 <section class="sec wrap grid">
   <h2 class="label">{{also_h2}}</h2>
   <div class="sec-body">
@@ -67,7 +89,7 @@
       <li><span class="num">09</span><div><h3>{{also_decoy_t}} <span class="pro-tag">Pro</span></h3><p>{{also_decoy_d}}</p></div></li>
       <li><span class="num">10</span><div><h3>{{also_backup_t}} <span class="pro-tag">Pro</span></h3><p>{{also_backup_d}}</p></div></li>
       <li><span class="num">11</span><div><h3>{{also_breakin_t}} <span class="pro-tag">Pro</span></h3><p>{{also_breakin_d}}</p></div></li>
-      <li><span class="num">12</span><div><h3>{{also_disguise_t}} <span class="pro-tag">Pro</span></h3><p>{{also_disguise_d}}</p></div></li>
+      <li><span class="num">12</span><div><h3>{{also_disguise_t}} <span class="pro-tag">Pro</span></h3><p>{{also_disguise_d}}</p><button class="link-btn disguise" type="button" data-name="{{calc_name}}" data-undo="{{disguise_undo}}" hidden>{{disguise_try}}</button></div></li>
     </ol>
     <p class="more"><a href="{{PRO_URL}}">{{also_more}}</a></p>
   </div>
@@ -117,5 +139,6 @@
 </main>
 
 {{FOOTER}}
+<script src="/demo.js" defer></script>
 </body>
 </html>

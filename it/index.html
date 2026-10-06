@@ -84,6 +84,28 @@
   </figure>
 </section>
 
+<section class="sec wrap grid" id="demo" hidden>
+  <div class="label">
+    <h2>Guardala cifrata</h2>
+    <p>Scegli una foto. Il tuo browser la cifra con AES-256-GCM, lo stesso algoritmo di Privaro, e mostra i byte cifrati come pixel. La foto non lascia mai questa pagina.</p>
+  </div>
+  <div class="sec-body demo">
+    <figure>
+      <canvas class="demo-before" width="295" height="640"></canvas>
+      <figcaption>La tua foto</figcaption>
+    </figure>
+    <figure>
+      <canvas class="demo-after" width="295" height="640" tabindex="0" role="button" aria-label="tieni premuto per decifrare"></canvas>
+      <figcaption><b>Cifrata</b> · tieni premuto per decifrare</figcaption>
+    </figure>
+    <div class="demo-controls">
+      <label class="btn"><input class="demo-file" type="file" accept="image/*" />Scegli una foto</label>
+      <button class="btn demo-rekey" type="button">Nuova chiave</button>
+    </div>
+    <p class="demo-key">Chiave, creata ora in questo browser: <code></code></p>
+  </div>
+</section>
+
 <section class="sec wrap grid">
   <h2 class="label">E qualche altra cosa</h2>
   <div class="sec-body">
@@ -95,7 +117,7 @@
       <li><span class="num">09</span><div><h3>Cassaforte esca <span class="pro-tag">Pro</span></h3><p>Un secondo codice apre un’altra cassaforte con foto innocue, nel caso qualcuno ti costringa a sbloccarla.</p></div></li>
       <li><span class="num">10</span><div><h3>Backup cifrato <span class="pro-tag">Pro</span></h3><p>Fai il backup sul tuo iCloud, cifrato prima sul telefono. Il ripristino è sempre gratuito.</p></div></li>
       <li><span class="num">11</span><div><h3>Foto delle intrusioni <span class="pro-tag">Pro</span></h3><p>Se qualcuno inserisce il codice sbagliato, Privaro può scattargli una foto senza farsi notare.</p></div></li>
-      <li><span class="num">12</span><div><h3>Icona camuffata <span class="pro-tag">Pro</span></h3><p>Fai sembrare Privaro una calcolatrice o un’app di note nella schermata Home.</p></div></li>
+      <li><span class="num">12</span><div><h3>Icona camuffata <span class="pro-tag">Pro</span></h3><p>Fai sembrare Privaro una calcolatrice o un’app di note nella schermata Home.</p><button class="link-btn disguise" type="button" data-name="Calcolatrice" data-undo="Ripristina" hidden>Provalo in questa scheda</button></div></li>
     </ol>
     <p class="more"><a href="/it/pro">Tutto ciò che aggiunge Pro →</a></p>
   </div>
@@ -163,5 +185,6 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && lang.open) { lang.open = false; lang.querySelector('summary').focus(); }
 });
 </script>
+<script src="/demo.js" defer></script>
 </body>
 </html>

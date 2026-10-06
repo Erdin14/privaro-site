@@ -84,6 +84,28 @@
   </figure>
 </section>
 
+<section class="sec wrap grid" id="demo" hidden>
+  <div class="label">
+    <h2>암호화된 모습 보기</h2>
+    <p>사진을 하나 고르세요. 브라우저가 Privaro와 같은 AES-256-GCM 방식으로 암호화하고, 암호화된 바이트를 픽셀로 그려 보여 줍니다. 사진은 이 페이지 밖으로 나가지 않습니다.</p>
+  </div>
+  <div class="sec-body demo">
+    <figure>
+      <canvas class="demo-before" width="295" height="640"></canvas>
+      <figcaption>내 사진</figcaption>
+    </figure>
+    <figure>
+      <canvas class="demo-after" width="295" height="640" tabindex="0" role="button" aria-label="길게 눌러 복호화"></canvas>
+      <figcaption><b>암호화됨</b> · 길게 눌러 복호화</figcaption>
+    </figure>
+    <div class="demo-controls">
+      <label class="btn"><input class="demo-file" type="file" accept="image/*" />사진 선택</label>
+      <button class="btn demo-rekey" type="button">새 키</button>
+    </div>
+    <p class="demo-key">방금 이 브라우저에서 만든 키: <code></code></p>
+  </div>
+</section>
+
 <section class="sec wrap grid">
   <h2 class="label">그리고 몇 가지 더</h2>
   <div class="sec-body">
@@ -95,7 +117,7 @@
       <li><span class="num">09</span><div><h3>미끼 보관함 <span class="pro-tag">Pro</span></h3><p>두 번째 암호를 입력하면 평범한 사진만 있는 다른 보관함이 열려, 누군가 잠금 해제를 강요할 때 대비할 수 있습니다.</p></div></li>
       <li><span class="num">10</span><div><h3>암호화된 백업 <span class="pro-tag">Pro</span></h3><p>내 iCloud에 백업하되, 먼저 기기에서 암호화합니다. 복원은 언제나 무료입니다.</p></div></li>
       <li><span class="num">11</span><div><h3>침입 사진 <span class="pro-tag">Pro</span></h3><p>누군가 암호를 틀리면 Privaro가 조용히 그 사람의 사진을 찍을 수 있습니다.</p></div></li>
-      <li><span class="num">12</span><div><h3>아이콘 위장 <span class="pro-tag">Pro</span></h3><p>홈 화면에서 Privaro를 계산기나 메모 앱처럼 보이게 하세요.</p></div></li>
+      <li><span class="num">12</span><div><h3>아이콘 위장 <span class="pro-tag">Pro</span></h3><p>홈 화면에서 Privaro를 계산기나 메모 앱처럼 보이게 하세요.</p><button class="link-btn disguise" type="button" data-name="계산기" data-undo="되돌리기" hidden>이 탭에서 해 보기</button></div></li>
     </ol>
     <p class="more"><a href="/ko/pro">Pro에 추가되는 모든 기능 →</a></p>
   </div>
@@ -163,5 +185,6 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && lang.open) { lang.open = false; lang.querySelector('summary').focus(); }
 });
 </script>
+<script src="/demo.js" defer></script>
 </body>
 </html>

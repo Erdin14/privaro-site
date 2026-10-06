@@ -84,6 +84,28 @@
   </figure>
 </section>
 
+<section class="sec wrap grid" id="demo" hidden>
+  <div class="label">
+    <h2>Zo ziet het er versleuteld uit</h2>
+    <p>Kies een foto. Je browser versleutelt hem met AES-256-GCM, hetzelfde algoritme als Privaro, en tekent de versleutelde bytes als pixels. De foto verlaat deze pagina nooit.</p>
+  </div>
+  <div class="sec-body demo">
+    <figure>
+      <canvas class="demo-before" width="295" height="640"></canvas>
+      <figcaption>Je foto</figcaption>
+    </figure>
+    <figure>
+      <canvas class="demo-after" width="295" height="640" tabindex="0" role="button" aria-label="ingedrukt houden om te ontsleutelen"></canvas>
+      <figcaption><b>Versleuteld</b> · ingedrukt houden om te ontsleutelen</figcaption>
+    </figure>
+    <div class="demo-controls">
+      <label class="btn"><input class="demo-file" type="file" accept="image/*" />Kies een foto</label>
+      <button class="btn demo-rekey" type="button">Nieuwe sleutel</button>
+    </div>
+    <p class="demo-key">Sleutel, zojuist in deze browser gemaakt: <code></code></p>
+  </div>
+</section>
+
 <section class="sec wrap grid">
   <h2 class="label">En nog een paar dingen</h2>
   <div class="sec-body">
@@ -95,7 +117,7 @@
       <li><span class="num">09</span><div><h3>Lokkluis <span class="pro-tag">Pro</span></h3><p>Een tweede code opent een aparte kluis met onschuldige foto’s, voor als iemand je ooit dwingt hem te openen.</p></div></li>
       <li><span class="num">10</span><div><h3>Versleutelde back-up <span class="pro-tag">Pro</span></h3><p>Maak een back-up in je eigen iCloud, eerst versleuteld op je telefoon. Terugzetten is altijd gratis.</p></div></li>
       <li><span class="num">11</span><div><h3>Inbraakfoto’s <span class="pro-tag">Pro</span></h3><p>Voert iemand de verkeerde code in, dan kan Privaro ongemerkt een foto van diegene maken.</p></div></li>
-      <li><span class="num">12</span><div><h3>Vermomd icoon <span class="pro-tag">Pro</span></h3><p>Laat Privaro er op je beginscherm uitzien als een rekenmachine of notitie-app.</p></div></li>
+      <li><span class="num">12</span><div><h3>Vermomd icoon <span class="pro-tag">Pro</span></h3><p>Laat Privaro er op je beginscherm uitzien als een rekenmachine of notitie-app.</p><button class="link-btn disguise" type="button" data-name="Rekenmachine" data-undo="Terugzetten" hidden>Probeer het in dit tabblad</button></div></li>
     </ol>
     <p class="more"><a href="/nl/pro">Alles wat Pro toevoegt →</a></p>
   </div>
@@ -163,5 +185,6 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && lang.open) { lang.open = false; lang.querySelector('summary').focus(); }
 });
 </script>
+<script src="/demo.js" defer></script>
 </body>
 </html>

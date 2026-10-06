@@ -31,6 +31,7 @@ body > main { flex: 1; }
 a { color: var(--blue); text-decoration: none; }
 a:hover { text-decoration: underline; text-underline-offset: 3px; }
 img { max-width: 100%; display: block; }
+[hidden] { display: none !important; }
 :focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
 h1, h2, h3 { font-weight: 600; }
 /* Korean wraps between words, not inside them. */
@@ -103,6 +104,27 @@ h1, h2, h3 { font-weight: 600; }
 .pro-tag { font-size: 12px; font-weight: 600; color: var(--blue); margin-left: 6px; letter-spacing: .02em; }
 .more { margin-top: 24px; font-size: 15px; }
 .sec-body .appstore { margin-top: 36px; }
+
+/* See it encrypted */
+.demo { display: grid; grid-template-columns: 1fr 1fr; gap: 20px var(--gap); align-items: start; }
+.demo figure { min-width: 0; }
+.demo canvas { display: block; width: auto; height: auto; max-width: 100%; max-height: 520px;
+  border: 1px solid var(--rule); border-radius: 18px; background: var(--rule); }
+.demo-after { cursor: pointer; touch-action: none; -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; }
+.demo figcaption { margin-top: 12px; font-size: 14px; color: var(--muted); }
+.demo figcaption b { color: var(--ink); font-weight: 600; }
+.demo-controls { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
+.btn { position: relative; display: inline-block; font: inherit; font-size: 14px; line-height: 1.4; color: var(--ink);
+  background: none; border: 1px solid var(--ink); border-radius: 0; padding: 8px 14px; cursor: pointer; }
+.btn:hover { background: var(--ink); color: var(--bg); }
+.btn input { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+/* The file input is hidden inside its label, so the label shows its keyboard focus. */
+.btn:has(input:focus-visible) { outline: 2px solid var(--blue); outline-offset: 3px; }
+.demo-key { grid-column: 1 / -1; font-size: 13px; color: var(--muted); }
+.demo-key code { display: block; margin-top: 4px; font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 12.5px;
+  color: var(--ink); word-break: break-all; }
+.link-btn { display: block; font: inherit; font-size: 14px; color: var(--blue); background: none; border: 0; padding: 0; margin-top: 8px; cursor: pointer; }
+.link-btn:hover { text-decoration: underline; text-underline-offset: 3px; }
 
 /* Price */
 .plan { grid-column: 4 / 8; }
