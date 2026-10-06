@@ -87,17 +87,6 @@
     "ko": "Pro",
     "nl": "Pro"
   },
-  "footer_tagline": {
-    "en": "A private, encrypted photo and video vault for iPhone.",
-    "es": "Una caja fuerte privada y cifrada para fotos y vídeos en el iPhone.",
-    "fr": "Un coffre-fort privé et chiffré pour photos et vidéos sur iPhone.",
-    "de": "Ein privater, verschlüsselter Foto- und Video-Tresor für das iPhone.",
-    "it": "Una cassaforte privata e cifrata per foto e video su iPhone.",
-    "pt-BR": "Um cofre privado e criptografado para fotos e vídeos no iPhone.",
-    "zh-Hans": "一款适用于 iPhone 的私密加密照片和视频保险库。",
-    "ko": "iPhone를 위한 비공개 암호화 사진·동영상 보관함.",
-    "nl": "Een privé, versleutelde foto- en videokluis voor de iPhone."
-  },
   "footer_pro": {
     "en": "Pro features",
     "es": "Funciones Pro",
@@ -198,15 +187,15 @@
     "nl": "Download Privaro in de App Store"
   },
   "hero_h1": {
-    "en": "Keep private photos and videos private.",
-    "es": "Que tus fotos y vídeos privados sigan siendo privados.",
-    "fr": "Vos photos et vidéos privées restent privées.",
-    "de": "Private Fotos und Videos bleiben privat.",
-    "it": "Le foto e i video privati restano privati.",
-    "pt-BR": "Suas fotos e vídeos privados continuam privados.",
-    "zh-Hans": "让私密的照片和视频保持私密。",
-    "ko": "비공개 사진과 동영상을 비공개로.",
-    "nl": "Houd privéfoto’s en -video’s privé."
+    "en": "Private photos stay on your phone.",
+    "es": "Tus fotos privadas se quedan en tu teléfono.",
+    "fr": "Vos photos privées restent sur votre téléphone.",
+    "de": "Private Fotos bleiben auf deinem Handy.",
+    "it": "Le foto private restano sul tuo telefono.",
+    "pt-BR": "Fotos privadas ficam no seu celular.",
+    "zh-Hans": "私密照片，只留在你的手机上。",
+    "ko": "사적인 사진은 휴대폰에만 남습니다.",
+    "nl": "Privéfoto’s blijven op je telefoon."
   },
   "hero_meta": {
     "en": "Free · iOS 17.6 or later · Pro is a one-time purchase",
@@ -845,5 +834,16 @@
     "zh-Hans": "不是。Pro 是一次性付款 €11.99，不会续费，也无需取消。",
     "ko": "아니요. Pro는 €11.99를 한 번만 결제합니다. 갱신되는 것도, 해지할 것도 없습니다.",
     "nl": "Nee. Pro is een eenmalige betaling van € 11,99. Er wordt niets verlengd en er valt niets op te zeggen."
+  },
+  "footer_note": {
+    "en": "Made in the Netherlands. This site sets no cookies and has no trackers.",
+    "es": "Hecho en los Países Bajos. Este sitio no usa cookies ni rastreadores.",
+    "fr": "Fait aux Pays-Bas. Ce site n’utilise ni cookies ni traceurs.",
+    "de": "Gemacht in den Niederlanden. Diese Seite setzt keine Cookies und hat keine Tracker.",
+    "it": "Fatto nei Paesi Bassi. Questo sito non usa cookie né tracker.",
+    "pt-BR": "Feito nos Países Baixos. Este site não usa cookies nem rastreadores.",
+    "zh-Hans": "在荷兰制作。本网站不设置 Cookie，也没有任何追踪器。",
+    "ko": "네덜란드에서 만들었습니다. 이 사이트는 쿠키와 추적기를 사용하지 않습니다.",
+    "nl": "Gemaakt in Nederland. Deze site plaatst geen cookies en heeft geen trackers."
   }
 }

@@ -18,109 +18,93 @@
 
 <main>
 
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div class="hero-text">
-      <h1>{{hero_h1}}</h1>
-      <p class="lead">{{hero_lead}}</p>
-      <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="{{badge_label}}">
-        <picture>
-          <source srcset="/appstore-badge-white.svg" media="(prefers-color-scheme: dark)" />
-          <img src="/appstore-badge.svg" alt="{{badge_label}}" />
-        </picture>
-      </a>
-      <p class="hero-meta">{{hero_meta}}</p>
-    </div>
-    <div class="hero-phone">
-      <div class="phone"><img src="/shots/shot-lock.jpg" width="700" height="1521" alt="{{alt_lock}}" fetchpriority="high" /></div>
-    </div>
+<section class="hero wrap">
+  <h1>{{hero_h1}}</h1>
+  <div class="hero-foot grid">
+    <p class="lead">{{hero_lead}}</p>
+    <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="{{badge_label}}">
+      <picture>
+        <source srcset="/appstore-badge-white.svg" media="(prefers-color-scheme: dark)" />
+        <img src="/appstore-badge.svg" alt="{{badge_label}}" />
+      </picture>
+    </a>
+    <p class="hero-meta">{{hero_meta}}</p>
   </div>
 </section>
 
-<section class="news">
-  <div class="wrap">
-    <p><span class="news-label">{{new_label}}</span> {{new_text}}</p>
-  </div>
+<section class="sec band wrap grid">
+  <h2 class="label">{{new_label}}</h2>
+  <p class="band-text">{{new_text}}</p>
 </section>
 
-<section class="features">
-  <div class="wrap">
-    <div class="feature">
-      <div class="phone"><img src="/shots/shot-vault.jpg" width="700" height="1521" alt="{{alt_vault}}" loading="lazy" /></div>
-      <div class="feature-text">
-        <h2>{{f1_t}}</h2>
-        <p>{{f1_d}}</p>
-      </div>
-    </div>
-    <div class="feature">
-      <div class="phone"><img src="/shots/shot-privacy.jpg" width="700" height="1521" alt="{{alt_privacy}}" loading="lazy" /></div>
-      <div class="feature-text">
-        <h2>{{f2_t}}</h2>
-        <p>{{f2_d}}</p>
-      </div>
-    </div>
-    <div class="feature">
-      <div class="phone"><img src="/shots/shot-albums.jpg" width="700" height="1521" alt="{{alt_albums}}" loading="lazy" /></div>
-      <div class="feature-text">
-        <h2>{{f3_t}}</h2>
-        <p>{{f3_d}}</p>
-      </div>
-    </div>
-  </div>
+<section class="sec shots wrap">
+  <figure>
+    <img src="/shots/shot-lock.jpg" width="700" height="1521" alt="{{alt_lock}}" fetchpriority="high" />
+    <figcaption><span class="num">01</span><div><h2>{{also_lock_t}}</h2><p>{{also_lock_d}}</p></div></figcaption>
+  </figure>
+  <figure>
+    <img src="/shots/shot-vault.jpg" width="700" height="1521" alt="{{alt_vault}}" loading="lazy" />
+    <figcaption><span class="num">02</span><div><h2>{{f1_t}}</h2><p>{{f1_d}}</p></div></figcaption>
+  </figure>
+  <figure>
+    <img src="/shots/shot-privacy.jpg" width="700" height="1521" alt="{{alt_privacy}}" loading="lazy" />
+    <figcaption><span class="num">03</span><div><h2>{{f2_t}}</h2><p>{{f2_d}}</p></div></figcaption>
+  </figure>
+  <figure>
+    <img src="/shots/shot-albums.jpg" width="700" height="1521" alt="{{alt_albums}}" loading="lazy" />
+    <figcaption><span class="num">04</span><div><h2>{{f3_t}}</h2><p>{{f3_d}}</p></div></figcaption>
+  </figure>
 </section>
 
-<section class="also">
-  <div class="wrap">
-    <h2>{{also_h2}}</h2>
-    <ul class="also-list">
-      <li><h3>{{also_lock_t}}</h3><p>{{also_lock_d}}</p></li>
-      <li><h3>{{also_size_t}}</h3><p>{{also_size_d}}</p></li>
-      <li><h3>{{also_camera_t}}</h3><p>{{also_camera_d}}</p></li>
-      <li><h3>{{also_meta_t}}</h3><p>{{also_meta_d}}</p></li>
-      <li><h3>{{also_scan_t}}</h3><p>{{also_scan_d}}</p></li>
-      <li><h3>{{also_decoy_t}} <span class="pro-tag">Pro</span></h3><p>{{also_decoy_d}}</p></li>
-      <li><h3>{{also_backup_t}} <span class="pro-tag">Pro</span></h3><p>{{also_backup_d}}</p></li>
-      <li><h3>{{also_breakin_t}} <span class="pro-tag">Pro</span></h3><p>{{also_breakin_d}}</p></li>
-      <li><h3>{{also_disguise_t}} <span class="pro-tag">Pro</span></h3><p>{{also_disguise_d}}</p></li>
-    </ul>
+<section class="sec wrap grid">
+  <h2 class="label">{{also_h2}}</h2>
+  <div class="sec-body">
+    <ol class="index">
+      <li><span class="num">05</span><div><h3>{{also_size_t}}</h3><p>{{also_size_d}}</p></div></li>
+      <li><span class="num">06</span><div><h3>{{also_camera_t}}</h3><p>{{also_camera_d}}</p></div></li>
+      <li><span class="num">07</span><div><h3>{{also_meta_t}}</h3><p>{{also_meta_d}}</p></div></li>
+      <li><span class="num">08</span><div><h3>{{also_scan_t}}</h3><p>{{also_scan_d}}</p></div></li>
+      <li><span class="num">09</span><div><h3>{{also_decoy_t}} <span class="pro-tag">Pro</span></h3><p>{{also_decoy_d}}</p></div></li>
+      <li><span class="num">10</span><div><h3>{{also_backup_t}} <span class="pro-tag">Pro</span></h3><p>{{also_backup_d}}</p></div></li>
+      <li><span class="num">11</span><div><h3>{{also_breakin_t}} <span class="pro-tag">Pro</span></h3><p>{{also_breakin_d}}</p></div></li>
+      <li><span class="num">12</span><div><h3>{{also_disguise_t}} <span class="pro-tag">Pro</span></h3><p>{{also_disguise_d}}</p></div></li>
+    </ol>
     <p class="more"><a href="{{PRO_URL}}">{{also_more}}</a></p>
   </div>
 </section>
 
-<section class="pricing">
-  <div class="wrap">
+<section class="sec wrap grid">
+  <div class="label">
     <h2>{{pricing_h2}}</h2>
-    <p class="section-lead">{{pricing_p}}</p>
-    <div class="plans">
-      <div class="plan">
-        <h3>{{plan_free_name}}</h3>
-        <p class="plan-price">{{plan_free_price}}</p>
-        <ul>
-          <li>{{free_li1}}</li>
-          <li>{{free_li2}}</li>
-          <li>{{free_li3}}</li>
-          <li>{{free_li4}}</li>
-        </ul>
-      </div>
-      <div class="plan plan-pro">
-        <h3>{{plan_pro_name}}</h3>
-        <p class="plan-price">€11.99 <span>{{plan_pro_once}}</span></p>
-        <ul>
-          <li>{{pro_li1}}</li>
-          <li>{{pro_li2}}</li>
-          <li>{{pro_li3}}</li>
-          <li>{{pro_li4}}</li>
-          <li>{{pro_li5}}</li>
-          <li>{{pro_li6}}</li>
-        </ul>
-      </div>
-    </div>
+    <p>{{pricing_p}}</p>
+  </div>
+  <div class="plan">
+    <h3>{{plan_free_name}}</h3>
+    <p class="plan-price">{{plan_free_price}}</p>
+    <ul>
+      <li>{{free_li1}}</li>
+      <li>{{free_li2}}</li>
+      <li>{{free_li3}}</li>
+      <li>{{free_li4}}</li>
+    </ul>
+  </div>
+  <div class="plan">
+    <h3>{{plan_pro_name}}</h3>
+    <p class="plan-price">€11.99 <span>{{plan_pro_once}}</span></p>
+    <ul>
+      <li>{{pro_li1}}</li>
+      <li>{{pro_li2}}</li>
+      <li>{{pro_li3}}</li>
+      <li>{{pro_li4}}</li>
+      <li>{{pro_li5}}</li>
+      <li>{{pro_li6}}</li>
+    </ul>
   </div>
 </section>
 
-<section class="faq">
-  <div class="wrap">
-    <h2>{{faq_h2}}</h2>
+<section class="sec wrap grid">
+  <h2 class="label">{{faq_h2}}</h2>
+  <div class="sec-body faq">
     <details><summary>{{faq1_q}}</summary><p>{{faq1_a}}</p></details>
     <details><summary>{{faq2_q}}</summary><p>{{faq2_a}}</p></details>
     <details><summary>{{faq3_q}}</summary><p>{{faq3_a}}</p></details>

@@ -34,31 +34,29 @@
 </head>
 <body>
 
-<header class="site-head">
-  <div class="wrap">
-    <a class="brand" href="/es">
-      <img src="/logo.png" width="28" height="28" alt="" />
-      Privaro
-    </a>
-    <nav class="site-nav">
-      <a href="/es/pro">Pro</a>
-      <a href="/es/privacy">Privacidad</a>
-      <details class="lang"><summary aria-label="Idioma"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>Español</span></summary><div class="lang-menu"><a href="/terms">English</a><a href="/es/terms" class="active">Español</a><a href="/fr/terms">Français</a><a href="/de/terms">Deutsch</a><a href="/it/terms">Italiano</a><a href="/pt-br/terms">Português</a><a href="/zh/terms">简体中文</a><a href="/ko/terms">한국어</a><a href="/nl/terms">Nederlands</a></div></details>
-      <a class="nav-get" href="https://apps.apple.com/app/id6783131829">Descargar</a>
-    </nav>
-  </div>
+<header class="site-head wrap grid">
+  <a class="brand" href="/es">Privaro</a>
+  <nav class="site-nav">
+    <a href="/es/pro">Pro</a>
+    <a href="/es/privacy">Privacidad</a>
+    <details class="lang"><summary aria-label="Idioma"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>Español</span></summary><div class="lang-menu"><a href="/terms">English</a><a href="/es/terms" class="active">Español</a><a href="/fr/terms">Français</a><a href="/de/terms">Deutsch</a><a href="/it/terms">Italiano</a><a href="/pt-br/terms">Português</a><a href="/zh/terms">简体中文</a><a href="/ko/terms">한국어</a><a href="/nl/terms">Nederlands</a></div></details>
+    <a class="nav-get" href="https://apps.apple.com/app/id6783131829">Descargar</a>
+  </nav>
 </header>
 
-<main class="legal-page">
+<main>
+
+<div class="page-head wrap">
   <h1>Términos de uso</h1>
   <p class="updated">Fecha de entrada en vigor: 28 de junio de 2026 · Última actualización: 28 de junio de 2026</p>
-
   <p class="intro">Estos Términos de uso («Términos») rigen tu uso de la app Privaro («Privaro», «la app»), ofrecida por Erdinc Zarbo («nosotros» o «nuestro»). Al descargar o usar Privaro, aceptas estos Términos. Si no los aceptas, no uses la app.</p>
+</div>
 
-  <div class="callout">
-    <strong>Léelo con atención.</strong> Privaro cifra tu contenido en tu dispositivo con una clave que solo tú controlas. Esto significa que si pierdes tu código y tu clave de recuperación, <strong>nadie, ni siquiera nosotros, puede recuperar tus datos.</strong> Privaro también incluye funciones que borran datos de forma permanente a propósito. Eres responsable de guardar tu código y tu clave de recuperación, de cómo configuras la app y de mantener tus propias copias de seguridad.
-  </div>
-
+<section class="sec wrap grid">
+  <aside class="label">
+    <p><strong>Léelo con atención.</strong> Privaro cifra tu contenido en tu dispositivo con una clave que solo tú controlas. Esto significa que si pierdes tu código y tu clave de recuperación, <strong>nadie, ni siquiera nosotros, puede recuperar tus datos.</strong> Privaro también incluye funciones que borran datos de forma permanente a propósito. Eres responsable de guardar tu código y tu clave de recuperación, de cómo configuras la app y de mantener tus propias copias de seguridad.</p>
+  </aside>
+  <div class="legal">
   <h2>Licencia</h2>
   <p>Te concedemos una licencia personal, no exclusiva, intransferible y revocable para usar Privaro en dispositivos Apple de tu propiedad o bajo tu control, conforme a estos Términos y a los Términos de servicio de la App Store de Apple. No puedes copiar, modificar, aplicar ingeniería inversa, descompilar, vender, sublicenciar ni distribuir la app salvo en la medida permitida por la ley.</p>
 
@@ -107,22 +105,19 @@
   <h2>Contacto</h2>
   <p>¿Dudas sobre estos Términos? Escríbenos a <a href="mailto:erdincdubu@icloud.com">erdincdubu@icloud.com</a></p>
   <p class="authoritative">Esta política también está disponible en otros idiomas. En caso de discrepancia, prevalece la versión en inglés.</p>
+  </div>
+</section>
+
 </main>
 
-<footer class="site-foot">
-  <div class="wrap">
-    <div class="foot-brand">
-      <img src="/logo.png" width="22" height="22" alt="" />
-      <span>Una caja fuerte privada y cifrada para fotos y vídeos en el iPhone.</span>
-    </div>
-    <nav class="foot-links">
-      <a href="/es/pro">Funciones Pro</a>
-      <a href="/es/privacy">Política de privacidad</a>
-      <a href="/es/terms">Términos de uso</a>
-      <a href="mailto:erdincdubu@icloud.com">Contacto</a>
-    </nav>
-    <p class="foot-legal">© <span id="year">2026</span> Privaro. Todos los derechos reservados.</p>
-  </div>
+<footer class="site-foot wrap grid">
+  <p class="foot-legal">© <span id="year">2026</span> Privaro. Todos los derechos reservados.<br />Hecho en los Países Bajos. Este sitio no usa cookies ni rastreadores.</p>
+  <nav class="foot-links">
+    <a href="/es/pro">Funciones Pro</a>
+    <a href="/es/privacy">Política de privacidad</a>
+    <a href="/es/terms">Términos de uso</a>
+    <a href="mailto:erdincdubu@icloud.com">Contacto</a>
+  </nav>
 </footer>
 
 <script>

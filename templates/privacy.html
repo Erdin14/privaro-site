@@ -16,16 +16,19 @@
 
 {{HEADER}}
 
-<main class="legal-page">
+<main>
+
+<div class="page-head wrap">
   <h1>{{priv_h1}}</h1>
   <p class="updated">{{priv_updated}}</p>
-
   <p class="intro">{{priv_intro}}</p>
+</div>
 
-  <div class="callout">
-    <strong>{{priv_short_label}}</strong> {{priv_short_body}}
-  </div>
-
+<section class="sec wrap grid">
+  <aside class="label">
+    <p><strong>{{priv_short_label}}</strong> {{priv_short_body}}</p>
+  </aside>
+  <div class="legal">
   <h2>{{priv_s1_h}}</h2>
   <ul>
     <li>{{priv_s1_li1}}</li>
@@ -82,6 +85,9 @@
   <a href="mailto:erdincdubu@icloud.com">erdincdubu@icloud.com</a></p>
 
   <p class="authoritative">{{priv_authoritative}}</p>
+  </div>
+</section>
+
 </main>
 
 {{FOOTER}}

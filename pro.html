@@ -34,102 +34,61 @@
 </head>
 <body>
 
-<header class="site-head">
-  <div class="wrap">
-    <a class="brand" href="/">
-      <img src="/logo.png" width="28" height="28" alt="" />
-      Privaro
-    </a>
-    <nav class="site-nav">
-      <a href="/pro" aria-current="page">Pro</a>
-      <a href="/privacy">Privacy</a>
-      <details class="lang"><summary aria-label="Language"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>English</span></summary><div class="lang-menu"><a href="/pro" class="active">English</a><a href="/es/pro">Español</a><a href="/fr/pro">Français</a><a href="/de/pro">Deutsch</a><a href="/it/pro">Italiano</a><a href="/pt-br/pro">Português</a><a href="/zh/pro">简体中文</a><a href="/ko/pro">한국어</a><a href="/nl/pro">Nederlands</a></div></details>
-      <a class="nav-get" href="https://apps.apple.com/app/id6783131829">Get the app</a>
-    </nav>
-  </div>
+<header class="site-head wrap grid">
+  <a class="brand" href="/">Privaro</a>
+  <nav class="site-nav">
+    <a href="/pro" aria-current="page">Pro</a>
+    <a href="/privacy">Privacy</a>
+    <details class="lang"><summary aria-label="Language"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>English</span></summary><div class="lang-menu"><a href="/pro" class="active">English</a><a href="/es/pro">Español</a><a href="/fr/pro">Français</a><a href="/de/pro">Deutsch</a><a href="/it/pro">Italiano</a><a href="/pt-br/pro">Português</a><a href="/zh/pro">简体中文</a><a href="/ko/pro">한국어</a><a href="/nl/pro">Nederlands</a></div></details>
+    <a class="nav-get" href="https://apps.apple.com/app/id6783131829">Get the app</a>
+  </nav>
 </header>
 
-<main class="legal-page legal-page--wide">
+<main>
+
+<div class="page-head wrap">
   <h1>Everything Pro unlocks.</h1>
   <p class="intro">Pro is a one-time purchase of €11.99. It lifts the limits of the free version and adds everything below, on every device signed in to your Apple Account. Nothing renews and there’s nothing to cancel.</p>
+</div>
 
-  <ol class="pro-list">
-    <li class="pro-item">
-      <h2>Unlimited storage</h2>
-      <p>The free vault holds up to 2.5 GB. Pro has no cap: the only limit is the free space on your iPhone.</p>
-    </li>
-    <li class="pro-item">
-      <h2>Unlimited albums and folders</h2>
-      <p>Free includes up to 5 albums. With Pro you can make as many albums as you like and put folders inside folders.</p>
-    </li>
-    <li class="pro-item">
-      <h2>Per-album passwords</h2>
-      <p>Give an album its own password. It stays locked even while the rest of the vault is open.</p>
-    </li>
-    <li class="pro-item">
-      <h2>Location-based lock</h2>
-      <p>Only allow the vault to unlock in places you trust, like your home. Anywhere else, it stays locked even with the right passcode.</p>
-    </li>
-    <li class="pro-item">
-      <h2>Decoy vault</h2>
-      <p>Set a second passcode that opens a separate vault with harmless photos in it. If you’re ever pushed to unlock Privaro, enter that one, and your real vault stays out of sight.</p>
-    </li>
-    <li class="pro-item">
-      <h2>Duress wipe</h2>
-      <p>Set a passcode that erases the whole vault, decoy included, the moment it’s entered. It’s meant for the worst case, and it can’t be undone.</p>
-    </li>
-    <li class="pro-item">
-      <h2>Break-in capture</h2>
-      <p>If someone enters the wrong passcode, Privaro can silently take a photo with the front camera and log the attempt with a timestamp, so you know if anyone has tried to get into your vault.</p>
-    </li>
-    <li class="pro-item">
-      <h2>Screenshot and recording protection</h2>
-      <p>Stops your vault from being captured by screenshots, screen recording or AirPlay while the app is open, so nothing leaks to your camera roll or to a screen mirror by accident.</p>
-    </li>
-    <li class="pro-item">
-      <h2>Disguise app icon</h2>
-      <p>Hide Privaro behind an everyday icon and name, like Calculator or Notes, so it doesn’t stand out on your Home Screen. Color icon variants are free; the disguises are Pro.</p>
-    </li>
-    <li class="pro-item">
-      <h2>Encrypted iCloud backup and export</h2>
-      <p>Back up your vault to your own iCloud, or export it as a single encrypted file. Both are encrypted on your device before they leave, so no one (including us) can read them. Restoring a backup is always free, even without Pro.</p>
-    </li>
-    <li class="pro-item">
-      <h2>Wi-Fi transfer</h2>
-      <p>Send files into the vault from any computer's web browser over your local network. No cable, no cloud, and no extra app to install on your computer.</p>
-    </li>
-    <li class="pro-item">
-      <h2>Secure share</h2>
-      <p>Send photos or videos to another Privaro user as an encrypted file that only opens with a passphrase you choose. Nothing passes through us on the way.</p>
-    </li>
-  </ol>
-
-  <div class="callout">
-    <strong>Free or Pro, the basics never change:</strong> everything is encrypted on your device with AES-256, there’s no account, and only you can open your vault.
+<section class="sec wrap grid">
+  <div class="label">
+    <p><strong>Free or Pro, the basics never change:</strong> everything is encrypted on your device with AES-256, there’s no account, and only you can open your vault.</p>
   </div>
+  <div class="sec-body">
+    <ol class="index">
+      <li><span class="num">01</span><div><h2>Unlimited storage</h2><p>The free vault holds up to 2.5 GB. Pro has no cap: the only limit is the free space on your iPhone.</p></div></li>
+      <li><span class="num">02</span><div><h2>Unlimited albums and folders</h2><p>Free includes up to 5 albums. With Pro you can make as many albums as you like and put folders inside folders.</p></div></li>
+      <li><span class="num">03</span><div><h2>Per-album passwords</h2><p>Give an album its own password. It stays locked even while the rest of the vault is open.</p></div></li>
+      <li><span class="num">04</span><div><h2>Location-based lock</h2><p>Only allow the vault to unlock in places you trust, like your home. Anywhere else, it stays locked even with the right passcode.</p></div></li>
+      <li><span class="num">05</span><div><h2>Decoy vault</h2><p>Set a second passcode that opens a separate vault with harmless photos in it. If you’re ever pushed to unlock Privaro, enter that one, and your real vault stays out of sight.</p></div></li>
+      <li><span class="num">06</span><div><h2>Duress wipe</h2><p>Set a passcode that erases the whole vault, decoy included, the moment it’s entered. It’s meant for the worst case, and it can’t be undone.</p></div></li>
+      <li><span class="num">07</span><div><h2>Break-in capture</h2><p>If someone enters the wrong passcode, Privaro can silently take a photo with the front camera and log the attempt with a timestamp, so you know if anyone has tried to get into your vault.</p></div></li>
+      <li><span class="num">08</span><div><h2>Screenshot and recording protection</h2><p>Stops your vault from being captured by screenshots, screen recording or AirPlay while the app is open, so nothing leaks to your camera roll or to a screen mirror by accident.</p></div></li>
+      <li><span class="num">09</span><div><h2>Disguise app icon</h2><p>Hide Privaro behind an everyday icon and name, like Calculator or Notes, so it doesn’t stand out on your Home Screen. Color icon variants are free; the disguises are Pro.</p></div></li>
+      <li><span class="num">10</span><div><h2>Encrypted iCloud backup and export</h2><p>Back up your vault to your own iCloud, or export it as a single encrypted file. Both are encrypted on your device before they leave, so no one (including us) can read them. Restoring a backup is always free, even without Pro.</p></div></li>
+      <li><span class="num">11</span><div><h2>Wi-Fi transfer</h2><p>Send files into the vault from any computer's web browser over your local network. No cable, no cloud, and no extra app to install on your computer.</p></div></li>
+      <li><span class="num">12</span><div><h2>Secure share</h2><p>Send photos or videos to another Privaro user as an encrypted file that only opens with a passphrase you choose. Nothing passes through us on the way.</p></div></li>
+    </ol>
+    <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="Download Privaro on the App Store">
+      <picture>
+        <source srcset="/appstore-badge-white.svg" media="(prefers-color-scheme: dark)" />
+        <img src="/appstore-badge.svg" alt="Download Privaro on the App Store" />
+      </picture>
+    </a>
+  </div>
+</section>
 
-  <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="Download Privaro on the App Store">
-    <picture>
-      <source srcset="/appstore-badge-white.svg" media="(prefers-color-scheme: dark)" />
-      <img src="/appstore-badge.svg" alt="Download Privaro on the App Store" />
-    </picture>
-  </a>
 </main>
 
-<footer class="site-foot">
-  <div class="wrap">
-    <div class="foot-brand">
-      <img src="/logo.png" width="22" height="22" alt="" />
-      <span>A private, encrypted photo and video vault for iPhone.</span>
-    </div>
-    <nav class="foot-links">
-      <a href="/pro">Pro features</a>
-      <a href="/privacy">Privacy Policy</a>
-      <a href="/terms">Terms of Use</a>
-      <a href="mailto:erdincdubu@icloud.com">Contact</a>
-    </nav>
-    <p class="foot-legal">© <span id="year">2026</span> Privaro. All rights reserved.</p>
-  </div>
+<footer class="site-foot wrap grid">
+  <p class="foot-legal">© <span id="year">2026</span> Privaro. All rights reserved.<br />Made in the Netherlands. This site sets no cookies and has no trackers.</p>
+  <nav class="foot-links">
+    <a href="/pro">Pro features</a>
+    <a href="/privacy">Privacy Policy</a>
+    <a href="/terms">Terms of Use</a>
+    <a href="mailto:erdincdubu@icloud.com">Contact</a>
+  </nav>
 </footer>
 
 <script>

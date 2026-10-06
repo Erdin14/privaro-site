@@ -16,71 +16,41 @@
 
 {{HEADER}}
 
-<main class="legal-page legal-page--wide">
+<main>
+
+<div class="page-head wrap">
   <h1>{{pro_h1}}</h1>
   <p class="intro">{{pro_intro}}</p>
+</div>
 
-  <ol class="pro-list">
-    <li class="pro-item">
-      <h2>{{prof2_t}}</h2>
-      <p>{{prof2_d}}</p>
-    </li>
-    <li class="pro-item">
-      <h2>{{prof3_t}}</h2>
-      <p>{{prof3_d}}</p>
-    </li>
-    <li class="pro-item">
-      <h2>{{prof7_t}}</h2>
-      <p>{{prof7_d}}</p>
-    </li>
-    <li class="pro-item">
-      <h2>{{prof11_t}}</h2>
-      <p>{{prof11_d}}</p>
-    </li>
-    <li class="pro-item">
-      <h2>{{prof8_t}}</h2>
-      <p>{{prof8_d}}</p>
-    </li>
-    <li class="pro-item">
-      <h2>{{prof9_t}}</h2>
-      <p>{{prof9_d}}</p>
-    </li>
-    <li class="pro-item">
-      <h2>{{prof5_t}}</h2>
-      <p>{{prof5_d}}</p>
-    </li>
-    <li class="pro-item">
-      <h2>{{prof4_t}}</h2>
-      <p>{{prof4_d}}</p>
-    </li>
-    <li class="pro-item">
-      <h2>{{prof12_t}}</h2>
-      <p>{{prof12_d}}</p>
-    </li>
-    <li class="pro-item">
-      <h2>{{prof6_t}}</h2>
-      <p>{{prof6_d}}</p>
-    </li>
-    <li class="pro-item">
-      <h2>{{prof10_t}}</h2>
-      <p>{{prof10_d}}</p>
-    </li>
-    <li class="pro-item">
-      <h2>{{prof13_t}}</h2>
-      <p>{{prof13_d}}</p>
-    </li>
-  </ol>
-
-  <div class="callout">
-    <strong>{{pro_callout_strong}}</strong> {{pro_callout_rest}}
+<section class="sec wrap grid">
+  <div class="label">
+    <p><strong>{{pro_callout_strong}}</strong> {{pro_callout_rest}}</p>
   </div>
+  <div class="sec-body">
+    <ol class="index">
+      <li><span class="num">01</span><div><h2>{{prof2_t}}</h2><p>{{prof2_d}}</p></div></li>
+      <li><span class="num">02</span><div><h2>{{prof3_t}}</h2><p>{{prof3_d}}</p></div></li>
+      <li><span class="num">03</span><div><h2>{{prof7_t}}</h2><p>{{prof7_d}}</p></div></li>
+      <li><span class="num">04</span><div><h2>{{prof11_t}}</h2><p>{{prof11_d}}</p></div></li>
+      <li><span class="num">05</span><div><h2>{{prof8_t}}</h2><p>{{prof8_d}}</p></div></li>
+      <li><span class="num">06</span><div><h2>{{prof9_t}}</h2><p>{{prof9_d}}</p></div></li>
+      <li><span class="num">07</span><div><h2>{{prof5_t}}</h2><p>{{prof5_d}}</p></div></li>
+      <li><span class="num">08</span><div><h2>{{prof4_t}}</h2><p>{{prof4_d}}</p></div></li>
+      <li><span class="num">09</span><div><h2>{{prof12_t}}</h2><p>{{prof12_d}}</p></div></li>
+      <li><span class="num">10</span><div><h2>{{prof6_t}}</h2><p>{{prof6_d}}</p></div></li>
+      <li><span class="num">11</span><div><h2>{{prof10_t}}</h2><p>{{prof10_d}}</p></div></li>
+      <li><span class="num">12</span><div><h2>{{prof13_t}}</h2><p>{{prof13_d}}</p></div></li>
+    </ol>
+    <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="{{badge_label}}">
+      <picture>
+        <source srcset="/appstore-badge-white.svg" media="(prefers-color-scheme: dark)" />
+        <img src="/appstore-badge.svg" alt="{{badge_label}}" />
+      </picture>
+    </a>
+  </div>
+</section>
 
-  <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="{{badge_label}}">
-    <picture>
-      <source srcset="/appstore-badge-white.svg" media="(prefers-color-scheme: dark)" />
-      <img src="/appstore-badge.svg" alt="{{badge_label}}" />
-    </picture>
-  </a>
 </main>
 
 {{FOOTER}}
