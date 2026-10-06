@@ -33,15 +33,15 @@
     "nl": "Alles wat Pro ontgrendelt."
   },
   "pro_intro": {
-    "en": "Pro is a one-time purchase of €11.99. It lifts the limits of the free version and adds everything below, on every device signed in to your Apple Account. Nothing renews and there’s nothing to cancel.",
-    "es": "Pro es una compra única de 11,99 €. Quita los límites de la versión gratuita y añade todo lo que ves abajo, en cada dispositivo con tu Apple Account. Nada se renueva y no hay nada que cancelar.",
-    "fr": "Pro est un achat unique de 11,99 €. Il lève les limites de la version gratuite et ajoute tout ce qui suit, sur chaque appareil connecté à votre compte Apple. Rien ne se renouvelle et il n’y a rien à résilier.",
-    "de": "Pro ist ein Einmalkauf für 11,99 €. Es hebt die Grenzen der kostenlosen Version auf und bringt alles, was unten steht, auf jedes Gerät mit deinem Apple Account. Nichts verlängert sich, nichts muss gekündigt werden.",
-    "it": "Pro è un acquisto unico da 11,99 €. Elimina i limiti della versione gratuita e aggiunge tutto quello che trovi qui sotto, su ogni dispositivo collegato al tuo Apple Account. Nulla si rinnova e non c’è niente da disdire.",
-    "pt-BR": "O Pro é uma compra única de € 11,99. Ele tira os limites da versão gratuita e adiciona tudo o que está abaixo, em todos os aparelhos conectados à sua Apple Account. Nada renova e não há nada para cancelar.",
-    "zh-Hans": "Pro 是一次性购买，价格 €11.99。它解除免费版的限制，并加入下面的所有功能，登录同一 Apple 账户的所有设备都能使用。无需续订，也没有什么需要取消。",
-    "ko": "Pro는 €11.99 일회성 구매입니다. 무료 버전의 한도를 없애고 아래의 모든 기능을 더하며, 같은 Apple 계정에 로그인한 모든 기기에서 사용할 수 있습니다. 갱신되는 것도, 해지할 것도 없습니다.",
-    "nl": "Pro is een eenmalige aankoop van € 11,99. Het haalt de limieten van de gratis versie weg en voegt alles hieronder toe, op elk apparaat dat bij je Apple Account is aangemeld. Er verlengt niets en er is niets op te zeggen."
+    "en": "Pro is a one-time purchase of {{PRICE}}. It lifts the limits of the free version and adds everything below, on every device signed in to your Apple Account. Nothing renews and there’s nothing to cancel.",
+    "es": "Pro es una compra única de {{PRICE}}. Quita los límites de la versión gratuita y añade todo lo que ves abajo, en cada dispositivo con tu Apple Account. Nada se renueva y no hay nada que cancelar.",
+    "fr": "Pro est un achat unique de {{PRICE}}. Il lève les limites de la version gratuite et ajoute tout ce qui suit, sur chaque appareil connecté à votre compte Apple. Rien ne se renouvelle et il n’y a rien à résilier.",
+    "de": "Pro ist ein Einmalkauf für {{PRICE}}. Es hebt die Grenzen der kostenlosen Version auf und bringt alles, was unten steht, auf jedes Gerät mit deinem Apple Account. Nichts verlängert sich, nichts muss gekündigt werden.",
+    "it": "Pro è un acquisto unico da {{PRICE}}. Elimina i limiti della versione gratuita e aggiunge tutto quello che trovi qui sotto, su ogni dispositivo collegato al tuo Apple Account. Nulla si rinnova e non c’è niente da disdire.",
+    "pt-BR": "O Pro é uma compra única de {{PRICE}}. Ele tira os limites da versão gratuita e adiciona tudo o que está abaixo, em todos os aparelhos conectados à sua Apple Account. Nada renova e não há nada para cancelar.",
+    "zh-Hans": "Pro 是一次性购买，价格 {{PRICE}}。它解除免费版的限制，并加入下面的所有功能，登录同一 Apple 账户的所有设备都能使用。无需续订，也没有什么需要取消。",
+    "ko": "Pro는 {{PRICE}} 일회성 구매입니다. 무료 버전의 한도를 없애고 아래의 모든 기능을 더하며, 같은 Apple 계정에 로그인한 모든 기기에서 사용할 수 있습니다. 갱신되는 것도, 해지할 것도 없습니다.",
+    "nl": "Pro is een eenmalige aankoop van {{PRICE}}. Het haalt de limieten van de gratis versie weg en voegt alles hieronder toe, op elk apparaat dat bij je Apple Account is aangemeld. Er verlengt niets en er is niets op te zeggen."
   },
   "prof2_t": {
     "en": "Unlimited storage",

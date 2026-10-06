@@ -560,17 +560,6 @@
     "ko": "Pro에 추가되는 모든 기능 →",
     "nl": "Alles wat Pro toevoegt →"
   },
-  "plan_free_price": {
-    "en": "€0",
-    "es": "0 €",
-    "fr": "0 €",
-    "de": "0 €",
-    "it": "0 €",
-    "pt-BR": "€ 0",
-    "zh-Hans": "€0",
-    "ko": "€0",
-    "nl": "€ 0"
-  },
   "plan_pro_once": {
     "en": "once",
     "es": "una vez",
@@ -825,15 +814,15 @@
     "nl": "Is Pro een abonnement?"
   },
   "faq6_a": {
-    "en": "No. Pro is a single payment of €11.99. Nothing renews and there’s nothing to cancel.",
-    "es": "No. Pro es un único pago de 11,99 €. No se renueva nada y no hay nada que cancelar.",
-    "fr": "Non. Pro est un paiement unique de 11,99 €. Rien ne se renouvelle, rien à résilier.",
-    "de": "Nein. Pro ist eine einmalige Zahlung von 11,99 €. Nichts verlängert sich, nichts muss gekündigt werden.",
-    "it": "No. Pro è un pagamento unico di 11,99 €. Non si rinnova nulla e non c’è niente da disdire.",
-    "pt-BR": "Não. O Pro é um pagamento único de € 11,99. Nada é renovado e não há nada para cancelar.",
-    "zh-Hans": "不是。Pro 是一次性付款 €11.99，不会续费，也无需取消。",
-    "ko": "아니요. Pro는 €11.99를 한 번만 결제합니다. 갱신되는 것도, 해지할 것도 없습니다.",
-    "nl": "Nee. Pro is een eenmalige betaling van € 11,99. Er wordt niets verlengd en er valt niets op te zeggen."
+    "en": "No. Pro is a single payment of {{PRICE}}. Nothing renews and there’s nothing to cancel.",
+    "es": "No. Pro es un único pago de {{PRICE}}. No se renueva nada y no hay nada que cancelar.",
+    "fr": "Non. Pro est un paiement unique de {{PRICE}}. Rien ne se renouvelle, rien à résilier.",
+    "de": "Nein. Pro ist eine einmalige Zahlung von {{PRICE}}. Nichts verlängert sich, nichts muss gekündigt werden.",
+    "it": "No. Pro è un pagamento unico di {{PRICE}}. Non si rinnova nulla e non c’è niente da disdire.",
+    "pt-BR": "Não. O Pro é um pagamento único de {{PRICE}}. Nada é renovado e não há nada para cancelar.",
+    "zh-Hans": "不是。Pro 是一次性付款 {{PRICE}}，不会续费，也无需取消。",
+    "ko": "아니요. Pro는 {{PRICE}}를 한 번만 결제합니다. 갱신되는 것도, 해지할 것도 없습니다.",
+    "nl": "Nee. Pro is een eenmalige betaling van {{PRICE}}. Er wordt niets verlengd en er valt niets op te zeggen."
   },
   "footer_note": {
     "en": "Made in the Netherlands. This site sets no cookies and has no trackers.",

@@ -133,7 +133,7 @@
   </div>
   <div class="plan">
     <h3>Grátis</h3>
-    <p class="plan-price">€ 0</p>
+    <p class="plan-price"><span class="price" data-price="free">€ 0</span></p>
     <ul>
       <li>Criptografia, Face ID e código</li>
       <li>Até 2,5 GB e 5 álbuns</li>
@@ -143,7 +143,7 @@
   </div>
   <div class="plan">
     <h3>Pro</h3>
-    <p class="plan-price">€11.99 <span>única vez</span></p>
+    <p class="plan-price"><span class="price" data-price="pro">€ 11,99</span> <span>única vez</span></p>
     <ul>
       <li>Armazenamento e álbuns ilimitados</li>
       <li>Cofre falso e limpeza sob coação</li>
@@ -163,7 +163,7 @@
     <details><summary>O que acontece se eu perder o celular?</summary><p>Se você ativou o backup criptografado no iCloud (Pro), pode restaurar o cofre no novo iPhone com o seu código. Restaurar é grátis. Sem backup, as fotos ficam trancadas no aparelho antigo.</p></details>
     <details><summary>Existe limite de tamanho para vídeos?</summary><p>Não por arquivo. Qualquer tamanho funciona desde que o iPhone tenha espaço. A versão grátis guarda até 2,5 GB no total, e o Pro não tem limite.</p></details>
     <details><summary>Precisa de internet?</summary><p>Não. O cofre funciona totalmente offline, e suas fotos nunca vão para a internet, a menos que você ative o backup no iCloud.</p></details>
-    <details><summary>O Pro é uma assinatura?</summary><p>Não. O Pro é um pagamento único de € 11,99. Nada é renovado e não há nada para cancelar.</p></details>
+    <details><summary>O Pro é uma assinatura?</summary><p>Não. O Pro é um pagamento único de <span class="price" data-price="pro">€ 11,99</span>. Nada é renovado e não há nada para cancelar.</p></details>
   </div>
 </section>
 
@@ -188,6 +188,7 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && lang.open) { lang.open = false; lang.querySelector('summary').focus(); }
 });
 </script>
+<script src="/price.js" defer></script>
 <script src="/demo.js" defer></script>
 </body>
 </html>

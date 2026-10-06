@@ -133,7 +133,7 @@
   </div>
   <div class="plan">
     <h3>Free</h3>
-    <p class="plan-price">€0</p>
+    <p class="plan-price"><span class="price" data-price="free">€0</span></p>
     <ul>
       <li>Encryption, Face ID and passcode</li>
       <li>Up to 2.5 GB and 5 albums</li>
@@ -143,7 +143,7 @@
   </div>
   <div class="plan">
     <h3>Pro</h3>
-    <p class="plan-price">€11.99 <span>once</span></p>
+    <p class="plan-price"><span class="price" data-price="pro">€11.99</span> <span>once</span></p>
     <ul>
       <li>Unlimited storage and albums</li>
       <li>Decoy vault and duress wipe</li>
@@ -163,7 +163,7 @@
     <details><summary>What happens if I lose my phone?</summary><p>If you turned on encrypted iCloud backup (Pro), you can restore the vault on your new iPhone with your passcode. Restoring is free. Without a backup, the photos stay locked on the old phone.</p></details>
     <details><summary>Is there a limit on video size?</summary><p>Not per file. Any size works as long as your iPhone has room. The free version holds up to 2.5 GB in total, and Pro has no limit.</p></details>
     <details><summary>Does it need an internet connection?</summary><p>No. Your vault works completely offline, and your photos never go online unless you turn on iCloud backup.</p></details>
-    <details><summary>Is Pro a subscription?</summary><p>No. Pro is a single payment of €11.99. Nothing renews and there’s nothing to cancel.</p></details>
+    <details><summary>Is Pro a subscription?</summary><p>No. Pro is a single payment of <span class="price" data-price="pro">€11.99</span>. Nothing renews and there’s nothing to cancel.</p></details>
   </div>
 </section>
 
@@ -188,6 +188,7 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && lang.open) { lang.open = false; lang.querySelector('summary').focus(); }
 });
 </script>
+<script src="/price.js" defer></script>
 <script src="/demo.js" defer></script>
 </body>
 </html>

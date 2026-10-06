@@ -133,7 +133,7 @@
   </div>
   <div class="plan">
     <h3>Gratis</h3>
-    <p class="plan-price">0 €</p>
+    <p class="plan-price"><span class="price" data-price="free">0 €</span></p>
     <ul>
       <li>Cifrado, Face ID y código</li>
       <li>Hasta 2,5 GB y 5 álbumes</li>
@@ -143,7 +143,7 @@
   </div>
   <div class="plan">
     <h3>Pro</h3>
-    <p class="plan-price">€11.99 <span>una vez</span></p>
+    <p class="plan-price"><span class="price" data-price="pro">11,99 €</span> <span>una vez</span></p>
     <ul>
       <li>Almacenamiento y álbumes ilimitados</li>
       <li>Caja fuerte señuelo y borrado de emergencia</li>
@@ -163,7 +163,7 @@
     <details><summary>¿Qué pasa si pierdo el teléfono?</summary><p>Si activaste la copia cifrada en iCloud (Pro), puedes restaurar la caja fuerte en tu nuevo iPhone con tu código. Restaurar es gratis. Sin copia, las fotos se quedan bloqueadas en el teléfono antiguo.</p></details>
     <details><summary>¿Hay límite de tamaño para los vídeos?</summary><p>No por archivo. Cualquier tamaño sirve mientras tu iPhone tenga espacio. La versión gratuita guarda hasta 2,5 GB en total y Pro no tiene límite.</p></details>
     <details><summary>¿Necesita conexión a internet?</summary><p>No. La caja fuerte funciona sin conexión y tus fotos nunca salen a internet a menos que actives la copia en iCloud.</p></details>
-    <details><summary>¿Pro es una suscripción?</summary><p>No. Pro es un único pago de 11,99 €. No se renueva nada y no hay nada que cancelar.</p></details>
+    <details><summary>¿Pro es una suscripción?</summary><p>No. Pro es un único pago de <span class="price" data-price="pro">11,99 €</span>. No se renueva nada y no hay nada que cancelar.</p></details>
   </div>
 </section>
 
@@ -188,6 +188,7 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && lang.open) { lang.open = false; lang.querySelector('summary').focus(); }
 });
 </script>
+<script src="/price.js" defer></script>
 <script src="/demo.js" defer></script>
 </body>
 </html>

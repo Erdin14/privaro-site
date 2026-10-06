@@ -105,7 +105,7 @@
   </div>
   <div class="plan">
     <h3>{{plan_free_name}}</h3>
-    <p class="plan-price">{{plan_free_price}}</p>
+    <p class="plan-price">{{PRICE_FREE}}</p>
     <ul>
       <li>{{free_li1}}</li>
       <li>{{free_li2}}</li>
@@ -115,7 +115,7 @@
   </div>
   <div class="plan">
     <h3>{{plan_pro_name}}</h3>
-    <p class="plan-price">€11.99 <span>{{plan_pro_once}}</span></p>
+    <p class="plan-price">{{PRICE}} <span>{{plan_pro_once}}</span></p>
     <ul>
       <li>{{pro_li1}}</li>
       <li>{{pro_li2}}</li>
@@ -142,6 +142,7 @@
 </main>
 
 {{FOOTER}}
+<script src="/price.js" defer></script>
 <script src="/demo.js" defer></script>
 </body>
 </html>

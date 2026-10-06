@@ -48,7 +48,7 @@
 
 <div class="page-head wrap">
   <h1>Pro가 열어 주는 모든 것.</h1>
-  <p class="intro">Pro는 €11.99 일회성 구매입니다. 무료 버전의 한도를 없애고 아래의 모든 기능을 더하며, 같은 Apple 계정에 로그인한 모든 기기에서 사용할 수 있습니다. 갱신되는 것도, 해지할 것도 없습니다.</p>
+  <p class="intro">Pro는 <span class="price" data-price="pro">€11.99</span> 일회성 구매입니다. 무료 버전의 한도를 없애고 아래의 모든 기능을 더하며, 같은 Apple 계정에 로그인한 모든 기기에서 사용할 수 있습니다. 갱신되는 것도, 해지할 것도 없습니다.</p>
 </div>
 
 <section class="sec wrap grid">
@@ -100,5 +100,6 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && lang.open) { lang.open = false; lang.querySelector('summary').focus(); }
 });
 </script>
+<script src="/price.js" defer></script>
 </body>
 </html>

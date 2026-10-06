@@ -48,7 +48,7 @@
 
 <div class="page-head wrap">
   <h1>Pro 解锁的一切。</h1>
-  <p class="intro">Pro 是一次性购买，价格 €11.99。它解除免费版的限制，并加入下面的所有功能，登录同一 Apple 账户的所有设备都能使用。无需续订，也没有什么需要取消。</p>
+  <p class="intro">Pro 是一次性购买，价格 <span class="price" data-price="pro">€11.99</span>。它解除免费版的限制，并加入下面的所有功能，登录同一 Apple 账户的所有设备都能使用。无需续订，也没有什么需要取消。</p>
 </div>
 
 <section class="sec wrap grid">
@@ -100,5 +100,6 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && lang.open) { lang.open = false; lang.querySelector('summary').focus(); }
 });
 </script>
+<script src="/price.js" defer></script>
 </body>
 </html>

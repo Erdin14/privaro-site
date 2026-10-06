@@ -133,7 +133,7 @@
   </div>
   <div class="plan">
     <h3>Gratis</h3>
-    <p class="plan-price">€ 0</p>
+    <p class="plan-price"><span class="price" data-price="free">€ 0</span></p>
     <ul>
       <li>Versleuteling, Face ID en code</li>
       <li>Tot 2,5 GB en 5 albums</li>
@@ -143,7 +143,7 @@
   </div>
   <div class="plan">
     <h3>Pro</h3>
-    <p class="plan-price">€11.99 <span>eenmalig</span></p>
+    <p class="plan-price"><span class="price" data-price="pro">€ 11,99</span> <span>eenmalig</span></p>
     <ul>
       <li>Onbeperkte opslag en albums</li>
       <li>Lokkluis en noodwissing</li>
@@ -163,7 +163,7 @@
     <details><summary>Wat gebeurt er als ik mijn telefoon kwijtraak?</summary><p>Had je de versleutelde iCloud-back-up (Pro) aan, dan zet je de kluis met je code terug op je nieuwe iPhone. Terugzetten is gratis. Zonder back-up blijven de foto’s op de oude telefoon op slot.</p></details>
     <details><summary>Is er een limiet voor de grootte van video’s?</summary><p>Niet per bestand. Elke grootte werkt zolang je iPhone ruimte heeft. De gratis versie bewaart tot 2,5 GB in totaal, Pro heeft geen limiet.</p></details>
     <details><summary>Heb je een internetverbinding nodig?</summary><p>Nee. Je kluis werkt volledig offline, en je foto’s gaan nooit online tenzij je de iCloud-back-up aanzet.</p></details>
-    <details><summary>Is Pro een abonnement?</summary><p>Nee. Pro is een eenmalige betaling van € 11,99. Er wordt niets verlengd en er valt niets op te zeggen.</p></details>
+    <details><summary>Is Pro een abonnement?</summary><p>Nee. Pro is een eenmalige betaling van <span class="price" data-price="pro">€ 11,99</span>. Er wordt niets verlengd en er valt niets op te zeggen.</p></details>
   </div>
 </section>
 
@@ -188,6 +188,7 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && lang.open) { lang.open = false; lang.querySelector('summary').focus(); }
 });
 </script>
+<script src="/price.js" defer></script>
 <script src="/demo.js" defer></script>
 </body>
 </html>

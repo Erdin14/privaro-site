@@ -1,0 +1,18 @@
+{
+  "_about": "Privaro Pro's App Store price in each storefront: ISO country code -> currency and amount, as the App Store shows it. Keep it in step with App Store Connect, then run build.py. The site guesses the visitor's country in their browser (time zone, then language settings). A country that isn't listed falls back to the country of the page's language (lang_country), and then to base.",
+  "base": "NL",
+  "lang_country": {
+    "en": "US",
+    "es": "ES",
+    "fr": "FR",
+    "de": "DE",
+    "it": "IT",
+    "pt-BR": "BR",
+    "zh-Hans": "CN",
+    "ko": "KR",
+    "nl": "NL"
+  },
+  "prices": {
+    "NL": "EUR 11.99"
+  }
+}

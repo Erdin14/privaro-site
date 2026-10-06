@@ -133,7 +133,7 @@
   </div>
   <div class="plan">
     <h3>무료</h3>
-    <p class="plan-price">€0</p>
+    <p class="plan-price"><span class="price" data-price="free">€0</span></p>
     <ul>
       <li>암호화, Face ID와 암호</li>
       <li>최대 2.5GB와 앨범 5개</li>
@@ -143,7 +143,7 @@
   </div>
   <div class="plan">
     <h3>Pro</h3>
-    <p class="plan-price">€11.99 <span>1회</span></p>
+    <p class="plan-price"><span class="price" data-price="pro">€11.99</span> <span>1회</span></p>
     <ul>
       <li>무제한 저장 공간과 앨범</li>
       <li>미끼 보관함과 강제 삭제</li>
@@ -163,7 +163,7 @@
     <details><summary>휴대폰을 잃어버리면 어떻게 되나요?</summary><p>암호화된 iCloud 백업(Pro)을 켜 두었다면 새 iPhone에서 암호로 보관함을 복원할 수 있습니다. 복원은 무료입니다. 백업이 없으면 사진은 이전 휴대폰에 잠긴 채로 남습니다.</p></details>
     <details><summary>동영상 크기 제한이 있나요?</summary><p>파일당 제한은 없습니다. iPhone에 공간만 있으면 어떤 크기든 됩니다. 무료 버전은 전체 2.5GB까지, Pro는 제한이 없습니다.</p></details>
     <details><summary>인터넷 연결이 필요한가요?</summary><p>아니요. 보관함은 완전히 오프라인으로 작동하며, iCloud 백업을 켜지 않는 한 사진이 온라인에 올라가는 일은 없습니다.</p></details>
-    <details><summary>Pro는 구독인가요?</summary><p>아니요. Pro는 €11.99를 한 번만 결제합니다. 갱신되는 것도, 해지할 것도 없습니다.</p></details>
+    <details><summary>Pro는 구독인가요?</summary><p>아니요. Pro는 <span class="price" data-price="pro">€11.99</span>를 한 번만 결제합니다. 갱신되는 것도, 해지할 것도 없습니다.</p></details>
   </div>
 </section>
 
@@ -188,6 +188,7 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && lang.open) { lang.open = false; lang.querySelector('summary').focus(); }
 });
 </script>
+<script src="/price.js" defer></script>
 <script src="/demo.js" defer></script>
 </body>
 </html>

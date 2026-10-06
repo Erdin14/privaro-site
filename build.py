@@ -8,6 +8,13 @@ committed, so Vercel just serves static files (no build step on their end).
 
 Shared pieces live in templates/partials/ and are pulled in with {{HEADER}}
 and {{FOOTER}}. The build also writes 404.html, sitemap.xml and robots.txt.
+
+Prices: i18n/prices.json holds Pro's App Store price per country. Each page is
+written with the price for its language's country ({{PRICE}}, {{PRICE_FREE}}),
+and price.js swaps in the visitor's own country's price in their browser.
+i18n/timezones.json maps time zones to countries; it was generated from the
+IANA tz database (zone.tab plus its links) and only needs a refresh if that
+changes.
 """
 import json
 import os
@@ -39,6 +46,59 @@ META = {"index": "home", "pro": "pro", "privacy": "privacy", "terms": "terms"}
 GLOBE = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
          'stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/>'
          '<path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg>')
+
+
+# How each page language writes a price, matching the browser's
+# Intl.NumberFormat with currencyDisplay "narrowSymbol", so the price written
+# into the page is the same text price.js would write. Only the currencies a
+# page's own country can have are needed here; price.js formats the rest.
+SYMBOL = {"USD": "$", "EUR": "€", "BRL": "R$", "CNY": "¥", "KRW": "₩"}
+DIGITS = {"KRW": 0}
+NBSP, NNBSP = "\u00a0", "\u202f"
+# language: (symbol first?, space between symbol and number, group sep, decimal sep, min digits before grouping)
+NUMBER_STYLE = {
+    "en": (True, "", ",", ".", 4), "zh-Hans": (True, "", ",", ".", 4), "ko": (True, "", ",", ".", 4),
+    "es": (False, NBSP, ".", ",", 5), "de": (False, NBSP, ".", ",", 4), "it": (False, NBSP, ".", ",", 5),
+    "fr": (False, NBSP, NNBSP, ",", 4), "pt-BR": (True, NBSP, ".", ",", 4), "nl": (True, NBSP, ".", ",", 4),
+}
+
+
+def format_price(amount, currency, lang):
+    if currency not in SYMBOL:
+        raise SystemExit(f"build.py can't write {currency} prices yet: add it to SYMBOL (and DIGITS if needed)")
+    first, space, group, dec, min_group = NUMBER_STYLE[lang]
+    digits = 0 if amount == int(amount) else DIGITS.get(currency, 2)
+    whole, _, frac = f"{amount:.{digits}f}".partition(".")
+    if len(whole) >= min_group:
+        whole = f"{int(whole):,}".replace(",", group)
+    number = whole + (dec + frac if frac else "")
+    sym = SYMBOL[currency]
+    return f"{sym}{space}{number}" if first else f"{number}{space}{sym}"
+
+
+def load_pricing():
+    with open(os.path.join(ROOT, "i18n", "prices.json"), encoding="utf-8") as f:
+        data = json.load(f)
+    prices = {}
+    for cc, value in data["prices"].items():
+        currency, amount = value.split()
+        prices[cc] = (currency, float(amount))
+    if data["base"] not in prices:
+        raise SystemExit("prices.json: the base country needs a price")
+    with open(os.path.join(ROOT, "i18n", "timezones.json"), encoding="utf-8") as f:
+        zones = json.load(f)
+    return {"base": data["base"], "lang": data["lang_country"], "prices": prices,
+            # Only the time zones of countries with a price matter to price.js.
+            "zones": {z: cc for z, cc in zones.items() if cc in prices}}
+
+
+def price_tokens(pricing, code):
+    """{{PRICE}} and {{PRICE_FREE}} for one language, in its own country's currency."""
+    cc = pricing["lang"].get(code)
+    currency, amount = pricing["prices"][cc if cc in pricing["prices"] else pricing["base"]]
+    span = '<span class="price" data-price="{}">{}</span>'
+    return {"{{PRICE}}": span.format("pro", format_price(amount, currency, code)),
+            "{{PRICE_FREE}}": span.format("free", format_price(0, currency, code))}
 
 
 def load_strings():
@@ -111,7 +171,7 @@ def read_template(name):
     return html
 
 
-def render(html, page, code, htmllang, head, strings):
+def render(html, page, code, htmllang, head, strings, pricing):
     """Fill in a template for one language. `page` decides where the language links go."""
     html = html.replace("{{LANG}}", htmllang)
     html = html.replace("{{SEO}}", head)
@@ -125,6 +185,8 @@ def render(html, page, code, htmllang, head, strings):
         html = html.replace("{{CUR_" + nav + "}}", ' aria-current="page"' if nav == page else "")
     for key, vals in strings.items():
         html = html.replace("{{" + key + "}}", vals.get(code, vals["en"]))
+    for token, value in price_tokens(pricing, code).items():
+        html = html.replace(token, value)
     if "{{" in html:
         leftover = html[html.index("{{"):html.index("{{") + 40]
         raise SystemExit(f"Unreplaced token in {page}/{code}: {leftover!r}")
@@ -157,16 +219,23 @@ def sitemap():
 
 def main():
     strings = load_strings()
+    pricing = load_pricing()
     for page, _ in PAGES.items():
         template = read_template(PAGES[page])
         for code, _, htmllang, _ in LANGS:
-            html = render(template, page, code, htmllang, seo_block(page, code), strings)
+            html = render(template, page, code, htmllang, seo_block(page, code), strings, pricing)
             write(out_path(page, code), html)
 
     # One English 404 for every path; its language menu leads to each homepage.
     html = render(read_template("404.html"), "index", "en", "en",
-                  '<meta name="robots" content="noindex" />', strings)
+                  '<meta name="robots" content="noindex" />', strings, pricing)
     write("404.html", html)
+
+    with open(os.path.join(ROOT, "templates", "price.js"), encoding="utf-8") as f:
+        script = f.read()
+    data = {"base": pricing["base"], "lang": pricing["lang"], "zones": pricing["zones"],
+            "prices": {cc: [cur, amt] for cc, (cur, amt) in sorted(pricing["prices"].items())}}
+    write("price.js", script.replace("/*DATA*/null", json.dumps(data, ensure_ascii=False, separators=(",", ":"))))
 
     write("sitemap.xml", sitemap())
     write("robots.txt", f"User-agent: *\nDisallow: /screenshots\n\nSitemap: {BASE_URL}/sitemap.xml\n")
