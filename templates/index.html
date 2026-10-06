@@ -67,7 +67,10 @@
       <figcaption>{{demo_before}}</figcaption>
     </figure>
     <figure>
-      <canvas class="demo-after" width="295" height="640" tabindex="0" role="button" aria-label="{{demo_hold}}"></canvas>
+      <div class="demo-stage">
+        <canvas class="demo-after" width="295" height="640" tabindex="0" role="button" aria-label="{{demo_hold}}"></canvas>
+        <div class="scan" aria-hidden="true"><span></span></div>
+      </div>
       <figcaption><b>{{demo_after}}</b> · {{demo_hold}}</figcaption>
     </figure>
     <div class="demo-controls">

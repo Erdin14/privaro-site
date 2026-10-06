@@ -2,8 +2,10 @@
 // photo is read, encrypted and drawn inside this page.
 
 // "See it encrypted": AES-256-GCM over a photo's pixels, with the encrypted
-// bytes drawn back as pixels. Pressing and holding really decrypts them; the
-// photo then unscrambles block by block, roughly top to bottom.
+// bytes drawn back as pixels. Pressing and holding really decrypts them. The
+// reveal then follows the bytes in order, the way the cipher walks through
+// them sixteen at a time: a line sweeps down with the photo above it and the
+// byte offset riding on it.
 (() => {
   const demo = document.getElementById('demo');
   if (!demo || !window.crypto || !crypto.subtle) return;
@@ -11,80 +13,86 @@
 
   const before = demo.querySelector('.demo-before');
   const after = demo.querySelector('.demo-after');
+  const scan = demo.querySelector('.scan');
+  const readout = scan.querySelector('span');
   const keyOut = demo.querySelector('.demo-key code');
   const ctx = after.getContext('2d');
   const MAX = 640;
   const motion = !matchMedia('(prefers-reduced-motion: reduce)').matches;
-  let w, h, rgb, key, iv, cipher, plain, showing = false;
+  let w, h, n, rgb, key, iv, cipher, plain, out, showing = false;
 
-  // The encrypted canvas is drawn in square tiles. `order` is the sequence
-  // they switch in; `pos` counts how many, in that order, show the photo.
-  let out, order, tile, cols, pos = 0, target = 0, speed = 0, last = 0, frame = 0;
+  // Pixels lo..hi (in reading order) show the photo; the rest show ciphertext.
+  // A reveal moves hi down, letting go moves it back up, and encrypting a new
+  // photo moves lo down.
+  let lo = 0, hi = 0, tween = null, frame = 0, fade = 0;
 
-  function setup() {
-    tile = Math.max(4, Math.round(Math.min(w, h) / 56));
-    cols = Math.ceil(w / tile);
-    const rows = Math.ceil(h / tile);
-    const tiles = [];
-    for (let r = 0; r < rows; r++) {
-      for (let c = 0; c < cols; c++) tiles.push([r * cols + c, 0.55 * (r / rows) + 0.45 * Math.random()]);
-    }
-    tiles.sort((a, b) => a[1] - b[1]);
-    order = Uint32Array.from(tiles, t => t[0]);
-    after.width = w;
-    after.height = h;
-    out = ctx.createImageData(w, h);
-    for (let i = 3; i < out.data.length; i += 4) out.data[i] = 255;
-    cancelAnimationFrame(frame);
-    frame = 0;
-  }
-
-  // Copy tiles order[from..to) from `src` (packed RGB) into the canvas buffer.
+  // Copy pixels from..to of `src` (packed RGB) to the canvas, redrawing only those rows.
   function paint(from, to, src) {
     const d = out.data;
-    for (let k = from; k < to; k++) {
-      const x0 = (order[k] % cols) * tile, y0 = Math.floor(order[k] / cols) * tile;
-      const x1 = Math.min(x0 + tile, w), y1 = Math.min(y0 + tile, h);
-      for (let y = y0; y < y1; y++) {
-        for (let x = x0, i = (y * w + x0) * 4, j = (y * w + x0) * 3; x < x1; x++, i += 4, j += 3) {
-          d[i] = src[j];
-          d[i + 1] = src[j + 1];
-          d[i + 2] = src[j + 2];
-        }
-      }
+    for (let i = from * 4, j = from * 3, end = to * 3; j < end; i += 4, j += 3) {
+      d[i] = src[j];
+      d[i + 1] = src[j + 1];
+      d[i + 2] = src[j + 2];
     }
+    const y0 = Math.floor(from / w), y1 = Math.ceil(to / w);
+    if (y1 > y0) ctx.putImageData(out, 0, 0, 0, y0, w, y1 - y0);
+  }
+  function setLo(v) { if (v > lo) paint(lo, v, cipher); lo = v; }
+  function setHi(v) {
+    if (v > hi) paint(hi, v, plain);
+    else if (v < hi) paint(v, hi, cipher);
+    hi = v;
   }
 
-  function show(state) {
-    paint(0, order.length, state ? plain : cipher);
-    pos = target = state ? order.length : 0;
-    ctx.putImageData(out, 0, 0);
+  // Put the line at pixel `p` and show its byte offset, or `text`.
+  function line(p, text) {
+    const y = after.clientTop + (p / w / h) * after.clientHeight;
+    scan.style.transform = `translateY(${y.toFixed(2)}px)`;
+    scan.classList.toggle('flip', y > after.clientHeight - 24);
+    // Offsets count whole 16-byte AES blocks, the unit the cipher works in.
+    readout.textContent = text || '0x' + (Math.floor(p * 3 / 16) * 16).toString(16).toUpperCase().padStart(6, '0');
+    clearTimeout(fade);
+    scan.classList.add('on');
+  }
+  function hideLine(delay) {
+    clearTimeout(fade);
+    fade = setTimeout(() => scan.classList.remove('on'), delay || 0);
   }
 
-  // Move towards all-photo (1) or all-noise (0) over `ms`, from wherever it is now.
-  function animate(to, ms) {
-    if (!motion) {
-      cancelAnimationFrame(frame);
-      frame = 0;
-      return show(to === 1);
+  const ease = t => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
+
+  // Move lo or hi to `to`. A full sweep takes `ms`; a partial one, its share of that.
+  function run(which, to, ms, done) {
+    cancelAnimationFrame(frame);
+    frame = 0;
+    const set = which === 'lo' ? setLo : setHi;
+    const from = which === 'lo' ? lo : hi;
+    if (!motion || from === to) {
+      tween = null;
+      set(to);
+      if (done) done();
+      return;
     }
-    target = to * order.length;
-    speed = order.length / ms;
-    if (!frame) { last = performance.now(); frame = requestAnimationFrame(step); }
+    tween = { set, from, to, done, start: performance.now(), dur: Math.max(180, ms * Math.abs(to - from) / n), lo: which === 'lo' };
+    frame = requestAnimationFrame(step);
   }
-
   function step(now) {
-    // A frame's timestamp can be slightly earlier than the call that asked
-    // for it, so clamp the step instead of ever moving backwards.
-    const dt = Math.max(0, Math.min(now - last, 50));
-    last = Math.max(last, now);
-    const next = pos < target ? Math.min(target, pos + speed * dt) : Math.max(target, pos - speed * dt);
-    const a = Math.floor(pos), b = Math.floor(next);
-    if (b > a) paint(a, b, plain);
-    else if (b < a) paint(b, a, cipher);
-    pos = next;
-    ctx.putImageData(out, 0, 0);
-    frame = pos !== target ? requestAnimationFrame(step) : 0;
+    const t = Math.min(1, Math.max(0, (now - tween.start) / tween.dur));
+    const v = Math.round(tween.from + (tween.to - tween.from) * ease(t));
+    tween.set(v);
+    line(v);
+    if (t < 1) { frame = requestAnimationFrame(step); return; }
+    frame = 0;
+    const done = tween.done;
+    tween = null;
+    if (done) done();
+  }
+
+  // Finish encrypting a new photo at once, so a reveal starts from all noise.
+  function settle() {
+    if (tween && tween.lo) { cancelAnimationFrame(frame); frame = 0; tween = null; }
+    if (lo > 0) setLo(n);
+    if (lo === n) lo = hi = 0;
   }
 
   async function encrypt(fromPhoto) {
@@ -95,24 +103,35 @@
     keyOut.textContent = Array.from(raw, b => b.toString(16).padStart(2, '0')).join('');
     cancelAnimationFrame(frame);
     frame = 0;
+    tween = null;
     if (fromPhoto) {
-      // A new photo starts out visible and dissolves into its ciphertext.
+      // A new photo starts out whole and is encrypted from the first byte down.
       plain = rgb;
-      show(true);
-      animate(0, 900);
+      lo = 0;
+      hi = n;
+      paint(0, n, rgb);
+      run('lo', n, 1200, () => { lo = hi = 0; hideLine(150); });
     } else {
-      show(false);
+      lo = hi = 0;
+      paint(0, n, cipher);
+      hideLine();
     }
   }
 
   async function reveal(on) {
     showing = on;
     if (!cipher) return;
-    if (!on) return animate(0, 320);
+    if (!on) {
+      if (tween && tween.lo) return;
+      if (hi > 0) run('hi', 0, 560, () => hideLine());
+      return;
+    }
     const decrypted = new Uint8Array(await crypto.subtle.decrypt({ name: 'AES-GCM', iv }, key, cipher));
     if (!showing) return;
+    settle();
     plain = decrypted;
-    animate(1, 560);
+    // decrypt() only returns once the GCM tag has checked out, so say so at the end.
+    run('hi', n, 1000, () => { if (motion) { line(n, 'GCM tag ✓'); hideLine(1100); } });
   }
 
   function load(src) {
@@ -121,19 +140,21 @@
       const scale = Math.min(1, MAX / Math.max(img.naturalWidth, img.naturalHeight));
       w = Math.max(1, Math.round(img.naturalWidth * scale));
       h = Math.max(1, Math.round(img.naturalHeight * scale));
-      before.width = w;
-      before.height = h;
+      n = w * h;
+      before.width = after.width = w;
+      before.height = after.height = h;
       const bctx = before.getContext('2d');
       bctx.drawImage(img, 0, 0, w, h);
       const px = bctx.getImageData(0, 0, w, h).data;
-      rgb = new Uint8Array(w * h * 3);
+      rgb = new Uint8Array(n * 3);
       for (let i = 0, j = 0; i < px.length; i += 4, j += 3) {
         rgb[j] = px[i];
         rgb[j + 1] = px[i + 1];
         rgb[j + 2] = px[i + 2];
       }
+      out = ctx.createImageData(w, h);
+      for (let i = 3; i < out.data.length; i += 4) out.data[i] = 255;
       if (src.startsWith('blob:')) URL.revokeObjectURL(src);
-      setup();
       encrypt(true);
     };
     img.src = src;
@@ -154,7 +175,7 @@
   demo.querySelector('.demo-rekey').addEventListener('click', () => { if (rgb && !showing) encrypt(false); });
 
   // Start with a screenshot of the vault, once the section is in view, so
-  // the first dissolve into noise happens where it can be seen.
+  // the first encryption sweep happens where it can be seen.
   new IntersectionObserver((entries, io) => {
     if (entries.some(e => e.isIntersecting)) { io.disconnect(); load('/shots/shot-vault.jpg'); }
   }, { threshold: 0.3 }).observe(demo);

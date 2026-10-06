@@ -111,6 +111,16 @@ h1, h2, h3 { font-weight: 600; }
 .demo canvas { display: block; width: auto; height: auto; max-width: 100%; max-height: 520px;
   border: 1px solid var(--rule); border-radius: 18px; background: var(--rule); }
 .demo-after { cursor: pointer; touch-action: none; -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; }
+/* The scan line that marks how far through the bytes the cipher is, with
+   the byte offset riding on it. It sits over the image, so it keeps the same
+   colours in light and dark mode. */
+.demo-stage { position: relative; display: inline-block; max-width: 100%; vertical-align: top; border-radius: 18px; overflow: hidden; }
+.scan { position: absolute; left: 0; right: 0; top: 0; height: 1px; background: #fff; box-shadow: 0 0 0 .5px rgba(0, 0, 0, .55);
+  opacity: 0; transition: opacity .25s; pointer-events: none; will-change: transform; }
+.scan.on { opacity: 1; transition: none; }
+.scan span { position: absolute; right: 8px; top: 4px; padding: 3px 6px; background: #0a0a0a; color: #fff;
+  font: 500 10.5px/1.2 ui-monospace, "SF Mono", Menlo, monospace; letter-spacing: .02em; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.scan.flip span { top: auto; bottom: 4px; }
 .demo figcaption { margin-top: 12px; font-size: 14px; color: var(--muted); }
 .demo figcaption b { color: var(--ink); font-weight: 600; }
 .demo-controls { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
