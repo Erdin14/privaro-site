@@ -9,13 +9,17 @@ committed, so Vercel just serves static files (no build step on their end).
 Shared pieces live in templates/partials/ and are pulled in with {{HEADER}}
 and {{FOOTER}}. The build also writes 404.html, sitemap.xml and robots.txt.
 
-Prices: i18n/prices.json holds Pro's App Store price per country. Each page is
-written with the price for its language's country ({{PRICE}}, {{PRICE_FREE}}),
-and price.js swaps in the visitor's own country's price in their browser.
+Prices: Pro's App Store price per country comes from the App Store Connect
+CSV exports in i18n/prices/; i18n/prices.json says how to fall back. Each page
+is written with the price for its language's country ({{PRICE}},
+{{PRICE_FREE}}), and price.js swaps in the visitor's own country's price in
+their browser.
 i18n/timezones.json maps time zones to countries; it was generated from the
 IANA tz database (zone.tab plus its links) and only needs a refresh if that
 changes.
 """
+import csv
+import glob
 import json
 import os
 
@@ -79,15 +83,25 @@ def format_price(amount, currency, lang):
 def load_pricing():
     with open(os.path.join(ROOT, "i18n", "prices.json"), encoding="utf-8") as f:
         data = json.load(f)
+    with open(os.path.join(ROOT, "i18n", "countries.json"), encoding="utf-8") as f:
+        codes = json.load(f)
     prices = {}
-    for cc, value in data["prices"].items():
-        currency, amount = value.split()
-        prices[cc] = (currency, float(amount))
+    for path in sorted(glob.glob(os.path.join(ROOT, "i18n", "prices", "*.csv"))):
+        with open(path, encoding="utf-8-sig", newline="") as f:
+            for row in csv.DictReader(f):
+                name = row["Countries or Regions"]
+                if name not in codes:
+                    raise SystemExit(f"{os.path.basename(path)}: no country code for {name!r}; add it to i18n/countries.json")
+                price = (row["Currency Code"], float(row["Price"]))
+                cc = codes[name]
+                if prices.get(cc, price) != price:
+                    raise SystemExit(f"Two different prices for {name}: {prices[cc]} and {price}")
+                prices[cc] = price
     if data["base"] not in prices:
         raise SystemExit("prices.json: the base country needs a price")
     with open(os.path.join(ROOT, "i18n", "timezones.json"), encoding="utf-8") as f:
         zones = json.load(f)
-    return {"base": data["base"], "lang": data["lang_country"], "prices": prices,
+    return {"base": data["base"], "lang": data["lang_country"], "prices": prices, "usd_local": data["usd_local"],
             # Only the time zones of countries with a price matter to price.js.
             "zones": {z: cc for z, cc in zones.items() if cc in prices}}
 
@@ -233,7 +247,7 @@ def main():
 
     with open(os.path.join(ROOT, "templates", "price.js"), encoding="utf-8") as f:
         script = f.read()
-    data = {"base": pricing["base"], "lang": pricing["lang"], "zones": pricing["zones"],
+    data = {"base": pricing["base"], "lang": pricing["lang"], "zones": pricing["zones"], "usd": pricing["usd_local"],
             "prices": {cc: [cur, amt] for cc, (cur, amt) in sorted(pricing["prices"].items())}}
     write("price.js", script.replace("/*DATA*/null", json.dumps(data, ensure_ascii=False, separators=(",", ":"))))
 

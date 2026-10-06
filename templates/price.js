@@ -21,9 +21,14 @@
     return listed(DATA.lang[lang]) ? DATA.lang[lang] : DATA.base;
   }
 
-  const [currency, amount] = DATA.prices[country()];
+  const cc = country();
+  const [currency, amount] = DATA.prices[cc];
+  // "$" is fine where it means the local dollar, but many storefronts charge
+  // in US dollars where "$" means something else (pesos, in Argentina), so
+  // those get the plain currency code.
+  const display = currency === 'USD' && !DATA.usd.includes(cc) ? 'code' : 'narrowSymbol';
   function format(n) {
-    const opts = { style: 'currency', currency, currencyDisplay: 'narrowSymbol' };
+    const opts = { style: 'currency', currency, currencyDisplay: display };
     if (n % 1 === 0) { opts.minimumFractionDigits = 0; opts.maximumFractionDigits = 0; }
     try { return new Intl.NumberFormat(lang, opts).format(n); }
     catch (e) { opts.currencyDisplay = 'symbol'; return new Intl.NumberFormat(lang, opts).format(n); }
