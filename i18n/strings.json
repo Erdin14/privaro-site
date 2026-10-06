@@ -32,17 +32,6 @@
     "ko": "개인정보",
     "nl": "Privacy"
   },
-  "nav_terms": {
-    "en": "Terms",
-    "es": "Términos",
-    "fr": "Conditions",
-    "de": "Nutzungsbedingungen",
-    "it": "Termini",
-    "pt-BR": "Termos",
-    "zh-Hans": "条款",
-    "ko": "약관",
-    "nl": "Voorwaarden"
-  },
   "hero_lead": {
     "en": "Privaro is a vault for your iPhone. What you put in it is encrypted on the phone itself and only opens with Face ID or Privaro’s own passcode. There’s no account, and nothing is uploaded.",
     "es": "Privaro es una caja fuerte para tu iPhone. Lo que guardas en ella se cifra en el propio teléfono y solo se abre con Face ID o con el código de Privaro. No hay cuenta y no se sube nada.",
@@ -108,39 +97,6 @@
     "zh-Hans": "一款适用于 iPhone 的私密加密照片和视频保险库。",
     "ko": "iPhone를 위한 비공개 암호화 사진·동영상 보관함.",
     "nl": "Een privé, versleutelde foto- en videokluis voor de iPhone."
-  },
-  "footer_product": {
-    "en": "Product",
-    "es": "Producto",
-    "fr": "Produit",
-    "de": "Produkt",
-    "it": "Prodotto",
-    "pt-BR": "Produto",
-    "zh-Hans": "产品",
-    "ko": "제품",
-    "nl": "Product"
-  },
-  "footer_legal": {
-    "en": "Legal",
-    "es": "Legal",
-    "fr": "Mentions légales",
-    "de": "Rechtliches",
-    "it": "Note legali",
-    "pt-BR": "Jurídico",
-    "zh-Hans": "法律",
-    "ko": "법적 고지",
-    "nl": "Juridisch"
-  },
-  "footer_support": {
-    "en": "Support",
-    "es": "Soporte",
-    "fr": "Assistance",
-    "de": "Support",
-    "it": "Supporto",
-    "pt-BR": "Suporte",
-    "zh-Hans": "支持",
-    "ko": "지원",
-    "nl": "Ondersteuning"
   },
   "footer_pro": {
     "en": "Pro features",

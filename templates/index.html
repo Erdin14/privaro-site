@@ -7,28 +7,14 @@
 <meta name="description" content="{{meta_desc_home}}" />
 <meta name="apple-itunes-app" content="app-id=6783131829" />
 <meta name="color-scheme" content="light dark" />
-{{HREFLANG}}
+{{SEO}}
 <link rel="icon" href="/logo.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
 <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
 
-<header class="site-head">
-  <div class="wrap">
-    <a class="brand" href="{{HOME_URL}}">
-      <img src="/logo.png" width="28" height="28" alt="" />
-      Privaro
-    </a>
-    <span class="head-divider" aria-hidden="true"></span>
-    <nav class="site-nav">
-      <a href="{{PRO_URL}}">{{nav_pro}}</a>
-      <a href="{{PRIVACY_URL}}">{{nav_privacy}}</a>
-      {{SWITCHER}}
-      <a class="nav-get" href="https://apps.apple.com/app/id6783131829">{{nav_download}}</a>
-    </nav>
-  </div>
-</header>
+{{HEADER}}
 
 <main>
 
@@ -46,7 +32,7 @@
       <p class="hero-meta">{{hero_meta}}</p>
     </div>
     <div class="hero-phone">
-      <div class="phone"><img src="/shots/shot-lock.jpg" width="700" height="1521" alt="{{alt_lock}}" /></div>
+      <div class="phone"><img src="/shots/shot-lock.jpg" width="700" height="1521" alt="{{alt_lock}}" fetchpriority="high" /></div>
     </div>
   </div>
 </section>
@@ -146,22 +132,6 @@
 
 </main>
 
-<footer class="site-foot">
-  <div class="wrap">
-    <div class="foot-brand">
-      <img src="/logo.png" width="22" height="22" alt="" />
-      <span>{{footer_tagline}}</span>
-    </div>
-    <nav class="foot-links">
-      <a href="{{PRO_URL}}">{{footer_pro}}</a>
-      <a href="{{PRIVACY_URL}}">{{footer_privacy}}</a>
-      <a href="{{TERMS_URL}}">{{footer_terms}}</a>
-      <a href="mailto:erdincdubu@icloud.com">{{footer_contact}}</a>
-    </nav>
-    <p class="foot-legal">© <span id="year">2026</span> Privaro. {{footer_rights}}</p>
-  </div>
-</footer>
-
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+{{FOOTER}}
 </body>
 </html>

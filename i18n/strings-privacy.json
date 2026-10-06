@@ -21,17 +21,6 @@
     "ko": "Privaro가 사용자의 정보를 어떻게 다루는지 설명합니다. 요약하면, 콘텐츠는 기기에서 암호화되며 저희에게 전송되지 않습니다.",
     "zh-Hans": "Privaro 如何处理你的信息。简而言之：你的内容在设备上加密，绝不会发送给我们。"
   },
-  "priv_back": {
-    "en": "Back to home",
-    "de": "Zurück zur Startseite",
-    "nl": "Terug naar de startpagina",
-    "es": "Volver al inicio",
-    "fr": "Retour à l’accueil",
-    "it": "Torna alla home",
-    "pt-BR": "Voltar ao início",
-    "ko": "홈으로 돌아가기",
-    "zh-Hans": "返回首页"
-  },
   "priv_h1": {
     "en": "Privacy Policy",
     "de": "Datenschutzerklärung",
@@ -350,28 +339,6 @@
     "pt-BR": "Esta política também está disponível em outros idiomas. Em caso de divergência, prevalece a versão em inglês.",
     "ko": "본 방침은 다른 언어로도 제공됩니다. 내용이 다를 경우 영어 버전이 우선합니다.",
     "zh-Hans": "本政策亦提供其他语言版本。如有出入，以英文版本为准。"
-  },
-  "priv_rights": {
-    "en": "All rights reserved.",
-    "de": "Alle Rechte vorbehalten.",
-    "nl": "Alle rechten voorbehouden.",
-    "es": "Todos los derechos reservados.",
-    "fr": "Tous droits réservés.",
-    "it": "Tutti i diritti riservati.",
-    "pt-BR": "Todos os direitos reservados.",
-    "ko": "All rights reserved.",
-    "zh-Hans": "保留所有权利。"
-  },
-  "footer_home": {
-    "en": "Home",
-    "de": "Startseite",
-    "nl": "Start",
-    "es": "Inicio",
-    "fr": "Accueil",
-    "it": "Home",
-    "pt-BR": "Início",
-    "ko": "홈",
-    "zh-Hans": "首页"
   },
   "priv_s5_h": {
     "en": "Purchases (Apple)",

@@ -1,0 +1,25 @@
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-brand">
+      <img src="/logo.png" width="22" height="22" alt="" />
+      <span>{{footer_tagline}}</span>
+    </div>
+    <nav class="foot-links">
+      <a href="{{PRO_URL}}">{{footer_pro}}</a>
+      <a href="{{PRIVACY_URL}}">{{footer_privacy}}</a>
+      <a href="{{TERMS_URL}}">{{footer_terms}}</a>
+      <a href="mailto:erdincdubu@icloud.com">{{footer_contact}}</a>
+    </nav>
+    <p class="foot-legal">© <span id="year">2026</span> Privaro. {{footer_rights}}</p>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+// The language menu is a <details>; close it on a click elsewhere or on Escape.
+const lang = document.querySelector('.lang');
+document.addEventListener('click', e => { if (lang.open && !lang.contains(e.target)) lang.open = false; });
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && lang.open) { lang.open = false; lang.querySelector('summary').focus(); }
+});
+</script>

@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Politique de confidentialité · Privaro</title>
 <meta name="description" content="Comment Privaro traite vos informations. En bref : votre contenu est chiffré sur votre appareil et ne nous est jamais transmis." />
+<link rel="canonical" href="https://privaro-site.vercel.app/fr/privacy" />
 <link rel="alternate" hreflang="en" href="https://privaro-site.vercel.app/privacy" />
 <link rel="alternate" hreflang="es" href="https://privaro-site.vercel.app/es/privacy" />
 <link rel="alternate" hreflang="fr" href="https://privaro-site.vercel.app/fr/privacy" />
@@ -15,21 +16,40 @@
 <link rel="alternate" hreflang="ko" href="https://privaro-site.vercel.app/ko/privacy" />
 <link rel="alternate" hreflang="nl" href="https://privaro-site.vercel.app/nl/privacy" />
 <link rel="alternate" hreflang="x-default" href="https://privaro-site.vercel.app/privacy" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Privaro" />
+<meta property="og:title" content="Politique de confidentialité · Privaro" />
+<meta property="og:description" content="Comment Privaro traite vos informations. En bref : votre contenu est chiffré sur votre appareil et ne nous est jamais transmis." />
+<meta property="og:url" content="https://privaro-site.vercel.app/fr/privacy" />
+<meta property="og:image" content="https://privaro-site.vercel.app/og.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="fr_FR" />
+<meta name="twitter:card" content="summary_large_image" />
 <meta name="color-scheme" content="light dark" />
+<meta name="apple-itunes-app" content="app-id=6783131829" />
 <link rel="icon" href="/logo.png" />
+<link rel="apple-touch-icon" href="/logo.png" />
 <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
 
-<main class="legal-page">
-  <div class="legal-top">
-    <a class="back" href="/fr">
-      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-      Retour à l’accueil
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="/fr">
+      <img src="/logo.png" width="28" height="28" alt="" />
+      Privaro
     </a>
-    <details class="lang"><summary aria-label="Langue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>Français</span></summary><div class="lang-menu"><a href="/privacy">English</a><a href="/es/privacy">Español</a><a href="/fr/privacy" class="active">Français</a><a href="/de/privacy">Deutsch</a><a href="/it/privacy">Italiano</a><a href="/pt-br/privacy">Português</a><a href="/zh/privacy">简体中文</a><a href="/ko/privacy">한국어</a><a href="/nl/privacy">Nederlands</a></div></details>
+    <nav class="site-nav">
+      <a href="/fr/pro">Pro</a>
+      <a href="/fr/privacy" aria-current="page">Confidentialité</a>
+      <details class="lang"><summary aria-label="Langue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>Français</span></summary><div class="lang-menu"><a href="/privacy">English</a><a href="/es/privacy">Español</a><a href="/fr/privacy" class="active">Français</a><a href="/de/privacy">Deutsch</a><a href="/it/privacy">Italiano</a><a href="/pt-br/privacy">Português</a><a href="/zh/privacy">简体中文</a><a href="/ko/privacy">한국어</a><a href="/nl/privacy">Nederlands</a></div></details>
+      <a class="nav-get" href="https://apps.apple.com/app/id6783131829">Télécharger</a>
+    </nav>
   </div>
+</header>
 
+<main class="legal-page">
   <h1>Politique de confidentialité</h1>
   <p class="updated">Date d’entrée en vigueur : 28 juin 2026 · Dernière mise à jour : 28 juin 2026</p>
 
@@ -97,12 +117,30 @@
   <p class="authoritative">Cette politique est également disponible dans d’autres langues. En cas de divergence, la version anglaise fait foi.</p>
 </main>
 
-<footer>
+<footer class="site-foot">
   <div class="wrap">
-    <div class="legal">© <span id="year">2026</span> Privaro. Tous droits réservés. · <a href="/fr">Accueil</a> · <a href="/fr/terms">Conditions d'utilisation</a></div>
+    <div class="foot-brand">
+      <img src="/logo.png" width="22" height="22" alt="" />
+      <span>Un coffre-fort privé et chiffré pour photos et vidéos sur iPhone.</span>
+    </div>
+    <nav class="foot-links">
+      <a href="/fr/pro">Fonctions Pro</a>
+      <a href="/fr/privacy">Politique de confidentialité</a>
+      <a href="/fr/terms">Conditions d'utilisation</a>
+      <a href="mailto:erdincdubu@icloud.com">Contact</a>
+    </nav>
+    <p class="foot-legal">© <span id="year">2026</span> Privaro. Tous droits réservés.</p>
   </div>
 </footer>
 
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+// The language menu is a <details>; close it on a click elsewhere or on Escape.
+const lang = document.querySelector('.lang');
+document.addEventListener('click', e => { if (lang.open && !lang.contains(e.target)) lang.open = false; });
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && lang.open) { lang.open = false; lang.querySelector('summary').focus(); }
+});
+</script>
 </body>
 </html>

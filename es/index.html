@@ -7,6 +7,7 @@
 <meta name="description" content="Privaro guarda tus fotos y vídeos privados cifrados en tu iPhone, protegidos con Face ID y un código propio. Sin cuenta y sin subir nada." />
 <meta name="apple-itunes-app" content="app-id=6783131829" />
 <meta name="color-scheme" content="light dark" />
+<link rel="canonical" href="https://privaro-site.vercel.app/es" />
 <link rel="alternate" hreflang="en" href="https://privaro-site.vercel.app/" />
 <link rel="alternate" hreflang="es" href="https://privaro-site.vercel.app/es" />
 <link rel="alternate" hreflang="fr" href="https://privaro-site.vercel.app/fr" />
@@ -17,6 +18,16 @@
 <link rel="alternate" hreflang="ko" href="https://privaro-site.vercel.app/ko" />
 <link rel="alternate" hreflang="nl" href="https://privaro-site.vercel.app/nl" />
 <link rel="alternate" hreflang="x-default" href="https://privaro-site.vercel.app/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Privaro" />
+<meta property="og:title" content="Privaro: una caja fuerte privada para tus fotos y vídeos en el iPhone" />
+<meta property="og:description" content="Privaro guarda tus fotos y vídeos privados cifrados en tu iPhone, protegidos con Face ID y un código propio. Sin cuenta y sin subir nada." />
+<meta property="og:url" content="https://privaro-site.vercel.app/es" />
+<meta property="og:image" content="https://privaro-site.vercel.app/og.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="es_ES" />
+<meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" href="/logo.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
 <link rel="stylesheet" href="/styles.css" />
@@ -29,7 +40,6 @@
       <img src="/logo.png" width="28" height="28" alt="" />
       Privaro
     </a>
-    <span class="head-divider" aria-hidden="true"></span>
     <nav class="site-nav">
       <a href="/es/pro">Pro</a>
       <a href="/es/privacy">Privacidad</a>
@@ -55,7 +65,7 @@
       <p class="hero-meta">Gratis · iOS 17.6 o posterior · Pro es un pago único</p>
     </div>
     <div class="hero-phone">
-      <div class="phone"><img src="/shots/shot-lock.jpg" width="700" height="1521" alt="La pantalla de bloqueo de Privaro, lista para Face ID" /></div>
+      <div class="phone"><img src="/shots/shot-lock.jpg" width="700" height="1521" alt="La pantalla de bloqueo de Privaro, lista para Face ID" fetchpriority="high" /></div>
     </div>
   </div>
 </section>
@@ -171,6 +181,14 @@
   </div>
 </footer>
 
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+// The language menu is a <details>; close it on a click elsewhere or on Escape.
+const lang = document.querySelector('.lang');
+document.addEventListener('click', e => { if (lang.open && !lang.contains(e.target)) lang.open = false; });
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && lang.open) { lang.open = false; lang.querySelector('summary').focus(); }
+});
+</script>
 </body>
 </html>
