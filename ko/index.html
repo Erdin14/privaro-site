@@ -7,6 +7,7 @@
 <meta name="description" content="Privaro는 비공개 사진과 동영상을 iPhone에 암호화해 보관하고, Face ID와 별도의 암호로 지켜 줍니다. 계정도, 업로드도 없습니다." />
 <meta name="apple-itunes-app" content="app-id=6783131829" />
 <meta name="color-scheme" content="light dark" />
+<link rel="canonical" href="https://privaro-site.vercel.app/ko" />
 <link rel="alternate" hreflang="en" href="https://privaro-site.vercel.app/" />
 <link rel="alternate" hreflang="es" href="https://privaro-site.vercel.app/es" />
 <link rel="alternate" hreflang="fr" href="https://privaro-site.vercel.app/fr" />
@@ -17,160 +18,177 @@
 <link rel="alternate" hreflang="ko" href="https://privaro-site.vercel.app/ko" />
 <link rel="alternate" hreflang="nl" href="https://privaro-site.vercel.app/nl" />
 <link rel="alternate" hreflang="x-default" href="https://privaro-site.vercel.app/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Privaro" />
+<meta property="og:title" content="Privaro: iPhone용 비공개 사진·동영상 보관함" />
+<meta property="og:description" content="Privaro는 비공개 사진과 동영상을 iPhone에 암호화해 보관하고, Face ID와 별도의 암호로 지켜 줍니다. 계정도, 업로드도 없습니다." />
+<meta property="og:url" content="https://privaro-site.vercel.app/ko" />
+<meta property="og:image" content="https://privaro-site.vercel.app/og.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="ko_KR" />
+<meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" href="/logo.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
 <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
 
-<header class="site-head">
-  <div class="wrap">
-    <a class="brand" href="/ko">
-      <img src="/logo.png" width="28" height="28" alt="" />
-      Privaro
-    </a>
-    <span class="head-divider" aria-hidden="true"></span>
-    <nav class="site-nav">
-      <a href="/ko/pro">Pro</a>
-      <a href="/ko/privacy">개인정보</a>
-      <details class="lang"><summary aria-label="언어"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>한국어</span></summary><div class="lang-menu"><a href="/">English</a><a href="/es">Español</a><a href="/fr">Français</a><a href="/de">Deutsch</a><a href="/it">Italiano</a><a href="/pt-br">Português</a><a href="/zh">简体中文</a><a href="/ko" class="active">한국어</a><a href="/nl">Nederlands</a></div></details>
-      <a class="nav-get" href="https://apps.apple.com/app/id6783131829">다운로드</a>
-    </nav>
-  </div>
+<header class="site-head wrap grid">
+  <a class="brand" href="/ko">Privaro</a>
+  <nav class="site-nav">
+    <a href="/ko/pro">Pro</a>
+    <a href="/ko/privacy">개인정보</a>
+    <details class="lang"><summary aria-label="언어"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>한국어</span></summary><div class="lang-menu"><a href="/">English</a><a href="/es">Español</a><a href="/fr">Français</a><a href="/de">Deutsch</a><a href="/it">Italiano</a><a href="/pt-br">Português</a><a href="/zh">简体中文</a><a href="/ko" class="active">한국어</a><a href="/nl">Nederlands</a></div></details>
+    <a class="nav-get" href="https://apps.apple.com/app/id6783131829">다운로드</a>
+  </nav>
 </header>
 
 <main>
 
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div class="hero-text">
-      <h1>비공개 사진과 동영상을 비공개로.</h1>
-      <p class="lead">Privaro는 iPhone 속 보관함입니다. 넣은 것은 기기에서 바로 암호화되고, Face ID나 Privaro 전용 암호로만 열립니다. 계정이 필요 없고 아무것도 업로드되지 않습니다.</p>
-      <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="App Store에서 Privaro 다운로드">
-        <picture>
-          <source srcset="/appstore-badge-white.svg" media="(prefers-color-scheme: dark)" />
-          <img src="/appstore-badge.svg" alt="App Store에서 Privaro 다운로드" />
-        </picture>
-      </a>
-      <p class="hero-meta">무료 · iOS 17.6 이상 · Pro는 1회 구매</p>
-    </div>
-    <div class="hero-phone">
-      <div class="phone"><img src="/shots/shot-lock.jpg" width="700" height="1521" alt="Face ID를 기다리는 Privaro 잠금 화면" /></div>
-    </div>
+<section class="hero wrap">
+  <h1>사적인 사진은 휴대폰에만 남습니다.</h1>
+  <div class="hero-foot grid">
+    <p class="lead">Privaro는 iPhone 속 보관함입니다. 넣은 것은 기기에서 바로 암호화되고, Face ID나 Privaro 전용 암호로만 열립니다. 계정이 필요 없고 아무것도 업로드되지 않습니다.</p>
+    <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="App Store에서 Privaro 다운로드">
+      <picture>
+        <source srcset="/appstore-badge-white.svg" media="(prefers-color-scheme: dark)" />
+        <img src="/appstore-badge.svg" alt="App Store에서 Privaro 다운로드" />
+      </picture>
+    </a>
+    <p class="hero-meta">무료 · iOS 17.6 이상 · Pro는 1회 구매</p>
   </div>
 </section>
 
-<section class="news">
-  <div class="wrap">
-    <p><span class="news-label">새로운 기능</span> 이제 파일 크기 제한이 없습니다. 길이에 상관없이 동영상을 추가하면 바로 재생됩니다.</p>
+<section class="sec band wrap grid">
+  <h2 class="label">새로운 기능</h2>
+  <p class="band-text">이제 파일 크기 제한이 없습니다. 길이에 상관없이 동영상을 추가하면 바로 재생됩니다.</p>
+</section>
+
+<section class="sec shots wrap">
+  <figure>
+    <img src="/shots/shot-lock.jpg" width="700" height="1521" alt="Face ID를 기다리는 Privaro 잠금 화면" fetchpriority="high" />
+    <figcaption><span class="num">01</span><div><h2>자동 잠금</h2><p>다른 앱으로 넘어가면 보관함이 바로 닫힙니다. 다시 들어오려면 Face ID나 암호가 필요합니다.</p></div></figcaption>
+  </figure>
+  <figure>
+    <img src="/shots/shot-vault.jpg" width="700" height="1521" alt="보관함: 월별로 정렬된 사진 격자" loading="lazy" />
+    <figcaption><span class="num">02</span><div><h2>사진 보관함 그대로</h2><p>사진과 동영상이 익숙한 격자에 월별로 정리됩니다. 앨범을 만들고, 설명과 태그를 달고, 즐겨찾기와 검색까지, 보관함 밖으로 나가는 것은 없습니다.</p></div></figcaption>
+  </figure>
+  <figure>
+    <img src="/shots/shot-privacy.jpg" width="700" height="1521" alt="개인정보 보호 모드 설정: 집, 외출, 여행" loading="lazy" />
+    <figcaption><span class="num">03</span><div><h2>필요할 땐 더 엄격하게</h2><p>개인정보 보호 모드로 Privaro가 얼마나 신중할지 정합니다. 집에서는 평소처럼 공유하고, 외출 중에는 보관함 밖으로 무엇이든 나가기 전에 암호를 묻습니다. 여행 중에는 아무것도 나갈 수 없습니다.</p></div></figcaption>
+  </figure>
+  <figure>
+    <img src="/shots/shot-albums.jpg" width="700" height="1521" alt="Privaro의 앨범" loading="lazy" />
+    <figcaption><span class="num">04</span><div><h2>잠긴 채로 있는 앨범</h2><p>모든 것을 앨범과 폴더로 정리하세요. Pro에서는 앨범마다 비밀번호를 걸 수 있어, 보관함이 열려 있어도 그 앨범은 잠겨 있습니다.</p></div></figcaption>
+  </figure>
+</section>
+
+<section class="sec wrap grid" id="demo" hidden>
+  <div class="label">
+    <h2>암호화된 모습 보기</h2>
+    <p>사진을 하나 고르세요. 브라우저가 Privaro와 같은 AES-256-GCM 방식으로 암호화하고, 암호화된 바이트를 픽셀로 그려 보여 줍니다. 사진은 이 페이지 밖으로 나가지 않습니다.</p>
+  </div>
+  <div class="sec-body demo">
+    <figure>
+      <canvas class="demo-before" width="295" height="640"></canvas>
+      <figcaption>내 사진</figcaption>
+    </figure>
+    <figure>
+      <div class="demo-stage">
+        <canvas class="demo-after" width="295" height="640" tabindex="0" role="button" aria-label="길게 눌러 복호화"></canvas>
+        <div class="scan" aria-hidden="true"><span></span></div>
+      </div>
+      <figcaption><b>암호화됨</b> · 길게 눌러 복호화</figcaption>
+    </figure>
+    <div class="demo-controls">
+      <label class="btn"><input class="demo-file" type="file" accept="image/*" />사진 선택</label>
+      <button class="btn demo-rekey" type="button">새 키</button>
+    </div>
+    <p class="demo-key">방금 이 브라우저에서 만든 키: <code></code></p>
   </div>
 </section>
 
-<section class="features">
-  <div class="wrap">
-    <div class="feature">
-      <div class="phone"><img src="/shots/shot-vault.jpg" width="700" height="1521" alt="보관함: 월별로 정렬된 사진 격자" loading="lazy" /></div>
-      <div class="feature-text">
-        <h2>사진 보관함 그대로</h2>
-        <p>사진과 동영상이 익숙한 격자에 월별로 정리됩니다. 앨범을 만들고, 설명과 태그를 달고, 즐겨찾기와 검색까지, 보관함 밖으로 나가는 것은 없습니다.</p>
-      </div>
-    </div>
-    <div class="feature">
-      <div class="phone"><img src="/shots/shot-privacy.jpg" width="700" height="1521" alt="개인정보 보호 모드 설정: 집, 외출, 여행" loading="lazy" /></div>
-      <div class="feature-text">
-        <h2>필요할 땐 더 엄격하게</h2>
-        <p>개인정보 보호 모드로 Privaro가 얼마나 신중할지 정합니다. 집에서는 평소처럼 공유하고, 외출 중에는 보관함 밖으로 무엇이든 나가기 전에 암호를 묻습니다. 여행 중에는 아무것도 나갈 수 없습니다.</p>
-      </div>
-    </div>
-    <div class="feature">
-      <div class="phone"><img src="/shots/shot-albums.jpg" width="700" height="1521" alt="Privaro의 앨범" loading="lazy" /></div>
-      <div class="feature-text">
-        <h2>잠긴 채로 있는 앨범</h2>
-        <p>모든 것을 앨범과 폴더로 정리하세요. Pro에서는 앨범마다 비밀번호를 걸 수 있어, 보관함이 열려 있어도 그 앨범은 잠겨 있습니다.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="also">
-  <div class="wrap">
-    <h2>그리고 몇 가지 더</h2>
-    <ul class="also-list">
-      <li><h3>자동 잠금</h3><p>다른 앱으로 넘어가면 보관함이 바로 닫힙니다. 다시 들어오려면 Face ID나 암호가 필요합니다.</p></li>
-      <li><h3>파일 크기 제한 없음</h3><p>어떤 크기의 사진과 동영상도 추가할 수 있습니다. 긴 동영상도 바로 재생됩니다.</p></li>
-      <li><h3>스텔스 카메라</h3><p>사진과 동영상을 보관함에 바로 촬영해, 카메라 롤에 남지 않습니다.</p></li>
-      <li><h3>메타데이터 보호</h3><p>사진을 공유할 때 함께 보낼 정보를 고르세요: 전부, 위치 제외, 또는 아무것도 없이.</p></li>
-      <li><h3>민감한 사진 찾기</h3><p>Privaro가 선택한 사진을 기기에서 직접 살펴 신분증, 카드, 서류 같은 것을 찾아내고 보관함으로 옮기도록 제안합니다.</p></li>
-      <li><h3>미끼 보관함 <span class="pro-tag">Pro</span></h3><p>두 번째 암호를 입력하면 평범한 사진만 있는 다른 보관함이 열려, 누군가 잠금 해제를 강요할 때 대비할 수 있습니다.</p></li>
-      <li><h3>암호화된 백업 <span class="pro-tag">Pro</span></h3><p>내 iCloud에 백업하되, 먼저 기기에서 암호화합니다. 복원은 언제나 무료입니다.</p></li>
-      <li><h3>침입 사진 <span class="pro-tag">Pro</span></h3><p>누군가 암호를 틀리면 Privaro가 조용히 그 사람의 사진을 찍을 수 있습니다.</p></li>
-      <li><h3>아이콘 위장 <span class="pro-tag">Pro</span></h3><p>홈 화면에서 Privaro를 계산기나 메모 앱처럼 보이게 하세요.</p></li>
-    </ul>
+<section class="sec wrap grid">
+  <h2 class="label">그리고 몇 가지 더</h2>
+  <div class="sec-body">
+    <ol class="index">
+      <li><span class="num">05</span><div><h3>파일 크기 제한 없음</h3><p>어떤 크기의 사진과 동영상도 추가할 수 있습니다. 긴 동영상도 바로 재생됩니다.</p></div></li>
+      <li><span class="num">06</span><div><h3>스텔스 카메라</h3><p>사진과 동영상을 보관함에 바로 촬영해, 카메라 롤에 남지 않습니다.</p></div></li>
+      <li><span class="num">07</span><div><h3>메타데이터 보호</h3><p>사진을 공유할 때 함께 보낼 정보를 고르세요: 전부, 위치 제외, 또는 아무것도 없이.</p></div></li>
+      <li><span class="num">08</span><div><h3>민감한 사진 찾기</h3><p>Privaro가 선택한 사진을 기기에서 직접 살펴 신분증, 카드, 서류 같은 것을 찾아내고 보관함으로 옮기도록 제안합니다.</p></div></li>
+      <li><span class="num">09</span><div><h3>미끼 보관함 <span class="pro-tag">Pro</span></h3><p>두 번째 암호를 입력하면 평범한 사진만 있는 다른 보관함이 열려, 누군가 잠금 해제를 강요할 때 대비할 수 있습니다.</p></div></li>
+      <li><span class="num">10</span><div><h3>암호화된 백업 <span class="pro-tag">Pro</span></h3><p>내 iCloud에 백업하되, 먼저 기기에서 암호화합니다. 복원은 언제나 무료입니다.</p></div></li>
+      <li><span class="num">11</span><div><h3>침입 사진 <span class="pro-tag">Pro</span></h3><p>누군가 암호를 틀리면 Privaro가 조용히 그 사람의 사진을 찍을 수 있습니다.</p></div></li>
+      <li><span class="num">12</span><div><h3>아이콘 위장 <span class="pro-tag">Pro</span></h3><p>홈 화면에서 Privaro를 계산기나 메모 앱처럼 보이게 하세요.</p><button class="link-btn disguise" type="button" data-name="계산기" data-undo="되돌리기" hidden>이 탭에서 해 보기</button></div></li>
+    </ol>
     <p class="more"><a href="/ko/pro">Pro에 추가되는 모든 기능 →</a></p>
   </div>
 </section>
 
-<section class="pricing">
-  <div class="wrap">
+<section class="sec wrap grid">
+  <div class="label">
     <h2>무료, 업그레이드는 한 번만</h2>
-    <p class="section-lead">무료 버전에는 광고도 사용 기간 제한도 없습니다. Pro는 제한을 없애고 보호 기능을 더합니다. 한 번 결제하면 같은 Apple 계정의 모든 기기에서 쓸 수 있습니다.</p>
-    <div class="plans">
-      <div class="plan">
-        <h3>무료</h3>
-        <p class="plan-price">€0</p>
-        <ul>
-          <li>암호화, Face ID와 암호</li>
-          <li>최대 2.5GB와 앨범 5개</li>
-          <li>개인정보 보호 모드와 메타데이터 보호</li>
-          <li>스텔스 카메라, 태그, 검색</li>
-        </ul>
-      </div>
-      <div class="plan plan-pro">
-        <h3>Pro</h3>
-        <p class="plan-price">€11.99 <span>1회</span></p>
-        <ul>
-          <li>무제한 저장 공간과 앨범</li>
-          <li>미끼 보관함과 강제 삭제</li>
-          <li>암호화된 iCloud 백업</li>
-          <li>스크린샷 및 녹화 차단</li>
-          <li>침입 사진과 앨범 비밀번호</li>
-          <li>Wi-Fi 전송, 위치 잠금, 위장 아이콘</li>
-        </ul>
-      </div>
-    </div>
+    <p>무료 버전에는 광고도 사용 기간 제한도 없습니다. Pro는 제한을 없애고 보호 기능을 더합니다. 한 번 결제하면 같은 Apple 계정의 모든 기기에서 쓸 수 있습니다.</p>
+  </div>
+  <div class="plan">
+    <h3>무료</h3>
+    <p class="plan-price"><span class="price" data-price="free">₩0</span></p>
+    <ul>
+      <li>암호화, Face ID와 암호</li>
+      <li>최대 2.5GB와 앨범 5개</li>
+      <li>개인정보 보호 모드와 메타데이터 보호</li>
+      <li>스텔스 카메라, 태그, 검색</li>
+    </ul>
+  </div>
+  <div class="plan">
+    <h3>Pro</h3>
+    <p class="plan-price"><span class="price" data-price="pro">₩7,700</span> <span>1회</span></p>
+    <ul>
+      <li>무제한 저장 공간과 앨범</li>
+      <li>미끼 보관함과 강제 삭제</li>
+      <li>암호화된 iCloud 백업</li>
+      <li>스크린샷 및 녹화 차단</li>
+      <li>침입 사진과 앨범 비밀번호</li>
+      <li>Wi-Fi 전송, 위치 잠금, 위장 아이콘</li>
+    </ul>
   </div>
 </section>
 
-<section class="faq">
-  <div class="wrap">
-    <h2>자주 묻는 질문</h2>
+<section class="sec wrap grid">
+  <h2 class="label">자주 묻는 질문</h2>
+  <div class="sec-body faq">
     <details><summary>다른 사람이 내 사진을 볼 수 있나요?</summary><p>아니요. 사진은 iPhone 안에서, 기기를 떠나지 않는 키로 암호화됩니다. Privaro 계정도, 사진을 보관하는 서버도 없으니 누구도 볼 수 없습니다. 저희도 마찬가지입니다.</p></details>
     <details><summary>암호를 잊어버리면요?</summary><p>Privaro를 설정할 때 복구 키를 받습니다. 안전한 곳에 보관하세요. 이 키로 새 암호를 정할 수 있습니다. 암호나 복구 키가 없으면 보관함을 열 수 없고, 저희도 열 수 없습니다.</p></details>
     <details><summary>휴대폰을 잃어버리면 어떻게 되나요?</summary><p>암호화된 iCloud 백업(Pro)을 켜 두었다면 새 iPhone에서 암호로 보관함을 복원할 수 있습니다. 복원은 무료입니다. 백업이 없으면 사진은 이전 휴대폰에 잠긴 채로 남습니다.</p></details>
     <details><summary>동영상 크기 제한이 있나요?</summary><p>파일당 제한은 없습니다. iPhone에 공간만 있으면 어떤 크기든 됩니다. 무료 버전은 전체 2.5GB까지, Pro는 제한이 없습니다.</p></details>
     <details><summary>인터넷 연결이 필요한가요?</summary><p>아니요. 보관함은 완전히 오프라인으로 작동하며, iCloud 백업을 켜지 않는 한 사진이 온라인에 올라가는 일은 없습니다.</p></details>
-    <details><summary>Pro는 구독인가요?</summary><p>아니요. Pro는 €11.99를 한 번만 결제합니다. 갱신되는 것도, 해지할 것도 없습니다.</p></details>
+    <details><summary>Pro는 구독인가요?</summary><p>아니요. Pro는 <span class="price" data-price="pro">₩7,700</span>를 한 번만 결제합니다. 갱신되는 것도, 해지할 것도 없습니다.</p></details>
   </div>
 </section>
 
 </main>
 
-<footer class="site-foot">
-  <div class="wrap">
-    <div class="foot-brand">
-      <img src="/logo.png" width="22" height="22" alt="" />
-      <span>iPhone를 위한 비공개 암호화 사진·동영상 보관함.</span>
-    </div>
-    <nav class="foot-links">
-      <a href="/ko/pro">Pro 기능</a>
-      <a href="/ko/privacy">개인정보 처리방침</a>
-      <a href="/ko/terms">이용약관</a>
-      <a href="mailto:erdincdubu@icloud.com">문의</a>
-    </nav>
-    <p class="foot-legal">© <span id="year">2026</span> Privaro. 모든 권리 보유.</p>
-  </div>
+<footer class="site-foot wrap grid">
+  <p class="foot-legal">© <span id="year">2026</span> Privaro. 모든 권리 보유.<br />네덜란드에서 만들었습니다. 이 사이트는 쿠키와 추적기를 사용하지 않습니다.</p>
+  <nav class="foot-links">
+    <a href="/ko/pro">Pro 기능</a>
+    <a href="/ko/privacy">개인정보 처리방침</a>
+    <a href="/ko/terms">이용약관</a>
+    <a href="mailto:erdincdubu@icloud.com">문의</a>
+  </nav>
 </footer>
 
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+// The language menu is a <details>; close it on a click elsewhere or on Escape.
+const lang = document.querySelector('.lang');
+document.addEventListener('click', e => { if (lang.open && !lang.contains(e.target)) lang.open = false; });
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && lang.open) { lang.open = false; lang.querySelector('summary').focus(); }
+});
+</script>
+<script src="/price.js" defer></script>
+<script src="/demo.js" defer></script>
 </body>
 </html>

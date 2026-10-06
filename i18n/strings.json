@@ -32,17 +32,6 @@
     "ko": "개인정보",
     "nl": "Privacy"
   },
-  "nav_terms": {
-    "en": "Terms",
-    "es": "Términos",
-    "fr": "Conditions",
-    "de": "Nutzungsbedingungen",
-    "it": "Termini",
-    "pt-BR": "Termos",
-    "zh-Hans": "条款",
-    "ko": "약관",
-    "nl": "Voorwaarden"
-  },
   "hero_lead": {
     "en": "Privaro is a vault for your iPhone. What you put in it is encrypted on the phone itself and only opens with Face ID or Privaro’s own passcode. There’s no account, and nothing is uploaded.",
     "es": "Privaro es una caja fuerte para tu iPhone. Lo que guardas en ella se cifra en el propio teléfono y solo se abre con Face ID o con el código de Privaro. No hay cuenta y no se sube nada.",
@@ -97,50 +86,6 @@
     "zh-Hans": "Pro",
     "ko": "Pro",
     "nl": "Pro"
-  },
-  "footer_tagline": {
-    "en": "A private, encrypted photo and video vault for iPhone.",
-    "es": "Una caja fuerte privada y cifrada para fotos y vídeos en el iPhone.",
-    "fr": "Un coffre-fort privé et chiffré pour photos et vidéos sur iPhone.",
-    "de": "Ein privater, verschlüsselter Foto- und Video-Tresor für das iPhone.",
-    "it": "Una cassaforte privata e cifrata per foto e video su iPhone.",
-    "pt-BR": "Um cofre privado e criptografado para fotos e vídeos no iPhone.",
-    "zh-Hans": "一款适用于 iPhone 的私密加密照片和视频保险库。",
-    "ko": "iPhone를 위한 비공개 암호화 사진·동영상 보관함.",
-    "nl": "Een privé, versleutelde foto- en videokluis voor de iPhone."
-  },
-  "footer_product": {
-    "en": "Product",
-    "es": "Producto",
-    "fr": "Produit",
-    "de": "Produkt",
-    "it": "Prodotto",
-    "pt-BR": "Produto",
-    "zh-Hans": "产品",
-    "ko": "제품",
-    "nl": "Product"
-  },
-  "footer_legal": {
-    "en": "Legal",
-    "es": "Legal",
-    "fr": "Mentions légales",
-    "de": "Rechtliches",
-    "it": "Note legali",
-    "pt-BR": "Jurídico",
-    "zh-Hans": "法律",
-    "ko": "법적 고지",
-    "nl": "Juridisch"
-  },
-  "footer_support": {
-    "en": "Support",
-    "es": "Soporte",
-    "fr": "Assistance",
-    "de": "Support",
-    "it": "Supporto",
-    "pt-BR": "Suporte",
-    "zh-Hans": "支持",
-    "ko": "지원",
-    "nl": "Ondersteuning"
   },
   "footer_pro": {
     "en": "Pro features",
@@ -242,15 +187,15 @@
     "nl": "Download Privaro in de App Store"
   },
   "hero_h1": {
-    "en": "Keep private photos and videos private.",
-    "es": "Que tus fotos y vídeos privados sigan siendo privados.",
-    "fr": "Vos photos et vidéos privées restent privées.",
-    "de": "Private Fotos und Videos bleiben privat.",
-    "it": "Le foto e i video privati restano privati.",
-    "pt-BR": "Suas fotos e vídeos privados continuam privados.",
-    "zh-Hans": "让私密的照片和视频保持私密。",
-    "ko": "비공개 사진과 동영상을 비공개로.",
-    "nl": "Houd privéfoto’s en -video’s privé."
+    "en": "Private photos stay on your phone.",
+    "es": "Tus fotos privadas se quedan en tu teléfono.",
+    "fr": "Vos photos privées restent sur votre téléphone.",
+    "de": "Private Fotos bleiben auf deinem Handy.",
+    "it": "Le foto private restano sul tuo telefono.",
+    "pt-BR": "Fotos privadas ficam no seu celular.",
+    "zh-Hans": "私密照片，只留在你的手机上。",
+    "ko": "사적인 사진은 휴대폰에만 남습니다.",
+    "nl": "Privéfoto’s blijven op je telefoon."
   },
   "hero_meta": {
     "en": "Free · iOS 17.6 or later · Pro is a one-time purchase",
@@ -615,17 +560,6 @@
     "ko": "Pro에 추가되는 모든 기능 →",
     "nl": "Alles wat Pro toevoegt →"
   },
-  "plan_free_price": {
-    "en": "€0",
-    "es": "0 €",
-    "fr": "0 €",
-    "de": "0 €",
-    "it": "0 €",
-    "pt-BR": "€ 0",
-    "zh-Hans": "€0",
-    "ko": "€0",
-    "nl": "€ 0"
-  },
   "plan_pro_once": {
     "en": "once",
     "es": "una vez",
@@ -880,14 +814,146 @@
     "nl": "Is Pro een abonnement?"
   },
   "faq6_a": {
-    "en": "No. Pro is a single payment of €11.99. Nothing renews and there’s nothing to cancel.",
-    "es": "No. Pro es un único pago de 11,99 €. No se renueva nada y no hay nada que cancelar.",
-    "fr": "Non. Pro est un paiement unique de 11,99 €. Rien ne se renouvelle, rien à résilier.",
-    "de": "Nein. Pro ist eine einmalige Zahlung von 11,99 €. Nichts verlängert sich, nichts muss gekündigt werden.",
-    "it": "No. Pro è un pagamento unico di 11,99 €. Non si rinnova nulla e non c’è niente da disdire.",
-    "pt-BR": "Não. O Pro é um pagamento único de € 11,99. Nada é renovado e não há nada para cancelar.",
-    "zh-Hans": "不是。Pro 是一次性付款 €11.99，不会续费，也无需取消。",
-    "ko": "아니요. Pro는 €11.99를 한 번만 결제합니다. 갱신되는 것도, 해지할 것도 없습니다.",
-    "nl": "Nee. Pro is een eenmalige betaling van € 11,99. Er wordt niets verlengd en er valt niets op te zeggen."
+    "en": "No. Pro is a single payment of {{PRICE}}. Nothing renews and there’s nothing to cancel.",
+    "es": "No. Pro es un único pago de {{PRICE}}. No se renueva nada y no hay nada que cancelar.",
+    "fr": "Non. Pro est un paiement unique de {{PRICE}}. Rien ne se renouvelle, rien à résilier.",
+    "de": "Nein. Pro ist eine einmalige Zahlung von {{PRICE}}. Nichts verlängert sich, nichts muss gekündigt werden.",
+    "it": "No. Pro è un pagamento unico di {{PRICE}}. Non si rinnova nulla e non c’è niente da disdire.",
+    "pt-BR": "Não. O Pro é um pagamento único de {{PRICE}}. Nada é renovado e não há nada para cancelar.",
+    "zh-Hans": "不是。Pro 是一次性付款 {{PRICE}}，不会续费，也无需取消。",
+    "ko": "아니요. Pro는 {{PRICE}}를 한 번만 결제합니다. 갱신되는 것도, 해지할 것도 없습니다.",
+    "nl": "Nee. Pro is een eenmalige betaling van {{PRICE}}. Er wordt niets verlengd en er valt niets op te zeggen."
+  },
+  "footer_note": {
+    "en": "Made in the Netherlands. This site sets no cookies and has no trackers.",
+    "es": "Hecho en los Países Bajos. Este sitio no usa cookies ni rastreadores.",
+    "fr": "Fait aux Pays-Bas. Ce site n’utilise ni cookies ni traceurs.",
+    "de": "Gemacht in den Niederlanden. Diese Seite setzt keine Cookies und hat keine Tracker.",
+    "it": "Fatto nei Paesi Bassi. Questo sito non usa cookie né tracker.",
+    "pt-BR": "Feito nos Países Baixos. Este site não usa cookies nem rastreadores.",
+    "zh-Hans": "在荷兰制作。本网站不设置 Cookie，也没有任何追踪器。",
+    "ko": "네덜란드에서 만들었습니다. 이 사이트는 쿠키와 추적기를 사용하지 않습니다.",
+    "nl": "Gemaakt in Nederland. Deze site plaatst geen cookies en heeft geen trackers."
+  },
+  "demo_h2": {
+    "en": "See it encrypted",
+    "es": "Míralo cifrado",
+    "fr": "Voyez-la chiffrée",
+    "de": "So sieht es verschlüsselt aus",
+    "it": "Guardala cifrata",
+    "pt-BR": "Veja criptografada",
+    "zh-Hans": "看看加密后的样子",
+    "ko": "암호화된 모습 보기",
+    "nl": "Zo ziet het er versleuteld uit"
+  },
+  "demo_p": {
+    "en": "Pick a photo. Your browser encrypts it with AES-256-GCM, the cipher Privaro uses, and draws the encrypted bytes as pixels. The photo never leaves this page.",
+    "es": "Elige una foto. Tu navegador la cifra con AES-256-GCM, el mismo cifrado que usa Privaro, y dibuja los bytes cifrados como píxeles. La foto nunca sale de esta página.",
+    "fr": "Choisissez une photo. Votre navigateur la chiffre avec AES-256-GCM, l’algorithme qu’utilise Privaro, et affiche les octets chiffrés sous forme de pixels. La photo ne quitte jamais cette page.",
+    "de": "Wähle ein Foto. Dein Browser verschlüsselt es mit AES-256-GCM, demselben Verfahren wie Privaro, und zeigt die verschlüsselten Bytes als Pixel. Das Foto verlässt diese Seite nie.",
+    "it": "Scegli una foto. Il tuo browser la cifra con AES-256-GCM, lo stesso algoritmo di Privaro, e mostra i byte cifrati come pixel. La foto non lascia mai questa pagina.",
+    "pt-BR": "Escolha uma foto. Seu navegador a criptografa com AES-256-GCM, a mesma cifra do Privaro, e desenha os bytes criptografados como pixels. A foto nunca sai desta página.",
+    "zh-Hans": "选一张照片。你的浏览器会用 Privaro 使用的同一种算法 AES-256-GCM 加密它，并把加密后的字节画成像素。照片不会离开这个页面。",
+    "ko": "사진을 하나 고르세요. 브라우저가 Privaro와 같은 AES-256-GCM 방식으로 암호화하고, 암호화된 바이트를 픽셀로 그려 보여 줍니다. 사진은 이 페이지 밖으로 나가지 않습니다.",
+    "nl": "Kies een foto. Je browser versleutelt hem met AES-256-GCM, hetzelfde algoritme als Privaro, en tekent de versleutelde bytes als pixels. De foto verlaat deze pagina nooit."
+  },
+  "demo_before": {
+    "en": "Your photo",
+    "es": "Tu foto",
+    "fr": "Votre photo",
+    "de": "Dein Foto",
+    "it": "La tua foto",
+    "pt-BR": "Sua foto",
+    "zh-Hans": "你的照片",
+    "ko": "내 사진",
+    "nl": "Je foto"
+  },
+  "demo_after": {
+    "en": "Encrypted",
+    "es": "Cifrada",
+    "fr": "Chiffrée",
+    "de": "Verschlüsselt",
+    "it": "Cifrata",
+    "pt-BR": "Criptografada",
+    "zh-Hans": "已加密",
+    "ko": "암호화됨",
+    "nl": "Versleuteld"
+  },
+  "demo_hold": {
+    "en": "press and hold to decrypt",
+    "es": "mantén pulsado para descifrar",
+    "fr": "maintenez appuyé pour déchiffrer",
+    "de": "gedrückt halten zum Entschlüsseln",
+    "it": "tieni premuto per decifrare",
+    "pt-BR": "mantenha pressionado para descriptografar",
+    "zh-Hans": "按住即可解密",
+    "ko": "길게 눌러 복호화",
+    "nl": "ingedrukt houden om te ontsleutelen"
+  },
+  "demo_pick": {
+    "en": "Choose a photo",
+    "es": "Elegir una foto",
+    "fr": "Choisir une photo",
+    "de": "Foto auswählen",
+    "it": "Scegli una foto",
+    "pt-BR": "Escolher uma foto",
+    "zh-Hans": "选择照片",
+    "ko": "사진 선택",
+    "nl": "Kies een foto"
+  },
+  "demo_rekey": {
+    "en": "New key",
+    "es": "Nueva clave",
+    "fr": "Nouvelle clé",
+    "de": "Neuer Schlüssel",
+    "it": "Nuova chiave",
+    "pt-BR": "Nova chave",
+    "zh-Hans": "换一个密钥",
+    "ko": "새 키",
+    "nl": "Nieuwe sleutel"
+  },
+  "demo_key": {
+    "en": "Key, made in this browser just now:",
+    "es": "Clave, creada ahora mismo en este navegador:",
+    "fr": "Clé, créée à l’instant dans ce navigateur :",
+    "de": "Schlüssel, gerade eben in diesem Browser erzeugt:",
+    "it": "Chiave, creata ora in questo browser:",
+    "pt-BR": "Chave, criada agora mesmo neste navegador:",
+    "zh-Hans": "密钥，刚刚在这个浏览器里生成：",
+    "ko": "방금 이 브라우저에서 만든 키:",
+    "nl": "Sleutel, zojuist in deze browser gemaakt:"
+  },
+  "disguise_try": {
+    "en": "Try it on this tab",
+    "es": "Pruébalo en esta pestaña",
+    "fr": "Essayez sur cet onglet",
+    "de": "Probier es in diesem Tab aus",
+    "it": "Provalo in questa scheda",
+    "pt-BR": "Experimente nesta aba",
+    "zh-Hans": "在这个标签页上试试",
+    "ko": "이 탭에서 해 보기",
+    "nl": "Probeer het in dit tabblad"
+  },
+  "disguise_undo": {
+    "en": "Change it back",
+    "es": "Volver a cambiarlo",
+    "fr": "Revenir en arrière",
+    "de": "Zurücksetzen",
+    "it": "Ripristina",
+    "pt-BR": "Desfazer",
+    "zh-Hans": "改回来",
+    "ko": "되돌리기",
+    "nl": "Terugzetten"
+  },
+  "calc_name": {
+    "en": "Calculator",
+    "es": "Calculadora",
+    "fr": "Calculatrice",
+    "de": "Rechner",
+    "it": "Calcolatrice",
+    "pt-BR": "Calculadora",
+    "zh-Hans": "计算器",
+    "ko": "계산기",
+    "nl": "Rekenmachine"
   }
 }

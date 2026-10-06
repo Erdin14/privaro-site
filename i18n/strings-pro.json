@@ -21,17 +21,6 @@
     "ko": "Privaro Pro의 각 기능이 무엇을 하는지 정확히 설명합니다: 무제한 저장, 미끼 보관함, 강제 삭제, 스크린샷 차단, 암호화 백업 등.",
     "nl": "Precies wat elke Privaro Pro-functie doet: onbeperkte opslag, lokkluis, noodwissing, schermafbeeldingsbescherming, versleutelde back-up en meer."
   },
-  "back_home": {
-    "en": "Back to home",
-    "es": "Volver al inicio",
-    "fr": "Retour à l'accueil",
-    "de": "Zurück zur Startseite",
-    "it": "Torna alla home",
-    "pt-BR": "Voltar ao início",
-    "zh-Hans": "返回首页",
-    "ko": "홈으로 돌아가기",
-    "nl": "Terug naar home"
-  },
   "pro_h1": {
     "en": "Everything Pro unlocks.",
     "es": "Todo lo que desbloquea Pro.",
@@ -44,37 +33,15 @@
     "nl": "Alles wat Pro ontgrendelt."
   },
   "pro_intro": {
-    "en": "The vault is free to use. Pro lifts the limits and turns on the full security toolkit. Here is exactly what each feature does. Everything still runs on your device, encrypted, with no account.",
-    "es": "La caja fuerte es gratis. Pro elimina los límites y activa todas las herramientas de seguridad. Esto es exactamente lo que hace cada función. Todo sigue funcionando en tu dispositivo, cifrado y sin cuenta.",
-    "fr": "Le coffre-fort est gratuit. Pro lève les limites et active toute la boîte à outils de sécurité. Voici précisément ce que fait chaque fonction. Tout fonctionne toujours sur votre appareil, chiffré et sans compte.",
-    "de": "Der Tresor ist kostenlos. Pro hebt die Grenzen auf und schaltet das komplette Sicherheitspaket frei. Hier steht genau, was jede Funktion macht. Alles läuft weiterhin auf deinem Gerät, verschlüsselt und ohne Konto.",
-    "it": "La cassaforte è gratuita. Pro elimina i limiti e attiva tutti gli strumenti di sicurezza. Ecco esattamente cosa fa ogni funzione. Tutto continua a funzionare sul tuo dispositivo, cifrato e senza account.",
-    "pt-BR": "O cofre é gratuito. O Pro tira os limites e ativa todas as ferramentas de segurança. Aqui está exatamente o que cada recurso faz. Tudo continua no seu dispositivo, criptografado e sem conta.",
-    "zh-Hans": "保险库可免费使用。Pro 解除限制并开启完整的安全工具。下面是每项功能的具体作用。一切仍在你的设备上运行，已加密，且无需账户。",
-    "ko": "보관함은 무료로 사용할 수 있습니다. Pro는 한도를 없애고 모든 보안 기능을 켭니다. 각 기능이 무엇을 하는지 아래에 정확히 정리했습니다. 모든 것은 여전히 기기에서, 암호화된 상태로, 계정 없이 작동합니다.",
-    "nl": "De kluis is gratis te gebruiken. Pro haalt de limieten weg en zet de volledige beveiligingsset aan. Hier staat precies wat elke functie doet. Alles draait nog steeds op je apparaat, versleuteld en zonder account."
-  },
-  "prof1_t": {
-    "en": "One payment, not a subscription",
-    "es": "Un solo pago, no una suscripción",
-    "fr": "Un paiement, pas un abonnement",
-    "de": "Eine Zahlung, kein Abo",
-    "it": "Un pagamento, non un abbonamento",
-    "pt-BR": "Um pagamento, não uma assinatura",
-    "zh-Hans": "一次付款，而非订阅",
-    "ko": "구독이 아닌 일회성 결제",
-    "nl": "Eén betaling, geen abonnement"
-  },
-  "prof1_d": {
-    "en": "Privaro Pro is a single purchase that unlocks everything on every device signed in to your Apple Account. Nothing renews, and there is nothing to cancel.",
-    "es": "Privaro Pro es una compra única que lo desbloquea todo en cada dispositivo con tu Apple Account. Nada se renueva y no hay nada que cancelar.",
-    "fr": "Privaro Pro est un achat unique qui débloque tout sur chaque appareil connecté à votre compte Apple. Rien ne se renouvelle et il n’y a rien à résilier.",
-    "de": "Privaro Pro ist ein einmaliger Kauf, der alles auf jedem Gerät freischaltet, das bei deinem Apple Account angemeldet ist. Nichts verlängert sich, nichts muss gekündigt werden.",
-    "it": "Privaro Pro è un acquisto unico che sblocca tutto su ogni dispositivo collegato al tuo Apple Account. Nulla si rinnova e non c’è niente da disdire.",
-    "pt-BR": "O Privaro Pro é uma compra única que libera tudo em todos os aparelhos conectados à sua Apple Account. Nada renova e não há nada para cancelar.",
-    "zh-Hans": "Privaro Pro 是一次性购买，可在登录同一 Apple 账户的所有设备上解锁全部功能。无需续订，也没有需要取消的内容。",
-    "ko": "Privaro Pro는 한 번의 구매로 같은 Apple 계정에 로그인한 모든 기기에서 모든 기능을 잠금 해제합니다. 갱신되는 것도, 해지할 것도 없습니다.",
-    "nl": "Privaro Pro is een eenmalige aankoop die alles ontgrendelt op elk apparaat dat bij je Apple Account is aangemeld. Er verlengt niets en er is niets op te zeggen."
+    "en": "Pro is a one-time purchase of {{PRICE}}. It lifts the limits of the free version and adds everything below, on every device signed in to your Apple Account. Nothing renews and there’s nothing to cancel.",
+    "es": "Pro es una compra única de {{PRICE}}. Quita los límites de la versión gratuita y añade todo lo que ves abajo, en cada dispositivo con tu Apple Account. Nada se renueva y no hay nada que cancelar.",
+    "fr": "Pro est un achat unique de {{PRICE}}. Il lève les limites de la version gratuite et ajoute tout ce qui suit, sur chaque appareil connecté à votre compte Apple. Rien ne se renouvelle et il n’y a rien à résilier.",
+    "de": "Pro ist ein Einmalkauf für {{PRICE}}. Es hebt die Grenzen der kostenlosen Version auf und bringt alles, was unten steht, auf jedes Gerät mit deinem Apple Account. Nichts verlängert sich, nichts muss gekündigt werden.",
+    "it": "Pro è un acquisto unico da {{PRICE}}. Elimina i limiti della versione gratuita e aggiunge tutto quello che trovi qui sotto, su ogni dispositivo collegato al tuo Apple Account. Nulla si rinnova e non c’è niente da disdire.",
+    "pt-BR": "O Pro é uma compra única de {{PRICE}}. Ele tira os limites da versão gratuita e adiciona tudo o que está abaixo, em todos os aparelhos conectados à sua Apple Account. Nada renova e não há nada para cancelar.",
+    "zh-Hans": "Pro 是一次性购买，价格 {{PRICE}}。它解除免费版的限制，并加入下面的所有功能，登录同一 Apple 账户的所有设备都能使用。无需续订，也没有什么需要取消。",
+    "ko": "Pro는 {{PRICE}} 일회성 구매입니다. 무료 버전의 한도를 없애고 아래의 모든 기능을 더하며, 같은 Apple 계정에 로그인한 모든 기기에서 사용할 수 있습니다. 갱신되는 것도, 해지할 것도 없습니다.",
+    "nl": "Pro is een eenmalige aankoop van {{PRICE}}. Het haalt de limieten van de gratis versie weg en voegt alles hieronder toe, op elk apparaat dat bij je Apple Account is aangemeld. Er verlengt niets en er is niets op te zeggen."
   },
   "prof2_t": {
     "en": "Unlimited storage",
@@ -88,15 +55,15 @@
     "nl": "Onbeperkte opslag"
   },
   "prof2_d": {
-    "en": "The free vault holds up to 2.5 GB. Pro removes the cap, so you can move your entire photo and video library into the vault without running out of room.",
-    "es": "La versión gratuita admite hasta 2,5 GB. Pro elimina el límite, para que puedas mover toda tu biblioteca de fotos y vídeos a la caja fuerte sin quedarte sin espacio.",
-    "fr": "La version gratuite contient jusqu'à 2,5 Go. Pro supprime la limite, pour déplacer toute votre photothèque et vidéothèque dans le coffre-fort sans manquer d'espace.",
-    "de": "Die kostenlose Version fasst bis zu 2,5 GB. Pro hebt die Grenze auf, sodass du deine gesamte Foto- und Videosammlung in den Tresor verschieben kannst, ohne dass der Platz ausgeht.",
-    "it": "La versione gratuita contiene fino a 2,5 GB. Pro elimina il limite, così puoi spostare nella cassaforte tutta la tua libreria di foto e video senza restare senza spazio.",
-    "pt-BR": "A versão gratuita comporta até 2,5 GB. O Pro remove o limite, para você mover toda a sua biblioteca de fotos e vídeos para o cofre sem ficar sem espaço.",
-    "zh-Hans": "免费版最多可存放 2.5 GB。Pro 取消上限，让你把整个照片和视频库移入保险库也不会用尽空间。",
-    "ko": "무료 버전은 최대 2.5GB를 담습니다. Pro는 한도를 없애 사진과 동영상 라이브러리 전체를 공간 걱정 없이 보관함으로 옮길 수 있습니다.",
-    "nl": "De gratis versie bevat tot 2,5 GB. Pro haalt de limiet weg, zodat je je hele foto- en videobibliotheek naar de kluis kunt verplaatsen zonder ruimte tekort te komen."
+    "en": "The free vault holds up to 2.5 GB. Pro has no cap: the only limit is the free space on your iPhone.",
+    "es": "La versión gratuita admite hasta 2,5 GB. Pro no tiene límite: solo cuenta el espacio libre de tu iPhone.",
+    "fr": "La version gratuite contient jusqu’à 2,5 Go. Pro n’a pas de plafond : la seule limite est l’espace libre de votre iPhone.",
+    "de": "Die kostenlose Version fasst bis zu 2,5 GB. Pro hat keine Obergrenze. Die einzige Grenze ist der freie Speicher auf deinem iPhone.",
+    "it": "La versione gratuita contiene fino a 2,5 GB. Pro non ha limiti: conta solo lo spazio libero sul tuo iPhone.",
+    "pt-BR": "A versão gratuita comporta até 2,5 GB. O Pro não tem limite: só depende do espaço livre no seu iPhone.",
+    "zh-Hans": "免费版最多可存放 2.5 GB。Pro 没有上限，唯一的限制是你 iPhone 上的可用空间。",
+    "ko": "무료 버전은 최대 2.5GB를 담습니다. Pro에는 한도가 없으며, iPhone의 남은 저장 공간이 유일한 제한입니다.",
+    "nl": "De gratis versie bevat tot 2,5 GB. Pro heeft geen limiet: alleen de vrije ruimte op je iPhone telt."
   },
   "prof3_t": {
     "en": "Unlimited albums and folders",
@@ -110,15 +77,15 @@
     "nl": "Onbeperkte albums en mappen"
   },
   "prof3_d": {
-    "en": "Free includes up to 5 albums. Pro lets you create as many albums and nested folders as you like, so you can organize everything exactly how you want.",
-    "es": "La versión gratuita incluye hasta 5 álbumes. Pro te permite crear todos los álbumes y carpetas anidadas que quieras, para organizarlo todo exactamente como prefieras.",
-    "fr": "La version gratuite inclut jusqu'à 5 albums. Pro vous permet de créer autant d'albums et de dossiers imbriqués que vous voulez, pour tout organiser exactement comme vous le souhaitez.",
-    "de": "Kostenlos sind bis zu 5 Alben enthalten. Mit Pro kannst du beliebig viele Alben und verschachtelte Ordner anlegen und alles genau so ordnen, wie du willst.",
-    "it": "La versione gratuita include fino a 5 album. Pro ti permette di creare tutti gli album e le cartelle nidificate che vuoi, per organizzare tutto esattamente come preferisci.",
-    "pt-BR": "O Grátis inclui até 5 álbuns. O Pro permite criar quantos álbuns e pastas aninhadas quiser, para organizar tudo exatamente como você quer.",
-    "zh-Hans": "免费版最多包含 5 个相簿。Pro 让你随意创建任意数量的相簿和嵌套文件夹，完全按你的方式整理。",
-    "ko": "무료에는 앨범 5개가 포함됩니다. Pro에서는 앨범과 중첩 폴더를 원하는 만큼 만들어 모든 것을 원하는 대로 정리할 수 있습니다.",
-    "nl": "Gratis bevat tot 5 albums. Met Pro maak je zoveel albums en geneste mappen als je wilt, zodat je alles precies kunt ordenen zoals jij wilt."
+    "en": "Free includes up to 5 albums. With Pro you can make as many albums as you like and put folders inside folders.",
+    "es": "La versión gratuita incluye hasta 5 álbumes. Con Pro puedes crear todos los que quieras y meter carpetas dentro de carpetas.",
+    "fr": "La version gratuite inclut jusqu’à 5 albums. Avec Pro, vous en créez autant que vous voulez et pouvez ranger des dossiers dans d’autres dossiers.",
+    "de": "Kostenlos sind bis zu 5 Alben enthalten. Mit Pro legst du so viele an, wie du willst, und kannst Ordner in Ordner packen.",
+    "it": "La versione gratuita include fino a 5 album. Con Pro puoi crearne quanti ne vuoi e mettere cartelle dentro altre cartelle.",
+    "pt-BR": "O Grátis inclui até 5 álbuns. Com o Pro você cria quantos quiser e pode colocar pastas dentro de pastas.",
+    "zh-Hans": "免费版最多包含 5 个相簿。Pro 不限相簿数量，文件夹里还可以再建文件夹。",
+    "ko": "무료에는 앨범 5개가 포함됩니다. Pro에서는 앨범을 원하는 만큼 만들고, 폴더 안에 폴더를 넣을 수 있습니다.",
+    "nl": "Gratis bevat tot 5 albums. Met Pro maak je er zoveel als je wilt, en kun je mappen in mappen zetten."
   },
   "prof4_t": {
     "en": "Screenshot and recording protection",
@@ -198,15 +165,15 @@
     "nl": "Wachtwoorden per album"
   },
   "prof7_d": {
-    "en": "Put a separate code on individual albums. Even if your vault is open, your most private albums stay sealed behind their own lock.",
-    "es": "Pon un código aparte en álbumes concretos. Aunque tu caja fuerte esté abierta, tus álbumes más privados siguen sellados tras su propio bloqueo.",
-    "fr": "Ajoutez un code distinct sur certains albums. Même si votre coffre-fort est ouvert, vos albums les plus privés restent scellés derrière leur propre verrou.",
-    "de": "Versieh einzelne Alben mit einem eigenen Code. Selbst wenn dein Tresor offen ist, bleiben deine privatesten Alben hinter ihrem eigenen Schloss verschlossen.",
-    "it": "Aggiungi un codice separato a singoli album. Anche con la cassaforte aperta, i tuoi album più privati restano sigillati dietro il loro blocco.",
-    "pt-BR": "Coloque um código separado em álbuns específicos. Mesmo com o cofre aberto, seus álbuns mais privados continuam selados atrás do próprio bloqueio.",
-    "zh-Hans": "为单个相簿设置独立密码。即使保险库已打开，最私密的相簿仍被各自的锁封住。",
-    "ko": "개별 앨범에 별도의 코드를 설정하세요. 보관함이 열려 있어도 가장 사적인 앨범은 자체 잠금으로 봉인된 채 남습니다.",
-    "nl": "Zet een aparte code op afzonderlijke albums. Zelfs als je kluis open is, blijven je meest privé albums verzegeld achter hun eigen slot."
+    "en": "Give an album its own password. It stays locked even while the rest of the vault is open.",
+    "es": "Ponle a un álbum su propia contraseña. Seguirá bloqueado aunque el resto de la caja fuerte esté abierta.",
+    "fr": "Donnez à un album son propre mot de passe. Il reste verrouillé même quand le reste du coffre-fort est ouvert.",
+    "de": "Gib einem Album ein eigenes Passwort. Es bleibt gesperrt, auch wenn der restliche Tresor offen ist.",
+    "it": "Dai a un album una password tutta sua. Resta bloccato anche quando il resto della cassaforte è aperto.",
+    "pt-BR": "Dê a um álbum uma senha própria. Ele continua trancado mesmo com o resto do cofre aberto.",
+    "zh-Hans": "为相簿单独设置密码。即使保险库的其他部分已打开，这个相簿仍保持锁定。",
+    "ko": "앨범마다 별도의 비밀번호를 걸 수 있습니다. 보관함의 나머지가 열려 있어도 그 앨범은 잠긴 채로 남습니다.",
+    "nl": "Geef een album een eigen wachtwoord. Het blijft op slot, ook als de rest van de kluis open is."
   },
   "prof8_t": {
     "en": "Decoy vault",
@@ -220,15 +187,15 @@
     "nl": "Lokkluis"
   },
   "prof8_d": {
-    "en": "Set a second passcode that opens a believable, separate vault with its own harmless photos. If you are ever pressured to unlock, the decoy opens and your real vault stays completely hidden.",
-    "es": "Configura un segundo código que abre una caja fuerte aparte y creíble, con sus propias fotos inofensivas. Si alguna vez te presionan para desbloquear, se abre el señuelo y tu caja fuerte real queda totalmente oculta.",
-    "fr": "Définissez un second code qui ouvre un coffre-fort distinct et crédible, avec ses propres photos anodines. Si l'on vous force un jour à déverrouiller, le leurre s'ouvre et votre vrai coffre-fort reste totalement caché.",
-    "de": "Lege einen zweiten Code fest, der einen glaubwürdigen, separaten Tresor mit eigenen harmlosen Fotos öffnet. Wirst du je zum Entsperren gedrängt, öffnet sich der Köder und dein echter Tresor bleibt völlig verborgen.",
-    "it": "Imposta un secondo codice che apre una cassaforte separata e credibile, con foto innocue. Se mai venissi costretto a sbloccare, si apre l'esca e la tua cassaforte reale resta del tutto nascosta.",
-    "pt-BR": "Defina uma segunda senha que abre um cofre separado e convincente, com fotos inofensivas. Se você for pressionado a desbloquear, o falso abre e o seu cofre real fica totalmente oculto.",
-    "zh-Hans": "设置第二个密码，打开一个以假乱真的独立保险库，里面是无关紧要的照片。万一被迫解锁，打开的是诱饵，你真正的保险库始终完全隐藏。",
-    "ko": "그럴듯한 무해한 사진이 담긴 별도의 미끼 보관함을 여는 두 번째 암호를 설정하세요. 잠금 해제를 강요당하더라도 미끼가 열리고 진짜 보관함은 완전히 숨겨진 채 유지됩니다.",
-    "nl": "Stel een tweede toegangscode in die een geloofwaardige, aparte kluis opent met eigen onschuldige foto's. Als je ooit onder druk wordt gezet om te ontgrendelen, opent de lokkluis en blijft je echte kluis volledig verborgen."
+    "en": "Set a second passcode that opens a separate vault with harmless photos in it. If you’re ever pushed to unlock Privaro, enter that one, and your real vault stays out of sight.",
+    "es": "Configura un segundo código que abre una caja fuerte aparte con fotos inofensivas. Si alguna vez te obligan a desbloquear Privaro, introduce ese y tu caja fuerte real no aparece.",
+    "fr": "Définissez un second code qui ouvre un coffre-fort distinct, rempli de photos anodines. Si l’on vous force un jour à déverrouiller Privaro, saisissez celui-là : votre vrai coffre-fort reste invisible.",
+    "de": "Lege einen zweiten Code fest, der einen separaten Tresor mit harmlosen Fotos öffnet. Wirst du je gedrängt, Privaro zu entsperren, gibst du diesen ein, und dein echter Tresor bleibt unsichtbar.",
+    "it": "Imposta un secondo codice che apre una cassaforte separata con foto innocue. Se qualcuno ti costringe a sbloccare Privaro, inserisci quello: la tua cassaforte vera resta invisibile.",
+    "pt-BR": "Defina uma segunda senha que abre um cofre separado com fotos inofensivas. Se um dia pressionarem você a desbloquear o Privaro, digite essa, e o seu cofre real continua escondido.",
+    "zh-Hans": "设置第二个密码，用来打开一个只有普通照片的独立保险库。万一有人逼你解锁 Privaro，就输入这个密码，真正的保险库不会露面。",
+    "ko": "평범한 사진만 담긴 별도의 보관함을 여는 두 번째 암호를 설정하세요. 누군가 Privaro를 열라고 강요하면 이 암호를 입력하면 되고, 진짜 보관함은 드러나지 않습니다.",
+    "nl": "Stel een tweede toegangscode in die een aparte kluis met onschuldige foto’s opent. Word je ooit gedwongen Privaro te ontgrendelen, voer dan die in, en je echte kluis blijft uit zicht."
   },
   "prof9_t": {
     "en": "Duress wipe",
@@ -242,15 +209,15 @@
     "nl": "Noodwissing"
   },
   "prof9_d": {
-    "en": "Set a special passcode that, when entered, instantly and permanently erases the vault, including the decoy. For worst-case situations where the safest thing is to leave nothing behind. This cannot be undone.",
-    "es": "Configura un código especial que, al introducirlo, borra al instante y de forma permanente la caja fuerte, incluido el señuelo. Para los peores casos, cuando lo más seguro es no dejar nada. Esto no se puede deshacer.",
-    "fr": "Définissez un code spécial qui, une fois saisi, efface instantanément et définitivement le coffre-fort, y compris le leurre. Pour les pires situations, où le plus sûr est de ne rien laisser. Cette action est irréversible.",
-    "de": "Lege einen speziellen Code fest, der bei Eingabe den Tresor sofort und dauerhaft löscht, einschließlich des Köders. Für den schlimmsten Fall, in dem es am sichersten ist, nichts zu hinterlassen. Dies kann nicht rückgängig gemacht werden.",
-    "it": "Imposta un codice speciale che, una volta digitato, cancella all'istante e in modo permanente la cassaforte, esca compresa. Per le situazioni peggiori, quando la cosa più sicura è non lasciare nulla. L'operazione è irreversibile.",
-    "pt-BR": "Defina uma senha especial que, ao ser digitada, apaga instantânea e permanentemente o cofre, incluindo o falso. Para os piores casos, quando o mais seguro é não deixar nada. Isso não pode ser desfeito.",
-    "zh-Hans": "设置一个特殊密码，一旦输入，会立即永久抹除保险库，包括诱饵。用于最坏的情况，此时最安全的做法是不留任何痕迹。此操作无法撤销。",
-    "ko": "입력하는 즉시 미끼를 포함한 보관함을 영구적으로 지우는 특수 암호를 설정하세요. 아무것도 남기지 않는 것이 가장 안전한 최악의 상황을 위한 기능입니다. 이 작업은 되돌릴 수 없습니다.",
-    "nl": "Stel een speciale toegangscode in die, eenmaal ingevoerd, de kluis direct en permanent wist, inclusief de lokkluis. Voor het ergste geval, wanneer niets achterlaten het veiligst is. Dit kan niet ongedaan worden gemaakt."
+    "en": "Set a passcode that erases the whole vault, decoy included, the moment it’s entered. It’s meant for the worst case, and it can’t be undone.",
+    "es": "Configura un código que borra toda la caja fuerte, señuelo incluido, en cuanto se introduce. Está pensado para el peor de los casos y no se puede deshacer.",
+    "fr": "Définissez un code qui efface tout le coffre-fort, leurre compris, dès qu’il est saisi. C’est prévu pour le pire des cas, et c’est irréversible.",
+    "de": "Lege einen Code fest, der den ganzen Tresor samt Köder löscht, sobald er eingegeben wird. Er ist für den schlimmsten Fall gedacht und lässt sich nicht rückgängig machen.",
+    "it": "Imposta un codice che cancella l’intera cassaforte, esca compresa, appena viene digitato. È pensato per il caso peggiore ed è irreversibile.",
+    "pt-BR": "Defina uma senha que apaga o cofre inteiro, incluindo o falso, assim que é digitada. É para o pior caso e não pode ser desfeito.",
+    "zh-Hans": "设置一个密码，一旦输入就会抹除整个保险库，包括诱饵。这是为最坏的情况准备的，无法撤销。",
+    "ko": "입력하는 순간 미끼를 포함한 보관함 전체를 지우는 암호를 설정하세요. 최악의 상황을 위한 기능이며, 되돌릴 수 없습니다.",
+    "nl": "Stel een toegangscode in die de hele kluis wist, lokkluis inbegrepen, zodra hij wordt ingevoerd. Bedoeld voor het ergste geval, en het kan niet ongedaan worden gemaakt."
   },
   "prof10_t": {
     "en": "Wi-Fi transfer",
@@ -308,7 +275,7 @@
     "nl": "Vermomd app-icoon"
   },
   "prof12_d": {
-    "en": "Hide Privaro behind an everyday icon and name, like Calculator or Notes, so it does not stand out on your home screen. Color icon variants are free; the disguises are Pro.",
+    "en": "Hide Privaro behind an everyday icon and name, like Calculator or Notes, so it doesn’t stand out on your Home Screen. Color icon variants are free; the disguises are Pro.",
     "es": "Oculta Privaro tras un icono y un nombre cotidianos, como Calculadora o Notas, para que no llame la atención en tu pantalla de inicio. Las variantes de color del icono son gratis; los disfraces son Pro.",
     "fr": "Masquez Privaro derrière une icône et un nom du quotidien, comme Calculatrice ou Notes, pour qu'il ne se remarque pas sur votre écran d'accueil. Les variantes de couleur de l'icône sont gratuites ; les déguisements sont réservés à Pro.",
     "de": "Verstecke Privaro hinter einem alltäglichen Symbol und Namen wie Rechner oder Notizen, damit es auf dem Home-Bildschirm nicht auffällt. Farbvarianten des Symbols sind kostenlos; die Tarnungen sind Pro.",
@@ -330,15 +297,15 @@
     "nl": "Gratis of Pro, de basis verandert nooit:"
   },
   "pro_callout_rest": {
-    "en": "everything is encrypted on your device with AES-256, there is no account, and no one but you can open your vault. Pro is a one-time purchase of €11.99, with nothing to renew.",
-    "es": "todo se cifra en tu dispositivo con AES-256, no hay cuenta y nadie más que tú puede abrir tu caja fuerte. Pro es un pago único de 11,99 €, sin nada que renovar.",
-    "fr": "tout est chiffré sur votre appareil avec AES-256, il n’y a pas de compte, et personne d’autre que vous ne peut ouvrir votre coffre. Pro est un achat unique de 11,99 €, sans renouvellement.",
-    "de": "Alles wird auf deinem Gerät mit AES-256 verschlüsselt, es gibt kein Konto, und niemand außer dir kann deinen Tresor öffnen. Pro ist ein Einmalkauf für 11,99 €, ohne Verlängerung.",
-    "it": "tutto è cifrato sul tuo dispositivo con AES-256, non c’è un account e nessuno tranne te può aprire la tua cassaforte. Pro è un acquisto unico da 11,99 €, senza rinnovi.",
-    "pt-BR": "tudo é criptografado no seu aparelho com AES-256, não há conta e ninguém além de você pode abrir o seu cofre. O Pro é uma compra única de € 11,99, sem renovação.",
-    "zh-Hans": "所有内容都在你的设备上用 AES-256 加密，无需账户，除了你没人能打开保险库。Pro 是一次性购买，价格 €11.99，无需续费。",
-    "ko": "모든 것이 기기에서 AES-256으로 암호화되고, 계정이 없으며, 나 외에는 아무도 보관함을 열 수 없습니다. Pro는 €11.99 일회성 구매이며 갱신되지 않습니다.",
-    "nl": "alles wordt op je apparaat versleuteld met AES-256, er is geen account en niemand behalve jij kan je kluis openen. Pro is een eenmalige aankoop van € 11,99, zonder verlenging."
+    "en": "everything is encrypted on your device with AES-256, there’s no account, and only you can open your vault.",
+    "es": "todo se cifra en tu dispositivo con AES-256, no hay cuenta y solo tú puedes abrir tu caja fuerte.",
+    "fr": "tout est chiffré sur votre appareil avec AES-256, il n’y a pas de compte, et vous seul pouvez ouvrir votre coffre.",
+    "de": "Alles wird auf deinem Gerät mit AES-256 verschlüsselt, es gibt kein Konto, und nur du kannst deinen Tresor öffnen.",
+    "it": "tutto è cifrato sul tuo dispositivo con AES-256, non c’è un account e solo tu puoi aprire la tua cassaforte.",
+    "pt-BR": "tudo é criptografado no seu aparelho com AES-256, não há conta e só você pode abrir o seu cofre.",
+    "zh-Hans": "所有内容都在你的设备上用 AES-256 加密，无需账户，只有你能打开保险库。",
+    "ko": "모든 것이 기기에서 AES-256으로 암호화되고, 계정이 없으며, 보관함은 나만 열 수 있습니다.",
+    "nl": "alles wordt op je apparaat versleuteld met AES-256, er is geen account en alleen jij kunt je kluis openen."
   },
   "prof13_t": {
     "en": "Secure share",

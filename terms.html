@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Terms of Use · Privaro</title>
 <meta name="description" content="The terms that govern your use of Privaro, including what happens if you lose your passcode and recovery key." />
+<link rel="canonical" href="https://privaro-site.vercel.app/terms" />
 <link rel="alternate" hreflang="en" href="https://privaro-site.vercel.app/terms" />
 <link rel="alternate" hreflang="es" href="https://privaro-site.vercel.app/es/terms" />
 <link rel="alternate" hreflang="fr" href="https://privaro-site.vercel.app/fr/terms" />
@@ -15,30 +16,47 @@
 <link rel="alternate" hreflang="ko" href="https://privaro-site.vercel.app/ko/terms" />
 <link rel="alternate" hreflang="nl" href="https://privaro-site.vercel.app/nl/terms" />
 <link rel="alternate" hreflang="x-default" href="https://privaro-site.vercel.app/terms" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Privaro" />
+<meta property="og:title" content="Terms of Use · Privaro" />
+<meta property="og:description" content="The terms that govern your use of Privaro, including what happens if you lose your passcode and recovery key." />
+<meta property="og:url" content="https://privaro-site.vercel.app/terms" />
+<meta property="og:image" content="https://privaro-site.vercel.app/og.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:card" content="summary_large_image" />
 <meta name="color-scheme" content="light dark" />
+<meta name="apple-itunes-app" content="app-id=6783131829" />
 <link rel="icon" href="/logo.png" />
+<link rel="apple-touch-icon" href="/logo.png" />
 <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
 
-<main class="legal-page">
-  <div class="legal-top">
-    <a class="back" href="/">
-      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-      Back to home
-    </a>
+<header class="site-head wrap grid">
+  <a class="brand" href="/">Privaro</a>
+  <nav class="site-nav">
+    <a href="/pro">Pro</a>
+    <a href="/privacy">Privacy</a>
     <details class="lang"><summary aria-label="Language"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>English</span></summary><div class="lang-menu"><a href="/terms" class="active">English</a><a href="/es/terms">Español</a><a href="/fr/terms">Français</a><a href="/de/terms">Deutsch</a><a href="/it/terms">Italiano</a><a href="/pt-br/terms">Português</a><a href="/zh/terms">简体中文</a><a href="/ko/terms">한국어</a><a href="/nl/terms">Nederlands</a></div></details>
-  </div>
+    <a class="nav-get" href="https://apps.apple.com/app/id6783131829">Get the app</a>
+  </nav>
+</header>
 
+<main>
+
+<div class="page-head wrap">
   <h1>Terms of Use</h1>
   <p class="updated">Effective date: June 28, 2026 · Last updated: June 28, 2026</p>
-
   <p class="intro">These Terms of Use ("Terms") govern your use of the Privaro app ("Privaro," "the app") provided by Erdinc Zarbo ("we," "us," or "our"). By downloading or using Privaro, you agree to these Terms. If you do not agree, please do not use the app.</p>
+</div>
 
-  <div class="callout">
-    <strong>Please read this carefully.</strong> Privaro encrypts your content on your device with a key only you control. This means that if you lose your passcode and your recovery key, <strong>no one, including us, can recover your data.</strong> Privaro also includes features that permanently erase data on purpose. You are responsible for keeping your passcode and recovery key safe, for how you configure the app, and for maintaining your own backups.
-  </div>
-
+<section class="sec wrap grid">
+  <aside class="label">
+    <p><strong>Please read this carefully.</strong> Privaro encrypts your content on your device with a key only you control. This means that if you lose your passcode and your recovery key, <strong>no one, including us, can recover your data.</strong> Privaro also includes features that permanently erase data on purpose. You are responsible for keeping your passcode and recovery key safe, for how you configure the app, and for maintaining your own backups.</p>
+  </aside>
+  <div class="legal">
   <h2>License</h2>
   <p>We grant you a personal, non-exclusive, non-transferable, revocable license to use Privaro on Apple devices that you own or control, in accordance with these Terms and the Apple App Store Terms of Service. You may not copy, modify, reverse-engineer, decompile, sell, sublicense, or distribute the app except as permitted by law.</p>
 
@@ -87,14 +105,29 @@
   <h2>Contact</h2>
   <p>Questions about these Terms? Contact us at <a href="mailto:erdincdubu@icloud.com">erdincdubu@icloud.com</a></p>
   <p class="authoritative">This policy is also available in other languages. In case of any discrepancy, the English version is authoritative.</p>
+  </div>
+</section>
+
 </main>
 
-<footer>
-  <div class="wrap">
-    <div class="legal">© <span id="year">2026</span> Privaro. All rights reserved. · <a href="/">Home</a> · <a href="/privacy">Privacy Policy</a></div>
-  </div>
+<footer class="site-foot wrap grid">
+  <p class="foot-legal">© <span id="year">2026</span> Privaro. All rights reserved.<br />Made in the Netherlands. This site sets no cookies and has no trackers.</p>
+  <nav class="foot-links">
+    <a href="/pro">Pro features</a>
+    <a href="/privacy">Privacy Policy</a>
+    <a href="/terms">Terms of Use</a>
+    <a href="mailto:erdincdubu@icloud.com">Contact</a>
+  </nav>
 </footer>
 
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+// The language menu is a <details>; close it on a click elsewhere or on Escape.
+const lang = document.querySelector('.lang');
+document.addEventListener('click', e => { if (lang.open && !lang.contains(e.target)) lang.open = false; });
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && lang.open) { lang.open = false; lang.querySelector('summary').focus(); }
+});
+</script>
 </body>
 </html>

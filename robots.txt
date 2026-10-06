@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /screenshots
+
+Sitemap: https://privaro-site.vercel.app/sitemap.xml
