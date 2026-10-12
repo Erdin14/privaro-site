@@ -23,9 +23,19 @@ LANGS = [
     ("zh-Hans", "zh", "zh-Hans", "简体中文"),
     ("ko", "ko", "ko", "한국어"),
     ("nl", "nl", "nl", "Nederlands"),
+    ("ja", "ja", "ja", "日本語"),
+    ("zh-Hant", "zh-hant", "zh-Hant", "繁體中文"),
+    ("ru", "ru", "ru", "Русский"),
+    ("tr", "tr", "tr", "Türkçe"),
+    ("id", "id", "id", "Bahasa Indonesia"),
+    ("hi", "hi", "hi", "हिन्दी"),
+    ("ar", "ar", "ar", "العربية"),
+    ("ur", "ur", "ur", "اردو"),
 ]
 FOLDER = {code: folder for code, folder, _, _ in LANGS}
 AUTONYM = {code: name for code, _, _, name in LANGS}
+# Written right to left: the page gets dir="rtl" and the CSS mirrors itself.
+RTL = {"ar", "ur"}
 
 PAGES = {"index": "index.html", "pro": "pro.html", "privacy": "privacy.html", "terms": "terms.html"}
 
@@ -67,9 +77,9 @@ def hreflang_block(page):
 
 def switcher_block(page, cur, label):
     items = []
-    for code, _, _, name in LANGS:
+    for code, _, htmllang, name in LANGS:
         active = ' class="active"' if code == cur else ""
-        items.append(f'<a href="{page_url(page, code)}"{active}>{name}</a>')
+        items.append(f'<a href="{page_url(page, code)}" lang="{htmllang}"{active}>{name}</a>')
     return (f'<details class="lang"><summary aria-label="{label}">{GLOBE}'
             f'<span>{AUTONYM[cur]}</span></summary>'
             f'<div class="lang-menu">{"".join(items)}</div></details>')
@@ -83,6 +93,7 @@ def main():
         for code, _, htmllang, _ in LANGS:
             html = template
             html = html.replace("{{LANG}}", htmllang)
+            html = html.replace("{{DIR}}", "rtl" if code in RTL else "ltr")
             html = html.replace("{{HREFLANG}}", hreflang_block(page))
             label = strings["lang_label"].get(code, strings["lang_label"]["en"])
             html = html.replace("{{SWITCHER}}", switcher_block(page, code, label))

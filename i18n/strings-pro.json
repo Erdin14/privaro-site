@@ -8,7 +8,15 @@
     "pt-BR": "Recursos Pro · Privaro",
     "zh-Hans": "Pro 功能 · Privaro",
     "ko": "Pro 기능 · Privaro",
-    "nl": "Pro-functies · Privaro"
+    "nl": "Pro-functies · Privaro",
+    "ja": "Pro の機能 · Privaro",
+    "zh-Hant": "Pro 功能 · Privaro",
+    "ru": "Функции Pro · Privaro",
+    "tr": "Pro özellikleri · Privaro",
+    "ar": "ميزات Pro · Privaro",
+    "hi": "Pro फ़ीचर · Privaro",
+    "ur": "Pro فیچرز · Privaro",
+    "id": "Fitur Pro · Privaro"
   },
   "meta_desc_pro": {
     "en": "Exactly what each Privaro Pro feature does: unlimited storage, decoy vault, duress wipe, screenshot protection, encrypted backup and more.",
@@ -19,7 +27,15 @@
     "pt-BR": "Exatamente o que cada recurso do Privaro Pro faz: armazenamento ilimitado, cofre falso, limpeza sob coação, proteção contra capturas, backup criptografado e mais.",
     "zh-Hans": "详细说明 Privaro Pro 每项功能的作用：无限存储、诱饵保险库、胁迫抹除、防截屏、加密备份等。",
     "ko": "Privaro Pro의 각 기능이 무엇을 하는지 정확히 설명합니다: 무제한 저장, 미끼 보관함, 강제 삭제, 스크린샷 차단, 암호화 백업 등.",
-    "nl": "Precies wat elke Privaro Pro-functie doet: onbeperkte opslag, lokkluis, noodwissing, schermafbeeldingsbescherming, versleutelde back-up en meer."
+    "nl": "Precies wat elke Privaro Pro-functie doet: onbeperkte opslag, lokkluis, noodwissing, schermafbeeldingsbescherming, versleutelde back-up en meer.",
+    "ja": "Privaro Pro の各機能でできること：無制限のストレージ、おとり保管庫、緊急消去、スクリーンショット防止、暗号化バックアップなど。",
+    "zh-Hant": "Privaro Pro 每項功能的確切用途：無限儲存空間、誘餌保險庫、脅迫清除、截圖保護、加密備份等等。",
+    "ru": "Что именно делает каждая функция Privaro Pro: безлимитное хранилище, ложное хранилище, тревожное стирание, защита от снимков экрана, зашифрованное резервное копирование и многое другое.",
+    "tr": "Privaro Pro'nun her özelliğinin tam olarak ne yaptığı: sınırsız depolama, sahte kasa, panik silme, ekran görüntüsü koruması, şifreli yedekleme ve daha fazlası.",
+    "ar": "ما تفعله كل ميزة في Privaro Pro بالضبط: تخزين بلا حدود، وخزنة وهمية، ومسح الطوارئ، وحماية من لقطات الشاشة، ونسخ احتياطي مشفّر، والمزيد.",
+    "hi": "Privaro Pro का हर फ़ीचर ठीक-ठीक क्या करता है: असीमित स्टोरेज, नकली तिजोरी, आपातकालीन डेटा मिटाना, स्क्रीनशॉट से सुरक्षा, एन्क्रिप्टेड बैकअप और बहुत कुछ।",
+    "ur": "Privaro Pro کا ہر فیچر ٹھیک ٹھیک کیا کرتا ہے: لامحدود اسٹوریج، جعلی والٹ، ہنگامی حذف، اسکرین شاٹ سے تحفظ، انکرپٹڈ بیک اپ اور بہت کچھ۔",
+    "id": "Apa persisnya yang dilakukan setiap fitur Privaro Pro: penyimpanan tanpa batas, brankas umpan, penghapusan darurat, perlindungan tangkapan layar, cadangan terenkripsi, dan lainnya."
   },
   "back_home": {
     "en": "Back to home",
@@ -30,7 +46,15 @@
     "pt-BR": "Voltar ao início",
     "zh-Hans": "返回首页",
     "ko": "홈으로 돌아가기",
-    "nl": "Terug naar home"
+    "nl": "Terug naar home",
+    "ja": "ホームに戻る",
+    "zh-Hant": "返回首頁",
+    "ru": "На главную",
+    "tr": "Ana sayfaya dön",
+    "ar": "العودة إلى الرئيسية",
+    "hi": "होम पर वापस जाएँ",
+    "ur": "ہوم پر واپس جائیں",
+    "id": "Kembali ke beranda"
   },
   "pro_h1": {
     "en": "Everything Pro unlocks.",
@@ -41,7 +65,15 @@
     "pt-BR": "Tudo o que o Pro desbloqueia.",
     "zh-Hans": "Pro 解锁的一切。",
     "ko": "Pro가 열어 주는 모든 것.",
-    "nl": "Alles wat Pro ontgrendelt."
+    "nl": "Alles wat Pro ontgrendelt.",
+    "ja": "Pro で使えるようになること。",
+    "zh-Hant": "Pro 解鎖的所有功能。",
+    "ru": "Всё, что открывает Pro.",
+    "tr": "Pro'nun açtığı her şey.",
+    "ar": "كل ما يفتحه Pro.",
+    "hi": "Pro से खुलने वाली हर चीज़।",
+    "ur": "Pro سے کھلنے والی ہر چیز۔",
+    "id": "Semua yang dibuka oleh Pro."
   },
   "pro_intro": {
     "en": "The vault is free to use. Pro lifts the limits and turns on the full security toolkit. Here is exactly what each feature does. Everything still runs on your device, encrypted, with no account.",
@@ -52,7 +84,15 @@
     "pt-BR": "O cofre é gratuito. O Pro tira os limites e ativa todas as ferramentas de segurança. Aqui está exatamente o que cada recurso faz. Tudo continua no seu dispositivo, criptografado e sem conta.",
     "zh-Hans": "保险库可免费使用。Pro 解除限制并开启完整的安全工具。下面是每项功能的具体作用。一切仍在你的设备上运行，已加密，且无需账户。",
     "ko": "보관함은 무료로 사용할 수 있습니다. Pro는 한도를 없애고 모든 보안 기능을 켭니다. 각 기능이 무엇을 하는지 아래에 정확히 정리했습니다. 모든 것은 여전히 기기에서, 암호화된 상태로, 계정 없이 작동합니다.",
-    "nl": "De kluis is gratis te gebruiken. Pro haalt de limieten weg en zet de volledige beveiligingsset aan. Hier staat precies wat elke functie doet. Alles draait nog steeds op je apparaat, versleuteld en zonder account."
+    "nl": "De kluis is gratis te gebruiken. Pro haalt de limieten weg en zet de volledige beveiligingsset aan. Hier staat precies wat elke functie doet. Alles draait nog steeds op je apparaat, versleuteld en zonder account.",
+    "ja": "保管庫は無料で使えます。Pro では制限がなくなり、すべてのセキュリティ機能が使えるようになります。各機能でできることを正確にご紹介します。すべてはこれまで通りデバイス上で、暗号化された状態で、アカウントなしで動作します。",
+    "zh-Hant": "保險庫可以免費使用。Pro 會解除限制，並開啟完整的安全工具組。以下是每項功能的確切用途。所有功能仍然在你的裝置上執行，經過加密，而且不需要帳號。",
+    "ru": "Хранилищем можно пользоваться бесплатно. Pro снимает ограничения и включает полный набор средств защиты. Вот что именно делает каждая функция. Всё по-прежнему работает на вашем устройстве, в зашифрованном виде и без аккаунта.",
+    "tr": "Kasayı kullanmak ücretsizdir. Pro sınırları kaldırır ve tüm güvenlik araçlarını açar. İşte her özelliğin tam olarak ne yaptığı. Her şey yine aygıtınızda, şifreli ve hesapsız çalışır.",
+    "ar": "استخدام الخزنة مجاني. يرفع Pro القيود ويشغّل مجموعة أدوات الأمان الكاملة. إليك ما تفعله كل ميزة بالضبط. كل شيء ما زال يعمل على جهازك، مشفّرًا، وبلا حساب.",
+    "hi": "तिजोरी का उपयोग मुफ़्त है। Pro सीमाएँ हटाता है और पूरा सुरक्षा टूलकिट चालू करता है। यहाँ बताया गया है कि हर फ़ीचर ठीक-ठीक क्या करता है। सब कुछ अब भी आपके डिवाइस पर, एन्क्रिप्टेड रूप में और बिना किसी अकाउंट के चलता है।",
+    "ur": "والٹ کا استعمال مفت ہے۔ Pro حدیں ختم کرتا ہے اور سیکیورٹی کا پورا ٹول کٹ آن کرتا ہے۔ یہاں بتایا گیا ہے کہ ہر فیچر ٹھیک ٹھیک کیا کرتا ہے۔ سب کچھ اب بھی آپ کے ڈیوائس پر، انکرپٹڈ اور بغیر اکاؤنٹ کے چلتا ہے۔",
+    "id": "Brankas bisa digunakan secara gratis. Pro menghapus batasan dan mengaktifkan seluruh perangkat keamanan. Berikut apa persisnya yang dilakukan setiap fitur. Semuanya tetap berjalan di perangkat Anda, terenkripsi, tanpa akun."
   },
   "prof1_t": {
     "en": "One payment, not a subscription",
@@ -63,7 +103,15 @@
     "pt-BR": "Um pagamento, não uma assinatura",
     "zh-Hans": "一次付款，而非订阅",
     "ko": "구독이 아닌 일회성 결제",
-    "nl": "Eén betaling, geen abonnement"
+    "nl": "Eén betaling, geen abonnement",
+    "ja": "一度の支払いで、サブスクリプションではありません",
+    "zh-Hant": "一次付款，不是訂閱",
+    "ru": "Один платёж, а не подписка",
+    "tr": "Abonelik değil, tek ödeme",
+    "ar": "دفعة واحدة، لا اشتراك",
+    "hi": "एक बार का भुगतान, सब्सक्रिप्शन नहीं",
+    "ur": "ایک بار کی ادائیگی، سبسکرپشن نہیں",
+    "id": "Sekali bayar, bukan berlangganan"
   },
   "prof1_d": {
     "en": "Privaro Pro is a single purchase that unlocks everything on every device signed in to your Apple Account. Nothing renews, and there is nothing to cancel.",
@@ -74,7 +122,15 @@
     "pt-BR": "O Privaro Pro é uma compra única que libera tudo em todos os aparelhos conectados à sua Apple Account. Nada renova e não há nada para cancelar.",
     "zh-Hans": "Privaro Pro 是一次性购买，可在登录同一 Apple 账户的所有设备上解锁全部功能。无需续订，也没有需要取消的内容。",
     "ko": "Privaro Pro는 한 번의 구매로 같은 Apple 계정에 로그인한 모든 기기에서 모든 기능을 잠금 해제합니다. 갱신되는 것도, 해지할 것도 없습니다.",
-    "nl": "Privaro Pro is een eenmalige aankoop die alles ontgrendelt op elk apparaat dat bij je Apple Account is aangemeld. Er verlengt niets en er is niets op te zeggen."
+    "nl": "Privaro Pro is een eenmalige aankoop die alles ontgrendelt op elk apparaat dat bij je Apple Account is aangemeld. Er verlengt niets en er is niets op te zeggen.",
+    "ja": "Privaro Pro は一度購入するだけで、同じ Apple アカウントでサインインしているすべてのデバイスですべての機能が使えるようになります。自動更新はなく、解約の必要もありません。",
+    "zh-Hant": "Privaro Pro 只需購買一次，就能在登入同一個 Apple 帳號的所有裝置上解鎖所有功能。不會自動續約，也沒有需要取消的東西。",
+    "ru": "Privaro Pro — это разовая покупка, которая открывает всё на каждом устройстве, где выполнен вход в ваш Аккаунт Apple. Ничего не продлевается, и отменять нечего.",
+    "tr": "Privaro Pro, Apple Hesabınızla oturum açılmış her aygıtta her şeyi açan tek seferlik bir satın alımdır. Hiçbir şey yenilenmez ve iptal edilecek bir şey yoktur.",
+    "ar": "Privaro Pro عملية شراء واحدة تفتح كل شيء على كل جهاز مسجّل الدخول إلى حساب Apple الخاص بك. لا شيء يتجدد، ولا شيء لإلغائه.",
+    "hi": "Privaro Pro एक बार की ख़रीदारी है जो आपके Apple अकाउंट से साइन इन किए गए हर डिवाइस पर सब कुछ अनलॉक करती है। कुछ भी रिन्यू नहीं होता, और रद्द करने के लिए कुछ नहीं है।",
+    "ur": "Privaro Pro ایک بار کی خریداری ہے جو آپ کے Apple اکاؤنٹ میں سائن ان ہر ڈیوائس پر سب کچھ کھول دیتی ہے۔ کچھ بھی تجدید نہیں ہوتا، اور منسوخ کرنے کو کچھ نہیں۔",
+    "id": "Privaro Pro adalah pembelian satu kali yang membuka semua fitur di setiap perangkat yang masuk ke Akun Apple Anda. Tidak ada yang diperpanjang, dan tidak ada yang perlu dibatalkan."
   },
   "prof2_t": {
     "en": "Unlimited storage",
@@ -85,7 +141,15 @@
     "pt-BR": "Armazenamento ilimitado",
     "zh-Hans": "无限存储",
     "ko": "무제한 저장 공간",
-    "nl": "Onbeperkte opslag"
+    "nl": "Onbeperkte opslag",
+    "ja": "無制限のストレージ",
+    "zh-Hant": "無限儲存空間",
+    "ru": "Безлимитное хранилище",
+    "tr": "Sınırsız depolama",
+    "ar": "تخزين بلا حدود",
+    "hi": "असीमित स्टोरेज",
+    "ur": "لامحدود اسٹوریج",
+    "id": "Penyimpanan tanpa batas"
   },
   "prof2_d": {
     "en": "The free vault holds up to 2.5 GB. Pro removes the cap, so you can move your entire photo and video library into the vault without running out of room.",
@@ -96,7 +160,15 @@
     "pt-BR": "A versão gratuita comporta até 2,5 GB. O Pro remove o limite, para você mover toda a sua biblioteca de fotos e vídeos para o cofre sem ficar sem espaço.",
     "zh-Hans": "免费版最多可存放 2.5 GB。Pro 取消上限，让你把整个照片和视频库移入保险库也不会用尽空间。",
     "ko": "무료 버전은 최대 2.5GB를 담습니다. Pro는 한도를 없애 사진과 동영상 라이브러리 전체를 공간 걱정 없이 보관함으로 옮길 수 있습니다.",
-    "nl": "De gratis versie bevat tot 2,5 GB. Pro haalt de limiet weg, zodat je je hele foto- en videobibliotheek naar de kluis kunt verplaatsen zonder ruimte tekort te komen."
+    "nl": "De gratis versie bevat tot 2,5 GB. Pro haalt de limiet weg, zodat je je hele foto- en videobibliotheek naar de kluis kunt verplaatsen zonder ruimte tekort te komen.",
+    "ja": "無料版の保管庫は最大 2.5 GB です。Pro なら上限がなくなり、写真とビデオのライブラリをまるごと保管庫に移しても容量が足りなくなることはありません。",
+    "zh-Hant": "免費版保險庫最多可存放 2.5 GB。Pro 取消了上限，讓你可以把整個照片和影片圖庫移進保險庫，不必擔心空間不足。",
+    "ru": "Бесплатное хранилище вмещает до 2,5 ГБ. Pro снимает этот лимит, так что вы можете перенести в хранилище всю медиатеку фото и видео и не беспокоиться о месте.",
+    "tr": "Ücretsiz kasa en fazla 2,5 GB tutar. Pro bu sınırı kaldırır; böylece tüm fotoğraf ve video arşivinizi yer sıkıntısı çekmeden kasaya taşıyabilirsiniz.",
+    "ar": "تتّسع الخزنة المجانية لما يصل إلى 2.5 غيغابايت. يزيل Pro هذا الحدّ، فيمكنك نقل مكتبة صورك وفيديوهاتك كاملة إلى الخزنة دون أن تنفد المساحة.",
+    "hi": "मुफ़्त तिजोरी में 2.5 GB तक रखा जा सकता है। Pro यह सीमा हटा देता है, ताकि आप जगह ख़त्म होने की चिंता किए बिना अपनी पूरी फ़ोटो और वीडियो लाइब्रेरी तिजोरी में ले जा सकें।",
+    "ur": "مفت والٹ میں 2.5 GB تک رکھا جا سکتا ہے۔ Pro یہ حد ختم کر دیتا ہے، تاکہ آپ جگہ ختم ہونے کی فکر کیے بغیر اپنی پوری فوٹو اور ویڈیو لائبریری والٹ میں منتقل کر سکیں۔",
+    "id": "Brankas gratis menampung hingga 2,5 GB. Pro menghapus batas itu, sehingga Anda dapat memindahkan seluruh perpustakaan foto dan video ke dalam brankas tanpa kehabisan ruang."
   },
   "prof3_t": {
     "en": "Unlimited albums and folders",
@@ -107,7 +179,15 @@
     "pt-BR": "Álbuns e pastas ilimitados",
     "zh-Hans": "无限相簿与文件夹",
     "ko": "무제한 앨범과 폴더",
-    "nl": "Onbeperkte albums en mappen"
+    "nl": "Onbeperkte albums en mappen",
+    "ja": "アルバムとフォルダーが無制限",
+    "zh-Hant": "無限相簿和檔案夾",
+    "ru": "Безлимитные альбомы и папки",
+    "tr": "Sınırsız albüm ve klasör",
+    "ar": "ألبومات ومجلدات بلا حدود",
+    "hi": "असीमित एल्बम और फ़ोल्डर",
+    "ur": "لامحدود البمز اور فولڈرز",
+    "id": "Album dan folder tanpa batas"
   },
   "prof3_d": {
     "en": "Free includes up to 5 albums. Pro lets you create as many albums and nested folders as you like, so you can organize everything exactly how you want.",
@@ -118,7 +198,15 @@
     "pt-BR": "O Grátis inclui até 5 álbuns. O Pro permite criar quantos álbuns e pastas aninhadas quiser, para organizar tudo exatamente como você quer.",
     "zh-Hans": "免费版最多包含 5 个相簿。Pro 让你随意创建任意数量的相簿和嵌套文件夹，完全按你的方式整理。",
     "ko": "무료에는 앨범 5개가 포함됩니다. Pro에서는 앨범과 중첩 폴더를 원하는 만큼 만들어 모든 것을 원하는 대로 정리할 수 있습니다.",
-    "nl": "Gratis bevat tot 5 albums. Met Pro maak je zoveel albums en geneste mappen als je wilt, zodat je alles precies kunt ordenen zoals jij wilt."
+    "nl": "Gratis bevat tot 5 albums. Met Pro maak je zoveel albums en geneste mappen als je wilt, zodat je alles precies kunt ordenen zoals jij wilt.",
+    "ja": "無料版ではアルバムは 5 個までです。Pro なら、アルバムや入れ子のフォルダーをいくつでも作成でき、思い通りに整理できます。",
+    "zh-Hant": "免費版最多可建立 5 本相簿。Pro 讓你建立任意數量的相簿和巢狀檔案夾，完全依照你想要的方式整理。",
+    "ru": "В бесплатной версии — до 5 альбомов. Pro позволяет создавать сколько угодно альбомов и вложенных папок, чтобы упорядочить всё именно так, как вам хочется.",
+    "tr": "Ücretsiz sürümde en fazla 5 albüm vardır. Pro ile istediğiniz kadar albüm ve iç içe klasör oluşturup her şeyi tam istediğiniz gibi düzenleyebilirsiniz.",
+    "ar": "تتضمن النسخة المجانية حتى 5 ألبومات. يتيح لك Pro إنشاء أي عدد تريده من الألبومات والمجلدات المتداخلة، لتنظّم كل شيء كما تريد تمامًا.",
+    "hi": "मुफ़्त वर्शन में 5 एल्बम तक बनाए जा सकते हैं। Pro में आप जितने चाहें उतने एल्बम और नेस्टेड फ़ोल्डर बना सकते हैं, ताकि सब कुछ ठीक वैसे व्यवस्थित कर सकें जैसा आप चाहते हैं।",
+    "ur": "مفت ورژن میں 5 البمز تک شامل ہیں۔ Pro کے ساتھ آپ جتنے چاہیں البمز اور اندرونی فولڈرز بنا سکتے ہیں، تاکہ ہر چیز بالکل اپنی مرضی کے مطابق ترتیب دے سکیں۔",
+    "id": "Versi gratis mencakup hingga 5 album. Pro memungkinkan Anda membuat album dan folder bertingkat sebanyak yang Anda mau, sehingga semuanya bisa diatur persis seperti keinginan Anda."
   },
   "prof4_t": {
     "en": "Screenshot and recording protection",
@@ -129,7 +217,15 @@
     "pt-BR": "Proteção contra capturas e gravação",
     "zh-Hans": "防截屏与录屏保护",
     "ko": "스크린샷 및 녹화 차단",
-    "nl": "Bescherming tegen schermafbeeldingen en opnames"
+    "nl": "Bescherming tegen schermafbeeldingen en opnames",
+    "ja": "スクリーンショット・画面収録の防止",
+    "zh-Hant": "截圖和錄影保護",
+    "ru": "Защита от снимков и записи экрана",
+    "tr": "Ekran görüntüsü ve kayıt koruması",
+    "ar": "الحماية من لقطات الشاشة والتسجيل",
+    "hi": "स्क्रीनशॉट और रिकॉर्डिंग से सुरक्षा",
+    "ur": "اسکرین شاٹ اور ریکارڈنگ سے تحفظ",
+    "id": "Perlindungan dari tangkapan layar dan rekaman"
   },
   "prof4_d": {
     "en": "Stops your vault from being captured by screenshots, screen recording or AirPlay while the app is open, so nothing leaks to your camera roll or to a screen mirror by accident.",
@@ -140,7 +236,15 @@
     "pt-BR": "Impede que o seu cofre seja capturado por capturas, gravação de tela ou AirPlay enquanto o app está aberto, para que nada vaze sem querer para o rolo da câmera ou para uma tela espelhada.",
     "zh-Hans": "在应用打开时，阻止通过截屏、录屏或 AirPlay 捕获你的保险库，避免内容意外泄露到相机胶卷或投屏画面。",
     "ko": "앱이 열려 있는 동안 스크린샷, 화면 녹화, AirPlay로 보관함이 캡처되지 않도록 막아, 카메라 앨범이나 미러링 화면으로 실수로 새어 나가지 않게 합니다.",
-    "nl": "Voorkomt dat je kluis wordt vastgelegd via schermafbeeldingen, schermopname of AirPlay terwijl de app open is, zodat er niets per ongeluk naar je filmrol of een gespiegeld scherm lekt."
+    "nl": "Voorkomt dat je kluis wordt vastgelegd via schermafbeeldingen, schermopname of AirPlay terwijl de app open is, zodat er niets per ongeluk naar je filmrol of een gespiegeld scherm lekt.",
+    "ja": "アプリを開いている間、スクリーンショット、画面収録、AirPlay で保管庫の中身が記録されないようにします。うっかりカメラロールや画面ミラーリング先に漏れることはありません。",
+    "zh-Hant": "在 App 開啟時，防止保險庫被截圖、螢幕錄影或 AirPlay 擷取，不會意外流入你的相機膠卷或鏡像輸出的螢幕。",
+    "ru": "Не позволяет захватить хранилище снимком экрана, записью экрана или через AirPlay, пока приложение открыто, — так ничего случайно не попадёт в фотопленку или на экран при повторе.",
+    "tr": "Uygulama açıkken kasanızın ekran görüntüsü, ekran kaydı veya AirPlay ile yakalanmasını engeller; böylece hiçbir şey yanlışlıkla film rulonuza ya da yansıtılan bir ekrana sızmaz.",
+    "ar": "يمنع التقاط خزنتك بلقطات الشاشة أو تسجيل الشاشة أو AirPlay ما دام التطبيق مفتوحًا، فلا يتسرّب شيء إلى ألبوم الكاميرا أو إلى شاشة منعكسة عن طريق الخطأ.",
+    "hi": "ऐप खुला होने पर आपकी तिजोरी को स्क्रीनशॉट, स्क्रीन रिकॉर्डिंग या AirPlay से कैप्चर होने से रोकता है, ताकि ग़लती से कुछ भी आपके कैमरा रोल या किसी मिरर की गई स्क्रीन तक न पहुँचे।",
+    "ur": "ایپ کھلی ہونے کے دوران آپ کے والٹ کو اسکرین شاٹ، اسکرین ریکارڈنگ یا AirPlay کے ذریعے محفوظ ہونے سے روکتا ہے، تاکہ غلطی سے کچھ بھی آپ کے کیمرہ رول یا کسی مررڈ اسکرین تک نہ پہنچے۔",
+    "id": "Mencegah brankas Anda terekam lewat tangkapan layar, rekaman layar, atau AirPlay selama aplikasi terbuka, sehingga tidak ada yang bocor ke rol kamera atau layar yang dicerminkan secara tidak sengaja."
   },
   "prof5_t": {
     "en": "Break-in capture",
@@ -151,7 +255,15 @@
     "pt-BR": "Captura de invasão",
     "zh-Hans": "闯入抓拍",
     "ko": "침입 촬영",
-    "nl": "Inbraakopname"
+    "nl": "Inbraakopname",
+    "ja": "侵入捕獲",
+    "zh-Hant": "闖入拍照",
+    "ru": "Фото при взломе",
+    "tr": "İzinsiz giriş fotoğrafı",
+    "ar": "تصوير الاقتحام",
+    "hi": "ब्रेक-इन कैप्चर",
+    "ur": "بریک ان کیپچر",
+    "id": "Penangkapan pembobolan"
   },
   "prof5_d": {
     "en": "If someone enters the wrong passcode, Privaro can silently take a photo with the front camera and log the attempt with a timestamp, so you know if anyone has tried to get into your vault.",
@@ -162,7 +274,15 @@
     "pt-BR": "Se alguém digitar a senha errada, o Privaro pode tirar uma foto silenciosamente com a câmera frontal e registrar a tentativa com data e hora, para você saber se alguém tentou entrar no seu cofre.",
     "zh-Hans": "如果有人输入错误密码，Privaro 可以用前置摄像头悄悄拍照，并记录带时间戳的尝试，让你知道是否有人试图进入你的保险库。",
     "ko": "누군가 잘못된 암호를 입력하면 Privaro가 전면 카메라로 조용히 사진을 찍고 시도 시각을 기록해, 누군가 보관함에 들어오려 했는지 알 수 있습니다.",
-    "nl": "Als iemand de verkeerde toegangscode invoert, kan Privaro stilletjes een foto maken met de camera aan de voorkant en de poging met tijdstempel vastleggen, zodat je weet of iemand in je kluis heeft geprobeerd te komen."
+    "nl": "Als iemand de verkeerde toegangscode invoert, kan Privaro stilletjes een foto maken met de camera aan de voorkant en de poging met tijdstempel vastleggen, zodat je weet of iemand in je kluis heeft geprobeerd te komen.",
+    "ja": "誰かが間違ったパスコードを入力すると、Privaro は前面カメラで静かに写真を撮り、日時とともに記録できます。誰かが保管庫に入ろうとしたかどうかがわかります。",
+    "zh-Hant": "如果有人輸入錯誤的密碼，Privaro 可以用前置相機悄悄拍照，並記錄嘗試的時間，讓你知道是否有人試圖進入你的保險庫。",
+    "ru": "Если кто-то введёт неверный код-пароль, Privaro может незаметно сделать снимок фронтальной камерой и записать попытку с указанием времени — так вы узнаете, пытался ли кто-то проникнуть в ваше хранилище.",
+    "tr": "Biri yanlış parola girerse Privaro ön kamerayla sessizce bir fotoğraf çekip denemeyi zaman damgasıyla kaydedebilir; böylece kasanıza girmeye çalışan biri olup olmadığını bilirsiniz.",
+    "ar": "إذا أدخل أحدهم رمز دخول خاطئًا، يمكن لـ Privaro التقاط صورة بصمت بالكاميرا الأمامية وتسجيل المحاولة مع وقتها، فتعرف إن كان أحد قد حاول دخول خزنتك.",
+    "hi": "अगर कोई ग़लत पासकोड डालता है, तो Privaro चुपचाप सामने वाले कैमरे से फ़ोटो ले सकता है और समय के साथ उस कोशिश को दर्ज कर सकता है, ताकि आपको पता चले कि किसी ने आपकी तिजोरी में घुसने की कोशिश की है या नहीं।",
+    "ur": "اگر کوئی غلط پاس کوڈ ڈالے تو Privaro خاموشی سے سامنے والے کیمرے سے تصویر لے سکتا ہے اور اس کوشش کو وقت کے ساتھ درج کر سکتا ہے، تاکہ آپ کو معلوم ہو کہ کسی نے آپ کے والٹ میں داخل ہونے کی کوشش کی ہے یا نہیں۔",
+    "id": "Jika seseorang memasukkan kode sandi yang salah, Privaro dapat diam-diam mengambil foto dengan kamera depan dan mencatat upaya itu beserta waktunya, sehingga Anda tahu jika ada yang mencoba masuk ke brankas Anda."
   },
   "prof6_t": {
     "en": "Encrypted iCloud backup and export",
@@ -173,7 +293,15 @@
     "pt-BR": "Backup criptografado no iCloud e exportação",
     "zh-Hans": "加密 iCloud 备份与导出",
     "ko": "암호화된 iCloud 백업 및 내보내기",
-    "nl": "Versleutelde iCloud-back-up en export"
+    "nl": "Versleutelde iCloud-back-up en export",
+    "ja": "暗号化された iCloud バックアップと書き出し",
+    "zh-Hant": "加密 iCloud 備份和匯出",
+    "ru": "Зашифрованная резервная копия в iCloud и экспорт",
+    "tr": "Şifreli iCloud yedeklemesi ve dışa aktarma",
+    "ar": "نسخ احتياطي مشفّر على iCloud وتصدير",
+    "hi": "एन्क्रिप्टेड iCloud बैकअप और एक्सपोर्ट",
+    "ur": "انکرپٹڈ iCloud بیک اپ اور ایکسپورٹ",
+    "id": "Cadangan iCloud terenkripsi dan ekspor"
   },
   "prof6_d": {
     "en": "Back up your vault to your own iCloud, or export it as a single encrypted file. Both are encrypted on your device before they leave, so no one (including us) can read them. Restoring a backup is always free, even without Pro.",
@@ -184,7 +312,15 @@
     "pt-BR": "Faça backup do seu cofre no seu próprio iCloud ou exporte-o como um único arquivo criptografado. Ambos são criptografados no seu dispositivo antes de sair, então ninguém (nem nós) consegue ler. Restaurar um backup é sempre grátis, mesmo sem o Pro.",
     "zh-Hans": "把保险库备份到你自己的 iCloud，或导出为单个加密文件。两者在离开设备前都会加密，因此任何人（包括我们）都无法读取。恢复备份始终免费，即使没有 Pro。",
     "ko": "보관함을 본인 iCloud에 백업하거나 하나의 암호화 파일로 내보낼 수 있습니다. 둘 다 기기를 떠나기 전에 암호화되어 누구도(우리 포함) 읽을 수 없습니다. 백업 복원은 Pro가 없어도 항상 무료입니다.",
-    "nl": "Maak een back-up van je kluis naar je eigen iCloud, of exporteer hem als één versleuteld bestand. Beide worden op je apparaat versleuteld voordat ze het verlaten, dus niemand (ook wij niet) kan ze lezen. Een back-up herstellen is altijd gratis, zelfs zonder Pro."
+    "nl": "Maak een back-up van je kluis naar je eigen iCloud, of exporteer hem als één versleuteld bestand. Beide worden op je apparaat versleuteld voordat ze het verlaten, dus niemand (ook wij niet) kan ze lezen. Een back-up herstellen is altijd gratis, zelfs zonder Pro.",
+    "ja": "保管庫をご自身の iCloud にバックアップしたり、暗号化された1つのファイルとして書き出したりできます。どちらもデバイスを離れる前に暗号化されるため、私たちを含め誰にも読めません。バックアップの復元は、Pro がなくてもいつでも無料です。",
+    "zh-Hant": "將保險庫備份到你自己的 iCloud，或匯出成單一加密檔案。兩者都會在離開裝置前加密，所以沒有人（包括我們）能讀取。即使沒有 Pro，還原備份也永遠免費。",
+    "ru": "Сохраняйте резервную копию хранилища в собственном iCloud или экспортируйте его в один зашифрованный файл. В обоих случаях данные шифруются на устройстве до отправки, поэтому никто (включая нас) не сможет их прочитать. Восстановление из резервной копии всегда бесплатно, даже без Pro.",
+    "tr": "Kasanızı kendi iCloud'unuza yedekleyin veya tek bir şifreli dosya olarak dışa aktarın. İkisi de aygıtınızdan çıkmadan önce şifrelenir; bu yüzden kimse (biz dahil) okuyamaz. Bir yedeği geri yüklemek, Pro olmadan bile her zaman ücretsizdir.",
+    "ar": "انسخ خزنتك احتياطيًا إلى iCloud الخاص بك، أو صدّرها كملف مشفّر واحد. يُشفَّر كلاهما على جهازك قبل مغادرته، فلا يستطيع أحد (بما في ذلك نحن) قراءتهما. استعادة النسخة الاحتياطية مجانية دائمًا، حتى بدون Pro.",
+    "hi": "अपनी तिजोरी का बैकअप अपने ख़ुद के iCloud में लें, या उसे एक एन्क्रिप्टेड फ़ाइल के रूप में एक्सपोर्ट करें। दोनों ही आपके डिवाइस से निकलने से पहले एन्क्रिप्ट हो जाते हैं, इसलिए कोई भी (हम भी) उन्हें पढ़ नहीं सकता। बैकअप रिस्टोर करना हमेशा मुफ़्त है, Pro के बिना भी।",
+    "ur": "اپنے والٹ کا بیک اپ اپنے iCloud میں لیں، یا اسے ایک انکرپٹڈ فائل کے طور پر ایکسپورٹ کریں۔ دونوں آپ کے ڈیوائس سے نکلنے سے پہلے انکرپٹ ہو جاتے ہیں، اس لیے کوئی بھی (ہم بھی) انہیں پڑھ نہیں سکتا۔ بیک اپ بحال کرنا ہمیشہ مفت ہے، Pro کے بغیر بھی۔",
+    "id": "Cadangkan brankas ke iCloud Anda sendiri, atau ekspor sebagai satu file terenkripsi. Keduanya dienkripsi di perangkat Anda sebelum keluar, sehingga tidak ada yang (termasuk kami) dapat membacanya. Memulihkan cadangan selalu gratis, bahkan tanpa Pro."
   },
   "prof7_t": {
     "en": "Per-album passwords",
@@ -195,7 +331,15 @@
     "pt-BR": "Senhas por álbum",
     "zh-Hans": "按相簿设密码",
     "ko": "앨범별 비밀번호",
-    "nl": "Wachtwoorden per album"
+    "nl": "Wachtwoorden per album",
+    "ja": "アルバムごとのパスワード",
+    "zh-Hant": "個別相簿密碼",
+    "ru": "Пароли для альбомов",
+    "tr": "Albüm başına şifre",
+    "ar": "كلمة سر لكل ألبوم",
+    "hi": "हर एल्बम के लिए पासवर्ड",
+    "ur": "ہر البم کے لیے پاس ورڈ",
+    "id": "Kata sandi per album"
   },
   "prof7_d": {
     "en": "Put a separate code on individual albums. Even if your vault is open, your most private albums stay sealed behind their own lock.",
@@ -206,7 +350,15 @@
     "pt-BR": "Coloque um código separado em álbuns específicos. Mesmo com o cofre aberto, seus álbuns mais privados continuam selados atrás do próprio bloqueio.",
     "zh-Hans": "为单个相簿设置独立密码。即使保险库已打开，最私密的相簿仍被各自的锁封住。",
     "ko": "개별 앨범에 별도의 코드를 설정하세요. 보관함이 열려 있어도 가장 사적인 앨범은 자체 잠금으로 봉인된 채 남습니다.",
-    "nl": "Zet een aparte code op afzonderlijke albums. Zelfs als je kluis open is, blijven je meest privé albums verzegeld achter hun eigen slot."
+    "nl": "Zet een aparte code op afzonderlijke albums. Zelfs als je kluis open is, blijven je meest privé albums verzegeld achter hun eigen slot.",
+    "ja": "アルバムごとに別のコードを設定できます。保管庫が開いていても、特にプライベートなアルバムは専用のロックで閉じたままです。",
+    "zh-Hant": "為個別相簿設定獨立的密碼。即使保險庫已打開，你最私密的相簿仍會被它們自己的鎖封住。",
+    "ru": "Установите отдельный код на отдельные альбомы. Даже когда хранилище открыто, самые личные альбомы остаются запертыми на собственный замок.",
+    "tr": "Tek tek albümlere ayrı bir şifre koyun. Kasanız açık olsa bile en gizli albümleriniz kendi kilitleriyle kapalı kalır.",
+    "ar": "ضع رمزًا منفصلًا على ألبومات بعينها. حتى عندما تكون خزنتك مفتوحة، تبقى ألبوماتك الأكثر خصوصية مغلقة خلف قفلها الخاص.",
+    "hi": "अलग-अलग एल्बम पर अलग कोड लगाएँ। आपकी तिजोरी खुली होने पर भी, आपके सबसे निजी एल्बम अपने ख़ुद के लॉक के पीछे बंद रहते हैं।",
+    "ur": "الگ الگ البمز پر الگ کوڈ لگائیں۔ آپ کا والٹ کھلا ہونے پر بھی آپ کے سب سے نجی البمز اپنے لاک کے پیچھے بند رہتے ہیں۔",
+    "id": "Pasang kode terpisah pada album tertentu. Meskipun brankas Anda terbuka, album paling pribadi Anda tetap tersegel di balik kuncinya sendiri."
   },
   "prof8_t": {
     "en": "Decoy vault",
@@ -217,7 +369,15 @@
     "pt-BR": "Cofre falso",
     "zh-Hans": "诱饵保险库",
     "ko": "미끼 보관함",
-    "nl": "Lokkluis"
+    "nl": "Lokkluis",
+    "ja": "おとり保管庫",
+    "zh-Hant": "誘餌保險庫",
+    "ru": "Ложное хранилище",
+    "tr": "Sahte kasa",
+    "ar": "الخزنة الوهمية",
+    "hi": "नकली तिजोरी",
+    "ur": "جعلی والٹ",
+    "id": "Brankas umpan"
   },
   "prof8_d": {
     "en": "Set a second passcode that opens a believable, separate vault with its own harmless photos. If you are ever pressured to unlock, the decoy opens and your real vault stays completely hidden.",
@@ -228,7 +388,15 @@
     "pt-BR": "Defina uma segunda senha que abre um cofre separado e convincente, com fotos inofensivas. Se você for pressionado a desbloquear, o falso abre e o seu cofre real fica totalmente oculto.",
     "zh-Hans": "设置第二个密码，打开一个以假乱真的独立保险库，里面是无关紧要的照片。万一被迫解锁，打开的是诱饵，你真正的保险库始终完全隐藏。",
     "ko": "그럴듯한 무해한 사진이 담긴 별도의 미끼 보관함을 여는 두 번째 암호를 설정하세요. 잠금 해제를 강요당하더라도 미끼가 열리고 진짜 보관함은 완전히 숨겨진 채 유지됩니다.",
-    "nl": "Stel een tweede toegangscode in die een geloofwaardige, aparte kluis opent met eigen onschuldige foto's. Als je ooit onder druk wordt gezet om te ontgrendelen, opent de lokkluis en blijft je echte kluis volledig verborgen."
+    "nl": "Stel een tweede toegangscode in die een geloofwaardige, aparte kluis opent met eigen onschuldige foto's. Als je ooit onder druk wordt gezet om te ontgrendelen, opent de lokkluis en blijft je echte kluis volledig verborgen.",
+    "ja": "2つ目のパスコードを設定すると、当たり障りのない写真が入った、本物らしい別の保管庫が開きます。ロック解除を迫られたときはおとりが開き、本当の保管庫は完全に隠れたままです。",
+    "zh-Hant": "設定第二組密碼，打開一個看起來很真實、裝有無害照片的獨立保險庫。如果你被迫解鎖，打開的是誘餌，真正的保險庫則完全隱藏。",
+    "ru": "Задайте второй код-пароль, который открывает правдоподобное отдельное хранилище с безобидными фото. Если вас когда-нибудь заставят разблокировать, откроется ложное хранилище, а настоящее останется полностью скрытым.",
+    "tr": "Kendi zararsız fotoğraflarıyla inandırıcı, ayrı bir kasa açan ikinci bir parola belirleyin. Kilidi açmanız için baskı görürseniz sahte kasa açılır, gerçek kasanız tamamen gizli kalır.",
+    "ar": "عيّن رمز دخول ثانيًا يفتح خزنة منفصلة مقنعة فيها صور غير مهمة. إذا تعرّضت يومًا للضغط لفتحها، تُفتح الخزنة الوهمية وتبقى خزنتك الحقيقية مخفية تمامًا.",
+    "hi": "एक दूसरा पासकोड सेट करें जो अपनी हानिरहित फ़ोटो वाली एक भरोसेमंद, अलग तिजोरी खोलता है। अगर कभी आप पर अनलॉक करने का दबाव डाला जाए, तो नकली तिजोरी खुलती है और आपकी असली तिजोरी पूरी तरह छिपी रहती है।",
+    "ur": "ایک دوسرا پاس کوڈ سیٹ کریں جو اپنی بے ضرر تصاویر والا ایک قابلِ یقین، الگ والٹ کھولتا ہے۔ اگر کبھی آپ پر کھولنے کے لیے دباؤ ڈالا جائے، تو جعلی والٹ کھلتا ہے اور آپ کا اصلی والٹ مکمل طور پر چھپا رہتا ہے۔",
+    "id": "Atur kode sandi kedua yang membuka brankas terpisah yang meyakinkan, berisi foto-foto tidak berbahaya. Jika Anda ditekan untuk membuka kunci, brankas umpan yang terbuka dan brankas asli Anda tetap tersembunyi sepenuhnya."
   },
   "prof9_t": {
     "en": "Duress wipe",
@@ -239,7 +407,15 @@
     "pt-BR": "Limpeza sob coação",
     "zh-Hans": "胁迫抹除",
     "ko": "강제 삭제",
-    "nl": "Noodwissing"
+    "nl": "Noodwissing",
+    "ja": "緊急消去",
+    "zh-Hant": "脅迫清除",
+    "ru": "Тревожное стирание",
+    "tr": "Panik silme",
+    "ar": "مسح الطوارئ",
+    "hi": "आपातकालीन डेटा मिटाना",
+    "ur": "ہنگامی حذف",
+    "id": "Penghapusan darurat"
   },
   "prof9_d": {
     "en": "Set a special passcode that, when entered, instantly and permanently erases the vault, including the decoy. For worst-case situations where the safest thing is to leave nothing behind. This cannot be undone.",
@@ -250,7 +426,15 @@
     "pt-BR": "Defina uma senha especial que, ao ser digitada, apaga instantânea e permanentemente o cofre, incluindo o falso. Para os piores casos, quando o mais seguro é não deixar nada. Isso não pode ser desfeito.",
     "zh-Hans": "设置一个特殊密码，一旦输入，会立即永久抹除保险库，包括诱饵。用于最坏的情况，此时最安全的做法是不留任何痕迹。此操作无法撤销。",
     "ko": "입력하는 즉시 미끼를 포함한 보관함을 영구적으로 지우는 특수 암호를 설정하세요. 아무것도 남기지 않는 것이 가장 안전한 최악의 상황을 위한 기능입니다. 이 작업은 되돌릴 수 없습니다.",
-    "nl": "Stel een speciale toegangscode in die, eenmaal ingevoerd, de kluis direct en permanent wist, inclusief de lokkluis. Voor het ergste geval, wanneer niets achterlaten het veiligst is. Dit kan niet ongedaan worden gemaakt."
+    "nl": "Stel een speciale toegangscode in die, eenmaal ingevoerd, de kluis direct en permanent wist, inclusief de lokkluis. Voor het ergste geval, wanneer niets achterlaten het veiligst is. Dit kan niet ongedaan worden gemaakt.",
+    "ja": "特別なパスコードを設定しておくと、それを入力したときに保管庫がおとりも含めて即座に完全消去されます。何も残さないことが最も安全な、最悪の状況のための機能です。元に戻すことはできません。",
+    "zh-Hant": "設定一組特殊密碼，輸入後會立即且永久清除保險庫，包括誘餌保險庫。適用於最壞的情況，讓你什麼都不留下才是最安全的選擇。此動作無法復原。",
+    "ru": "Задайте особый код-пароль, при вводе которого хранилище, включая ложное, мгновенно и безвозвратно стирается. Для худших ситуаций, когда безопаснее всего не оставить ничего. Это действие нельзя отменить.",
+    "tr": "Girildiğinde kasayı, sahte kasa dahil, anında ve kalıcı olarak silen özel bir parola belirleyin. Geride hiçbir şey bırakmamanın en güvenli seçenek olduğu en kötü durumlar için. Bu işlem geri alınamaz.",
+    "ar": "عيّن رمز دخول خاصًا يمسح الخزنة فورًا ونهائيًا عند إدخاله، بما في ذلك الخزنة الوهمية. لأسوأ الحالات حين يكون ترك لا شيء هو الخيار الأكثر أمانًا. لا يمكن التراجع عن ذلك.",
+    "hi": "एक ख़ास पासकोड सेट करें जिसे डालते ही तिजोरी, नकली तिजोरी समेत, तुरंत और हमेशा के लिए मिट जाती है। सबसे बुरी स्थितियों के लिए, जब कुछ भी पीछे न छोड़ना ही सबसे सुरक्षित हो। इसे पहले जैसा नहीं किया जा सकता।",
+    "ur": "ایک خاص پاس کوڈ سیٹ کریں جسے ڈالتے ہی والٹ، جعلی والٹ سمیت، فوراً اور ہمیشہ کے لیے مٹ جاتا ہے۔ بدترین حالات کے لیے، جب کچھ بھی پیچھے نہ چھوڑنا ہی سب سے محفوظ ہو۔ اسے واپس نہیں کیا جا سکتا۔",
+    "id": "Atur kode sandi khusus yang, saat dimasukkan, langsung menghapus brankas secara permanen, termasuk brankas umpan. Untuk situasi terburuk ketika tidak meninggalkan apa pun adalah pilihan paling aman. Tindakan ini tidak dapat dibatalkan."
   },
   "prof10_t": {
     "en": "Wi-Fi transfer",
@@ -261,7 +445,15 @@
     "pt-BR": "Transferência por Wi-Fi",
     "zh-Hans": "Wi-Fi 传输",
     "ko": "Wi-Fi 전송",
-    "nl": "Wifi-overdracht"
+    "nl": "Wifi-overdracht",
+    "ja": "Wi-Fi 転送",
+    "zh-Hant": "Wi-Fi 傳輸",
+    "ru": "Передача по Wi-Fi",
+    "tr": "Wi-Fi aktarımı",
+    "ar": "النقل عبر Wi-Fi",
+    "hi": "वाई-फ़ाई स्थानांतरण",
+    "ur": "وائی فائی ٹرانسفر",
+    "id": "Transfer Wi-Fi"
   },
   "prof10_d": {
     "en": "Send files into the vault from any computer's web browser over your local network. No cable, no cloud, and no extra app to install on your computer.",
@@ -272,7 +464,15 @@
     "pt-BR": "Envie arquivos para o cofre pelo navegador de qualquer computador na sua rede local. Sem cabo, sem nuvem e sem instalar outro app no computador.",
     "zh-Hans": "通过本地网络，从任意电脑的浏览器把文件传入保险库。无需数据线、无需云端，也无需在电脑上安装额外应用。",
     "ko": "로컬 네트워크를 통해 어떤 컴퓨터의 웹 브라우저에서든 파일을 보관함으로 보낼 수 있습니다. 케이블도, 클라우드도, 컴퓨터에 설치할 별도 앱도 필요 없습니다.",
-    "nl": "Stuur bestanden naar de kluis vanuit de webbrowser van elke computer via je lokale netwerk. Geen kabel, geen cloud en geen extra app om op je computer te installeren."
+    "nl": "Stuur bestanden naar de kluis vanuit de webbrowser van elke computer via je lokale netwerk. Geen kabel, geen cloud en geen extra app om op je computer te installeren.",
+    "ja": "ローカルネットワーク経由で、どのコンピュータの Web ブラウザからでも保管庫にファイルを送れます。ケーブルもクラウドも、コンピュータへの追加アプリのインストールも不要です。",
+    "zh-Hant": "透過區域網路，從任何電腦的網頁瀏覽器將檔案傳進保險庫。不用線材、不用雲端，也不必在電腦上安裝額外的 App。",
+    "ru": "Отправляйте файлы в хранилище из браузера любого компьютера по локальной сети. Без кабеля, без облака и без дополнительных программ на компьютере.",
+    "tr": "Yerel ağınız üzerinden herhangi bir bilgisayarın web tarayıcısından kasaya dosya gönderin. Kablo yok, bulut yok ve bilgisayarınıza kurulacak ek bir uygulama yok.",
+    "ar": "أرسل الملفات إلى الخزنة من متصفح أي كمبيوتر عبر شبكتك المحلية. بلا كابل، وبلا سحابة، وبلا تطبيق إضافي لتثبيته على الكمبيوتر.",
+    "hi": "अपने लोकल नेटवर्क पर किसी भी कंप्यूटर के वेब ब्राउज़र से फ़ाइलें तिजोरी में भेजें। न केबल, न क्लाउड, और न ही कंप्यूटर पर कोई अतिरिक्त ऐप इंस्टॉल करने की ज़रूरत।",
+    "ur": "اپنے لوکل نیٹ ورک پر کسی بھی کمپیوٹر کے ویب براؤزر سے فائلیں والٹ میں بھیجیں۔ نہ کیبل، نہ کلاؤڈ، اور نہ کمپیوٹر پر کوئی اضافی ایپ انسٹال کرنے کی ضرورت۔",
+    "id": "Kirim file ke brankas dari peramban web komputer mana pun melalui jaringan lokal Anda. Tanpa kabel, tanpa cloud, dan tanpa aplikasi tambahan yang perlu diinstal di komputer."
   },
   "prof11_t": {
     "en": "Location-based lock",
@@ -283,7 +483,15 @@
     "pt-BR": "Bloqueio por localização",
     "zh-Hans": "基于位置的锁定",
     "ko": "위치 기반 잠금",
-    "nl": "Locatievergrendeling"
+    "nl": "Locatievergrendeling",
+    "ja": "位置ベースのロック",
+    "zh-Hant": "依位置鎖定",
+    "ru": "Блокировка по местоположению",
+    "tr": "Konuma dayalı kilit",
+    "ar": "القفل حسب الموقع",
+    "hi": "स्थान-आधारित लॉक",
+    "ur": "مقام پر مبنی تالا",
+    "id": "Kunci berbasis lokasi"
   },
   "prof11_d": {
     "en": "Only allow the vault to unlock in places you trust, like your home. Anywhere else, it stays locked even with the right passcode.",
@@ -294,7 +502,15 @@
     "pt-BR": "Permita que o cofre seja desbloqueado apenas em lugares confiáveis, como a sua casa. Em qualquer outro lugar, ele continua bloqueado mesmo com a senha certa.",
     "zh-Hans": "仅允许在你信任的地点（例如家里）解锁保险库。在其他任何地方，即使输入正确密码也保持锁定。",
     "ko": "집처럼 신뢰하는 장소에서만 보관함이 잠금 해제되도록 허용하세요. 그 외의 곳에서는 올바른 암호를 입력해도 잠긴 상태로 유지됩니다.",
-    "nl": "Sta alleen toe dat de kluis wordt ontgrendeld op plekken die je vertrouwt, zoals thuis. Overal elders blijft hij vergrendeld, zelfs met de juiste toegangscode."
+    "nl": "Sta alleen toe dat de kluis wordt ontgrendeld op plekken die je vertrouwt, zoals thuis. Overal elders blijft hij vergrendeld, zelfs met de juiste toegangscode.",
+    "ja": "自宅など、信頼できる場所でだけ保管庫のロックを解除できるようにします。それ以外の場所では、正しいパスコードでもロックされたままです。",
+    "zh-Hant": "只允許在你信任的地方解鎖保險庫，例如你家。在其他任何地方，即使密碼正確，保險庫也會保持鎖定。",
+    "ru": "Разрешите разблокировку хранилища только в доверенных местах, например дома. В любом другом месте оно останется заблокированным даже с правильным код-паролем.",
+    "tr": "Kasanın yalnızca eviniz gibi güvendiğiniz yerlerde açılmasına izin verin. Başka her yerde, doğru parolayla bile kilitli kalır.",
+    "ar": "اسمح بفتح الخزنة فقط في الأماكن التي تثق بها، مثل منزلك. في أي مكان آخر، تبقى مقفلة حتى مع رمز الدخول الصحيح.",
+    "hi": "तिजोरी को सिर्फ़ उन जगहों पर अनलॉक होने दें जिन पर आप भरोसा करते हैं, जैसे आपका घर। बाकी हर जगह, सही पासकोड होने पर भी यह लॉक रहती है।",
+    "ur": "والٹ کو صرف انہی جگہوں پر کھلنے دیں جن پر آپ بھروسہ کرتے ہیں، جیسے آپ کا گھر۔ باقی ہر جگہ، درست پاس کوڈ کے ساتھ بھی یہ لاک رہتا ہے۔",
+    "id": "Izinkan brankas dibuka hanya di tempat yang Anda percayai, seperti rumah Anda. Di tempat lain, brankas tetap terkunci meskipun kode sandinya benar."
   },
   "prof12_t": {
     "en": "Disguise app icon",
@@ -305,7 +521,15 @@
     "pt-BR": "Ícone do app disfarçado",
     "zh-Hans": "伪装应用图标",
     "ko": "앱 아이콘 위장",
-    "nl": "Vermomd app-icoon"
+    "nl": "Vermomd app-icoon",
+    "ja": "アプリアイコンの偽装",
+    "zh-Hant": "偽裝 App 圖像",
+    "ru": "Маскировка значка приложения",
+    "tr": "Kamuflaj uygulama simgesi",
+    "ar": "أيقونة تطبيق متخفية",
+    "hi": "ऐप आइकन छिपाना",
+    "ur": "ایپ آئیکن چھپانا",
+    "id": "Ikon aplikasi samaran"
   },
   "prof12_d": {
     "en": "Hide Privaro behind an everyday icon and name, like Calculator or Notes, so it does not stand out on your home screen. Color icon variants are free; the disguises are Pro.",
@@ -316,7 +540,15 @@
     "pt-BR": "Esconda o Privaro atrás de um ícone e nome do dia a dia, como Calculadora ou Notas, para não chamar atenção na sua tela de início. As variações de cor do ícone são grátis; os disfarces são Pro.",
     "zh-Hans": "把 Privaro 伪装成日常的图标和名称，例如「计算器」或「备忘录」，让它在主屏幕上不显眼。图标的颜色款式免费；伪装款式为 Pro 专属。",
     "ko": "Privaro를 계산기나 메모 같은 평범한 아이콘과 이름 뒤에 숨겨 홈 화면에서 눈에 띄지 않게 하세요. 아이콘 색상 변형은 무료이며, 위장 아이콘은 Pro 전용입니다.",
-    "nl": "Verberg Privaro achter een alledaags icoon en naam, zoals Rekenmachine of Notities, zodat het niet opvalt op je beginscherm. Kleurvarianten van het icoon zijn gratis; de vermommingen zijn Pro."
+    "nl": "Verberg Privaro achter een alledaags icoon en naam, zoals Rekenmachine of Notities, zodat het niet opvalt op je beginscherm. Kleurvarianten van het icoon zijn gratis; de vermommingen zijn Pro.",
+    "ja": "計算機やメモのような普段使いのアイコンと名前に Privaro を隠し、ホーム画面で目立たないようにします。カラーアイコンのバリエーションは無料、偽装アイコンは Pro です。",
+    "zh-Hant": "把 Privaro 藏在計算機或備忘錄等日常圖像和名稱後面，讓它在主畫面上不顯眼。彩色圖像款式免費，偽裝圖像則屬於 Pro。",
+    "ru": "Спрячьте Privaro за привычным значком и названием, например «Калькулятор» или «Заметки», чтобы оно не выделялось на экране «Домой». Цветные варианты значка бесплатны, маскировка — в Pro.",
+    "tr": "Privaro'yu Hesap Makinesi veya Notlar gibi sıradan bir simge ve adın arkasına gizleyin; böylece Ana Ekranınızda göze batmaz. Renkli simge seçenekleri ücretsizdir; kamuflajlar Pro'dadır.",
+    "ar": "أخفِ Privaro خلف أيقونة واسم مألوفين، مثل الآلة الحاسبة أو الملاحظات، كي لا يلفت الانتباه على شاشتك الرئيسية. أشكال الأيقونة الملوّنة مجانية؛ أما التخفي فمن ميزات Pro.",
+    "hi": "Privaro को कैलकुलेटर या नोट्स जैसे रोज़मर्रा के आइकन और नाम के पीछे छिपाएँ, ताकि यह आपकी होम स्क्रीन पर अलग से नज़र न आए। रंगीन आइकन विकल्प मुफ़्त हैं; छिपे हुए आइकन Pro में हैं।",
+    "ur": "Privaro کو کیلکولیٹر یا نوٹس جیسے روزمرہ کے آئیکن اور نام کے پیچھے چھپائیں، تاکہ یہ آپ کی ہوم اسکرین پر نمایاں نہ ہو۔ رنگین آئیکن کے انداز مفت ہیں؛ بھیس Pro میں ہیں۔",
+    "id": "Sembunyikan Privaro di balik ikon dan nama sehari-hari, seperti Kalkulator atau Catatan, agar tidak mencolok di Layar Utama Anda. Varian ikon berwarna gratis; samarannya termasuk Pro."
   },
   "pro_callout_strong": {
     "en": "Free or Pro, the basics never change:",
@@ -327,7 +559,15 @@
     "pt-BR": "Grátis ou Pro, o básico nunca muda:",
     "zh-Hans": "无论免费还是 Pro，核心始终不变：",
     "ko": "무료든 Pro든, 기본은 변하지 않습니다:",
-    "nl": "Gratis of Pro, de basis verandert nooit:"
+    "nl": "Gratis of Pro, de basis verandert nooit:",
+    "ja": "無料でも Pro でも、基本は変わりません：",
+    "zh-Hant": "無論免費版或 Pro，基本保障永遠不變：",
+    "ru": "Бесплатно или Pro — основа неизменна:",
+    "tr": "Ücretsiz ya da Pro, temeller hiç değişmez:",
+    "ar": "مجانيًا كان أو Pro، الأساسيات لا تتغير:",
+    "hi": "मुफ़्त हो या Pro, बुनियादी बातें कभी नहीं बदलतीं:",
+    "ur": "مفت ہو یا Pro، بنیادی باتیں کبھی نہیں بدلتیں:",
+    "id": "Gratis atau Pro, dasarnya tidak pernah berubah:"
   },
   "pro_callout_rest": {
     "en": "everything is encrypted on your device with AES-256, there is no account, and no one but you can open your vault. Pro is a one-time purchase of €11.99, with nothing to renew.",
@@ -338,7 +578,15 @@
     "pt-BR": "tudo é criptografado no seu aparelho com AES-256, não há conta e ninguém além de você pode abrir o seu cofre. O Pro é uma compra única de € 11,99, sem renovação.",
     "zh-Hans": "所有内容都在你的设备上用 AES-256 加密，无需账户，除了你没人能打开保险库。Pro 是一次性购买，价格 €11.99，无需续费。",
     "ko": "모든 것이 기기에서 AES-256으로 암호화되고, 계정이 없으며, 나 외에는 아무도 보관함을 열 수 없습니다. Pro는 €11.99 일회성 구매이며 갱신되지 않습니다.",
-    "nl": "alles wordt op je apparaat versleuteld met AES-256, er is geen account en niemand behalve jij kan je kluis openen. Pro is een eenmalige aankoop van € 11,99, zonder verlenging."
+    "nl": "alles wordt op je apparaat versleuteld met AES-256, er is geen account en niemand behalve jij kan je kluis openen. Pro is een eenmalige aankoop van € 11,99, zonder verlenging.",
+    "ja": "すべてはデバイス上で AES-256 により暗号化され、アカウントは不要で、あなた以外の誰も保管庫を開けません。Pro は €11.99 の買い切りで、更新はありません。",
+    "zh-Hant": "所有內容都在你的裝置上以 AES-256 加密，不需要帳號，而且除了你之外沒有人能打開你的保險庫。Pro 是一次性購買 €11.99，不需要續約。",
+    "ru": "всё шифруется на вашем устройстве с помощью AES-256, аккаунта нет, и никто, кроме вас, не может открыть ваше хранилище. Pro — это разовая покупка за 11,99 €, без продления.",
+    "tr": "her şey aygıtınızda AES-256 ile şifrelenir, hesap yoktur ve kasanızı sizden başka kimse açamaz. Pro, 11,99 € tutarında tek seferlik bir satın alımdır ve yenilenecek bir şey yoktur.",
+    "ar": "كل شيء مشفّر على جهازك بتشفير AES-256، ولا يوجد حساب، ولا أحد غيرك يستطيع فتح خزنتك. Pro عملية شراء لمرة واحدة بقيمة €11.99، بلا تجديد.",
+    "hi": "सब कुछ आपके डिवाइस पर AES-256 से एन्क्रिप्ट होता है, कोई अकाउंट नहीं है, और आपके सिवा कोई भी आपकी तिजोरी नहीं खोल सकता। Pro €11.99 की एक बार की ख़रीदारी है, जिसमें कुछ भी रिन्यू नहीं करना होता।",
+    "ur": "سب کچھ آپ کے ڈیوائس پر AES-256 سے انکرپٹ ہوتا ہے، کوئی اکاؤنٹ نہیں ہے، اور آپ کے سوا کوئی آپ کا والٹ نہیں کھول سکتا۔ Pro €11.99 کی ایک بار کی خریداری ہے، جس میں کچھ بھی تجدید نہیں ہوتا۔",
+    "id": "semuanya dienkripsi di perangkat Anda dengan AES-256, tidak ada akun, dan tidak ada orang selain Anda yang dapat membuka brankas Anda. Pro adalah pembelian satu kali seharga €11,99, tanpa perpanjangan."
   },
   "prof13_t": {
     "en": "Secure share",
@@ -349,7 +597,15 @@
     "pt-BR": "Compartilhamento seguro",
     "zh-Hans": "安全分享",
     "ko": "보안 공유",
-    "nl": "Veilig delen"
+    "nl": "Veilig delen",
+    "ja": "セキュアシェア",
+    "zh-Hant": "安全分享",
+    "ru": "Безопасная отправка",
+    "tr": "Güvenli paylaşım",
+    "ar": "المشاركة الآمنة",
+    "hi": "सुरक्षित शेयर",
+    "ur": "محفوظ شیئر",
+    "id": "Berbagi aman"
   },
   "prof13_d": {
     "en": "Send photos or videos to another Privaro user as an encrypted file that only opens with a passphrase you choose. Nothing passes through us on the way.",
@@ -360,6 +616,14 @@
     "pt-BR": "Envie fotos ou vídeos para outra pessoa que usa o Privaro como um arquivo criptografado que só abre com uma frase secreta escolhida por você. Nada passa por nós.",
     "zh-Hans": "把照片或视频作为加密文件发给另一位 Privaro 用户，只有用你设定的口令才能打开。传输过程中不会经过我们。",
     "ko": "사진이나 동영상을 다른 Privaro 사용자에게 암호화된 파일로 보내세요. 내가 정한 암호 문구로만 열립니다. 중간에 저희를 거치지 않습니다.",
-    "nl": "Stuur foto’s of video’s naar een andere Privaro-gebruiker als versleuteld bestand dat alleen opengaat met een wachtzin die jij kiest. Er gaat niets via ons."
+    "nl": "Stuur foto’s of video’s naar een andere Privaro-gebruiker als versleuteld bestand dat alleen opengaat met een wachtzin die jij kiest. Er gaat niets via ons.",
+    "ja": "写真やビデオを、あなたが決めたパスフレーズでしか開けない暗号化ファイルとして、ほかの Privaro ユーザーに送れます。途中で私たちを経由することはありません。",
+    "zh-Hant": "將照片或影片以加密檔案傳送給其他 Privaro 使用者，只有用你選擇的通關密語才能打開。傳送過程中不會經過我們。",
+    "ru": "Отправляйте фото или видео другому пользователю Privaro в виде зашифрованного файла, который открывается только с выбранной вами парольной фразой. По пути ничего не проходит через нас.",
+    "tr": "Fotoğraf veya videoları başka bir Privaro kullanıcısına, yalnızca sizin seçtiğiniz bir parola ifadesiyle açılan şifreli bir dosya olarak gönderin. Yolda hiçbir şey bizden geçmez.",
+    "ar": "أرسل صورًا أو فيديوهات إلى مستخدم آخر لـ Privaro كملف مشفّر لا يُفتح إلا بعبارة مرور تختارها أنت. لا يمر شيء عبرنا في الطريق.",
+    "hi": "फ़ोटो या वीडियो किसी दूसरे Privaro उपयोगकर्ता को एक एन्क्रिप्टेड फ़ाइल के रूप में भेजें, जो सिर्फ़ आपके चुने गए पासफ़्रेज़ से ही खुलती है। रास्ते में कुछ भी हमारे ज़रिए नहीं गुज़रता।",
+    "ur": "تصاویر یا ویڈیوز کسی دوسرے Privaro صارف کو ایک انکرپٹڈ فائل کے طور پر بھیجیں جو صرف آپ کے منتخب کردہ پاس فریز سے کھلتی ہے۔ راستے میں کچھ بھی ہمارے ذریعے نہیں گزرتا۔",
+    "id": "Kirim foto atau video ke pengguna Privaro lain sebagai file terenkripsi yang hanya bisa dibuka dengan frasa sandi pilihan Anda. Tidak ada yang melewati kami di tengah jalan."
   }
 }
