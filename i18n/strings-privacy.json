@@ -13,10 +13,10 @@
     "zh-Hant": "隱私權政策 · Privaro",
     "ru": "Политика конфиденциальности · Privaro",
     "tr": "Gizlilik Politikası · Privaro",
-    "ar": "سياسة الخصوصية · Privaro",
+    "id": "Kebijakan Privasi · Privaro",
     "hi": "गोपनीयता नीति · Privaro",
-    "ur": "رازداری کی پالیسی · Privaro",
-    "id": "Kebijakan Privasi · Privaro"
+    "ar": "سياسة الخصوصية · Privaro",
+    "ur": "رازداری کی پالیسی · Privaro"
   },
   "meta_desc_privacy": {
     "en": "How Privaro handles your information. Short version: your content is encrypted on your device and never sent to us.",
@@ -32,29 +32,10 @@
     "zh-Hant": "Privaro 如何處理你的資訊。簡單來說：你的內容在你的裝置上加密，永遠不會傳送給我們。",
     "ru": "Как Privaro обращается с вашей информацией. Коротко: ваш контент шифруется на устройстве и никогда не отправляется нам.",
     "tr": "Privaro bilgilerinizi nasıl işler? Kısacası: içeriğiniz aygıtınızda şifrelenir ve bize asla gönderilmez.",
-    "ar": "كيف يتعامل Privaro مع معلوماتك. باختصار: محتواك مشفّر على جهازك ولا يُرسل إلينا أبدًا.",
+    "id": "Cara Privaro menangani informasi Anda. Singkatnya: konten Anda dienkripsi di perangkat Anda dan tidak pernah dikirim kepada kami.",
     "hi": "Privaro आपकी जानकारी को कैसे संभालता है। संक्षेप में: आपका कंटेंट आपके डिवाइस पर एन्क्रिप्ट होता है और कभी हमें नहीं भेजा जाता।",
-    "ur": "Privaro آپ کی معلومات کو کیسے سنبھالتا ہے۔ مختصراً: آپ کا مواد آپ کے ڈیوائس پر انکرپٹ ہوتا ہے اور کبھی ہمیں نہیں بھیجا جاتا۔",
-    "id": "Cara Privaro menangani informasi Anda. Singkatnya: konten Anda dienkripsi di perangkat Anda dan tidak pernah dikirim kepada kami."
-  },
-  "priv_back": {
-    "en": "Back to home",
-    "de": "Zurück zur Startseite",
-    "nl": "Terug naar de startpagina",
-    "es": "Volver al inicio",
-    "fr": "Retour à l’accueil",
-    "it": "Torna alla home",
-    "pt-BR": "Voltar ao início",
-    "ko": "홈으로 돌아가기",
-    "zh-Hans": "返回首页",
-    "ja": "ホームに戻る",
-    "zh-Hant": "返回首頁",
-    "ru": "На главную",
-    "tr": "Ana sayfaya dön",
-    "ar": "العودة إلى الرئيسية",
-    "hi": "होम पर वापस जाएँ",
-    "ur": "ہوم پر واپس جائیں",
-    "id": "Kembali ke beranda"
+    "ar": "كيف يتعامل Privaro مع معلوماتك. باختصار: محتواك مشفّر على جهازك ولا يُرسل إلينا أبدًا.",
+    "ur": "Privaro آپ کی معلومات کو کیسے سنبھالتا ہے۔ مختصراً: آپ کا مواد آپ کے ڈیوائس پر انکرپٹ ہوتا ہے اور کبھی ہمیں نہیں بھیجا جاتا۔"
   },
   "priv_h1": {
     "en": "Privacy Policy",
@@ -70,10 +51,10 @@
     "zh-Hant": "隱私權政策",
     "ru": "Политика конфиденциальности",
     "tr": "Gizlilik Politikası",
-    "ar": "سياسة الخصوصية",
+    "id": "Kebijakan Privasi",
     "hi": "गोपनीयता नीति",
-    "ur": "رازداری کی پالیسی",
-    "id": "Kebijakan Privasi"
+    "ar": "سياسة الخصوصية",
+    "ur": "رازداری کی پالیسی"
   },
   "priv_updated": {
     "en": "Effective date: June 28, 2026 · Last updated: June 28, 2026",
@@ -89,10 +70,10 @@
     "zh-Hant": "生效日期：2026 年 6 月 28 日 · 最後更新：2026 年 6 月 28 日",
     "ru": "Дата вступления в силу: 28 июня 2026 г. · Последнее обновление: 28 июня 2026 г.",
     "tr": "Yürürlük tarihi: 28 Haziran 2026 · Son güncelleme: 28 Haziran 2026",
-    "ar": "تاريخ السريان: 28 يونيو 2026 · آخر تحديث: 28 يونيو 2026",
+    "id": "Tanggal berlaku: 28 Juni 2026 · Terakhir diperbarui: 28 Juni 2026",
     "hi": "प्रभावी तिथि: 28 जून 2026 · अंतिम अपडेट: 28 जून 2026",
-    "ur": "مؤثر تاریخ: 28 جون 2026 · آخری اپ ڈیٹ: 28 جون 2026",
-    "id": "Tanggal berlaku: 28 Juni 2026 · Terakhir diperbarui: 28 Juni 2026"
+    "ar": "تاريخ السريان: 28 يونيو 2026 · آخر تحديث: 28 يونيو 2026",
+    "ur": "مؤثر تاریخ: 28 جون 2026 · آخری اپ ڈیٹ: 28 جون 2026"
   },
   "priv_intro": {
     "en": "Privaro (“Privaro,” “the app,” “we,” “us,” or “our”) is a private, encrypted photo and video vault for iOS, provided by Erdinc Zarbo, the Netherlands. This Privacy Policy explains how Privaro handles your information.",
@@ -108,10 +89,10 @@
     "zh-Hant": "Privaro（「Privaro」、「本 App」、「我們」）是一款適用於 iOS 的私密加密照片與影片保險庫，由荷蘭的 Erdinc Zarbo 提供。本隱私權政策說明 Privaro 如何處理你的資訊。",
     "ru": "Privaro («Privaro», «приложение», «мы», «нас» или «наш») — это личное зашифрованное хранилище фото и видео для iOS, предоставляемое Erdinc Zarbo, Нидерланды. Настоящая Политика конфиденциальности объясняет, как Privaro обращается с вашей информацией.",
     "tr": "Privaro (“Privaro”, “uygulama”, “biz”, “bize” veya “bizim”), Hollanda'da Erdinc Zarbo tarafından sunulan, iOS için gizli ve şifreli bir fotoğraf ve video kasasıdır. Bu Gizlilik Politikası, Privaro'nun bilgilerinizi nasıl işlediğini açıklar.",
-    "ar": "Privaro (ويُشار إليه بـ «Privaro» أو «التطبيق» أو «نحن» أو «لنا») خزنة خاصة ومشفّرة للصور والفيديوهات على iOS، يقدّمها Erdinc Zarbo، هولندا. توضّح سياسة الخصوصية هذه كيف يتعامل Privaro مع معلوماتك.",
+    "id": "Privaro (“Privaro”, “aplikasi”, “kami”, atau “milik kami”) adalah brankas foto dan video pribadi yang terenkripsi untuk iOS, disediakan oleh Erdinc Zarbo, Belanda. Kebijakan Privasi ini menjelaskan cara Privaro menangani informasi Anda.",
     "hi": "Privaro (“Privaro,” “ऐप,” “हम,” “हमें” या “हमारा”) iOS के लिए एक निजी, एन्क्रिप्टेड फ़ोटो और वीडियो तिजोरी है, जिसे नीदरलैंड्स के Erdinc Zarbo उपलब्ध कराते हैं। यह गोपनीयता नीति बताती है कि Privaro आपकी जानकारी को कैसे संभालता है।",
-    "ur": "Privaro (“Privaro”، “ایپ”، “ہم”، “ہمیں” یا “ہمارا”) iOS کے لیے ایک نجی، انکرپٹڈ فوٹو اور ویڈیو والٹ ہے، جو نیدرلینڈز کے Erdinc Zarbo فراہم کرتے ہیں۔ یہ رازداری کی پالیسی بتاتی ہے کہ Privaro آپ کی معلومات کو کیسے سنبھالتا ہے۔",
-    "id": "Privaro (“Privaro”, “aplikasi”, “kami”, atau “milik kami”) adalah brankas foto dan video pribadi yang terenkripsi untuk iOS, disediakan oleh Erdinc Zarbo, Belanda. Kebijakan Privasi ini menjelaskan cara Privaro menangani informasi Anda."
+    "ar": "Privaro (ويُشار إليه بـ «Privaro» أو «التطبيق» أو «نحن» أو «لنا») خزنة خاصة ومشفّرة للصور والفيديوهات على iOS، يقدّمها Erdinc Zarbo، هولندا. توضّح سياسة الخصوصية هذه كيف يتعامل Privaro مع معلوماتك.",
+    "ur": "Privaro (“Privaro”، “ایپ”، “ہم”، “ہمیں” یا “ہمارا”) iOS کے لیے ایک نجی، انکرپٹڈ فوٹو اور ویڈیو والٹ ہے، جو نیدرلینڈز کے Erdinc Zarbo فراہم کرتے ہیں۔ یہ رازداری کی پالیسی بتاتی ہے کہ Privaro آپ کی معلومات کو کیسے سنبھالتا ہے۔"
   },
   "priv_short_label": {
     "en": "The short version:",
@@ -127,10 +108,10 @@
     "zh-Hant": "簡單來說：",
     "ru": "Коротко:",
     "tr": "Kısacası:",
-    "ar": "باختصار:",
+    "id": "Singkatnya:",
     "hi": "संक्षेप में:",
-    "ur": "مختصراً:",
-    "id": "Singkatnya:"
+    "ar": "باختصار:",
+    "ur": "مختصراً:"
   },
   "priv_short_body": {
     "en": "Privaro is built to be private by design. Your photos, videos, albums, captions, and tags are encrypted on your device and never sent to us. We have no account system, we do not operate servers that store your content, and we cannot see what is in your vault. There are no ads and no tracking. The only data that ever leaves your device is what Apple needs to process a purchase.",
@@ -146,10 +127,10 @@
     "zh-Hant": "Privaro 從設計之初就以隱私為本。你的照片、影片、相簿、說明和標籤都在你的裝置上加密，永遠不會傳送給我們。我們沒有帳號系統，沒有營運儲存你內容的伺服器，也看不到你保險庫裡有什麼。沒有廣告，也沒有追蹤。唯一會離開你裝置的資料，是 Apple 處理購買交易所需的資料。",
     "ru": "Privaro изначально спроектирован для конфиденциальности. Ваши фото, видео, альбомы, подписи и теги шифруются на вашем устройстве и никогда не отправляются нам. У нас нет системы аккаунтов, мы не держим серверов для хранения вашего контента и не можем видеть, что лежит в вашем хранилище. Нет ни рекламы, ни отслеживания. Единственные данные, которые когда-либо покидают ваше устройство, — это то, что нужно Apple для обработки покупки.",
     "tr": "Privaro, tasarımı gereği gizli olacak şekilde geliştirilmiştir. Fotoğraflarınız, videolarınız, albümleriniz, başlıklarınız ve etiketleriniz aygıtınızda şifrelenir ve bize asla gönderilmez. Bir hesap sistemimiz yoktur, içeriğinizi depolayan sunucular işletmeyiz ve kasanızda ne olduğunu göremeyiz. Reklam ve izleme yoktur. Aygıtınızdan çıkan tek veri, Apple'ın bir satın alımı işlemek için ihtiyaç duyduğu veridir.",
-    "ar": "صُمّم Privaro ليكون خاصًا من الأساس. صورك وفيديوهاتك وألبوماتك وتعليقاتك ووسومك مشفّرة على جهازك ولا تُرسل إلينا أبدًا. ليس لدينا نظام حسابات، ولا نشغّل خوادم تخزّن محتواك، ولا يمكننا رؤية ما في خزنتك. لا توجد إعلانات ولا تتبّع. البيانات الوحيدة التي تغادر جهازك هي ما تحتاجه Apple لمعالجة عملية شراء.",
+    "id": "Privaro dirancang untuk privat sejak awal. Foto, video, album, keterangan, dan tag Anda dienkripsi di perangkat Anda dan tidak pernah dikirim kepada kami. Kami tidak memiliki sistem akun, tidak mengoperasikan server yang menyimpan konten Anda, dan tidak dapat melihat isi brankas Anda. Tidak ada iklan dan tidak ada pelacakan. Satu-satunya data yang keluar dari perangkat Anda adalah data yang dibutuhkan Apple untuk memproses pembelian.",
     "hi": "Privaro को शुरुआत से ही निजी रहने के लिए बनाया गया है। आपकी फ़ोटो, वीडियो, एल्बम, कैप्शन और टैग आपके डिवाइस पर एन्क्रिप्ट होते हैं और कभी हमें नहीं भेजे जाते। हमारे पास कोई अकाउंट सिस्टम नहीं है, हम आपका कंटेंट रखने वाला कोई सर्वर नहीं चलाते, और हम यह नहीं देख सकते कि आपकी तिजोरी में क्या है। कोई विज्ञापन नहीं और कोई ट्रैकिंग नहीं। आपके डिवाइस से बाहर जाने वाला एकमात्र डेटा वह है जिसकी Apple को किसी ख़रीदारी को प्रोसेस करने के लिए ज़रूरत होती है।",
-    "ur": "Privaro کو شروع سے ہی نجی رہنے کے لیے بنایا گیا ہے۔ آپ کی تصاویر، ویڈیوز، البمز، کیپشن اور ٹیگز آپ کے ڈیوائس پر انکرپٹ ہوتے ہیں اور کبھی ہمیں نہیں بھیجے جاتے۔ ہمارے پاس کوئی اکاؤنٹ سسٹم نہیں ہے، ہم آپ کا مواد رکھنے والے سرورز نہیں چلاتے، اور ہم نہیں دیکھ سکتے کہ آپ کے والٹ میں کیا ہے۔ نہ کوئی اشتہار ہے اور نہ کوئی ٹریکنگ۔ آپ کے ڈیوائس سے باہر جانے والا واحد ڈیٹا وہ ہے جو Apple کو کسی خریداری پر کارروائی کے لیے درکار ہوتا ہے۔",
-    "id": "Privaro dirancang untuk privat sejak awal. Foto, video, album, keterangan, dan tag Anda dienkripsi di perangkat Anda dan tidak pernah dikirim kepada kami. Kami tidak memiliki sistem akun, tidak mengoperasikan server yang menyimpan konten Anda, dan tidak dapat melihat isi brankas Anda. Tidak ada iklan dan tidak ada pelacakan. Satu-satunya data yang keluar dari perangkat Anda adalah data yang dibutuhkan Apple untuk memproses pembelian."
+    "ar": "صُمّم Privaro ليكون خاصًا من الأساس. صورك وفيديوهاتك وألبوماتك وتعليقاتك ووسومك مشفّرة على جهازك ولا تُرسل إلينا أبدًا. ليس لدينا نظام حسابات، ولا نشغّل خوادم تخزّن محتواك، ولا يمكننا رؤية ما في خزنتك. لا توجد إعلانات ولا تتبّع. البيانات الوحيدة التي تغادر جهازك هي ما تحتاجه Apple لمعالجة عملية شراء.",
+    "ur": "Privaro کو شروع سے ہی نجی رہنے کے لیے بنایا گیا ہے۔ آپ کی تصاویر، ویڈیوز، البمز، کیپشن اور ٹیگز آپ کے ڈیوائس پر انکرپٹ ہوتے ہیں اور کبھی ہمیں نہیں بھیجے جاتے۔ ہمارے پاس کوئی اکاؤنٹ سسٹم نہیں ہے، ہم آپ کا مواد رکھنے والے سرورز نہیں چلاتے، اور ہم نہیں دیکھ سکتے کہ آپ کے والٹ میں کیا ہے۔ نہ کوئی اشتہار ہے اور نہ کوئی ٹریکنگ۔ آپ کے ڈیوائس سے باہر جانے والا واحد ڈیٹا وہ ہے جو Apple کو کسی خریداری پر کارروائی کے لیے درکار ہوتا ہے۔"
   },
   "priv_s1_h": {
     "en": "Information we do not collect",
@@ -165,10 +146,10 @@
     "zh-Hant": "我們不會收集的資訊",
     "ru": "Информация, которую мы не собираем",
     "tr": "Toplamadığımız bilgiler",
-    "ar": "معلومات لا نجمعها",
+    "id": "Informasi yang tidak kami kumpulkan",
     "hi": "वह जानकारी जो हम इकट्ठा नहीं करते",
-    "ur": "وہ معلومات جو ہم جمع نہیں کرتے",
-    "id": "Informasi yang tidak kami kumpulkan"
+    "ar": "معلومات لا نجمعها",
+    "ur": "وہ معلومات جو ہم جمع نہیں کرتے"
   },
   "priv_s1_li1": {
     "en": "We do <strong>not</strong> collect, see, or store your photos, videos, or any vault content.",
@@ -184,10 +165,10 @@
     "zh-Hant": "我們<strong>不會</strong>收集、查看或儲存你的照片、影片或任何保險庫內容。",
     "ru": "Мы <strong>не</strong> собираем, не просматриваем и не храним ваши фото, видео или любое другое содержимое хранилища.",
     "tr": "Fotoğraflarınızı, videolarınızı veya herhangi bir kasa içeriğini <strong>toplamayız</strong>, görmeyiz ve depolamayız.",
-    "ar": "نحن <strong>لا</strong> نجمع صورك أو فيديوهاتك أو أي محتوى في الخزنة، ولا نطّلع عليه ولا نخزّنه.",
+    "id": "Kami <strong>tidak</strong> mengumpulkan, melihat, atau menyimpan foto, video, atau konten brankas apa pun milik Anda.",
     "hi": "हम आपकी फ़ोटो, वीडियो या तिजोरी का कोई भी कंटेंट इकट्ठा, देख या स्टोर <strong>नहीं</strong> करते।",
-    "ur": "ہم آپ کی تصاویر، ویڈیوز یا والٹ کا کوئی بھی مواد جمع، دیکھتے یا محفوظ <strong>نہیں</strong> کرتے۔",
-    "id": "Kami <strong>tidak</strong> mengumpulkan, melihat, atau menyimpan foto, video, atau konten brankas apa pun milik Anda."
+    "ar": "نحن <strong>لا</strong> نجمع صورك أو فيديوهاتك أو أي محتوى في الخزنة، ولا نطّلع عليه ولا نخزّنه.",
+    "ur": "ہم آپ کی تصاویر، ویڈیوز یا والٹ کا کوئی بھی مواد جمع، دیکھتے یا محفوظ <strong>نہیں</strong> کرتے۔"
   },
   "priv_s1_li2": {
     "en": "We do <strong>not</strong> have user accounts, and we do <strong>not</strong> ask for your name, email, or phone number to use the app.",
@@ -203,10 +184,10 @@
     "zh-Hant": "我們<strong>沒有</strong>使用者帳號，使用本 App 時也<strong>不會</strong>要求你提供姓名、電子郵件或電話號碼。",
     "ru": "У нас <strong>нет</strong> пользовательских аккаунтов, и для использования приложения мы <strong>не</strong> запрашиваем ваше имя, адрес электронной почты или номер телефона.",
     "tr": "Kullanıcı hesaplarımız <strong>yoktur</strong> ve uygulamayı kullanmanız için adınızı, e-posta adresinizi veya telefon numaranızı <strong>istemeyiz</strong>.",
-    "ar": "<strong>لا</strong> توجد لدينا حسابات مستخدمين، و<strong>لا</strong> نطلب اسمك أو بريدك الإلكتروني أو رقم هاتفك لاستخدام التطبيق.",
+    "id": "Kami <strong>tidak</strong> memiliki akun pengguna, dan kami <strong>tidak</strong> meminta nama, email, atau nomor telepon Anda untuk menggunakan aplikasi.",
     "hi": "हमारे पास यूज़र अकाउंट <strong>नहीं</strong> हैं, और ऐप इस्तेमाल करने के लिए हम आपका नाम, ईमेल या फ़ोन नंबर <strong>नहीं</strong> माँगते।",
-    "ur": "ہمارے پاس صارف اکاؤنٹس <strong>نہیں</strong> ہیں، اور ایپ استعمال کرنے کے لیے ہم آپ کا نام، ای میل یا فون نمبر <strong>نہیں</strong> مانگتے۔",
-    "id": "Kami <strong>tidak</strong> memiliki akun pengguna, dan kami <strong>tidak</strong> meminta nama, email, atau nomor telepon Anda untuk menggunakan aplikasi."
+    "ar": "<strong>لا</strong> توجد لدينا حسابات مستخدمين، و<strong>لا</strong> نطلب اسمك أو بريدك الإلكتروني أو رقم هاتفك لاستخدام التطبيق.",
+    "ur": "ہمارے پاس صارف اکاؤنٹس <strong>نہیں</strong> ہیں، اور ایپ استعمال کرنے کے لیے ہم آپ کا نام، ای میل یا فون نمبر <strong>نہیں</strong> مانگتے۔"
   },
   "priv_s1_li3": {
     "en": "We do <strong>not</strong> operate a server that receives your vault data.",
@@ -222,10 +203,10 @@
     "zh-Hant": "我們<strong>沒有</strong>營運接收你保險庫資料的伺服器。",
     "ru": "Мы <strong>не</strong> держим сервер, который получал бы данные вашего хранилища.",
     "tr": "Kasa verilerinizi alan bir sunucu <strong>işletmeyiz</strong>.",
-    "ar": "نحن <strong>لا</strong> نشغّل خادمًا يستقبل بيانات خزنتك.",
+    "id": "Kami <strong>tidak</strong> mengoperasikan server yang menerima data brankas Anda.",
     "hi": "हम ऐसा कोई सर्वर <strong>नहीं</strong> चलाते जो आपकी तिजोरी का डेटा प्राप्त करे।",
-    "ur": "ہم کوئی ایسا سرور <strong>نہیں</strong> چلاتے جو آپ کے والٹ کا ڈیٹا وصول کرے۔",
-    "id": "Kami <strong>tidak</strong> mengoperasikan server yang menerima data brankas Anda."
+    "ar": "نحن <strong>لا</strong> نشغّل خادمًا يستقبل بيانات خزنتك.",
+    "ur": "ہم کوئی ایسا سرور <strong>نہیں</strong> چلاتے جو آپ کے والٹ کا ڈیٹا وصول کرے۔"
   },
   "priv_s1_li4": {
     "en": "We do <strong>not</strong> use analytics, crash-reporting, or tracking SDKs.",
@@ -241,10 +222,10 @@
     "zh-Hant": "我們<strong>不會</strong>使用分析、當機回報或追蹤 SDK。",
     "ru": "Мы <strong>не</strong> используем SDK для аналитики, отчётов о сбоях или отслеживания.",
     "tr": "Analiz, çökme raporlama veya izleme SDK'ları <strong>kullanmayız</strong>.",
-    "ar": "نحن <strong>لا</strong> نستخدم أدوات SDK للتحليلات أو تقارير الأعطال أو التتبّع.",
+    "id": "Kami <strong>tidak</strong> menggunakan SDK analitik, pelaporan kerusakan, atau pelacakan.",
     "hi": "हम एनालिटिक्स, क्रैश-रिपोर्टिंग या ट्रैकिंग SDK का उपयोग <strong>नहीं</strong> करते।",
-    "ur": "ہم اینالیٹکس، کریش رپورٹنگ یا ٹریکنگ SDKs استعمال <strong>نہیں</strong> کرتے۔",
-    "id": "Kami <strong>tidak</strong> menggunakan SDK analitik, pelaporan kerusakan, atau pelacakan."
+    "ar": "نحن <strong>لا</strong> نستخدم أدوات SDK للتحليلات أو تقارير الأعطال أو التتبّع.",
+    "ur": "ہم اینالیٹکس، کریش رپورٹنگ یا ٹریکنگ SDKs استعمال <strong>نہیں</strong> کرتے۔"
   },
   "priv_s1_li5": {
     "en": "We do <strong>not</strong> sell or rent your personal information to anyone.",
@@ -260,10 +241,10 @@
     "zh-Hant": "我們<strong>不會</strong>向任何人出售或出租你的個人資訊。",
     "ru": "Мы <strong>не</strong> продаём и не сдаём в аренду вашу личную информацию кому бы то ни было.",
     "tr": "Kişisel bilgilerinizi hiç kimseye <strong>satmayız</strong> veya kiralamayız.",
-    "ar": "نحن <strong>لا</strong> نبيع معلوماتك الشخصية لأي أحد ولا نؤجّرها.",
+    "id": "Kami <strong>tidak</strong> menjual atau menyewakan informasi pribadi Anda kepada siapa pun.",
     "hi": "हम आपकी निजी जानकारी किसी को बेचते या किराए पर <strong>नहीं</strong> देते।",
-    "ur": "ہم آپ کی ذاتی معلومات کسی کو فروخت یا کرائے پر <strong>نہیں</strong> دیتے۔",
-    "id": "Kami <strong>tidak</strong> menjual atau menyewakan informasi pribadi Anda kepada siapa pun."
+    "ar": "نحن <strong>لا</strong> نبيع معلوماتك الشخصية لأي أحد ولا نؤجّرها.",
+    "ur": "ہم آپ کی ذاتی معلومات کسی کو فروخت یا کرائے پر <strong>نہیں</strong> دیتے۔"
   },
   "priv_s1_li6": {
     "en": "We do <strong>not</strong> track you across other apps or websites.",
@@ -279,10 +260,10 @@
     "zh-Hant": "我們<strong>不會</strong>在其他 App 或網站上追蹤你。",
     "ru": "Мы <strong>не</strong> отслеживаем вас в других приложениях и на других сайтах.",
     "tr": "Sizi diğer uygulamalarda veya web sitelerinde <strong>izlemeyiz</strong>.",
-    "ar": "نحن <strong>لا</strong> نتتبّعك عبر التطبيقات أو المواقع الأخرى.",
+    "id": "Kami <strong>tidak</strong> melacak Anda di aplikasi atau situs web lain.",
     "hi": "हम दूसरे ऐप्स या वेबसाइटों पर आपको ट्रैक <strong>नहीं</strong> करते।",
-    "ur": "ہم دوسری ایپس یا ویب سائٹس پر آپ کو ٹریک <strong>نہیں</strong> کرتے۔",
-    "id": "Kami <strong>tidak</strong> melacak Anda di aplikasi atau situs web lain."
+    "ar": "نحن <strong>لا</strong> نتتبّعك عبر التطبيقات أو المواقع الأخرى.",
+    "ur": "ہم دوسری ایپس یا ویب سائٹس پر آپ کو ٹریک <strong>نہیں</strong> کرتے۔"
   },
   "priv_s2_h": {
     "en": "Your content stays on your device (and is encrypted)",
@@ -298,10 +279,10 @@
     "zh-Hant": "你的內容留在你的裝置上（並且經過加密）",
     "ru": "Ваш контент остаётся на устройстве (и зашифрован)",
     "tr": "İçeriğiniz aygıtınızda kalır (ve şifrelenir)",
-    "ar": "محتواك يبقى على جهازك (ومشفّرًا)",
+    "id": "Konten Anda tetap di perangkat Anda (dan terenkripsi)",
     "hi": "आपका कंटेंट आपके डिवाइस पर रहता है (और एन्क्रिप्टेड रहता है)",
-    "ur": "آپ کا مواد آپ کے ڈیوائس پر رہتا ہے (اور انکرپٹڈ رہتا ہے)",
-    "id": "Konten Anda tetap di perangkat Anda (dan terenkripsi)"
+    "ar": "محتواك يبقى على جهازك (ومشفّرًا)",
+    "ur": "آپ کا مواد آپ کے ڈیوائس پر رہتا ہے (اور انکرپٹڈ رہتا ہے)"
   },
   "priv_s2_p1": {
     "en": "Everything you add to Privaro (photos, videos, thumbnails, albums, captions, tags, and file names) is encrypted on your device using industry-standard AES-256-GCM encryption. The encryption key is generated on your device and stored in the iOS Keychain; it is protected by your device passcode/biometrics and your Privaro passcode. Encrypted files are stored in the app’s private storage with full file protection and are excluded from unencrypted device backups.",
@@ -317,10 +298,10 @@
     "zh-Hant": "你加入 Privaro 的所有內容（照片、影片、縮覽圖、相簿、說明、標籤和檔案名稱）都會在你的裝置上使用業界標準的 AES-256-GCM 加密。加密金鑰在你的裝置上產生並儲存在 iOS 鑰匙圈中，受你的裝置密碼／生物辨識以及你的 Privaro 密碼保護。加密的檔案儲存在 App 的私人儲存空間中，並受完整檔案保護，且不會包含在未加密的裝置備份中。",
     "ru": "Всё, что вы добавляете в Privaro (фото, видео, миниатюры, альбомы, подписи, теги и имена файлов), шифруется на вашем устройстве с помощью стандартного в отрасли шифрования AES-256-GCM. Ключ шифрования создаётся на устройстве и хранится в связке ключей iOS; он защищён код-паролем/биометрией устройства и вашим код-паролем Privaro. Зашифрованные файлы хранятся в закрытом хранилище приложения с полной защитой файлов и исключены из незашифрованных резервных копий устройства.",
     "tr": "Privaro'ya eklediğiniz her şey (fotoğraflar, videolar, küçük resimler, albümler, başlıklar, etiketler ve dosya adları), sektör standardı AES-256-GCM şifrelemesiyle aygıtınızda şifrelenir. Şifreleme anahtarı aygıtınızda oluşturulur ve iOS Anahtar Zinciri'nde saklanır; aygıt parolanız/biyometrik verileriniz ve Privaro parolanızla korunur. Şifreli dosyalar, tam dosya korumasıyla uygulamanın özel depolama alanında saklanır ve şifrelenmemiş aygıt yedeklemelerine dahil edilmez.",
-    "ar": "كل ما تضيفه إلى Privaro (الصور والفيديوهات والصور المصغّرة والألبومات والتعليقات والوسوم وأسماء الملفات) يُشفَّر على جهازك باستخدام تشفير AES-256-GCM المعتمد في هذا المجال. يُنشأ مفتاح التشفير على جهازك ويُخزَّن في سلسلة مفاتيح iOS، ويحميه رمز دخول جهازك أو القياسات الحيوية ورمز دخول Privaro. تُخزَّن الملفات المشفّرة في مساحة التخزين الخاصة بالتطبيق مع حماية كاملة للملفات، وتُستبعد من النسخ الاحتياطية غير المشفّرة للجهاز.",
+    "id": "Semua yang Anda tambahkan ke Privaro (foto, video, gambar mini, album, keterangan, tag, dan nama file) dienkripsi di perangkat Anda menggunakan enkripsi AES-256-GCM standar industri. Kunci enkripsi dibuat di perangkat Anda dan disimpan di Rantai Kunci iOS; kunci ini dilindungi oleh kode sandi/biometrik perangkat Anda dan kode sandi Privaro Anda. File terenkripsi disimpan di penyimpanan pribadi aplikasi dengan perlindungan file penuh dan dikecualikan dari cadangan perangkat yang tidak terenkripsi.",
     "hi": "आप Privaro में जो कुछ भी जोड़ते हैं (फ़ोटो, वीडियो, थंबनेल, एल्बम, कैप्शन, टैग और फ़ाइल नाम), वह इंडस्ट्री-स्टैंडर्ड AES-256-GCM एन्क्रिप्शन से आपके डिवाइस पर एन्क्रिप्ट होता है। एन्क्रिप्शन कुंजी आपके डिवाइस पर बनाई जाती है और iOS कीचेन में रखी जाती है; यह आपके डिवाइस पासकोड/बायोमेट्रिक्स और आपके Privaro पासकोड से सुरक्षित रहती है। एन्क्रिप्टेड फ़ाइलें पूरी फ़ाइल सुरक्षा के साथ ऐप के निजी स्टोरेज में रखी जाती हैं और बिना एन्क्रिप्शन वाले डिवाइस बैकअप में शामिल नहीं होतीं।",
-    "ur": "آپ Privaro میں جو کچھ بھی شامل کرتے ہیں (تصاویر، ویڈیوز، تھمب نیلز، البمز، کیپشن، ٹیگز اور فائلوں کے نام) وہ انڈسٹری اسٹینڈرڈ AES-256-GCM انکرپشن سے آپ کے ڈیوائس پر انکرپٹ ہوتا ہے۔ انکرپشن کلید آپ کے ڈیوائس پر بنائی جاتی ہے اور iOS کی چین میں رکھی جاتی ہے؛ یہ آپ کے ڈیوائس کے پاس کوڈ/بایومیٹرکس اور آپ کے Privaro پاس کوڈ سے محفوظ ہوتی ہے۔ انکرپٹڈ فائلیں مکمل فائل تحفظ کے ساتھ ایپ کی نجی اسٹوریج میں رکھی جاتی ہیں اور بغیر انکرپشن والے ڈیوائس بیک اپس میں شامل نہیں ہوتیں۔",
-    "id": "Semua yang Anda tambahkan ke Privaro (foto, video, gambar mini, album, keterangan, tag, dan nama file) dienkripsi di perangkat Anda menggunakan enkripsi AES-256-GCM standar industri. Kunci enkripsi dibuat di perangkat Anda dan disimpan di Rantai Kunci iOS; kunci ini dilindungi oleh kode sandi/biometrik perangkat Anda dan kode sandi Privaro Anda. File terenkripsi disimpan di penyimpanan pribadi aplikasi dengan perlindungan file penuh dan dikecualikan dari cadangan perangkat yang tidak terenkripsi."
+    "ar": "كل ما تضيفه إلى Privaro (الصور والفيديوهات والصور المصغّرة والألبومات والتعليقات والوسوم وأسماء الملفات) يُشفَّر على جهازك باستخدام تشفير AES-256-GCM المعتمد في هذا المجال. يُنشأ مفتاح التشفير على جهازك ويُخزَّن في سلسلة مفاتيح iOS، ويحميه رمز دخول جهازك أو القياسات الحيوية ورمز دخول Privaro. تُخزَّن الملفات المشفّرة في مساحة التخزين الخاصة بالتطبيق مع حماية كاملة للملفات، وتُستبعد من النسخ الاحتياطية غير المشفّرة للجهاز.",
+    "ur": "آپ Privaro میں جو کچھ بھی شامل کرتے ہیں (تصاویر، ویڈیوز، تھمب نیلز، البمز، کیپشن، ٹیگز اور فائلوں کے نام) وہ انڈسٹری اسٹینڈرڈ AES-256-GCM انکرپشن سے آپ کے ڈیوائس پر انکرپٹ ہوتا ہے۔ انکرپشن کلید آپ کے ڈیوائس پر بنائی جاتی ہے اور iOS کی چین میں رکھی جاتی ہے؛ یہ آپ کے ڈیوائس کے پاس کوڈ/بایومیٹرکس اور آپ کے Privaro پاس کوڈ سے محفوظ ہوتی ہے۔ انکرپٹڈ فائلیں مکمل فائل تحفظ کے ساتھ ایپ کی نجی اسٹوریج میں رکھی جاتی ہیں اور بغیر انکرپشن والے ڈیوائس بیک اپس میں شامل نہیں ہوتیں۔"
   },
   "priv_s2_p2": {
     "en": "Because encryption happens on your device and the key never leaves it, we have no ability to access, decrypt, or recover your vault content. If you forget your passcode and your recovery key, your data cannot be recovered by us or anyone else.",
@@ -336,10 +317,10 @@
     "zh-Hant": "由於加密在你的裝置上進行，而且金鑰永遠不會離開裝置，我們無法存取、解密或復原你的保險庫內容。如果你忘記了密碼和復原密鑰，我們或任何其他人都無法復原你的資料。",
     "ru": "Поскольку шифрование происходит на вашем устройстве и ключ никогда его не покидает, у нас нет возможности получить доступ к содержимому вашего хранилища, расшифровать или восстановить его. Если вы забудете код-пароль и ключ восстановления, ваши данные не сможем восстановить ни мы, ни кто-либо другой.",
     "tr": "Şifreleme aygıtınızda gerçekleştiği ve anahtar aygıtınızdan hiç çıkmadığı için kasa içeriğinize erişme, şifresini çözme veya onu kurtarma imkânımız yoktur. Parolanızı ve kurtarma anahtarınızı unutursanız verileriniz ne bizim ne de başka birinin tarafından kurtarılabilir.",
-    "ar": "لأن التشفير يتم على جهازك والمفتاح لا يغادره أبدًا، لا نستطيع الوصول إلى محتوى خزنتك أو فك تشفيره أو استرداده. إذا نسيت رمز الدخول ومفتاح الاسترداد، فلا يمكننا ولا يمكن لأي أحد آخر استرداد بياناتك.",
+    "id": "Karena enkripsi terjadi di perangkat Anda dan kuncinya tidak pernah meninggalkan perangkat, kami tidak memiliki kemampuan untuk mengakses, mendekripsi, atau memulihkan konten brankas Anda. Jika Anda lupa kode sandi dan kunci pemulihan, data Anda tidak dapat dipulihkan oleh kami maupun orang lain.",
     "hi": "क्योंकि एन्क्रिप्शन आपके डिवाइस पर होता है और कुंजी कभी उससे बाहर नहीं जाती, हम आपकी तिजोरी के कंटेंट को न देख सकते हैं, न डिक्रिप्ट कर सकते हैं और न ही रिकवर कर सकते हैं। अगर आप अपना पासकोड और रिकवरी कुंजी दोनों भूल जाते हैं, तो आपका डेटा न हम रिकवर कर सकते हैं और न कोई और।",
-    "ur": "چونکہ انکرپشن آپ کے ڈیوائس پر ہوتی ہے اور کلید کبھی اس سے باہر نہیں جاتی، اس لیے ہم آپ کے والٹ کے مواد تک نہ رسائی حاصل کر سکتے ہیں، نہ اسے ڈی کرپٹ کر سکتے ہیں اور نہ ہی بحال کر سکتے ہیں۔ اگر آپ اپنا پاس کوڈ اور ریکوری کلید دونوں بھول جائیں، تو آپ کا ڈیٹا نہ ہم بحال کر سکتے ہیں اور نہ کوئی اور۔",
-    "id": "Karena enkripsi terjadi di perangkat Anda dan kuncinya tidak pernah meninggalkan perangkat, kami tidak memiliki kemampuan untuk mengakses, mendekripsi, atau memulihkan konten brankas Anda. Jika Anda lupa kode sandi dan kunci pemulihan, data Anda tidak dapat dipulihkan oleh kami maupun orang lain."
+    "ar": "لأن التشفير يتم على جهازك والمفتاح لا يغادره أبدًا، لا نستطيع الوصول إلى محتوى خزنتك أو فك تشفيره أو استرداده. إذا نسيت رمز الدخول ومفتاح الاسترداد، فلا يمكننا ولا يمكن لأي أحد آخر استرداد بياناتك.",
+    "ur": "چونکہ انکرپشن آپ کے ڈیوائس پر ہوتی ہے اور کلید کبھی اس سے باہر نہیں جاتی، اس لیے ہم آپ کے والٹ کے مواد تک نہ رسائی حاصل کر سکتے ہیں، نہ اسے ڈی کرپٹ کر سکتے ہیں اور نہ ہی بحال کر سکتے ہیں۔ اگر آپ اپنا پاس کوڈ اور ریکوری کلید دونوں بھول جائیں، تو آپ کا ڈیٹا نہ ہم بحال کر سکتے ہیں اور نہ کوئی اور۔"
   },
   "priv_s3_h": {
     "en": "Optional features that involve data leaving your device",
@@ -355,10 +336,10 @@
     "zh-Hant": "會讓資料離開裝置的選用功能",
     "ru": "Необязательные функции, при которых данные покидают устройство",
     "tr": "Verilerin aygıtınızdan çıkmasını içeren isteğe bağlı özellikler",
-    "ar": "ميزات اختيارية تتضمن خروج البيانات من جهازك",
+    "id": "Fitur opsional yang melibatkan data keluar dari perangkat Anda",
     "hi": "वैकल्पिक फ़ीचर जिनमें डेटा आपके डिवाइस से बाहर जाता है",
-    "ur": "اختیاری فیچرز جن میں ڈیٹا آپ کے ڈیوائس سے باہر جاتا ہے",
-    "id": "Fitur opsional yang melibatkan data keluar dari perangkat Anda"
+    "ar": "ميزات اختيارية تتضمن خروج البيانات من جهازك",
+    "ur": "اختیاری فیچرز جن میں ڈیٹا آپ کے ڈیوائس سے باہر جاتا ہے"
   },
   "priv_s3_lead": {
     "en": "These features are off by default and only operate when you choose to use them:",
@@ -374,10 +355,10 @@
     "zh-Hant": "這些功能預設為關閉，只有在你選擇使用時才會運作：",
     "ru": "Эти функции по умолчанию выключены и работают только тогда, когда вы решите ими воспользоваться:",
     "tr": "Bu özellikler varsayılan olarak kapalıdır ve yalnızca siz kullanmayı seçtiğinizde çalışır:",
-    "ar": "هذه الميزات متوقفة افتراضيًا ولا تعمل إلا عندما تختار استخدامها:",
+    "id": "Fitur-fitur ini nonaktif secara default dan hanya berfungsi saat Anda memilih untuk menggunakannya:",
     "hi": "ये फ़ीचर डिफ़ॉल्ट रूप से बंद रहते हैं और तभी काम करते हैं जब आप इन्हें इस्तेमाल करना चुनते हैं:",
-    "ur": "یہ فیچرز ڈیفالٹ طور پر بند ہوتے ہیں اور صرف تب کام کرتے ہیں جب آپ انہیں استعمال کرنے کا انتخاب کریں:",
-    "id": "Fitur-fitur ini nonaktif secara default dan hanya berfungsi saat Anda memilih untuk menggunakannya:"
+    "ar": "هذه الميزات متوقفة افتراضيًا ولا تعمل إلا عندما تختار استخدامها:",
+    "ur": "یہ فیچرز ڈیفالٹ طور پر بند ہوتے ہیں اور صرف تب کام کرتے ہیں جب آپ انہیں استعمال کرنے کا انتخاب کریں:"
   },
   "priv_s3_li1": {
     "en": "<strong>Encrypted iCloud Backup (optional, Pro).</strong> If you enable it, Privaro stores an encrypted copy of your vault in your own iCloud account. The data is encrypted on your device before upload; the key is wrapped using a key derived from your passcode (PBKDF2-HMAC-SHA256). We never receive your backup or your key. iCloud is operated by Apple and governed by <a href=\"https://www.apple.com/legal/privacy/\">Apple’s Privacy Policy</a>.",
@@ -393,10 +374,10 @@
     "zh-Hant": "<strong>加密 iCloud 備份（選用，Pro）。</strong>如果你開啟此功能，Privaro 會將保險庫的加密副本儲存在你自己的 iCloud 帳號中。資料在上傳前就已在你的裝置上加密；金鑰會用從你的密碼衍生的金鑰（PBKDF2-HMAC-SHA256）包裝。我們永遠不會收到你的備份或金鑰。iCloud 由 Apple 營運，並受 <a href=\"https://www.apple.com/legal/privacy/\">Apple 的隱私權政策</a>規範。",
     "ru": "<strong>Зашифрованная резервная копия в iCloud (по желанию, Pro).</strong> Если вы её включите, Privaro сохранит зашифрованную копию вашего хранилища в вашем собственном аккаунте iCloud. Данные шифруются на устройстве до загрузки; ключ оборачивается ключом, полученным из вашего код-пароля (PBKDF2-HMAC-SHA256). Мы никогда не получаем ни вашу резервную копию, ни ваш ключ. iCloud управляется Apple, и на него распространяется <a href=\"https://www.apple.com/legal/privacy/\">Политика конфиденциальности Apple</a>.",
     "tr": "<strong>Şifreli iCloud Yedeklemesi (isteğe bağlı, Pro).</strong> Bunu açarsanız Privaro, kasanızın şifreli bir kopyasını kendi iCloud hesabınızda saklar. Veriler yüklenmeden önce aygıtınızda şifrelenir; anahtar, parolanızdan türetilen bir anahtarla (PBKDF2-HMAC-SHA256) sarmalanır. Yedeğinizi veya anahtarınızı asla almayız. iCloud, Apple tarafından işletilir ve <a href=\"https://www.apple.com/legal/privacy/\">Apple'ın Gizlilik Politikası</a>'na tabidir.",
-    "ar": "<strong>النسخ الاحتياطي المشفّر على iCloud (اختياري، Pro).</strong> إذا فعّلته، يخزّن Privaro نسخة مشفّرة من خزنتك في حساب iCloud الخاص بك. تُشفَّر البيانات على جهازك قبل الرفع، ويُغلَّف المفتاح بمفتاح مشتق من رمز دخولك (PBKDF2-HMAC-SHA256). لا نتلقّى نسختك الاحتياطية ولا مفتاحك أبدًا. تُشغّل Apple خدمة iCloud، وتخضع لـ <a href=\"https://www.apple.com/legal/privacy/\">سياسة خصوصية Apple</a>.",
+    "id": "<strong>Cadangan iCloud Terenkripsi (opsional, Pro).</strong> Jika Anda mengaktifkannya, Privaro menyimpan salinan terenkripsi brankas Anda di akun iCloud Anda sendiri. Data dienkripsi di perangkat Anda sebelum diunggah; kuncinya dibungkus menggunakan kunci yang diturunkan dari kode sandi Anda (PBKDF2-HMAC-SHA256). Kami tidak pernah menerima cadangan atau kunci Anda. iCloud dioperasikan oleh Apple dan tunduk pada <a href=\"https://www.apple.com/legal/privacy/\">Kebijakan Privasi Apple</a>.",
     "hi": "<strong>एन्क्रिप्टेड iCloud बैकअप (वैकल्पिक, Pro)।</strong> अगर आप इसे चालू करते हैं, तो Privaro आपकी तिजोरी की एक एन्क्रिप्टेड कॉपी आपके अपने iCloud अकाउंट में रखता है। अपलोड से पहले डेटा आपके डिवाइस पर एन्क्रिप्ट होता है; कुंजी को आपके पासकोड से बनी एक कुंजी (PBKDF2-HMAC-SHA256) से रैप किया जाता है। हमें कभी भी आपका बैकअप या आपकी कुंजी नहीं मिलती। iCloud को Apple चलाता है और यह <a href=\"https://www.apple.com/legal/privacy/\">Apple की गोपनीयता नीति</a> के अधीन है।",
-    "ur": "<strong>انکرپٹڈ iCloud بیک اپ (اختیاری، Pro)۔</strong> اگر آپ اسے آن کریں، تو Privaro آپ کے والٹ کی ایک انکرپٹڈ کاپی آپ کے اپنے iCloud اکاؤنٹ میں رکھتا ہے۔ اپ لوڈ سے پہلے ڈیٹا آپ کے ڈیوائس پر انکرپٹ ہوتا ہے؛ کلید کو آپ کے پاس کوڈ سے اخذ کردہ ایک کلید (PBKDF2-HMAC-SHA256) سے ریپ کیا جاتا ہے۔ ہمیں کبھی آپ کا بیک اپ یا آپ کی کلید نہیں ملتی۔ iCloud کو Apple چلاتا ہے اور یہ <a href=\"https://www.apple.com/legal/privacy/\">Apple کی رازداری کی پالیسی</a> کے تحت آتا ہے۔",
-    "id": "<strong>Cadangan iCloud Terenkripsi (opsional, Pro).</strong> Jika Anda mengaktifkannya, Privaro menyimpan salinan terenkripsi brankas Anda di akun iCloud Anda sendiri. Data dienkripsi di perangkat Anda sebelum diunggah; kuncinya dibungkus menggunakan kunci yang diturunkan dari kode sandi Anda (PBKDF2-HMAC-SHA256). Kami tidak pernah menerima cadangan atau kunci Anda. iCloud dioperasikan oleh Apple dan tunduk pada <a href=\"https://www.apple.com/legal/privacy/\">Kebijakan Privasi Apple</a>."
+    "ar": "<strong>النسخ الاحتياطي المشفّر على iCloud (اختياري، Pro).</strong> إذا فعّلته، يخزّن Privaro نسخة مشفّرة من خزنتك في حساب iCloud الخاص بك. تُشفَّر البيانات على جهازك قبل الرفع، ويُغلَّف المفتاح بمفتاح مشتق من رمز دخولك (PBKDF2-HMAC-SHA256). لا نتلقّى نسختك الاحتياطية ولا مفتاحك أبدًا. تُشغّل Apple خدمة iCloud، وتخضع لـ <a href=\"https://www.apple.com/legal/privacy/\">سياسة خصوصية Apple</a>.",
+    "ur": "<strong>انکرپٹڈ iCloud بیک اپ (اختیاری، Pro)۔</strong> اگر آپ اسے آن کریں، تو Privaro آپ کے والٹ کی ایک انکرپٹڈ کاپی آپ کے اپنے iCloud اکاؤنٹ میں رکھتا ہے۔ اپ لوڈ سے پہلے ڈیٹا آپ کے ڈیوائس پر انکرپٹ ہوتا ہے؛ کلید کو آپ کے پاس کوڈ سے اخذ کردہ ایک کلید (PBKDF2-HMAC-SHA256) سے ریپ کیا جاتا ہے۔ ہمیں کبھی آپ کا بیک اپ یا آپ کی کلید نہیں ملتی۔ iCloud کو Apple چلاتا ہے اور یہ <a href=\"https://www.apple.com/legal/privacy/\">Apple کی رازداری کی پالیسی</a> کے تحت آتا ہے۔"
   },
   "priv_s3_li2": {
     "en": "<strong>Sharing / Export.</strong> When you share or export an item (including encrypted <code>.privaroshare</code> files or “Save to Photos”), that content leaves the vault as you direct. Where it goes and how it’s protected is then governed by the destination you choose.",
@@ -412,10 +393,10 @@
     "zh-Hant": "<strong>分享／匯出。</strong>當你分享或匯出項目時（包括加密的 <code>.privaroshare</code> 檔案或「儲存到照片」），該內容會依照你的指示離開保險庫。之後它去往何處、如何受到保護，取決於你選擇的目的地。",
     "ru": "<strong>Отправка / экспорт.</strong> Когда вы отправляете или экспортируете объект (в том числе зашифрованные файлы <code>.privaroshare</code> или через «Сохранить в Фото»), этот контент покидает хранилище так, как вы указали. Куда он попадёт и как будет защищён дальше, зависит от выбранного вами места назначения.",
     "tr": "<strong>Paylaşma / Dışa Aktarma.</strong> Bir öğeyi paylaştığınızda veya dışa aktardığınızda (şifreli <code>.privaroshare</code> dosyaları veya “Fotoğraflar'a Kaydet” dahil), bu içerik sizin yönlendirdiğiniz şekilde kasadan çıkar. Nereye gittiği ve nasıl korunduğu, bundan sonra seçtiğiniz hedefe bağlıdır.",
-    "ar": "<strong>المشاركة / التصدير.</strong> عندما تشارك عنصرًا أو تصدّره (بما في ذلك ملفات <code>.privaroshare</code> المشفّرة أو «حفظ في الصور»)، يغادر هذا المحتوى الخزنة وفق توجيهك. وبعد ذلك تحدّد الوجهة التي تختارها مكان ذهابه وكيفية حمايته.",
+    "id": "<strong>Berbagi / Ekspor.</strong> Saat Anda membagikan atau mengekspor item (termasuk file <code>.privaroshare</code> terenkripsi atau “Simpan ke Foto”), konten tersebut keluar dari brankas sesuai arahan Anda. Ke mana konten itu pergi dan bagaimana perlindungannya kemudian bergantung pada tujuan yang Anda pilih.",
     "hi": "<strong>शेयर / एक्सपोर्ट।</strong> जब आप कोई आइटम शेयर या एक्सपोर्ट करते हैं (एन्क्रिप्टेड <code>.privaroshare</code> फ़ाइलों या “फ़ोटो में सहेजें” सहित), तो वह कंटेंट आपके निर्देश के अनुसार तिजोरी से बाहर जाता है। इसके बाद वह कहाँ जाता है और कैसे सुरक्षित रहता है, यह आपकी चुनी हुई जगह पर निर्भर करता है।",
-    "ur": "<strong>شیئرنگ / ایکسپورٹ۔</strong> جب آپ کوئی آئٹم شیئر یا ایکسپورٹ کرتے ہیں (بشمول انکرپٹڈ <code>.privaroshare</code> فائلیں یا “تصاویر میں محفوظ کریں”)، تو وہ مواد آپ کی ہدایت کے مطابق والٹ سے باہر جاتا ہے۔ اس کے بعد وہ کہاں جاتا ہے اور کیسے محفوظ رہتا ہے، یہ آپ کی منتخب کردہ منزل پر منحصر ہے۔",
-    "id": "<strong>Berbagi / Ekspor.</strong> Saat Anda membagikan atau mengekspor item (termasuk file <code>.privaroshare</code> terenkripsi atau “Simpan ke Foto”), konten tersebut keluar dari brankas sesuai arahan Anda. Ke mana konten itu pergi dan bagaimana perlindungannya kemudian bergantung pada tujuan yang Anda pilih."
+    "ar": "<strong>المشاركة / التصدير.</strong> عندما تشارك عنصرًا أو تصدّره (بما في ذلك ملفات <code>.privaroshare</code> المشفّرة أو «حفظ في الصور»)، يغادر هذا المحتوى الخزنة وفق توجيهك. وبعد ذلك تحدّد الوجهة التي تختارها مكان ذهابه وكيفية حمايته.",
+    "ur": "<strong>شیئرنگ / ایکسپورٹ۔</strong> جب آپ کوئی آئٹم شیئر یا ایکسپورٹ کرتے ہیں (بشمول انکرپٹڈ <code>.privaroshare</code> فائلیں یا “تصاویر میں محفوظ کریں”)، تو وہ مواد آپ کی ہدایت کے مطابق والٹ سے باہر جاتا ہے۔ اس کے بعد وہ کہاں جاتا ہے اور کیسے محفوظ رہتا ہے، یہ آپ کی منتخب کردہ منزل پر منحصر ہے۔"
   },
   "priv_s3_li3": {
     "en": "<strong>Wi-Fi Transfer (optional).</strong> Lets you transfer files between your device and a browser on the same local network. This connection is local and is not encrypted in transit, so only use it on a network you trust. Files are encrypted as soon as they’re imported into the vault. No data is sent to us or over the internet during a transfer.",
@@ -431,10 +412,10 @@
     "zh-Hant": "<strong>Wi-Fi 傳輸（選用）。</strong>讓你在裝置和同一區域網路上的瀏覽器之間傳輸檔案。此連線為本機連線，傳輸過程中不加密，因此請只在你信任的網路上使用。檔案一匯入保險庫就會加密。傳輸期間不會有任何資料傳送給我們或經由網際網路傳送。",
     "ru": "<strong>Передача по Wi-Fi (по желанию).</strong> Позволяет передавать файлы между устройством и браузером в той же локальной сети. Это соединение локальное и не шифруется при передаче, поэтому используйте его только в сети, которой доверяете. Файлы шифруются сразу после импорта в хранилище. Во время передачи никакие данные не отправляются нам или через интернет.",
     "tr": "<strong>Wi-Fi Aktarımı (isteğe bağlı).</strong> Aygıtınız ile aynı yerel ağdaki bir tarayıcı arasında dosya aktarmanızı sağlar. Bu bağlantı yereldir ve aktarım sırasında şifrelenmez; bu yüzden yalnızca güvendiğiniz bir ağda kullanın. Dosyalar kasaya içe aktarılır aktarılmaz şifrelenir. Aktarım sırasında bize veya internet üzerinden hiçbir veri gönderilmez.",
-    "ar": "<strong>النقل عبر Wi-Fi (اختياري).</strong> يتيح لك نقل الملفات بين جهازك ومتصفح على الشبكة المحلية نفسها. هذا الاتصال محلي وغير مشفّر أثناء النقل، لذا استخدمه فقط على شبكة تثق بها. تُشفَّر الملفات بمجرد استيرادها إلى الخزنة. لا تُرسل أي بيانات إلينا أو عبر الإنترنت أثناء النقل.",
+    "id": "<strong>Transfer Wi-Fi (opsional).</strong> Memungkinkan Anda mentransfer file antara perangkat Anda dan peramban di jaringan lokal yang sama. Koneksi ini bersifat lokal dan tidak dienkripsi selama transfer, jadi gunakan hanya di jaringan yang Anda percayai. File dienkripsi segera setelah diimpor ke brankas. Tidak ada data yang dikirim kepada kami atau melalui internet selama transfer.",
     "hi": "<strong>वाई-फ़ाई स्थानांतरण (वैकल्पिक)।</strong> इससे आप अपने डिवाइस और उसी लोकल नेटवर्क पर मौजूद किसी ब्राउज़र के बीच फ़ाइलें ट्रांसफ़र कर सकते हैं। यह कनेक्शन लोकल है और ट्रांसफ़र के दौरान एन्क्रिप्ट नहीं होता, इसलिए इसे सिर्फ़ ऐसे नेटवर्क पर इस्तेमाल करें जिस पर आप भरोसा करते हैं। तिजोरी में इम्पोर्ट होते ही फ़ाइलें एन्क्रिप्ट हो जाती हैं। ट्रांसफ़र के दौरान कोई डेटा हमें या इंटरनेट पर नहीं भेजा जाता।",
-    "ur": "<strong>وائی فائی ٹرانسفر (اختیاری)۔</strong> اس سے آپ اپنے ڈیوائس اور اسی لوکل نیٹ ورک پر موجود کسی براؤزر کے درمیان فائلیں منتقل کر سکتے ہیں۔ یہ کنکشن لوکل ہے اور منتقلی کے دوران انکرپٹ نہیں ہوتا، اس لیے اسے صرف ایسے نیٹ ورک پر استعمال کریں جس پر آپ بھروسہ کرتے ہیں۔ فائلیں والٹ میں امپورٹ ہوتے ہی انکرپٹ ہو جاتی ہیں۔ منتقلی کے دوران کوئی ڈیٹا ہمیں یا انٹرنیٹ پر نہیں بھیجا جاتا۔",
-    "id": "<strong>Transfer Wi-Fi (opsional).</strong> Memungkinkan Anda mentransfer file antara perangkat Anda dan peramban di jaringan lokal yang sama. Koneksi ini bersifat lokal dan tidak dienkripsi selama transfer, jadi gunakan hanya di jaringan yang Anda percayai. File dienkripsi segera setelah diimpor ke brankas. Tidak ada data yang dikirim kepada kami atau melalui internet selama transfer."
+    "ar": "<strong>النقل عبر Wi-Fi (اختياري).</strong> يتيح لك نقل الملفات بين جهازك ومتصفح على الشبكة المحلية نفسها. هذا الاتصال محلي وغير مشفّر أثناء النقل، لذا استخدمه فقط على شبكة تثق بها. تُشفَّر الملفات بمجرد استيرادها إلى الخزنة. لا تُرسل أي بيانات إلينا أو عبر الإنترنت أثناء النقل.",
+    "ur": "<strong>وائی فائی ٹرانسفر (اختیاری)۔</strong> اس سے آپ اپنے ڈیوائس اور اسی لوکل نیٹ ورک پر موجود کسی براؤزر کے درمیان فائلیں منتقل کر سکتے ہیں۔ یہ کنکشن لوکل ہے اور منتقلی کے دوران انکرپٹ نہیں ہوتا، اس لیے اسے صرف ایسے نیٹ ورک پر استعمال کریں جس پر آپ بھروسہ کرتے ہیں۔ فائلیں والٹ میں امپورٹ ہوتے ہی انکرپٹ ہو جاتی ہیں۔ منتقلی کے دوران کوئی ڈیٹا ہمیں یا انٹرنیٹ پر نہیں بھیجا جاتا۔"
   },
   "priv_s4_h": {
     "en": "Device permissions and why we ask",
@@ -450,10 +431,10 @@
     "zh-Hant": "裝置權限及我們要求的原因",
     "ru": "Разрешения устройства и зачем они нужны",
     "tr": "Aygıt izinleri ve neden istediğimiz",
-    "ar": "أذونات الجهاز ولماذا نطلبها",
+    "id": "Izin perangkat dan alasan kami memintanya",
     "hi": "डिवाइस अनुमतियाँ और हम उन्हें क्यों माँगते हैं",
-    "ur": "ڈیوائس کی اجازتیں اور ہم انہیں کیوں مانگتے ہیں",
-    "id": "Izin perangkat dan alasan kami memintanya"
+    "ar": "أذونات الجهاز ولماذا نطلبها",
+    "ur": "ڈیوائس کی اجازتیں اور ہم انہیں کیوں مانگتے ہیں"
   },
   "priv_s4_lead": {
     "en": "Privaro requests these only when needed, and the data is used on your device for the stated purpose:",
@@ -469,10 +450,10 @@
     "zh-Hant": "Privaro 只在需要時才會要求這些權限，資料會在你的裝置上用於所述目的：",
     "ru": "Privaro запрашивает их только при необходимости, а данные используются на вашем устройстве для указанной цели:",
     "tr": "Privaro bunları yalnızca gerektiğinde ister ve veriler belirtilen amaç için aygıtınızda kullanılır:",
-    "ar": "لا يطلب Privaro هذه الأذونات إلا عند الحاجة، وتُستخدم البيانات على جهازك للغرض المذكور:",
+    "id": "Privaro hanya meminta izin ini saat diperlukan, dan datanya digunakan di perangkat Anda untuk tujuan yang disebutkan:",
     "hi": "Privaro ये अनुमतियाँ सिर्फ़ ज़रूरत पड़ने पर माँगता है, और डेटा का उपयोग बताए गए उद्देश्य के लिए आपके डिवाइस पर ही होता है:",
-    "ur": "Privaro یہ اجازتیں صرف ضرورت پڑنے پر مانگتا ہے، اور ڈیٹا بیان کردہ مقصد کے لیے آپ کے ڈیوائس پر ہی استعمال ہوتا ہے:",
-    "id": "Privaro hanya meminta izin ini saat diperlukan, dan datanya digunakan di perangkat Anda untuk tujuan yang disebutkan:"
+    "ar": "لا يطلب Privaro هذه الأذونات إلا عند الحاجة، وتُستخدم البيانات على جهازك للغرض المذكور:",
+    "ur": "Privaro یہ اجازتیں صرف ضرورت پڑنے پر مانگتا ہے، اور ڈیٹا بیان کردہ مقصد کے لیے آپ کے ڈیوائس پر ہی استعمال ہوتا ہے:"
   },
   "priv_s4_li1": {
     "en": "<strong>Photos</strong>: to import the photos/videos you select into your vault, and to save items back out if you choose.",
@@ -488,10 +469,10 @@
     "zh-Hant": "<strong>照片</strong>：將你選取的照片／影片匯入保險庫，以及在你選擇時將項目儲存出去。",
     "ru": "<strong>Фото</strong>: чтобы импортировать выбранные вами фото/видео в хранилище и, если вы захотите, сохранять объекты обратно.",
     "tr": "<strong>Fotoğraflar</strong>: seçtiğiniz fotoğrafları/videoları kasanıza aktarmak ve isterseniz öğeleri geri kaydetmek için.",
-    "ar": "<strong>الصور</strong>: لاستيراد الصور والفيديوهات التي تختارها إلى خزنتك، ولحفظ العناصر خارجها إن أردت.",
+    "id": "<strong>Foto</strong>: untuk mengimpor foto/video yang Anda pilih ke brankas, dan untuk menyimpan item kembali ke luar jika Anda mau.",
     "hi": "<strong>फ़ोटो</strong>: आपकी चुनी हुई फ़ोटो/वीडियो को तिजोरी में इम्पोर्ट करने के लिए, और आप चाहें तो आइटम वापस बाहर सहेजने के लिए।",
-    "ur": "<strong>تصاویر</strong>: آپ کی منتخب کردہ تصاویر/ویڈیوز کو والٹ میں امپورٹ کرنے کے لیے، اور اگر آپ چاہیں تو آئٹمز کو واپس باہر محفوظ کرنے کے لیے۔",
-    "id": "<strong>Foto</strong>: untuk mengimpor foto/video yang Anda pilih ke brankas, dan untuk menyimpan item kembali ke luar jika Anda mau."
+    "ar": "<strong>الصور</strong>: لاستيراد الصور والفيديوهات التي تختارها إلى خزنتك، ولحفظ العناصر خارجها إن أردت.",
+    "ur": "<strong>تصاویر</strong>: آپ کی منتخب کردہ تصاویر/ویڈیوز کو والٹ میں امپورٹ کرنے کے لیے، اور اگر آپ چاہیں تو آئٹمز کو واپس باہر محفوظ کرنے کے لیے۔"
   },
   "priv_s4_li2": {
     "en": "<strong>Camera</strong>: to capture photos/videos directly into the vault, for the in-app camera, and, if you enable it, to capture a photo on a failed unlock attempt (“break-in” capture). Break-in photos are encrypted and stored only on your device; you can view and delete them at any time.",
@@ -507,10 +488,10 @@
     "zh-Hant": "<strong>相機</strong>：直接將照片／影片拍進保險庫（App 內相機），以及在你開啟時，於解鎖失敗時拍下照片（「闖入拍照」）。闖入照片經過加密，只儲存在你的裝置上；你可以隨時查看和刪除。",
     "ru": "<strong>Камера</strong>: чтобы снимать фото/видео прямо в хранилище встроенной камерой и, если вы это включите, делать снимок при неудачной попытке разблокировки («фото при взломе»). Фото при взломе шифруются и хранятся только на вашем устройстве; вы можете просмотреть и удалить их в любое время.",
     "tr": "<strong>Kamera</strong>: uygulama içi kamerayla fotoğraf/videoları doğrudan kasaya çekmek ve açarsanız başarısız bir kilit açma denemesinde fotoğraf çekmek için (“izinsiz giriş fotoğrafı”). İzinsiz giriş fotoğrafları şifrelenir ve yalnızca aygıtınızda saklanır; bunları istediğiniz zaman görüntüleyip silebilirsiniz.",
-    "ar": "<strong>الكاميرا</strong>: لالتقاط الصور والفيديوهات مباشرة داخل الخزنة بالكاميرا المدمجة في التطبيق، ولالتقاط صورة عند فشل محاولة فتح القفل إذا فعّلت ذلك («تصوير الاقتحام»). صور الاقتحام مشفّرة ومخزّنة على جهازك فقط، ويمكنك عرضها وحذفها في أي وقت.",
+    "id": "<strong>Kamera</strong>: untuk mengambil foto/video langsung ke brankas dengan kamera dalam aplikasi, dan, jika Anda mengaktifkannya, untuk mengambil foto saat upaya membuka kunci gagal (“penangkapan pembobolan”). Foto pembobolan dienkripsi dan hanya disimpan di perangkat Anda; Anda dapat melihat dan menghapusnya kapan saja.",
     "hi": "<strong>कैमरा</strong>: ऐप के कैमरे से फ़ोटो/वीडियो सीधे तिजोरी में लेने के लिए, और अगर आप इसे चालू करते हैं, तो अनलॉक की असफल कोशिश पर फ़ोटो लेने के लिए (“ब्रेक-इन कैप्चर”)। ब्रेक-इन फ़ोटो एन्क्रिप्ट होती हैं और सिर्फ़ आपके डिवाइस पर रखी जाती हैं; आप उन्हें कभी भी देख और हटा सकते हैं।",
-    "ur": "<strong>کیمرہ</strong>: ایپ کے کیمرے سے تصاویر/ویڈیوز سیدھے والٹ میں لینے کے لیے، اور اگر آپ اسے آن کریں تو ان لاک کی ناکام کوشش پر تصویر لینے کے لیے (“بریک ان کیپچر”)۔ بریک ان تصاویر انکرپٹ ہوتی ہیں اور صرف آپ کے ڈیوائس پر رکھی جاتی ہیں؛ آپ انہیں کسی بھی وقت دیکھ اور حذف کر سکتے ہیں۔",
-    "id": "<strong>Kamera</strong>: untuk mengambil foto/video langsung ke brankas dengan kamera dalam aplikasi, dan, jika Anda mengaktifkannya, untuk mengambil foto saat upaya membuka kunci gagal (“penangkapan pembobolan”). Foto pembobolan dienkripsi dan hanya disimpan di perangkat Anda; Anda dapat melihat dan menghapusnya kapan saja."
+    "ar": "<strong>الكاميرا</strong>: لالتقاط الصور والفيديوهات مباشرة داخل الخزنة بالكاميرا المدمجة في التطبيق، ولالتقاط صورة عند فشل محاولة فتح القفل إذا فعّلت ذلك («تصوير الاقتحام»). صور الاقتحام مشفّرة ومخزّنة على جهازك فقط، ويمكنك عرضها وحذفها في أي وقت.",
+    "ur": "<strong>کیمرہ</strong>: ایپ کے کیمرے سے تصاویر/ویڈیوز سیدھے والٹ میں لینے کے لیے، اور اگر آپ اسے آن کریں تو ان لاک کی ناکام کوشش پر تصویر لینے کے لیے (“بریک ان کیپچر”)۔ بریک ان تصاویر انکرپٹ ہوتی ہیں اور صرف آپ کے ڈیوائس پر رکھی جاتی ہیں؛ آپ انہیں کسی بھی وقت دیکھ اور حذف کر سکتے ہیں۔"
   },
   "priv_s4_li3": {
     "en": "<strong>Microphone</strong>: to record audio with videos you capture in the app.",
@@ -526,10 +507,10 @@
     "zh-Hant": "<strong>麥克風</strong>：在 App 中拍攝影片時錄製聲音。",
     "ru": "<strong>Микрофон</strong>: чтобы записывать звук для видео, которые вы снимаете в приложении.",
     "tr": "<strong>Mikrofon</strong>: uygulamada çektiğiniz videolarla birlikte ses kaydetmek için.",
-    "ar": "<strong>الميكروفون</strong>: لتسجيل الصوت مع الفيديوهات التي تلتقطها في التطبيق.",
+    "id": "<strong>Mikrofon</strong>: untuk merekam audio pada video yang Anda ambil di aplikasi.",
     "hi": "<strong>माइक्रोफ़ोन</strong>: ऐप में लिए गए वीडियो के साथ ऑडियो रिकॉर्ड करने के लिए।",
-    "ur": "<strong>مائیکروفون</strong>: ایپ میں لی گئی ویڈیوز کے ساتھ آڈیو ریکارڈ کرنے کے لیے۔",
-    "id": "<strong>Mikrofon</strong>: untuk merekam audio pada video yang Anda ambil di aplikasi."
+    "ar": "<strong>الميكروفون</strong>: لتسجيل الصوت مع الفيديوهات التي تلتقطها في التطبيق.",
+    "ur": "<strong>مائیکروفون</strong>: ایپ میں لی گئی ویڈیوز کے ساتھ آڈیو ریکارڈ کرنے کے لیے۔"
   },
   "priv_s4_li4": {
     "en": "<strong>Face ID / Touch ID (biometrics)</strong>: to unlock your vault. Biometric authentication is handled entirely by iOS; Privaro never receives or stores your biometric data.",
@@ -545,10 +526,10 @@
     "zh-Hant": "<strong>Face ID／Touch ID（生物辨識）</strong>：解鎖你的保險庫。生物辨識驗證完全由 iOS 處理；Privaro 永遠不會接收或儲存你的生物辨識資料。",
     "ru": "<strong>Face ID / Touch ID (биометрия)</strong>: чтобы разблокировать хранилище. Биометрическая аутентификация полностью выполняется iOS; Privaro никогда не получает и не хранит ваши биометрические данные.",
     "tr": "<strong>Face ID / Touch ID (biyometri)</strong>: kasanızın kilidini açmak için. Biyometrik kimlik doğrulama tamamen iOS tarafından yapılır; Privaro biyometrik verilerinizi asla almaz veya saklamaz.",
-    "ar": "<strong>Face ID / Touch ID (القياسات الحيوية)</strong>: لفتح خزنتك. تتولى iOS المصادقة البيومترية بالكامل، ولا يتلقّى Privaro بياناتك البيومترية أو يخزّنها أبدًا.",
+    "id": "<strong>Face ID / Touch ID (biometrik)</strong>: untuk membuka kunci brankas Anda. Autentikasi biometrik sepenuhnya ditangani oleh iOS; Privaro tidak pernah menerima atau menyimpan data biometrik Anda.",
     "hi": "<strong>Face ID / Touch ID (बायोमेट्रिक्स)</strong>: आपकी तिजोरी अनलॉक करने के लिए। बायोमेट्रिक प्रमाणीकरण पूरी तरह iOS संभालता है; Privaro कभी भी आपका बायोमेट्रिक डेटा न प्राप्त करता है, न स्टोर करता है।",
-    "ur": "<strong>Face ID / Touch ID (بایومیٹرکس)</strong>: آپ کا والٹ ان لاک کرنے کے لیے۔ بایومیٹرک تصدیق مکمل طور پر iOS سنبھالتا ہے؛ Privaro کبھی آپ کا بایومیٹرک ڈیٹا نہ وصول کرتا ہے اور نہ محفوظ کرتا ہے۔",
-    "id": "<strong>Face ID / Touch ID (biometrik)</strong>: untuk membuka kunci brankas Anda. Autentikasi biometrik sepenuhnya ditangani oleh iOS; Privaro tidak pernah menerima atau menyimpan data biometrik Anda."
+    "ar": "<strong>Face ID / Touch ID (القياسات الحيوية)</strong>: لفتح خزنتك. تتولى iOS المصادقة البيومترية بالكامل، ولا يتلقّى Privaro بياناتك البيومترية أو يخزّنها أبدًا.",
+    "ur": "<strong>Face ID / Touch ID (بایومیٹرکس)</strong>: آپ کا والٹ ان لاک کرنے کے لیے۔ بایومیٹرک تصدیق مکمل طور پر iOS سنبھالتا ہے؛ Privaro کبھی آپ کا بایومیٹرک ڈیٹا نہ وصول کرتا ہے اور نہ محفوظ کرتا ہے۔"
   },
   "priv_s4_li5": {
     "en": "<strong>Location (optional, “Location-Based Lock”)</strong>: if you enable it, your device’s location is checked on your device to decide whether to allow unlocking at places you’ve marked as trusted. Your location is not collected, logged, or transmitted to us.",
@@ -564,10 +545,10 @@
     "zh-Hant": "<strong>位置（選用，「依位置鎖定」）</strong>：如果你開啟此功能，系統會在你的裝置上檢查裝置位置，以決定是否允許在你標示為信任的地點解鎖。你的位置不會被收集、記錄或傳送給我們。",
     "ru": "<strong>Геопозиция (по желанию, «Блокировка по местоположению»)</strong>: если вы её включите, местоположение устройства проверяется на самом устройстве, чтобы решить, разрешать ли разблокировку в местах, отмеченных вами как доверенные. Ваше местоположение не собирается, не записывается и не передаётся нам.",
     "tr": "<strong>Konum (isteğe bağlı, “Konuma Dayalı Kilit”)</strong>: bunu açarsanız, güvenilir olarak işaretlediğiniz yerlerde kilit açmaya izin verilip verilmeyeceğine karar vermek için aygıtınızın konumu aygıtınızda kontrol edilir. Konumunuz toplanmaz, kaydedilmez veya bize iletilmez.",
-    "ar": "<strong>الموقع (اختياري، «القفل حسب الموقع»)</strong>: إذا فعّلته، يُفحص موقع جهازك على جهازك لتحديد ما إذا كان يُسمح بفتح القفل في الأماكن التي حدّدتها كأماكن موثوقة. لا يُجمع موقعك ولا يُسجَّل ولا يُرسل إلينا.",
+    "id": "<strong>Lokasi (opsional, “Kunci Berbasis Lokasi”)</strong>: jika Anda mengaktifkannya, lokasi perangkat Anda diperiksa di perangkat Anda untuk menentukan apakah pembukaan kunci diizinkan di tempat yang telah Anda tandai sebagai tepercaya. Lokasi Anda tidak dikumpulkan, dicatat, atau dikirimkan kepada kami.",
     "hi": "<strong>लोकेशन (वैकल्पिक, “स्थान-आधारित लॉक”)</strong>: अगर आप इसे चालू करते हैं, तो आपके डिवाइस की लोकेशन आपके डिवाइस पर ही जाँची जाती है, ताकि तय हो सके कि आपकी भरोसेमंद चिह्नित जगहों पर अनलॉक करने दिया जाए या नहीं। आपकी लोकेशन न इकट्ठा की जाती है, न दर्ज की जाती है और न हमें भेजी जाती है।",
-    "ur": "<strong>مقام (اختیاری، “مقام پر مبنی تالا”)</strong>: اگر آپ اسے آن کریں، تو آپ کے ڈیوائس کا مقام آپ کے ڈیوائس پر ہی چیک کیا جاتا ہے تاکہ طے ہو سکے کہ آپ کی قابلِ اعتماد نشان زد جگہوں پر ان لاک کی اجازت دی جائے یا نہیں۔ آپ کا مقام نہ جمع کیا جاتا ہے، نہ درج کیا جاتا ہے اور نہ ہمیں بھیجا جاتا ہے۔",
-    "id": "<strong>Lokasi (opsional, “Kunci Berbasis Lokasi”)</strong>: jika Anda mengaktifkannya, lokasi perangkat Anda diperiksa di perangkat Anda untuk menentukan apakah pembukaan kunci diizinkan di tempat yang telah Anda tandai sebagai tepercaya. Lokasi Anda tidak dikumpulkan, dicatat, atau dikirimkan kepada kami."
+    "ar": "<strong>الموقع (اختياري، «القفل حسب الموقع»)</strong>: إذا فعّلته، يُفحص موقع جهازك على جهازك لتحديد ما إذا كان يُسمح بفتح القفل في الأماكن التي حدّدتها كأماكن موثوقة. لا يُجمع موقعك ولا يُسجَّل ولا يُرسل إلينا.",
+    "ur": "<strong>مقام (اختیاری، “مقام پر مبنی تالا”)</strong>: اگر آپ اسے آن کریں، تو آپ کے ڈیوائس کا مقام آپ کے ڈیوائس پر ہی چیک کیا جاتا ہے تاکہ طے ہو سکے کہ آپ کی قابلِ اعتماد نشان زد جگہوں پر ان لاک کی اجازت دی جائے یا نہیں۔ آپ کا مقام نہ جمع کیا جاتا ہے، نہ درج کیا جاتا ہے اور نہ ہمیں بھیجا جاتا ہے۔"
   },
   "priv_s4_li6": {
     "en": "<strong>Local Network</strong>: for the optional Wi-Fi Transfer feature described above.",
@@ -583,10 +564,10 @@
     "zh-Hant": "<strong>區域網路</strong>：用於上述的選用 Wi-Fi 傳輸功能。",
     "ru": "<strong>Локальная сеть</strong>: для необязательной функции передачи по Wi-Fi, описанной выше.",
     "tr": "<strong>Yerel Ağ</strong>: yukarıda açıklanan isteğe bağlı Wi-Fi Aktarımı özelliği için.",
-    "ar": "<strong>الشبكة المحلية</strong>: لميزة النقل عبر Wi-Fi الاختيارية الموضّحة أعلاه.",
+    "id": "<strong>Jaringan Lokal</strong>: untuk fitur Transfer Wi-Fi opsional yang dijelaskan di atas.",
     "hi": "<strong>लोकल नेटवर्क</strong>: ऊपर बताए गए वैकल्पिक वाई-फ़ाई स्थानांतरण फ़ीचर के लिए।",
-    "ur": "<strong>لوکل نیٹ ورک</strong>: اوپر بیان کردہ اختیاری وائی فائی ٹرانسفر فیچر کے لیے۔",
-    "id": "<strong>Jaringan Lokal</strong>: untuk fitur Transfer Wi-Fi opsional yang dijelaskan di atas."
+    "ar": "<strong>الشبكة المحلية</strong>: لميزة النقل عبر Wi-Fi الاختيارية الموضّحة أعلاه.",
+    "ur": "<strong>لوکل نیٹ ورک</strong>: اوپر بیان کردہ اختیاری وائی فائی ٹرانسفر فیچر کے لیے۔"
   },
   "priv_authoritative": {
     "en": "This policy is also available in other languages. In case of any discrepancy, the English version is authoritative.",
@@ -602,48 +583,10 @@
     "zh-Hant": "本政策亦提供其他語言版本。如有出入，以英文版本為準。",
     "ru": "Эта политика также доступна на других языках. В случае расхождений преимущественную силу имеет английская версия.",
     "tr": "Bu politika başka dillerde de mevcuttur. Herhangi bir farklılık durumunda İngilizce sürüm esas alınır.",
-    "ar": "هذه السياسة متاحة أيضًا بلغات أخرى. في حال وجود أي اختلاف، تكون النسخة الإنجليزية هي المعتمدة.",
+    "id": "Kebijakan ini juga tersedia dalam bahasa lain. Jika terdapat perbedaan, versi bahasa Inggris yang berlaku.",
     "hi": "यह नीति दूसरी भाषाओं में भी उपलब्ध है। किसी भी अंतर की स्थिति में अंग्रेज़ी वर्शन ही मान्य होगा।",
-    "ur": "یہ پالیسی دوسری زبانوں میں بھی دستیاب ہے۔ کسی بھی اختلاف کی صورت میں انگریزی ورژن ہی مستند ہوگا۔",
-    "id": "Kebijakan ini juga tersedia dalam bahasa lain. Jika terdapat perbedaan, versi bahasa Inggris yang berlaku."
-  },
-  "priv_rights": {
-    "en": "All rights reserved.",
-    "de": "Alle Rechte vorbehalten.",
-    "nl": "Alle rechten voorbehouden.",
-    "es": "Todos los derechos reservados.",
-    "fr": "Tous droits réservés.",
-    "it": "Tutti i diritti riservati.",
-    "pt-BR": "Todos os direitos reservados.",
-    "ko": "All rights reserved.",
-    "zh-Hans": "保留所有权利。",
-    "ja": "All rights reserved.",
-    "zh-Hant": "保留一切權利。",
-    "ru": "Все права защищены.",
-    "tr": "Tüm hakları saklıdır.",
-    "ar": "جميع الحقوق محفوظة.",
-    "hi": "सर्वाधिकार सुरक्षित।",
-    "ur": "جملہ حقوق محفوظ ہیں۔",
-    "id": "Hak cipta dilindungi undang-undang."
-  },
-  "footer_home": {
-    "en": "Home",
-    "de": "Startseite",
-    "nl": "Start",
-    "es": "Inicio",
-    "fr": "Accueil",
-    "it": "Home",
-    "pt-BR": "Início",
-    "ko": "홈",
-    "zh-Hans": "首页",
-    "ja": "ホーム",
-    "zh-Hant": "首頁",
-    "ru": "Главная",
-    "tr": "Ana sayfa",
-    "ar": "الرئيسية",
-    "hi": "होम",
-    "ur": "ہوم",
-    "id": "Beranda"
+    "ar": "هذه السياسة متاحة أيضًا بلغات أخرى. في حال وجود أي اختلاف، تكون النسخة الإنجليزية هي المعتمدة.",
+    "ur": "یہ پالیسی دوسری زبانوں میں بھی دستیاب ہے۔ کسی بھی اختلاف کی صورت میں انگریزی ورژن ہی مستند ہوگا۔"
   },
   "priv_s5_h": {
     "en": "Purchases (Apple)",
@@ -659,10 +602,10 @@
     "zh-Hant": "購買（Apple）",
     "ru": "Покупки (Apple)",
     "tr": "Satın alımlar (Apple)",
-    "ar": "عمليات الشراء (Apple)",
+    "id": "Pembelian (Apple)",
     "hi": "ख़रीदारी (Apple)",
-    "ur": "خریداریاں (Apple)",
-    "id": "Pembelian (Apple)"
+    "ar": "عمليات الشراء (Apple)",
+    "ur": "خریداریاں (Apple)"
   },
   "priv_s5_p1": {
     "en": "Privaro Pro is sold as a one-time purchase through Apple’s StoreKit / App Store. Apple processes the transaction and your payment; we do not receive your payment details. Purchase status is handled through your Apple Account. See <a href=\"https://www.apple.com/legal/privacy/\">Apple’s Privacy Policy</a>.",
@@ -678,10 +621,10 @@
     "zh-Hant": "Privaro Pro 透過 Apple 的 StoreKit／App Store 以一次性購買方式販售。交易和付款由 Apple 處理；我們不會收到你的付款資訊。購買狀態透過你的 Apple 帳號處理。請參閱 <a href=\"https://www.apple.com/legal/privacy/\">Apple 的隱私權政策</a>。",
     "ru": "Privaro Pro продаётся как разовая покупка через StoreKit / App Store от Apple. Транзакцию и оплату обрабатывает Apple; мы не получаем ваши платёжные данные. Статус покупки обрабатывается через ваш Аккаунт Apple. См. <a href=\"https://www.apple.com/legal/privacy/\">Политику конфиденциальности Apple</a>.",
     "tr": "Privaro Pro, Apple'ın StoreKit / App Store'u aracılığıyla tek seferlik bir satın alım olarak satılır. İşlemi ve ödemenizi Apple gerçekleştirir; ödeme bilgilerinizi almayız. Satın alma durumu Apple Hesabınız üzerinden yönetilir. Bkz. <a href=\"https://www.apple.com/legal/privacy/\">Apple'ın Gizlilik Politikası</a>.",
-    "ar": "يُباع Privaro Pro كعملية شراء لمرة واحدة عبر StoreKit / App Store من Apple. تعالج Apple المعاملة والدفع، ولا نتلقّى تفاصيل الدفع الخاصة بك. تُدار حالة الشراء عبر حساب Apple الخاص بك. راجع <a href=\"https://www.apple.com/legal/privacy/\">سياسة خصوصية Apple</a>.",
+    "id": "Privaro Pro dijual sebagai pembelian satu kali melalui StoreKit / App Store milik Apple. Apple memproses transaksi dan pembayaran Anda; kami tidak menerima detail pembayaran Anda. Status pembelian ditangani melalui Akun Apple Anda. Lihat <a href=\"https://www.apple.com/legal/privacy/\">Kebijakan Privasi Apple</a>.",
     "hi": "Privaro Pro को Apple के StoreKit / App Store के ज़रिए एक बार की ख़रीदारी के रूप में बेचा जाता है। लेन-देन और आपका भुगतान Apple प्रोसेस करता है; हमें आपके भुगतान की जानकारी नहीं मिलती। ख़रीदारी की स्थिति आपके Apple अकाउंट के ज़रिए संभाली जाती है। देखें <a href=\"https://www.apple.com/legal/privacy/\">Apple की गोपनीयता नीति</a>।",
-    "ur": "Privaro Pro کو Apple کے StoreKit / App Store کے ذریعے ایک بار کی خریداری کے طور پر فروخت کیا جاتا ہے۔ لین دین اور آپ کی ادائیگی پر Apple کارروائی کرتا ہے؛ ہمیں آپ کی ادائیگی کی تفصیلات نہیں ملتیں۔ خریداری کی حیثیت آپ کے Apple اکاؤنٹ کے ذریعے سنبھالی جاتی ہے۔ دیکھیں <a href=\"https://www.apple.com/legal/privacy/\">Apple کی رازداری کی پالیسی</a>۔",
-    "id": "Privaro Pro dijual sebagai pembelian satu kali melalui StoreKit / App Store milik Apple. Apple memproses transaksi dan pembayaran Anda; kami tidak menerima detail pembayaran Anda. Status pembelian ditangani melalui Akun Apple Anda. Lihat <a href=\"https://www.apple.com/legal/privacy/\">Kebijakan Privasi Apple</a>."
+    "ar": "يُباع Privaro Pro كعملية شراء لمرة واحدة عبر StoreKit / App Store من Apple. تعالج Apple المعاملة والدفع، ولا نتلقّى تفاصيل الدفع الخاصة بك. تُدار حالة الشراء عبر حساب Apple الخاص بك. راجع <a href=\"https://www.apple.com/legal/privacy/\">سياسة خصوصية Apple</a>.",
+    "ur": "Privaro Pro کو Apple کے StoreKit / App Store کے ذریعے ایک بار کی خریداری کے طور پر فروخت کیا جاتا ہے۔ لین دین اور آپ کی ادائیگی پر Apple کارروائی کرتا ہے؛ ہمیں آپ کی ادائیگی کی تفصیلات نہیں ملتیں۔ خریداری کی حیثیت آپ کے Apple اکاؤنٹ کے ذریعے سنبھالی جاتی ہے۔ دیکھیں <a href=\"https://www.apple.com/legal/privacy/\">Apple کی رازداری کی پالیسی</a>۔"
   },
   "priv_s6_h": {
     "en": "Data retention and deletion",
@@ -697,10 +640,10 @@
     "zh-Hant": "資料保留與刪除",
     "ru": "Хранение и удаление данных",
     "tr": "Verilerin saklanması ve silinmesi",
-    "ar": "الاحتفاظ بالبيانات وحذفها",
+    "id": "Penyimpanan dan penghapusan data",
     "hi": "डेटा रखना और हटाना",
-    "ur": "ڈیٹا کو رکھنا اور حذف کرنا",
-    "id": "Penyimpanan dan penghapusan data"
+    "ar": "الاحتفاظ بالبيانات وحذفها",
+    "ur": "ڈیٹا کو رکھنا اور حذف کرنا"
   },
   "priv_s6_p1": {
     "en": "Your content stays on your device until you delete it. Deleting items moves them to “Recently Deleted,” and they are permanently removed after 30 days (or immediately if you choose). Deleting the app removes its app data; if you enabled iCloud Backup, you can remove that from within the app or via your iCloud storage settings. Because we don’t hold your data, there is nothing for us to delete on our side.",
@@ -716,10 +659,10 @@
     "zh-Hant": "你的內容會留在你的裝置上，直到你將其刪除。刪除的項目會移到「最近刪除」，並在 30 天後永久移除（或依你的選擇立即移除）。刪除 App 會移除其 App 資料；如果你開啟了 iCloud 備份，可以在 App 內或透過 iCloud 儲存空間設定將其移除。由於我們不持有你的資料，我們這邊沒有任何需要刪除的東西。",
     "ru": "Ваш контент остаётся на устройстве, пока вы его не удалите. Удалённые объекты перемещаются в «Недавно удалённые» и безвозвратно удаляются через 30 дней (или сразу, если вы так решите). При удалении приложения удаляются и его данные; если вы включили резервное копирование в iCloud, его можно удалить в самом приложении или в настройках хранилища iCloud. Поскольку мы не храним ваши данные, с нашей стороны удалять нечего.",
     "tr": "İçeriğiniz siz silene kadar aygıtınızda kalır. Silinen öğeler “Son Silinenler”e taşınır ve 30 gün sonra (veya siz seçerseniz hemen) kalıcı olarak kaldırılır. Uygulamayı silmek uygulama verilerini kaldırır; iCloud Yedeklemesi'ni açtıysanız onu uygulama içinden veya iCloud depolama ayarlarınızdan kaldırabilirsiniz. Verilerinizi tutmadığımız için bizim tarafımızda silinecek bir şey yoktur.",
-    "ar": "يبقى محتواك على جهازك إلى أن تحذفه. تنتقل العناصر المحذوفة إلى «المحذوفة مؤخرًا»، وتُزال نهائيًا بعد 30 يومًا (أو فورًا إن اخترت ذلك). يؤدي حذف التطبيق إلى إزالة بياناته، وإذا فعّلت النسخ الاحتياطي على iCloud، يمكنك إزالته من داخل التطبيق أو من إعدادات تخزين iCloud. ولأننا لا نحتفظ ببياناتك، فلا يوجد ما نحذفه من جهتنا.",
+    "id": "Konten Anda tetap berada di perangkat Anda sampai Anda menghapusnya. Item yang dihapus dipindahkan ke “Baru-baru ini Dihapus” dan dihapus secara permanen setelah 30 hari (atau segera jika Anda memilihnya). Menghapus aplikasi akan menghapus data aplikasinya; jika Anda mengaktifkan Cadangan iCloud, Anda dapat menghapusnya dari dalam aplikasi atau melalui pengaturan penyimpanan iCloud. Karena kami tidak menyimpan data Anda, tidak ada yang perlu kami hapus di pihak kami.",
     "hi": "आपका कंटेंट तब तक आपके डिवाइस पर रहता है जब तक आप उसे हटा नहीं देते। हटाए गए आइटम “हाल ही में हटाया गया” में चले जाते हैं, और 30 दिनों बाद (या आप चाहें तो तुरंत) हमेशा के लिए हट जाते हैं। ऐप हटाने से उसका ऐप डेटा हट जाता है; अगर आपने iCloud बैकअप चालू किया था, तो आप उसे ऐप के अंदर से या अपनी iCloud स्टोरेज सेटिंग्स से हटा सकते हैं। क्योंकि आपका डेटा हमारे पास नहीं है, इसलिए हमारी तरफ़ से हटाने के लिए कुछ भी नहीं है।",
-    "ur": "آپ کا مواد اس وقت تک آپ کے ڈیوائس پر رہتا ہے جب تک آپ اسے حذف نہ کریں۔ حذف کیے گئے آئٹمز “حال ہی میں حذف شدہ” میں چلے جاتے ہیں، اور 30 دن کے بعد (یا اگر آپ چاہیں تو فوراً) ہمیشہ کے لیے ہٹا دیے جاتے ہیں۔ ایپ حذف کرنے سے اس کا ڈیٹا ہٹ جاتا ہے؛ اگر آپ نے iCloud بیک اپ آن کیا تھا، تو آپ اسے ایپ کے اندر سے یا اپنی iCloud اسٹوریج کی ترتیبات سے ہٹا سکتے ہیں۔ چونکہ آپ کا ڈیٹا ہمارے پاس نہیں ہے، اس لیے ہماری طرف سے حذف کرنے کو کچھ نہیں ہے۔",
-    "id": "Konten Anda tetap berada di perangkat Anda sampai Anda menghapusnya. Item yang dihapus dipindahkan ke “Baru-baru ini Dihapus” dan dihapus secara permanen setelah 30 hari (atau segera jika Anda memilihnya). Menghapus aplikasi akan menghapus data aplikasinya; jika Anda mengaktifkan Cadangan iCloud, Anda dapat menghapusnya dari dalam aplikasi atau melalui pengaturan penyimpanan iCloud. Karena kami tidak menyimpan data Anda, tidak ada yang perlu kami hapus di pihak kami."
+    "ar": "يبقى محتواك على جهازك إلى أن تحذفه. تنتقل العناصر المحذوفة إلى «المحذوفة مؤخرًا»، وتُزال نهائيًا بعد 30 يومًا (أو فورًا إن اخترت ذلك). يؤدي حذف التطبيق إلى إزالة بياناته، وإذا فعّلت النسخ الاحتياطي على iCloud، يمكنك إزالته من داخل التطبيق أو من إعدادات تخزين iCloud. ولأننا لا نحتفظ ببياناتك، فلا يوجد ما نحذفه من جهتنا.",
+    "ur": "آپ کا مواد اس وقت تک آپ کے ڈیوائس پر رہتا ہے جب تک آپ اسے حذف نہ کریں۔ حذف کیے گئے آئٹمز “حال ہی میں حذف شدہ” میں چلے جاتے ہیں، اور 30 دن کے بعد (یا اگر آپ چاہیں تو فوراً) ہمیشہ کے لیے ہٹا دیے جاتے ہیں۔ ایپ حذف کرنے سے اس کا ڈیٹا ہٹ جاتا ہے؛ اگر آپ نے iCloud بیک اپ آن کیا تھا، تو آپ اسے ایپ کے اندر سے یا اپنی iCloud اسٹوریج کی ترتیبات سے ہٹا سکتے ہیں۔ چونکہ آپ کا ڈیٹا ہمارے پاس نہیں ہے، اس لیے ہماری طرف سے حذف کرنے کو کچھ نہیں ہے۔"
   },
   "priv_s7_h": {
     "en": "Children’s privacy",
@@ -735,10 +678,10 @@
     "zh-Hant": "兒童隱私",
     "ru": "Конфиденциальность детей",
     "tr": "Çocukların gizliliği",
-    "ar": "خصوصية الأطفال",
+    "id": "Privasi anak-anak",
     "hi": "बच्चों की गोपनीयता",
-    "ur": "بچوں کی رازداری",
-    "id": "Privasi anak-anak"
+    "ar": "خصوصية الأطفال",
+    "ur": "بچوں کی رازداری"
   },
   "priv_s7_p1": {
     "en": "Privaro is not directed to children under 13 (or the minimum age required in your country) and we do not knowingly collect personal information from children.",
@@ -754,10 +697,10 @@
     "zh-Hant": "Privaro 並非以未滿 13 歲（或你所在國家規定的最低年齡）的兒童為對象，我們也不會在知情的情況下收集兒童的個人資訊。",
     "ru": "Privaro не предназначен для детей младше 13 лет (или минимального возраста, установленного в вашей стране), и мы сознательно не собираем личную информацию детей.",
     "tr": "Privaro, 13 yaşından küçük (veya ülkenizde öngörülen asgari yaşın altındaki) çocuklara yönelik değildir ve çocuklardan bilerek kişisel bilgi toplamayız.",
-    "ar": "Privaro غير موجّه للأطفال دون 13 عامًا (أو دون الحد الأدنى للسن المطلوب في بلدك)، ولا نجمع عن علم معلومات شخصية من الأطفال.",
+    "id": "Privaro tidak ditujukan untuk anak-anak di bawah 13 tahun (atau usia minimum yang berlaku di negara Anda), dan kami tidak dengan sengaja mengumpulkan informasi pribadi dari anak-anak.",
     "hi": "Privaro 13 साल से कम उम्र के बच्चों (या आपके देश में तय न्यूनतम उम्र से कम) के लिए नहीं है, और हम जानबूझकर बच्चों से कोई निजी जानकारी इकट्ठा नहीं करते।",
-    "ur": "Privaro 13 سال سے کم عمر بچوں (یا آپ کے ملک میں مقررہ کم از کم عمر سے کم) کے لیے نہیں ہے، اور ہم جان بوجھ کر بچوں سے کوئی ذاتی معلومات جمع نہیں کرتے۔",
-    "id": "Privaro tidak ditujukan untuk anak-anak di bawah 13 tahun (atau usia minimum yang berlaku di negara Anda), dan kami tidak dengan sengaja mengumpulkan informasi pribadi dari anak-anak."
+    "ar": "Privaro غير موجّه للأطفال دون 13 عامًا (أو دون الحد الأدنى للسن المطلوب في بلدك)، ولا نجمع عن علم معلومات شخصية من الأطفال.",
+    "ur": "Privaro 13 سال سے کم عمر بچوں (یا آپ کے ملک میں مقررہ کم از کم عمر سے کم) کے لیے نہیں ہے، اور ہم جان بوجھ کر بچوں سے کوئی ذاتی معلومات جمع نہیں کرتے۔"
   },
   "priv_s8_h": {
     "en": "Your rights",
@@ -773,10 +716,10 @@
     "zh-Hant": "你的權利",
     "ru": "Ваши права",
     "tr": "Haklarınız",
-    "ar": "حقوقك",
+    "id": "Hak-hak Anda",
     "hi": "आपके अधिकार",
-    "ur": "آپ کے حقوق",
-    "id": "Hak-hak Anda"
+    "ar": "حقوقك",
+    "ur": "آپ کے حقوق"
   },
   "priv_s8_p1": {
     "en": "Depending on where you live (for example, under the EU/UK GDPR or the California CCPA/CPRA), you may have rights to access, correct, delete, or restrict the processing of your personal information. Because Privaro stores your content only on your device and we do not maintain personal data about you on our servers, you can exercise most of these rights directly by managing or deleting data in the app. For any questions or requests, contact us using the details below.",
@@ -792,10 +735,10 @@
     "zh-Hant": "依你居住的地區而定（例如依據歐盟／英國 GDPR 或加州 CCPA／CPRA），你可能有權存取、更正、刪除你的個人資訊，或限制其處理。由於 Privaro 只將你的內容儲存在你的裝置上，我們也不會在伺服器上保存你的個人資料，你可以直接在 App 中管理或刪除資料來行使大部分權利。如有任何問題或要求，請使用下方的聯絡方式與我們聯絡。",
     "ru": "В зависимости от того, где вы живёте (например, согласно GDPR ЕС/Великобритании или калифорнийским CCPA/CPRA), у вас могут быть права на доступ к вашей личной информации, её исправление, удаление или ограничение её обработки. Поскольку Privaro хранит ваш контент только на вашем устройстве, а мы не храним личные данные о вас на своих серверах, большинство этих прав вы можете осуществить напрямую, управляя данными или удаляя их в приложении. С любыми вопросами или запросами свяжитесь с нами по указанным ниже контактам.",
     "tr": "Yaşadığınız yere bağlı olarak (örneğin AB/Birleşik Krallık GDPR'si veya Kaliforniya CCPA/CPRA kapsamında), kişisel bilgilerinize erişme, bunları düzeltme, silme veya işlenmesini kısıtlama haklarınız olabilir. Privaro içeriğinizi yalnızca aygıtınızda sakladığı ve sunucularımızda sizinle ilgili kişisel veri tutmadığımız için bu hakların çoğunu uygulamada verileri yöneterek veya silerek doğrudan kullanabilirsiniz. Her türlü soru veya talep için aşağıdaki iletişim bilgilerinden bize ulaşın.",
-    "ar": "بحسب مكان إقامتك (مثلًا بموجب اللائحة العامة لحماية البيانات GDPR في الاتحاد الأوروبي والمملكة المتحدة، أو قانونَي CCPA/CPRA في كاليفورنيا)، قد تكون لك حقوق في الوصول إلى معلوماتك الشخصية أو تصحيحها أو حذفها أو تقييد معالجتها. ولأن Privaro يخزّن محتواك على جهازك فقط ولا نحتفظ ببيانات شخصية عنك على خوادمنا، يمكنك ممارسة معظم هذه الحقوق مباشرة بإدارة البيانات أو حذفها في التطبيق. لأي أسئلة أو طلبات، تواصل معنا عبر البيانات أدناه.",
+    "id": "Tergantung tempat tinggal Anda (misalnya, berdasarkan GDPR UE/Inggris atau CCPA/CPRA California), Anda mungkin memiliki hak untuk mengakses, memperbaiki, menghapus, atau membatasi pemrosesan informasi pribadi Anda. Karena Privaro hanya menyimpan konten Anda di perangkat Anda dan kami tidak menyimpan data pribadi tentang Anda di server kami, Anda dapat menggunakan sebagian besar hak ini secara langsung dengan mengelola atau menghapus data di aplikasi. Untuk pertanyaan atau permintaan apa pun, hubungi kami melalui detail di bawah ini.",
     "hi": "आप कहाँ रहते हैं, इसके आधार पर (उदाहरण के लिए, EU/UK GDPR या कैलिफ़ोर्निया CCPA/CPRA के तहत), आपको अपनी निजी जानकारी तक पहुँचने, उसे सुधारने, हटाने या उसकी प्रोसेसिंग सीमित करने का अधिकार हो सकता है। क्योंकि Privaro आपका कंटेंट सिर्फ़ आपके डिवाइस पर रखता है और हम अपने सर्वर पर आपके बारे में कोई निजी डेटा नहीं रखते, आप इनमें से ज़्यादातर अधिकारों का उपयोग सीधे ऐप में डेटा मैनेज करके या हटाकर कर सकते हैं। किसी भी सवाल या अनुरोध के लिए, नीचे दिए गए विवरण पर हमसे संपर्क करें।",
-    "ur": "آپ کہاں رہتے ہیں، اس کے لحاظ سے (مثال کے طور پر EU/UK GDPR یا کیلیفورنیا CCPA/CPRA کے تحت)، آپ کو اپنی ذاتی معلومات تک رسائی، ان کی درستی، انہیں حذف کرنے یا ان پر کارروائی محدود کرنے کے حقوق حاصل ہو سکتے ہیں۔ چونکہ Privaro آپ کا مواد صرف آپ کے ڈیوائس پر رکھتا ہے اور ہم اپنے سرورز پر آپ کے بارے میں کوئی ذاتی ڈیٹا نہیں رکھتے، اس لیے آپ ان میں سے زیادہ تر حقوق براہِ راست ایپ میں ڈیٹا کا انتظام کر کے یا اسے حذف کر کے استعمال کر سکتے ہیں۔ کسی بھی سوال یا درخواست کے لیے نیچے دی گئی تفصیلات پر ہم سے رابطہ کریں۔",
-    "id": "Tergantung tempat tinggal Anda (misalnya, berdasarkan GDPR UE/Inggris atau CCPA/CPRA California), Anda mungkin memiliki hak untuk mengakses, memperbaiki, menghapus, atau membatasi pemrosesan informasi pribadi Anda. Karena Privaro hanya menyimpan konten Anda di perangkat Anda dan kami tidak menyimpan data pribadi tentang Anda di server kami, Anda dapat menggunakan sebagian besar hak ini secara langsung dengan mengelola atau menghapus data di aplikasi. Untuk pertanyaan atau permintaan apa pun, hubungi kami melalui detail di bawah ini."
+    "ar": "بحسب مكان إقامتك (مثلًا بموجب اللائحة العامة لحماية البيانات GDPR في الاتحاد الأوروبي والمملكة المتحدة، أو قانونَي CCPA/CPRA في كاليفورنيا)، قد تكون لك حقوق في الوصول إلى معلوماتك الشخصية أو تصحيحها أو حذفها أو تقييد معالجتها. ولأن Privaro يخزّن محتواك على جهازك فقط ولا نحتفظ ببيانات شخصية عنك على خوادمنا، يمكنك ممارسة معظم هذه الحقوق مباشرة بإدارة البيانات أو حذفها في التطبيق. لأي أسئلة أو طلبات، تواصل معنا عبر البيانات أدناه.",
+    "ur": "آپ کہاں رہتے ہیں، اس کے لحاظ سے (مثال کے طور پر EU/UK GDPR یا کیلیفورنیا CCPA/CPRA کے تحت)، آپ کو اپنی ذاتی معلومات تک رسائی، ان کی درستی، انہیں حذف کرنے یا ان پر کارروائی محدود کرنے کے حقوق حاصل ہو سکتے ہیں۔ چونکہ Privaro آپ کا مواد صرف آپ کے ڈیوائس پر رکھتا ہے اور ہم اپنے سرورز پر آپ کے بارے میں کوئی ذاتی ڈیٹا نہیں رکھتے، اس لیے آپ ان میں سے زیادہ تر حقوق براہِ راست ایپ میں ڈیٹا کا انتظام کر کے یا اسے حذف کر کے استعمال کر سکتے ہیں۔ کسی بھی سوال یا درخواست کے لیے نیچے دی گئی تفصیلات پر ہم سے رابطہ کریں۔"
   },
   "priv_s9_h": {
     "en": "Security",
@@ -811,10 +754,10 @@
     "zh-Hant": "安全性",
     "ru": "Безопасность",
     "tr": "Güvenlik",
-    "ar": "الأمان",
+    "id": "Keamanan",
     "hi": "सुरक्षा",
-    "ur": "سیکیورٹی",
-    "id": "Keamanan"
+    "ar": "الأمان",
+    "ur": "سیکیورٹی"
   },
   "priv_s9_p1": {
     "en": "We use on-device AES-256-GCM encryption, the iOS Keychain for key storage, PBKDF2 passcode hashing, and iOS file protection. No method of storage or transmission is 100% secure, and features like Wi-Fi Transfer that you choose to use have the limitations described above. You are responsible for keeping your passcode and recovery key safe.",
@@ -830,10 +773,10 @@
     "zh-Hant": "我們使用裝置上的 AES-256-GCM 加密、用於儲存金鑰的 iOS 鑰匙圈、PBKDF2 密碼雜湊，以及 iOS 檔案保護。沒有任何儲存或傳輸方式是百分之百安全的，而你選擇使用的功能（例如 Wi-Fi 傳輸）具有上述的限制。你有責任妥善保管你的密碼和復原密鑰。",
     "ru": "Мы используем шифрование AES-256-GCM на устройстве, связку ключей iOS для хранения ключей, хеширование код-пароля PBKDF2 и защиту файлов iOS. Ни один способ хранения или передачи не является на 100% безопасным, а у функций, которые вы решите использовать, например передачи по Wi-Fi, есть описанные выше ограничения. Вы несёте ответственность за сохранность своего код-пароля и ключа восстановления.",
     "tr": "Aygıt üzerinde AES-256-GCM şifrelemesi, anahtar depolama için iOS Anahtar Zinciri, PBKDF2 parola özetleme ve iOS dosya koruması kullanırız. Hiçbir depolama veya iletim yöntemi %100 güvenli değildir ve Wi-Fi Aktarımı gibi kullanmayı seçtiğiniz özelliklerin yukarıda açıklanan sınırlamaları vardır. Parolanızı ve kurtarma anahtarınızı güvende tutmak sizin sorumluluğunuzdadır.",
-    "ar": "نستخدم تشفير AES-256-GCM على الجهاز، وسلسلة مفاتيح iOS لتخزين المفاتيح، وتجزئة رمز الدخول بـ PBKDF2، وحماية الملفات في iOS. لا توجد وسيلة تخزين أو نقل آمنة بنسبة 100%، وللميزات التي تختار استخدامها، مثل النقل عبر Wi-Fi، القيود الموضّحة أعلاه. أنت مسؤول عن الحفاظ على رمز الدخول ومفتاح الاسترداد في مأمن.",
+    "id": "Kami menggunakan enkripsi AES-256-GCM di perangkat, Rantai Kunci iOS untuk penyimpanan kunci, hashing kode sandi PBKDF2, dan perlindungan file iOS. Tidak ada metode penyimpanan atau transmisi yang 100% aman, dan fitur yang Anda pilih untuk digunakan, seperti Transfer Wi-Fi, memiliki keterbatasan yang dijelaskan di atas. Anda bertanggung jawab untuk menjaga keamanan kode sandi dan kunci pemulihan Anda.",
     "hi": "हम डिवाइस पर AES-256-GCM एन्क्रिप्शन, कुंजी रखने के लिए iOS कीचेन, PBKDF2 पासकोड हैशिंग और iOS फ़ाइल सुरक्षा का उपयोग करते हैं। स्टोरेज या ट्रांसमिशन का कोई भी तरीका 100% सुरक्षित नहीं होता, और वाई-फ़ाई स्थानांतरण जैसे जिन फ़ीचर का आप उपयोग करना चुनते हैं, उनकी ऊपर बताई गई सीमाएँ हैं। अपना पासकोड और रिकवरी कुंजी सुरक्षित रखना आपकी ज़िम्मेदारी है।",
-    "ur": "ہم ڈیوائس پر AES-256-GCM انکرپشن، کلید رکھنے کے لیے iOS کی چین، PBKDF2 پاس کوڈ ہیشنگ اور iOS فائل تحفظ استعمال کرتے ہیں۔ اسٹوریج یا ترسیل کا کوئی بھی طریقہ 100% محفوظ نہیں ہوتا، اور وائی فائی ٹرانسفر جیسے جن فیچرز کو آپ استعمال کرنے کا انتخاب کرتے ہیں، ان کی اوپر بیان کردہ حدود ہیں۔ اپنا پاس کوڈ اور ریکوری کلید محفوظ رکھنا آپ کی ذمہ داری ہے۔",
-    "id": "Kami menggunakan enkripsi AES-256-GCM di perangkat, Rantai Kunci iOS untuk penyimpanan kunci, hashing kode sandi PBKDF2, dan perlindungan file iOS. Tidak ada metode penyimpanan atau transmisi yang 100% aman, dan fitur yang Anda pilih untuk digunakan, seperti Transfer Wi-Fi, memiliki keterbatasan yang dijelaskan di atas. Anda bertanggung jawab untuk menjaga keamanan kode sandi dan kunci pemulihan Anda."
+    "ar": "نستخدم تشفير AES-256-GCM على الجهاز، وسلسلة مفاتيح iOS لتخزين المفاتيح، وتجزئة رمز الدخول بـ PBKDF2، وحماية الملفات في iOS. لا توجد وسيلة تخزين أو نقل آمنة بنسبة 100%، وللميزات التي تختار استخدامها، مثل النقل عبر Wi-Fi، القيود الموضّحة أعلاه. أنت مسؤول عن الحفاظ على رمز الدخول ومفتاح الاسترداد في مأمن.",
+    "ur": "ہم ڈیوائس پر AES-256-GCM انکرپشن، کلید رکھنے کے لیے iOS کی چین، PBKDF2 پاس کوڈ ہیشنگ اور iOS فائل تحفظ استعمال کرتے ہیں۔ اسٹوریج یا ترسیل کا کوئی بھی طریقہ 100% محفوظ نہیں ہوتا، اور وائی فائی ٹرانسفر جیسے جن فیچرز کو آپ استعمال کرنے کا انتخاب کرتے ہیں، ان کی اوپر بیان کردہ حدود ہیں۔ اپنا پاس کوڈ اور ریکوری کلید محفوظ رکھنا آپ کی ذمہ داری ہے۔"
   },
   "priv_s10_h": {
     "en": "Changes to this policy",
@@ -849,10 +792,10 @@
     "zh-Hant": "本政策的變更",
     "ru": "Изменения этой политики",
     "tr": "Bu politikadaki değişiklikler",
-    "ar": "التغييرات على هذه السياسة",
+    "id": "Perubahan pada kebijakan ini",
     "hi": "इस नीति में बदलाव",
-    "ur": "اس پالیسی میں تبدیلیاں",
-    "id": "Perubahan pada kebijakan ini"
+    "ar": "التغييرات على هذه السياسة",
+    "ur": "اس پالیسی میں تبدیلیاں"
   },
   "priv_s10_p1": {
     "en": "We may update this Privacy Policy from time to time. We’ll revise the “Last updated” date above, and significant changes will be reflected in the app or on our website.",
@@ -868,10 +811,10 @@
     "zh-Hant": "我們可能會不時更新本隱私權政策。屆時我們會修改上方的「最後更新」日期，重大變更會在 App 中或我們的網站上說明。",
     "ru": "Мы можем время от времени обновлять эту Политику конфиденциальности. Мы изменим дату «Последнее обновление» выше, а о существенных изменениях сообщим в приложении или на нашем сайте.",
     "tr": "Bu Gizlilik Politikası'nı zaman zaman güncelleyebiliriz. Yukarıdaki “Son güncelleme” tarihini değiştiririz ve önemli değişiklikleri uygulamada veya web sitemizde belirtiriz.",
-    "ar": "قد نحدّث سياسة الخصوصية هذه من حين لآخر. سنعدّل تاريخ «آخر تحديث» أعلاه، وستظهر التغييرات المهمة في التطبيق أو على موقعنا.",
+    "id": "Kami dapat memperbarui Kebijakan Privasi ini dari waktu ke waktu. Kami akan merevisi tanggal “Terakhir diperbarui” di atas, dan perubahan penting akan ditampilkan di aplikasi atau di situs web kami.",
     "hi": "हम समय-समय पर इस गोपनीयता नीति को अपडेट कर सकते हैं। हम ऊपर दी गई “अंतिम अपडेट” तिथि बदल देंगे, और बड़े बदलावों की जानकारी ऐप में या हमारी वेबसाइट पर दी जाएगी।",
-    "ur": "ہم وقتاً فوقتاً اس رازداری کی پالیسی کو اپ ڈیٹ کر سکتے ہیں۔ ہم اوپر دی گئی “آخری اپ ڈیٹ” کی تاریخ بدل دیں گے، اور اہم تبدیلیاں ایپ میں یا ہماری ویب سائٹ پر ظاہر کی جائیں گی۔",
-    "id": "Kami dapat memperbarui Kebijakan Privasi ini dari waktu ke waktu. Kami akan merevisi tanggal “Terakhir diperbarui” di atas, dan perubahan penting akan ditampilkan di aplikasi atau di situs web kami."
+    "ar": "قد نحدّث سياسة الخصوصية هذه من حين لآخر. سنعدّل تاريخ «آخر تحديث» أعلاه، وستظهر التغييرات المهمة في التطبيق أو على موقعنا.",
+    "ur": "ہم وقتاً فوقتاً اس رازداری کی پالیسی کو اپ ڈیٹ کر سکتے ہیں۔ ہم اوپر دی گئی “آخری اپ ڈیٹ” کی تاریخ بدل دیں گے، اور اہم تبدیلیاں ایپ میں یا ہماری ویب سائٹ پر ظاہر کی جائیں گی۔"
   },
   "priv_s11_h": {
     "en": "Contact us",
@@ -887,10 +830,10 @@
     "zh-Hant": "聯絡我們",
     "ru": "Свяжитесь с нами",
     "tr": "Bize ulaşın",
-    "ar": "تواصل معنا",
+    "id": "Hubungi kami",
     "hi": "हमसे संपर्क करें",
-    "ur": "ہم سے رابطہ کریں",
-    "id": "Hubungi kami"
+    "ar": "تواصل معنا",
+    "ur": "ہم سے رابطہ کریں"
   },
   "priv_s11_p1": {
     "en": "If you have questions about this Privacy Policy or your privacy, contact us at:",
@@ -906,9 +849,9 @@
     "zh-Hant": "如果你對本隱私權政策或你的隱私有任何疑問，請透過以下方式聯絡我們：",
     "ru": "Если у вас есть вопросы об этой Политике конфиденциальности или о вашей конфиденциальности, напишите нам:",
     "tr": "Bu Gizlilik Politikası veya gizliliğiniz hakkında sorularınız varsa bize şu adresten ulaşın:",
-    "ar": "إذا كانت لديك أسئلة حول سياسة الخصوصية هذه أو حول خصوصيتك، فتواصل معنا على:",
+    "id": "Jika Anda memiliki pertanyaan tentang Kebijakan Privasi ini atau privasi Anda, hubungi kami di:",
     "hi": "अगर इस गोपनीयता नीति या आपकी गोपनीयता के बारे में आपका कोई सवाल है, तो हमसे यहाँ संपर्क करें:",
-    "ur": "اگر اس رازداری کی پالیسی یا آپ کی رازداری کے بارے میں آپ کے کوئی سوالات ہیں، تو ہم سے یہاں رابطہ کریں:",
-    "id": "Jika Anda memiliki pertanyaan tentang Kebijakan Privasi ini atau privasi Anda, hubungi kami di:"
+    "ar": "إذا كانت لديك أسئلة حول سياسة الخصوصية هذه أو حول خصوصيتك، فتواصل معنا على:",
+    "ur": "اگر اس رازداری کی پالیسی یا آپ کی رازداری کے بارے میں آپ کے کوئی سوالات ہیں، تو ہم سے یہاں رابطہ کریں:"
   }
 }

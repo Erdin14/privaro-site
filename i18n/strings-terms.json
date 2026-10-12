@@ -13,10 +13,10 @@
     "zh-Hant": "使用條款 · Privaro",
     "ru": "Условия использования · Privaro",
     "tr": "Kullanım Koşulları · Privaro",
-    "ar": "شروط الاستخدام · Privaro",
+    "id": "Ketentuan Penggunaan · Privaro",
     "hi": "उपयोग की शर्तें · Privaro",
-    "ur": "استعمال کی شرائط · Privaro",
-    "id": "Ketentuan Penggunaan · Privaro"
+    "ar": "شروط الاستخدام · Privaro",
+    "ur": "استعمال کی شرائط · Privaro"
   },
   "meta_desc_terms": {
     "en": "The terms that govern your use of Privaro, including what happens if you lose your passcode and recovery key.",
@@ -32,10 +32,10 @@
     "zh-Hant": "規範你使用 Privaro 的條款，包括遺失密碼和復原密鑰時會發生什麼事。",
     "ru": "Условия, регулирующие использование Privaro, в том числе что происходит, если вы потеряете код-пароль и ключ восстановления.",
     "tr": "Parolanızı ve kurtarma anahtarınızı kaybederseniz ne olacağı da dahil olmak üzere Privaro kullanımınızı düzenleyen koşullar.",
-    "ar": "الشروط التي تحكم استخدامك لـ Privaro، بما في ذلك ما يحدث إذا فقدت رمز الدخول ومفتاح الاسترداد.",
+    "id": "Ketentuan yang mengatur penggunaan Privaro oleh Anda, termasuk apa yang terjadi jika Anda kehilangan kode sandi dan kunci pemulihan.",
     "hi": "Privaro के आपके उपयोग पर लागू होने वाली शर्तें, जिनमें यह भी शामिल है कि पासकोड और रिकवरी कुंजी खो जाने पर क्या होता है।",
-    "ur": "وہ شرائط جو Privaro کے آپ کے استعمال پر لاگو ہوتی ہیں، بشمول یہ کہ پاس کوڈ اور ریکوری کلید کھو جانے پر کیا ہوتا ہے۔",
-    "id": "Ketentuan yang mengatur penggunaan Privaro oleh Anda, termasuk apa yang terjadi jika Anda kehilangan kode sandi dan kunci pemulihan."
+    "ar": "الشروط التي تحكم استخدامك لـ Privaro، بما في ذلك ما يحدث إذا فقدت رمز الدخول ومفتاح الاسترداد.",
+    "ur": "وہ شرائط جو Privaro کے آپ کے استعمال پر لاگو ہوتی ہیں، بشمول یہ کہ پاس کوڈ اور ریکوری کلید کھو جانے پر کیا ہوتا ہے۔"
   },
   "terms_h1": {
     "en": "Terms of Use",
@@ -51,10 +51,10 @@
     "zh-Hant": "使用條款",
     "ru": "Условия использования",
     "tr": "Kullanım Koşulları",
-    "ar": "شروط الاستخدام",
+    "id": "Ketentuan Penggunaan",
     "hi": "उपयोग की शर्तें",
-    "ur": "استعمال کی شرائط",
-    "id": "Ketentuan Penggunaan"
+    "ar": "شروط الاستخدام",
+    "ur": "استعمال کی شرائط"
   },
   "terms_intro": {
     "en": "These Terms of Use (\"Terms\") govern your use of the Privaro app (\"Privaro,\" \"the app\") provided by Erdinc Zarbo (\"we,\" \"us,\" or \"our\"). By downloading or using Privaro, you agree to these Terms. If you do not agree, please do not use the app.",
@@ -70,10 +70,10 @@
     "zh-Hant": "本使用條款（「條款」）規範你對由 Erdinc Zarbo（「我們」）提供的 Privaro App（「Privaro」、「本 App」）的使用。下載或使用 Privaro 即表示你同意本條款。若你不同意，請勿使用本 App。",
     "ru": "Настоящие Условия использования («Условия») регулируют использование вами приложения Privaro («Privaro», «приложение»), предоставляемого Erdinc Zarbo («мы», «нас» или «наш»). Загружая или используя Privaro, вы соглашаетесь с этими Условиями. Если вы не согласны, пожалуйста, не используйте приложение.",
     "tr": "Bu Kullanım Koşulları (“Koşullar”), Erdinc Zarbo (“biz”, “bize” veya “bizim”) tarafından sunulan Privaro uygulamasını (“Privaro”, “uygulama”) kullanımınızı düzenler. Privaro'yu indirerek veya kullanarak bu Koşulları kabul etmiş olursunuz. Kabul etmiyorsanız lütfen uygulamayı kullanmayın.",
-    "ar": "تحكم شروط الاستخدام هذه («الشروط») استخدامك لتطبيق Privaro ‏(«Privaro» أو «التطبيق») الذي يقدّمه Erdinc Zarbo ‏(«نحن» أو «لنا»). بتنزيل Privaro أو استخدامه، فإنك توافق على هذه الشروط. إذا كنت لا توافق، فيُرجى عدم استخدام التطبيق.",
+    "id": "Ketentuan Penggunaan ini (“Ketentuan”) mengatur penggunaan Anda atas aplikasi Privaro (“Privaro”, “aplikasi”) yang disediakan oleh Erdinc Zarbo (“kami” atau “milik kami”). Dengan mengunduh atau menggunakan Privaro, Anda menyetujui Ketentuan ini. Jika Anda tidak setuju, harap jangan gunakan aplikasi ini.",
     "hi": "ये उपयोग की शर्तें (“शर्तें”) Erdinc Zarbo (“हम,” “हमें” या “हमारा”) द्वारा उपलब्ध कराए गए Privaro ऐप (“Privaro,” “ऐप”) के आपके उपयोग पर लागू होती हैं। Privaro डाउनलोड या उपयोग करके, आप इन शर्तों से सहमत होते हैं। अगर आप सहमत नहीं हैं, तो कृपया ऐप का उपयोग न करें।",
-    "ur": "یہ استعمال کی شرائط (“شرائط”) Erdinc Zarbo (“ہم”، “ہمیں” یا “ہمارا”) کی فراہم کردہ Privaro ایپ (“Privaro”، “ایپ”) کے آپ کے استعمال پر لاگو ہوتی ہیں۔ Privaro ڈاؤن لوڈ یا استعمال کر کے آپ ان شرائط سے اتفاق کرتے ہیں۔ اگر آپ متفق نہیں ہیں، تو براہِ کرم ایپ استعمال نہ کریں۔",
-    "id": "Ketentuan Penggunaan ini (“Ketentuan”) mengatur penggunaan Anda atas aplikasi Privaro (“Privaro”, “aplikasi”) yang disediakan oleh Erdinc Zarbo (“kami” atau “milik kami”). Dengan mengunduh atau menggunakan Privaro, Anda menyetujui Ketentuan ini. Jika Anda tidak setuju, harap jangan gunakan aplikasi ini."
+    "ar": "تحكم شروط الاستخدام هذه («الشروط») استخدامك لتطبيق Privaro ‏(«Privaro» أو «التطبيق») الذي يقدّمه Erdinc Zarbo ‏(«نحن» أو «لنا»). بتنزيل Privaro أو استخدامه، فإنك توافق على هذه الشروط. إذا كنت لا توافق، فيُرجى عدم استخدام التطبيق.",
+    "ur": "یہ استعمال کی شرائط (“شرائط”) Erdinc Zarbo (“ہم”، “ہمیں” یا “ہمارا”) کی فراہم کردہ Privaro ایپ (“Privaro”، “ایپ”) کے آپ کے استعمال پر لاگو ہوتی ہیں۔ Privaro ڈاؤن لوڈ یا استعمال کر کے آپ ان شرائط سے اتفاق کرتے ہیں۔ اگر آپ متفق نہیں ہیں، تو براہِ کرم ایپ استعمال نہ کریں۔"
   },
   "terms_callout_label": {
     "en": "Please read this carefully.",
@@ -89,10 +89,10 @@
     "zh-Hant": "請仔細閱讀。",
     "ru": "Пожалуйста, прочитайте внимательно.",
     "tr": "Lütfen dikkatlice okuyun.",
-    "ar": "يُرجى قراءة ما يلي بعناية.",
+    "id": "Harap baca dengan saksama.",
     "hi": "कृपया इसे ध्यान से पढ़ें।",
-    "ur": "براہِ کرم اسے غور سے پڑھیں۔",
-    "id": "Harap baca dengan saksama."
+    "ar": "يُرجى قراءة ما يلي بعناية.",
+    "ur": "براہِ کرم اسے غور سے پڑھیں۔"
   },
   "terms_callout_body": {
     "en": "Privaro encrypts your content on your device with a key only you control. This means that if you lose your passcode and your recovery key, <strong>no one, including us, can recover your data.</strong> Privaro also includes features that permanently erase data on purpose. You are responsible for keeping your passcode and recovery key safe, for how you configure the app, and for maintaining your own backups.",
@@ -108,10 +108,10 @@
     "zh-Hant": "Privaro 會用只有你能控制的金鑰，在你的裝置上加密你的內容。這表示如果你遺失了密碼和復原密鑰，<strong>沒有人（包括我們）能復原你的資料。</strong>Privaro 也包含刻意永久清除資料的功能。你有責任妥善保管你的密碼和復原密鑰、決定如何設定本 App，並自行維護備份。",
     "ru": "Privaro шифрует ваш контент на устройстве ключом, который контролируете только вы. Это значит, что если вы потеряете код-пароль и ключ восстановления, <strong>никто, включая нас, не сможет восстановить ваши данные.</strong> Кроме того, в Privaro есть функции, которые намеренно и безвозвратно стирают данные. Вы несёте ответственность за сохранность код-пароля и ключа восстановления, за то, как вы настраиваете приложение, и за создание собственных резервных копий.",
     "tr": "Privaro, içeriğinizi aygıtınızda yalnızca sizin kontrol ettiğiniz bir anahtarla şifreler. Bu, parolanızı ve kurtarma anahtarınızı kaybederseniz <strong>biz dahil hiç kimsenin verilerinizi kurtaramayacağı</strong> anlamına gelir. Privaro ayrıca verileri bilerek kalıcı olarak silen özellikler içerir. Parolanızı ve kurtarma anahtarınızı güvende tutmaktan, uygulamayı nasıl yapılandırdığınızdan ve kendi yedeklerinizi almaktan siz sorumlusunuz.",
-    "ar": "يشفّر Privaro محتواك على جهازك بمفتاح تتحكم فيه أنت وحدك. وهذا يعني أنك إذا فقدت رمز الدخول ومفتاح الاسترداد، <strong>فلن يتمكن أحد، بما في ذلك نحن، من استرداد بياناتك.</strong> ويتضمن Privaro أيضًا ميزات تمسح البيانات نهائيًا عن قصد. أنت مسؤول عن الحفاظ على رمز الدخول ومفتاح الاسترداد في مأمن، وعن طريقة إعدادك للتطبيق، وعن الاحتفاظ بنسخك الاحتياطية.",
+    "id": "Privaro mengenkripsi konten Anda di perangkat Anda dengan kunci yang hanya Anda kendalikan. Artinya, jika Anda kehilangan kode sandi dan kunci pemulihan, <strong>tidak ada seorang pun, termasuk kami, yang dapat memulihkan data Anda.</strong> Privaro juga menyertakan fitur yang dengan sengaja menghapus data secara permanen. Anda bertanggung jawab untuk menjaga keamanan kode sandi dan kunci pemulihan, atas cara Anda mengonfigurasi aplikasi, dan untuk memelihara cadangan Anda sendiri.",
     "hi": "Privaro आपके कंटेंट को आपके डिवाइस पर एक ऐसी कुंजी से एन्क्रिप्ट करता है जिस पर सिर्फ़ आपका नियंत्रण है। इसका मतलब है कि अगर आप अपना पासकोड और रिकवरी कुंजी खो देते हैं, तो <strong>हमारे सहित कोई भी आपका डेटा रिकवर नहीं कर सकता।</strong> Privaro में ऐसे फ़ीचर भी हैं जो जानबूझकर डेटा को हमेशा के लिए मिटा देते हैं। अपना पासकोड और रिकवरी कुंजी सुरक्षित रखना, ऐप को कैसे कॉन्फ़िगर करना है यह तय करना, और अपने बैकअप बनाए रखना आपकी ज़िम्मेदारी है।",
-    "ur": "Privaro آپ کے مواد کو آپ کے ڈیوائس پر ایک ایسی کلید سے انکرپٹ کرتا ہے جس پر صرف آپ کا کنٹرول ہے۔ اس کا مطلب ہے کہ اگر آپ اپنا پاس کوڈ اور ریکوری کلید کھو دیں، تو <strong>ہمارے سمیت کوئی بھی آپ کا ڈیٹا بحال نہیں کر سکتا۔</strong> Privaro میں ایسے فیچرز بھی ہیں جو جان بوجھ کر ڈیٹا کو ہمیشہ کے لیے مٹا دیتے ہیں۔ اپنا پاس کوڈ اور ریکوری کلید محفوظ رکھنا، ایپ کو کیسے کنفیگر کرنا ہے یہ طے کرنا، اور اپنے بیک اپ رکھنا آپ کی ذمہ داری ہے۔",
-    "id": "Privaro mengenkripsi konten Anda di perangkat Anda dengan kunci yang hanya Anda kendalikan. Artinya, jika Anda kehilangan kode sandi dan kunci pemulihan, <strong>tidak ada seorang pun, termasuk kami, yang dapat memulihkan data Anda.</strong> Privaro juga menyertakan fitur yang dengan sengaja menghapus data secara permanen. Anda bertanggung jawab untuk menjaga keamanan kode sandi dan kunci pemulihan, atas cara Anda mengonfigurasi aplikasi, dan untuk memelihara cadangan Anda sendiri."
+    "ar": "يشفّر Privaro محتواك على جهازك بمفتاح تتحكم فيه أنت وحدك. وهذا يعني أنك إذا فقدت رمز الدخول ومفتاح الاسترداد، <strong>فلن يتمكن أحد، بما في ذلك نحن، من استرداد بياناتك.</strong> ويتضمن Privaro أيضًا ميزات تمسح البيانات نهائيًا عن قصد. أنت مسؤول عن الحفاظ على رمز الدخول ومفتاح الاسترداد في مأمن، وعن طريقة إعدادك للتطبيق، وعن الاحتفاظ بنسخك الاحتياطية.",
+    "ur": "Privaro آپ کے مواد کو آپ کے ڈیوائس پر ایک ایسی کلید سے انکرپٹ کرتا ہے جس پر صرف آپ کا کنٹرول ہے۔ اس کا مطلب ہے کہ اگر آپ اپنا پاس کوڈ اور ریکوری کلید کھو دیں، تو <strong>ہمارے سمیت کوئی بھی آپ کا ڈیٹا بحال نہیں کر سکتا۔</strong> Privaro میں ایسے فیچرز بھی ہیں جو جان بوجھ کر ڈیٹا کو ہمیشہ کے لیے مٹا دیتے ہیں۔ اپنا پاس کوڈ اور ریکوری کلید محفوظ رکھنا، ایپ کو کیسے کنفیگر کرنا ہے یہ طے کرنا، اور اپنے بیک اپ رکھنا آپ کی ذمہ داری ہے۔"
   },
   "terms_s1_h": {
     "en": "License",
@@ -127,10 +127,10 @@
     "zh-Hant": "授權",
     "ru": "Лицензия",
     "tr": "Lisans",
-    "ar": "الترخيص",
+    "id": "Lisensi",
     "hi": "लाइसेंस",
-    "ur": "لائسنس",
-    "id": "Lisensi"
+    "ar": "الترخيص",
+    "ur": "لائسنس"
   },
   "terms_s1_p1": {
     "en": "We grant you a personal, non-exclusive, non-transferable, revocable license to use Privaro on Apple devices that you own or control, in accordance with these Terms and the Apple App Store Terms of Service. You may not copy, modify, reverse-engineer, decompile, sell, sublicense, or distribute the app except as permitted by law.",
@@ -146,10 +146,10 @@
     "zh-Hant": "我們依據本條款及 Apple App Store 服務條款，授予你個人、非專屬、不可轉讓、可撤銷的授權，讓你在你擁有或控制的 Apple 裝置上使用 Privaro。除法律允許的範圍外，你不得複製、修改、反向工程、反編譯、出售、再授權或散布本 App。",
     "ru": "Мы предоставляем вам личную, неисключительную, непередаваемую и отзывную лицензию на использование Privaro на устройствах Apple, которыми вы владеете или которые контролируете, в соответствии с настоящими Условиями и Условиями обслуживания Apple App Store. Вы не вправе копировать, изменять, подвергать обратной разработке, декомпилировать, продавать, сублицензировать или распространять приложение, кроме случаев, разрешённых законом.",
     "tr": "Size, bu Koşullar ve Apple App Store Hizmet Koşulları uyarınca, sahip olduğunuz veya kontrol ettiğiniz Apple aygıtlarında Privaro'yu kullanmanız için kişisel, münhasır olmayan, devredilemez ve geri alınabilir bir lisans veririz. Yasaların izin verdiği durumlar dışında uygulamayı kopyalayamaz, değiştiremez, tersine mühendislik uygulayamaz, kaynak koda dönüştüremez, satamaz, alt lisanslayamaz veya dağıtamazsınız.",
-    "ar": "نمنحك ترخيصًا شخصيًا وغير حصري وغير قابل للنقل وقابلًا للإلغاء لاستخدام Privaro على أجهزة Apple التي تملكها أو تتحكم فيها، وفقًا لهذه الشروط ولشروط خدمة Apple App Store. لا يجوز لك نسخ التطبيق أو تعديله أو إجراء هندسة عكسية له أو تفكيكه أو بيعه أو منح تراخيص فرعية له أو توزيعه، إلا في الحدود التي يسمح بها القانون.",
+    "id": "Kami memberi Anda lisensi pribadi, noneksklusif, tidak dapat dialihkan, dan dapat dicabut untuk menggunakan Privaro di perangkat Apple yang Anda miliki atau kendalikan, sesuai dengan Ketentuan ini dan Ketentuan Layanan Apple App Store. Anda tidak boleh menyalin, memodifikasi, merekayasa balik, mendekompilasi, menjual, mensublisensikan, atau mendistribusikan aplikasi kecuali sebagaimana diizinkan oleh hukum.",
     "hi": "हम आपको इन शर्तों और Apple App Store की सेवा की शर्तों के अनुसार, आपके स्वामित्व या नियंत्रण वाले Apple डिवाइस पर Privaro का उपयोग करने के लिए एक व्यक्तिगत, गैर-अनन्य, अहस्तांतरणीय और रद्द किए जा सकने वाला लाइसेंस देते हैं। क़ानून द्वारा अनुमत स्थिति को छोड़कर, आप ऐप की नक़ल, संशोधन, रिवर्स-इंजीनियरिंग, डीकंपाइल, बिक्री, सबलाइसेंस या वितरण नहीं कर सकते।",
-    "ur": "ہم آپ کو ان شرائط اور Apple App Store کی سروس کی شرائط کے مطابق، آپ کی ملکیت یا کنٹرول والے Apple ڈیوائسز پر Privaro استعمال کرنے کے لیے ایک ذاتی، غیر خصوصی، ناقابلِ منتقلی اور قابلِ تنسیخ لائسنس دیتے ہیں۔ قانون کی اجازت کے علاوہ، آپ ایپ کی نقل، ترمیم، ریورس انجینئرنگ، ڈی کمپائل، فروخت، ذیلی لائسنس یا تقسیم نہیں کر سکتے۔",
-    "id": "Kami memberi Anda lisensi pribadi, noneksklusif, tidak dapat dialihkan, dan dapat dicabut untuk menggunakan Privaro di perangkat Apple yang Anda miliki atau kendalikan, sesuai dengan Ketentuan ini dan Ketentuan Layanan Apple App Store. Anda tidak boleh menyalin, memodifikasi, merekayasa balik, mendekompilasi, menjual, mensublisensikan, atau mendistribusikan aplikasi kecuali sebagaimana diizinkan oleh hukum."
+    "ar": "نمنحك ترخيصًا شخصيًا وغير حصري وغير قابل للنقل وقابلًا للإلغاء لاستخدام Privaro على أجهزة Apple التي تملكها أو تتحكم فيها، وفقًا لهذه الشروط ولشروط خدمة Apple App Store. لا يجوز لك نسخ التطبيق أو تعديله أو إجراء هندسة عكسية له أو تفكيكه أو بيعه أو منح تراخيص فرعية له أو توزيعه، إلا في الحدود التي يسمح بها القانون.",
+    "ur": "ہم آپ کو ان شرائط اور Apple App Store کی سروس کی شرائط کے مطابق، آپ کی ملکیت یا کنٹرول والے Apple ڈیوائسز پر Privaro استعمال کرنے کے لیے ایک ذاتی، غیر خصوصی، ناقابلِ منتقلی اور قابلِ تنسیخ لائسنس دیتے ہیں۔ قانون کی اجازت کے علاوہ، آپ ایپ کی نقل، ترمیم، ریورس انجینئرنگ، ڈی کمپائل، فروخت، ذیلی لائسنس یا تقسیم نہیں کر سکتے۔"
   },
   "terms_s2_h": {
     "en": "Your responsibilities",
@@ -165,10 +165,10 @@
     "zh-Hant": "你的責任",
     "ru": "Ваши обязанности",
     "tr": "Sorumluluklarınız",
-    "ar": "مسؤولياتك",
+    "id": "Tanggung jawab Anda",
     "hi": "आपकी ज़िम्मेदारियाँ",
-    "ur": "آپ کی ذمہ داریاں",
-    "id": "Tanggung jawab Anda"
+    "ar": "مسؤولياتك",
+    "ur": "آپ کی ذمہ داریاں"
   },
   "terms_s2_li1": {
     "en": "You are responsible for safeguarding your passcode, recovery key, and device.",
@@ -184,10 +184,10 @@
     "zh-Hant": "你有責任保護你的密碼、復原密鑰和裝置。",
     "ru": "Вы отвечаете за защиту своего код-пароля, ключа восстановления и устройства.",
     "tr": "Parolanızı, kurtarma anahtarınızı ve aygıtınızı korumaktan siz sorumlusunuz.",
-    "ar": "أنت مسؤول عن حماية رمز الدخول ومفتاح الاسترداد وجهازك.",
+    "id": "Anda bertanggung jawab untuk menjaga kode sandi, kunci pemulihan, dan perangkat Anda.",
     "hi": "अपने पासकोड, रिकवरी कुंजी और डिवाइस की सुरक्षा की ज़िम्मेदारी आपकी है।",
-    "ur": "اپنے پاس کوڈ، ریکوری کلید اور ڈیوائس کی حفاظت آپ کی ذمہ داری ہے۔",
-    "id": "Anda bertanggung jawab untuk menjaga kode sandi, kunci pemulihan, dan perangkat Anda."
+    "ar": "أنت مسؤول عن حماية رمز الدخول ومفتاح الاسترداد وجهازك.",
+    "ur": "اپنے پاس کوڈ، ریکوری کلید اور ڈیوائس کی حفاظت آپ کی ذمہ داری ہے۔"
   },
   "terms_s2_li2": {
     "en": "You are responsible for the content you store in the app and for ensuring you have the right to store it.",
@@ -203,10 +203,10 @@
     "zh-Hant": "你須對你儲存在本 App 中的內容負責，並確保你有權儲存該內容。",
     "ru": "Вы отвечаете за контент, который храните в приложении, и за наличие у вас права хранить его.",
     "tr": "Uygulamada sakladığınız içerikten ve onu saklama hakkına sahip olduğunuzdan emin olmaktan siz sorumlusunuz.",
-    "ar": "أنت مسؤول عن المحتوى الذي تخزّنه في التطبيق وعن التأكد من أن لك الحق في تخزينه.",
+    "id": "Anda bertanggung jawab atas konten yang Anda simpan di aplikasi dan untuk memastikan Anda berhak menyimpannya.",
     "hi": "ऐप में आपके द्वारा रखे गए कंटेंट की, और यह सुनिश्चित करने की कि आपको उसे रखने का अधिकार है, ज़िम्मेदारी आपकी है।",
-    "ur": "ایپ میں آپ کا رکھا گیا مواد، اور یہ یقینی بنانا کہ آپ کو اسے رکھنے کا حق حاصل ہے، آپ کی ذمہ داری ہے۔",
-    "id": "Anda bertanggung jawab atas konten yang Anda simpan di aplikasi dan untuk memastikan Anda berhak menyimpannya."
+    "ar": "أنت مسؤول عن المحتوى الذي تخزّنه في التطبيق وعن التأكد من أن لك الحق في تخزينه.",
+    "ur": "ایپ میں آپ کا رکھا گیا مواد، اور یہ یقینی بنانا کہ آپ کو اسے رکھنے کا حق حاصل ہے، آپ کی ذمہ داری ہے۔"
   },
   "terms_s2_li3": {
     "en": "You are responsible for how you enable and configure the app's features, including its security and data-erasing features.",
@@ -222,10 +222,10 @@
     "zh-Hant": "你須對你如何開啟和設定本 App 的功能負責，包括其安全功能和資料清除功能。",
     "ru": "Вы отвечаете за то, как включаете и настраиваете функции приложения, в том числе функции безопасности и стирания данных.",
     "tr": "Güvenlik ve veri silme özellikleri dahil, uygulamanın özelliklerini nasıl açtığınızdan ve yapılandırdığınızdan siz sorumlusunuz.",
-    "ar": "أنت مسؤول عن طريقة تفعيلك لميزات التطبيق وإعدادها، بما في ذلك ميزات الأمان ومسح البيانات.",
+    "id": "Anda bertanggung jawab atas cara Anda mengaktifkan dan mengonfigurasi fitur aplikasi, termasuk fitur keamanan dan penghapusan datanya.",
     "hi": "ऐप के फ़ीचर, जिनमें इसके सुरक्षा और डेटा मिटाने वाले फ़ीचर शामिल हैं, आप कैसे चालू और कॉन्फ़िगर करते हैं, इसकी ज़िम्मेदारी आपकी है।",
-    "ur": "ایپ کے فیچرز، بشمول اس کے سیکیورٹی اور ڈیٹا مٹانے والے فیچرز، آپ کیسے آن اور کنفیگر کرتے ہیں، یہ آپ کی ذمہ داری ہے۔",
-    "id": "Anda bertanggung jawab atas cara Anda mengaktifkan dan mengonfigurasi fitur aplikasi, termasuk fitur keamanan dan penghapusan datanya."
+    "ar": "أنت مسؤول عن طريقة تفعيلك لميزات التطبيق وإعدادها، بما في ذلك ميزات الأمان ومسح البيانات.",
+    "ur": "ایپ کے فیچرز، بشمول اس کے سیکیورٹی اور ڈیٹا مٹانے والے فیچرز، آپ کیسے آن اور کنفیگر کرتے ہیں، یہ آپ کی ذمہ داری ہے۔"
   },
   "terms_s2_li4": {
     "en": "You agree not to use Privaro to store or share any content that is illegal, or that infringes the rights of others.",
@@ -241,10 +241,10 @@
     "zh-Hant": "你同意不使用 Privaro 儲存或分享任何違法或侵害他人權利的內容。",
     "ru": "Вы обязуетесь не использовать Privaro для хранения или распространения незаконного контента или контента, нарушающего права других лиц.",
     "tr": "Privaro'yu yasa dışı veya başkalarının haklarını ihlal eden herhangi bir içeriği saklamak ya da paylaşmak için kullanmamayı kabul edersiniz.",
-    "ar": "توافق على عدم استخدام Privaro لتخزين أو مشاركة أي محتوى غير قانوني أو ينتهك حقوق الآخرين.",
+    "id": "Anda setuju untuk tidak menggunakan Privaro untuk menyimpan atau membagikan konten apa pun yang ilegal atau yang melanggar hak orang lain.",
     "hi": "आप सहमत हैं कि Privaro का उपयोग ऐसा कोई भी कंटेंट रखने या शेयर करने के लिए नहीं करेंगे जो अवैध हो या दूसरों के अधिकारों का उल्लंघन करता हो।",
-    "ur": "آپ اتفاق کرتے ہیں کہ Privaro کو ایسا کوئی مواد رکھنے یا شیئر کرنے کے لیے استعمال نہیں کریں گے جو غیر قانونی ہو یا دوسروں کے حقوق کی خلاف ورزی کرتا ہو۔",
-    "id": "Anda setuju untuk tidak menggunakan Privaro untuk menyimpan atau membagikan konten apa pun yang ilegal atau yang melanggar hak orang lain."
+    "ar": "توافق على عدم استخدام Privaro لتخزين أو مشاركة أي محتوى غير قانوني أو ينتهك حقوق الآخرين.",
+    "ur": "آپ اتفاق کرتے ہیں کہ Privaro کو ایسا کوئی مواد رکھنے یا شیئر کرنے کے لیے استعمال نہیں کریں گے جو غیر قانونی ہو یا دوسروں کے حقوق کی خلاف ورزی کرتا ہو۔"
   },
   "terms_s2_li5": {
     "en": "You agree not to use the app for any unlawful purpose or in violation of any applicable law.",
@@ -260,10 +260,10 @@
     "zh-Hant": "你同意不將本 App 用於任何非法目的，或以違反任何適用法律的方式使用。",
     "ru": "Вы обязуетесь не использовать приложение в незаконных целях или в нарушение применимого законодательства.",
     "tr": "Uygulamayı yasa dışı herhangi bir amaçla veya yürürlükteki herhangi bir yasayı ihlal ederek kullanmamayı kabul edersiniz.",
-    "ar": "توافق على عدم استخدام التطبيق لأي غرض غير مشروع أو بما يخالف أي قانون معمول به.",
+    "id": "Anda setuju untuk tidak menggunakan aplikasi untuk tujuan yang melanggar hukum atau dengan cara yang melanggar hukum yang berlaku.",
     "hi": "आप सहमत हैं कि ऐप का उपयोग किसी भी ग़ैरक़ानूनी उद्देश्य के लिए या किसी लागू क़ानून का उल्लंघन करके नहीं करेंगे।",
-    "ur": "آپ اتفاق کرتے ہیں کہ ایپ کو کسی غیر قانونی مقصد کے لیے یا کسی نافذ قانون کی خلاف ورزی میں استعمال نہیں کریں گے۔",
-    "id": "Anda setuju untuk tidak menggunakan aplikasi untuk tujuan yang melanggar hukum atau dengan cara yang melanggar hukum yang berlaku."
+    "ar": "توافق على عدم استخدام التطبيق لأي غرض غير مشروع أو بما يخالف أي قانون معمول به.",
+    "ur": "آپ اتفاق کرتے ہیں کہ ایپ کو کسی غیر قانونی مقصد کے لیے یا کسی نافذ قانون کی خلاف ورزی میں استعمال نہیں کریں گے۔"
   },
   "terms_s3_h": {
     "en": "Data loss and backups",
@@ -279,10 +279,10 @@
     "zh-Hant": "資料遺失與備份",
     "ru": "Потеря данных и резервные копии",
     "tr": "Veri kaybı ve yedekler",
-    "ar": "فقدان البيانات والنسخ الاحتياطية",
+    "id": "Kehilangan data dan cadangan",
     "hi": "डेटा का खोना और बैकअप",
-    "ur": "ڈیٹا کا ضیاع اور بیک اپ",
-    "id": "Kehilangan data dan cadangan"
+    "ar": "فقدان البيانات والنسخ الاحتياطية",
+    "ur": "ڈیٹا کا ضیاع اور بیک اپ"
   },
   "terms_s3_p1": {
     "en": "Because of Privaro's zero-knowledge, on-device encryption, we cannot reset your passcode, recover your encryption key, or restore your content for you. Any of the following may result in permanent, unrecoverable loss of your content: losing or forgetting your passcode and recovery key; loss, theft, damage, repair, reset, or replacement of your device; deletion of the app or its data; operating system or hardware failures; or failure to maintain a current, working backup. You are solely responsible for maintaining your own backups. You use the app's optional backup, restore, and transfer features at your own discretion and risk, and we do not guarantee their availability, completeness, or success.",
@@ -298,10 +298,10 @@
     "zh-Hant": "由於 Privaro 採用零知識的裝置端加密，我們無法為你重設密碼、復原加密金鑰或還原內容。下列任一情況都可能導致你的內容永久且無法復原地遺失：遺失或忘記密碼和復原密鑰；裝置遺失、遭竊、損壞、維修、重置或更換；刪除本 App 或其資料；作業系統或硬體故障；或未維護最新且可用的備份。你須自行負責維護你的備份。你自行決定並自負風險使用本 App 的選用備份、還原和傳輸功能，我們不保證其可用性、完整性或成功。",
     "ru": "Поскольку Privaro использует шифрование на устройстве с нулевым разглашением, мы не можем сбросить ваш код-пароль, восстановить ключ шифрования или вернуть ваш контент. К безвозвратной потере контента может привести любое из следующего: потеря или забытый код-пароль и ключ восстановления; потеря, кража, повреждение, ремонт, сброс или замена устройства; удаление приложения или его данных; сбои операционной системы или оборудования; отсутствие актуальной рабочей резервной копии. Вы несёте единоличную ответственность за создание собственных резервных копий. Необязательные функции резервного копирования, восстановления и передачи вы используете по своему усмотрению и на свой риск, и мы не гарантируем их доступность, полноту или успешность.",
     "tr": "Privaro'nun sıfır bilgili, aygıt üzerinde şifrelemesi nedeniyle parolanızı sıfırlayamaz, şifreleme anahtarınızı kurtaramaz veya içeriğinizi sizin için geri yükleyemeyiz. Aşağıdakilerden herhangi biri içeriğinizin kalıcı ve kurtarılamaz biçimde kaybolmasına yol açabilir: parolanızı ve kurtarma anahtarınızı kaybetmek veya unutmak; aygıtınızın kaybolması, çalınması, hasar görmesi, onarılması, sıfırlanması veya değiştirilmesi; uygulamanın veya verilerinin silinmesi; işletim sistemi veya donanım arızaları; ya da güncel, çalışan bir yedek bulundurmamak. Kendi yedeklerinizi almaktan yalnızca siz sorumlusunuz. Uygulamanın isteğe bağlı yedekleme, geri yükleme ve aktarım özelliklerini kendi takdirinizle ve riski size ait olmak üzere kullanırsınız; bunların kullanılabilirliğini, eksiksizliğini veya başarısını garanti etmeyiz.",
-    "ar": "بسبب التشفير على الجهاز بمبدأ انعدام المعرفة الذي يعتمده Privaro، لا يمكننا إعادة تعيين رمز الدخول أو استرداد مفتاح التشفير أو استعادة محتواك نيابةً عنك. قد يؤدي أي مما يلي إلى فقدان محتواك نهائيًا دون إمكانية الاسترداد: فقدان رمز الدخول ومفتاح الاسترداد أو نسيانهما؛ أو فقدان جهازك أو سرقته أو تلفه أو إصلاحه أو إعادة ضبطه أو استبداله؛ أو حذف التطبيق أو بياناته؛ أو أعطال نظام التشغيل أو الأجهزة؛ أو عدم الاحتفاظ بنسخة احتياطية حديثة وصالحة. أنت وحدك المسؤول عن الاحتفاظ بنسخك الاحتياطية. تستخدم ميزات النسخ الاحتياطي والاستعادة والنقل الاختيارية في التطبيق وفق تقديرك وعلى مسؤوليتك، ولا نضمن توفّرها أو اكتمالها أو نجاحها.",
+    "id": "Karena enkripsi tanpa pengetahuan (zero-knowledge) di perangkat yang digunakan Privaro, kami tidak dapat mengatur ulang kode sandi Anda, memulihkan kunci enkripsi Anda, atau memulihkan konten Anda untuk Anda. Salah satu hal berikut dapat mengakibatkan hilangnya konten Anda secara permanen dan tidak dapat dipulihkan: kehilangan atau lupa kode sandi dan kunci pemulihan; kehilangan, pencurian, kerusakan, perbaikan, pengaturan ulang, atau penggantian perangkat Anda; penghapusan aplikasi atau datanya; kegagalan sistem operasi atau perangkat keras; atau tidak memelihara cadangan terbaru yang berfungsi. Anda sepenuhnya bertanggung jawab untuk memelihara cadangan Anda sendiri. Anda menggunakan fitur cadangan, pemulihan, dan transfer opsional aplikasi atas kebijakan dan risiko Anda sendiri, dan kami tidak menjamin ketersediaan, kelengkapan, atau keberhasilannya.",
     "hi": "Privaro के ज़ीरो-नॉलेज, डिवाइस पर होने वाले एन्क्रिप्शन की वजह से, हम आपका पासकोड रीसेट नहीं कर सकते, आपकी एन्क्रिप्शन कुंजी रिकवर नहीं कर सकते, और न ही आपके लिए आपका कंटेंट रिस्टोर कर सकते हैं। इनमें से कोई भी चीज़ आपके कंटेंट के हमेशा के लिए, बिना रिकवरी के खो जाने का कारण बन सकती है: अपना पासकोड और रिकवरी कुंजी खो देना या भूल जाना; आपके डिवाइस का खो जाना, चोरी होना, ख़राब होना, मरम्मत, रीसेट या बदला जाना; ऐप या उसके डेटा को हटाना; ऑपरेटिंग सिस्टम या हार्डवेयर की ख़राबी; या एक ताज़ा, काम करने वाला बैकअप न रखना। अपने बैकअप बनाए रखने की पूरी ज़िम्मेदारी सिर्फ़ आपकी है। आप ऐप के वैकल्पिक बैकअप, रिस्टोर और ट्रांसफ़र फ़ीचर का उपयोग अपने विवेक और जोखिम पर करते हैं, और हम उनकी उपलब्धता, पूर्णता या सफलता की गारंटी नहीं देते।",
-    "ur": "Privaro کی زیرو نالج، ڈیوائس پر ہونے والی انکرپشن کی وجہ سے، ہم آپ کا پاس کوڈ ری سیٹ نہیں کر سکتے، آپ کی انکرپشن کلید بحال نہیں کر سکتے، اور نہ ہی آپ کے لیے آپ کا مواد بحال کر سکتے ہیں۔ ان میں سے کوئی بھی بات آپ کے مواد کے مستقل اور ناقابلِ بحالی ضیاع کا سبب بن سکتی ہے: اپنا پاس کوڈ اور ریکوری کلید کھو دینا یا بھول جانا؛ آپ کے ڈیوائس کا گم ہونا، چوری ہونا، خراب ہونا، مرمت، ری سیٹ یا تبدیل ہونا؛ ایپ یا اس کا ڈیٹا حذف کرنا؛ آپریٹنگ سسٹم یا ہارڈ ویئر کی خرابی؛ یا ایک تازہ، کارآمد بیک اپ نہ رکھنا۔ اپنے بیک اپ رکھنے کی ذمہ داری صرف آپ کی ہے۔ آپ ایپ کے اختیاری بیک اپ، بحالی اور ٹرانسفر کے فیچرز اپنی صوابدید اور اپنے خطرے پر استعمال کرتے ہیں، اور ہم ان کی دستیابی، مکمل ہونے یا کامیابی کی ضمانت نہیں دیتے۔",
-    "id": "Karena enkripsi tanpa pengetahuan (zero-knowledge) di perangkat yang digunakan Privaro, kami tidak dapat mengatur ulang kode sandi Anda, memulihkan kunci enkripsi Anda, atau memulihkan konten Anda untuk Anda. Salah satu hal berikut dapat mengakibatkan hilangnya konten Anda secara permanen dan tidak dapat dipulihkan: kehilangan atau lupa kode sandi dan kunci pemulihan; kehilangan, pencurian, kerusakan, perbaikan, pengaturan ulang, atau penggantian perangkat Anda; penghapusan aplikasi atau datanya; kegagalan sistem operasi atau perangkat keras; atau tidak memelihara cadangan terbaru yang berfungsi. Anda sepenuhnya bertanggung jawab untuk memelihara cadangan Anda sendiri. Anda menggunakan fitur cadangan, pemulihan, dan transfer opsional aplikasi atas kebijakan dan risiko Anda sendiri, dan kami tidak menjamin ketersediaan, kelengkapan, atau keberhasilannya."
+    "ar": "بسبب التشفير على الجهاز بمبدأ انعدام المعرفة الذي يعتمده Privaro، لا يمكننا إعادة تعيين رمز الدخول أو استرداد مفتاح التشفير أو استعادة محتواك نيابةً عنك. قد يؤدي أي مما يلي إلى فقدان محتواك نهائيًا دون إمكانية الاسترداد: فقدان رمز الدخول ومفتاح الاسترداد أو نسيانهما؛ أو فقدان جهازك أو سرقته أو تلفه أو إصلاحه أو إعادة ضبطه أو استبداله؛ أو حذف التطبيق أو بياناته؛ أو أعطال نظام التشغيل أو الأجهزة؛ أو عدم الاحتفاظ بنسخة احتياطية حديثة وصالحة. أنت وحدك المسؤول عن الاحتفاظ بنسخك الاحتياطية. تستخدم ميزات النسخ الاحتياطي والاستعادة والنقل الاختيارية في التطبيق وفق تقديرك وعلى مسؤوليتك، ولا نضمن توفّرها أو اكتمالها أو نجاحها.",
+    "ur": "Privaro کی زیرو نالج، ڈیوائس پر ہونے والی انکرپشن کی وجہ سے، ہم آپ کا پاس کوڈ ری سیٹ نہیں کر سکتے، آپ کی انکرپشن کلید بحال نہیں کر سکتے، اور نہ ہی آپ کے لیے آپ کا مواد بحال کر سکتے ہیں۔ ان میں سے کوئی بھی بات آپ کے مواد کے مستقل اور ناقابلِ بحالی ضیاع کا سبب بن سکتی ہے: اپنا پاس کوڈ اور ریکوری کلید کھو دینا یا بھول جانا؛ آپ کے ڈیوائس کا گم ہونا، چوری ہونا، خراب ہونا، مرمت، ری سیٹ یا تبدیل ہونا؛ ایپ یا اس کا ڈیٹا حذف کرنا؛ آپریٹنگ سسٹم یا ہارڈ ویئر کی خرابی؛ یا ایک تازہ، کارآمد بیک اپ نہ رکھنا۔ اپنے بیک اپ رکھنے کی ذمہ داری صرف آپ کی ہے۔ آپ ایپ کے اختیاری بیک اپ، بحالی اور ٹرانسفر کے فیچرز اپنی صوابدید اور اپنے خطرے پر استعمال کرتے ہیں، اور ہم ان کی دستیابی، مکمل ہونے یا کامیابی کی ضمانت نہیں دیتے۔"
   },
   "terms_s4_h": {
     "en": "Security and data-erasing features",
@@ -317,10 +317,10 @@
     "zh-Hant": "安全功能與資料清除功能",
     "ru": "Функции безопасности и стирания данных",
     "tr": "Güvenlik ve veri silme özellikleri",
-    "ar": "ميزات الأمان ومسح البيانات",
+    "id": "Fitur keamanan dan penghapusan data",
     "hi": "सुरक्षा और डेटा मिटाने वाले फ़ीचर",
-    "ur": "سیکیورٹی اور ڈیٹا مٹانے والے فیچرز",
-    "id": "Fitur keamanan dan penghapusan data"
+    "ar": "ميزات الأمان ومسح البيانات",
+    "ur": "سیکیورٹی اور ڈیٹا مٹانے والے فیچرز"
   },
   "terms_s4_p1": {
     "en": "Privaro includes optional features that are designed, on purpose, to delete your data or change how it can be accessed, including Duress Wipe, Decoy Vault, Panic Lock, and similar tools. These features work exactly as described and can cause intentional, permanent data loss.",
@@ -336,10 +336,10 @@
     "zh-Hant": "Privaro 包含刻意設計用來刪除你的資料或改變資料存取方式的選用功能，包括脅迫清除、誘餌保險庫、緊急鎖定及類似工具。這些功能完全依照說明運作，可能造成刻意且永久的資料遺失。",
     "ru": "В Privaro есть необязательные функции, намеренно созданные для удаления ваших данных или изменения способа доступа к ним, в том числе Тревожное стирание, Ложное хранилище, Экстренная блокировка и аналогичные инструменты. Эти функции работают ровно так, как описано, и могут привести к намеренной безвозвратной потере данных.",
     "tr": "Privaro, verilerinizi silmek veya verilere nasıl erişilebileceğini değiştirmek için bilerek tasarlanmış isteğe bağlı özellikler içerir; bunlar arasında Panik Silme, Sahte Kasa, Panik Kilidi ve benzeri araçlar bulunur. Bu özellikler tam olarak açıklandığı gibi çalışır ve kasıtlı, kalıcı veri kaybına neden olabilir.",
-    "ar": "يتضمن Privaro ميزات اختيارية صُمّمت عن قصد لحذف بياناتك أو تغيير طريقة الوصول إليها، منها مسح الطوارئ والخزنة الوهمية وقفل الطوارئ وأدوات مشابهة. تعمل هذه الميزات تمامًا كما هو موضّح، وقد تتسبب في فقدان متعمَّد ونهائي للبيانات.",
+    "id": "Privaro menyertakan fitur opsional yang dirancang dengan sengaja untuk menghapus data Anda atau mengubah cara data tersebut dapat diakses, termasuk Penghapusan Darurat, Brankas Umpan, Kunci Darurat, dan alat serupa. Fitur-fitur ini bekerja persis seperti yang dijelaskan dan dapat menyebabkan hilangnya data secara sengaja dan permanen.",
     "hi": "Privaro में ऐसे वैकल्पिक फ़ीचर हैं जिन्हें जानबूझकर आपका डेटा हटाने या उस तक पहुँचने का तरीका बदलने के लिए बनाया गया है, जिनमें आपातकालीन डेटा मिटाना, नकली तिजोरी, आपातकालीन लॉक और इसी तरह के टूल शामिल हैं। ये फ़ीचर ठीक वैसे ही काम करते हैं जैसा बताया गया है और जानबूझकर, हमेशा के लिए डेटा खोने का कारण बन सकते हैं।",
-    "ur": "Privaro میں ایسے اختیاری فیچرز شامل ہیں جو جان بوجھ کر آپ کا ڈیٹا حذف کرنے یا اس تک رسائی کا طریقہ بدلنے کے لیے بنائے گئے ہیں، جن میں ہنگامی حذف، جعلی والٹ، ہنگامی لاک اور اسی طرح کے ٹولز شامل ہیں۔ یہ فیچرز بالکل ویسے ہی کام کرتے ہیں جیسا بیان کیا گیا ہے اور جان بوجھ کر، مستقل ڈیٹا کے ضیاع کا سبب بن سکتے ہیں۔",
-    "id": "Privaro menyertakan fitur opsional yang dirancang dengan sengaja untuk menghapus data Anda atau mengubah cara data tersebut dapat diakses, termasuk Penghapusan Darurat, Brankas Umpan, Kunci Darurat, dan alat serupa. Fitur-fitur ini bekerja persis seperti yang dijelaskan dan dapat menyebabkan hilangnya data secara sengaja dan permanen."
+    "ar": "يتضمن Privaro ميزات اختيارية صُمّمت عن قصد لحذف بياناتك أو تغيير طريقة الوصول إليها، منها مسح الطوارئ والخزنة الوهمية وقفل الطوارئ وأدوات مشابهة. تعمل هذه الميزات تمامًا كما هو موضّح، وقد تتسبب في فقدان متعمَّد ونهائي للبيانات.",
+    "ur": "Privaro میں ایسے اختیاری فیچرز شامل ہیں جو جان بوجھ کر آپ کا ڈیٹا حذف کرنے یا اس تک رسائی کا طریقہ بدلنے کے لیے بنائے گئے ہیں، جن میں ہنگامی حذف، جعلی والٹ، ہنگامی لاک اور اسی طرح کے ٹولز شامل ہیں۔ یہ فیچرز بالکل ویسے ہی کام کرتے ہیں جیسا بیان کیا گیا ہے اور جان بوجھ کر، مستقل ڈیٹا کے ضیاع کا سبب بن سکتے ہیں۔"
   },
   "terms_s4_p2": {
     "en": "In particular, if you enable <strong>Duress Wipe</strong>, entering the duress passcode (for example, at the lock screen) will immediately, permanently, and irreversibly erase your real vault and everything inside it, by design, with no confirmation prompt, no undo, and no recovery, including in circumstances you did not anticipate. You decide whether to enable these features and how to configure them; you are solely responsible for that decision and for any resulting loss of, or inability to access, your data; and you agree that we are not liable for any data erased, hidden, or made inaccessible through your use of these features. Do not enable these features unless you fully understand and accept how they behave.",
@@ -355,10 +355,10 @@
     "zh-Hant": "特別是，如果你開啟了<strong>脅迫清除</strong>，輸入脅迫密碼（例如在鎖定畫面）會依設計立即、永久且不可逆地清除你真正的保險庫及其中的所有內容，不會跳出確認提示，無法還原，也無法復原，包括在你未預料到的情況下。是否開啟這些功能以及如何設定由你決定；你須獨自對該決定以及因此造成的資料遺失或無法存取資料負責；你也同意，對於因你使用這些功能而被清除、隱藏或無法存取的任何資料，我們概不負責。除非你完全了解並接受這些功能的運作方式，否則請勿開啟。",
     "ru": "В частности, если вы включите <strong>Тревожное стирание</strong>, ввод тревожного код-пароля (например, на экране блокировки) немедленно, безвозвратно и необратимо сотрёт ваше настоящее хранилище и всё его содержимое — так задумано — без запроса подтверждения, без отмены и без возможности восстановления, в том числе в обстоятельствах, которых вы не ожидали. Вы сами решаете, включать ли эти функции и как их настраивать; вы несёте единоличную ответственность за это решение и за любую потерю ваших данных или утрату доступа к ним в результате; и вы соглашаетесь, что мы не несём ответственности за данные, стёртые, скрытые или ставшие недоступными в результате использования вами этих функций. Не включайте эти функции, если не до конца понимаете и не принимаете, как они работают.",
     "tr": "Özellikle <strong>Panik Silme</strong>'yi açarsanız, panik parolasını girmek (örneğin kilit ekranında) gerçek kasanızı ve içindeki her şeyi, tasarımı gereği, onay istemi olmadan, geri alma ve kurtarma imkânı olmadan, öngörmediğiniz durumlar da dahil olmak üzere hemen, kalıcı ve geri döndürülemez biçimde siler. Bu özellikleri açıp açmayacağınıza ve nasıl yapılandıracağınıza siz karar verirsiniz; bu karardan ve bunun sonucunda verilerinizin kaybolmasından veya verilerinize erişememenizden yalnızca siz sorumlusunuz; ayrıca bu özellikleri kullanmanız sonucunda silinen, gizlenen veya erişilemez hale gelen hiçbir veriden sorumlu olmadığımızı kabul edersiniz. Nasıl çalıştıklarını tam olarak anlamadan ve kabul etmeden bu özellikleri açmayın.",
-    "ar": "وعلى وجه الخصوص، إذا فعّلت <strong>مسح الطوارئ</strong>، فإن إدخال رمز دخول الطوارئ (مثلًا على شاشة القفل) سيمسح خزنتك الحقيقية وكل ما فيها فورًا وبشكل نهائي ولا رجعة فيه، وذلك بحكم التصميم، دون أي طلب تأكيد، ودون تراجع، ودون استرداد، بما في ذلك في ظروف لم تتوقعها. أنت من يقرر تفعيل هذه الميزات وكيفية إعدادها؛ وأنت وحدك المسؤول عن هذا القرار وعن أي فقدان لبياناتك أو تعذّر الوصول إليها نتيجة لذلك؛ وتوافق على أننا لسنا مسؤولين عن أي بيانات تُمسح أو تُخفى أو يتعذّر الوصول إليها بسبب استخدامك لهذه الميزات. لا تفعّل هذه الميزات ما لم تكن تفهم طريقة عملها تمامًا وتقبلها.",
+    "id": "Secara khusus, jika Anda mengaktifkan <strong>Penghapusan Darurat</strong>, memasukkan kode sandi darurat (misalnya, di layar kunci) akan segera, secara permanen, dan tanpa dapat dikembalikan menghapus brankas asli Anda beserta seluruh isinya, sesuai rancangan, tanpa permintaan konfirmasi, tanpa urungkan, dan tanpa pemulihan, termasuk dalam keadaan yang tidak Anda duga. Anda yang memutuskan apakah akan mengaktifkan fitur-fitur ini dan cara mengonfigurasinya; Anda sepenuhnya bertanggung jawab atas keputusan tersebut dan atas hilangnya data Anda atau ketidakmampuan mengaksesnya sebagai akibatnya; dan Anda setuju bahwa kami tidak bertanggung jawab atas data apa pun yang terhapus, tersembunyi, atau tidak dapat diakses karena penggunaan fitur-fitur ini oleh Anda. Jangan aktifkan fitur-fitur ini kecuali Anda sepenuhnya memahami dan menerima cara kerjanya.",
     "hi": "ख़ास तौर पर, अगर आप <strong>आपातकालीन डेटा मिटाना</strong> चालू करते हैं, तो आपातकालीन पासकोड डालने पर (उदाहरण के लिए, लॉक स्क्रीन पर) आपकी असली तिजोरी और उसके अंदर की हर चीज़ तुरंत, हमेशा के लिए और अपरिवर्तनीय रूप से मिट जाएगी, यह डिज़ाइन के अनुसार है, बिना किसी पुष्टि संकेत के, बिना पहले जैसा करने के विकल्प के और बिना रिकवरी के, उन परिस्थितियों में भी जिनकी आपने उम्मीद नहीं की थी। इन फ़ीचर को चालू करना है या नहीं और इन्हें कैसे कॉन्फ़िगर करना है, यह आप तय करते हैं; उस फ़ैसले की और उसके परिणामस्वरूप आपके डेटा के खोने या उस तक पहुँच न होने की पूरी ज़िम्मेदारी सिर्फ़ आपकी है; और आप सहमत हैं कि इन फ़ीचर के आपके उपयोग से मिटाए गए, छिपाए गए या पहुँच से बाहर हुए किसी भी डेटा के लिए हम उत्तरदायी नहीं हैं। जब तक आप इन फ़ीचर के काम करने के तरीके को पूरी तरह समझ और स्वीकार न कर लें, इन्हें चालू न करें।",
-    "ur": "خاص طور پر، اگر آپ <strong>ہنگامی حذف</strong> آن کریں، تو ہنگامی پاس کوڈ ڈالنے سے (مثال کے طور پر لاک اسکرین پر) آپ کا اصلی والٹ اور اس کے اندر کی ہر چیز فوراً، ہمیشہ کے لیے اور ناقابلِ واپسی طور پر مٹ جائے گی، جو ڈیزائن کے مطابق ہے، بغیر کسی تصدیقی پیغام کے، بغیر واپسی اور بغیر بحالی کے، ان حالات میں بھی جن کی آپ نے توقع نہیں کی تھی۔ ان فیچرز کو آن کرنا ہے یا نہیں اور انہیں کیسے کنفیگر کرنا ہے، یہ آپ طے کرتے ہیں؛ اس فیصلے کی اور اس کے نتیجے میں آپ کے ڈیٹا کے ضیاع یا اس تک رسائی نہ ہونے کی ذمہ داری صرف آپ کی ہے؛ اور آپ اتفاق کرتے ہیں کہ ان فیچرز کے آپ کے استعمال سے مٹائے گئے، چھپائے گئے یا ناقابلِ رسائی ہو جانے والے کسی بھی ڈیٹا کے ہم ذمہ دار نہیں ہیں۔ جب تک آپ ان فیچرز کے کام کرنے کا طریقہ پوری طرح سمجھ اور قبول نہ کر لیں، انہیں آن نہ کریں۔",
-    "id": "Secara khusus, jika Anda mengaktifkan <strong>Penghapusan Darurat</strong>, memasukkan kode sandi darurat (misalnya, di layar kunci) akan segera, secara permanen, dan tanpa dapat dikembalikan menghapus brankas asli Anda beserta seluruh isinya, sesuai rancangan, tanpa permintaan konfirmasi, tanpa urungkan, dan tanpa pemulihan, termasuk dalam keadaan yang tidak Anda duga. Anda yang memutuskan apakah akan mengaktifkan fitur-fitur ini dan cara mengonfigurasinya; Anda sepenuhnya bertanggung jawab atas keputusan tersebut dan atas hilangnya data Anda atau ketidakmampuan mengaksesnya sebagai akibatnya; dan Anda setuju bahwa kami tidak bertanggung jawab atas data apa pun yang terhapus, tersembunyi, atau tidak dapat diakses karena penggunaan fitur-fitur ini oleh Anda. Jangan aktifkan fitur-fitur ini kecuali Anda sepenuhnya memahami dan menerima cara kerjanya."
+    "ar": "وعلى وجه الخصوص، إذا فعّلت <strong>مسح الطوارئ</strong>، فإن إدخال رمز دخول الطوارئ (مثلًا على شاشة القفل) سيمسح خزنتك الحقيقية وكل ما فيها فورًا وبشكل نهائي ولا رجعة فيه، وذلك بحكم التصميم، دون أي طلب تأكيد، ودون تراجع، ودون استرداد، بما في ذلك في ظروف لم تتوقعها. أنت من يقرر تفعيل هذه الميزات وكيفية إعدادها؛ وأنت وحدك المسؤول عن هذا القرار وعن أي فقدان لبياناتك أو تعذّر الوصول إليها نتيجة لذلك؛ وتوافق على أننا لسنا مسؤولين عن أي بيانات تُمسح أو تُخفى أو يتعذّر الوصول إليها بسبب استخدامك لهذه الميزات. لا تفعّل هذه الميزات ما لم تكن تفهم طريقة عملها تمامًا وتقبلها.",
+    "ur": "خاص طور پر، اگر آپ <strong>ہنگامی حذف</strong> آن کریں، تو ہنگامی پاس کوڈ ڈالنے سے (مثال کے طور پر لاک اسکرین پر) آپ کا اصلی والٹ اور اس کے اندر کی ہر چیز فوراً، ہمیشہ کے لیے اور ناقابلِ واپسی طور پر مٹ جائے گی، جو ڈیزائن کے مطابق ہے، بغیر کسی تصدیقی پیغام کے، بغیر واپسی اور بغیر بحالی کے، ان حالات میں بھی جن کی آپ نے توقع نہیں کی تھی۔ ان فیچرز کو آن کرنا ہے یا نہیں اور انہیں کیسے کنفیگر کرنا ہے، یہ آپ طے کرتے ہیں؛ اس فیصلے کی اور اس کے نتیجے میں آپ کے ڈیٹا کے ضیاع یا اس تک رسائی نہ ہونے کی ذمہ داری صرف آپ کی ہے؛ اور آپ اتفاق کرتے ہیں کہ ان فیچرز کے آپ کے استعمال سے مٹائے گئے، چھپائے گئے یا ناقابلِ رسائی ہو جانے والے کسی بھی ڈیٹا کے ہم ذمہ دار نہیں ہیں۔ جب تک آپ ان فیچرز کے کام کرنے کا طریقہ پوری طرح سمجھ اور قبول نہ کر لیں، انہیں آن نہ کریں۔"
   },
   "terms_s5_h": {
     "en": "Purchases",
@@ -374,10 +374,10 @@
     "zh-Hant": "購買",
     "ru": "Покупки",
     "tr": "Satın alımlar",
-    "ar": "عمليات الشراء",
+    "id": "Pembelian",
     "hi": "ख़रीदारी",
-    "ur": "خریداریاں",
-    "id": "Pembelian"
+    "ar": "عمليات الشراء",
+    "ur": "خریداریاں"
   },
   "terms_s5_p1": {
     "en": "Privaro offers an optional paid upgrade (“Privaro Pro”) as a one-time purchase, sold through the Apple App Store. There is no subscription and nothing renews. Payment is charged to your Apple Account at confirmation of purchase, and the upgrade applies to every device signed in to that Apple Account. Prices may vary by region and are shown at the point of purchase. Except where required by law or by Apple’s policies, payments are non-refundable; refund requests are handled by Apple.",
@@ -393,10 +393,10 @@
     "zh-Hant": "Privaro 提供選用的付費升級（「Privaro Pro」），以一次性購買方式透過 Apple App Store 販售。沒有訂閱，也不會自動續約。款項會在確認購買時向你的 Apple 帳號收取，升級適用於登入該 Apple 帳號的所有裝置。價格可能因地區而異，並在購買時顯示。除法律或 Apple 政策另有規定外，款項概不退還；退款申請由 Apple 處理。",
     "ru": "Privaro предлагает необязательное платное улучшение («Privaro Pro») в виде разовой покупки через Apple App Store. Подписки нет, и ничего не продлевается. Оплата списывается с вашего Аккаунта Apple при подтверждении покупки, а улучшение действует на всех устройствах, где выполнен вход в этот Аккаунт Apple. Цены могут различаться в зависимости от региона и показываются в момент покупки. За исключением случаев, предусмотренных законом или правилами Apple, платежи не возвращаются; запросы на возврат средств обрабатывает Apple.",
     "tr": "Privaro, Apple App Store aracılığıyla tek seferlik bir satın alım olarak satılan isteğe bağlı ücretli bir yükseltme (“Privaro Pro”) sunar. Abonelik yoktur ve hiçbir şey yenilenmez. Ödeme, satın alma onaylandığında Apple Hesabınızdan tahsil edilir ve yükseltme o Apple Hesabıyla oturum açılmış her aygıt için geçerlidir. Fiyatlar bölgeye göre değişebilir ve satın alma sırasında gösterilir. Yasaların veya Apple politikalarının gerektirdiği durumlar dışında ödemeler iade edilmez; iade talepleri Apple tarafından ele alınır.",
-    "ar": "يقدّم Privaro ترقية مدفوعة اختيارية («Privaro Pro») كعملية شراء لمرة واحدة تُباع عبر Apple App Store. لا يوجد اشتراك ولا شيء يتجدد. يُحصَّل المبلغ من حساب Apple الخاص بك عند تأكيد الشراء، وتسري الترقية على كل جهاز مسجّل الدخول إلى حساب Apple ذلك. قد تختلف الأسعار حسب المنطقة وتُعرض عند الشراء. باستثناء ما يقتضيه القانون أو سياسات Apple، فإن المبالغ المدفوعة غير قابلة للاسترداد، وتتولى Apple طلبات الاسترداد.",
+    "id": "Privaro menawarkan upgrade berbayar opsional (“Privaro Pro”) sebagai pembelian satu kali, yang dijual melalui Apple App Store. Tidak ada langganan dan tidak ada yang diperpanjang. Pembayaran ditagihkan ke Akun Apple Anda saat pembelian dikonfirmasi, dan upgrade berlaku untuk setiap perangkat yang masuk ke Akun Apple tersebut. Harga dapat berbeda menurut wilayah dan ditampilkan saat pembelian. Kecuali jika diwajibkan oleh hukum atau kebijakan Apple, pembayaran tidak dapat dikembalikan; permintaan pengembalian dana ditangani oleh Apple.",
     "hi": "Privaro एक वैकल्पिक पेड अपग्रेड (“Privaro Pro”) देता है, जो Apple App Store के ज़रिए एक बार की ख़रीदारी के रूप में बेचा जाता है। कोई सब्सक्रिप्शन नहीं है और कुछ भी रिन्यू नहीं होता। ख़रीदारी की पुष्टि होने पर भुगतान आपके Apple अकाउंट से लिया जाता है, और अपग्रेड उस Apple अकाउंट से साइन इन किए गए हर डिवाइस पर लागू होता है। क़ीमतें क्षेत्र के अनुसार अलग हो सकती हैं और ख़रीदारी के समय दिखाई जाती हैं। क़ानून या Apple की नीतियों द्वारा ज़रूरी स्थिति को छोड़कर, भुगतान वापस नहीं होते; रिफ़ंड अनुरोध Apple संभालता है।",
-    "ur": "Privaro ایک اختیاری ادائیگی والا اپ گریڈ (“Privaro Pro”) پیش کرتا ہے، جو Apple App Store کے ذریعے ایک بار کی خریداری کے طور پر فروخت ہوتا ہے۔ کوئی سبسکرپشن نہیں ہے اور کچھ بھی تجدید نہیں ہوتا۔ خریداری کی تصدیق پر ادائیگی آپ کے Apple اکاؤنٹ سے وصول کی جاتی ہے، اور اپ گریڈ اس Apple اکاؤنٹ میں سائن ان ہر ڈیوائس پر لاگو ہوتا ہے۔ قیمتیں علاقے کے لحاظ سے مختلف ہو سکتی ہیں اور خریداری کے وقت دکھائی جاتی ہیں۔ قانون یا Apple کی پالیسیوں کے تقاضے کے علاوہ، ادائیگیاں ناقابلِ واپسی ہیں؛ رقم کی واپسی کی درخواستیں Apple سنبھالتا ہے۔",
-    "id": "Privaro menawarkan upgrade berbayar opsional (“Privaro Pro”) sebagai pembelian satu kali, yang dijual melalui Apple App Store. Tidak ada langganan dan tidak ada yang diperpanjang. Pembayaran ditagihkan ke Akun Apple Anda saat pembelian dikonfirmasi, dan upgrade berlaku untuk setiap perangkat yang masuk ke Akun Apple tersebut. Harga dapat berbeda menurut wilayah dan ditampilkan saat pembelian. Kecuali jika diwajibkan oleh hukum atau kebijakan Apple, pembayaran tidak dapat dikembalikan; permintaan pengembalian dana ditangani oleh Apple."
+    "ar": "يقدّم Privaro ترقية مدفوعة اختيارية («Privaro Pro») كعملية شراء لمرة واحدة تُباع عبر Apple App Store. لا يوجد اشتراك ولا شيء يتجدد. يُحصَّل المبلغ من حساب Apple الخاص بك عند تأكيد الشراء، وتسري الترقية على كل جهاز مسجّل الدخول إلى حساب Apple ذلك. قد تختلف الأسعار حسب المنطقة وتُعرض عند الشراء. باستثناء ما يقتضيه القانون أو سياسات Apple، فإن المبالغ المدفوعة غير قابلة للاسترداد، وتتولى Apple طلبات الاسترداد.",
+    "ur": "Privaro ایک اختیاری ادائیگی والا اپ گریڈ (“Privaro Pro”) پیش کرتا ہے، جو Apple App Store کے ذریعے ایک بار کی خریداری کے طور پر فروخت ہوتا ہے۔ کوئی سبسکرپشن نہیں ہے اور کچھ بھی تجدید نہیں ہوتا۔ خریداری کی تصدیق پر ادائیگی آپ کے Apple اکاؤنٹ سے وصول کی جاتی ہے، اور اپ گریڈ اس Apple اکاؤنٹ میں سائن ان ہر ڈیوائس پر لاگو ہوتا ہے۔ قیمتیں علاقے کے لحاظ سے مختلف ہو سکتی ہیں اور خریداری کے وقت دکھائی جاتی ہیں۔ قانون یا Apple کی پالیسیوں کے تقاضے کے علاوہ، ادائیگیاں ناقابلِ واپسی ہیں؛ رقم کی واپسی کی درخواستیں Apple سنبھالتا ہے۔"
   },
   "terms_s6_h": {
     "en": "Disclaimers",
@@ -412,10 +412,10 @@
     "zh-Hant": "免責聲明",
     "ru": "Отказ от гарантий",
     "tr": "Sorumluluk reddi",
-    "ar": "إخلاء المسؤولية",
+    "id": "Penafian",
     "hi": "अस्वीकरण",
-    "ur": "دستبرداری",
-    "id": "Penafian"
+    "ar": "إخلاء المسؤولية",
+    "ur": "دستبرداری"
   },
   "terms_s6_p1": {
     "en": "Privaro is provided \"as is\" and \"as available\" without warranties of any kind, whether express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, and non-infringement. While we use strong, industry-standard encryption, we do not warrant that the app will be uninterrupted, error-free, or that it will meet your requirements, and no security measure is guaranteed to be impenetrable. You use features such as Wi-Fi Transfer, which is not encrypted in transit, at your own risk and only on networks you trust.",
@@ -431,10 +431,10 @@
     "zh-Hant": "Privaro 係依「現狀」及「現有」基礎提供，不提供任何明示或默示的保證，包括但不限於適售性、特定用途適用性及不侵權的默示保證。儘管我們使用業界標準的強力加密，我們不保證本 App 會不中斷、沒有錯誤或符合你的需求，也沒有任何安全措施保證無法被突破。你使用 Wi-Fi 傳輸等功能（傳輸過程中不加密）須自負風險，且只應在你信任的網路上使用。",
     "ru": "Privaro предоставляется «как есть» и «по мере доступности», без каких-либо гарантий, явных или подразумеваемых, включая, помимо прочего, подразумеваемые гарантии товарной пригодности, пригодности для определённой цели и ненарушения прав. Хотя мы используем надёжное стандартное в отрасли шифрование, мы не гарантируем, что приложение будет работать бесперебойно и без ошибок или что оно будет соответствовать вашим требованиям, и ни одна мера безопасности не гарантирует абсолютной защиты. Такие функции, как передача по Wi-Fi, которая не шифруется при передаче, вы используете на свой риск и только в сетях, которым доверяете.",
     "tr": "Privaro, satılabilirlik, belirli bir amaca uygunluk ve ihlal etmeme ile ilgili zımni garantiler dahil ancak bunlarla sınırlı olmamak üzere, açık veya zımni hiçbir garanti olmaksızın “olduğu gibi” ve “mevcut olduğu şekliyle” sunulur. Güçlü, sektör standardı şifreleme kullansak da uygulamanın kesintisiz veya hatasız olacağını ya da gereksinimlerinizi karşılayacağını garanti etmeyiz ve hiçbir güvenlik önleminin aşılamaz olduğu garanti edilmez. Aktarım sırasında şifrelenmeyen Wi-Fi Aktarımı gibi özellikleri riski size ait olmak üzere ve yalnızca güvendiğiniz ağlarda kullanırsınız.",
-    "ar": "يُقدَّم Privaro «كما هو» و«حسب التوفّر» دون أي ضمانات من أي نوع، صريحة كانت أو ضمنية، بما في ذلك على سبيل المثال لا الحصر الضمانات الضمنية للقابلية للتسويق والملاءمة لغرض معيّن وعدم الانتهاك. ورغم أننا نستخدم تشفيرًا قويًا ومعتمدًا في هذا المجال، فإننا لا نضمن أن يعمل التطبيق دون انقطاع أو أخطاء، أو أن يلبّي متطلباتك، ولا يوجد إجراء أمني مضمون ألا يُخترق. تستخدم ميزات مثل النقل عبر Wi-Fi، غير المشفّر أثناء النقل، على مسؤوليتك وعلى الشبكات التي تثق بها فقط.",
+    "id": "Privaro disediakan “sebagaimana adanya” dan “sebagaimana tersedia” tanpa jaminan apa pun, baik tersurat maupun tersirat, termasuk namun tidak terbatas pada jaminan tersirat atas kelayakan untuk diperdagangkan, kesesuaian untuk tujuan tertentu, dan tidak adanya pelanggaran. Meskipun kami menggunakan enkripsi standar industri yang kuat, kami tidak menjamin bahwa aplikasi akan berjalan tanpa gangguan, bebas dari kesalahan, atau memenuhi kebutuhan Anda, dan tidak ada langkah keamanan yang dijamin tidak dapat ditembus. Anda menggunakan fitur seperti Transfer Wi-Fi, yang tidak dienkripsi selama transfer, atas risiko Anda sendiri dan hanya di jaringan yang Anda percayai.",
     "hi": "Privaro “जैसा है” और “जैसा उपलब्ध है” आधार पर दिया जाता है, किसी भी प्रकार की स्पष्ट या निहित वारंटी के बिना, जिसमें व्यापारिकता, किसी ख़ास उद्देश्य के लिए उपयुक्तता और उल्लंघन न करने की निहित वारंटियाँ शामिल हैं, लेकिन इन्हीं तक सीमित नहीं हैं। हालाँकि हम मज़बूत, इंडस्ट्री-स्टैंडर्ड एन्क्रिप्शन का उपयोग करते हैं, हम यह वारंटी नहीं देते कि ऐप बिना रुकावट या बिना त्रुटि के चलेगा, या आपकी ज़रूरतें पूरी करेगा, और किसी भी सुरक्षा उपाय के अभेद्य होने की गारंटी नहीं है। वाई-फ़ाई स्थानांतरण जैसे फ़ीचर, जो ट्रांसफ़र के दौरान एन्क्रिप्ट नहीं होते, आप अपने जोखिम पर और सिर्फ़ भरोसेमंद नेटवर्क पर इस्तेमाल करते हैं।",
-    "ur": "Privaro “جیسا ہے” اور “جیسا دستیاب ہے” کی بنیاد پر فراہم کیا جاتا ہے، کسی بھی قسم کی واضح یا ضمنی وارنٹی کے بغیر، بشمول قابلِ فروخت ہونے، کسی خاص مقصد کے لیے موزوں ہونے اور خلاف ورزی نہ کرنے کی ضمنی وارنٹیاں، لیکن انہی تک محدود نہیں۔ اگرچہ ہم مضبوط، انڈسٹری اسٹینڈرڈ انکرپشن استعمال کرتے ہیں، ہم یہ ضمانت نہیں دیتے کہ ایپ بلا تعطل یا بغیر غلطی کے چلے گی، یا آپ کی ضروریات پوری کرے گی، اور کسی بھی حفاظتی اقدام کے ناقابلِ تسخیر ہونے کی ضمانت نہیں ہے۔ وائی فائی ٹرانسفر جیسے فیچرز، جو منتقلی کے دوران انکرپٹ نہیں ہوتے، آپ اپنے خطرے پر اور صرف قابلِ اعتماد نیٹ ورکس پر استعمال کرتے ہیں۔",
-    "id": "Privaro disediakan “sebagaimana adanya” dan “sebagaimana tersedia” tanpa jaminan apa pun, baik tersurat maupun tersirat, termasuk namun tidak terbatas pada jaminan tersirat atas kelayakan untuk diperdagangkan, kesesuaian untuk tujuan tertentu, dan tidak adanya pelanggaran. Meskipun kami menggunakan enkripsi standar industri yang kuat, kami tidak menjamin bahwa aplikasi akan berjalan tanpa gangguan, bebas dari kesalahan, atau memenuhi kebutuhan Anda, dan tidak ada langkah keamanan yang dijamin tidak dapat ditembus. Anda menggunakan fitur seperti Transfer Wi-Fi, yang tidak dienkripsi selama transfer, atas risiko Anda sendiri dan hanya di jaringan yang Anda percayai."
+    "ar": "يُقدَّم Privaro «كما هو» و«حسب التوفّر» دون أي ضمانات من أي نوع، صريحة كانت أو ضمنية، بما في ذلك على سبيل المثال لا الحصر الضمانات الضمنية للقابلية للتسويق والملاءمة لغرض معيّن وعدم الانتهاك. ورغم أننا نستخدم تشفيرًا قويًا ومعتمدًا في هذا المجال، فإننا لا نضمن أن يعمل التطبيق دون انقطاع أو أخطاء، أو أن يلبّي متطلباتك، ولا يوجد إجراء أمني مضمون ألا يُخترق. تستخدم ميزات مثل النقل عبر Wi-Fi، غير المشفّر أثناء النقل، على مسؤوليتك وعلى الشبكات التي تثق بها فقط.",
+    "ur": "Privaro “جیسا ہے” اور “جیسا دستیاب ہے” کی بنیاد پر فراہم کیا جاتا ہے، کسی بھی قسم کی واضح یا ضمنی وارنٹی کے بغیر، بشمول قابلِ فروخت ہونے، کسی خاص مقصد کے لیے موزوں ہونے اور خلاف ورزی نہ کرنے کی ضمنی وارنٹیاں، لیکن انہی تک محدود نہیں۔ اگرچہ ہم مضبوط، انڈسٹری اسٹینڈرڈ انکرپشن استعمال کرتے ہیں، ہم یہ ضمانت نہیں دیتے کہ ایپ بلا تعطل یا بغیر غلطی کے چلے گی، یا آپ کی ضروریات پوری کرے گی، اور کسی بھی حفاظتی اقدام کے ناقابلِ تسخیر ہونے کی ضمانت نہیں ہے۔ وائی فائی ٹرانسفر جیسے فیچرز، جو منتقلی کے دوران انکرپٹ نہیں ہوتے، آپ اپنے خطرے پر اور صرف قابلِ اعتماد نیٹ ورکس پر استعمال کرتے ہیں۔"
   },
   "terms_s6_p2": {
     "en": "Privaro is a consumer software tool, not a guarantee of safety. We do not warrant that it will protect your content against all threats, including determined attackers, forensic examination of a device, malware, vulnerabilities in the operating system or third-party components, or legal or physical compulsion. You are responsible for evaluating whether the app is suitable for your particular needs and threat model.",
@@ -450,10 +450,10 @@
     "zh-Hant": "Privaro 是一款消費性軟體工具，並非安全保證。我們不保證它能保護你的內容免受所有威脅，包括蓄意的攻擊者、裝置的鑑識檢查、惡意軟體、作業系統或第三方元件的漏洞，或法律或人身上的強迫。你有責任評估本 App 是否適合你的特定需求和威脅模型。",
     "ru": "Privaro — это потребительский программный инструмент, а не гарантия безопасности. Мы не гарантируем, что он защитит ваш контент от всех угроз, включая целеустремлённых злоумышленников, криминалистическое исследование устройства, вредоносное ПО, уязвимости операционной системы или сторонних компонентов, а также юридическое или физическое принуждение. Вы сами оцениваете, подходит ли приложение для ваших конкретных потребностей и модели угроз.",
     "tr": "Privaro bir tüketici yazılım aracıdır, güvenlik garantisi değildir. İçeriğinizi kararlı saldırganlar, bir aygıtın adli incelemesi, kötü amaçlı yazılımlar, işletim sistemindeki veya üçüncü taraf bileşenlerdeki güvenlik açıkları ya da hukuki veya fiziksel zorlama dahil olmak üzere tüm tehditlere karşı koruyacağını garanti etmeyiz. Uygulamanın kendi ihtiyaçlarınıza ve tehdit modelinize uygun olup olmadığını değerlendirmek sizin sorumluluğunuzdadır.",
-    "ar": "Privaro أداة برمجية استهلاكية، وليس ضمانًا للأمان. لا نضمن أنه سيحمي محتواك من جميع التهديدات، بما في ذلك المهاجمون المصمّمون، والفحص الجنائي للجهاز، والبرمجيات الخبيثة، والثغرات في نظام التشغيل أو المكوّنات التابعة لجهات خارجية، أو الإكراه القانوني أو الجسدي. أنت مسؤول عن تقييم مدى ملاءمة التطبيق لاحتياجاتك الخاصة ونموذج التهديدات لديك.",
+    "id": "Privaro adalah alat perangkat lunak konsumen, bukan jaminan keselamatan. Kami tidak menjamin bahwa aplikasi ini akan melindungi konten Anda dari semua ancaman, termasuk penyerang yang gigih, pemeriksaan forensik perangkat, malware, kerentanan pada sistem operasi atau komponen pihak ketiga, atau paksaan hukum maupun fisik. Anda bertanggung jawab untuk menilai apakah aplikasi ini sesuai dengan kebutuhan dan model ancaman Anda.",
     "hi": "Privaro एक उपभोक्ता सॉफ़्टवेयर टूल है, सुरक्षा की गारंटी नहीं। हम यह वारंटी नहीं देते कि यह आपके कंटेंट को सभी ख़तरों से बचाएगा, जिनमें दृढ़ हमलावर, किसी डिवाइस की फ़ोरेंसिक जाँच, मैलवेयर, ऑपरेटिंग सिस्टम या थर्ड-पार्टी कंपोनेंट की कमज़ोरियाँ, या क़ानूनी या शारीरिक दबाव शामिल हैं। यह आकलन करना आपकी ज़िम्मेदारी है कि ऐप आपकी ख़ास ज़रूरतों और ख़तरे के मॉडल के लिए उपयुक्त है या नहीं।",
-    "ur": "Privaro ایک صارف سافٹ ویئر ٹول ہے، حفاظت کی ضمانت نہیں۔ ہم یہ ضمانت نہیں دیتے کہ یہ آپ کے مواد کو تمام خطرات سے بچائے گا، بشمول پُرعزم حملہ آور، کسی ڈیوائس کا فرانزک معائنہ، میلویئر، آپریٹنگ سسٹم یا تیسرے فریق کے اجزاء کی کمزوریاں، یا قانونی یا جسمانی جبر۔ یہ جانچنا آپ کی ذمہ داری ہے کہ ایپ آپ کی مخصوص ضروریات اور خطرے کے ماڈل کے لیے موزوں ہے یا نہیں۔",
-    "id": "Privaro adalah alat perangkat lunak konsumen, bukan jaminan keselamatan. Kami tidak menjamin bahwa aplikasi ini akan melindungi konten Anda dari semua ancaman, termasuk penyerang yang gigih, pemeriksaan forensik perangkat, malware, kerentanan pada sistem operasi atau komponen pihak ketiga, atau paksaan hukum maupun fisik. Anda bertanggung jawab untuk menilai apakah aplikasi ini sesuai dengan kebutuhan dan model ancaman Anda."
+    "ar": "Privaro أداة برمجية استهلاكية، وليس ضمانًا للأمان. لا نضمن أنه سيحمي محتواك من جميع التهديدات، بما في ذلك المهاجمون المصمّمون، والفحص الجنائي للجهاز، والبرمجيات الخبيثة، والثغرات في نظام التشغيل أو المكوّنات التابعة لجهات خارجية، أو الإكراه القانوني أو الجسدي. أنت مسؤول عن تقييم مدى ملاءمة التطبيق لاحتياجاتك الخاصة ونموذج التهديدات لديك.",
+    "ur": "Privaro ایک صارف سافٹ ویئر ٹول ہے، حفاظت کی ضمانت نہیں۔ ہم یہ ضمانت نہیں دیتے کہ یہ آپ کے مواد کو تمام خطرات سے بچائے گا، بشمول پُرعزم حملہ آور، کسی ڈیوائس کا فرانزک معائنہ، میلویئر، آپریٹنگ سسٹم یا تیسرے فریق کے اجزاء کی کمزوریاں، یا قانونی یا جسمانی جبر۔ یہ جانچنا آپ کی ذمہ داری ہے کہ ایپ آپ کی مخصوص ضروریات اور خطرے کے ماڈل کے لیے موزوں ہے یا نہیں۔"
   },
   "terms_s7_h": {
     "en": "Limitation of liability",
@@ -469,10 +469,10 @@
     "zh-Hant": "責任限制",
     "ru": "Ограничение ответственности",
     "tr": "Sorumluluğun sınırlandırılması",
-    "ar": "تحديد المسؤولية",
+    "id": "Batasan tanggung jawab",
     "hi": "दायित्व की सीमा",
-    "ur": "ذمہ داری کی حد",
-    "id": "Batasan tanggung jawab"
+    "ar": "تحديد المسؤولية",
+    "ur": "ذمہ داری کی حد"
   },
   "terms_s7_p1": {
     "en": "To the maximum extent permitted by law, in no event will we be liable for any indirect, incidental, special, consequential, or punitive damages, or for any loss of data, profits, or content, arising out of or relating to your use of (or inability to use) Privaro, even if advised of the possibility of such damages. Our total liability for any claim relating to the app will not exceed the amount you paid us for the app in the twelve months before the claim, or, where no amount was paid, a nominal sum.",
@@ -488,10 +488,10 @@
     "zh-Hant": "在法律允許的最大範圍內，對於因你使用（或無法使用）Privaro 所引起或與之相關的任何間接、附帶、特殊、衍生性或懲罰性損害，或任何資料、利潤或內容的損失，即使我們已被告知此類損害的可能性，我們在任何情況下均不負責。我們對與本 App 相關的任何索賠所負的總責任，不會超過你在索賠前十二個月內為本 App 支付給我們的金額；若未支付任何金額，則以象徵性金額為限。",
     "ru": "В максимальной степени, допустимой законом, мы ни при каких обстоятельствах не несём ответственности за любые косвенные, случайные, особые, последующие или штрафные убытки, а также за любую потерю данных, прибыли или контента, возникшие в связи с использованием вами Privaro (или невозможностью его использовать), даже если нас предупреждали о возможности таких убытков. Наша совокупная ответственность по любому требованию, связанному с приложением, не превысит сумму, которую вы заплатили нам за приложение в течение двенадцати месяцев до предъявления требования, а если оплаты не было — номинальную сумму.",
     "tr": "Yasaların izin verdiği azami ölçüde, Privaro'yu kullanmanızdan (veya kullanamamanızdan) kaynaklanan ya da bununla ilgili hiçbir dolaylı, arızi, özel, sonuç olarak ortaya çıkan veya cezai zarardan ya da herhangi bir veri, kâr veya içerik kaybından, bu tür zararların olasılığı bize bildirilmiş olsa bile, hiçbir durumda sorumlu olmayacağız. Uygulamayla ilgili herhangi bir talep için toplam sorumluluğumuz, talepten önceki on iki ay içinde uygulama için bize ödediğiniz tutarı veya hiçbir ödeme yapılmadıysa sembolik bir tutarı aşmayacaktır.",
-    "ar": "إلى أقصى حد يسمح به القانون، لن نكون مسؤولين بأي حال عن أي أضرار غير مباشرة أو عرضية أو خاصة أو تبعية أو عقابية، أو عن أي فقدان للبيانات أو الأرباح أو المحتوى، ينشأ عن استخدامك لـ Privaro (أو عدم قدرتك على استخدامه) أو يتعلق به، حتى لو أُبلغنا باحتمال وقوع مثل هذه الأضرار. لن تتجاوز مسؤوليتنا الإجمالية عن أي مطالبة تتعلق بالتطبيق المبلغ الذي دفعته لنا مقابل التطبيق خلال الاثني عشر شهرًا السابقة للمطالبة، أو مبلغًا رمزيًا إذا لم يُدفع أي مبلغ.",
+    "id": "Sejauh diizinkan oleh hukum, dalam keadaan apa pun kami tidak akan bertanggung jawab atas kerugian tidak langsung, insidental, khusus, konsekuensial, atau bersifat hukuman, atau atas kehilangan data, keuntungan, atau konten, yang timbul dari atau berkaitan dengan penggunaan (atau ketidakmampuan menggunakan) Privaro oleh Anda, bahkan jika kami telah diberi tahu tentang kemungkinan kerugian tersebut. Total tanggung jawab kami atas klaim apa pun yang berkaitan dengan aplikasi tidak akan melebihi jumlah yang Anda bayarkan kepada kami untuk aplikasi dalam dua belas bulan sebelum klaim, atau, jika tidak ada jumlah yang dibayarkan, sejumlah nominal.",
     "hi": "क़ानून द्वारा अनुमत अधिकतम सीमा तक, Privaro के आपके उपयोग (या उपयोग न कर पाने) से उत्पन्न या उससे संबंधित किसी भी अप्रत्यक्ष, आकस्मिक, विशेष, परिणामी या दंडात्मक नुक़सान, या डेटा, मुनाफ़े या कंटेंट के किसी भी नुक़सान के लिए हम किसी भी स्थिति में उत्तरदायी नहीं होंगे, भले ही हमें ऐसे नुक़सान की संभावना के बारे में बताया गया हो। ऐप से संबंधित किसी भी दावे के लिए हमारा कुल दायित्व उस राशि से अधिक नहीं होगा जो आपने दावे से पहले के बारह महीनों में ऐप के लिए हमें चुकाई हो, या, अगर कोई राशि नहीं चुकाई गई हो, तो एक नाममात्र राशि से अधिक नहीं होगा।",
-    "ur": "قانون کی اجازت کی زیادہ سے زیادہ حد تک، Privaro کے آپ کے استعمال (یا استعمال نہ کر سکنے) سے پیدا ہونے والے یا اس سے متعلق کسی بھی بالواسطہ، اتفاقی، خصوصی، نتیجہ خیز یا تعزیری نقصانات، یا ڈیٹا، منافع یا مواد کے کسی بھی نقصان کے لیے ہم کسی صورت ذمہ دار نہیں ہوں گے، چاہے ہمیں ایسے نقصانات کے امکان سے آگاہ کیا گیا ہو۔ ایپ سے متعلق کسی بھی دعوے کے لیے ہماری کل ذمہ داری اس رقم سے زیادہ نہیں ہوگی جو آپ نے دعوے سے پہلے کے بارہ مہینوں میں ایپ کے لیے ہمیں ادا کی ہو، یا، اگر کوئی رقم ادا نہ کی گئی ہو، تو ایک برائے نام رقم سے زیادہ نہیں ہوگی۔",
-    "id": "Sejauh diizinkan oleh hukum, dalam keadaan apa pun kami tidak akan bertanggung jawab atas kerugian tidak langsung, insidental, khusus, konsekuensial, atau bersifat hukuman, atau atas kehilangan data, keuntungan, atau konten, yang timbul dari atau berkaitan dengan penggunaan (atau ketidakmampuan menggunakan) Privaro oleh Anda, bahkan jika kami telah diberi tahu tentang kemungkinan kerugian tersebut. Total tanggung jawab kami atas klaim apa pun yang berkaitan dengan aplikasi tidak akan melebihi jumlah yang Anda bayarkan kepada kami untuk aplikasi dalam dua belas bulan sebelum klaim, atau, jika tidak ada jumlah yang dibayarkan, sejumlah nominal."
+    "ar": "إلى أقصى حد يسمح به القانون، لن نكون مسؤولين بأي حال عن أي أضرار غير مباشرة أو عرضية أو خاصة أو تبعية أو عقابية، أو عن أي فقدان للبيانات أو الأرباح أو المحتوى، ينشأ عن استخدامك لـ Privaro (أو عدم قدرتك على استخدامه) أو يتعلق به، حتى لو أُبلغنا باحتمال وقوع مثل هذه الأضرار. لن تتجاوز مسؤوليتنا الإجمالية عن أي مطالبة تتعلق بالتطبيق المبلغ الذي دفعته لنا مقابل التطبيق خلال الاثني عشر شهرًا السابقة للمطالبة، أو مبلغًا رمزيًا إذا لم يُدفع أي مبلغ.",
+    "ur": "قانون کی اجازت کی زیادہ سے زیادہ حد تک، Privaro کے آپ کے استعمال (یا استعمال نہ کر سکنے) سے پیدا ہونے والے یا اس سے متعلق کسی بھی بالواسطہ، اتفاقی، خصوصی، نتیجہ خیز یا تعزیری نقصانات، یا ڈیٹا، منافع یا مواد کے کسی بھی نقصان کے لیے ہم کسی صورت ذمہ دار نہیں ہوں گے، چاہے ہمیں ایسے نقصانات کے امکان سے آگاہ کیا گیا ہو۔ ایپ سے متعلق کسی بھی دعوے کے لیے ہماری کل ذمہ داری اس رقم سے زیادہ نہیں ہوگی جو آپ نے دعوے سے پہلے کے بارہ مہینوں میں ایپ کے لیے ہمیں ادا کی ہو، یا، اگر کوئی رقم ادا نہ کی گئی ہو، تو ایک برائے نام رقم سے زیادہ نہیں ہوگی۔"
   },
   "terms_s7_p2": {
     "en": "Some jurisdictions do not allow the exclusion of implied warranties or the limitation of certain damages, so some of the above may not apply to you. In that case, our liability is limited to the maximum extent permitted by applicable law, and nothing in these Terms limits or excludes any rights you have that cannot be waived under the mandatory law of your country of residence.",
@@ -507,10 +507,10 @@
     "zh-Hant": "部分司法管轄區不允許排除默示保證或限制特定損害，因此上述部分內容可能不適用於你。在這種情況下，我們的責任將限制在適用法律允許的最大範圍內，且本條款的任何內容均不限制或排除你依居住國強制性法律所享有、不得拋棄的任何權利。",
     "ru": "Законодательство некоторых юрисдикций не допускает исключения подразумеваемых гарантий или ограничения определённых убытков, поэтому часть изложенного выше может к вам не применяться. В этом случае наша ответственность ограничивается в максимальной степени, допустимой применимым законодательством, и ничто в настоящих Условиях не ограничивает и не исключает права, от которых нельзя отказаться по императивному законодательству страны вашего проживания.",
     "tr": "Bazı yargı bölgeleri zımni garantilerin hariç tutulmasına veya belirli zararların sınırlandırılmasına izin vermez; bu nedenle yukarıdakilerin bir kısmı sizin için geçerli olmayabilir. Bu durumda sorumluluğumuz yürürlükteki yasanın izin verdiği azami ölçüde sınırlıdır ve bu Koşulların hiçbir hükmü, ikamet ettiğiniz ülkenin emredici hukuku uyarınca feragat edilemeyen haklarınızı sınırlamaz veya hariç tutmaz.",
-    "ar": "لا تسمح بعض الولايات القضائية باستبعاد الضمانات الضمنية أو تحديد أضرار معيّنة، لذا قد لا ينطبق عليك بعض ما سبق. وفي هذه الحالة، تكون مسؤوليتنا محدودة إلى أقصى حد يسمح به القانون المعمول به، ولا يحدّ أي شيء في هذه الشروط من أي حقوق لك لا يجوز التنازل عنها بموجب القانون الإلزامي في بلد إقامتك، ولا يستبعدها.",
+    "id": "Beberapa yurisdiksi tidak mengizinkan pengecualian jaminan tersirat atau pembatasan kerugian tertentu, sehingga sebagian ketentuan di atas mungkin tidak berlaku bagi Anda. Dalam hal tersebut, tanggung jawab kami dibatasi sejauh yang diizinkan oleh hukum yang berlaku, dan tidak ada dalam Ketentuan ini yang membatasi atau mengecualikan hak apa pun yang Anda miliki yang tidak dapat dikesampingkan berdasarkan hukum memaksa di negara tempat tinggal Anda.",
     "hi": "कुछ क्षेत्राधिकार निहित वारंटियों को बाहर रखने या कुछ नुक़सानों को सीमित करने की अनुमति नहीं देते, इसलिए ऊपर दी गई कुछ बातें आप पर लागू नहीं हो सकतीं। ऐसी स्थिति में, हमारा दायित्व लागू क़ानून द्वारा अनुमत अधिकतम सीमा तक सीमित है, और इन शर्तों में कुछ भी आपके उन अधिकारों को सीमित या बाहर नहीं करता जिन्हें आपके निवास वाले देश के अनिवार्य क़ानून के तहत छोड़ा नहीं जा सकता।",
-    "ur": "کچھ دائرۂ اختیار ضمنی وارنٹیوں کو خارج کرنے یا بعض نقصانات کو محدود کرنے کی اجازت نہیں دیتے، اس لیے اوپر دی گئی کچھ باتیں آپ پر لاگو نہیں ہو سکتیں۔ ایسی صورت میں ہماری ذمہ داری نافذ قانون کی اجازت کی زیادہ سے زیادہ حد تک محدود ہے، اور ان شرائط میں کوئی بات آپ کے ان حقوق کو محدود یا خارج نہیں کرتی جن سے آپ کے ملکِ رہائش کے لازمی قانون کے تحت دستبردار نہیں ہوا جا سکتا۔",
-    "id": "Beberapa yurisdiksi tidak mengizinkan pengecualian jaminan tersirat atau pembatasan kerugian tertentu, sehingga sebagian ketentuan di atas mungkin tidak berlaku bagi Anda. Dalam hal tersebut, tanggung jawab kami dibatasi sejauh yang diizinkan oleh hukum yang berlaku, dan tidak ada dalam Ketentuan ini yang membatasi atau mengecualikan hak apa pun yang Anda miliki yang tidak dapat dikesampingkan berdasarkan hukum memaksa di negara tempat tinggal Anda."
+    "ar": "لا تسمح بعض الولايات القضائية باستبعاد الضمانات الضمنية أو تحديد أضرار معيّنة، لذا قد لا ينطبق عليك بعض ما سبق. وفي هذه الحالة، تكون مسؤوليتنا محدودة إلى أقصى حد يسمح به القانون المعمول به، ولا يحدّ أي شيء في هذه الشروط من أي حقوق لك لا يجوز التنازل عنها بموجب القانون الإلزامي في بلد إقامتك، ولا يستبعدها.",
+    "ur": "کچھ دائرۂ اختیار ضمنی وارنٹیوں کو خارج کرنے یا بعض نقصانات کو محدود کرنے کی اجازت نہیں دیتے، اس لیے اوپر دی گئی کچھ باتیں آپ پر لاگو نہیں ہو سکتیں۔ ایسی صورت میں ہماری ذمہ داری نافذ قانون کی اجازت کی زیادہ سے زیادہ حد تک محدود ہے، اور ان شرائط میں کوئی بات آپ کے ان حقوق کو محدود یا خارج نہیں کرتی جن سے آپ کے ملکِ رہائش کے لازمی قانون کے تحت دستبردار نہیں ہوا جا سکتا۔"
   },
   "terms_s8_h": {
     "en": "Indemnification",
@@ -526,10 +526,10 @@
     "zh-Hant": "賠償",
     "ru": "Возмещение убытков",
     "tr": "Tazminat",
-    "ar": "التعويض",
+    "id": "Ganti rugi",
     "hi": "क्षतिपूर्ति",
-    "ur": "تلافی",
-    "id": "Ganti rugi"
+    "ar": "التعويض",
+    "ur": "تلافی"
   },
   "terms_s8_p1": {
     "en": "To the maximum extent permitted by law, you agree to indemnify and hold harmless Erdinc Zarbo from and against any claims, damages, losses, liabilities, and expenses (including reasonable legal fees) arising out of or related to: the content you store or share; your use or misuse of the app; your violation of these Terms; or your violation of any law or the rights of any third party.",
@@ -545,10 +545,10 @@
     "zh-Hant": "在法律允許的最大範圍內，你同意就因下列事項所引起或相關的任何索賠、損害、損失、責任和費用（包括合理的律師費），賠償 Erdinc Zarbo 並使其免受損害：你儲存或分享的內容；你使用或濫用本 App；你違反本條款；或你違反任何法律或任何第三方的權利。",
     "ru": "В максимальной степени, допустимой законом, вы соглашаетесь возместить убытки Erdinc Zarbo и оградить его от любых претензий, убытков, потерь, обязательств и расходов (включая разумные расходы на юристов), возникших в связи с: контентом, который вы храните или распространяете; использованием вами приложения или злоупотреблением им; нарушением вами настоящих Условий; нарушением вами любого закона или прав любой третьей стороны.",
     "tr": "Yasaların izin verdiği azami ölçüde, sakladığınız veya paylaştığınız içerikten; uygulamayı kullanmanızdan veya kötüye kullanmanızdan; bu Koşulları ihlal etmenizden; ya da herhangi bir yasayı veya üçüncü bir tarafın haklarını ihlal etmenizden kaynaklanan veya bunlarla ilgili her türlü talep, zarar, kayıp, yükümlülük ve masrafa (makul avukatlık ücretleri dahil) karşı Erdinc Zarbo'yu tazmin etmeyi ve zarar görmemesini sağlamayı kabul edersiniz.",
-    "ar": "إلى أقصى حد يسمح به القانون، توافق على تعويض Erdinc Zarbo وإبراء ذمته من أي مطالبات وأضرار وخسائر والتزامات ونفقات (بما في ذلك أتعاب المحاماة المعقولة) تنشأ عن أو تتعلق بما يلي: المحتوى الذي تخزّنه أو تشاركه؛ أو استخدامك للتطبيق أو إساءة استخدامه؛ أو انتهاكك لهذه الشروط؛ أو انتهاكك لأي قانون أو لحقوق أي طرف ثالث.",
+    "id": "Sejauh diizinkan oleh hukum, Anda setuju untuk mengganti rugi dan membebaskan Erdinc Zarbo dari segala klaim, kerugian, kehilangan, kewajiban, dan biaya (termasuk biaya hukum yang wajar) yang timbul dari atau berkaitan dengan: konten yang Anda simpan atau bagikan; penggunaan atau penyalahgunaan aplikasi oleh Anda; pelanggaran Anda terhadap Ketentuan ini; atau pelanggaran Anda terhadap hukum apa pun atau hak pihak ketiga mana pun.",
     "hi": "क़ानून द्वारा अनुमत अधिकतम सीमा तक, आप Erdinc Zarbo को इनसे उत्पन्न या संबंधित किसी भी दावे, नुक़सान, हानि, दायित्व और ख़र्च (उचित क़ानूनी शुल्क सहित) से क्षतिपूर्ति देने और सुरक्षित रखने के लिए सहमत हैं: आपके द्वारा रखा या शेयर किया गया कंटेंट; ऐप का आपका उपयोग या दुरुपयोग; इन शर्तों का आपके द्वारा उल्लंघन; या किसी क़ानून या किसी तीसरे पक्ष के अधिकारों का आपके द्वारा उल्लंघन।",
-    "ur": "قانون کی اجازت کی زیادہ سے زیادہ حد تک، آپ Erdinc Zarbo کو ان سے پیدا ہونے والے یا متعلق کسی بھی دعوے، نقصان، خسارے، ذمہ داری اور اخراجات (بشمول معقول قانونی فیس) کی تلافی کرنے اور انہیں محفوظ رکھنے سے اتفاق کرتے ہیں: آپ کا رکھا یا شیئر کیا گیا مواد؛ ایپ کا آپ کا استعمال یا غلط استعمال؛ ان شرائط کی آپ کی جانب سے خلاف ورزی؛ یا کسی قانون یا کسی تیسرے فریق کے حقوق کی آپ کی جانب سے خلاف ورزی۔",
-    "id": "Sejauh diizinkan oleh hukum, Anda setuju untuk mengganti rugi dan membebaskan Erdinc Zarbo dari segala klaim, kerugian, kehilangan, kewajiban, dan biaya (termasuk biaya hukum yang wajar) yang timbul dari atau berkaitan dengan: konten yang Anda simpan atau bagikan; penggunaan atau penyalahgunaan aplikasi oleh Anda; pelanggaran Anda terhadap Ketentuan ini; atau pelanggaran Anda terhadap hukum apa pun atau hak pihak ketiga mana pun."
+    "ar": "إلى أقصى حد يسمح به القانون، توافق على تعويض Erdinc Zarbo وإبراء ذمته من أي مطالبات وأضرار وخسائر والتزامات ونفقات (بما في ذلك أتعاب المحاماة المعقولة) تنشأ عن أو تتعلق بما يلي: المحتوى الذي تخزّنه أو تشاركه؛ أو استخدامك للتطبيق أو إساءة استخدامه؛ أو انتهاكك لهذه الشروط؛ أو انتهاكك لأي قانون أو لحقوق أي طرف ثالث.",
+    "ur": "قانون کی اجازت کی زیادہ سے زیادہ حد تک، آپ Erdinc Zarbo کو ان سے پیدا ہونے والے یا متعلق کسی بھی دعوے، نقصان، خسارے، ذمہ داری اور اخراجات (بشمول معقول قانونی فیس) کی تلافی کرنے اور انہیں محفوظ رکھنے سے اتفاق کرتے ہیں: آپ کا رکھا یا شیئر کیا گیا مواد؛ ایپ کا آپ کا استعمال یا غلط استعمال؛ ان شرائط کی آپ کی جانب سے خلاف ورزی؛ یا کسی قانون یا کسی تیسرے فریق کے حقوق کی آپ کی جانب سے خلاف ورزی۔"
   },
   "terms_s9_h": {
     "en": "Apple",
@@ -564,10 +564,10 @@
     "zh-Hant": "Apple",
     "ru": "Apple",
     "tr": "Apple",
-    "ar": "Apple",
+    "id": "Apple",
     "hi": "Apple",
-    "ur": "Apple",
-    "id": "Apple"
+    "ar": "Apple",
+    "ur": "Apple"
   },
   "terms_s9_p1": {
     "en": "These Terms are between you and us, not with Apple. Apple is not responsible for the app or its content. Apple and its subsidiaries are third-party beneficiaries of these Terms and may enforce them against you. Your use of the app must also comply with the Apple Media Services Terms and Conditions.",
@@ -583,10 +583,10 @@
     "zh-Hant": "本條款是你與我們之間的約定，而非與 Apple 之間的約定。Apple 不對本 App 或其內容負責。Apple 及其子公司是本條款的第三方受益人，並可對你執行本條款。你對本 App 的使用也必須遵守 Apple 媒體服務條款與條件。",
     "ru": "Настоящие Условия заключаются между вами и нами, а не с Apple. Apple не несёт ответственности за приложение и его содержимое. Apple и её дочерние компании являются сторонними бенефициарами настоящих Условий и могут требовать их соблюдения от вас. Использование вами приложения также должно соответствовать Условиям и положениям мультимедийных сервисов Apple.",
     "tr": "Bu Koşullar Apple ile değil, sizinle bizim aramızdadır. Apple, uygulamadan veya içeriğinden sorumlu değildir. Apple ve bağlı şirketleri bu Koşulların üçüncü taraf lehtarlarıdır ve bunları size karşı uygulayabilir. Uygulamayı kullanımınız ayrıca Apple Medya Hizmetleri Şartlar ve Koşulları'na uygun olmalıdır.",
-    "ar": "هذه الشروط مبرمة بينك وبيننا، وليس مع Apple. Apple غير مسؤولة عن التطبيق أو محتواه. تُعدّ Apple وشركاتها التابعة جهات مستفيدة من الغير في هذه الشروط، ويحق لها إنفاذها في مواجهتك. ويجب أن يتوافق استخدامك للتطبيق أيضًا مع شروط وأحكام خدمات الوسائط من Apple.",
+    "id": "Ketentuan ini berlaku antara Anda dan kami, bukan dengan Apple. Apple tidak bertanggung jawab atas aplikasi atau kontennya. Apple dan anak perusahaannya adalah pihak ketiga penerima manfaat dari Ketentuan ini dan dapat memberlakukannya terhadap Anda. Penggunaan aplikasi oleh Anda juga harus mematuhi Syarat dan Ketentuan Layanan Media Apple.",
     "hi": "ये शर्तें आपके और हमारे बीच हैं, Apple के साथ नहीं। ऐप या उसके कंटेंट के लिए Apple ज़िम्मेदार नहीं है। Apple और उसकी सहायक कंपनियाँ इन शर्तों की तृतीय-पक्ष लाभार्थी हैं और इन्हें आप पर लागू कर सकती हैं। ऐप के आपके उपयोग को Apple मीडिया सेवा नियम और शर्तों का भी पालन करना होगा।",
-    "ur": "یہ شرائط آپ اور ہمارے درمیان ہیں، Apple کے ساتھ نہیں۔ Apple ایپ یا اس کے مواد کا ذمہ دار نہیں ہے۔ Apple اور اس کی ذیلی کمپنیاں ان شرائط کی تیسرے فریق کی مستفید ہیں اور انہیں آپ پر نافذ کر سکتی ہیں۔ ایپ کا آپ کا استعمال Apple میڈیا سروسز کی شرائط و ضوابط کے بھی مطابق ہونا چاہیے۔",
-    "id": "Ketentuan ini berlaku antara Anda dan kami, bukan dengan Apple. Apple tidak bertanggung jawab atas aplikasi atau kontennya. Apple dan anak perusahaannya adalah pihak ketiga penerima manfaat dari Ketentuan ini dan dapat memberlakukannya terhadap Anda. Penggunaan aplikasi oleh Anda juga harus mematuhi Syarat dan Ketentuan Layanan Media Apple."
+    "ar": "هذه الشروط مبرمة بينك وبيننا، وليس مع Apple. Apple غير مسؤولة عن التطبيق أو محتواه. تُعدّ Apple وشركاتها التابعة جهات مستفيدة من الغير في هذه الشروط، ويحق لها إنفاذها في مواجهتك. ويجب أن يتوافق استخدامك للتطبيق أيضًا مع شروط وأحكام خدمات الوسائط من Apple.",
+    "ur": "یہ شرائط آپ اور ہمارے درمیان ہیں، Apple کے ساتھ نہیں۔ Apple ایپ یا اس کے مواد کا ذمہ دار نہیں ہے۔ Apple اور اس کی ذیلی کمپنیاں ان شرائط کی تیسرے فریق کی مستفید ہیں اور انہیں آپ پر نافذ کر سکتی ہیں۔ ایپ کا آپ کا استعمال Apple میڈیا سروسز کی شرائط و ضوابط کے بھی مطابق ہونا چاہیے۔"
   },
   "terms_s10_h": {
     "en": "Changes to these Terms",
@@ -602,10 +602,10 @@
     "zh-Hant": "本條款的變更",
     "ru": "Изменения этих Условий",
     "tr": "Bu Koşullardaki değişiklikler",
-    "ar": "التغييرات على هذه الشروط",
+    "id": "Perubahan pada Ketentuan ini",
     "hi": "इन शर्तों में बदलाव",
-    "ur": "ان شرائط میں تبدیلیاں",
-    "id": "Perubahan pada Ketentuan ini"
+    "ar": "التغييرات على هذه الشروط",
+    "ur": "ان شرائط میں تبدیلیاں"
   },
   "terms_s10_p1": {
     "en": "We may update these Terms from time to time. We will revise the \"Last updated\" date above, and significant changes will be reflected in the app or on our website. Your continued use of the app after changes take effect constitutes acceptance of the updated Terms.",
@@ -621,10 +621,10 @@
     "zh-Hant": "我們可能會不時更新本條款。屆時我們會修改上方的「最後更新」日期，重大變更會在 App 中或我們的網站上說明。變更生效後你繼續使用本 App，即表示你接受更新後的條款。",
     "ru": "Мы можем время от времени обновлять эти Условия. Мы изменим дату «Последнее обновление» выше, а о существенных изменениях сообщим в приложении или на нашем сайте. Продолжая пользоваться приложением после вступления изменений в силу, вы принимаете обновлённые Условия.",
     "tr": "Bu Koşulları zaman zaman güncelleyebiliriz. Yukarıdaki “Son güncelleme” tarihini değiştiririz ve önemli değişiklikleri uygulamada veya web sitemizde belirtiriz. Değişiklikler yürürlüğe girdikten sonra uygulamayı kullanmaya devam etmeniz, güncellenmiş Koşulları kabul ettiğiniz anlamına gelir.",
-    "ar": "قد نحدّث هذه الشروط من حين لآخر. سنعدّل تاريخ «آخر تحديث» أعلاه، وستظهر التغييرات المهمة في التطبيق أو على موقعنا. ويُعدّ استمرارك في استخدام التطبيق بعد سريان التغييرات قبولًا للشروط المحدّثة.",
+    "id": "Kami dapat memperbarui Ketentuan ini dari waktu ke waktu. Kami akan merevisi tanggal “Terakhir diperbarui” di atas, dan perubahan penting akan ditampilkan di aplikasi atau di situs web kami. Dengan terus menggunakan aplikasi setelah perubahan berlaku, Anda dianggap menerima Ketentuan yang diperbarui.",
     "hi": "हम समय-समय पर इन शर्तों को अपडेट कर सकते हैं। हम ऊपर दी गई “अंतिम अपडेट” तिथि बदल देंगे, और बड़े बदलावों की जानकारी ऐप में या हमारी वेबसाइट पर दी जाएगी। बदलाव लागू होने के बाद ऐप का उपयोग जारी रखने का मतलब है कि आप अपडेट की गई शर्तें स्वीकार करते हैं।",
-    "ur": "ہم وقتاً فوقتاً ان شرائط کو اپ ڈیٹ کر سکتے ہیں۔ ہم اوپر دی گئی “آخری اپ ڈیٹ” کی تاریخ بدل دیں گے، اور اہم تبدیلیاں ایپ میں یا ہماری ویب سائٹ پر ظاہر کی جائیں گی۔ تبدیلیاں نافذ ہونے کے بعد ایپ کا استعمال جاری رکھنا اپ ڈیٹ شدہ شرائط کی قبولیت ہے۔",
-    "id": "Kami dapat memperbarui Ketentuan ini dari waktu ke waktu. Kami akan merevisi tanggal “Terakhir diperbarui” di atas, dan perubahan penting akan ditampilkan di aplikasi atau di situs web kami. Dengan terus menggunakan aplikasi setelah perubahan berlaku, Anda dianggap menerima Ketentuan yang diperbarui."
+    "ar": "قد نحدّث هذه الشروط من حين لآخر. سنعدّل تاريخ «آخر تحديث» أعلاه، وستظهر التغييرات المهمة في التطبيق أو على موقعنا. ويُعدّ استمرارك في استخدام التطبيق بعد سريان التغييرات قبولًا للشروط المحدّثة.",
+    "ur": "ہم وقتاً فوقتاً ان شرائط کو اپ ڈیٹ کر سکتے ہیں۔ ہم اوپر دی گئی “آخری اپ ڈیٹ” کی تاریخ بدل دیں گے، اور اہم تبدیلیاں ایپ میں یا ہماری ویب سائٹ پر ظاہر کی جائیں گی۔ تبدیلیاں نافذ ہونے کے بعد ایپ کا استعمال جاری رکھنا اپ ڈیٹ شدہ شرائط کی قبولیت ہے۔"
   },
   "terms_s11_h": {
     "en": "Governing law",
@@ -640,10 +640,10 @@
     "zh-Hant": "準據法",
     "ru": "Применимое право",
     "tr": "Uygulanacak hukuk",
-    "ar": "القانون الحاكم",
+    "id": "Hukum yang berlaku",
     "hi": "लागू क़ानून",
-    "ur": "نافذ قانون",
-    "id": "Hukum yang berlaku"
+    "ar": "القانون الحاكم",
+    "ur": "نافذ قانون"
   },
   "terms_s11_p1": {
     "en": "These Terms are governed by the laws of the Netherlands, without regard to its conflict-of-laws rules, except where mandatory consumer-protection laws of your country of residence apply.",
@@ -659,10 +659,10 @@
     "zh-Hant": "本條款受荷蘭法律管轄，不適用其法律衝突規則，但你居住國的強制性消費者保護法律適用者除外。",
     "ru": "Настоящие Условия регулируются законодательством Нидерландов без учёта его коллизионных норм, за исключением случаев, когда применяются императивные законы о защите прав потребителей страны вашего проживания.",
     "tr": "Bu Koşullar, kanunlar ihtilafı kurallarına bakılmaksızın Hollanda yasalarına tabidir; ikamet ettiğiniz ülkenin emredici tüketici koruma yasalarının uygulandığı durumlar bunun dışındadır.",
-    "ar": "تخضع هذه الشروط لقوانين هولندا، دون اعتبار لقواعد تنازع القوانين فيها، إلا حيثما تنطبق قوانين حماية المستهلك الإلزامية في بلد إقامتك.",
+    "id": "Ketentuan ini diatur oleh hukum Belanda, tanpa memperhatikan aturan pertentangan hukumnya, kecuali jika hukum perlindungan konsumen yang bersifat memaksa di negara tempat tinggal Anda berlaku.",
     "hi": "ये शर्तें नीदरलैंड्स के क़ानूनों के अधीन हैं, उसके क़ानूनों के टकराव संबंधी नियमों की परवाह किए बिना, सिवाय वहाँ के जहाँ आपके निवास वाले देश के अनिवार्य उपभोक्ता-संरक्षण क़ानून लागू होते हैं।",
-    "ur": "یہ شرائط نیدرلینڈز کے قوانین کے تحت ہیں، اس کے قوانین کے تصادم کے اصولوں سے قطع نظر، سوائے وہاں کے جہاں آپ کے ملکِ رہائش کے لازمی صارف تحفظ کے قوانین لاگو ہوں۔",
-    "id": "Ketentuan ini diatur oleh hukum Belanda, tanpa memperhatikan aturan pertentangan hukumnya, kecuali jika hukum perlindungan konsumen yang bersifat memaksa di negara tempat tinggal Anda berlaku."
+    "ar": "تخضع هذه الشروط لقوانين هولندا، دون اعتبار لقواعد تنازع القوانين فيها، إلا حيثما تنطبق قوانين حماية المستهلك الإلزامية في بلد إقامتك.",
+    "ur": "یہ شرائط نیدرلینڈز کے قوانین کے تحت ہیں، اس کے قوانین کے تصادم کے اصولوں سے قطع نظر، سوائے وہاں کے جہاں آپ کے ملکِ رہائش کے لازمی صارف تحفظ کے قوانین لاگو ہوں۔"
   },
   "terms_s12_h": {
     "en": "Severability",
@@ -678,10 +678,10 @@
     "zh-Hant": "可分割性",
     "ru": "Делимость положений",
     "tr": "Bölünebilirlik",
-    "ar": "قابلية الفصل",
+    "id": "Keterpisahan",
     "hi": "पृथक्करणीयता",
-    "ur": "علیحدگی پذیری",
-    "id": "Keterpisahan"
+    "ar": "قابلية الفصل",
+    "ur": "علیحدگی پذیری"
   },
   "terms_s12_p1": {
     "en": "If any provision of these Terms is found to be invalid or unenforceable, that provision will be limited or removed to the minimum extent necessary, and the remaining provisions will remain in full force and effect.",
@@ -697,10 +697,10 @@
     "zh-Hant": "若本條款的任何規定被認定為無效或無法執行，該規定將在必要的最小範圍內受到限制或刪除，其餘規定仍具完全效力。",
     "ru": "Если какое-либо положение настоящих Условий будет признано недействительным или неисполнимым, оно будет ограничено или исключено в минимально необходимой степени, а остальные положения сохранят полную силу.",
     "tr": "Bu Koşulların herhangi bir hükmünün geçersiz veya uygulanamaz olduğu tespit edilirse, söz konusu hüküm gereken en az ölçüde sınırlandırılır veya kaldırılır ve diğer hükümler tam olarak yürürlükte kalmaya devam eder.",
-    "ar": "إذا تبيّن أن أي حكم من أحكام هذه الشروط باطل أو غير قابل للتنفيذ، فسيُقيَّد ذلك الحكم أو يُزال بالقدر الأدنى اللازم، وتبقى الأحكام الأخرى سارية ونافذة بالكامل.",
+    "id": "Jika ada ketentuan dalam Ketentuan ini yang dinyatakan tidak sah atau tidak dapat diberlakukan, ketentuan tersebut akan dibatasi atau dihapus sejauh minimum yang diperlukan, dan ketentuan lainnya tetap berlaku sepenuhnya.",
     "hi": "अगर इन शर्तों का कोई प्रावधान अमान्य या लागू न करने योग्य पाया जाता है, तो उस प्रावधान को ज़रूरी न्यूनतम सीमा तक सीमित या हटा दिया जाएगा, और बाकी प्रावधान पूरी तरह प्रभावी बने रहेंगे।",
-    "ur": "اگر ان شرائط کی کوئی شق غیر مؤثر یا ناقابلِ نفاذ پائی جائے، تو اس شق کو کم سے کم ضروری حد تک محدود یا ختم کر دیا جائے گا، اور باقی شقیں پوری طرح نافذ اور مؤثر رہیں گی۔",
-    "id": "Jika ada ketentuan dalam Ketentuan ini yang dinyatakan tidak sah atau tidak dapat diberlakukan, ketentuan tersebut akan dibatasi atau dihapus sejauh minimum yang diperlukan, dan ketentuan lainnya tetap berlaku sepenuhnya."
+    "ar": "إذا تبيّن أن أي حكم من أحكام هذه الشروط باطل أو غير قابل للتنفيذ، فسيُقيَّد ذلك الحكم أو يُزال بالقدر الأدنى اللازم، وتبقى الأحكام الأخرى سارية ونافذة بالكامل.",
+    "ur": "اگر ان شرائط کی کوئی شق غیر مؤثر یا ناقابلِ نفاذ پائی جائے، تو اس شق کو کم سے کم ضروری حد تک محدود یا ختم کر دیا جائے گا، اور باقی شقیں پوری طرح نافذ اور مؤثر رہیں گی۔"
   },
   "terms_s13_h": {
     "en": "Contact",
@@ -716,10 +716,10 @@
     "zh-Hant": "聯絡方式",
     "ru": "Контакты",
     "tr": "İletişim",
-    "ar": "التواصل",
+    "id": "Kontak",
     "hi": "संपर्क",
-    "ur": "رابطہ",
-    "id": "Kontak"
+    "ar": "التواصل",
+    "ur": "رابطہ"
   },
   "terms_s13_p1": {
     "en": "Questions about these Terms? Contact us at",
@@ -735,9 +735,9 @@
     "zh-Hant": "對本條款有疑問嗎？請透過以下方式聯絡我們：",
     "ru": "Есть вопросы об этих Условиях? Напишите нам:",
     "tr": "Bu Koşullar hakkında sorularınız mı var? Bize şu adresten ulaşın:",
-    "ar": "هل لديك أسئلة حول هذه الشروط؟ تواصل معنا على",
+    "id": "Ada pertanyaan tentang Ketentuan ini? Hubungi kami di",
     "hi": "इन शर्तों के बारे में कोई सवाल है? हमसे यहाँ संपर्क करें:",
-    "ur": "ان شرائط کے بارے میں سوالات ہیں؟ ہم سے یہاں رابطہ کریں:",
-    "id": "Ada pertanyaan tentang Ketentuan ini? Hubungi kami di"
+    "ar": "هل لديك أسئلة حول هذه الشروط؟ تواصل معنا على",
+    "ur": "ان شرائط کے بارے میں سوالات ہیں؟ ہم سے یہاں رابطہ کریں:"
   }
 }

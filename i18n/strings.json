@@ -13,10 +13,10 @@
     "zh-Hant": "Privaro：iPhone 上的私密照片與影片保險庫",
     "ru": "Privaro: личное хранилище фото и видео для iPhone",
     "tr": "Privaro: iPhone için gizli fotoğraf ve video kasası",
-    "ar": "‏Privaro: خزنة خاصة للصور والفيديوهات على iPhone",
+    "id": "Privaro: brankas foto dan video pribadi untuk iPhone",
     "hi": "Privaro: iPhone के लिए निजी फ़ोटो और वीडियो तिजोरी",
-    "ur": "‏Privaro: iPhone کے لیے نجی فوٹو اور ویڈیو والٹ",
-    "id": "Privaro: brankas foto dan video pribadi untuk iPhone"
+    "ar": "‏Privaro: خزنة خاصة للصور والفيديوهات على iPhone",
+    "ur": "‏Privaro: iPhone کے لیے نجی فوٹو اور ویڈیو والٹ"
   },
   "meta_desc_home": {
     "en": "Privaro keeps your private photos and videos encrypted on your iPhone, behind Face ID and a passcode of its own. No account, nothing uploaded.",
@@ -32,10 +32,10 @@
     "zh-Hant": "Privaro 將你的私密照片和影片加密保存在 iPhone 上，由 Face ID 和它自己的密碼保護。不需要帳號，也不會上傳任何內容。",
     "ru": "Privaro хранит ваши личные фото и видео зашифрованными на iPhone под защитой Face ID и собственного код-пароля. Без аккаунта, ничего не загружается в сеть.",
     "tr": "Privaro, gizli fotoğraflarınızı ve videolarınızı iPhone'unuzda şifreli olarak, Face ID ve kendine ait bir parolayla korur. Hesap yok, hiçbir şey yüklenmez.",
-    "ar": "يحفظ Privaro صورك وفيديوهاتك الخاصة مشفّرة على iPhone، محميّة بـ Face ID وبرمز دخول خاص به. بلا حساب، ولا يُرفع أي شيء.",
+    "id": "Privaro menyimpan foto dan video pribadi Anda dalam keadaan terenkripsi di iPhone, dilindungi Face ID dan kode sandinya sendiri. Tanpa akun, tidak ada yang diunggah.",
     "hi": "Privaro आपकी निजी फ़ोटो और वीडियो को आपके iPhone पर एन्क्रिप्ट करके, Face ID और अपने अलग पासकोड के पीछे सुरक्षित रखता है। कोई अकाउंट नहीं, कुछ भी अपलोड नहीं होता।",
-    "ur": "Privaro آپ کی نجی تصاویر اور ویڈیوز کو آپ کے iPhone پر انکرپٹ کر کے Face ID اور اپنے الگ پاس کوڈ کے پیچھے محفوظ رکھتا ہے۔ کوئی اکاؤنٹ نہیں، کچھ بھی اپ لوڈ نہیں ہوتا۔",
-    "id": "Privaro menyimpan foto dan video pribadi Anda dalam keadaan terenkripsi di iPhone, dilindungi Face ID dan kode sandinya sendiri. Tanpa akun, tidak ada yang diunggah."
+    "ar": "يحفظ Privaro صورك وفيديوهاتك الخاصة مشفّرة على iPhone، محميّة بـ Face ID وبرمز دخول خاص به. بلا حساب، ولا يُرفع أي شيء.",
+    "ur": "Privaro آپ کی نجی تصاویر اور ویڈیوز کو آپ کے iPhone پر انکرپٹ کر کے Face ID اور اپنے الگ پاس کوڈ کے پیچھے محفوظ رکھتا ہے۔ کوئی اکاؤنٹ نہیں، کچھ بھی اپ لوڈ نہیں ہوتا۔"
   },
   "nav_privacy": {
     "en": "Privacy",
@@ -51,29 +51,10 @@
     "zh-Hant": "隱私權",
     "ru": "Конфиденциальность",
     "tr": "Gizlilik",
-    "ar": "الخصوصية",
+    "id": "Privasi",
     "hi": "गोपनीयता",
-    "ur": "رازداری",
-    "id": "Privasi"
-  },
-  "nav_terms": {
-    "en": "Terms",
-    "es": "Términos",
-    "fr": "Conditions",
-    "de": "Nutzungsbedingungen",
-    "it": "Termini",
-    "pt-BR": "Termos",
-    "zh-Hans": "条款",
-    "ko": "약관",
-    "nl": "Voorwaarden",
-    "ja": "利用規約",
-    "zh-Hant": "條款",
-    "ru": "Условия",
-    "tr": "Koşullar",
-    "ar": "الشروط",
-    "hi": "शर्तें",
-    "ur": "شرائط",
-    "id": "Ketentuan"
+    "ar": "الخصوصية",
+    "ur": "رازداری"
   },
   "hero_lead": {
     "en": "Privaro is a vault for your iPhone. What you put in it is encrypted on the phone itself and only opens with Face ID or Privaro’s own passcode. There’s no account, and nothing is uploaded.",
@@ -89,10 +70,10 @@
     "zh-Hant": "Privaro 是 iPhone 上的保險庫。放進去的內容會在手機本身加密，只有 Face ID 或 Privaro 自己的密碼才能打開。不需要帳號，也不會上傳任何內容。",
     "ru": "Privaro — это хранилище для вашего iPhone. Всё, что вы в него кладёте, шифруется на самом телефоне и открывается только по Face ID или собственному код-паролю Privaro. Аккаунт не нужен, и ничего не загружается в сеть.",
     "tr": "Privaro, iPhone'unuz için bir kasadır. İçine koyduğunuz her şey telefonun kendisinde şifrelenir ve yalnızca Face ID veya Privaro'nun kendi parolasıyla açılır. Hesap gerekmez ve hiçbir şey yüklenmez.",
-    "ar": "Privaro خزنة لجهاز iPhone. ما تضعه فيها يُشفَّر على الهاتف نفسه، ولا يُفتح إلا بـ Face ID أو برمز الدخول الخاص بـ Privaro. لا يوجد حساب، ولا يُرفع أي شيء.",
+    "id": "Privaro adalah brankas untuk iPhone Anda. Apa pun yang Anda simpan di dalamnya dienkripsi di ponsel itu sendiri dan hanya bisa dibuka dengan Face ID atau kode sandi khusus Privaro. Tidak ada akun, dan tidak ada yang diunggah.",
     "hi": "Privaro आपके iPhone के लिए एक तिजोरी है। आप इसमें जो कुछ भी रखते हैं, वह फ़ोन पर ही एन्क्रिप्ट होता है और सिर्फ़ Face ID या Privaro के अपने पासकोड से खुलता है। कोई अकाउंट नहीं है, और कुछ भी अपलोड नहीं होता।",
-    "ur": "Privaro آپ کے iPhone کے لیے ایک والٹ ہے۔ آپ اس میں جو کچھ رکھتے ہیں وہ فون پر ہی انکرپٹ ہوتا ہے اور صرف Face ID یا Privaro کے اپنے پاس کوڈ سے کھلتا ہے۔ کوئی اکاؤنٹ نہیں ہے، اور کچھ بھی اپ لوڈ نہیں ہوتا۔",
-    "id": "Privaro adalah brankas untuk iPhone Anda. Apa pun yang Anda simpan di dalamnya dienkripsi di ponsel itu sendiri dan hanya bisa dibuka dengan Face ID atau kode sandi khusus Privaro. Tidak ada akun, dan tidak ada yang diunggah."
+    "ar": "Privaro خزنة لجهاز iPhone. ما تضعه فيها يُشفَّر على الهاتف نفسه، ولا يُفتح إلا بـ Face ID أو برمز الدخول الخاص بـ Privaro. لا يوجد حساب، ولا يُرفع أي شيء.",
+    "ur": "Privaro آپ کے iPhone کے لیے ایک والٹ ہے۔ آپ اس میں جو کچھ رکھتے ہیں وہ فون پر ہی انکرپٹ ہوتا ہے اور صرف Face ID یا Privaro کے اپنے پاس کوڈ سے کھلتا ہے۔ کوئی اکاؤنٹ نہیں ہے، اور کچھ بھی اپ لوڈ نہیں ہوتا۔"
   },
   "pricing_h2": {
     "en": "Free, with a one-time upgrade",
@@ -108,10 +89,10 @@
     "zh-Hant": "免費使用，一次升級",
     "ru": "Бесплатно, с разовым улучшением",
     "tr": "Ücretsiz, tek seferlik yükseltmeyle",
-    "ar": "مجاني، مع ترقية لمرة واحدة",
+    "id": "Gratis, dengan upgrade sekali bayar",
     "hi": "मुफ़्त, एक बार के अपग्रेड के साथ",
-    "ur": "مفت، ایک بار کے اپ گریڈ کے ساتھ",
-    "id": "Gratis, dengan upgrade sekali bayar"
+    "ar": "مجاني، مع ترقية لمرة واحدة",
+    "ur": "مفت، ایک بار کے اپ گریڈ کے ساتھ"
   },
   "pricing_p": {
     "en": "The free version has no ads and no time limit. Pro lifts the limits and adds extra protection. You pay once, and it works on every device with your Apple Account.",
@@ -127,10 +108,10 @@
     "zh-Hant": "免費版沒有廣告，也沒有使用期限。Pro 會解除限制並加入更多保護。只需付款一次，就能在使用同一個 Apple 帳號的所有裝置上使用。",
     "ru": "В бесплатной версии нет рекламы и ограничений по времени. Pro снимает лимиты и добавляет дополнительную защиту. Вы платите один раз, и покупка работает на всех устройствах с вашим Аккаунтом Apple.",
     "tr": "Ücretsiz sürümde reklam ve süre sınırı yoktur. Pro sınırları kaldırır ve ek koruma sağlar. Bir kez ödersiniz ve Apple Hesabınızın olduğu her aygıtta çalışır.",
-    "ar": "النسخة المجانية بلا إعلانات وبلا حدّ زمني. يرفع Pro القيود ويضيف حماية إضافية. تدفع مرة واحدة، ويعمل على كل جهاز يستخدم حساب Apple الخاص بك.",
+    "id": "Versi gratisnya tanpa iklan dan tanpa batas waktu. Pro menghapus batasan dan menambah perlindungan ekstra. Anda membayar sekali, dan berlaku di semua perangkat dengan Akun Apple Anda.",
     "hi": "मुफ़्त वर्शन में न कोई विज्ञापन है, न कोई समय सीमा। Pro सीमाएँ हटा देता है और अतिरिक्त सुरक्षा जोड़ता है। आप एक बार भुगतान करते हैं, और यह आपके Apple अकाउंट वाले हर डिवाइस पर काम करता है।",
-    "ur": "مفت ورژن میں نہ کوئی اشتہار ہے اور نہ وقت کی کوئی حد۔ Pro حدیں ختم کرتا ہے اور اضافی تحفظ دیتا ہے۔ آپ ایک بار ادائیگی کرتے ہیں، اور یہ آپ کے Apple اکاؤنٹ والے ہر ڈیوائس پر کام کرتا ہے۔",
-    "id": "Versi gratisnya tanpa iklan dan tanpa batas waktu. Pro menghapus batasan dan menambah perlindungan ekstra. Anda membayar sekali, dan berlaku di semua perangkat dengan Akun Apple Anda."
+    "ar": "النسخة المجانية بلا إعلانات وبلا حدّ زمني. يرفع Pro القيود ويضيف حماية إضافية. تدفع مرة واحدة، ويعمل على كل جهاز يستخدم حساب Apple الخاص بك.",
+    "ur": "مفت ورژن میں نہ کوئی اشتہار ہے اور نہ وقت کی کوئی حد۔ Pro حدیں ختم کرتا ہے اور اضافی تحفظ دیتا ہے۔ آپ ایک بار ادائیگی کرتے ہیں، اور یہ آپ کے Apple اکاؤنٹ والے ہر ڈیوائس پر کام کرتا ہے۔"
   },
   "plan_free_name": {
     "en": "Free",
@@ -146,10 +127,10 @@
     "zh-Hant": "免費",
     "ru": "Бесплатно",
     "tr": "Ücretsiz",
-    "ar": "مجاني",
+    "id": "Gratis",
     "hi": "मुफ़्त",
-    "ur": "مفت",
-    "id": "Gratis"
+    "ar": "مجاني",
+    "ur": "مفت"
   },
   "plan_pro_name": {
     "en": "Pro",
@@ -165,86 +146,10 @@
     "zh-Hant": "Pro",
     "ru": "Pro",
     "tr": "Pro",
-    "ar": "Pro",
+    "id": "Pro",
     "hi": "Pro",
-    "ur": "Pro",
-    "id": "Pro"
-  },
-  "footer_tagline": {
-    "en": "A private, encrypted photo and video vault for iPhone.",
-    "es": "Una caja fuerte privada y cifrada para fotos y vídeos en el iPhone.",
-    "fr": "Un coffre-fort privé et chiffré pour photos et vidéos sur iPhone.",
-    "de": "Ein privater, verschlüsselter Foto- und Video-Tresor für das iPhone.",
-    "it": "Una cassaforte privata e cifrata per foto e video su iPhone.",
-    "pt-BR": "Um cofre privado e criptografado para fotos e vídeos no iPhone.",
-    "zh-Hans": "一款适用于 iPhone 的私密加密照片和视频保险库。",
-    "ko": "iPhone를 위한 비공개 암호화 사진·동영상 보관함.",
-    "nl": "Een privé, versleutelde foto- en videokluis voor de iPhone.",
-    "ja": "iPhone のための、暗号化されたプライベートな写真・ビデオ保管庫。",
-    "zh-Hant": "iPhone 上的私密加密照片與影片保險庫。",
-    "ru": "Личное зашифрованное хранилище фото и видео для iPhone.",
-    "tr": "iPhone için gizli, şifreli bir fotoğraf ve video kasası.",
-    "ar": "خزنة خاصة ومشفّرة للصور والفيديوهات على iPhone.",
-    "hi": "iPhone के लिए एक निजी, एन्क्रिप्टेड फ़ोटो और वीडियो तिजोरी।",
-    "ur": "iPhone کے لیے ایک نجی، انکرپٹڈ فوٹو اور ویڈیو والٹ۔",
-    "id": "Brankas foto dan video pribadi yang terenkripsi untuk iPhone."
-  },
-  "footer_product": {
-    "en": "Product",
-    "es": "Producto",
-    "fr": "Produit",
-    "de": "Produkt",
-    "it": "Prodotto",
-    "pt-BR": "Produto",
-    "zh-Hans": "产品",
-    "ko": "제품",
-    "nl": "Product",
-    "ja": "製品",
-    "zh-Hant": "產品",
-    "ru": "Продукт",
-    "tr": "Ürün",
-    "ar": "المنتج",
-    "hi": "प्रोडक्ट",
-    "ur": "پروڈکٹ",
-    "id": "Produk"
-  },
-  "footer_legal": {
-    "en": "Legal",
-    "es": "Legal",
-    "fr": "Mentions légales",
-    "de": "Rechtliches",
-    "it": "Note legali",
-    "pt-BR": "Jurídico",
-    "zh-Hans": "法律",
-    "ko": "법적 고지",
-    "nl": "Juridisch",
-    "ja": "法的情報",
-    "zh-Hant": "法律資訊",
-    "ru": "Правовая информация",
-    "tr": "Yasal",
-    "ar": "قانوني",
-    "hi": "कानूनी",
-    "ur": "قانونی",
-    "id": "Legal"
-  },
-  "footer_support": {
-    "en": "Support",
-    "es": "Soporte",
-    "fr": "Assistance",
-    "de": "Support",
-    "it": "Supporto",
-    "pt-BR": "Suporte",
-    "zh-Hans": "支持",
-    "ko": "지원",
-    "nl": "Ondersteuning",
-    "ja": "サポート",
-    "zh-Hant": "支援",
-    "ru": "Поддержка",
-    "tr": "Destek",
-    "ar": "الدعم",
-    "hi": "सहायता",
-    "ur": "سپورٹ",
-    "id": "Dukungan"
+    "ar": "Pro",
+    "ur": "Pro"
   },
   "footer_pro": {
     "en": "Pro features",
@@ -260,10 +165,10 @@
     "zh-Hant": "Pro 功能",
     "ru": "Функции Pro",
     "tr": "Pro özellikleri",
-    "ar": "ميزات Pro",
+    "id": "Fitur Pro",
     "hi": "Pro फ़ीचर",
-    "ur": "Pro فیچرز",
-    "id": "Fitur Pro"
+    "ar": "ميزات Pro",
+    "ur": "Pro فیچرز"
   },
   "footer_privacy": {
     "en": "Privacy Policy",
@@ -279,10 +184,10 @@
     "zh-Hant": "隱私權政策",
     "ru": "Политика конфиденциальности",
     "tr": "Gizlilik Politikası",
-    "ar": "سياسة الخصوصية",
+    "id": "Kebijakan Privasi",
     "hi": "गोपनीयता नीति",
-    "ur": "رازداری کی پالیسی",
-    "id": "Kebijakan Privasi"
+    "ar": "سياسة الخصوصية",
+    "ur": "رازداری کی پالیسی"
   },
   "footer_terms": {
     "en": "Terms of Use",
@@ -298,10 +203,10 @@
     "zh-Hant": "使用條款",
     "ru": "Условия использования",
     "tr": "Kullanım Koşulları",
-    "ar": "شروط الاستخدام",
+    "id": "Ketentuan Penggunaan",
     "hi": "उपयोग की शर्तें",
-    "ur": "استعمال کی شرائط",
-    "id": "Ketentuan Penggunaan"
+    "ar": "شروط الاستخدام",
+    "ur": "استعمال کی شرائط"
   },
   "footer_contact": {
     "en": "Contact",
@@ -317,10 +222,10 @@
     "zh-Hant": "聯絡我們",
     "ru": "Связаться",
     "tr": "İletişim",
-    "ar": "تواصل معنا",
+    "id": "Kontak",
     "hi": "संपर्क करें",
-    "ur": "رابطہ کریں",
-    "id": "Kontak"
+    "ar": "تواصل معنا",
+    "ur": "رابطہ کریں"
   },
   "footer_rights": {
     "en": "All rights reserved.",
@@ -336,10 +241,10 @@
     "zh-Hant": "保留一切權利。",
     "ru": "Все права защищены.",
     "tr": "Tüm hakları saklıdır.",
-    "ar": "جميع الحقوق محفوظة.",
+    "id": "Hak cipta dilindungi undang-undang.",
     "hi": "सर्वाधिकार सुरक्षित।",
-    "ur": "جملہ حقوق محفوظ ہیں۔",
-    "id": "Hak cipta dilindungi undang-undang."
+    "ar": "جميع الحقوق محفوظة.",
+    "ur": "جملہ حقوق محفوظ ہیں۔"
   },
   "lang_label": {
     "en": "Language",
@@ -355,10 +260,10 @@
     "zh-Hant": "語言",
     "ru": "Язык",
     "tr": "Dil",
-    "ar": "اللغة",
+    "id": "Bahasa",
     "hi": "भाषा",
-    "ur": "زبان",
-    "id": "Bahasa"
+    "ar": "اللغة",
+    "ur": "زبان"
   },
   "nav_pro": {
     "en": "Pro",
@@ -374,10 +279,10 @@
     "zh-Hant": "Pro",
     "ru": "Pro",
     "tr": "Pro",
-    "ar": "Pro",
+    "id": "Pro",
     "hi": "Pro",
-    "ur": "Pro",
-    "id": "Pro"
+    "ar": "Pro",
+    "ur": "Pro"
   },
   "nav_download": {
     "en": "Get the app",
@@ -393,10 +298,10 @@
     "zh-Hant": "下載 App",
     "ru": "Скачать",
     "tr": "Uygulamayı indir",
-    "ar": "احصل على التطبيق",
+    "id": "Dapatkan aplikasinya",
     "hi": "ऐप पाएँ",
-    "ur": "ایپ حاصل کریں",
-    "id": "Dapatkan aplikasinya"
+    "ar": "احصل على التطبيق",
+    "ur": "ایپ حاصل کریں"
   },
   "badge_label": {
     "en": "Download Privaro on the App Store",
@@ -412,29 +317,29 @@
     "zh-Hant": "在 App Store 下載 Privaro",
     "ru": "Загрузите Privaro в App Store",
     "tr": "Privaro'yu App Store'dan indirin",
-    "ar": "نزّل Privaro من App Store",
+    "id": "Unduh Privaro di App Store",
     "hi": "App Store से Privaro डाउनलोड करें",
-    "ur": "App Store سے Privaro ڈاؤن لوڈ کریں",
-    "id": "Unduh Privaro di App Store"
+    "ar": "نزّل Privaro من App Store",
+    "ur": "App Store سے Privaro ڈاؤن لوڈ کریں"
   },
   "hero_h1": {
-    "en": "Keep private photos and videos private.",
-    "es": "Que tus fotos y vídeos privados sigan siendo privados.",
-    "fr": "Vos photos et vidéos privées restent privées.",
-    "de": "Private Fotos und Videos bleiben privat.",
-    "it": "Le foto e i video privati restano privati.",
-    "pt-BR": "Suas fotos e vídeos privados continuam privados.",
-    "zh-Hans": "让私密的照片和视频保持私密。",
-    "ko": "비공개 사진과 동영상을 비공개로.",
-    "nl": "Houd privéfoto’s en -video’s privé.",
-    "ja": "プライベートな写真とビデオを、プライベートなままに。",
-    "zh-Hant": "讓私密的照片和影片，保持私密。",
-    "ru": "Пусть личные фото и видео остаются личными.",
-    "tr": "Gizli fotoğraflar ve videolar gizli kalsın.",
-    "ar": "صورك وفيديوهاتك الخاصة تبقى خاصة.",
-    "hi": "निजी फ़ोटो और वीडियो को निजी ही रखें।",
-    "ur": "نجی تصاویر اور ویڈیوز کو نجی ہی رکھیں۔",
-    "id": "Jaga foto dan video pribadi tetap pribadi."
+    "en": "Private photos stay on your phone.",
+    "es": "Tus fotos privadas se quedan en tu teléfono.",
+    "fr": "Vos photos privées restent sur votre téléphone.",
+    "de": "Private Fotos bleiben auf deinem Handy.",
+    "it": "Le foto private restano sul tuo telefono.",
+    "pt-BR": "Fotos privadas ficam no seu celular.",
+    "zh-Hans": "私密照片，只留在你的手机上。",
+    "ko": "사적인 사진은 휴대폰에만 남습니다.",
+    "nl": "Privéfoto’s blijven op je telefoon.",
+    "ja": "プライベートな写真は、iPhone の中に。",
+    "zh-Hant": "私密照片，只留在你的手機上。",
+    "ru": "Личные фото остаются на вашем телефоне.",
+    "tr": "Gizli fotoğraflar telefonunuzda kalır.",
+    "id": "Foto pribadi tetap di ponsel Anda.",
+    "hi": "निजी फ़ोटो आपके फ़ोन पर ही रहती हैं।",
+    "ar": "صورك الخاصة تبقى على هاتفك.",
+    "ur": "نجی تصاویر آپ کے فون پر ہی رہتی ہیں۔"
   },
   "hero_meta": {
     "en": "Free · iOS 17.6 or later · Pro is a one-time purchase",
@@ -450,10 +355,10 @@
     "zh-Hant": "免費 · iOS 17.6 或以上版本 · Pro 為一次性購買",
     "ru": "Бесплатно · iOS 17.6 или новее · Pro покупается один раз",
     "tr": "Ücretsiz · iOS 17.6 veya üstü · Pro tek seferlik bir satın alımdır",
-    "ar": "مجاني · iOS 17.6 أو أحدث · Pro عملية شراء لمرة واحدة",
+    "id": "Gratis · iOS 17.6 atau lebih baru · Pro dibeli sekali saja",
     "hi": "मुफ़्त · iOS 17.6 या बाद का वर्शन · Pro एक बार की ख़रीदारी है",
-    "ur": "مفت · iOS 17.6 یا اس کے بعد · Pro ایک بار کی خریداری ہے",
-    "id": "Gratis · iOS 17.6 atau lebih baru · Pro dibeli sekali saja"
+    "ar": "مجاني · iOS 17.6 أو أحدث · Pro عملية شراء لمرة واحدة",
+    "ur": "مفت · iOS 17.6 یا اس کے بعد · Pro ایک بار کی خریداری ہے"
   },
   "alt_lock": {
     "en": "Privaro’s lock screen, ready for Face ID",
@@ -469,10 +374,10 @@
     "zh-Hant": "Privaro 的鎖定畫面，等待 Face ID",
     "ru": "Экран блокировки Privaro, готовый к Face ID",
     "tr": "Face ID için hazır Privaro kilit ekranı",
-    "ar": "شاشة قفل Privaro جاهزة لـ Face ID",
+    "id": "Layar kunci Privaro, siap untuk Face ID",
     "hi": "Privaro की लॉक स्क्रीन, Face ID के लिए तैयार",
-    "ur": "Privaro کی لاک اسکرین، Face ID کے لیے تیار",
-    "id": "Layar kunci Privaro, siap untuk Face ID"
+    "ar": "شاشة قفل Privaro جاهزة لـ Face ID",
+    "ur": "Privaro کی لاک اسکرین، Face ID کے لیے تیار"
   },
   "alt_vault": {
     "en": "The vault: photos in a grid, sorted by month",
@@ -488,10 +393,10 @@
     "zh-Hant": "保險庫：照片以網格排列，依月份分類",
     "ru": "Хранилище: фото сеткой, по месяцам",
     "tr": "Kasa: aylara göre sıralanmış, ızgara düzeninde fotoğraflar",
-    "ar": "الخزنة: صور في شبكة مرتّبة حسب الشهر",
+    "id": "Brankas: foto dalam grid, diurutkan per bulan",
     "hi": "तिजोरी: महीने के हिसाब से ग्रिड में लगी फ़ोटो",
-    "ur": "والٹ: مہینے کے لحاظ سے گرڈ میں ترتیب دی گئی تصاویر",
-    "id": "Brankas: foto dalam grid, diurutkan per bulan"
+    "ar": "الخزنة: صور في شبكة مرتّبة حسب الشهر",
+    "ur": "والٹ: مہینے کے لحاظ سے گرڈ میں ترتیب دی گئی تصاویر"
   },
   "alt_privacy": {
     "en": "Privacy Mode settings: Home, Away and Travel",
@@ -507,10 +412,10 @@
     "zh-Hant": "隱私模式設定：在家、外出和旅行",
     "ru": "Настройки режима конфиденциальности: Дома, Вне дома и Поездка",
     "tr": "Gizlilik Modu ayarları: Ev, Dışarıda ve Seyahat",
-    "ar": "إعدادات وضع الخصوصية: المنزل وخارج المنزل والسفر",
+    "id": "Pengaturan Mode Privasi: Di Rumah, Di Luar Rumah, dan Perjalanan",
     "hi": "गोपनीयता मोड सेटिंग्स: होम, घर से बाहर और यात्रा",
-    "ur": "رازداری کے موڈ کی ترتیبات: ہوم، گھر سے باہر اور سفر",
-    "id": "Pengaturan Mode Privasi: Di Rumah, Di Luar Rumah, dan Perjalanan"
+    "ar": "إعدادات وضع الخصوصية: المنزل وخارج المنزل والسفر",
+    "ur": "رازداری کے موڈ کی ترتیبات: ہوم، گھر سے باہر اور سفر"
   },
   "alt_albums": {
     "en": "Albums in Privaro",
@@ -526,10 +431,10 @@
     "zh-Hant": "Privaro 中的相簿",
     "ru": "Альбомы в Privaro",
     "tr": "Privaro'daki albümler",
-    "ar": "الألبومات في Privaro",
+    "id": "Album di Privaro",
     "hi": "Privaro में एल्बम",
-    "ur": "Privaro میں البمز",
-    "id": "Album di Privaro"
+    "ar": "الألبومات في Privaro",
+    "ur": "Privaro میں البمز"
   },
   "new_label": {
     "en": "New",
@@ -545,10 +450,10 @@
     "zh-Hant": "新功能",
     "ru": "Новое",
     "tr": "Yeni",
-    "ar": "جديد",
+    "id": "Baru",
     "hi": "नया",
-    "ur": "نیا",
-    "id": "Baru"
+    "ar": "جديد",
+    "ur": "نیا"
   },
   "new_text": {
     "en": "No more file size limit. Add videos of any length, and they start playing right away.",
@@ -564,10 +469,10 @@
     "zh-Hant": "不再限制檔案大小。任何長度的影片都能加入，而且馬上就能開始播放。",
     "ru": "Больше никаких ограничений на размер файла. Добавляйте видео любой длины — они начинают воспроизводиться сразу.",
     "tr": "Artık dosya boyutu sınırı yok. Her uzunlukta video ekleyin, hemen oynatılmaya başlasın.",
-    "ar": "لا حدّ لحجم الملفات بعد الآن. أضف فيديوهات بأي طول، وستبدأ في التشغيل فورًا.",
+    "id": "Tidak ada lagi batas ukuran file. Tambahkan video sepanjang apa pun, dan video langsung mulai diputar.",
     "hi": "अब फ़ाइल साइज़ की कोई सीमा नहीं। किसी भी लंबाई के वीडियो जोड़ें, और वे तुरंत चलने लगते हैं।",
-    "ur": "اب فائل کے سائز کی کوئی حد نہیں۔ کسی بھی لمبائی کی ویڈیوز شامل کریں، اور وہ فوراً چلنا شروع ہو جاتی ہیں۔",
-    "id": "Tidak ada lagi batas ukuran file. Tambahkan video sepanjang apa pun, dan video langsung mulai diputar."
+    "ar": "لا حدّ لحجم الملفات بعد الآن. أضف فيديوهات بأي طول، وستبدأ في التشغيل فورًا.",
+    "ur": "اب فائل کے سائز کی کوئی حد نہیں۔ کسی بھی لمبائی کی ویڈیوز شامل کریں، اور وہ فوراً چلنا شروع ہو جاتی ہیں۔"
   },
   "f1_t": {
     "en": "Looks like your photo library",
@@ -583,10 +488,10 @@
     "zh-Hant": "看起來就像你的照片圖庫",
     "ru": "Выглядит как ваша медиатека",
     "tr": "Fotoğraf arşivinize benzer",
-    "ar": "تبدو مثل مكتبة صورك",
+    "id": "Tampak seperti perpustakaan foto Anda",
     "hi": "बिल्कुल आपकी फ़ोटो लाइब्रेरी जैसा",
-    "ur": "بالکل آپ کی فوٹو لائبریری جیسا",
-    "id": "Tampak seperti perpustakaan foto Anda"
+    "ar": "تبدو مثل مكتبة صورك",
+    "ur": "بالکل آپ کی فوٹو لائبریری جیسا"
   },
   "f1_d": {
     "en": "Photos and videos sit in a familiar grid, sorted by month. Make albums, add captions and tags, mark favorites and search, all without anything leaving the vault.",
@@ -602,10 +507,10 @@
     "zh-Hant": "照片和影片以熟悉的網格排列，並依月份分類。建立相簿、加入說明和標籤、標示喜好項目和搜尋，全都不會有任何內容離開保險庫。",
     "ru": "Фото и видео лежат в привычной сетке, по месяцам. Создавайте альбомы, добавляйте подписи и теги, отмечайте избранное и ищите — и всё это без того, чтобы что-то покидало хранилище.",
     "tr": "Fotoğraflar ve videolar aylara göre sıralanmış tanıdık bir ızgarada durur. Albüm oluşturun, başlık ve etiket ekleyin, favorilerinizi işaretleyin ve arama yapın; hiçbir şey kasadan çıkmadan.",
-    "ar": "تظهر الصور والفيديوهات في شبكة مألوفة مرتّبة حسب الشهر. أنشئ ألبومات، وأضف تعليقات ووسومًا، وحدّد المفضلة، وابحث، دون أن يغادر أي شيء الخزنة.",
+    "id": "Foto dan video tersusun dalam grid yang familier, diurutkan per bulan. Buat album, tambahkan keterangan dan tag, tandai favorit, dan cari, semuanya tanpa ada yang keluar dari brankas.",
     "hi": "फ़ोटो और वीडियो महीने के हिसाब से एक जाने-पहचाने ग्रिड में रहते हैं। एल्बम बनाएँ, कैप्शन और टैग जोड़ें, पसंदीदा चिह्नित करें और खोजें, वह भी तिजोरी से कुछ भी बाहर गए बिना।",
-    "ur": "تصاویر اور ویڈیوز مہینے کے لحاظ سے ایک جانے پہچانے گرڈ میں رہتی ہیں۔ البمز بنائیں، کیپشن اور ٹیگز شامل کریں، پسندیدہ نشان زد کریں اور تلاش کریں، اور اس دوران کچھ بھی والٹ سے باہر نہیں جاتا۔",
-    "id": "Foto dan video tersusun dalam grid yang familier, diurutkan per bulan. Buat album, tambahkan keterangan dan tag, tandai favorit, dan cari, semuanya tanpa ada yang keluar dari brankas."
+    "ar": "تظهر الصور والفيديوهات في شبكة مألوفة مرتّبة حسب الشهر. أنشئ ألبومات، وأضف تعليقات ووسومًا، وحدّد المفضلة، وابحث، دون أن يغادر أي شيء الخزنة.",
+    "ur": "تصاویر اور ویڈیوز مہینے کے لحاظ سے ایک جانے پہچانے گرڈ میں رہتی ہیں۔ البمز بنائیں، کیپشن اور ٹیگز شامل کریں، پسندیدہ نشان زد کریں اور تلاش کریں، اور اس دوران کچھ بھی والٹ سے باہر نہیں جاتا۔"
   },
   "f2_t": {
     "en": "Stricter when you need it",
@@ -621,10 +526,10 @@
     "zh-Hant": "需要時更加嚴格",
     "ru": "Строже, когда это нужно",
     "tr": "Gerektiğinde daha sıkı",
-    "ar": "أكثر صرامة عندما تحتاج",
+    "id": "Lebih ketat saat Anda butuh",
     "hi": "ज़रूरत पड़ने पर और सख़्त",
-    "ur": "ضرورت پڑنے پر زیادہ سخت",
-    "id": "Lebih ketat saat Anda butuh"
+    "ar": "أكثر صرامة عندما تحتاج",
+    "ur": "ضرورت پڑنے پر زیادہ سخت"
   },
   "f2_d": {
     "en": "Privacy Modes change how careful Privaro is. At home, share as usual. Away, it asks for your passcode before anything leaves the vault. On a trip, nothing can leave at all.",
@@ -640,10 +545,10 @@
     "zh-Hant": "隱私模式會改變 Privaro 的謹慎程度。在家時照常分享。外出時，任何內容離開保險庫前都會要求輸入密碼。旅行時，什麼都無法離開。",
     "ru": "Режимы конфиденциальности меняют то, насколько осторожен Privaro. Дома делитесь как обычно. Вне дома он спросит код-пароль, прежде чем что-либо покинет хранилище. В поездке ничего не может покинуть его вовсе.",
     "tr": "Gizlilik Modları, Privaro'nun ne kadar dikkatli olacağını değiştirir. Evdeyken her zamanki gibi paylaşın. Dışarıdayken, kasadan bir şey çıkmadan önce parolanızı sorar. Seyahatteyken hiçbir şey dışarı çıkamaz.",
-    "ar": "تغيّر أوضاع الخصوصية مدى حرص Privaro. في المنزل، شارك كالمعتاد. خارج المنزل، يطلب رمز الدخول قبل أن يغادر أي شيء الخزنة. وفي السفر، لا يمكن لأي شيء أن يغادرها إطلاقًا.",
+    "id": "Mode Privasi mengubah seberapa hati-hati Privaro. Di rumah, bagikan seperti biasa. Di luar rumah, Privaro meminta kode sandi Anda sebelum apa pun keluar dari brankas. Saat bepergian, tidak ada yang bisa keluar sama sekali.",
     "hi": "गोपनीयता मोड बदलते हैं कि Privaro कितना सावधान रहे। घर पर, हमेशा की तरह शेयर करें। घर से बाहर, तिजोरी से कुछ भी बाहर जाने से पहले यह आपका पासकोड माँगता है। यात्रा में, कुछ भी बाहर नहीं जा सकता।",
-    "ur": "رازداری کے موڈ طے کرتے ہیں کہ Privaro کتنا محتاط رہے۔ گھر پر، معمول کے مطابق شیئر کریں۔ گھر سے باہر، والٹ سے کچھ بھی باہر جانے سے پہلے یہ آپ کا پاس کوڈ مانگتا ہے۔ سفر میں، کچھ بھی باہر نہیں جا سکتا۔",
-    "id": "Mode Privasi mengubah seberapa hati-hati Privaro. Di rumah, bagikan seperti biasa. Di luar rumah, Privaro meminta kode sandi Anda sebelum apa pun keluar dari brankas. Saat bepergian, tidak ada yang bisa keluar sama sekali."
+    "ar": "تغيّر أوضاع الخصوصية مدى حرص Privaro. في المنزل، شارك كالمعتاد. خارج المنزل، يطلب رمز الدخول قبل أن يغادر أي شيء الخزنة. وفي السفر، لا يمكن لأي شيء أن يغادرها إطلاقًا.",
+    "ur": "رازداری کے موڈ طے کرتے ہیں کہ Privaro کتنا محتاط رہے۔ گھر پر، معمول کے مطابق شیئر کریں۔ گھر سے باہر، والٹ سے کچھ بھی باہر جانے سے پہلے یہ آپ کا پاس کوڈ مانگتا ہے۔ سفر میں، کچھ بھی باہر نہیں جا سکتا۔"
   },
   "f3_t": {
     "en": "Albums that stay shut",
@@ -659,10 +564,10 @@
     "zh-Hant": "保持關閉的相簿",
     "ru": "Альбомы, которые остаются закрытыми",
     "tr": "Kapalı kalan albümler",
-    "ar": "ألبومات تبقى مغلقة",
+    "id": "Album yang tetap tertutup",
     "hi": "एल्बम जो बंद ही रहते हैं",
-    "ur": "البمز جو بند ہی رہتے ہیں",
-    "id": "Album yang tetap tertutup"
+    "ar": "ألبومات تبقى مغلقة",
+    "ur": "البمز جو بند ہی رہتے ہیں"
   },
   "f3_d": {
     "en": "Sort everything into albums and folders. With Pro, give an album its own password, so it stays locked even while the vault is open.",
@@ -678,10 +583,10 @@
     "zh-Hant": "把所有內容整理到相簿和檔案夾。使用 Pro 可以為相簿設定專屬密碼，即使保險庫已打開，該相簿仍會保持鎖定。",
     "ru": "Разложите всё по альбомам и папкам. С Pro можно задать альбому собственный пароль, и он останется заблокированным, даже когда хранилище открыто.",
     "tr": "Her şeyi albümlere ve klasörlere ayırın. Pro ile bir albüme ayrı bir şifre verin; kasa açıkken bile kilitli kalsın.",
-    "ar": "رتّب كل شيء في ألبومات ومجلدات. مع Pro، امنح أي ألبوم كلمة سر خاصة به، فيبقى مقفلًا حتى عندما تكون الخزنة مفتوحة.",
+    "id": "Atur semuanya ke dalam album dan folder. Dengan Pro, beri album kata sandinya sendiri, sehingga album tetap terkunci meskipun brankas sedang terbuka.",
     "hi": "सब कुछ एल्बम और फ़ोल्डर में व्यवस्थित करें। Pro के साथ, किसी एल्बम को उसका अपना पासवर्ड दें, ताकि तिजोरी खुली होने पर भी वह लॉक रहे।",
-    "ur": "ہر چیز کو البمز اور فولڈرز میں ترتیب دیں۔ Pro کے ساتھ کسی البم کو اس کا اپنا پاس ورڈ دیں، تاکہ والٹ کھلا ہونے پر بھی وہ لاک رہے۔",
-    "id": "Atur semuanya ke dalam album dan folder. Dengan Pro, beri album kata sandinya sendiri, sehingga album tetap terkunci meskipun brankas sedang terbuka."
+    "ar": "رتّب كل شيء في ألبومات ومجلدات. مع Pro، امنح أي ألبوم كلمة سر خاصة به، فيبقى مقفلًا حتى عندما تكون الخزنة مفتوحة.",
+    "ur": "ہر چیز کو البمز اور فولڈرز میں ترتیب دیں۔ Pro کے ساتھ کسی البم کو اس کا اپنا پاس ورڈ دیں، تاکہ والٹ کھلا ہونے پر بھی وہ لاک رہے۔"
   },
   "also_h2": {
     "en": "And a few more things",
@@ -697,10 +602,10 @@
     "zh-Hant": "還有其他功能",
     "ru": "И ещё кое-что",
     "tr": "Ve birkaç şey daha",
-    "ar": "وأشياء أخرى أيضًا",
+    "id": "Dan beberapa hal lainnya",
     "hi": "और भी कुछ ख़ूबियाँ",
-    "ur": "اور بھی کچھ خوبیاں",
-    "id": "Dan beberapa hal lainnya"
+    "ar": "وأشياء أخرى أيضًا",
+    "ur": "اور بھی کچھ خوبیاں"
   },
   "also_lock_t": {
     "en": "Locks itself",
@@ -716,10 +621,10 @@
     "zh-Hant": "自動鎖定",
     "ru": "Блокируется сам",
     "tr": "Kendi kendini kilitler",
-    "ar": "يقفل نفسه",
+    "id": "Mengunci sendiri",
     "hi": "ख़ुद लॉक हो जाता है",
-    "ur": "خود لاک ہو جاتا ہے",
-    "id": "Mengunci sendiri"
+    "ar": "يقفل نفسه",
+    "ur": "خود لاک ہو جاتا ہے"
   },
   "also_lock_d": {
     "en": "Switch to another app and the vault closes behind you. Getting back in takes Face ID or your passcode.",
@@ -735,10 +640,10 @@
     "zh-Hant": "切換到其他 App 時，保險庫就會在你身後關上。要再次進入，需要 Face ID 或你的密碼。",
     "ru": "Переключитесь на другое приложение — и хранилище закроется за вами. Чтобы вернуться, нужен Face ID или код-пароль.",
     "tr": "Başka bir uygulamaya geçtiğinizde kasa arkanızdan kapanır. Yeniden girmek için Face ID veya parolanız gerekir.",
-    "ar": "انتقل إلى تطبيق آخر وستُغلق الخزنة خلفك. للعودة إليها تحتاج إلى Face ID أو رمز الدخول.",
+    "id": "Beralih ke aplikasi lain dan brankas langsung tertutup. Untuk masuk lagi, perlu Face ID atau kode sandi Anda.",
     "hi": "किसी दूसरे ऐप पर जाते ही तिजोरी आपके पीछे बंद हो जाती है। वापस आने के लिए Face ID या आपका पासकोड चाहिए।",
-    "ur": "کسی دوسری ایپ پر جاتے ہی والٹ آپ کے پیچھے بند ہو جاتا ہے۔ واپس آنے کے لیے Face ID یا آپ کا پاس کوڈ درکار ہے۔",
-    "id": "Beralih ke aplikasi lain dan brankas langsung tertutup. Untuk masuk lagi, perlu Face ID atau kode sandi Anda."
+    "ar": "انتقل إلى تطبيق آخر وستُغلق الخزنة خلفك. للعودة إليها تحتاج إلى Face ID أو رمز الدخول.",
+    "ur": "کسی دوسری ایپ پر جاتے ہی والٹ آپ کے پیچھے بند ہو جاتا ہے۔ واپس آنے کے لیے Face ID یا آپ کا پاس کوڈ درکار ہے۔"
   },
   "also_size_t": {
     "en": "Any file size",
@@ -754,10 +659,10 @@
     "zh-Hant": "不限檔案大小",
     "ru": "Любой размер файла",
     "tr": "Her dosya boyutu",
-    "ar": "أي حجم للملفات",
+    "id": "Ukuran file berapa pun",
     "hi": "कोई भी फ़ाइल साइज़",
-    "ur": "کوئی بھی فائل سائز",
-    "id": "Ukuran file berapa pun"
+    "ar": "أي حجم للملفات",
+    "ur": "کوئی بھی فائل سائز"
   },
   "also_size_d": {
     "en": "Add photos and videos of any size. Long videos start playing straight away.",
@@ -773,10 +678,10 @@
     "zh-Hant": "任何大小的照片和影片都能加入。長影片也能立即開始播放。",
     "ru": "Добавляйте фото и видео любого размера. Длинные видео начинают воспроизводиться сразу.",
     "tr": "Her boyutta fotoğraf ve video ekleyin. Uzun videolar da hemen oynatılmaya başlar.",
-    "ar": "أضف صورًا وفيديوهات بأي حجم. الفيديوهات الطويلة تبدأ في التشغيل فورًا.",
+    "id": "Tambahkan foto dan video berukuran berapa pun. Video panjang langsung mulai diputar.",
     "hi": "किसी भी साइज़ की फ़ोटो और वीडियो जोड़ें। लंबे वीडियो भी तुरंत चलने लगते हैं।",
-    "ur": "کسی بھی سائز کی تصاویر اور ویڈیوز شامل کریں۔ لمبی ویڈیوز بھی فوراً چلنا شروع ہو جاتی ہیں۔",
-    "id": "Tambahkan foto dan video berukuran berapa pun. Video panjang langsung mulai diputar."
+    "ar": "أضف صورًا وفيديوهات بأي حجم. الفيديوهات الطويلة تبدأ في التشغيل فورًا.",
+    "ur": "کسی بھی سائز کی تصاویر اور ویڈیوز شامل کریں۔ لمبی ویڈیوز بھی فوراً چلنا شروع ہو جاتی ہیں۔"
   },
   "also_camera_t": {
     "en": "Stealth camera",
@@ -792,10 +697,10 @@
     "zh-Hant": "隱密相機",
     "ru": "Скрытая камера",
     "tr": "Gizli kamera",
-    "ar": "الكاميرا الخفية",
+    "id": "Kamera tersembunyi",
     "hi": "गुप्त कैमरा",
-    "ur": "اسٹیلتھ کیمرہ",
-    "id": "Kamera tersembunyi"
+    "ar": "الكاميرا الخفية",
+    "ur": "اسٹیلتھ کیمرہ"
   },
   "also_camera_d": {
     "en": "Take photos and videos straight into the vault, so they never end up in your camera roll.",
@@ -811,10 +716,10 @@
     "zh-Hant": "直接將照片和影片拍進保險庫，它們永遠不會出現在你的相機膠卷中。",
     "ru": "Снимайте фото и видео прямо в хранилище, чтобы они никогда не попадали в фотопленку.",
     "tr": "Fotoğraf ve videoları doğrudan kasaya çekin; böylece film rulonuza hiç düşmezler.",
-    "ar": "التقط الصور والفيديوهات مباشرة داخل الخزنة، فلا تصل أبدًا إلى ألبوم الكاميرا.",
+    "id": "Ambil foto dan video langsung ke dalam brankas, sehingga tidak pernah masuk ke rol kamera Anda.",
     "hi": "फ़ोटो और वीडियो सीधे तिजोरी में लें, ताकि वे कभी आपके कैमरा रोल में न पहुँचें।",
-    "ur": "تصاویر اور ویڈیوز سیدھے والٹ میں لیں، تاکہ وہ کبھی آپ کے کیمرہ رول میں نہ پہنچیں۔",
-    "id": "Ambil foto dan video langsung ke dalam brankas, sehingga tidak pernah masuk ke rol kamera Anda."
+    "ar": "التقط الصور والفيديوهات مباشرة داخل الخزنة، فلا تصل أبدًا إلى ألبوم الكاميرا.",
+    "ur": "تصاویر اور ویڈیوز سیدھے والٹ میں لیں، تاکہ وہ کبھی آپ کے کیمرہ رول میں نہ پہنچیں۔"
   },
   "also_meta_t": {
     "en": "Metadata protection",
@@ -830,10 +735,10 @@
     "zh-Hant": "後設資料保護",
     "ru": "Защита метаданных",
     "tr": "Meta veri koruması",
-    "ar": "حماية البيانات الوصفية",
+    "id": "Perlindungan metadata",
     "hi": "मेटाडेटा सुरक्षा",
-    "ur": "میٹا ڈیٹا کا تحفظ",
-    "id": "Perlindungan metadata"
+    "ar": "حماية البيانات الوصفية",
+    "ur": "میٹا ڈیٹا کا تحفظ"
   },
   "also_meta_d": {
     "en": "Choose what goes along when you share a photo: everything, no location, or nothing at all.",
@@ -849,10 +754,10 @@
     "zh-Hant": "分享照片時選擇要附帶哪些資訊：全部、不含位置，或完全不附帶。",
     "ru": "Выбирайте, что отправляется вместе с фото: всё, всё без геопозиции или вообще ничего.",
     "tr": "Bir fotoğrafı paylaşırken yanında neyin gideceğini seçin: her şey, konum hariç her şey ya da hiçbir şey.",
-    "ar": "اختر ما يُرسل مع الصورة عند مشاركتها: كل شيء، أو بدون الموقع، أو لا شيء على الإطلاق.",
+    "id": "Pilih apa yang ikut terkirim saat Anda membagikan foto: semuanya, tanpa lokasi, atau tidak ada sama sekali.",
     "hi": "फ़ोटो शेयर करते समय चुनें कि उसके साथ क्या जाए: सब कुछ, बिना लोकेशन के, या कुछ भी नहीं।",
-    "ur": "تصویر شیئر کرتے وقت چنیں کہ اس کے ساتھ کیا جائے: سب کچھ، مقام کے بغیر، یا کچھ بھی نہیں۔",
-    "id": "Pilih apa yang ikut terkirim saat Anda membagikan foto: semuanya, tanpa lokasi, atau tidak ada sama sekali."
+    "ar": "اختر ما يُرسل مع الصورة عند مشاركتها: كل شيء، أو بدون الموقع، أو لا شيء على الإطلاق.",
+    "ur": "تصویر شیئر کرتے وقت چنیں کہ اس کے ساتھ کیا جائے: سب کچھ، مقام کے بغیر، یا کچھ بھی نہیں۔"
   },
   "also_scan_t": {
     "en": "Find sensitive photos",
@@ -868,10 +773,10 @@
     "zh-Hant": "找出敏感照片",
     "ru": "Поиск личных снимков",
     "tr": "Hassas fotoğrafları bulun",
-    "ar": "اكتشاف الصور الحساسة",
+    "id": "Temukan foto sensitif",
     "hi": "संवेदनशील फ़ोटो खोजें",
-    "ur": "حساس تصاویر تلاش کریں",
-    "id": "Temukan foto sensitif"
+    "ar": "اكتشاف الصور الحساسة",
+    "ur": "حساس تصاویر تلاش کریں"
   },
   "also_scan_d": {
     "en": "Privaro can check the photos you pick for things like IDs, cards and documents, right on your phone, and offer to move them into the vault.",
@@ -887,10 +792,10 @@
     "zh-Hant": "Privaro 可以直接在手機上檢查你挑選的照片中是否有證件、卡片和文件等內容，並建議將它們移入保險庫。",
     "ru": "Privaro может проверить выбранные вами фото на документы, удостоверения и карты прямо на телефоне и предложить перенести их в хранилище.",
     "tr": "Privaro, seçtiğiniz fotoğraflarda kimlik, kart ve belge gibi şeyler olup olmadığını doğrudan telefonunuzda kontrol edebilir ve onları kasaya taşımayı önerir.",
-    "ar": "يمكن لـ Privaro فحص الصور التي تختارها بحثًا عن أشياء مثل الهويات والبطاقات والمستندات، على هاتفك مباشرة، ثم يعرض نقلها إلى الخزنة.",
+    "id": "Privaro dapat memeriksa foto yang Anda pilih untuk mencari hal-hal seperti kartu identitas, kartu, dan dokumen, langsung di ponsel Anda, lalu menawarkan untuk memindahkannya ke brankas.",
     "hi": "Privaro आपके चुने गए फ़ोटो में पहचान पत्र, कार्ड और दस्तावेज़ जैसी चीज़ें सीधे आपके फ़ोन पर जाँच सकता है, और उन्हें तिजोरी में ले जाने का सुझाव देता है।",
-    "ur": "Privaro آپ کی منتخب کردہ تصاویر میں شناختی کارڈ، کارڈز اور دستاویزات جیسی چیزیں سیدھے آپ کے فون پر چیک کر سکتا ہے، اور انہیں والٹ میں منتقل کرنے کی پیشکش کرتا ہے۔",
-    "id": "Privaro dapat memeriksa foto yang Anda pilih untuk mencari hal-hal seperti kartu identitas, kartu, dan dokumen, langsung di ponsel Anda, lalu menawarkan untuk memindahkannya ke brankas."
+    "ar": "يمكن لـ Privaro فحص الصور التي تختارها بحثًا عن أشياء مثل الهويات والبطاقات والمستندات، على هاتفك مباشرة، ثم يعرض نقلها إلى الخزنة.",
+    "ur": "Privaro آپ کی منتخب کردہ تصاویر میں شناختی کارڈ، کارڈز اور دستاویزات جیسی چیزیں سیدھے آپ کے فون پر چیک کر سکتا ہے، اور انہیں والٹ میں منتقل کرنے کی پیشکش کرتا ہے۔"
   },
   "also_decoy_t": {
     "en": "Decoy vault",
@@ -906,10 +811,10 @@
     "zh-Hant": "誘餌保險庫",
     "ru": "Ложное хранилище",
     "tr": "Sahte kasa",
-    "ar": "الخزنة الوهمية",
+    "id": "Brankas umpan",
     "hi": "नकली तिजोरी",
-    "ur": "جعلی والٹ",
-    "id": "Brankas umpan"
+    "ar": "الخزنة الوهمية",
+    "ur": "جعلی والٹ"
   },
   "also_decoy_d": {
     "en": "A second passcode opens a separate vault with harmless photos, in case you’re ever pushed to unlock it.",
@@ -925,10 +830,10 @@
     "zh-Hant": "第二組密碼會打開另一個裝著無害照片的保險庫，以防你被迫解鎖。",
     "ru": "Второй код-пароль открывает отдельное хранилище с безобидными фото — на случай, если вас когда-нибудь заставят его разблокировать.",
     "tr": "İkinci bir parola, zararsız fotoğraflarla dolu ayrı bir kasa açar; bir gün kilidi açmaya zorlanırsanız diye.",
-    "ar": "رمز دخول ثانٍ يفتح خزنة منفصلة فيها صور غير مهمة، تحسّبًا لأن تُجبر يومًا على فتحها.",
+    "id": "Kode sandi kedua membuka brankas terpisah berisi foto-foto yang tidak berbahaya, untuk berjaga-jaga jika Anda dipaksa membukanya.",
     "hi": "दूसरा पासकोड हानिरहित फ़ोटो वाली एक अलग तिजोरी खोलता है, ताकि अगर कभी आप पर इसे खोलने का दबाव डाला जाए तो आप सुरक्षित रहें।",
-    "ur": "دوسرا پاس کوڈ بے ضرر تصاویر والا ایک الگ والٹ کھولتا ہے، اگر کبھی آپ کو اسے کھولنے پر مجبور کیا جائے۔",
-    "id": "Kode sandi kedua membuka brankas terpisah berisi foto-foto yang tidak berbahaya, untuk berjaga-jaga jika Anda dipaksa membukanya."
+    "ar": "رمز دخول ثانٍ يفتح خزنة منفصلة فيها صور غير مهمة، تحسّبًا لأن تُجبر يومًا على فتحها.",
+    "ur": "دوسرا پاس کوڈ بے ضرر تصاویر والا ایک الگ والٹ کھولتا ہے، اگر کبھی آپ کو اسے کھولنے پر مجبور کیا جائے۔"
   },
   "also_backup_t": {
     "en": "Encrypted backup",
@@ -944,10 +849,10 @@
     "zh-Hant": "加密備份",
     "ru": "Зашифрованная резервная копия",
     "tr": "Şifreli yedekleme",
-    "ar": "نسخ احتياطي مشفّر",
+    "id": "Cadangan terenkripsi",
     "hi": "एन्क्रिप्टेड बैकअप",
-    "ur": "انکرپٹڈ بیک اپ",
-    "id": "Cadangan terenkripsi"
+    "ar": "نسخ احتياطي مشفّر",
+    "ur": "انکرپٹڈ بیک اپ"
   },
   "also_backup_d": {
     "en": "Back up to your own iCloud, encrypted on your phone first. Restoring is always free.",
@@ -963,10 +868,10 @@
     "zh-Hant": "先在手機上加密，再備份到你自己的 iCloud。還原永遠免費。",
     "ru": "Резервное копирование в ваш собственный iCloud, со шифрованием сначала на телефоне. Восстановление всегда бесплатно.",
     "tr": "Önce telefonunuzda şifrelenerek kendi iCloud'unuza yedekleyin. Geri yükleme her zaman ücretsizdir.",
-    "ar": "انسخ احتياطيًا إلى iCloud الخاص بك، بعد التشفير على هاتفك أولًا. الاستعادة مجانية دائمًا.",
+    "id": "Cadangkan ke iCloud Anda sendiri, setelah dienkripsi di ponsel terlebih dahulu. Pemulihan selalu gratis.",
     "hi": "पहले अपने फ़ोन पर एन्क्रिप्ट करके, अपने ख़ुद के iCloud में बैकअप लें। रिस्टोर करना हमेशा मुफ़्त है।",
-    "ur": "پہلے اپنے فون پر انکرپٹ کر کے اپنے iCloud میں بیک اپ لیں۔ بحال کرنا ہمیشہ مفت ہے۔",
-    "id": "Cadangkan ke iCloud Anda sendiri, setelah dienkripsi di ponsel terlebih dahulu. Pemulihan selalu gratis."
+    "ar": "انسخ احتياطيًا إلى iCloud الخاص بك، بعد التشفير على هاتفك أولًا. الاستعادة مجانية دائمًا.",
+    "ur": "پہلے اپنے فون پر انکرپٹ کر کے اپنے iCloud میں بیک اپ لیں۔ بحال کرنا ہمیشہ مفت ہے۔"
   },
   "also_breakin_t": {
     "en": "Break-in photos",
@@ -982,10 +887,10 @@
     "zh-Hant": "闖入者照片",
     "ru": "Фото при взломе",
     "tr": "İzinsiz giriş fotoğrafları",
-    "ar": "صور المتطفلين",
+    "id": "Foto penyusup",
     "hi": "घुसपैठिए की फ़ोटो",
-    "ur": "گھس بیٹھیے کی تصاویر",
-    "id": "Foto penyusup"
+    "ar": "صور المتطفلين",
+    "ur": "گھس بیٹھیے کی تصاویر"
   },
   "also_breakin_d": {
     "en": "If someone enters the wrong passcode, Privaro can quietly take their picture.",
@@ -1001,10 +906,10 @@
     "zh-Hant": "如果有人輸入錯誤的密碼，Privaro 可以悄悄拍下對方的照片。",
     "ru": "Если кто-то введёт неверный код-пароль, Privaro может незаметно его сфотографировать.",
     "tr": "Biri yanlış parola girerse Privaro sessizce onun fotoğrafını çekebilir.",
-    "ar": "إذا أدخل أحدهم رمز دخول خاطئًا، يمكن لـ Privaro التقاط صورته بهدوء.",
+    "id": "Jika seseorang memasukkan kode sandi yang salah, Privaro dapat diam-diam memotretnya.",
     "hi": "अगर कोई ग़लत पासकोड डालता है, तो Privaro चुपचाप उसकी फ़ोटो ले सकता है।",
-    "ur": "اگر کوئی غلط پاس کوڈ ڈالے تو Privaro خاموشی سے اس کی تصویر لے سکتا ہے۔",
-    "id": "Jika seseorang memasukkan kode sandi yang salah, Privaro dapat diam-diam memotretnya."
+    "ar": "إذا أدخل أحدهم رمز دخول خاطئًا، يمكن لـ Privaro التقاط صورته بهدوء.",
+    "ur": "اگر کوئی غلط پاس کوڈ ڈالے تو Privaro خاموشی سے اس کی تصویر لے سکتا ہے۔"
   },
   "also_disguise_t": {
     "en": "Disguised icon",
@@ -1020,10 +925,10 @@
     "zh-Hant": "偽裝圖像",
     "ru": "Маскировка значка",
     "tr": "Kamuflaj simgesi",
-    "ar": "أيقونة متخفية",
+    "id": "Ikon samaran",
     "hi": "छिपा हुआ आइकन",
-    "ur": "چھپا ہوا آئیکن",
-    "id": "Ikon samaran"
+    "ar": "أيقونة متخفية",
+    "ur": "چھپا ہوا آئیکن"
   },
   "also_disguise_d": {
     "en": "Make Privaro look like a calculator or notes app on your Home Screen.",
@@ -1039,10 +944,10 @@
     "zh-Hant": "讓 Privaro 在主畫面上看起來像計算機或備忘錄 App。",
     "ru": "Пусть Privaro выглядит на экране «Домой» как калькулятор или заметки.",
     "tr": "Privaro'yu Ana Ekranınızda bir hesap makinesi veya not uygulaması gibi gösterin.",
-    "ar": "اجعل Privaro يبدو على شاشتك الرئيسية كتطبيق آلة حاسبة أو ملاحظات.",
+    "id": "Buat Privaro tampak seperti aplikasi kalkulator atau catatan di Layar Utama Anda.",
     "hi": "अपनी होम स्क्रीन पर Privaro को कैलकुलेटर या नोट्स ऐप जैसा दिखाएँ।",
-    "ur": "اپنی ہوم اسکرین پر Privaro کو کیلکولیٹر یا نوٹس ایپ جیسا دکھائیں۔",
-    "id": "Buat Privaro tampak seperti aplikasi kalkulator atau catatan di Layar Utama Anda."
+    "ar": "اجعل Privaro يبدو على شاشتك الرئيسية كتطبيق آلة حاسبة أو ملاحظات.",
+    "ur": "اپنی ہوم اسکرین پر Privaro کو کیلکولیٹر یا نوٹس ایپ جیسا دکھائیں۔"
   },
   "also_more": {
     "en": "Everything Pro adds →",
@@ -1058,29 +963,10 @@
     "zh-Hant": "Pro 增加的所有功能 →",
     "ru": "Всё, что добавляет Pro →",
     "tr": "Pro'nun eklediği her şey →",
-    "ar": "كل ما يضيفه Pro ←",
+    "id": "Semua yang ditambahkan Pro →",
     "hi": "Pro में जुड़ने वाली हर चीज़ →",
-    "ur": "Pro میں شامل ہونے والی ہر چیز ←",
-    "id": "Semua yang ditambahkan Pro →"
-  },
-  "plan_free_price": {
-    "en": "€0",
-    "es": "0 €",
-    "fr": "0 €",
-    "de": "0 €",
-    "it": "0 €",
-    "pt-BR": "€ 0",
-    "zh-Hans": "€0",
-    "ko": "€0",
-    "nl": "€ 0",
-    "ja": "€0",
-    "zh-Hant": "€0",
-    "ru": "0 €",
-    "tr": "0 €",
-    "ar": "€0",
-    "hi": "€0",
-    "ur": "€0",
-    "id": "€0"
+    "ar": "كل ما يضيفه Pro ←",
+    "ur": "Pro میں شامل ہونے والی ہر چیز ←"
   },
   "plan_pro_once": {
     "en": "once",
@@ -1096,10 +982,10 @@
     "zh-Hant": "一次性",
     "ru": "один раз",
     "tr": "tek seferlik",
-    "ar": "لمرة واحدة",
+    "id": "sekali bayar",
     "hi": "एक बार",
-    "ur": "ایک بار",
-    "id": "sekali bayar"
+    "ar": "لمرة واحدة",
+    "ur": "ایک بار"
   },
   "free_li1": {
     "en": "Encryption, Face ID and passcode",
@@ -1115,10 +1001,10 @@
     "zh-Hant": "加密、Face ID 和密碼",
     "ru": "Шифрование, Face ID и код-пароль",
     "tr": "Şifreleme, Face ID ve parola",
-    "ar": "التشفير وFace ID ورمز الدخول",
+    "id": "Enkripsi, Face ID, dan kode sandi",
     "hi": "एन्क्रिप्शन, Face ID और पासकोड",
-    "ur": "انکرپشن، Face ID اور پاس کوڈ",
-    "id": "Enkripsi, Face ID, dan kode sandi"
+    "ar": "التشفير وFace ID ورمز الدخول",
+    "ur": "انکرپشن، Face ID اور پاس کوڈ"
   },
   "free_li2": {
     "en": "Up to 2.5 GB and 5 albums",
@@ -1134,10 +1020,10 @@
     "zh-Hant": "最多 2.5 GB 和 5 本相簿",
     "ru": "До 2,5 ГБ и 5 альбомов",
     "tr": "2,5 GB'a ve 5 albüme kadar",
-    "ar": "حتى 2.5 غيغابايت و5 ألبومات",
+    "id": "Hingga 2,5 GB dan 5 album",
     "hi": "2.5 GB और 5 एल्बम तक",
-    "ur": "2.5 GB اور 5 البمز تک",
-    "id": "Hingga 2,5 GB dan 5 album"
+    "ar": "حتى 2.5 غيغابايت و5 ألبومات",
+    "ur": "2.5 GB اور 5 البمز تک"
   },
   "free_li3": {
     "en": "Privacy Modes and metadata protection",
@@ -1153,10 +1039,10 @@
     "zh-Hant": "隱私模式和後設資料保護",
     "ru": "Режимы конфиденциальности и защита метаданных",
     "tr": "Gizlilik Modları ve meta veri koruması",
-    "ar": "أوضاع الخصوصية وحماية البيانات الوصفية",
+    "id": "Mode Privasi dan perlindungan metadata",
     "hi": "गोपनीयता मोड और मेटाडेटा सुरक्षा",
-    "ur": "رازداری کے موڈ اور میٹا ڈیٹا کا تحفظ",
-    "id": "Mode Privasi dan perlindungan metadata"
+    "ar": "أوضاع الخصوصية وحماية البيانات الوصفية",
+    "ur": "رازداری کے موڈ اور میٹا ڈیٹا کا تحفظ"
   },
   "free_li4": {
     "en": "Stealth camera, tags and search",
@@ -1172,10 +1058,10 @@
     "zh-Hant": "隱密相機、標籤和搜尋",
     "ru": "Скрытая камера, теги и поиск",
     "tr": "Gizli kamera, etiketler ve arama",
-    "ar": "الكاميرا الخفية والوسوم والبحث",
+    "id": "Kamera tersembunyi, tag, dan pencarian",
     "hi": "गुप्त कैमरा, टैग और खोज",
-    "ur": "اسٹیلتھ کیمرہ، ٹیگز اور تلاش",
-    "id": "Kamera tersembunyi, tag, dan pencarian"
+    "ar": "الكاميرا الخفية والوسوم والبحث",
+    "ur": "اسٹیلتھ کیمرہ، ٹیگز اور تلاش"
   },
   "pro_li1": {
     "en": "Unlimited storage and albums",
@@ -1191,10 +1077,10 @@
     "zh-Hant": "無限儲存空間和相簿",
     "ru": "Безлимитное хранилище и альбомы",
     "tr": "Sınırsız depolama ve albüm",
-    "ar": "مساحة تخزين وألبومات بلا حدود",
+    "id": "Penyimpanan dan album tanpa batas",
     "hi": "असीमित स्टोरेज और एल्बम",
-    "ur": "لامحدود اسٹوریج اور البمز",
-    "id": "Penyimpanan dan album tanpa batas"
+    "ar": "مساحة تخزين وألبومات بلا حدود",
+    "ur": "لامحدود اسٹوریج اور البمز"
   },
   "pro_li2": {
     "en": "Decoy vault and duress wipe",
@@ -1210,10 +1096,10 @@
     "zh-Hant": "誘餌保險庫和脅迫清除",
     "ru": "Ложное хранилище и тревожное стирание",
     "tr": "Sahte kasa ve panik silme",
-    "ar": "الخزنة الوهمية ومسح الطوارئ",
+    "id": "Brankas umpan dan penghapusan darurat",
     "hi": "नकली तिजोरी और आपातकालीन डेटा मिटाना",
-    "ur": "جعلی والٹ اور ہنگامی حذف",
-    "id": "Brankas umpan dan penghapusan darurat"
+    "ar": "الخزنة الوهمية ومسح الطوارئ",
+    "ur": "جعلی والٹ اور ہنگامی حذف"
   },
   "pro_li3": {
     "en": "Encrypted iCloud backup",
@@ -1229,10 +1115,10 @@
     "zh-Hant": "加密 iCloud 備份",
     "ru": "Зашифрованная резервная копия в iCloud",
     "tr": "Şifreli iCloud yedeklemesi",
-    "ar": "نسخ احتياطي مشفّر على iCloud",
+    "id": "Cadangan iCloud terenkripsi",
     "hi": "एन्क्रिप्टेड iCloud बैकअप",
-    "ur": "انکرپٹڈ iCloud بیک اپ",
-    "id": "Cadangan iCloud terenkripsi"
+    "ar": "نسخ احتياطي مشفّر على iCloud",
+    "ur": "انکرپٹڈ iCloud بیک اپ"
   },
   "pro_li4": {
     "en": "Screenshot and recording protection",
@@ -1248,10 +1134,10 @@
     "zh-Hant": "截圖和錄影保護",
     "ru": "Защита от снимков и записи экрана",
     "tr": "Ekran görüntüsü ve kayıt koruması",
-    "ar": "الحماية من لقطات الشاشة والتسجيل",
+    "id": "Perlindungan dari tangkapan layar dan rekaman",
     "hi": "स्क्रीनशॉट और रिकॉर्डिंग से सुरक्षा",
-    "ur": "اسکرین شاٹ اور ریکارڈنگ سے تحفظ",
-    "id": "Perlindungan dari tangkapan layar dan rekaman"
+    "ar": "الحماية من لقطات الشاشة والتسجيل",
+    "ur": "اسکرین شاٹ اور ریکارڈنگ سے تحفظ"
   },
   "pro_li5": {
     "en": "Break-in photos and album passwords",
@@ -1267,10 +1153,10 @@
     "zh-Hant": "闖入者照片和相簿密碼",
     "ru": "Фото при взломе и пароли для альбомов",
     "tr": "İzinsiz giriş fotoğrafları ve albüm şifreleri",
-    "ar": "صور المتطفلين وكلمات سر الألبومات",
+    "id": "Foto penyusup dan kata sandi album",
     "hi": "घुसपैठिए की फ़ोटो और एल्बम पासवर्ड",
-    "ur": "گھس بیٹھیے کی تصاویر اور البم پاس ورڈ",
-    "id": "Foto penyusup dan kata sandi album"
+    "ar": "صور المتطفلين وكلمات سر الألبومات",
+    "ur": "گھس بیٹھیے کی تصاویر اور البم پاس ورڈ"
   },
   "pro_li6": {
     "en": "Wi-Fi transfer, location lock, disguise icon",
@@ -1286,10 +1172,10 @@
     "zh-Hant": "Wi-Fi 傳輸、依位置鎖定、偽裝圖像",
     "ru": "Передача по Wi-Fi, блокировка по местоположению, маскировка значка",
     "tr": "Wi-Fi aktarımı, konuma dayalı kilit, kamuflaj simgesi",
-    "ar": "النقل عبر Wi-Fi، والقفل حسب الموقع، والأيقونة المتخفية",
+    "id": "Transfer Wi-Fi, kunci berbasis lokasi, ikon samaran",
     "hi": "वाई-फ़ाई स्थानांतरण, स्थान-आधारित लॉक, छिपा हुआ आइकन",
-    "ur": "وائی فائی ٹرانسفر، مقام پر مبنی تالا، چھپا ہوا آئیکن",
-    "id": "Transfer Wi-Fi, kunci berbasis lokasi, ikon samaran"
+    "ar": "النقل عبر Wi-Fi، والقفل حسب الموقع، والأيقونة المتخفية",
+    "ur": "وائی فائی ٹرانسفر، مقام پر مبنی تالا، چھپا ہوا آئیکن"
   },
   "faq_h2": {
     "en": "Questions",
@@ -1305,10 +1191,10 @@
     "zh-Hant": "常見問題",
     "ru": "Вопросы",
     "tr": "Sorular",
-    "ar": "أسئلة",
+    "id": "Pertanyaan",
     "hi": "सवाल",
-    "ur": "سوالات",
-    "id": "Pertanyaan"
+    "ar": "أسئلة",
+    "ur": "سوالات"
   },
   "faq1_q": {
     "en": "Can anyone else see my photos?",
@@ -1324,10 +1210,10 @@
     "zh-Hant": "其他人看得到我的照片嗎？",
     "ru": "Может ли кто-то ещё увидеть мои фото?",
     "tr": "Fotoğraflarımı başka biri görebilir mi?",
-    "ar": "هل يمكن لأي شخص آخر رؤية صوري؟",
+    "id": "Apakah orang lain bisa melihat foto saya?",
     "hi": "क्या कोई और मेरी फ़ोटो देख सकता है?",
-    "ur": "کیا کوئی اور میری تصاویر دیکھ سکتا ہے؟",
-    "id": "Apakah orang lain bisa melihat foto saya?"
+    "ar": "هل يمكن لأي شخص آخر رؤية صوري؟",
+    "ur": "کیا کوئی اور میری تصاویر دیکھ سکتا ہے؟"
   },
   "faq1_a": {
     "en": "No. They’re encrypted on your iPhone with a key that stays on it. There’s no Privaro account and no server holding your photos, so there’s nothing for anyone to look at, us included.",
@@ -1343,10 +1229,10 @@
     "zh-Hant": "看不到。照片在你的 iPhone 上加密，金鑰也只留在 iPhone 上。沒有 Privaro 帳號，也沒有存放你照片的伺服器，所以包括我們在內，沒有人能看到任何內容。",
     "ru": "Нет. Они зашифрованы на вашем iPhone ключом, который никогда его не покидает. Нет ни аккаунта Privaro, ни сервера с вашими фото, поэтому смотреть никому нечего — в том числе и нам.",
     "tr": "Hayır. Fotoğraflarınız iPhone'unuzda, yalnızca orada kalan bir anahtarla şifrelenir. Privaro hesabı da fotoğraflarınızı tutan bir sunucu da yoktur; bu yüzden biz dahil kimsenin bakabileceği bir şey yoktur.",
-    "ar": "لا. صورك مشفّرة على iPhone بمفتاح يبقى عليه. لا يوجد حساب Privaro ولا خادم يحتفظ بصورك، لذا لا يوجد ما يمكن لأحد أن يطّلع عليه، بما في ذلك نحن.",
+    "id": "Tidak. Foto Anda dienkripsi di iPhone dengan kunci yang tetap berada di sana. Tidak ada akun Privaro dan tidak ada server yang menyimpan foto Anda, jadi tidak ada yang bisa dilihat siapa pun, termasuk kami.",
     "hi": "नहीं। वे आपके iPhone पर एक ऐसी कुंजी से एन्क्रिप्ट होती हैं जो उसी पर रहती है। न कोई Privaro अकाउंट है और न ही आपकी फ़ोटो रखने वाला कोई सर्वर, इसलिए किसी के देखने के लिए कुछ है ही नहीं, हमारे लिए भी नहीं।",
-    "ur": "نہیں۔ وہ آپ کے iPhone پر ایک ایسی کلید سے انکرپٹ ہوتی ہیں جو اسی پر رہتی ہے۔ نہ کوئی Privaro اکاؤنٹ ہے اور نہ آپ کی تصاویر رکھنے والا کوئی سرور، اس لیے کسی کے دیکھنے کو کچھ ہے ہی نہیں، ہمارے لیے بھی نہیں۔",
-    "id": "Tidak. Foto Anda dienkripsi di iPhone dengan kunci yang tetap berada di sana. Tidak ada akun Privaro dan tidak ada server yang menyimpan foto Anda, jadi tidak ada yang bisa dilihat siapa pun, termasuk kami."
+    "ar": "لا. صورك مشفّرة على iPhone بمفتاح يبقى عليه. لا يوجد حساب Privaro ولا خادم يحتفظ بصورك، لذا لا يوجد ما يمكن لأحد أن يطّلع عليه، بما في ذلك نحن.",
+    "ur": "نہیں۔ وہ آپ کے iPhone پر ایک ایسی کلید سے انکرپٹ ہوتی ہیں جو اسی پر رہتی ہے۔ نہ کوئی Privaro اکاؤنٹ ہے اور نہ آپ کی تصاویر رکھنے والا کوئی سرور، اس لیے کسی کے دیکھنے کو کچھ ہے ہی نہیں، ہمارے لیے بھی نہیں۔"
   },
   "faq2_q": {
     "en": "What if I forget my passcode?",
@@ -1362,10 +1248,10 @@
     "zh-Hant": "如果我忘記密碼怎麼辦？",
     "ru": "Что, если я забуду код-пароль?",
     "tr": "Parolamı unutursam ne olur?",
-    "ar": "ماذا لو نسيت رمز الدخول؟",
+    "id": "Bagaimana jika saya lupa kode sandi?",
     "hi": "अगर मैं अपना पासकोड भूल जाऊँ तो?",
-    "ur": "اگر میں اپنا پاس کوڈ بھول جاؤں تو؟",
-    "id": "Bagaimana jika saya lupa kode sandi?"
+    "ar": "ماذا لو نسيت رمز الدخول؟",
+    "ur": "اگر میں اپنا پاس کوڈ بھول جاؤں تو؟"
   },
   "faq2_a": {
     "en": "When you set up Privaro you get a recovery key. Keep it somewhere safe: it lets you set a new passcode. Without the passcode or the recovery key, the vault can’t be opened, not even by us.",
@@ -1381,10 +1267,10 @@
     "zh-Hant": "設定 Privaro 時你會拿到一組復原密鑰。請把它存放在安全的地方：它能讓你設定新密碼。沒有密碼或復原密鑰，保險庫就無法打開，連我們也打不開。",
     "ru": "При настройке Privaro вы получаете ключ восстановления. Храните его в надёжном месте: с ним можно задать новый код-пароль. Без код-пароля или ключа восстановления хранилище не открыть — даже нам.",
     "tr": "Privaro'yu kurarken bir kurtarma anahtarı alırsınız. Onu güvenli bir yerde saklayın: yeni bir parola belirlemenizi sağlar. Parola veya kurtarma anahtarı olmadan kasa açılamaz, biz bile açamayız.",
-    "ar": "عند إعداد Privaro تحصل على مفتاح استرداد. احتفظ به في مكان آمن: فهو يتيح لك تعيين رمز دخول جديد. بدون رمز الدخول أو مفتاح الاسترداد لا يمكن فتح الخزنة، ولا حتى من قِبلنا.",
+    "id": "Saat menyiapkan Privaro, Anda mendapatkan kunci pemulihan. Simpan di tempat yang aman: kunci itu memungkinkan Anda membuat kode sandi baru. Tanpa kode sandi atau kunci pemulihan, brankas tidak dapat dibuka, bahkan oleh kami.",
     "hi": "Privaro सेट अप करते समय आपको एक रिकवरी कुंजी मिलती है। इसे किसी सुरक्षित जगह रखें: इससे आप नया पासकोड सेट कर सकते हैं। पासकोड या रिकवरी कुंजी के बिना तिजोरी नहीं खोली जा सकती, हम भी नहीं खोल सकते।",
-    "ur": "Privaro سیٹ اپ کرتے وقت آپ کو ایک ریکوری کلید ملتی ہے۔ اسے کسی محفوظ جگہ رکھیں: اس سے آپ نیا پاس کوڈ سیٹ کر سکتے ہیں۔ پاس کوڈ یا ریکوری کلید کے بغیر والٹ نہیں کھولا جا سکتا، ہم بھی نہیں کھول سکتے۔",
-    "id": "Saat menyiapkan Privaro, Anda mendapatkan kunci pemulihan. Simpan di tempat yang aman: kunci itu memungkinkan Anda membuat kode sandi baru. Tanpa kode sandi atau kunci pemulihan, brankas tidak dapat dibuka, bahkan oleh kami."
+    "ar": "عند إعداد Privaro تحصل على مفتاح استرداد. احتفظ به في مكان آمن: فهو يتيح لك تعيين رمز دخول جديد. بدون رمز الدخول أو مفتاح الاسترداد لا يمكن فتح الخزنة، ولا حتى من قِبلنا.",
+    "ur": "Privaro سیٹ اپ کرتے وقت آپ کو ایک ریکوری کلید ملتی ہے۔ اسے کسی محفوظ جگہ رکھیں: اس سے آپ نیا پاس کوڈ سیٹ کر سکتے ہیں۔ پاس کوڈ یا ریکوری کلید کے بغیر والٹ نہیں کھولا جا سکتا، ہم بھی نہیں کھول سکتے۔"
   },
   "faq3_q": {
     "en": "What happens if I lose my phone?",
@@ -1400,10 +1286,10 @@
     "zh-Hant": "如果手機遺失了怎麼辦？",
     "ru": "Что будет, если я потеряю телефон?",
     "tr": "Telefonumu kaybedersem ne olur?",
-    "ar": "ماذا يحدث إذا فقدت هاتفي؟",
+    "id": "Apa yang terjadi jika ponsel saya hilang?",
     "hi": "अगर मेरा फ़ोन खो जाए तो क्या होगा?",
-    "ur": "اگر میرا فون گم ہو جائے تو کیا ہوگا؟",
-    "id": "Apa yang terjadi jika ponsel saya hilang?"
+    "ar": "ماذا يحدث إذا فقدت هاتفي؟",
+    "ur": "اگر میرا فون گم ہو جائے تو کیا ہوگا؟"
   },
   "faq3_a": {
     "en": "If you turned on encrypted iCloud backup (Pro), you can restore the vault on your new iPhone with your passcode. Restoring is free. Without a backup, the photos stay locked on the old phone.",
@@ -1419,10 +1305,10 @@
     "zh-Hant": "如果你開啟了加密 iCloud 備份（Pro），就可以用你的密碼在新 iPhone 上還原保險庫。還原是免費的。沒有備份的話，照片會一直鎖在舊手機上。",
     "ru": "Если вы включили зашифрованное резервное копирование в iCloud (Pro), хранилище можно восстановить на новом iPhone с помощью код-пароля. Восстановление бесплатно. Без резервной копии фото останутся заблокированными на старом телефоне.",
     "tr": "Şifreli iCloud yedeklemesini (Pro) açtıysanız, kasayı yeni iPhone'unuzda parolanızla geri yükleyebilirsiniz. Geri yükleme ücretsizdir. Yedek yoksa fotoğraflar eski telefonda kilitli kalır.",
-    "ar": "إذا فعّلت النسخ الاحتياطي المشفّر على iCloud ‏(Pro)، يمكنك استعادة الخزنة على iPhone الجديد باستخدام رمز الدخول. الاستعادة مجانية. بدون نسخة احتياطية، تبقى الصور مقفلة على الهاتف القديم.",
+    "id": "Jika Anda mengaktifkan cadangan iCloud terenkripsi (Pro), Anda dapat memulihkan brankas di iPhone baru dengan kode sandi Anda. Pemulihan gratis. Tanpa cadangan, foto tetap terkunci di ponsel lama.",
     "hi": "अगर आपने एन्क्रिप्टेड iCloud बैकअप (Pro) चालू किया था, तो आप अपने पासकोड से नए iPhone पर तिजोरी रिस्टोर कर सकते हैं। रिस्टोर करना मुफ़्त है। बैकअप के बिना, फ़ोटो पुराने फ़ोन पर ही लॉक रहती हैं।",
-    "ur": "اگر آپ نے انکرپٹڈ iCloud بیک اپ (Pro) آن کیا تھا، تو آپ اپنے پاس کوڈ سے نئے iPhone پر والٹ بحال کر سکتے ہیں۔ بحال کرنا مفت ہے۔ بیک اپ کے بغیر تصاویر پرانے فون پر ہی لاک رہتی ہیں۔",
-    "id": "Jika Anda mengaktifkan cadangan iCloud terenkripsi (Pro), Anda dapat memulihkan brankas di iPhone baru dengan kode sandi Anda. Pemulihan gratis. Tanpa cadangan, foto tetap terkunci di ponsel lama."
+    "ar": "إذا فعّلت النسخ الاحتياطي المشفّر على iCloud ‏(Pro)، يمكنك استعادة الخزنة على iPhone الجديد باستخدام رمز الدخول. الاستعادة مجانية. بدون نسخة احتياطية، تبقى الصور مقفلة على الهاتف القديم.",
+    "ur": "اگر آپ نے انکرپٹڈ iCloud بیک اپ (Pro) آن کیا تھا، تو آپ اپنے پاس کوڈ سے نئے iPhone پر والٹ بحال کر سکتے ہیں۔ بحال کرنا مفت ہے۔ بیک اپ کے بغیر تصاویر پرانے فون پر ہی لاک رہتی ہیں۔"
   },
   "faq4_q": {
     "en": "Is there a limit on video size?",
@@ -1438,10 +1324,10 @@
     "zh-Hant": "影片大小有限制嗎？",
     "ru": "Есть ли ограничение на размер видео?",
     "tr": "Video boyutunda bir sınır var mı?",
-    "ar": "هل يوجد حدّ لحجم الفيديو؟",
+    "id": "Apakah ada batas ukuran video?",
     "hi": "क्या वीडियो के साइज़ की कोई सीमा है?",
-    "ur": "کیا ویڈیو کے سائز کی کوئی حد ہے؟",
-    "id": "Apakah ada batas ukuran video?"
+    "ar": "هل يوجد حدّ لحجم الفيديو؟",
+    "ur": "کیا ویڈیو کے سائز کی کوئی حد ہے؟"
   },
   "faq4_a": {
     "en": "Not per file. Any size works as long as your iPhone has room. The free version holds up to 2.5 GB in total, and Pro has no limit.",
@@ -1457,10 +1343,10 @@
     "zh-Hant": "單一檔案沒有限制。只要 iPhone 有空間，任何大小都可以。免費版總共可存放 2.5 GB，Pro 則沒有限制。",
     "ru": "На отдельный файл — нет. Подойдёт любой размер, если на iPhone хватает места. Бесплатная версия вмещает до 2,5 ГБ в сумме, в Pro ограничений нет.",
     "tr": "Dosya başına yok. iPhone'unuzda yer olduğu sürece her boyut olur. Ücretsiz sürüm toplamda 2,5 GB'a kadar tutar, Pro'da sınır yoktur.",
-    "ar": "ليس لكل ملف. أي حجم يعمل ما دام في iPhone مساحة كافية. تتّسع النسخة المجانية لما يصل إلى 2.5 غيغابايت إجمالًا، ولا حدّ في Pro.",
+    "id": "Tidak per file. Ukuran berapa pun bisa, selama iPhone Anda masih punya ruang. Versi gratis menampung hingga 2,5 GB secara total, dan Pro tanpa batas.",
     "hi": "हर फ़ाइल के लिए नहीं। जब तक आपके iPhone में जगह है, कोई भी साइज़ चलेगा। मुफ़्त वर्शन में कुल 2.5 GB तक रखा जा सकता है, और Pro में कोई सीमा नहीं है।",
-    "ur": "فی فائل نہیں۔ جب تک آپ کے iPhone میں جگہ ہے، کوئی بھی سائز چلے گا۔ مفت ورژن میں مجموعی طور پر 2.5 GB تک رکھا جا سکتا ہے، اور Pro میں کوئی حد نہیں۔",
-    "id": "Tidak per file. Ukuran berapa pun bisa, selama iPhone Anda masih punya ruang. Versi gratis menampung hingga 2,5 GB secara total, dan Pro tanpa batas."
+    "ar": "ليس لكل ملف. أي حجم يعمل ما دام في iPhone مساحة كافية. تتّسع النسخة المجانية لما يصل إلى 2.5 غيغابايت إجمالًا، ولا حدّ في Pro.",
+    "ur": "فی فائل نہیں۔ جب تک آپ کے iPhone میں جگہ ہے، کوئی بھی سائز چلے گا۔ مفت ورژن میں مجموعی طور پر 2.5 GB تک رکھا جا سکتا ہے، اور Pro میں کوئی حد نہیں۔"
   },
   "faq5_q": {
     "en": "Does it need an internet connection?",
@@ -1476,10 +1362,10 @@
     "zh-Hant": "需要網路連線嗎？",
     "ru": "Нужно ли подключение к интернету?",
     "tr": "İnternet bağlantısı gerekir mi?",
-    "ar": "هل يحتاج إلى اتصال بالإنترنت؟",
+    "id": "Apakah perlu koneksi internet?",
     "hi": "क्या इसके लिए इंटरनेट कनेक्शन चाहिए?",
-    "ur": "کیا اس کے لیے انٹرنیٹ کنکشن درکار ہے؟",
-    "id": "Apakah perlu koneksi internet?"
+    "ar": "هل يحتاج إلى اتصال بالإنترنت؟",
+    "ur": "کیا اس کے لیے انٹرنیٹ کنکشن درکار ہے؟"
   },
   "faq5_a": {
     "en": "No. Your vault works completely offline, and your photos never go online unless you turn on iCloud backup.",
@@ -1495,10 +1381,10 @@
     "zh-Hant": "不需要。保險庫完全可以離線運作，除非你開啟 iCloud 備份，否則你的照片永遠不會上網。",
     "ru": "Нет. Хранилище полностью работает офлайн, и ваши фото никогда не попадают в сеть, если вы не включите резервное копирование в iCloud.",
     "tr": "Hayır. Kasanız tamamen çevrimdışı çalışır ve iCloud yedeklemesini açmadığınız sürece fotoğraflarınız asla internete çıkmaz.",
-    "ar": "لا. تعمل خزنتك دون اتصال بالكامل، ولا تذهب صورك إلى الإنترنت أبدًا ما لم تفعّل النسخ الاحتياطي على iCloud.",
+    "id": "Tidak. Brankas Anda berfungsi sepenuhnya secara offline, dan foto Anda tidak pernah online kecuali Anda mengaktifkan cadangan iCloud.",
     "hi": "नहीं। आपकी तिजोरी पूरी तरह ऑफ़लाइन काम करती है, और जब तक आप iCloud बैकअप चालू नहीं करते, आपकी फ़ोटो कभी ऑनलाइन नहीं जातीं।",
-    "ur": "نہیں۔ آپ کا والٹ مکمل طور پر آف لائن کام کرتا ہے، اور جب تک آپ iCloud بیک اپ آن نہ کریں، آپ کی تصاویر کبھی آن لائن نہیں جاتیں۔",
-    "id": "Tidak. Brankas Anda berfungsi sepenuhnya secara offline, dan foto Anda tidak pernah online kecuali Anda mengaktifkan cadangan iCloud."
+    "ar": "لا. تعمل خزنتك دون اتصال بالكامل، ولا تذهب صورك إلى الإنترنت أبدًا ما لم تفعّل النسخ الاحتياطي على iCloud.",
+    "ur": "نہیں۔ آپ کا والٹ مکمل طور پر آف لائن کام کرتا ہے، اور جب تک آپ iCloud بیک اپ آن نہ کریں، آپ کی تصاویر کبھی آن لائن نہیں جاتیں۔"
   },
   "faq6_q": {
     "en": "Is Pro a subscription?",
@@ -1514,28 +1400,256 @@
     "zh-Hant": "Pro 是訂閱制嗎？",
     "ru": "Pro — это подписка?",
     "tr": "Pro bir abonelik mi?",
-    "ar": "هل Pro اشتراك؟",
+    "id": "Apakah Pro berlangganan?",
     "hi": "क्या Pro एक सब्सक्रिप्शन है?",
-    "ur": "کیا Pro سبسکرپشن ہے؟",
-    "id": "Apakah Pro berlangganan?"
+    "ar": "هل Pro اشتراك؟",
+    "ur": "کیا Pro سبسکرپشن ہے؟"
   },
   "faq6_a": {
-    "en": "No. Pro is a single payment of €11.99. Nothing renews and there’s nothing to cancel.",
-    "es": "No. Pro es un único pago de 11,99 €. No se renueva nada y no hay nada que cancelar.",
-    "fr": "Non. Pro est un paiement unique de 11,99 €. Rien ne se renouvelle, rien à résilier.",
-    "de": "Nein. Pro ist eine einmalige Zahlung von 11,99 €. Nichts verlängert sich, nichts muss gekündigt werden.",
-    "it": "No. Pro è un pagamento unico di 11,99 €. Non si rinnova nulla e non c’è niente da disdire.",
-    "pt-BR": "Não. O Pro é um pagamento único de € 11,99. Nada é renovado e não há nada para cancelar.",
-    "zh-Hans": "不是。Pro 是一次性付款 €11.99，不会续费，也无需取消。",
-    "ko": "아니요. Pro는 €11.99를 한 번만 결제합니다. 갱신되는 것도, 해지할 것도 없습니다.",
-    "nl": "Nee. Pro is een eenmalige betaling van € 11,99. Er wordt niets verlengd en er valt niets op te zeggen.",
-    "ja": "いいえ。Pro は €11.99 の一回払いです。自動更新もなく、解約の手続きもありません。",
-    "zh-Hant": "不是。Pro 是一次性付款 €11.99。不會自動續約，也沒有需要取消的東西。",
-    "ru": "Нет. Pro — это разовый платёж 11,99 €. Ничего не продлевается, и отменять нечего.",
-    "tr": "Hayır. Pro, 11,99 € tutarında tek seferlik bir ödemedir. Hiçbir şey yenilenmez ve iptal edilecek bir şey yoktur.",
-    "ar": "لا. Pro دفعة واحدة بقيمة €11.99. لا شيء يتجدد، ولا شيء لإلغائه.",
-    "hi": "नहीं। Pro €11.99 का एक बार का भुगतान है। कुछ भी रिन्यू नहीं होता और रद्द करने के लिए कुछ नहीं है।",
-    "ur": "نہیں۔ Pro €11.99 کی ایک بار کی ادائیگی ہے۔ کچھ بھی تجدید نہیں ہوتا اور منسوخ کرنے کو کچھ نہیں۔",
-    "id": "Tidak. Pro adalah pembayaran satu kali sebesar €11,99. Tidak ada yang diperpanjang dan tidak ada yang perlu dibatalkan."
+    "en": "No. Pro is a single payment of {{PRICE}}. Nothing renews and there’s nothing to cancel.",
+    "es": "No. Pro es un único pago de {{PRICE}}. No se renueva nada y no hay nada que cancelar.",
+    "fr": "Non. Pro est un paiement unique de {{PRICE}}. Rien ne se renouvelle, rien à résilier.",
+    "de": "Nein. Pro ist eine einmalige Zahlung von {{PRICE}}. Nichts verlängert sich, nichts muss gekündigt werden.",
+    "it": "No. Pro è un pagamento unico di {{PRICE}}. Non si rinnova nulla e non c’è niente da disdire.",
+    "pt-BR": "Não. O Pro é um pagamento único de {{PRICE}}. Nada é renovado e não há nada para cancelar.",
+    "zh-Hans": "不是。Pro 是一次性付款 {{PRICE}}，不会续费，也无需取消。",
+    "ko": "아니요. Pro는 {{PRICE}}를 한 번만 결제합니다. 갱신되는 것도, 해지할 것도 없습니다.",
+    "nl": "Nee. Pro is een eenmalige betaling van {{PRICE}}. Er wordt niets verlengd en er valt niets op te zeggen.",
+    "ja": "いいえ。Pro は {{PRICE}} の一回払いです。自動更新もなく、解約の手続きもありません。",
+    "zh-Hant": "不是。Pro 是一次性付款 {{PRICE}}。不會自動續約，也沒有需要取消的東西。",
+    "ru": "Нет. Pro — это разовый платёж {{PRICE}}. Ничего не продлевается, и отменять нечего.",
+    "tr": "Hayır. Pro, {{PRICE}} tutarında tek seferlik bir ödemedir. Hiçbir şey yenilenmez ve iptal edilecek bir şey yoktur.",
+    "id": "Tidak. Pro adalah pembayaran satu kali sebesar {{PRICE}}. Tidak ada yang diperpanjang dan tidak ada yang perlu dibatalkan.",
+    "hi": "नहीं। Pro {{PRICE}} का एक बार का भुगतान है। कुछ भी रिन्यू नहीं होता और रद्द करने के लिए कुछ नहीं है।",
+    "ar": "لا. Pro دفعة واحدة بقيمة {{PRICE}}. لا شيء يتجدد، ولا شيء لإلغائه.",
+    "ur": "نہیں۔ Pro {{PRICE}} کی ایک بار کی ادائیگی ہے۔ کچھ بھی تجدید نہیں ہوتا اور منسوخ کرنے کو کچھ نہیں۔"
+  },
+  "footer_note": {
+    "en": "Made in the Netherlands. This site sets no cookies and has no trackers.",
+    "es": "Hecho en los Países Bajos. Este sitio no usa cookies ni rastreadores.",
+    "fr": "Fait aux Pays-Bas. Ce site n’utilise ni cookies ni traceurs.",
+    "de": "Gemacht in den Niederlanden. Diese Seite setzt keine Cookies und hat keine Tracker.",
+    "it": "Fatto nei Paesi Bassi. Questo sito non usa cookie né tracker.",
+    "pt-BR": "Feito nos Países Baixos. Este site não usa cookies nem rastreadores.",
+    "zh-Hans": "在荷兰制作。本网站不设置 Cookie，也没有任何追踪器。",
+    "ko": "네덜란드에서 만들었습니다. 이 사이트는 쿠키와 추적기를 사용하지 않습니다.",
+    "nl": "Gemaakt in Nederland. Deze site plaatst geen cookies en heeft geen trackers.",
+    "ja": "オランダ製。このサイトは Cookie を使わず、トラッカーもありません。",
+    "zh-Hant": "荷蘭製作。本網站不使用 Cookie，也沒有追蹤器。",
+    "ru": "Сделано в Нидерландах. Этот сайт не использует файлы cookie и трекеры.",
+    "tr": "Hollanda'da yapıldı. Bu site çerez kullanmaz ve izleyici içermez.",
+    "id": "Dibuat di Belanda. Situs ini tidak memasang cookie dan tidak memiliki pelacak.",
+    "hi": "नीदरलैंड्स में बना। यह साइट न कोई कुकी सेट करती है और न इसमें कोई ट्रैकर है।",
+    "ar": "صُنع في هولندا. لا يضع هذا الموقع أي ملفات تعريف ارتباط ولا يحتوي على أدوات تتبّع.",
+    "ur": "نیدرلینڈز میں بنایا گیا۔ یہ سائٹ نہ کوئی کوکی لگاتی ہے اور نہ اس میں کوئی ٹریکر ہے۔"
+  },
+  "demo_h2": {
+    "en": "See it encrypted",
+    "es": "Míralo cifrado",
+    "fr": "Voyez-la chiffrée",
+    "de": "So sieht es verschlüsselt aus",
+    "it": "Guardala cifrata",
+    "pt-BR": "Veja criptografada",
+    "zh-Hans": "看看加密后的样子",
+    "ko": "암호화된 모습 보기",
+    "nl": "Zo ziet het er versleuteld uit",
+    "ja": "暗号化を見てみる",
+    "zh-Hant": "看看加密後的樣子",
+    "ru": "Как это выглядит зашифрованным",
+    "tr": "Şifrelenmiş hâlini görün",
+    "id": "Lihat hasil enkripsinya",
+    "hi": "एन्क्रिप्ट होकर कैसा दिखता है",
+    "ar": "شاهدها مشفّرة",
+    "ur": "انکرپٹ ہو کر دیکھیں"
+  },
+  "demo_p": {
+    "en": "Pick a photo. Your browser encrypts it with AES-256-GCM, the cipher Privaro uses, and draws the encrypted bytes as pixels. The photo never leaves this page.",
+    "es": "Elige una foto. Tu navegador la cifra con AES-256-GCM, el mismo cifrado que usa Privaro, y dibuja los bytes cifrados como píxeles. La foto nunca sale de esta página.",
+    "fr": "Choisissez une photo. Votre navigateur la chiffre avec AES-256-GCM, l’algorithme qu’utilise Privaro, et affiche les octets chiffrés sous forme de pixels. La photo ne quitte jamais cette page.",
+    "de": "Wähle ein Foto. Dein Browser verschlüsselt es mit AES-256-GCM, demselben Verfahren wie Privaro, und zeigt die verschlüsselten Bytes als Pixel. Das Foto verlässt diese Seite nie.",
+    "it": "Scegli una foto. Il tuo browser la cifra con AES-256-GCM, lo stesso algoritmo di Privaro, e mostra i byte cifrati come pixel. La foto non lascia mai questa pagina.",
+    "pt-BR": "Escolha uma foto. Seu navegador a criptografa com AES-256-GCM, a mesma cifra do Privaro, e desenha os bytes criptografados como pixels. A foto nunca sai desta página.",
+    "zh-Hans": "选一张照片。你的浏览器会用 Privaro 使用的同一种算法 AES-256-GCM 加密它，并把加密后的字节画成像素。照片不会离开这个页面。",
+    "ko": "사진을 하나 고르세요. 브라우저가 Privaro와 같은 AES-256-GCM 방식으로 암호화하고, 암호화된 바이트를 픽셀로 그려 보여 줍니다. 사진은 이 페이지 밖으로 나가지 않습니다.",
+    "nl": "Kies een foto. Je browser versleutelt hem met AES-256-GCM, hetzelfde algoritme als Privaro, en tekent de versleutelde bytes als pixels. De foto verlaat deze pagina nooit.",
+    "ja": "写真を選んでください。ブラウザが Privaro と同じ AES-256-GCM で暗号化し、暗号化されたバイトをピクセルとして描きます。写真がこのページの外に出ることはありません。",
+    "zh-Hant": "選一張照片。你的瀏覽器會用 Privaro 所使用的 AES-256-GCM 加密它，並把加密後的位元組畫成像素。照片永遠不會離開這個頁面。",
+    "ru": "Выберите фото. Ваш браузер зашифрует его с помощью AES-256-GCM — того же шифра, что и в Privaro, — и нарисует зашифрованные байты пикселями. Фото никогда не покидает эту страницу.",
+    "tr": "Bir fotoğraf seçin. Tarayıcınız onu Privaro'nun kullandığı şifreleme olan AES-256-GCM ile şifreler ve şifreli baytları piksel olarak çizer. Fotoğraf bu sayfadan hiç çıkmaz.",
+    "id": "Pilih sebuah foto. Peramban Anda mengenkripsinya dengan AES-256-GCM, sandi yang digunakan Privaro, lalu menggambar byte terenkripsi sebagai piksel. Foto tidak pernah keluar dari halaman ini.",
+    "hi": "एक फ़ोटो चुनें। आपका ब्राउज़र उसे AES-256-GCM से एन्क्रिप्ट करता है, वही सिफ़र जिसका Privaro उपयोग करता है, और एन्क्रिप्ट किए गए बाइट्स को पिक्सेल के रूप में दिखाता है। फ़ोटो कभी इस पेज से बाहर नहीं जाती।",
+    "ar": "اختر صورة. يشفّرها متصفحك بتشفير AES-256-GCM، وهو التشفير الذي يستخدمه Privaro، ثم يرسم البايتات المشفّرة على شكل بكسلات. لا تغادر الصورة هذه الصفحة أبدًا.",
+    "ur": "ایک تصویر چنیں۔ آپ کا براؤزر اسے AES-256-GCM سے انکرپٹ کرتا ہے، وہی سائفر جو Privaro استعمال کرتا ہے، اور انکرپٹڈ بائٹس کو پکسلز کی صورت میں دکھاتا ہے۔ تصویر کبھی اس صفحے سے باہر نہیں جاتی۔"
+  },
+  "demo_before": {
+    "en": "Your photo",
+    "es": "Tu foto",
+    "fr": "Votre photo",
+    "de": "Dein Foto",
+    "it": "La tua foto",
+    "pt-BR": "Sua foto",
+    "zh-Hans": "你的照片",
+    "ko": "내 사진",
+    "nl": "Je foto",
+    "ja": "あなたの写真",
+    "zh-Hant": "你的照片",
+    "ru": "Ваше фото",
+    "tr": "Fotoğrafınız",
+    "id": "Foto Anda",
+    "hi": "आपकी फ़ोटो",
+    "ar": "صورتك",
+    "ur": "آپ کی تصویر"
+  },
+  "demo_after": {
+    "en": "Encrypted",
+    "es": "Cifrada",
+    "fr": "Chiffrée",
+    "de": "Verschlüsselt",
+    "it": "Cifrata",
+    "pt-BR": "Criptografada",
+    "zh-Hans": "已加密",
+    "ko": "암호화됨",
+    "nl": "Versleuteld",
+    "ja": "暗号化後",
+    "zh-Hant": "已加密",
+    "ru": "Зашифровано",
+    "tr": "Şifreli",
+    "id": "Terenkripsi",
+    "hi": "एन्क्रिप्टेड",
+    "ar": "مشفّرة",
+    "ur": "انکرپٹڈ"
+  },
+  "demo_hold": {
+    "en": "press and hold to decrypt",
+    "es": "mantén pulsado para descifrar",
+    "fr": "maintenez appuyé pour déchiffrer",
+    "de": "gedrückt halten zum Entschlüsseln",
+    "it": "tieni premuto per decifrare",
+    "pt-BR": "mantenha pressionado para descriptografar",
+    "zh-Hans": "按住即可解密",
+    "ko": "길게 눌러 복호화",
+    "nl": "ingedrukt houden om te ontsleutelen",
+    "ja": "長押しで復号",
+    "zh-Hant": "按住即可解密",
+    "ru": "нажмите и удерживайте, чтобы расшифровать",
+    "tr": "şifreyi çözmek için basılı tutun",
+    "id": "tekan dan tahan untuk mendekripsi",
+    "hi": "डिक्रिप्ट करने के लिए दबाकर रखें",
+    "ar": "اضغط مطوّلًا لفك التشفير",
+    "ur": "ڈی کرپٹ کرنے کے لیے دبا کر رکھیں"
+  },
+  "demo_pick": {
+    "en": "Choose a photo",
+    "es": "Elegir una foto",
+    "fr": "Choisir une photo",
+    "de": "Foto auswählen",
+    "it": "Scegli una foto",
+    "pt-BR": "Escolher uma foto",
+    "zh-Hans": "选择照片",
+    "ko": "사진 선택",
+    "nl": "Kies een foto",
+    "ja": "写真を選ぶ",
+    "zh-Hant": "選擇照片",
+    "ru": "Выбрать фото",
+    "tr": "Fotoğraf seç",
+    "id": "Pilih foto",
+    "hi": "फ़ोटो चुनें",
+    "ar": "اختر صورة",
+    "ur": "تصویر چنیں"
+  },
+  "demo_rekey": {
+    "en": "New key",
+    "es": "Nueva clave",
+    "fr": "Nouvelle clé",
+    "de": "Neuer Schlüssel",
+    "it": "Nuova chiave",
+    "pt-BR": "Nova chave",
+    "zh-Hans": "换一个密钥",
+    "ko": "새 키",
+    "nl": "Nieuwe sleutel",
+    "ja": "新しい鍵",
+    "zh-Hant": "新金鑰",
+    "ru": "Новый ключ",
+    "tr": "Yeni anahtar",
+    "id": "Kunci baru",
+    "hi": "नई कुंजी",
+    "ar": "مفتاح جديد",
+    "ur": "نئی کلید"
+  },
+  "demo_key": {
+    "en": "Key, made in this browser just now:",
+    "es": "Clave, creada ahora mismo en este navegador:",
+    "fr": "Clé, créée à l’instant dans ce navigateur :",
+    "de": "Schlüssel, gerade eben in diesem Browser erzeugt:",
+    "it": "Chiave, creata ora in questo browser:",
+    "pt-BR": "Chave, criada agora mesmo neste navegador:",
+    "zh-Hans": "密钥，刚刚在这个浏览器里生成：",
+    "ko": "방금 이 브라우저에서 만든 키:",
+    "nl": "Sleutel, zojuist in deze browser gemaakt:",
+    "ja": "このブラウザでたった今生成された鍵：",
+    "zh-Hant": "剛剛在此瀏覽器中產生的金鑰：",
+    "ru": "Ключ, только что созданный в этом браузере:",
+    "tr": "Az önce bu tarayıcıda oluşturulan anahtar:",
+    "id": "Kunci, baru saja dibuat di peramban ini:",
+    "hi": "कुंजी, अभी-अभी इसी ब्राउज़र में बनाई गई:",
+    "ar": "المفتاح، أُنشئ للتو في هذا المتصفح:",
+    "ur": "کلید، ابھی ابھی اسی براؤزر میں بنائی گئی:"
+  },
+  "disguise_try": {
+    "en": "Try it on this tab",
+    "es": "Pruébalo en esta pestaña",
+    "fr": "Essayez sur cet onglet",
+    "de": "Probier es in diesem Tab aus",
+    "it": "Provalo in questa scheda",
+    "pt-BR": "Experimente nesta aba",
+    "zh-Hans": "在这个标签页上试试",
+    "ko": "이 탭에서 해 보기",
+    "nl": "Probeer het in dit tabblad",
+    "ja": "このタブで試す",
+    "zh-Hant": "在這個分頁試試看",
+    "ru": "Попробовать в этой вкладке",
+    "tr": "Bu sekmede deneyin",
+    "id": "Coba di tab ini",
+    "hi": "इस टैब पर आज़माएँ",
+    "ar": "جرّبها على علامة التبويب هذه",
+    "ur": "اس ٹیب پر آزمائیں"
+  },
+  "disguise_undo": {
+    "en": "Change it back",
+    "es": "Volver a cambiarlo",
+    "fr": "Revenir en arrière",
+    "de": "Zurücksetzen",
+    "it": "Ripristina",
+    "pt-BR": "Desfazer",
+    "zh-Hans": "改回来",
+    "ko": "되돌리기",
+    "nl": "Terugzetten",
+    "ja": "元に戻す",
+    "zh-Hant": "改回來",
+    "ru": "Вернуть как было",
+    "tr": "Geri al",
+    "id": "Kembalikan",
+    "hi": "वापस बदलें",
+    "ar": "أعِدها كما كانت",
+    "ur": "واپس بدلیں"
+  },
+  "calc_name": {
+    "en": "Calculator",
+    "es": "Calculadora",
+    "fr": "Calculatrice",
+    "de": "Rechner",
+    "it": "Calcolatrice",
+    "pt-BR": "Calculadora",
+    "zh-Hans": "计算器",
+    "ko": "계산기",
+    "nl": "Rekenmachine",
+    "ja": "計算機",
+    "zh-Hant": "計算機",
+    "ru": "Калькулятор",
+    "tr": "Hesap Makinesi",
+    "id": "Kalkulator",
+    "hi": "कैलकुलेटर",
+    "ar": "الآلة الحاسبة",
+    "ur": "کیلکولیٹر"
   }
 }
