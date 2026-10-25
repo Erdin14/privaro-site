@@ -52,6 +52,52 @@ h1, h2 { font-weight: 600; }
    height down. */
 .shots img { height: min(560px, 68vh, 42vw); width: auto; border-radius: 13% / 6%; border: 1px solid var(--rule); }
 
+/* Behind the homepage: the app's lock screen, in its Indigo theme
+   (LockScreenView's LockScreenBackground). So the homepage is always dark.
+   Bottom to top: the base gradient; the drifting aurora, drawn by scene.js;
+   the vignette and the light over the padlock; a fine dot lattice, lit
+   round the padlock; and the same dots again, bright, under a slow light
+   that sweeps from corner to corner. */
+.lock-scene { --bg: #080812; --ink: #ededed; --muted: #8e8e93; --rule: rgb(255 255 255 / .12); --blue: #6ea2ff;
+  color-scheme: dark; }
+.scene { position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: -1; overflow: hidden;
+  pointer-events: none; background: linear-gradient(to bottom right, #17142e, #080812); }
+.scene > * { position: absolute; }
+.aurora { inset: 0; width: 100%; height: 100%; animation: bloom 1.6s ease-out both; }
+/* The colour rises out of the dark rather than being there at once. */
+@keyframes bloom { from { opacity: 0; transform: scale(1.08); } }
+.scene-light { inset: 0;
+  background: radial-gradient(circle 520px at 50% 38%, rgb(51 46 133 / .26), transparent),
+              radial-gradient(circle 72vmax at 50% 50%, transparent 25%, rgb(0 0 0 / .5)); }
+/* Dots on a triangular lattice, 11px apart: each has six equal neighbours. */
+.lattice, .glint > div { background-size: 11px 19.0526px; }
+.lattice { inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='19.0526'%3E%3Cg fill='%239e9eff' fill-opacity='.26'%3E%3Ccircle r='.65'/%3E%3Ccircle cx='11' r='.65'/%3E%3Ccircle cx='5.5' cy='9.5263' r='.65'/%3E%3Ccircle cy='19.0526' r='.65'/%3E%3Ccircle cx='11' cy='19.0526' r='.65'/%3E%3C/g%3E%3C/svg%3E");
+  -webkit-mask-image: radial-gradient(circle 62vmax at 50% 38%, #000, rgb(0 0 0 / .96) 15%, rgb(0 0 0 / .85) 30%,
+    rgb(0 0 0 / .67) 45%, rgb(0 0 0 / .46) 60%, rgb(0 0 0 / .25) 75%, rgb(0 0 0 / .09) 88%, transparent);
+  mask-image: radial-gradient(circle 62vmax at 50% 38%, #000, rgb(0 0 0 / .96) 15%, rgb(0 0 0 / .85) 30%,
+    rgb(0 0 0 / .67) 45%, rgb(0 0 0 / .46) 60%, rgb(0 0 0 / .25) 75%, rgb(0 0 0 / .09) 88%, transparent); }
+/* The sweeping light: a round window that travels, over dots that travel back
+   by the same amount, so they stay exactly on the lattice below. Both are
+   plain moves, which the browser does without repainting anything. */
+.glint { --r: 31vmax; --x: 8vw; --y: 6vh; --dx: 84vw; --dy: 60vh;
+  left: calc(var(--x) - var(--r)); top: calc(var(--y) - var(--r)); width: calc(2 * var(--r)); height: calc(2 * var(--r));
+  -webkit-mask-image: radial-gradient(closest-side, #000, rgb(0 0 0 / .96) 15%, rgb(0 0 0 / .85) 30%,
+    rgb(0 0 0 / .67) 45%, rgb(0 0 0 / .46) 60%, rgb(0 0 0 / .25) 75%, rgb(0 0 0 / .09) 88%, transparent);
+  mask-image: radial-gradient(closest-side, #000, rgb(0 0 0 / .96) 15%, rgb(0 0 0 / .85) 30%,
+    rgb(0 0 0 / .67) 45%, rgb(0 0 0 / .46) 60%, rgb(0 0 0 / .25) 75%, rgb(0 0 0 / .09) 88%, transparent);
+  animation: sweep 17s ease-in-out infinite alternate; }
+.glint > div { position: absolute; left: calc(var(--r) - var(--x)); top: calc(var(--r) - var(--y)); width: 100vw; height: 100vh;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='19.0526'%3E%3Cg fill='%23fff' fill-opacity='.7'%3E%3Ccircle r='.65'/%3E%3Ccircle cx='11' r='.65'/%3E%3Ccircle cx='5.5' cy='9.5263' r='.65'/%3E%3Ccircle cy='19.0526' r='.65'/%3E%3Ccircle cx='11' cy='19.0526' r='.65'/%3E%3C/g%3E%3C/svg%3E");
+  animation: sweep-back 17s ease-in-out infinite alternate; }
+@keyframes sweep { to { transform: translate(var(--dx), var(--dy)); } }
+@keyframes sweep-back { to { transform: translate(calc(-1 * var(--dx)), calc(-1 * var(--dy))); } }
+/* Reduce Motion: the light rests on the padlock, and nothing moves. */
+@media (prefers-reduced-motion: reduce) {
+  .aurora, .glint, .glint > div { animation: none; }
+  .glint { --x: 50vw; --y: 38vh; }
+}
+
 /* Header on the other pages: just the way home. */
 .site-head { padding: 24px 0 0; }
 .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 600; color: var(--ink); }

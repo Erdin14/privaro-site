@@ -6,7 +6,7 @@
 <title>Privaro: iPhone के लिए निजी फ़ोटो और वीडियो तिजोरी</title>
 <meta name="description" content="Privaro आपकी निजी फ़ोटो और वीडियो को आपके iPhone पर एन्क्रिप्ट करके, Face ID और अपने अलग पासकोड के पीछे सुरक्षित रखता है। कोई अकाउंट नहीं, कुछ भी अपलोड नहीं होता।" />
 <meta name="apple-itunes-app" content="app-id=6783131829" />
-<meta name="color-scheme" content="light dark" />
+<meta name="color-scheme" content="dark" />
 <link rel="canonical" href="https://privaro-site.vercel.app/hi" />
 <link rel="alternate" hreflang="en" href="https://privaro-site.vercel.app/" />
 <link rel="alternate" hreflang="es" href="https://privaro-site.vercel.app/es" />
@@ -40,7 +40,15 @@
 <link rel="apple-touch-icon" href="/logo.png" />
 <link rel="stylesheet" href="/styles.css" />
 </head>
-<body>
+<body class="lock-scene">
+
+<!-- The app's lock screen background; see styles.css and scene.js. -->
+<div class="scene" aria-hidden="true">
+  <canvas class="aurora"></canvas>
+  <div class="scene-light"></div>
+  <div class="lattice"></div>
+  <div class="glint"><div></div></div>
+</div>
 
 <main class="home wrap">
   <div class="home-text">
@@ -48,10 +56,7 @@
     <h1>Privaro</h1>
     <p class="lead">Privaro आपके iPhone के लिए एक तिजोरी है। आप इसमें जो कुछ भी रखते हैं, वह फ़ोन पर ही एन्क्रिप्ट होता है और सिर्फ़ Face ID या Privaro के अपने पासकोड से खुलता है। कोई अकाउंट नहीं है, और कुछ भी अपलोड नहीं होता।</p>
     <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="App Store से Privaro डाउनलोड करें">
-      <picture>
-        <source srcset="/appstore-badge-white.svg" media="(prefers-color-scheme: dark)" />
-        <img src="/appstore-badge.svg" alt="App Store से Privaro डाउनलोड करें" />
-      </picture>
+      <img src="/appstore-badge-white.svg" alt="App Store से Privaro डाउनलोड करें" />
     </a>
     <p class="meta">मुफ़्त · iOS 17.6 या बाद का वर्शन · Pro एक बार की ख़रीदारी है</p>
   </div>
@@ -83,5 +88,6 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && lang.open) { lang.open = false; lang.querySelector('summary').focus(); }
 });
 </script>
+<script src="/scene.js" defer></script>
 </body>
 </html>
