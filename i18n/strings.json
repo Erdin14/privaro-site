@@ -265,6 +265,25 @@
     "ar": "الخزنة: صور في شبكة مرتّبة حسب الشهر",
     "ur": "والٹ: مہینے کے لحاظ سے گرڈ میں ترتیب دی گئی تصاویر"
   },
+  "alt_privacy": {
+    "en": "Privacy Mode settings: Home, Away and Travel",
+    "es": "Ajustes de Modo de privacidad: Casa, Fuera y Viaje",
+    "fr": "Réglages du mode de confidentialité : Maison, Absent et Voyage",
+    "de": "Einstellungen für den Datenschutzmodus: Zuhause, Unterwegs und Reise",
+    "it": "Impostazioni della modalità privacy: Casa, Fuori e Viaggio",
+    "pt-BR": "Ajustes do Modo de privacidade: Casa, Fora e Viagem",
+    "zh-Hans": "隐私模式设置：在家、外出与旅行",
+    "ko": "개인정보 보호 모드 설정: 집, 외출, 여행",
+    "nl": "Instellingen voor privacymodus: Thuis, Onderweg en Reis",
+    "ja": "プライバシーモードの設定：ホーム、外出、旅行",
+    "zh-Hant": "隱私模式設定：在家、外出和旅行",
+    "ru": "Настройки режима конфиденциальности: Дома, Вне дома и Поездка",
+    "tr": "Gizlilik Modu ayarları: Ev, Dışarıda ve Seyahat",
+    "id": "Pengaturan Mode Privasi: Di Rumah, Di Luar Rumah, dan Perjalanan",
+    "hi": "गोपनीयता मोड सेटिंग्स: होम, घर से बाहर और यात्रा",
+    "ar": "إعدادات وضع الخصوصية: المنزل وخارج المنزل والسفر",
+    "ur": "رازداری کے موڈ کی ترتیبات: ہوم، گھر سے باہر اور سفر"
+  },
   "footer_note": {
     "en": "Made in the Netherlands. This site sets no cookies and has no trackers.",
     "es": "Hecho en los Países Bajos. Este sitio no usa cookies ni rastreadores.",

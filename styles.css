@@ -38,7 +38,9 @@ h1, h2 { font-weight: 600; }
 .appstore { display: inline-block; }
 .appstore img { height: 44px; width: auto; }
 
-/* Home: the app's icon, what it does and where to get it, beside two screenshots. */
+/* Home: the app's icon, what it does and where to get it, beside three
+   screenshots. Wider than the other pages, header to footer, to fit them. */
+.lock-scene .wrap { width: min(1240px, 100% - 2 * var(--side)); }
 .home { display: flex; align-items: center; justify-content: space-between; gap: 48px; padding: 48px 0; }
 .home-text { max-width: 400px; }
 .icon { width: 64px; height: 64px; border-radius: 15px; border: 1px solid var(--rule); }
@@ -47,10 +49,13 @@ h1, h2 { font-weight: 600; }
 .home .appstore { margin-top: 28px; }
 .meta { font-size: 13px; color: var(--muted); margin-top: 12px; }
 .shots { display: flex; gap: 16px; flex-shrink: 0; }
-/* Sized by the window's height, so both always fit above the fold. The corners
-   follow the phone's screen at any size: 13% of the width across, 6% of the
-   height down. */
-.shots img { height: min(560px, 68vh, 42vw); width: auto; border-radius: 13% / 6%; border: 1px solid var(--rule); }
+/* Sized so all three always fit above the fold: by the window's height, and by
+   the width left beside the 400px of text (each phone is 0.46 times as wide as
+   it is tall, so three with their gaps take 1.38 times the height plus 32px).
+   The corners follow the phone's screen at any size: 13% of the width across,
+   6% of the height down. */
+.shots img { height: min(560px, 68vh, calc((min(100vw - 48px, 1240px) - 480px) * .724)); width: auto;
+  border-radius: 13% / 6%; border: 1px solid var(--rule); }
 
 /* Behind the homepage: the app's lock screen, in its Indigo theme
    (LockScreenView's LockScreenBackground). So the homepage is always dark.
@@ -104,6 +109,7 @@ h1, h2 { font-weight: 600; }
 .home-text > :nth-child(5) { animation-delay: .42s; }
 .shots img:nth-child(1) { animation-delay: .4s; }
 .shots img:nth-child(2) { animation-delay: .52s; }
+.shots img:nth-child(3) { animation-delay: .64s; }
 /* The text pages are for reading, so theirs is quicker. */
 .page > * { animation-duration: .5s; }
 .page > :nth-child(2) { animation-delay: .04s; }
@@ -196,12 +202,15 @@ h1, h2 { font-weight: 600; }
 :lang(ur) body { line-height: 1.8; }
 :lang(ur) :is(.home h1, .page h1) { line-height: 1.6; }
 
-/* Phones and narrow windows: text first, the screenshots side by side under it. */
-@media (max-width: 860px) {
+/* Phones and narrower windows: text first, then the screenshots in a row that scrolls
+   sideways from edge to edge, with the next one peeking in. Three across
+   would make them too small to read. */
+@media (max-width: 1000px) {
   .home { flex-direction: column; align-items: flex-start; gap: 36px; padding: 40px 0; }
   .home-text { max-width: 34em; }
-  .shots { width: 100%; max-width: 480px; gap: 12px; }
-  .shots img { height: auto; width: calc(50% - 6px); }
+  .shots { align-self: stretch; gap: 12px; margin-inline: calc(-1 * var(--side)); padding-inline: var(--side);
+    overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: var(--side); }
+  .shots img { flex: none; height: auto; width: min(44%, 260px); scroll-snap-align: start; }
 }
 @media (max-width: 760px) {
   :root { --side: 20px; }
