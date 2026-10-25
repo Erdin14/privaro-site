@@ -265,6 +265,25 @@
     "ar": "الخزنة: صور في شبكة مرتّبة حسب الشهر",
     "ur": "والٹ: مہینے کے لحاظ سے گرڈ میں ترتیب دی گئی تصاویر"
   },
+  "alt_albums": {
+    "en": "Albums in Privaro",
+    "es": "Álbumes en Privaro",
+    "fr": "Albums dans Privaro",
+    "de": "Alben in Privaro",
+    "it": "Album in Privaro",
+    "pt-BR": "Álbuns no Privaro",
+    "zh-Hans": "Privaro 中的相簿",
+    "ko": "Privaro의 앨범",
+    "nl": "Albums in Privaro",
+    "ja": "Privaro のアルバム",
+    "zh-Hant": "Privaro 中的相簿",
+    "ru": "Альбомы в Privaro",
+    "tr": "Privaro'daki albümler",
+    "id": "Album di Privaro",
+    "hi": "Privaro में एल्बम",
+    "ar": "الألبومات في Privaro",
+    "ur": "Privaro میں البمز"
+  },
   "alt_privacy": {
     "en": "Privacy Mode settings: Home, Away and Travel",
     "es": "Ajustes de Modo de privacidad: Casa, Fuera y Viaje",

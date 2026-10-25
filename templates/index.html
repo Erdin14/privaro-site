@@ -11,6 +11,9 @@
 <link rel="icon" href="/logo.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
 <link rel="stylesheet" href="/styles.css" />
+<!-- Before anything is drawn: the screenshots wait for the script at the end
+     of the page to show them. Without JavaScript they're simply there. -->
+<script>document.documentElement.classList.add('js');</script>
 </head>
 <body class="lock-scene">
 
@@ -35,11 +38,27 @@
   <div class="shots">
     <img src="/shots/shot-lock.jpg" width="700" height="1521" alt="{{alt_lock}}" fetchpriority="high" />
     <img src="/shots/shot-vault.jpg" width="700" height="1521" alt="{{alt_vault}}" />
+    <img src="/shots/shot-albums.jpg" width="700" height="1521" alt="{{alt_albums}}" />
     <img src="/shots/shot-privacy.jpg" width="700" height="1521" alt="{{alt_privacy}}" />
   </div>
 </main>
 
 {{FOOTER}}
+<script>
+// The screenshots arrive once they're on screen (.shots.shown in styles.css):
+// on a computer that's straight away, on a phone when you scroll down to them.
+// Inline, like the line in <head>, so a script that fails to load can never
+// leave them hidden.
+(() => {
+  const shots = document.querySelector('.shots');
+  const show = () => shots.classList.add('shown');
+  if (!('IntersectionObserver' in window)) return show();
+  const watch = new IntersectionObserver(entries => {
+    if (entries.some(entry => entry.isIntersecting)) { show(); watch.disconnect(); }
+  }, { threshold: 0.2 });
+  watch.observe(shots);
+})();
+</script>
 <script src="/scene.js" defer></script>
 <script src="/decrypt.js" defer></script>
 </body>
