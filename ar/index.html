@@ -42,21 +42,10 @@
 </head>
 <body>
 
-<header class="site-head wrap grid">
-  <a class="brand" href="/ar">Privaro</a>
-  <nav class="site-nav">
-    <a href="/ar/pro">Pro</a>
-    <a href="/ar/privacy">الخصوصية</a>
-    <details class="lang"><summary aria-label="اللغة"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>العربية</span></summary><div class="lang-menu"><a href="/" lang="en">English</a><a href="/es" lang="es">Español</a><a href="/fr" lang="fr">Français</a><a href="/de" lang="de">Deutsch</a><a href="/it" lang="it">Italiano</a><a href="/pt-br" lang="pt-BR">Português</a><a href="/zh" lang="zh-Hans">简体中文</a><a href="/ko" lang="ko">한국어</a><a href="/nl" lang="nl">Nederlands</a><a href="/ja" lang="ja">日本語</a><a href="/zh-hant" lang="zh-Hant">繁體中文</a><a href="/ru" lang="ru">Русский</a><a href="/tr" lang="tr">Türkçe</a><a href="/id" lang="id">Bahasa Indonesia</a><a href="/hi" lang="hi">हिन्दी</a><a href="/ar" lang="ar" class="active">العربية</a><a href="/ur" lang="ur">اردو</a></div></details>
-    <a class="nav-get" href="https://apps.apple.com/app/id6783131829">احصل على التطبيق</a>
-  </nav>
-</header>
-
-<main>
-
-<section class="hero wrap">
-  <h1>صورك الخاصة تبقى على هاتفك.</h1>
-  <div class="hero-foot grid">
+<main class="home wrap">
+  <div class="home-text">
+    <img class="icon" src="/logo.png" width="64" height="64" alt="" />
+    <h1>Privaro</h1>
     <p class="lead">Privaro خزنة لجهاز iPhone. ما تضعه فيها يُشفَّر على الهاتف نفسه، ولا يُفتح إلا بـ Face ID أو برمز الدخول الخاص بـ Privaro. لا يوجد حساب، ولا يُرفع أي شيء.</p>
     <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="نزّل Privaro من App Store">
       <picture>
@@ -64,126 +53,23 @@
         <img src="/appstore-badge.svg" alt="نزّل Privaro من App Store" />
       </picture>
     </a>
-    <p class="hero-meta">مجاني · iOS 17.6 أو أحدث · Pro عملية شراء لمرة واحدة</p>
+    <p class="meta">مجاني · iOS 17.6 أو أحدث · Pro عملية شراء لمرة واحدة</p>
   </div>
-</section>
-
-<section class="sec band wrap grid">
-  <h2 class="label">جديد</h2>
-  <p class="band-text">لا حدّ لحجم الملفات بعد الآن. أضف فيديوهات بأي طول، وستبدأ في التشغيل فورًا.</p>
-</section>
-
-<section class="sec shots wrap">
-  <figure>
+  <div class="shots">
     <img src="/shots/shot-lock.jpg" width="700" height="1521" alt="شاشة قفل Privaro جاهزة لـ Face ID" fetchpriority="high" />
-    <figcaption><span class="num">01</span><div><h2>يقفل نفسه</h2><p>انتقل إلى تطبيق آخر وستُغلق الخزنة خلفك. للعودة إليها تحتاج إلى Face ID أو رمز الدخول.</p></div></figcaption>
-  </figure>
-  <figure>
-    <img src="/shots/shot-vault.jpg" width="700" height="1521" alt="الخزنة: صور في شبكة مرتّبة حسب الشهر" loading="lazy" />
-    <figcaption><span class="num">02</span><div><h2>تبدو مثل مكتبة صورك</h2><p>تظهر الصور والفيديوهات في شبكة مألوفة مرتّبة حسب الشهر. أنشئ ألبومات، وأضف تعليقات ووسومًا، وحدّد المفضلة، وابحث، دون أن يغادر أي شيء الخزنة.</p></div></figcaption>
-  </figure>
-  <figure>
-    <img src="/shots/shot-privacy.jpg" width="700" height="1521" alt="إعدادات وضع الخصوصية: المنزل وخارج المنزل والسفر" loading="lazy" />
-    <figcaption><span class="num">03</span><div><h2>أكثر صرامة عندما تحتاج</h2><p>تغيّر أوضاع الخصوصية مدى حرص Privaro. في المنزل، شارك كالمعتاد. خارج المنزل، يطلب رمز الدخول قبل أن يغادر أي شيء الخزنة. وفي السفر، لا يمكن لأي شيء أن يغادرها إطلاقًا.</p></div></figcaption>
-  </figure>
-  <figure>
-    <img src="/shots/shot-albums.jpg" width="700" height="1521" alt="الألبومات في Privaro" loading="lazy" />
-    <figcaption><span class="num">04</span><div><h2>ألبومات تبقى مغلقة</h2><p>رتّب كل شيء في ألبومات ومجلدات. مع Pro، امنح أي ألبوم كلمة سر خاصة به، فيبقى مقفلًا حتى عندما تكون الخزنة مفتوحة.</p></div></figcaption>
-  </figure>
-</section>
-
-<section class="sec wrap grid" id="demo" hidden>
-  <div class="label">
-    <h2>شاهدها مشفّرة</h2>
-    <p>اختر صورة. يشفّرها متصفحك بتشفير AES-256-GCM، وهو التشفير الذي يستخدمه Privaro، ثم يرسم البايتات المشفّرة على شكل بكسلات. لا تغادر الصورة هذه الصفحة أبدًا.</p>
+    <img src="/shots/shot-vault.jpg" width="700" height="1521" alt="الخزنة: صور في شبكة مرتّبة حسب الشهر" />
   </div>
-  <div class="sec-body demo">
-    <figure>
-      <canvas class="demo-before" width="295" height="640"></canvas>
-      <figcaption>صورتك</figcaption>
-    </figure>
-    <figure>
-      <div class="demo-stage">
-        <canvas class="demo-after" width="295" height="640" tabindex="0" role="button" aria-label="اضغط مطوّلًا لفك التشفير"></canvas>
-        <div class="scan" aria-hidden="true"><span></span></div>
-      </div>
-      <figcaption><b>مشفّرة</b> · اضغط مطوّلًا لفك التشفير</figcaption>
-    </figure>
-    <div class="demo-controls">
-      <label class="btn"><input class="demo-file" type="file" accept="image/*" />اختر صورة</label>
-      <button class="btn demo-rekey" type="button">مفتاح جديد</button>
-    </div>
-    <p class="demo-key">المفتاح، أُنشئ للتو في هذا المتصفح: <code></code></p>
-  </div>
-</section>
-
-<section class="sec wrap grid">
-  <h2 class="label">وأشياء أخرى أيضًا</h2>
-  <div class="sec-body">
-    <ol class="index">
-      <li><span class="num">05</span><div><h3>أي حجم للملفات</h3><p>أضف صورًا وفيديوهات بأي حجم. الفيديوهات الطويلة تبدأ في التشغيل فورًا.</p></div></li>
-      <li><span class="num">06</span><div><h3>الكاميرا الخفية</h3><p>التقط الصور والفيديوهات مباشرة داخل الخزنة، فلا تصل أبدًا إلى ألبوم الكاميرا.</p></div></li>
-      <li><span class="num">07</span><div><h3>حماية البيانات الوصفية</h3><p>اختر ما يُرسل مع الصورة عند مشاركتها: كل شيء، أو بدون الموقع، أو لا شيء على الإطلاق.</p></div></li>
-      <li><span class="num">08</span><div><h3>اكتشاف الصور الحساسة</h3><p>يمكن لـ Privaro فحص الصور التي تختارها بحثًا عن أشياء مثل الهويات والبطاقات والمستندات، على هاتفك مباشرة، ثم يعرض نقلها إلى الخزنة.</p></div></li>
-      <li><span class="num">09</span><div><h3>الخزنة الوهمية <span class="pro-tag">Pro</span></h3><p>رمز دخول ثانٍ يفتح خزنة منفصلة فيها صور غير مهمة، تحسّبًا لأن تُجبر يومًا على فتحها.</p></div></li>
-      <li><span class="num">10</span><div><h3>نسخ احتياطي مشفّر <span class="pro-tag">Pro</span></h3><p>انسخ احتياطيًا إلى iCloud الخاص بك، بعد التشفير على هاتفك أولًا. الاستعادة مجانية دائمًا.</p></div></li>
-      <li><span class="num">11</span><div><h3>صور المتطفلين <span class="pro-tag">Pro</span></h3><p>إذا أدخل أحدهم رمز دخول خاطئًا، يمكن لـ Privaro التقاط صورته بهدوء.</p></div></li>
-      <li><span class="num">12</span><div><h3>أيقونة متخفية <span class="pro-tag">Pro</span></h3><p>اجعل Privaro يبدو على شاشتك الرئيسية كتطبيق آلة حاسبة أو ملاحظات.</p><button class="link-btn disguise" type="button" data-name="الآلة الحاسبة" data-undo="أعِدها كما كانت" hidden>جرّبها على علامة التبويب هذه</button></div></li>
-    </ol>
-    <p class="more"><a href="/ar/pro">كل ما يضيفه Pro ←</a></p>
-  </div>
-</section>
-
-<section class="sec wrap grid">
-  <div class="label">
-    <h2>مجاني، مع ترقية لمرة واحدة</h2>
-    <p>النسخة المجانية بلا إعلانات وبلا حدّ زمني. يرفع Pro القيود ويضيف حماية إضافية. تدفع مرة واحدة، ويعمل على كل جهاز يستخدم حساب Apple الخاص بك.</p>
-  </div>
-  <div class="plan">
-    <h3>مجاني</h3>
-    <p class="plan-price"><span class="price" data-price="free">‏0 ر.س.‏</span></p>
-    <ul>
-      <li>التشفير وFace ID ورمز الدخول</li>
-      <li>حتى 2.5 غيغابايت و5 ألبومات</li>
-      <li>أوضاع الخصوصية وحماية البيانات الوصفية</li>
-      <li>الكاميرا الخفية والوسوم والبحث</li>
-    </ul>
-  </div>
-  <div class="plan">
-    <h3>Pro</h3>
-    <p class="plan-price"><span class="price" data-price="pro">‏19.99 ر.س.‏</span> <span>لمرة واحدة</span></p>
-    <ul>
-      <li>مساحة تخزين وألبومات بلا حدود</li>
-      <li>الخزنة الوهمية ومسح الطوارئ</li>
-      <li>نسخ احتياطي مشفّر على iCloud</li>
-      <li>الحماية من لقطات الشاشة والتسجيل</li>
-      <li>صور المتطفلين وكلمات سر الألبومات</li>
-      <li>النقل عبر Wi-Fi، والقفل حسب الموقع، والأيقونة المتخفية</li>
-    </ul>
-  </div>
-</section>
-
-<section class="sec wrap grid">
-  <h2 class="label">أسئلة</h2>
-  <div class="sec-body faq">
-    <details><summary>هل يمكن لأي شخص آخر رؤية صوري؟</summary><p>لا. صورك مشفّرة على iPhone بمفتاح يبقى عليه. لا يوجد حساب Privaro ولا خادم يحتفظ بصورك، لذا لا يوجد ما يمكن لأحد أن يطّلع عليه، بما في ذلك نحن.</p></details>
-    <details><summary>ماذا لو نسيت رمز الدخول؟</summary><p>عند إعداد Privaro تحصل على مفتاح استرداد. احتفظ به في مكان آمن: فهو يتيح لك تعيين رمز دخول جديد. بدون رمز الدخول أو مفتاح الاسترداد لا يمكن فتح الخزنة، ولا حتى من قِبلنا.</p></details>
-    <details><summary>ماذا يحدث إذا فقدت هاتفي؟</summary><p>إذا فعّلت النسخ الاحتياطي المشفّر على iCloud ‏(Pro)، يمكنك استعادة الخزنة على iPhone الجديد باستخدام رمز الدخول. الاستعادة مجانية. بدون نسخة احتياطية، تبقى الصور مقفلة على الهاتف القديم.</p></details>
-    <details><summary>هل يوجد حدّ لحجم الفيديو؟</summary><p>ليس لكل ملف. أي حجم يعمل ما دام في iPhone مساحة كافية. تتّسع النسخة المجانية لما يصل إلى 2.5 غيغابايت إجمالًا، ولا حدّ في Pro.</p></details>
-    <details><summary>هل يحتاج إلى اتصال بالإنترنت؟</summary><p>لا. تعمل خزنتك دون اتصال بالكامل، ولا تذهب صورك إلى الإنترنت أبدًا ما لم تفعّل النسخ الاحتياطي على iCloud.</p></details>
-    <details><summary>هل Pro اشتراك؟</summary><p>لا. Pro دفعة واحدة بقيمة <span class="price" data-price="pro">‏19.99 ر.س.‏</span>. لا شيء يتجدد، ولا شيء لإلغائه.</p></details>
-  </div>
-</section>
-
 </main>
 
-<footer class="site-foot wrap grid">
-  <p class="foot-legal">© <span id="year">2026</span> Privaro. جميع الحقوق محفوظة.<br />صُنع في هولندا. لا يضع هذا الموقع أي ملفات تعريف ارتباط ولا يحتوي على أدوات تتبّع.</p>
+<footer class="site-foot wrap">
+  <p>© <span id="year">2026</span> Privaro. صُنع في هولندا. لا يضع هذا الموقع أي ملفات تعريف ارتباط ولا يحتوي على أدوات تتبّع.</p>
   <nav class="foot-links">
     <a href="/ar/pro">ميزات Pro</a>
+    <a href="/ar/faq">أسئلة</a>
     <a href="/ar/privacy">سياسة الخصوصية</a>
     <a href="/ar/terms">شروط الاستخدام</a>
     <a href="mailto:erdincdubu@icloud.com">تواصل معنا</a>
+    <details class="lang"><summary aria-label="اللغة"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>العربية</span></summary><div class="lang-menu"><a href="/" lang="en">English</a><a href="/es" lang="es">Español</a><a href="/fr" lang="fr">Français</a><a href="/de" lang="de">Deutsch</a><a href="/it" lang="it">Italiano</a><a href="/pt-br" lang="pt-BR">Português</a><a href="/zh" lang="zh-Hans">简体中文</a><a href="/ko" lang="ko">한국어</a><a href="/nl" lang="nl">Nederlands</a><a href="/ja" lang="ja">日本語</a><a href="/zh-hant" lang="zh-Hant">繁體中文</a><a href="/ru" lang="ru">Русский</a><a href="/tr" lang="tr">Türkçe</a><a href="/id" lang="id">Bahasa Indonesia</a><a href="/hi" lang="hi">हिन्दी</a><a href="/ar" lang="ar" class="active">العربية</a><a href="/ur" lang="ur">اردو</a></div></details>
   </nav>
 </footer>
 
@@ -196,7 +82,5 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && lang.open) { lang.open = false; lang.querySelector('summary').focus(); }
 });
 </script>
-<script src="/price.js" defer></script>
-<script src="/demo.js" defer></script>
 </body>
 </html>

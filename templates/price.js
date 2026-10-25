@@ -34,7 +34,7 @@
     catch (e) { opts.currencyDisplay = 'symbol'; return new Intl.NumberFormat(lang, opts).format(n); }
   }
   for (const el of spans) {
-    const text = format(el.dataset.price === 'free' ? 0 : amount);
+    const text = format(amount);
     if (el.textContent !== text) el.textContent = text;
   }
 })();

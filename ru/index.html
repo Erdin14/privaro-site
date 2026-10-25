@@ -42,21 +42,10 @@
 </head>
 <body>
 
-<header class="site-head wrap grid">
-  <a class="brand" href="/ru">Privaro</a>
-  <nav class="site-nav">
-    <a href="/ru/pro">Pro</a>
-    <a href="/ru/privacy">Конфиденциальность</a>
-    <details class="lang"><summary aria-label="Язык"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>Русский</span></summary><div class="lang-menu"><a href="/" lang="en">English</a><a href="/es" lang="es">Español</a><a href="/fr" lang="fr">Français</a><a href="/de" lang="de">Deutsch</a><a href="/it" lang="it">Italiano</a><a href="/pt-br" lang="pt-BR">Português</a><a href="/zh" lang="zh-Hans">简体中文</a><a href="/ko" lang="ko">한국어</a><a href="/nl" lang="nl">Nederlands</a><a href="/ja" lang="ja">日本語</a><a href="/zh-hant" lang="zh-Hant">繁體中文</a><a href="/ru" lang="ru" class="active">Русский</a><a href="/tr" lang="tr">Türkçe</a><a href="/id" lang="id">Bahasa Indonesia</a><a href="/hi" lang="hi">हिन्दी</a><a href="/ar" lang="ar">العربية</a><a href="/ur" lang="ur">اردو</a></div></details>
-    <a class="nav-get" href="https://apps.apple.com/app/id6783131829">Скачать</a>
-  </nav>
-</header>
-
-<main>
-
-<section class="hero wrap">
-  <h1>Личные фото остаются на вашем телефоне.</h1>
-  <div class="hero-foot grid">
+<main class="home wrap">
+  <div class="home-text">
+    <img class="icon" src="/logo.png" width="64" height="64" alt="" />
+    <h1>Privaro</h1>
     <p class="lead">Privaro — это хранилище для вашего iPhone. Всё, что вы в него кладёте, шифруется на самом телефоне и открывается только по Face ID или собственному код-паролю Privaro. Аккаунт не нужен, и ничего не загружается в сеть.</p>
     <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="Загрузите Privaro в App Store">
       <picture>
@@ -64,126 +53,23 @@
         <img src="/appstore-badge.svg" alt="Загрузите Privaro в App Store" />
       </picture>
     </a>
-    <p class="hero-meta">Бесплатно · iOS 17.6 или новее · Pro покупается один раз</p>
+    <p class="meta">Бесплатно · iOS 17.6 или новее · Pro покупается один раз</p>
   </div>
-</section>
-
-<section class="sec band wrap grid">
-  <h2 class="label">Новое</h2>
-  <p class="band-text">Больше никаких ограничений на размер файла. Добавляйте видео любой длины — они начинают воспроизводиться сразу.</p>
-</section>
-
-<section class="sec shots wrap">
-  <figure>
+  <div class="shots">
     <img src="/shots/shot-lock.jpg" width="700" height="1521" alt="Экран блокировки Privaro, готовый к Face ID" fetchpriority="high" />
-    <figcaption><span class="num">01</span><div><h2>Блокируется сам</h2><p>Переключитесь на другое приложение — и хранилище закроется за вами. Чтобы вернуться, нужен Face ID или код-пароль.</p></div></figcaption>
-  </figure>
-  <figure>
-    <img src="/shots/shot-vault.jpg" width="700" height="1521" alt="Хранилище: фото сеткой, по месяцам" loading="lazy" />
-    <figcaption><span class="num">02</span><div><h2>Выглядит как ваша медиатека</h2><p>Фото и видео лежат в привычной сетке, по месяцам. Создавайте альбомы, добавляйте подписи и теги, отмечайте избранное и ищите — и всё это без того, чтобы что-то покидало хранилище.</p></div></figcaption>
-  </figure>
-  <figure>
-    <img src="/shots/shot-privacy.jpg" width="700" height="1521" alt="Настройки режима конфиденциальности: Дома, Вне дома и Поездка" loading="lazy" />
-    <figcaption><span class="num">03</span><div><h2>Строже, когда это нужно</h2><p>Режимы конфиденциальности меняют то, насколько осторожен Privaro. Дома делитесь как обычно. Вне дома он спросит код-пароль, прежде чем что-либо покинет хранилище. В поездке ничего не может покинуть его вовсе.</p></div></figcaption>
-  </figure>
-  <figure>
-    <img src="/shots/shot-albums.jpg" width="700" height="1521" alt="Альбомы в Privaro" loading="lazy" />
-    <figcaption><span class="num">04</span><div><h2>Альбомы, которые остаются закрытыми</h2><p>Разложите всё по альбомам и папкам. С Pro можно задать альбому собственный пароль, и он останется заблокированным, даже когда хранилище открыто.</p></div></figcaption>
-  </figure>
-</section>
-
-<section class="sec wrap grid" id="demo" hidden>
-  <div class="label">
-    <h2>Как это выглядит зашифрованным</h2>
-    <p>Выберите фото. Ваш браузер зашифрует его с помощью AES-256-GCM — того же шифра, что и в Privaro, — и нарисует зашифрованные байты пикселями. Фото никогда не покидает эту страницу.</p>
+    <img src="/shots/shot-vault.jpg" width="700" height="1521" alt="Хранилище: фото сеткой, по месяцам" />
   </div>
-  <div class="sec-body demo">
-    <figure>
-      <canvas class="demo-before" width="295" height="640"></canvas>
-      <figcaption>Ваше фото</figcaption>
-    </figure>
-    <figure>
-      <div class="demo-stage">
-        <canvas class="demo-after" width="295" height="640" tabindex="0" role="button" aria-label="нажмите и удерживайте, чтобы расшифровать"></canvas>
-        <div class="scan" aria-hidden="true"><span></span></div>
-      </div>
-      <figcaption><b>Зашифровано</b> · нажмите и удерживайте, чтобы расшифровать</figcaption>
-    </figure>
-    <div class="demo-controls">
-      <label class="btn"><input class="demo-file" type="file" accept="image/*" />Выбрать фото</label>
-      <button class="btn demo-rekey" type="button">Новый ключ</button>
-    </div>
-    <p class="demo-key">Ключ, только что созданный в этом браузере: <code></code></p>
-  </div>
-</section>
-
-<section class="sec wrap grid">
-  <h2 class="label">И ещё кое-что</h2>
-  <div class="sec-body">
-    <ol class="index">
-      <li><span class="num">05</span><div><h3>Любой размер файла</h3><p>Добавляйте фото и видео любого размера. Длинные видео начинают воспроизводиться сразу.</p></div></li>
-      <li><span class="num">06</span><div><h3>Скрытая камера</h3><p>Снимайте фото и видео прямо в хранилище, чтобы они никогда не попадали в фотопленку.</p></div></li>
-      <li><span class="num">07</span><div><h3>Защита метаданных</h3><p>Выбирайте, что отправляется вместе с фото: всё, всё без геопозиции или вообще ничего.</p></div></li>
-      <li><span class="num">08</span><div><h3>Поиск личных снимков</h3><p>Privaro может проверить выбранные вами фото на документы, удостоверения и карты прямо на телефоне и предложить перенести их в хранилище.</p></div></li>
-      <li><span class="num">09</span><div><h3>Ложное хранилище <span class="pro-tag">Pro</span></h3><p>Второй код-пароль открывает отдельное хранилище с безобидными фото — на случай, если вас когда-нибудь заставят его разблокировать.</p></div></li>
-      <li><span class="num">10</span><div><h3>Зашифрованная резервная копия <span class="pro-tag">Pro</span></h3><p>Резервное копирование в ваш собственный iCloud, со шифрованием сначала на телефоне. Восстановление всегда бесплатно.</p></div></li>
-      <li><span class="num">11</span><div><h3>Фото при взломе <span class="pro-tag">Pro</span></h3><p>Если кто-то введёт неверный код-пароль, Privaro может незаметно его сфотографировать.</p></div></li>
-      <li><span class="num">12</span><div><h3>Маскировка значка <span class="pro-tag">Pro</span></h3><p>Пусть Privaro выглядит на экране «Домой» как калькулятор или заметки.</p><button class="link-btn disguise" type="button" data-name="Калькулятор" data-undo="Вернуть как было" hidden>Попробовать в этой вкладке</button></div></li>
-    </ol>
-    <p class="more"><a href="/ru/pro">Всё, что добавляет Pro →</a></p>
-  </div>
-</section>
-
-<section class="sec wrap grid">
-  <div class="label">
-    <h2>Бесплатно, с разовым улучшением</h2>
-    <p>В бесплатной версии нет рекламы и ограничений по времени. Pro снимает лимиты и добавляет дополнительную защиту. Вы платите один раз, и покупка работает на всех устройствах с вашим Аккаунтом Apple.</p>
-  </div>
-  <div class="plan">
-    <h3>Бесплатно</h3>
-    <p class="plan-price"><span class="price" data-price="free">0 ₽</span></p>
-    <ul>
-      <li>Шифрование, Face ID и код-пароль</li>
-      <li>До 2,5 ГБ и 5 альбомов</li>
-      <li>Режимы конфиденциальности и защита метаданных</li>
-      <li>Скрытая камера, теги и поиск</li>
-    </ul>
-  </div>
-  <div class="plan">
-    <h3>Pro</h3>
-    <p class="plan-price"><span class="price" data-price="pro">449 ₽</span> <span>один раз</span></p>
-    <ul>
-      <li>Безлимитное хранилище и альбомы</li>
-      <li>Ложное хранилище и тревожное стирание</li>
-      <li>Зашифрованная резервная копия в iCloud</li>
-      <li>Защита от снимков и записи экрана</li>
-      <li>Фото при взломе и пароли для альбомов</li>
-      <li>Передача по Wi-Fi, блокировка по местоположению, маскировка значка</li>
-    </ul>
-  </div>
-</section>
-
-<section class="sec wrap grid">
-  <h2 class="label">Вопросы</h2>
-  <div class="sec-body faq">
-    <details><summary>Может ли кто-то ещё увидеть мои фото?</summary><p>Нет. Они зашифрованы на вашем iPhone ключом, который никогда его не покидает. Нет ни аккаунта Privaro, ни сервера с вашими фото, поэтому смотреть никому нечего — в том числе и нам.</p></details>
-    <details><summary>Что, если я забуду код-пароль?</summary><p>При настройке Privaro вы получаете ключ восстановления. Храните его в надёжном месте: с ним можно задать новый код-пароль. Без код-пароля или ключа восстановления хранилище не открыть — даже нам.</p></details>
-    <details><summary>Что будет, если я потеряю телефон?</summary><p>Если вы включили зашифрованное резервное копирование в iCloud (Pro), хранилище можно восстановить на новом iPhone с помощью код-пароля. Восстановление бесплатно. Без резервной копии фото останутся заблокированными на старом телефоне.</p></details>
-    <details><summary>Есть ли ограничение на размер видео?</summary><p>На отдельный файл — нет. Подойдёт любой размер, если на iPhone хватает места. Бесплатная версия вмещает до 2,5 ГБ в сумме, в Pro ограничений нет.</p></details>
-    <details><summary>Нужно ли подключение к интернету?</summary><p>Нет. Хранилище полностью работает офлайн, и ваши фото никогда не попадают в сеть, если вы не включите резервное копирование в iCloud.</p></details>
-    <details><summary>Pro — это подписка?</summary><p>Нет. Pro — это разовый платёж <span class="price" data-price="pro">449 ₽</span>. Ничего не продлевается, и отменять нечего.</p></details>
-  </div>
-</section>
-
 </main>
 
-<footer class="site-foot wrap grid">
-  <p class="foot-legal">© <span id="year">2026</span> Privaro. Все права защищены.<br />Сделано в Нидерландах. Этот сайт не использует файлы cookie и трекеры.</p>
+<footer class="site-foot wrap">
+  <p>© <span id="year">2026</span> Privaro. Сделано в Нидерландах. Этот сайт не использует файлы cookie и трекеры.</p>
   <nav class="foot-links">
     <a href="/ru/pro">Функции Pro</a>
+    <a href="/ru/faq">Вопросы</a>
     <a href="/ru/privacy">Политика конфиденциальности</a>
     <a href="/ru/terms">Условия использования</a>
     <a href="mailto:erdincdubu@icloud.com">Связаться</a>
+    <details class="lang"><summary aria-label="Язык"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>Русский</span></summary><div class="lang-menu"><a href="/" lang="en">English</a><a href="/es" lang="es">Español</a><a href="/fr" lang="fr">Français</a><a href="/de" lang="de">Deutsch</a><a href="/it" lang="it">Italiano</a><a href="/pt-br" lang="pt-BR">Português</a><a href="/zh" lang="zh-Hans">简体中文</a><a href="/ko" lang="ko">한국어</a><a href="/nl" lang="nl">Nederlands</a><a href="/ja" lang="ja">日本語</a><a href="/zh-hant" lang="zh-Hant">繁體中文</a><a href="/ru" lang="ru" class="active">Русский</a><a href="/tr" lang="tr">Türkçe</a><a href="/id" lang="id">Bahasa Indonesia</a><a href="/hi" lang="hi">हिन्दी</a><a href="/ar" lang="ar">العربية</a><a href="/ur" lang="ur">اردو</a></div></details>
   </nav>
 </footer>
 
@@ -196,7 +82,5 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && lang.open) { lang.open = false; lang.querySelector('summary').focus(); }
 });
 </script>
-<script src="/price.js" defer></script>
-<script src="/demo.js" defer></script>
 </body>
 </html>

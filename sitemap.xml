@@ -681,6 +681,346 @@
     <xhtml:link rel="alternate" hreflang="ur" href="https://privaro-site.vercel.app/ur/pro" />
   </url>
   <url>
+    <loc>https://privaro-site.vercel.app/faq</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://privaro-site.vercel.app/faq" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://privaro-site.vercel.app/es/faq" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://privaro-site.vercel.app/fr/faq" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://privaro-site.vercel.app/de/faq" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://privaro-site.vercel.app/it/faq" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://privaro-site.vercel.app/pt-br/faq" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://privaro-site.vercel.app/zh/faq" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://privaro-site.vercel.app/ko/faq" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://privaro-site.vercel.app/nl/faq" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://privaro-site.vercel.app/ja/faq" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://privaro-site.vercel.app/zh-hant/faq" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://privaro-site.vercel.app/ru/faq" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://privaro-site.vercel.app/tr/faq" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://privaro-site.vercel.app/id/faq" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://privaro-site.vercel.app/hi/faq" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://privaro-site.vercel.app/ar/faq" />
+    <xhtml:link rel="alternate" hreflang="ur" href="https://privaro-site.vercel.app/ur/faq" />
+  </url>
+  <url>
+    <loc>https://privaro-site.vercel.app/es/faq</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://privaro-site.vercel.app/faq" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://privaro-site.vercel.app/es/faq" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://privaro-site.vercel.app/fr/faq" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://privaro-site.vercel.app/de/faq" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://privaro-site.vercel.app/it/faq" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://privaro-site.vercel.app/pt-br/faq" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://privaro-site.vercel.app/zh/faq" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://privaro-site.vercel.app/ko/faq" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://privaro-site.vercel.app/nl/faq" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://privaro-site.vercel.app/ja/faq" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://privaro-site.vercel.app/zh-hant/faq" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://privaro-site.vercel.app/ru/faq" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://privaro-site.vercel.app/tr/faq" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://privaro-site.vercel.app/id/faq" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://privaro-site.vercel.app/hi/faq" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://privaro-site.vercel.app/ar/faq" />
+    <xhtml:link rel="alternate" hreflang="ur" href="https://privaro-site.vercel.app/ur/faq" />
+  </url>
+  <url>
+    <loc>https://privaro-site.vercel.app/fr/faq</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://privaro-site.vercel.app/faq" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://privaro-site.vercel.app/es/faq" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://privaro-site.vercel.app/fr/faq" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://privaro-site.vercel.app/de/faq" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://privaro-site.vercel.app/it/faq" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://privaro-site.vercel.app/pt-br/faq" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://privaro-site.vercel.app/zh/faq" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://privaro-site.vercel.app/ko/faq" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://privaro-site.vercel.app/nl/faq" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://privaro-site.vercel.app/ja/faq" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://privaro-site.vercel.app/zh-hant/faq" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://privaro-site.vercel.app/ru/faq" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://privaro-site.vercel.app/tr/faq" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://privaro-site.vercel.app/id/faq" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://privaro-site.vercel.app/hi/faq" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://privaro-site.vercel.app/ar/faq" />
+    <xhtml:link rel="alternate" hreflang="ur" href="https://privaro-site.vercel.app/ur/faq" />
+  </url>
+  <url>
+    <loc>https://privaro-site.vercel.app/de/faq</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://privaro-site.vercel.app/faq" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://privaro-site.vercel.app/es/faq" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://privaro-site.vercel.app/fr/faq" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://privaro-site.vercel.app/de/faq" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://privaro-site.vercel.app/it/faq" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://privaro-site.vercel.app/pt-br/faq" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://privaro-site.vercel.app/zh/faq" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://privaro-site.vercel.app/ko/faq" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://privaro-site.vercel.app/nl/faq" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://privaro-site.vercel.app/ja/faq" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://privaro-site.vercel.app/zh-hant/faq" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://privaro-site.vercel.app/ru/faq" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://privaro-site.vercel.app/tr/faq" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://privaro-site.vercel.app/id/faq" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://privaro-site.vercel.app/hi/faq" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://privaro-site.vercel.app/ar/faq" />
+    <xhtml:link rel="alternate" hreflang="ur" href="https://privaro-site.vercel.app/ur/faq" />
+  </url>
+  <url>
+    <loc>https://privaro-site.vercel.app/it/faq</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://privaro-site.vercel.app/faq" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://privaro-site.vercel.app/es/faq" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://privaro-site.vercel.app/fr/faq" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://privaro-site.vercel.app/de/faq" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://privaro-site.vercel.app/it/faq" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://privaro-site.vercel.app/pt-br/faq" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://privaro-site.vercel.app/zh/faq" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://privaro-site.vercel.app/ko/faq" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://privaro-site.vercel.app/nl/faq" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://privaro-site.vercel.app/ja/faq" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://privaro-site.vercel.app/zh-hant/faq" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://privaro-site.vercel.app/ru/faq" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://privaro-site.vercel.app/tr/faq" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://privaro-site.vercel.app/id/faq" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://privaro-site.vercel.app/hi/faq" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://privaro-site.vercel.app/ar/faq" />
+    <xhtml:link rel="alternate" hreflang="ur" href="https://privaro-site.vercel.app/ur/faq" />
+  </url>
+  <url>
+    <loc>https://privaro-site.vercel.app/pt-br/faq</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://privaro-site.vercel.app/faq" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://privaro-site.vercel.app/es/faq" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://privaro-site.vercel.app/fr/faq" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://privaro-site.vercel.app/de/faq" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://privaro-site.vercel.app/it/faq" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://privaro-site.vercel.app/pt-br/faq" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://privaro-site.vercel.app/zh/faq" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://privaro-site.vercel.app/ko/faq" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://privaro-site.vercel.app/nl/faq" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://privaro-site.vercel.app/ja/faq" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://privaro-site.vercel.app/zh-hant/faq" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://privaro-site.vercel.app/ru/faq" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://privaro-site.vercel.app/tr/faq" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://privaro-site.vercel.app/id/faq" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://privaro-site.vercel.app/hi/faq" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://privaro-site.vercel.app/ar/faq" />
+    <xhtml:link rel="alternate" hreflang="ur" href="https://privaro-site.vercel.app/ur/faq" />
+  </url>
+  <url>
+    <loc>https://privaro-site.vercel.app/zh/faq</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://privaro-site.vercel.app/faq" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://privaro-site.vercel.app/es/faq" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://privaro-site.vercel.app/fr/faq" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://privaro-site.vercel.app/de/faq" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://privaro-site.vercel.app/it/faq" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://privaro-site.vercel.app/pt-br/faq" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://privaro-site.vercel.app/zh/faq" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://privaro-site.vercel.app/ko/faq" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://privaro-site.vercel.app/nl/faq" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://privaro-site.vercel.app/ja/faq" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://privaro-site.vercel.app/zh-hant/faq" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://privaro-site.vercel.app/ru/faq" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://privaro-site.vercel.app/tr/faq" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://privaro-site.vercel.app/id/faq" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://privaro-site.vercel.app/hi/faq" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://privaro-site.vercel.app/ar/faq" />
+    <xhtml:link rel="alternate" hreflang="ur" href="https://privaro-site.vercel.app/ur/faq" />
+  </url>
+  <url>
+    <loc>https://privaro-site.vercel.app/ko/faq</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://privaro-site.vercel.app/faq" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://privaro-site.vercel.app/es/faq" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://privaro-site.vercel.app/fr/faq" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://privaro-site.vercel.app/de/faq" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://privaro-site.vercel.app/it/faq" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://privaro-site.vercel.app/pt-br/faq" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://privaro-site.vercel.app/zh/faq" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://privaro-site.vercel.app/ko/faq" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://privaro-site.vercel.app/nl/faq" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://privaro-site.vercel.app/ja/faq" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://privaro-site.vercel.app/zh-hant/faq" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://privaro-site.vercel.app/ru/faq" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://privaro-site.vercel.app/tr/faq" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://privaro-site.vercel.app/id/faq" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://privaro-site.vercel.app/hi/faq" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://privaro-site.vercel.app/ar/faq" />
+    <xhtml:link rel="alternate" hreflang="ur" href="https://privaro-site.vercel.app/ur/faq" />
+  </url>
+  <url>
+    <loc>https://privaro-site.vercel.app/nl/faq</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://privaro-site.vercel.app/faq" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://privaro-site.vercel.app/es/faq" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://privaro-site.vercel.app/fr/faq" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://privaro-site.vercel.app/de/faq" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://privaro-site.vercel.app/it/faq" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://privaro-site.vercel.app/pt-br/faq" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://privaro-site.vercel.app/zh/faq" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://privaro-site.vercel.app/ko/faq" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://privaro-site.vercel.app/nl/faq" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://privaro-site.vercel.app/ja/faq" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://privaro-site.vercel.app/zh-hant/faq" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://privaro-site.vercel.app/ru/faq" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://privaro-site.vercel.app/tr/faq" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://privaro-site.vercel.app/id/faq" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://privaro-site.vercel.app/hi/faq" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://privaro-site.vercel.app/ar/faq" />
+    <xhtml:link rel="alternate" hreflang="ur" href="https://privaro-site.vercel.app/ur/faq" />
+  </url>
+  <url>
+    <loc>https://privaro-site.vercel.app/ja/faq</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://privaro-site.vercel.app/faq" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://privaro-site.vercel.app/es/faq" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://privaro-site.vercel.app/fr/faq" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://privaro-site.vercel.app/de/faq" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://privaro-site.vercel.app/it/faq" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://privaro-site.vercel.app/pt-br/faq" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://privaro-site.vercel.app/zh/faq" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://privaro-site.vercel.app/ko/faq" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://privaro-site.vercel.app/nl/faq" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://privaro-site.vercel.app/ja/faq" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://privaro-site.vercel.app/zh-hant/faq" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://privaro-site.vercel.app/ru/faq" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://privaro-site.vercel.app/tr/faq" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://privaro-site.vercel.app/id/faq" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://privaro-site.vercel.app/hi/faq" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://privaro-site.vercel.app/ar/faq" />
+    <xhtml:link rel="alternate" hreflang="ur" href="https://privaro-site.vercel.app/ur/faq" />
+  </url>
+  <url>
+    <loc>https://privaro-site.vercel.app/zh-hant/faq</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://privaro-site.vercel.app/faq" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://privaro-site.vercel.app/es/faq" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://privaro-site.vercel.app/fr/faq" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://privaro-site.vercel.app/de/faq" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://privaro-site.vercel.app/it/faq" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://privaro-site.vercel.app/pt-br/faq" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://privaro-site.vercel.app/zh/faq" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://privaro-site.vercel.app/ko/faq" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://privaro-site.vercel.app/nl/faq" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://privaro-site.vercel.app/ja/faq" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://privaro-site.vercel.app/zh-hant/faq" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://privaro-site.vercel.app/ru/faq" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://privaro-site.vercel.app/tr/faq" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://privaro-site.vercel.app/id/faq" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://privaro-site.vercel.app/hi/faq" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://privaro-site.vercel.app/ar/faq" />
+    <xhtml:link rel="alternate" hreflang="ur" href="https://privaro-site.vercel.app/ur/faq" />
+  </url>
+  <url>
+    <loc>https://privaro-site.vercel.app/ru/faq</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://privaro-site.vercel.app/faq" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://privaro-site.vercel.app/es/faq" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://privaro-site.vercel.app/fr/faq" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://privaro-site.vercel.app/de/faq" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://privaro-site.vercel.app/it/faq" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://privaro-site.vercel.app/pt-br/faq" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://privaro-site.vercel.app/zh/faq" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://privaro-site.vercel.app/ko/faq" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://privaro-site.vercel.app/nl/faq" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://privaro-site.vercel.app/ja/faq" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://privaro-site.vercel.app/zh-hant/faq" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://privaro-site.vercel.app/ru/faq" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://privaro-site.vercel.app/tr/faq" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://privaro-site.vercel.app/id/faq" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://privaro-site.vercel.app/hi/faq" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://privaro-site.vercel.app/ar/faq" />
+    <xhtml:link rel="alternate" hreflang="ur" href="https://privaro-site.vercel.app/ur/faq" />
+  </url>
+  <url>
+    <loc>https://privaro-site.vercel.app/tr/faq</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://privaro-site.vercel.app/faq" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://privaro-site.vercel.app/es/faq" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://privaro-site.vercel.app/fr/faq" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://privaro-site.vercel.app/de/faq" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://privaro-site.vercel.app/it/faq" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://privaro-site.vercel.app/pt-br/faq" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://privaro-site.vercel.app/zh/faq" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://privaro-site.vercel.app/ko/faq" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://privaro-site.vercel.app/nl/faq" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://privaro-site.vercel.app/ja/faq" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://privaro-site.vercel.app/zh-hant/faq" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://privaro-site.vercel.app/ru/faq" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://privaro-site.vercel.app/tr/faq" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://privaro-site.vercel.app/id/faq" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://privaro-site.vercel.app/hi/faq" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://privaro-site.vercel.app/ar/faq" />
+    <xhtml:link rel="alternate" hreflang="ur" href="https://privaro-site.vercel.app/ur/faq" />
+  </url>
+  <url>
+    <loc>https://privaro-site.vercel.app/id/faq</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://privaro-site.vercel.app/faq" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://privaro-site.vercel.app/es/faq" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://privaro-site.vercel.app/fr/faq" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://privaro-site.vercel.app/de/faq" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://privaro-site.vercel.app/it/faq" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://privaro-site.vercel.app/pt-br/faq" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://privaro-site.vercel.app/zh/faq" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://privaro-site.vercel.app/ko/faq" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://privaro-site.vercel.app/nl/faq" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://privaro-site.vercel.app/ja/faq" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://privaro-site.vercel.app/zh-hant/faq" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://privaro-site.vercel.app/ru/faq" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://privaro-site.vercel.app/tr/faq" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://privaro-site.vercel.app/id/faq" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://privaro-site.vercel.app/hi/faq" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://privaro-site.vercel.app/ar/faq" />
+    <xhtml:link rel="alternate" hreflang="ur" href="https://privaro-site.vercel.app/ur/faq" />
+  </url>
+  <url>
+    <loc>https://privaro-site.vercel.app/hi/faq</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://privaro-site.vercel.app/faq" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://privaro-site.vercel.app/es/faq" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://privaro-site.vercel.app/fr/faq" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://privaro-site.vercel.app/de/faq" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://privaro-site.vercel.app/it/faq" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://privaro-site.vercel.app/pt-br/faq" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://privaro-site.vercel.app/zh/faq" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://privaro-site.vercel.app/ko/faq" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://privaro-site.vercel.app/nl/faq" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://privaro-site.vercel.app/ja/faq" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://privaro-site.vercel.app/zh-hant/faq" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://privaro-site.vercel.app/ru/faq" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://privaro-site.vercel.app/tr/faq" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://privaro-site.vercel.app/id/faq" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://privaro-site.vercel.app/hi/faq" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://privaro-site.vercel.app/ar/faq" />
+    <xhtml:link rel="alternate" hreflang="ur" href="https://privaro-site.vercel.app/ur/faq" />
+  </url>
+  <url>
+    <loc>https://privaro-site.vercel.app/ar/faq</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://privaro-site.vercel.app/faq" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://privaro-site.vercel.app/es/faq" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://privaro-site.vercel.app/fr/faq" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://privaro-site.vercel.app/de/faq" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://privaro-site.vercel.app/it/faq" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://privaro-site.vercel.app/pt-br/faq" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://privaro-site.vercel.app/zh/faq" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://privaro-site.vercel.app/ko/faq" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://privaro-site.vercel.app/nl/faq" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://privaro-site.vercel.app/ja/faq" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://privaro-site.vercel.app/zh-hant/faq" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://privaro-site.vercel.app/ru/faq" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://privaro-site.vercel.app/tr/faq" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://privaro-site.vercel.app/id/faq" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://privaro-site.vercel.app/hi/faq" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://privaro-site.vercel.app/ar/faq" />
+    <xhtml:link rel="alternate" hreflang="ur" href="https://privaro-site.vercel.app/ur/faq" />
+  </url>
+  <url>
+    <loc>https://privaro-site.vercel.app/ur/faq</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://privaro-site.vercel.app/faq" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://privaro-site.vercel.app/es/faq" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://privaro-site.vercel.app/fr/faq" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://privaro-site.vercel.app/de/faq" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://privaro-site.vercel.app/it/faq" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://privaro-site.vercel.app/pt-br/faq" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://privaro-site.vercel.app/zh/faq" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://privaro-site.vercel.app/ko/faq" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://privaro-site.vercel.app/nl/faq" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://privaro-site.vercel.app/ja/faq" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://privaro-site.vercel.app/zh-hant/faq" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://privaro-site.vercel.app/ru/faq" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://privaro-site.vercel.app/tr/faq" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://privaro-site.vercel.app/id/faq" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://privaro-site.vercel.app/hi/faq" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://privaro-site.vercel.app/ar/faq" />
+    <xhtml:link rel="alternate" hreflang="ur" href="https://privaro-site.vercel.app/ur/faq" />
+  </url>
+  <url>
     <loc>https://privaro-site.vercel.app/privacy</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://privaro-site.vercel.app/privacy" />
     <xhtml:link rel="alternate" hreflang="es" href="https://privaro-site.vercel.app/es/privacy" />

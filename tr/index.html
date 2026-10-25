@@ -42,21 +42,10 @@
 </head>
 <body>
 
-<header class="site-head wrap grid">
-  <a class="brand" href="/tr">Privaro</a>
-  <nav class="site-nav">
-    <a href="/tr/pro">Pro</a>
-    <a href="/tr/privacy">Gizlilik</a>
-    <details class="lang"><summary aria-label="Dil"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>Türkçe</span></summary><div class="lang-menu"><a href="/" lang="en">English</a><a href="/es" lang="es">Español</a><a href="/fr" lang="fr">Français</a><a href="/de" lang="de">Deutsch</a><a href="/it" lang="it">Italiano</a><a href="/pt-br" lang="pt-BR">Português</a><a href="/zh" lang="zh-Hans">简体中文</a><a href="/ko" lang="ko">한국어</a><a href="/nl" lang="nl">Nederlands</a><a href="/ja" lang="ja">日本語</a><a href="/zh-hant" lang="zh-Hant">繁體中文</a><a href="/ru" lang="ru">Русский</a><a href="/tr" lang="tr" class="active">Türkçe</a><a href="/id" lang="id">Bahasa Indonesia</a><a href="/hi" lang="hi">हिन्दी</a><a href="/ar" lang="ar">العربية</a><a href="/ur" lang="ur">اردو</a></div></details>
-    <a class="nav-get" href="https://apps.apple.com/app/id6783131829">Uygulamayı indir</a>
-  </nav>
-</header>
-
-<main>
-
-<section class="hero wrap">
-  <h1>Gizli fotoğraflar telefonunuzda kalır.</h1>
-  <div class="hero-foot grid">
+<main class="home wrap">
+  <div class="home-text">
+    <img class="icon" src="/logo.png" width="64" height="64" alt="" />
+    <h1>Privaro</h1>
     <p class="lead">Privaro, iPhone'unuz için bir kasadır. İçine koyduğunuz her şey telefonun kendisinde şifrelenir ve yalnızca Face ID veya Privaro'nun kendi parolasıyla açılır. Hesap gerekmez ve hiçbir şey yüklenmez.</p>
     <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="Privaro'yu App Store'dan indirin">
       <picture>
@@ -64,126 +53,23 @@
         <img src="/appstore-badge.svg" alt="Privaro'yu App Store'dan indirin" />
       </picture>
     </a>
-    <p class="hero-meta">Ücretsiz · iOS 17.6 veya üstü · Pro tek seferlik bir satın alımdır</p>
+    <p class="meta">Ücretsiz · iOS 17.6 veya üstü · Pro tek seferlik bir satın alımdır</p>
   </div>
-</section>
-
-<section class="sec band wrap grid">
-  <h2 class="label">Yeni</h2>
-  <p class="band-text">Artık dosya boyutu sınırı yok. Her uzunlukta video ekleyin, hemen oynatılmaya başlasın.</p>
-</section>
-
-<section class="sec shots wrap">
-  <figure>
+  <div class="shots">
     <img src="/shots/shot-lock.jpg" width="700" height="1521" alt="Face ID için hazır Privaro kilit ekranı" fetchpriority="high" />
-    <figcaption><span class="num">01</span><div><h2>Kendi kendini kilitler</h2><p>Başka bir uygulamaya geçtiğinizde kasa arkanızdan kapanır. Yeniden girmek için Face ID veya parolanız gerekir.</p></div></figcaption>
-  </figure>
-  <figure>
-    <img src="/shots/shot-vault.jpg" width="700" height="1521" alt="Kasa: aylara göre sıralanmış, ızgara düzeninde fotoğraflar" loading="lazy" />
-    <figcaption><span class="num">02</span><div><h2>Fotoğraf arşivinize benzer</h2><p>Fotoğraflar ve videolar aylara göre sıralanmış tanıdık bir ızgarada durur. Albüm oluşturun, başlık ve etiket ekleyin, favorilerinizi işaretleyin ve arama yapın; hiçbir şey kasadan çıkmadan.</p></div></figcaption>
-  </figure>
-  <figure>
-    <img src="/shots/shot-privacy.jpg" width="700" height="1521" alt="Gizlilik Modu ayarları: Ev, Dışarıda ve Seyahat" loading="lazy" />
-    <figcaption><span class="num">03</span><div><h2>Gerektiğinde daha sıkı</h2><p>Gizlilik Modları, Privaro'nun ne kadar dikkatli olacağını değiştirir. Evdeyken her zamanki gibi paylaşın. Dışarıdayken, kasadan bir şey çıkmadan önce parolanızı sorar. Seyahatteyken hiçbir şey dışarı çıkamaz.</p></div></figcaption>
-  </figure>
-  <figure>
-    <img src="/shots/shot-albums.jpg" width="700" height="1521" alt="Privaro'daki albümler" loading="lazy" />
-    <figcaption><span class="num">04</span><div><h2>Kapalı kalan albümler</h2><p>Her şeyi albümlere ve klasörlere ayırın. Pro ile bir albüme ayrı bir şifre verin; kasa açıkken bile kilitli kalsın.</p></div></figcaption>
-  </figure>
-</section>
-
-<section class="sec wrap grid" id="demo" hidden>
-  <div class="label">
-    <h2>Şifrelenmiş hâlini görün</h2>
-    <p>Bir fotoğraf seçin. Tarayıcınız onu Privaro'nun kullandığı şifreleme olan AES-256-GCM ile şifreler ve şifreli baytları piksel olarak çizer. Fotoğraf bu sayfadan hiç çıkmaz.</p>
+    <img src="/shots/shot-vault.jpg" width="700" height="1521" alt="Kasa: aylara göre sıralanmış, ızgara düzeninde fotoğraflar" />
   </div>
-  <div class="sec-body demo">
-    <figure>
-      <canvas class="demo-before" width="295" height="640"></canvas>
-      <figcaption>Fotoğrafınız</figcaption>
-    </figure>
-    <figure>
-      <div class="demo-stage">
-        <canvas class="demo-after" width="295" height="640" tabindex="0" role="button" aria-label="şifreyi çözmek için basılı tutun"></canvas>
-        <div class="scan" aria-hidden="true"><span></span></div>
-      </div>
-      <figcaption><b>Şifreli</b> · şifreyi çözmek için basılı tutun</figcaption>
-    </figure>
-    <div class="demo-controls">
-      <label class="btn"><input class="demo-file" type="file" accept="image/*" />Fotoğraf seç</label>
-      <button class="btn demo-rekey" type="button">Yeni anahtar</button>
-    </div>
-    <p class="demo-key">Az önce bu tarayıcıda oluşturulan anahtar: <code></code></p>
-  </div>
-</section>
-
-<section class="sec wrap grid">
-  <h2 class="label">Ve birkaç şey daha</h2>
-  <div class="sec-body">
-    <ol class="index">
-      <li><span class="num">05</span><div><h3>Her dosya boyutu</h3><p>Her boyutta fotoğraf ve video ekleyin. Uzun videolar da hemen oynatılmaya başlar.</p></div></li>
-      <li><span class="num">06</span><div><h3>Gizli kamera</h3><p>Fotoğraf ve videoları doğrudan kasaya çekin; böylece film rulonuza hiç düşmezler.</p></div></li>
-      <li><span class="num">07</span><div><h3>Meta veri koruması</h3><p>Bir fotoğrafı paylaşırken yanında neyin gideceğini seçin: her şey, konum hariç her şey ya da hiçbir şey.</p></div></li>
-      <li><span class="num">08</span><div><h3>Hassas fotoğrafları bulun</h3><p>Privaro, seçtiğiniz fotoğraflarda kimlik, kart ve belge gibi şeyler olup olmadığını doğrudan telefonunuzda kontrol edebilir ve onları kasaya taşımayı önerir.</p></div></li>
-      <li><span class="num">09</span><div><h3>Sahte kasa <span class="pro-tag">Pro</span></h3><p>İkinci bir parola, zararsız fotoğraflarla dolu ayrı bir kasa açar; bir gün kilidi açmaya zorlanırsanız diye.</p></div></li>
-      <li><span class="num">10</span><div><h3>Şifreli yedekleme <span class="pro-tag">Pro</span></h3><p>Önce telefonunuzda şifrelenerek kendi iCloud'unuza yedekleyin. Geri yükleme her zaman ücretsizdir.</p></div></li>
-      <li><span class="num">11</span><div><h3>İzinsiz giriş fotoğrafları <span class="pro-tag">Pro</span></h3><p>Biri yanlış parola girerse Privaro sessizce onun fotoğrafını çekebilir.</p></div></li>
-      <li><span class="num">12</span><div><h3>Kamuflaj simgesi <span class="pro-tag">Pro</span></h3><p>Privaro'yu Ana Ekranınızda bir hesap makinesi veya not uygulaması gibi gösterin.</p><button class="link-btn disguise" type="button" data-name="Hesap Makinesi" data-undo="Geri al" hidden>Bu sekmede deneyin</button></div></li>
-    </ol>
-    <p class="more"><a href="/tr/pro">Pro'nun eklediği her şey →</a></p>
-  </div>
-</section>
-
-<section class="sec wrap grid">
-  <div class="label">
-    <h2>Ücretsiz, tek seferlik yükseltmeyle</h2>
-    <p>Ücretsiz sürümde reklam ve süre sınırı yoktur. Pro sınırları kaldırır ve ek koruma sağlar. Bir kez ödersiniz ve Apple Hesabınızın olduğu her aygıtta çalışır.</p>
-  </div>
-  <div class="plan">
-    <h3>Ücretsiz</h3>
-    <p class="plan-price"><span class="price" data-price="free">₺0</span></p>
-    <ul>
-      <li>Şifreleme, Face ID ve parola</li>
-      <li>2,5 GB'a ve 5 albüme kadar</li>
-      <li>Gizlilik Modları ve meta veri koruması</li>
-      <li>Gizli kamera, etiketler ve arama</li>
-    </ul>
-  </div>
-  <div class="plan">
-    <h3>Pro</h3>
-    <p class="plan-price"><span class="price" data-price="pro">₺249,99</span> <span>tek seferlik</span></p>
-    <ul>
-      <li>Sınırsız depolama ve albüm</li>
-      <li>Sahte kasa ve panik silme</li>
-      <li>Şifreli iCloud yedeklemesi</li>
-      <li>Ekran görüntüsü ve kayıt koruması</li>
-      <li>İzinsiz giriş fotoğrafları ve albüm şifreleri</li>
-      <li>Wi-Fi aktarımı, konuma dayalı kilit, kamuflaj simgesi</li>
-    </ul>
-  </div>
-</section>
-
-<section class="sec wrap grid">
-  <h2 class="label">Sorular</h2>
-  <div class="sec-body faq">
-    <details><summary>Fotoğraflarımı başka biri görebilir mi?</summary><p>Hayır. Fotoğraflarınız iPhone'unuzda, yalnızca orada kalan bir anahtarla şifrelenir. Privaro hesabı da fotoğraflarınızı tutan bir sunucu da yoktur; bu yüzden biz dahil kimsenin bakabileceği bir şey yoktur.</p></details>
-    <details><summary>Parolamı unutursam ne olur?</summary><p>Privaro'yu kurarken bir kurtarma anahtarı alırsınız. Onu güvenli bir yerde saklayın: yeni bir parola belirlemenizi sağlar. Parola veya kurtarma anahtarı olmadan kasa açılamaz, biz bile açamayız.</p></details>
-    <details><summary>Telefonumu kaybedersem ne olur?</summary><p>Şifreli iCloud yedeklemesini (Pro) açtıysanız, kasayı yeni iPhone'unuzda parolanızla geri yükleyebilirsiniz. Geri yükleme ücretsizdir. Yedek yoksa fotoğraflar eski telefonda kilitli kalır.</p></details>
-    <details><summary>Video boyutunda bir sınır var mı?</summary><p>Dosya başına yok. iPhone'unuzda yer olduğu sürece her boyut olur. Ücretsiz sürüm toplamda 2,5 GB'a kadar tutar, Pro'da sınır yoktur.</p></details>
-    <details><summary>İnternet bağlantısı gerekir mi?</summary><p>Hayır. Kasanız tamamen çevrimdışı çalışır ve iCloud yedeklemesini açmadığınız sürece fotoğraflarınız asla internete çıkmaz.</p></details>
-    <details><summary>Pro bir abonelik mi?</summary><p>Hayır. Pro, <span class="price" data-price="pro">₺249,99</span> tutarında tek seferlik bir ödemedir. Hiçbir şey yenilenmez ve iptal edilecek bir şey yoktur.</p></details>
-  </div>
-</section>
-
 </main>
 
-<footer class="site-foot wrap grid">
-  <p class="foot-legal">© <span id="year">2026</span> Privaro. Tüm hakları saklıdır.<br />Hollanda'da yapıldı. Bu site çerez kullanmaz ve izleyici içermez.</p>
+<footer class="site-foot wrap">
+  <p>© <span id="year">2026</span> Privaro. Hollanda'da yapıldı. Bu site çerez kullanmaz ve izleyici içermez.</p>
   <nav class="foot-links">
     <a href="/tr/pro">Pro özellikleri</a>
+    <a href="/tr/faq">Sorular</a>
     <a href="/tr/privacy">Gizlilik Politikası</a>
     <a href="/tr/terms">Kullanım Koşulları</a>
     <a href="mailto:erdincdubu@icloud.com">İletişim</a>
+    <details class="lang"><summary aria-label="Dil"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>Türkçe</span></summary><div class="lang-menu"><a href="/" lang="en">English</a><a href="/es" lang="es">Español</a><a href="/fr" lang="fr">Français</a><a href="/de" lang="de">Deutsch</a><a href="/it" lang="it">Italiano</a><a href="/pt-br" lang="pt-BR">Português</a><a href="/zh" lang="zh-Hans">简体中文</a><a href="/ko" lang="ko">한국어</a><a href="/nl" lang="nl">Nederlands</a><a href="/ja" lang="ja">日本語</a><a href="/zh-hant" lang="zh-Hant">繁體中文</a><a href="/ru" lang="ru">Русский</a><a href="/tr" lang="tr" class="active">Türkçe</a><a href="/id" lang="id">Bahasa Indonesia</a><a href="/hi" lang="hi">हिन्दी</a><a href="/ar" lang="ar">العربية</a><a href="/ur" lang="ur">اردو</a></div></details>
   </nav>
 </footer>
 
@@ -196,7 +82,5 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && lang.open) { lang.open = false; lang.querySelector('summary').focus(); }
 });
 </script>
-<script src="/price.js" defer></script>
-<script src="/demo.js" defer></script>
 </body>
 </html>

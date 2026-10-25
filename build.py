@@ -11,9 +11,8 @@ and {{FOOTER}}. The build also writes 404.html, sitemap.xml and robots.txt.
 
 Prices: Pro's App Store price per country comes from the App Store Connect
 CSV exports in i18n/prices/; i18n/prices.json says how to fall back. Each page
-is written with the price for its language's country ({{PRICE}},
-{{PRICE_FREE}}), and price.js swaps in the visitor's own country's price in
-their browser.
+is written with the price for its language's country ({{PRICE}}), and
+price.js swaps in the visitor's own country's price in their browser.
 i18n/timezones.json maps time zones to countries; it was generated from the
 IANA tz database (zone.tab plus its links) and only needs a refresh if that
 changes.
@@ -55,9 +54,9 @@ AUTONYM = {code: name for code, _, _, name in LANGS}
 # Written right to left: the page gets dir="rtl" and the CSS mirrors itself.
 RTL = {"ar", "ur"}
 
-PAGES = {"index": "index.html", "pro": "pro.html", "privacy": "privacy.html", "terms": "terms.html"}
+PAGES = {"index": "index.html", "pro": "pro.html", "faq": "faq.html", "privacy": "privacy.html", "terms": "terms.html"}
 # Which meta_title_* / meta_desc_* strings each page uses.
-META = {"index": "home", "pro": "pro", "privacy": "privacy", "terms": "terms"}
+META = {"index": "home", "pro": "pro", "faq": "faq", "privacy": "privacy", "terms": "terms"}
 
 GLOBE = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
          'stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/>'
@@ -141,17 +140,15 @@ def load_pricing():
 
 
 def price_tokens(pricing, code):
-    """{{PRICE}} and {{PRICE_FREE}} for one language, in its own country's currency."""
+    """{{PRICE}} for one language, in its own country's currency."""
     cc = pricing["lang"].get(code)
     currency, amount = pricing["prices"][cc if cc in pricing["prices"] else pricing["base"]]
-    span = '<span class="price" data-price="{}">{}</span>'
-    return {"{{PRICE}}": span.format("pro", format_price(amount, currency, code)),
-            "{{PRICE_FREE}}": span.format("free", format_price(0, currency, code))}
+    return {"{{PRICE}}": f'<span class="price" data-price="pro">{format_price(amount, currency, code)}</span>'}
 
 
 def load_strings():
     strings = {}
-    for fname in ("i18n/strings.json", "i18n/strings-pro.json",
+    for fname in ("i18n/strings.json", "i18n/strings-pro.json", "i18n/strings-faq.json",
                   "i18n/strings-privacy.json", "i18n/strings-terms.json"):
         with open(os.path.join(ROOT, fname), encoding="utf-8") as f:
             strings.update(json.load(f))
@@ -228,10 +225,9 @@ def render(html, page, code, htmllang, head, strings, pricing):
     html = html.replace("{{SWITCHER}}", switcher_block(page, code, label))
     html = html.replace("{{HOME_URL}}", page_url("index", code))
     html = html.replace("{{PRO_URL}}", page_url("pro", code))
+    html = html.replace("{{FAQ_URL}}", page_url("faq", code))
     html = html.replace("{{PRIVACY_URL}}", page_url("privacy", code))
     html = html.replace("{{TERMS_URL}}", page_url("terms", code))
-    for nav in ("pro", "privacy"):
-        html = html.replace("{{CUR_" + nav + "}}", ' aria-current="page"' if nav == page else "")
     for key, vals in strings.items():
         html = html.replace("{{" + key + "}}", vals.get(code, vals["en"]))
     for token, value in price_tokens(pricing, code).items():

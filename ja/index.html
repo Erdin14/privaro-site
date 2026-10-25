@@ -42,21 +42,10 @@
 </head>
 <body>
 
-<header class="site-head wrap grid">
-  <a class="brand" href="/ja">Privaro</a>
-  <nav class="site-nav">
-    <a href="/ja/pro">Pro</a>
-    <a href="/ja/privacy">プライバシー</a>
-    <details class="lang"><summary aria-label="言語"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>日本語</span></summary><div class="lang-menu"><a href="/" lang="en">English</a><a href="/es" lang="es">Español</a><a href="/fr" lang="fr">Français</a><a href="/de" lang="de">Deutsch</a><a href="/it" lang="it">Italiano</a><a href="/pt-br" lang="pt-BR">Português</a><a href="/zh" lang="zh-Hans">简体中文</a><a href="/ko" lang="ko">한국어</a><a href="/nl" lang="nl">Nederlands</a><a href="/ja" lang="ja" class="active">日本語</a><a href="/zh-hant" lang="zh-Hant">繁體中文</a><a href="/ru" lang="ru">Русский</a><a href="/tr" lang="tr">Türkçe</a><a href="/id" lang="id">Bahasa Indonesia</a><a href="/hi" lang="hi">हिन्दी</a><a href="/ar" lang="ar">العربية</a><a href="/ur" lang="ur">اردو</a></div></details>
-    <a class="nav-get" href="https://apps.apple.com/app/id6783131829">アプリを入手</a>
-  </nav>
-</header>
-
-<main>
-
-<section class="hero wrap">
-  <h1>プライベートな写真は、iPhone の中に。</h1>
-  <div class="hero-foot grid">
+<main class="home wrap">
+  <div class="home-text">
+    <img class="icon" src="/logo.png" width="64" height="64" alt="" />
+    <h1>Privaro</h1>
     <p class="lead">Privaro は iPhone のための保管庫です。入れたものは iPhone 本体で暗号化され、Face ID か Privaro 専用のパスコードでしか開けません。アカウントは不要で、何もアップロードされません。</p>
     <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="App Store で Privaro をダウンロード">
       <picture>
@@ -64,126 +53,23 @@
         <img src="/appstore-badge.svg" alt="App Store で Privaro をダウンロード" />
       </picture>
     </a>
-    <p class="hero-meta">無料 · iOS 17.6 以降 · Pro は買い切り</p>
+    <p class="meta">無料 · iOS 17.6 以降 · Pro は買い切り</p>
   </div>
-</section>
-
-<section class="sec band wrap grid">
-  <h2 class="label">新機能</h2>
-  <p class="band-text">ファイルサイズの制限がなくなりました。どんな長さのビデオも追加でき、すぐに再生が始まります。</p>
-</section>
-
-<section class="sec shots wrap">
-  <figure>
+  <div class="shots">
     <img src="/shots/shot-lock.jpg" width="700" height="1521" alt="Face ID の準備ができた Privaro のロック画面" fetchpriority="high" />
-    <figcaption><span class="num">01</span><div><h2>自動でロック</h2><p>別のアプリに切り替えると、保管庫は自動で閉じます。もう一度開くには Face ID かパスコードが必要です。</p></div></figcaption>
-  </figure>
-  <figure>
-    <img src="/shots/shot-vault.jpg" width="700" height="1521" alt="保管庫：月ごとにグリッド表示された写真" loading="lazy" />
-    <figcaption><span class="num">02</span><div><h2>見た目はいつもの写真ライブラリ</h2><p>写真とビデオは見慣れたグリッドに月ごとに並びます。アルバムの作成、キャプションやタグの追加、お気に入り登録、検索まで、何も保管庫の外に出さずに行えます。</p></div></figcaption>
-  </figure>
-  <figure>
-    <img src="/shots/shot-privacy.jpg" width="700" height="1521" alt="プライバシーモードの設定：ホーム、外出、旅行" loading="lazy" />
-    <figcaption><span class="num">03</span><div><h2>必要なときは、もっと慎重に</h2><p>プライバシーモードで、Privaro の慎重さを切り替えられます。自宅ではいつも通りに共有。外出中は、何かを保管庫から出す前にパスコードを求めます。旅行中は、何も外に出せません。</p></div></figcaption>
-  </figure>
-  <figure>
-    <img src="/shots/shot-albums.jpg" width="700" height="1521" alt="Privaro のアルバム" loading="lazy" />
-    <figcaption><span class="num">04</span><div><h2>閉じたままのアルバム</h2><p>すべてをアルバムとフォルダーに整理できます。Pro なら、アルバムごとにパスワードを設定でき、保管庫が開いていてもそのアルバムはロックされたままです。</p></div></figcaption>
-  </figure>
-</section>
-
-<section class="sec wrap grid" id="demo" hidden>
-  <div class="label">
-    <h2>暗号化を見てみる</h2>
-    <p>写真を選んでください。ブラウザが Privaro と同じ AES-256-GCM で暗号化し、暗号化されたバイトをピクセルとして描きます。写真がこのページの外に出ることはありません。</p>
+    <img src="/shots/shot-vault.jpg" width="700" height="1521" alt="保管庫：月ごとにグリッド表示された写真" />
   </div>
-  <div class="sec-body demo">
-    <figure>
-      <canvas class="demo-before" width="295" height="640"></canvas>
-      <figcaption>あなたの写真</figcaption>
-    </figure>
-    <figure>
-      <div class="demo-stage">
-        <canvas class="demo-after" width="295" height="640" tabindex="0" role="button" aria-label="長押しで復号"></canvas>
-        <div class="scan" aria-hidden="true"><span></span></div>
-      </div>
-      <figcaption><b>暗号化後</b> · 長押しで復号</figcaption>
-    </figure>
-    <div class="demo-controls">
-      <label class="btn"><input class="demo-file" type="file" accept="image/*" />写真を選ぶ</label>
-      <button class="btn demo-rekey" type="button">新しい鍵</button>
-    </div>
-    <p class="demo-key">このブラウザでたった今生成された鍵： <code></code></p>
-  </div>
-</section>
-
-<section class="sec wrap grid">
-  <h2 class="label">ほかにもこんな機能が</h2>
-  <div class="sec-body">
-    <ol class="index">
-      <li><span class="num">05</span><div><h3>ファイルサイズは自由</h3><p>どんなサイズの写真やビデオも追加できます。長いビデオもすぐに再生が始まります。</p></div></li>
-      <li><span class="num">06</span><div><h3>ステルスカメラ</h3><p>写真やビデオを保管庫に直接撮影するので、カメラロールに残ることはありません。</p></div></li>
-      <li><span class="num">07</span><div><h3>メタデータ保護</h3><p>写真を共有するときに一緒に送る情報を選べます。すべて、位置情報なし、または何も付けないか。</p></div></li>
-      <li><span class="num">08</span><div><h3>見られたくない写真を探す</h3><p>選んだ写真に身分証やカード、書類などが写っていないかを iPhone 上で確認し、保管庫への移動を提案します。</p></div></li>
-      <li><span class="num">09</span><div><h3>おとり保管庫 <span class="pro-tag">Pro</span></h3><p>2つ目のパスコードで、当たり障りのない写真が入った別の保管庫が開きます。無理やりロック解除を迫られたときのために。</p></div></li>
-      <li><span class="num">10</span><div><h3>暗号化バックアップ <span class="pro-tag">Pro</span></h3><p>iPhone 上で先に暗号化してから、ご自身の iCloud にバックアップします。復元はいつでも無料です。</p></div></li>
-      <li><span class="num">11</span><div><h3>侵入者の撮影 <span class="pro-tag">Pro</span></h3><p>誰かが間違ったパスコードを入力すると、Privaro がこっそりその人を撮影できます。</p></div></li>
-      <li><span class="num">12</span><div><h3>アイコンの偽装 <span class="pro-tag">Pro</span></h3><p>ホーム画面の Privaro を、計算機やメモのようなアプリに見せかけられます。</p><button class="link-btn disguise" type="button" data-name="計算機" data-undo="元に戻す" hidden>このタブで試す</button></div></li>
-    </ol>
-    <p class="more"><a href="/ja/pro">Pro で追加されるすべての機能 →</a></p>
-  </div>
-</section>
-
-<section class="sec wrap grid">
-  <div class="label">
-    <h2>無料。アップグレードは一度だけ</h2>
-    <p>無料版には広告も期間制限もありません。Pro では制限がなくなり、保護機能がさらに加わります。支払いは一度だけで、同じ Apple アカウントのすべてのデバイスで使えます。</p>
-  </div>
-  <div class="plan">
-    <h3>無料</h3>
-    <p class="plan-price"><span class="price" data-price="free">￥0</span></p>
-    <ul>
-      <li>暗号化、Face ID、パスコード</li>
-      <li>最大 2.5 GB、アルバム 5 個まで</li>
-      <li>プライバシーモードとメタデータ保護</li>
-      <li>ステルスカメラ、タグ、検索</li>
-    </ul>
-  </div>
-  <div class="plan">
-    <h3>Pro</h3>
-    <p class="plan-price"><span class="price" data-price="pro">￥800</span> <span>買い切り</span></p>
-    <ul>
-      <li>容量もアルバム数も無制限</li>
-      <li>おとり保管庫と緊急消去</li>
-      <li>暗号化された iCloud バックアップ</li>
-      <li>スクリーンショット・画面収録の防止</li>
-      <li>侵入者の撮影とアルバムのパスワード</li>
-      <li>Wi-Fi 転送、位置ベースのロック、アイコンの偽装</li>
-    </ul>
-  </div>
-</section>
-
-<section class="sec wrap grid">
-  <h2 class="label">よくある質問</h2>
-  <div class="sec-body faq">
-    <details><summary>ほかの人に写真を見られることはありますか？</summary><p>ありません。写真は iPhone 上で暗号化され、その鍵も iPhone から出ることはありません。Privaro のアカウントも写真を保管するサーバーもないため、私たちを含め誰にも見ることはできません。</p></details>
-    <details><summary>パスコードを忘れたらどうなりますか？</summary><p>Privaro の設定時に復旧キーが発行されます。安全な場所に保管してください。復旧キーがあれば新しいパスコードを設定できます。パスコードも復旧キーもない場合、保管庫は開けません。私たちにも開けません。</p></details>
-    <details><summary>iPhone をなくしたらどうなりますか？</summary><p>暗号化された iCloud バックアップ（Pro）をオンにしていれば、新しい iPhone にパスコードを使って保管庫を復元できます。復元は無料です。バックアップがない場合、写真は古い iPhone にロックされたままになります。</p></details>
-    <details><summary>ビデオのサイズに制限はありますか？</summary><p>ファイルごとの制限はありません。iPhone に空き容量があれば、どんなサイズでも大丈夫です。無料版は合計 2.5 GB まで、Pro は無制限です。</p></details>
-    <details><summary>インターネット接続は必要ですか？</summary><p>必要ありません。保管庫は完全にオフラインで動作し、iCloud バックアップをオンにしない限り、写真がオンラインに出ることはありません。</p></details>
-    <details><summary>Pro はサブスクリプションですか？</summary><p>いいえ。Pro は <span class="price" data-price="pro">￥800</span> の一回払いです。自動更新もなく、解約の手続きもありません。</p></details>
-  </div>
-</section>
-
 </main>
 
-<footer class="site-foot wrap grid">
-  <p class="foot-legal">© <span id="year">2026</span> Privaro. All rights reserved.<br />オランダ製。このサイトは Cookie を使わず、トラッカーもありません。</p>
+<footer class="site-foot wrap">
+  <p>© <span id="year">2026</span> Privaro. オランダ製。このサイトは Cookie を使わず、トラッカーもありません。</p>
   <nav class="foot-links">
     <a href="/ja/pro">Pro の機能</a>
+    <a href="/ja/faq">よくある質問</a>
     <a href="/ja/privacy">プライバシーポリシー</a>
     <a href="/ja/terms">利用規約</a>
     <a href="mailto:erdincdubu@icloud.com">お問い合わせ</a>
+    <details class="lang"><summary aria-label="言語"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>日本語</span></summary><div class="lang-menu"><a href="/" lang="en">English</a><a href="/es" lang="es">Español</a><a href="/fr" lang="fr">Français</a><a href="/de" lang="de">Deutsch</a><a href="/it" lang="it">Italiano</a><a href="/pt-br" lang="pt-BR">Português</a><a href="/zh" lang="zh-Hans">简体中文</a><a href="/ko" lang="ko">한국어</a><a href="/nl" lang="nl">Nederlands</a><a href="/ja" lang="ja" class="active">日本語</a><a href="/zh-hant" lang="zh-Hant">繁體中文</a><a href="/ru" lang="ru">Русский</a><a href="/tr" lang="tr">Türkçe</a><a href="/id" lang="id">Bahasa Indonesia</a><a href="/hi" lang="hi">हिन्दी</a><a href="/ar" lang="ar">العربية</a><a href="/ur" lang="ur">اردو</a></div></details>
   </nav>
 </footer>
 
@@ -196,7 +82,5 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && lang.open) { lang.open = false; lang.querySelector('summary').focus(); }
 });
 </script>
-<script src="/price.js" defer></script>
-<script src="/demo.js" defer></script>
 </body>
 </html>
