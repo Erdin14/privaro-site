@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="{{LANG}}" dir="{{DIR}}">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{{meta_title_security}}</title>
+<meta name="description" content="{{meta_desc_security}}" />
+{{SEO}}
+<meta name="color-scheme" content="light dark" />
+<meta name="apple-itunes-app" content="app-id=6783131829" />
+<link rel="icon" href="/logo.png" />
+<link rel="apple-touch-icon" href="/logo.png" />
+<link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+
+{{HEADER}}
+
+<main class="page wrap">
+
+<h1>How Privaro Protects Your Photos</h1>
+<p class="updated">Security overview · Privaro 1.4 for iPhone and iPad · Last updated: October 25, 2026</p>
+<p class="intro">Privaro is a vault for the photos and videos you want to keep to yourself. This page explains how it protects them: what is encrypted and how, what leaves your device, and what Privaro does <em>not</em> protect against.</p>
+<p class="note">It goes into more detail than the &ldquo;How Privaro Protects You&rdquo; page in the app&rsquo;s Settings, for anyone who wants to check our claims before trusting the app with their photos. If something here is unclear, or you think it&rsquo;s wrong, please <a href="#reporting">tell us</a>.</p>
+
+<nav class="toc" aria-label="On this page">
+  <ol>
+    <li><a href="#in-short">In short</a></li>
+    <li><a href="#threats">What Privaro is built to protect against</a></li>
+    <li><a href="#encryption">Encryption</a></li>
+    <li><a href="#unlocking">Unlocking</a></li>
+    <li><a href="#recovery-key">The recovery key</a></li>
+    <li><a href="#backups">Backups</a></li>
+    <li><a href="#sharing">Sharing and moving files</a></li>
+    <li><a href="#decoy">Decoy vault and duress passcode</a></li>
+    <li><a href="#other">Other protections</a></li>
+    <li><a href="#network">What leaves your device</a></li>
+    <li><a href="#limitations">Known limitations</a></li>
+    <li><a href="#reference">Cryptography reference</a></li>
+    <li><a href="#reporting">Reporting a security problem</a></li>
+  </ol>
+</nav>
+
+<div class="doc">
+
+  <h2 id="in-short">In short</h2>
+  <ul>
+    <li>Your photos and videos are encrypted on your device with AES-256-GCM, using Apple&rsquo;s CryptoKit. Thumbnails, captions, filenames, tags and album names are encrypted too.</li>
+    <li>The encryption key is created on your device and never leaves it, except locked inside an iCloud backup that only your recovery key can open. We never have it, so we can&rsquo;t see your photos.</li>
+    <li>No account, no servers of our own, no ads, no analytics and no crash-reporting tools.</li>
+    <li>The app goes online only to handle the Pro purchase, to reach your own iCloud if you turn on backup, and to show Apple Maps when you pick a trusted place.</li>
+    <li>There are real limits, listed under <a href="#limitations">Known limitations</a>. The most important: on iPhone, your Privaro passcode controls access to the vault, but it is not part of the encryption itself.</li>
+  </ul>
+
+  <h2 id="threats">What Privaro is built to protect against</h2>
+  <p><strong>It is designed to protect your photos from:</strong></p>
+  <ul>
+    <li>Someone who picks up your phone while it&rsquo;s unlocked, or whom you hand it to.</li>
+    <li>Anyone browsing your Photos library, the Files app or your iPhone backups.</li>
+    <li>Someone who gets into your iCloud account.</li>
+    <li>Anyone who intercepts a file you share with Secure Share.</li>
+    <li>Screenshots and screen recordings of the vault (with capture protection, a Pro feature).</li>
+    <li>Being pressured to open the app, as far as a decoy vault or a duress passcode can help.</li>
+  </ul>
+  <p><strong>It can&rsquo;t protect your photos from:</strong></p>
+  <ul>
+    <li>Someone who knows your Privaro passcode, or can unlock it with your face or finger.</li>
+    <li>Forensic tools or a jailbroken iPhone that can read the iOS Keychain while your iPhone is unlocked (see <a href="#limitations">Known limitations</a>).</li>
+    <li>Malware that has taken over iOS itself.</li>
+    <li>A camera pointed at your screen.</li>
+    <li>Copies that have already left Privaro: exported files, photos saved back to Photos, or items you shared.</li>
+  </ul>
+
+  <h2 id="encryption">Encryption</h2>
+
+  <h3>The vault key</h3>
+  <p>When you set up Privaro, it creates a random 256-bit <strong>vault key</strong> on your device using Apple&rsquo;s secure random number generator. Everything in your vault is encrypted with this key or with keys derived from it.</p>
+  <p>The vault key is kept in the iOS Keychain with Apple&rsquo;s strictest availability setting for this kind of item (&ldquo;when passcode set, this device only&rdquo;). This means:</p>
+  <ul>
+    <li>iOS makes it readable only while your iPhone is unlocked.</li>
+    <li>It is never synced to iCloud Keychain and never included in iPhone backups.</li>
+    <li>It only exists on an iPhone that has a passcode. If you turn off your iPhone passcode, iOS deletes the key, and the vault can then only be brought back from a backup.</li>
+  </ul>
+  <p>While the vault is open, the key is held in memory. Locking Privaro clears it, along with the in-memory cache of decrypted thumbnails, and stops any Wi-Fi Transfer in progress.</p>
+  <p>Privaro keeps two other 256-bit keys, created and stored the same way. One encrypts break-in photos, which have to be saved from the lock screen while the vault key isn&rsquo;t available. The other encrypts your security history.</p>
+
+  <h3>Photos and videos</h3>
+  <p>Each photo or video is encrypted into its own file, in pieces of 1&nbsp;MB:</p>
+  <ul>
+    <li>Each file gets a random 128-bit ID. A separate key for that file is derived from the vault key and the file&rsquo;s ID with HKDF-SHA256.</li>
+    <li>Each piece is sealed with AES-256-GCM using a fresh random 96-bit nonce.</li>
+    <li>Each piece also authenticates the file&rsquo;s header and its own position in the file. A piece that is changed, removed, repeated, moved or taken from another file makes decryption fail instead of producing altered data.</li>
+  </ul>
+  <p>Because files are encrypted in pieces, Privaro never needs the whole file decrypted at once. Videos play straight from the encrypted file: only the pieces being watched are decrypted, in memory, and no decrypted copy is written to disk. (Videos imported with much older versions of Privaro use an earlier format and are decrypted to a temporary file to play.)</p>
+  <p>Thumbnails are encrypted separately with AES-256-GCM.</p>
+  <p>All vault files and the database have iOS&rsquo;s strongest file protection (&ldquo;complete&rdquo;), so they can&rsquo;t be read at all while your iPhone is locked. They are also excluded from iPhone backups, both to iCloud and to a computer.</p>
+
+  <h3 id="metadata">Information about your photos</h3>
+  <p><strong>Encrypted with your vault key:</strong> captions, original filenames, tags and album names.</p>
+  <p><strong>Not encrypted by Privaro:</strong> the date each item was imported, its original creation date, file size, video length, type (photo, video or Live Photo), whether it&rsquo;s a favorite, which album it&rsquo;s in, how albums are nested and ordered, and when an item was moved to Recently Deleted. The names and coordinates of trusted places for Location Lock are not encrypted either, because they have to be checked before the vault is unlocked. All of this is still covered by the iOS file protection described above. It is never sent anywhere.</p>
+
+  <h3>Album passwords</h3>
+  <p>An album password hides an album behind a second password inside the app. The photos in it are encrypted with the vault key like everything else, so an album password adds a lock in the app, not a separate layer of encryption. The password is stored only as a salted PBKDF2-HMAC-SHA256 hash with 210,000 iterations.</p>
+
+  <h2 id="unlocking">Unlocking</h2>
+  <p><strong>Passcode.</strong> Your Privaro passcode is separate from your iPhone passcode. It can be 6 digits, 8 digits or a password of letters and numbers. Privaro stores only a salted PBKDF2-HMAC-SHA256 hash of it with 600,000 iterations, kept in the Keychain on this device only, and compares hashes in constant time.</p>
+  <p><strong>Face ID and Touch ID.</strong> Biometric unlock uses Apple&rsquo;s LocalAuthentication with biometrics only. If Face ID fails, your iPhone passcode can&rsquo;t be used to open Privaro instead.</p>
+  <p><strong>Failed attempts.</strong> After a number of wrong passcodes in a row (10 by default, adjustable from 3 to 20), Privaro locks you out for one minute. Each wrong attempt after that locks you out for a minute longer than the last. The countdown runs on a clock that can&rsquo;t be changed in Settings, so moving the date forward doesn&rsquo;t shorten it. Restarting the iPhone starts the remaining time over instead of ending it.</p>
+  <p><strong>Automatic locking.</strong> Privaro locks as soon as it leaves the screen, and the app switcher shows a solid cover instead of your vault. It also locks when screen recording or mirroring starts. You can choose to have it lock on a screenshot too. There are several ways to lock it instantly: Panic Lock, triple-tapping the screen, turning the phone face down, or from your Apple Watch.</p>
+  <p><strong>Privacy Modes.</strong> You choose how strict Privaro is:</p>
+  <table>
+    <thead><tr><th>Mode</th><th>To unlock</th><th>Exports, backups and Wi-Fi Transfer</th></tr></thead>
+    <tbody>
+      <tr><td>Home</td><td data-label="To unlock">Face ID / Touch ID or passcode</td><td data-label="Exports, backups and Wi-Fi Transfer">Allowed</td></tr>
+      <tr><td>Away</td><td data-label="To unlock">Face ID / Touch ID or passcode</td><td data-label="Exports, backups and Wi-Fi Transfer">Need your Privaro passcode again</td></tr>
+      <tr><td>Travel</td><td data-label="To unlock">Face ID / Touch ID <strong>and</strong> passcode</td><td data-label="Exports, backups and Wi-Fi Transfer">Blocked</td></tr>
+      <tr><td>Maximum Protection</td><td data-label="To unlock">Face ID / Touch ID <strong>and</strong> passcode</td><td data-label="Exports, backups and Wi-Fi Transfer">Blocked; capture protection and hidden previews are always on</td></tr>
+    </tbody>
+  </table>
+  <p>Switching to a less strict mode needs fresh authentication. Travel and Maximum Protection can only be turned on when Face ID or Touch ID is working and you have a recovery key, so you can&rsquo;t shut yourself out.</p>
+  <p><strong>Require Auth to Share.</strong> When this is on, exporting or sharing anything asks for Face ID, Touch ID or your passcode again, even with the vault already open.</p>
+
+  <h2 id="recovery-key">The recovery key</h2>
+  <p>Your recovery key is 20 characters generated on your device from an alphabet of 31 easy-to-read symbols. That gives about 99 bits of randomness, far too many combinations to guess. It lets you set a new passcode if you forget yours, and it opens your iCloud backup on a new iPhone.</p>
+  <p>Privaro keeps only a salted SHA-256 hash of the recovery key, which is enough to check it but not to recover it. Keep the key somewhere safe outside Privaro. We can&rsquo;t recover it for you.</p>
+
+  <h2 id="backups">Backups</h2>
+
+  <h3>iCloud backup (Pro, optional)</h3>
+  <p>When you turn on iCloud backup, Privaro stores two files in its private iCloud folder. That folder syncs between your devices but doesn&rsquo;t appear in the Files app.</p>
+  <ul>
+    <li><strong>The backup itself.</strong> Your vault is encrypted with the vault key before it leaves your device, in the same piece-by-piece format with authenticated order.</li>
+    <li><strong>A manifest.</strong> It holds a copy of the vault key, encrypted with AES-256-GCM under a key derived from your recovery key with PBKDF2-HMAC-SHA256 (600,000 iterations and a random salt).</li>
+  </ul>
+  <p>Without your recovery key, neither Apple nor we can open the backup. Only your real vault is backed up. A decoy vault is never written to iCloud.</p>
+  <p>Backups made by earlier versions of Privaro locked the key with your app passcode instead, which is much easier to guess. Privaro offers to move such a backup over to your recovery key. Once you enter the recovery key in Settings, it&rsquo;s moved.</p>
+
+  <h3>Backup files you export</h3>
+  <p>An exported backup file is encrypted with a random 256-bit key of its own. That key is in turn locked with a password you choose, at least 10 characters, using PBKDF2-HMAC-SHA256 with 600,000 iterations. The file can therefore be restored on any device, as long as you have the password. The password settings at the top of the file are authenticated too, so they can&rsquo;t be swapped without detection.</p>
+  <p>Backups keep your photos exactly as they are, including their original metadata such as location, so that a restore gives you back what you had.</p>
+
+  <h2 id="sharing">Sharing and moving files</h2>
+
+  <h3>Secure Share</h3>
+  <p>Secure Share packs the items you choose into a single encrypted <code>.privaroshare</code> file that you can send by AirDrop, Messages or any other app. The recipient needs Privaro and the passphrase to open it, and the photos go straight into their vault, never into their Photos library.</p>
+  <ul>
+    <li>The file is encrypted with AES-256-GCM, under a key derived from your passphrase with PBKDF2-HMAC-SHA256 (600,000 iterations and a random salt). The passphrase must be at least 10 characters.</li>
+    <li>The list of items is encrypted too, and each piece of each item is bound to its position, so a tampered file fails to open.</li>
+    <li>Your vault key is never part of the file.</li>
+    <li>Your metadata settings apply, so location and other details can be removed first.</li>
+  </ul>
+  <p>Send the passphrase by a different route than the file.</p>
+
+  <h3>Exporting and saving to Photos</h3>
+  <p>Once you save a photo to Photos or share it through the share sheet, that copy is outside Privaro&rsquo;s protection. The metadata cleaner can remove location or all optional metadata from those copies first. It works on the exported copy only, and never changes what&rsquo;s in your vault.</p>
+
+  <h3>Wi-Fi Transfer</h3>
+  <p>Wi-Fi Transfer lets you upload files from a computer&rsquo;s browser into your vault over your own Wi-Fi.</p>
+  <ul>
+    <li>It only accepts uploads: nothing in your vault can be downloaded through it.</li>
+    <li>The link includes a random 12-character code, about 59 bits, and the phone refuses requests without it.</li>
+    <li>It stops when you lock the vault, after 5 minutes without activity, and whenever the Privacy Mode changes.</li>
+  </ul>
+  <p>Files are sent from the browser to your phone over plain HTTP on your local network, so use it only on a network you trust. They&rsquo;re encrypted as soon as they reach the phone.</p>
+
+  <h2 id="decoy">Decoy vault and duress passcode</h2>
+  <p><strong>Decoy vault.</strong> A second passcode opens a separate vault with content you choose. Settings in a decoy session don&rsquo;t show anything about the real vault: not its storage use, its recovery key, its trusted places or its history. The decoy keeps its data in a separate database, but it uses the same encryption key as the real vault. It hides your real photos from someone looking through the app. It doesn&rsquo;t hide them from someone examining the device&rsquo;s stored data.</p>
+  <p><strong>Duress passcode.</strong> Entering it at the lock screen permanently erases your real vault. Privaro deletes the vault key and recovery key, every encrypted file and record, the break-in photos, the security history and your iCloud backup. It then opens an ordinary, empty vault, and the duress passcode becomes its passcode. This can&rsquo;t be undone.</p>
+  <p>Phone storage doesn&rsquo;t guarantee that deleted files are physically overwritten straight away. What makes them unreadable is that the key is gone. A backup file you exported earlier still opens with its own password.</p>
+
+  <h2 id="other">Other protections</h2>
+  <ul>
+    <li><strong>Break-in photos (Pro, opt-in).</strong> After a wrong passcode, Privaro can take a photo with the front camera. It&rsquo;s encrypted with its own key and shown in the Break-In Attempts log.</li>
+    <li><strong>Security history.</strong> A log of security events such as unlocks, failed attempts and exports. It contains no filenames, locations or photo content. It&rsquo;s encrypted with a key kept on this device only, excluded from backups, and you choose how long it&rsquo;s kept.</li>
+    <li><strong>Capture protection (Pro).</strong> The vault is drawn inside the protected view iOS uses for password fields, which iOS leaves out of screenshots, screen recordings and AirPlay. This relies on iOS behavior Apple doesn&rsquo;t document. If Privaro can&rsquo;t find that view, for example after an iOS update, taking a screenshot locks the vault instead.</li>
+    <li><strong>Location Lock.</strong> The vault only opens at places you&rsquo;ve chosen. Locations that iOS reports as simulated are rejected, and so is an approximate location that is too imprecise to tell whether you&rsquo;re at the place.</li>
+    <li><strong>Privacy Scan.</strong> It looks for photos in your library that may be sensitive, such as documents and screenshots, entirely on your device using Apple&rsquo;s Vision. Recognized text and barcode contents are discarded, never stored.</li>
+    <li><strong>Apple Watch.</strong> The watch receives only whether the vault is locked, whether you have Pro, and alerts about failed unlock attempts. No photos or vault content ever go to the watch.</li>
+  </ul>
+
+  <h2 id="network">What leaves your device</h2>
+  <table>
+    <thead><tr><th>Where</th><th>When</th><th>What is sent</th></tr></thead>
+    <tbody>
+      <tr><td>App Store and RevenueCat</td><td data-label="When">When Privaro checks whether you have Pro, and when you buy or restore it</td><td data-label="What is sent">An anonymous ID that RevenueCat creates, your App Store purchase information, and the basic technical details that come with any internet request, such as IP address, app version and iOS version. Nothing from your vault.</td></tr>
+      <tr><td>Your iCloud account</td><td data-label="When">Only with iCloud backup turned on</td><td data-label="What is sent">The encrypted backup and the locked copy of the vault key</td></tr>
+      <tr><td>Apple Maps</td><td data-label="When">Only while you pick a trusted place on the map</td><td data-label="What is sent">Requests for the map of the area you&rsquo;re looking at</td></tr>
+      <tr><td>Your Wi-Fi network</td><td data-label="When">Only during Wi-Fi Transfer</td><td data-label="What is sent">The files you upload from your computer</td></tr>
+      <tr><td>Your Apple Watch</td><td data-label="When">When the watch app is installed</td><td data-label="What is sent">Lock status, Pro status and failed-attempt alerts</td></tr>
+    </tbody>
+  </table>
+  <p>Privaro contains no analytics, advertising or crash-reporting code, and doesn&rsquo;t require an account. If you&rsquo;ve chosen to share analytics with app developers in your iPhone&rsquo;s Settings, Apple may send us anonymous crash reports. Those come from iOS, not from Privaro, and contain nothing from your vault.</p>
+
+  <h2 id="limitations">Known limitations</h2>
+  <p>We&rsquo;d rather you know these than find them out later.</p>
+  <ol>
+    <li><strong>On iPhone, your Privaro passcode is not part of the encryption.</strong> The vault key is protected by the iOS Keychain and your iPhone&rsquo;s own passcode. Your Privaro passcode and Face ID decide whether the app opens the vault, but the key isn&rsquo;t derived from them. So someone who can read the Keychain of your unlocked iPhone could decrypt the vault without your Privaro passcode, for example with forensic tools or on a jailbroken device. <strong>A strong iPhone passcode is your most important protection.</strong></li>
+    <li><strong>Some information isn&rsquo;t encrypted by Privaro:</strong> dates, sizes, types, album structure and trusted places, as listed under <a href="#metadata">Information about your photos</a>. iOS file protection still applies.</li>
+    <li><strong>The decoy vault shares the real vault&rsquo;s encryption key.</strong> It&rsquo;s a separation inside the app, not a cryptographic one.</li>
+    <li><strong>Wi-Fi Transfer uses plain HTTP</strong> on your local network.</li>
+    <li><strong>Capture protection depends on iOS behavior Apple doesn&rsquo;t document</strong>, and nothing can stop a camera pointed at the screen.</li>
+    <li><strong>Copies that leave Privaro aren&rsquo;t protected by it.</strong> That includes exports, photos saved to Photos and items you shared. Backups keep original metadata on purpose.</li>
+    <li><strong>Turning off your iPhone passcode deletes the vault key.</strong> Without a backup, the vault can&rsquo;t be opened after that.</li>
+    <li><strong>Privaro has not had an independent security audit, and its source code is not public.</strong> This page is our account of how it works, and we&rsquo;ll keep it up to date as the app changes.</li>
+  </ol>
+
+  <h2 id="reference">Cryptography reference</h2>
+  <p>All cryptography uses Apple&rsquo;s CryptoKit and CommonCrypto. Privaro doesn&rsquo;t implement its own algorithms.</p>
+  <table>
+    <thead><tr><th>Purpose</th><th>Method</th><th>Details</th></tr></thead>
+    <tbody>
+      <tr><td>Vault key</td><td data-label="Method">Random</td><td data-label="Details">256-bit; iOS Keychain, &ldquo;when passcode set, this device only&rdquo;</td></tr>
+      <tr><td>Photos and videos</td><td data-label="Method">AES-256-GCM, in 1&nbsp;MB pieces</td><td data-label="Details">Per-file key from HKDF-SHA256 (vault key, 128-bit random file ID); random 96-bit nonce per piece; header and piece position authenticated</td></tr>
+      <tr><td>Thumbnails, captions, filenames, tags, album names</td><td data-label="Method">AES-256-GCM</td><td data-label="Details">Vault key; random 96-bit nonce</td></tr>
+      <tr><td>App passcode</td><td data-label="Method">PBKDF2-HMAC-SHA256</td><td data-label="Details">600,000 iterations, 16-byte random salt, constant-time comparison</td></tr>
+      <tr><td>Recovery key</td><td data-label="Method">20 random characters</td><td data-label="Details">About 99 bits; stored as a salted SHA-256 hash</td></tr>
+      <tr><td>iCloud backup key</td><td data-label="Method">AES-256-GCM key wrap</td><td data-label="Details">Key from PBKDF2-HMAC-SHA256 of the recovery key, 600,000 iterations, 16-byte random salt</td></tr>
+      <tr><td>Exported backup files</td><td data-label="Method">AES-256-GCM</td><td data-label="Details">Random 256-bit file key, wrapped under PBKDF2-HMAC-SHA256 of your password (at least 10 characters), 600,000 iterations</td></tr>
+      <tr><td>Secure Share files</td><td data-label="Method">AES-256-GCM</td><td data-label="Details">Key from PBKDF2-HMAC-SHA256 of the passphrase (at least 10 characters), 600,000 iterations, random salt</td></tr>
+      <tr><td>Album passwords</td><td data-label="Method">PBKDF2-HMAC-SHA256</td><td data-label="Details">210,000 iterations, random salt</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="reporting">Reporting a security problem</h2>
+  <p>If you find a security problem in Privaro, please email <a href="mailto:erdincdubu@icloud.com">erdincdubu@icloud.com</a> before making it public, so we can fix it first. We&rsquo;ll reply, keep you updated, credit you in the release notes if you&rsquo;d like, and give you a free lifetime code for Privaro Pro.</p>
+</div>
+
+</main>
+
+{{FOOTER}}
+</body>
+</html>

@@ -1700,4 +1700,7 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://privaro-site.vercel.app/ar/terms" />
     <xhtml:link rel="alternate" hreflang="ur" href="https://privaro-site.vercel.app/ur/terms" />
   </url>
+  <url>
+    <loc>https://privaro-site.vercel.app/security</loc>
+  </url>
 </urlset>

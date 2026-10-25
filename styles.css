@@ -86,6 +86,27 @@ h1, h2 { font-weight: 600; }
 .legal a { text-decoration: underline; text-underline-offset: 2px; }
 .legal .authoritative { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--rule); font-size: 13px; color: var(--muted); }
 
+/* Security: a long read, so it opens with a list of its sections, and has tables. */
+.toc { max-width: 40em; margin-top: 32px; padding: 16px 0; border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule); font-size: 15px; }
+.toc ol { list-style: none; columns: 2; column-gap: 32px; }
+.toc li { margin-bottom: 4px; break-inside: avoid; }
+.doc { max-width: 40em; margin-top: 48px; line-height: 1.6; }
+.doc h2 { font-size: 21px; line-height: 1.3; margin: 56px 0 12px; }
+.doc h2:first-child { margin-top: 0; }
+.doc h3 { font-size: 17px; font-weight: 600; margin: 28px 0 8px; }
+.doc :is(h2, h3) { scroll-margin-top: 24px; }
+.doc p { margin-bottom: 12px; }
+.doc :is(ul, ol) { margin: 0 0 16px; padding-inline-start: 20px; }
+.doc li { margin-bottom: 6px; }
+.doc a { text-decoration: underline; text-underline-offset: 2px; }
+.doc code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .9em; }
+.doc table { width: 100%; border-collapse: collapse; margin: 4px 0 20px; font-size: 14px; line-height: 1.45; }
+.doc :is(th, td) { text-align: start; vertical-align: top; padding: 10px 16px 10px 0; border-bottom: 1px solid var(--rule); }
+.doc :is(th, td):last-child { padding-inline-end: 0; }
+.doc th { font-size: 13px; font-weight: 600; color: var(--muted); }
+.doc td:first-child { font-weight: 600; }
+
 /* Footer */
 .site-foot { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px 32px;
   padding: 20px 0 28px; border-top: 1px solid var(--rule); font-size: 13px; color: var(--muted); }
@@ -125,5 +146,16 @@ h1, h2 { font-weight: 600; }
   .page { padding: 36px 0 64px; }
   .features { grid-template-columns: minmax(0, 1fr); gap: 24px; margin-top: 36px; }
   .legal { margin-top: 36px; }
+  .toc ol { columns: 1; }
+  .doc { margin-top: 36px; }
+  /* Three columns of sentences don't fit a phone: each row becomes a block,
+     its cells labelled from the column heading. */
+  .doc thead { display: none; }
+  .doc :is(table, tbody, tr, td) { display: block; }
+  .doc tbody { border-top: 1px solid var(--rule); }
+  .doc tr { padding: 12px 0; border-bottom: 1px solid var(--rule); }
+  .doc td { padding: 0; border: 0; }
+  .doc td + td { margin-top: 4px; }
+  .doc td[data-label]::before { content: attr(data-label) ": "; color: var(--muted); }
   .site-foot { flex-direction: column; align-items: flex-start; gap: 12px; }
 }

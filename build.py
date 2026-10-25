@@ -8,6 +8,7 @@ committed, so Vercel just serves static files (no build step on their end).
 
 Shared pieces live in templates/partials/ and are pulled in with {{HEADER}}
 and {{FOOTER}}. The build also writes 404.html, sitemap.xml and robots.txt.
+Pages in ENGLISH_ONLY (the security overview) are written once, to the root.
 
 Prices: Pro's App Store price per country comes from the App Store Connect
 CSV exports in i18n/prices/; i18n/prices.json says how to fall back. Each page
@@ -55,8 +56,10 @@ AUTONYM = {code: name for code, _, _, name in LANGS}
 RTL = {"ar", "ur"}
 
 PAGES = {"index": "index.html", "pro": "pro.html", "faq": "faq.html", "privacy": "privacy.html", "terms": "terms.html"}
+# Written in English only, at the root; every language's footer links to them.
+ENGLISH_ONLY = {"security": "security.html"}
 # Which meta_title_* / meta_desc_* strings each page uses.
-META = {"index": "home", "pro": "pro", "faq": "faq", "privacy": "privacy", "terms": "terms"}
+META = {"index": "home", "pro": "pro", "faq": "faq", "privacy": "privacy", "terms": "terms", "security": "security"}
 
 GLOBE = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
          'stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/>'
@@ -149,7 +152,7 @@ def price_tokens(pricing, code):
 def load_strings():
     strings = {}
     for fname in ("i18n/strings.json", "i18n/strings-pro.json", "i18n/strings-faq.json",
-                  "i18n/strings-privacy.json", "i18n/strings-terms.json"):
+                  "i18n/strings-privacy.json", "i18n/strings-terms.json", "i18n/strings-security.json"):
         with open(os.path.join(ROOT, fname), encoding="utf-8") as f:
             strings.update(json.load(f))
     return strings
@@ -177,13 +180,13 @@ def hreflang_block(page):
     return "\n".join(lines)
 
 
-def seo_block(page, code):
+def seo_block(page, code, alternates=True):
     """Canonical URL, language alternates, and the tags that make link previews work."""
     url = BASE_URL + page_url(page, code)
     meta = META[page]
     return "\n".join([
         f'<link rel="canonical" href="{url}" />',
-        hreflang_block(page),
+        *([hreflang_block(page)] if alternates else []),
         '<meta property="og:type" content="website" />',
         '<meta property="og:site_name" content="Privaro" />',
         f'<meta property="og:title" content="{{{{meta_title_{meta}}}}}" />',
@@ -228,6 +231,7 @@ def render(html, page, code, htmllang, head, strings, pricing):
     html = html.replace("{{FAQ_URL}}", page_url("faq", code))
     html = html.replace("{{PRIVACY_URL}}", page_url("privacy", code))
     html = html.replace("{{TERMS_URL}}", page_url("terms", code))
+    html = html.replace("{{SECURITY_URL}}", page_url("security", "en"))
     for key, vals in strings.items():
         html = html.replace("{{" + key + "}}", vals.get(code, vals["en"]))
     for token, value in price_tokens(pricing, code).items():
@@ -258,6 +262,8 @@ def sitemap():
             out.append(f"    <loc>{BASE_URL}{page_url(page, code)}</loc>")
             out.extend(alternates)
             out.append("  </url>")
+    for page in ENGLISH_ONLY:
+        out.extend(["  <url>", f"    <loc>{BASE_URL}{page_url(page, 'en')}</loc>", "  </url>"])
     out.append("</urlset>")
     return "\n".join(out) + "\n"
 
@@ -270,6 +276,13 @@ def main():
         for code, _, htmllang, _ in LANGS:
             html = render(template, page, code, htmllang, seo_block(page, code), strings, pricing)
             write(out_path(page, code), html)
+
+    # English only, with no language alternates; like the 404's, the language
+    # menu leads to each homepage.
+    for page, name in ENGLISH_ONLY.items():
+        html = render(read_template(name), "index", "en", "en", seo_block(page, "en", alternates=False),
+                      strings, pricing)
+        write(name, html)
 
     # One English 404 for every path; its language menu leads to each homepage.
     html = render(read_template("404.html"), "index", "en", "en",

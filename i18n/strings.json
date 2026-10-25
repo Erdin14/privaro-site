@@ -94,6 +94,25 @@
     "ar": "أسئلة",
     "ur": "سوالات"
   },
+  "footer_security": {
+    "en": "Security",
+    "es": "Seguridad",
+    "fr": "Sécurité",
+    "de": "Sicherheit",
+    "it": "Sicurezza",
+    "pt-BR": "Segurança",
+    "zh-Hans": "安全",
+    "ko": "보안",
+    "nl": "Beveiliging",
+    "ja": "セキュリティ",
+    "zh-Hant": "安全性",
+    "ru": "Безопасность",
+    "tr": "Güvenlik",
+    "id": "Keamanan",
+    "hi": "सुरक्षा",
+    "ar": "الأمان",
+    "ur": "سیکورٹی"
+  },
   "footer_privacy": {
     "en": "Privacy Policy",
     "es": "Política de privacidad",
