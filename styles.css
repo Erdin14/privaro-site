@@ -49,17 +49,15 @@ h1, h2 { font-weight: 600; }
 .home .appstore { margin-top: 28px; }
 .meta { font-size: 13px; color: var(--muted); margin-top: 12px; }
 .shots { display: flex; gap: 16px; flex-shrink: 0; }
-/* Each screenshot comes in a <picture> (AVIF, with a PNG for browsers without
-   it) that lays out as if it weren't there, so the images are the row. Its
-   <source> would then join the row as an empty item, with a gap either side. */
-.shots picture { display: contents; }
-.shots source { display: none; }
 /* Sized so all four always fit above the fold: by the window's height, and by
    the width left beside the 360px of text (each phone, in its frame, is 0.483
    times as wide as it is tall, so four with their gaps take 1.93 times the
-   height plus 48px). The frame and its rounded corners are in the image, on a
-   transparent background, so the image needs no border or corners of its own. */
-.shots img { height: min(560px, 68vh, calc((min(100vw - 48px, 1400px) - 456px) * .517)); width: auto; }
+   height plus 48px). Each screenshot is a JPEG of the phone in its frame, cut
+   to the phone's outline (body and side buttons) by a mask drawn from the same
+   measurements. A transparent AVIF came out blank in Chrome. */
+.shots img { height: min(560px, 68vh, calc((min(100vw - 48px, 1400px) - 456px) * .517)); width: auto;
+  -webkit-mask-image: url(/shots/framed-18-pro-max/phone-mask.svg); mask-image: url(/shots/framed-18-pro-max/phone-mask.svg);
+  -webkit-mask-size: 100% 100%; mask-size: 100% 100%; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; }
 
 /* Behind the homepage: the app's lock screen, in its Indigo theme
    (LockScreenView's LockScreenBackground). So the homepage is always dark.
@@ -118,9 +116,9 @@ h1, h2 { font-weight: 600; }
 @keyframes arrive { from { opacity: 0; transform: translateY(32px) scale(.96); } to { opacity: 1; transform: none; } }
 .js .shots img { opacity: 0; }
 .js .shots.shown img { animation: arrive 1.8s cubic-bezier(.16, 1, .3, 1) both; }
-.js .shots.shown > :nth-child(2) img { animation-delay: .25s; }
-.js .shots.shown > :nth-child(3) img { animation-delay: .5s; }
-.js .shots.shown > :nth-child(4) img { animation-delay: .75s; }
+.js .shots.shown img:nth-child(2) { animation-delay: .25s; }
+.js .shots.shown img:nth-child(3) { animation-delay: .5s; }
+.js .shots.shown img:nth-child(4) { animation-delay: .75s; }
 /* The text pages are for reading, so theirs is quicker. */
 .page > * { animation-duration: .5s; }
 .page > :nth-child(2) { animation-delay: .04s; }
