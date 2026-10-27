@@ -55,9 +55,13 @@ h1, h2 { font-weight: 600; }
    height plus 48px). Each screenshot is a JPEG of the phone in its frame, cut
    to the phone's outline (body and side buttons) by a mask drawn from the same
    measurements. A transparent AVIF came out blank in Chrome. */
-.shots img { height: min(560px, 68vh, calc((min(100vw - 48px, 1400px) - 456px) * .517)); width: auto;
+.shots img { display: block; height: min(560px, 68vh, calc((min(100vw - 48px, 1400px) - 456px) * .517)); width: auto;
   -webkit-mask-image: url(/shots/framed-18-pro-max/phone-mask.svg); mask-image: url(/shots/framed-18-pro-max/phone-mask.svg);
   -webkit-mask-size: 100% 100%; mask-size: 100% 100%; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; }
+/* Under each phone, the name of the screen it shows, quiet like the line
+   under the App Store badge. */
+.shots figure { margin: 0; }
+.shots figcaption { margin-top: 12px; font-size: 13px; color: var(--muted); text-align: center; }
 
 /* Behind the homepage: the app's lock screen, in its Indigo theme
    (LockScreenView's LockScreenBackground). So the homepage is always dark.
@@ -111,14 +115,15 @@ h1, h2 { font-weight: 600; }
 .home-text > :nth-child(5) { animation-delay: .42s; }
 /* The screenshots take their time: once they're on screen (the script at the
    end of index.html adds .shown), each rises further and settles out of a
-   slight zoom, a quarter of a second after the one before. The easing slows
-   right down at the end, so they come to rest rather than stop. */
+   slight zoom, a quarter of a second after the one before, its caption with
+   it. The easing slows right down at the end, so they come to rest rather
+   than stop. */
 @keyframes arrive { from { opacity: 0; transform: translateY(32px) scale(.96); } to { opacity: 1; transform: none; } }
-.js .shots img { opacity: 0; }
-.js .shots.shown img { animation: arrive 1.8s cubic-bezier(.16, 1, .3, 1) both; }
-.js .shots.shown img:nth-child(2) { animation-delay: .25s; }
-.js .shots.shown img:nth-child(3) { animation-delay: .5s; }
-.js .shots.shown img:nth-child(4) { animation-delay: .75s; }
+.js .shots figure { opacity: 0; }
+.js .shots.shown figure { animation: arrive 1.8s cubic-bezier(.16, 1, .3, 1) both; }
+.js .shots.shown figure:nth-child(2) { animation-delay: .25s; }
+.js .shots.shown figure:nth-child(3) { animation-delay: .5s; }
+.js .shots.shown figure:nth-child(4) { animation-delay: .75s; }
 /* The text pages are for reading, so theirs is quicker. */
 .page > * { animation-duration: .5s; }
 .page > :nth-child(2) { animation-delay: .04s; }
@@ -127,7 +132,7 @@ h1, h2 { font-weight: 600; }
 /* Reduce Motion: the light rests on the padlock, and nothing moves. */
 @media (prefers-reduced-motion: reduce) {
   .aurora, .glint, .glint > div, .home-text > *, .page > * { animation: none; }
-  .js .shots img, .js .shots.shown img { opacity: 1; animation: none; }
+  .js .shots figure, .js .shots.shown figure { opacity: 1; animation: none; }
   .glint { --x: 50vw; --y: 38vh; }
 }
 
@@ -243,12 +248,15 @@ h1, h2 { font-weight: 600; }
 @media (max-width: 1180px) {
   .home { flex-direction: column; align-items: flex-start; gap: 36px; padding: 40px 0; }
   .home-text { max-width: 34em; }
+  /* The room at the bottom is for the row's scrollbar: Safari takes its height
+     out of the row rather than adding it, which cut off the captions. */
   .shots { align-self: stretch; gap: 12px; margin-inline: calc(-1 * var(--side)); padding-inline: var(--side);
-    overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: var(--side); }
-  .shots img { flex: none; height: auto; width: min(44%, 260px); scroll-snap-align: start; }
+    padding-bottom: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: var(--side); }
+  .shots figure { flex: none; width: min(44%, 260px); scroll-snap-align: start; }
+  .shots img { height: auto; width: 100%; }
   /* Without the rise: the row scrolls, so anything moved outside it is cut
      off or briefly scrollable. Settling out of the zoom stays inside it. */
-  .js .shots.shown img { animation-name: settle; }
+  .js .shots.shown figure { animation-name: settle; }
 }
 @keyframes settle { from { opacity: 0; transform: scale(.94); } to { opacity: 1; transform: none; } }
 @media (max-width: 760px) {
