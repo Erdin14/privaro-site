@@ -64,6 +64,11 @@ META = {"index": "home", "pro": "pro", "faq": "faq", "privacy": "privacy", "term
 GLOBE = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
          'stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/>'
          '<path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg>')
+# Points up, the way the menu opens; turned over while it's open.
+CHEVRON = ('<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" '
+           'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg>')
+CHECK = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" '
+         'stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>')
 
 
 # How each page language writes a price, matching the browser's
@@ -203,11 +208,16 @@ def seo_block(page, code, alternates=True):
 def switcher_block(page, cur, label):
     items = []
     for code, _, htmllang, name in LANGS:
-        active = ' class="active"' if code == cur else ""
-        items.append(f'<a href="{page_url(page, code)}" lang="{htmllang}"{active}>{name}</a>')
+        if code == cur:
+            items.append(f'<a href="{page_url(page, code)}" lang="{htmllang}" hreflang="{htmllang}" class="active" '
+                         f'aria-current="true"><span>{name}</span>{CHECK}</a>')
+        else:
+            items.append(f'<a href="{page_url(page, code)}" lang="{htmllang}" hreflang="{htmllang}">'
+                         f'<span>{name}</span></a>')
     return (f'<details class="lang"><summary aria-label="{label}">{GLOBE}'
-            f'<span>{AUTONYM[cur]}</span></summary>'
-            f'<div class="lang-menu">{"".join(items)}</div></details>')
+            f'<span>{AUTONYM[cur]}</span>{CHEVRON}</summary>'
+            f'<div class="lang-menu"><p class="lang-head">{label}</p>'
+            f'<div class="lang-list">{"".join(items)}</div></div></details>')
 
 
 def read_template(name):

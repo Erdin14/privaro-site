@@ -191,20 +191,45 @@ h1, h2 { font-weight: 600; }
 .foot-links a { color: var(--muted); }
 .foot-links a:hover { color: var(--ink); }
 
-/* Language menu, in the footer, so it opens upwards. */
+/* Language menu, in the footer, so it opens upwards. The button is a small
+   pill whose chevron turns over while it's open; the menu is a frosted panel
+   that rises into place, seventeen languages in two columns, the current one
+   ticked. */
 .lang { position: relative; }
-.lang summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 5px; }
+.lang summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;
+  margin: -5px 0; padding: 4px 10px 4px 9px; border: 1px solid var(--rule); border-radius: 999px;
+  transition: color .15s, border-color .15s; }
 .lang summary::-webkit-details-marker { display: none; }
-.lang summary:hover { color: var(--ink); }
-.lang summary svg { width: 13px; height: 13px; align-self: center; }
-.lang-menu { position: absolute; inset-inline-end: 0; bottom: calc(100% + 10px); min-width: 170px; background: var(--bg);
-  border: 1px solid var(--rule); border-radius: 10px; padding: 4px 0; z-index: 20; max-height: 60vh; overflow-y: auto;
-  font-size: 14px; box-shadow: 0 8px 24px rgba(0, 0, 0, .08); }
-.lang-menu a { display: block; color: var(--ink); padding: 6px 14px; break-inside: avoid; }
-.lang-menu a:hover { background: var(--rule); text-decoration: none; }
-.lang-menu a.active { font-weight: 600; }
-/* Seventeen languages: two columns where there's room, a scrolling list on phones. */
-@media (min-width: 761px) { .lang-menu { columns: 2; column-gap: 0; width: 340px; max-height: none; } }
+.lang summary:hover, .lang[open] summary { color: var(--ink); border-color: var(--muted); }
+.lang summary svg { width: 13px; height: 13px; flex: none; }
+.lang summary .chevron { width: 10px; height: 10px; transition: transform .25s cubic-bezier(.2, .8, .2, 1); }
+.lang[open] summary .chevron { transform: rotate(180deg); }
+.lang-menu { position: absolute; inset-inline-end: 0; bottom: calc(100% + 14px); z-index: 20; width: 360px; padding: 8px;
+  background: var(--bg); background: color-mix(in srgb, var(--bg) 92%, transparent);
+  -webkit-backdrop-filter: blur(24px) saturate(1.6); backdrop-filter: blur(24px) saturate(1.6);
+  border: 1px solid var(--rule); border-radius: 16px; box-shadow: 0 24px 60px rgb(0 0 0 / .18), 0 2px 8px rgb(0 0 0 / .06);
+  font-size: 14px; animation: menu-in .25s cubic-bezier(.2, .8, .2, 1); }
+@keyframes menu-in { from { opacity: 0; transform: translateY(8px); } }
+.lang-head { padding: 4px 10px 8px; font-size: 12px; font-weight: 600; color: var(--muted); }
+.lang-list { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+.lang-list a { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 10px;
+  border-radius: 10px; color: var(--ink); transition: background-color .12s; }
+.lang-list a:hover { background: var(--rule); background: color-mix(in srgb, var(--ink) 8%, transparent); text-decoration: none; }
+.lang-list a.active { font-weight: 600; background: var(--rule); background: color-mix(in srgb, var(--blue) 14%, transparent); }
+.lang-list a svg { width: 14px; height: 14px; flex: none; color: var(--blue); }
+/* Phones: a sheet along the bottom of the screen, so it can't run off the
+   side whichever line the button has wrapped onto, over the page dimmed
+   behind it. A tap on the dimmed page closes it (see the footer's script). */
+@media (max-width: 760px) {
+  .lang-menu { position: fixed; inset: auto 12px 12px; width: auto; max-height: 75vh; overflow-y: auto; }
+  .lang[open]::before { content: ""; position: fixed; inset: 0; z-index: 19; background: rgb(0 0 0 / .32);
+    animation: dim-in .25s ease-out; }
+}
+@keyframes dim-in { from { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .lang-menu, .lang[open]::before { animation: none; }
+  .lang summary .chevron { transition: none; }
+}
 
 /* Arabic, Urdu and Hindi need taller lines than Latin so marks above and below don't collide. */
 :lang(ur) body { line-height: 1.8; }
