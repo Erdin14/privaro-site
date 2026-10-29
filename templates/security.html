@@ -1,18 +1,43 @@
 <!DOCTYPE html>
-<html lang="{{LANG}}" dir="{{DIR}}">
+<html lang="{{LANG}}" dir="{{DIR}}" class="graphite-site">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>{{meta_title_security}}</title>
 <meta name="description" content="{{meta_desc_security}}" />
 {{SEO}}
-<meta name="color-scheme" content="light dark" />
+<meta name="color-scheme" content="dark" />
 <meta name="apple-itunes-app" content="app-id=6783131829" />
 <link rel="icon" href="/logo.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
 <link rel="stylesheet" href="/styles.css" />
+<link rel="stylesheet" href="/transitions.css" />
+<script>
+// Register before first reveal, including restored history entries.
+(() => {
+  let transition;
+  window.addEventListener("pagereveal", event => {
+    transition = event.viewTransition;
+    if (!transition) {
+      document.documentElement.classList.remove("page-crossfade");
+      return;
+    }
+    const current = transition;
+    document.documentElement.classList.add("page-crossfade");
+    current.finished.catch(() => {}).finally(() => {
+      if (transition !== current) return;
+      transition = null;
+      document.documentElement.classList.remove("page-crossfade");
+    });
+  });
+  // Intent takes priority over decoration; never consume the user's event.
+  const interrupt = () => transition?.skipTransition();
+  window.addEventListener("pointerdown", interrupt, { capture: true, passive: true });
+  window.addEventListener("keydown", interrupt, { capture: true });
+})();
+</script>
 </head>
-<body>
+<body class="lock-scene">
 
 {{HEADER}}
 
@@ -40,6 +65,8 @@
     <li><a href="#reporting">Reporting a security problem</a></li>
   </ol>
 </nav>
+
+{{VIGNETTE}}
 
 <div class="doc">
 
@@ -228,5 +255,6 @@
 </main>
 
 {{FOOTER}}
+<script src="/motion.js" data-label="{{motion_label}}" defer></script>
 </body>
 </html>

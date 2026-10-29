@@ -1,0 +1,21 @@
+/* Native same-origin navigation, including history traversals. Unsupported
+   browsers simply navigate normally; no click interception or loading gate. */
+@view-transition { navigation: auto; }
+::view-transition { pointer-events: none; }
+::view-transition-group(*), ::view-transition-image-pair(*),
+::view-transition-old(*), ::view-transition-new(*) { pointer-events: none; }
+::view-transition-group(root) { animation-duration: 180ms; }
+::view-transition-old(root) {
+  animation: quiet-page-out 180ms cubic-bezier(.2, 0, .2, 1) both;
+  mix-blend-mode: normal;
+}
+::view-transition-new(root) {
+  animation: quiet-page-in 180ms cubic-bezier(.2, 0, .2, 1) both;
+  mix-blend-mode: normal;
+}
+@keyframes quiet-page-out { to { opacity: 0; } }
+@keyframes quiet-page-in { from { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  @view-transition { navigation: none; }
+  ::view-transition-group(root), ::view-transition-old(root), ::view-transition-new(root) { animation: none; }
+}

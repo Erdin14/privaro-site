@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="ko" dir="ltr">
+<html lang="ko" dir="ltr" class="graphite-site">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Pro 기능 · Privaro</title>
 <meta name="description" content="Privaro Pro의 각 기능이 무엇을 하는지 정확히 설명합니다: 무제한 저장, 미끼 보관함, 강제 삭제, 스크린샷 차단, 암호화 백업 등." />
 <meta name="apple-itunes-app" content="app-id=6783131829" />
-<meta name="color-scheme" content="light dark" />
+<meta name="color-scheme" content="dark" />
 <link rel="canonical" href="https://privaro-site.vercel.app/ko/pro" />
 <link rel="alternate" hreflang="en" href="https://privaro-site.vercel.app/pro" />
 <link rel="alternate" hreflang="es" href="https://privaro-site.vercel.app/es/pro" />
@@ -39,8 +39,33 @@
 <link rel="icon" href="/logo.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
 <link rel="stylesheet" href="/styles.css" />
+<link rel="stylesheet" href="/transitions.css" />
+<script>
+// Register before first reveal, including restored history entries.
+(() => {
+  let transition;
+  window.addEventListener("pagereveal", event => {
+    transition = event.viewTransition;
+    if (!transition) {
+      document.documentElement.classList.remove("page-crossfade");
+      return;
+    }
+    const current = transition;
+    document.documentElement.classList.add("page-crossfade");
+    current.finished.catch(() => {}).finally(() => {
+      if (transition !== current) return;
+      transition = null;
+      document.documentElement.classList.remove("page-crossfade");
+    });
+  });
+  // Intent takes priority over decoration; never consume the user's event.
+  const interrupt = () => transition?.skipTransition();
+  window.addEventListener("pointerdown", interrupt, { capture: true, passive: true });
+  window.addEventListener("keydown", interrupt, { capture: true });
+})();
+</script>
 </head>
-<body>
+<body class="lock-scene">
 
 <header class="site-head wrap">
   <a class="brand" href="/ko"><img src="/logo.png" width="28" height="28" alt="" />Privaro</a>
@@ -69,7 +94,7 @@
 
 <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="App Store에서 Privaro 다운로드">
   <picture>
-    <source srcset="/appstore-badge-white.svg" media="(prefers-color-scheme: dark)" />
+    <source srcset="/appstore-badge-white.svg" />
     <img src="/appstore-badge.svg" alt="App Store에서 Privaro 다운로드" />
   </picture>
 </a>
@@ -102,6 +127,9 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && lang.open) { lang.open = false; lang.querySelector('summary').focus(); }
 });
 </script>
+
+<script src="/presentation.js" data-enlarge="스크린샷 확대: {name}" data-close="뷰어 닫기" data-previous="이전 스크린샷" data-next="다음 스크린샷" defer></script>
 <script src="/price.js" defer></script>
+<script src="/motion.js" data-label="배경 애니메이션" defer></script>
 </body>
 </html>

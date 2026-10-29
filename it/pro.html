@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="it" dir="ltr">
+<html lang="it" dir="ltr" class="graphite-site">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Funzioni Pro · Privaro</title>
 <meta name="description" content="Esattamente cosa fa ogni funzione di Privaro Pro: spazio illimitato, cassaforte esca, cancellazione di emergenza, protezione dagli screenshot, backup cifrato e altro." />
 <meta name="apple-itunes-app" content="app-id=6783131829" />
-<meta name="color-scheme" content="light dark" />
+<meta name="color-scheme" content="dark" />
 <link rel="canonical" href="https://privaro-site.vercel.app/it/pro" />
 <link rel="alternate" hreflang="en" href="https://privaro-site.vercel.app/pro" />
 <link rel="alternate" hreflang="es" href="https://privaro-site.vercel.app/es/pro" />
@@ -39,8 +39,33 @@
 <link rel="icon" href="/logo.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
 <link rel="stylesheet" href="/styles.css" />
+<link rel="stylesheet" href="/transitions.css" />
+<script>
+// Register before first reveal, including restored history entries.
+(() => {
+  let transition;
+  window.addEventListener("pagereveal", event => {
+    transition = event.viewTransition;
+    if (!transition) {
+      document.documentElement.classList.remove("page-crossfade");
+      return;
+    }
+    const current = transition;
+    document.documentElement.classList.add("page-crossfade");
+    current.finished.catch(() => {}).finally(() => {
+      if (transition !== current) return;
+      transition = null;
+      document.documentElement.classList.remove("page-crossfade");
+    });
+  });
+  // Intent takes priority over decoration; never consume the user's event.
+  const interrupt = () => transition?.skipTransition();
+  window.addEventListener("pointerdown", interrupt, { capture: true, passive: true });
+  window.addEventListener("keydown", interrupt, { capture: true });
+})();
+</script>
 </head>
-<body>
+<body class="lock-scene">
 
 <header class="site-head wrap">
   <a class="brand" href="/it"><img src="/logo.png" width="28" height="28" alt="" />Privaro</a>
@@ -69,7 +94,7 @@
 
 <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="Scarica Privaro dall’App Store">
   <picture>
-    <source srcset="/appstore-badge-white.svg" media="(prefers-color-scheme: dark)" />
+    <source srcset="/appstore-badge-white.svg" />
     <img src="/appstore-badge.svg" alt="Scarica Privaro dall’App Store" />
   </picture>
 </a>
@@ -102,6 +127,9 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && lang.open) { lang.open = false; lang.querySelector('summary').focus(); }
 });
 </script>
+
+<script src="/presentation.js" data-enlarge="Ingrandisci schermata: {name}" data-close="Chiudi visualizzatore" data-previous="Schermata precedente" data-next="Schermata successiva" defer></script>
 <script src="/price.js" defer></script>
+<script src="/motion.js" data-label="Animazione di sfondo" defer></script>
 </body>
 </html>

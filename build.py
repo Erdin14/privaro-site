@@ -226,7 +226,7 @@ def switcher_block(page, cur, label):
 def read_template(name):
     with open(os.path.join(ROOT, "templates", name), encoding="utf-8") as f:
         html = f.read()
-    for part in ("header", "footer"):
+    for part in ("header", "footer", "vignette"):
         with open(os.path.join(ROOT, "templates", "partials", part + ".html"), encoding="utf-8") as f:
             html = html.replace("{{" + part.upper() + "}}", f.read().rstrip("\n"))
     return html

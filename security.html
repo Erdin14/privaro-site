@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" class="graphite-site">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,13 +16,38 @@
 <meta property="og:image:height" content="630" />
 <meta property="og:locale" content="en_US" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="color-scheme" content="light dark" />
+<meta name="color-scheme" content="dark" />
 <meta name="apple-itunes-app" content="app-id=6783131829" />
 <link rel="icon" href="/logo.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
 <link rel="stylesheet" href="/styles.css" />
+<link rel="stylesheet" href="/transitions.css" />
+<script>
+// Register before first reveal, including restored history entries.
+(() => {
+  let transition;
+  window.addEventListener("pagereveal", event => {
+    transition = event.viewTransition;
+    if (!transition) {
+      document.documentElement.classList.remove("page-crossfade");
+      return;
+    }
+    const current = transition;
+    document.documentElement.classList.add("page-crossfade");
+    current.finished.catch(() => {}).finally(() => {
+      if (transition !== current) return;
+      transition = null;
+      document.documentElement.classList.remove("page-crossfade");
+    });
+  });
+  // Intent takes priority over decoration; never consume the user's event.
+  const interrupt = () => transition?.skipTransition();
+  window.addEventListener("pointerdown", interrupt, { capture: true, passive: true });
+  window.addEventListener("keydown", interrupt, { capture: true });
+})();
+</script>
 </head>
-<body>
+<body class="lock-scene">
 
 <header class="site-head wrap">
   <a class="brand" href="/"><img src="/logo.png" width="28" height="28" alt="" />Privaro</a>
@@ -52,6 +77,61 @@
     <li><a href="#reporting">Reporting a security problem</a></li>
   </ol>
 </nav>
+
+<figure class="privacy-vignette">
+  <svg class="privacy-art" viewBox="0 0 640 320" role="img" aria-labelledby="privacy-art-title" aria-describedby="privacy-art-desc" focusable="false">
+    <title id="privacy-art-title">On-device protection</title>
+    <desc id="privacy-art-desc">Photo tiles enter an iPhone and a lock closes, illustrating on-device encryption. This is not a live security check.</desc>
+    <defs>
+      <clipPath id="privacy-tile-clip"><rect width="68" height="86" rx="9" /></clipPath>
+    </defs>
+    <g transform="translate(-50)">
+      <rect x="296" y="18" width="148" height="284" rx="30" fill="#131617" stroke="#626968" stroke-width="1.5" />
+      <rect x="305" y="27" width="130" height="266" rx="23" fill="#1b1f20" stroke="#ffffff" stroke-opacity=".06" />
+      <rect x="346" y="35" width="48" height="11" rx="5.5" fill="#101213" />
+      <path d="M356 285h28" stroke="#69706f" stroke-width="2.5" stroke-linecap="round" />
+      <g class="vignette-tile" style="--tile-x:-178px;--tile-y:-18px;--tile-angle:-8deg">
+        <g transform="translate(315 68)">
+          <g clip-path="url(#privacy-tile-clip)">
+            <rect width="68" height="86" fill="#8a9791" />
+            <circle cx="48" cy="22" r="8" fill="#d8d8c9" />
+            <path d="m-8 69 27-31 27 31 15-18 20 35H-8Z" fill="#53665d" />
+            <path d="m-8 86 34-25 20 10 25-10 10 25" fill="#354b43" />
+          </g>
+          <rect x=".5" y=".5" width="67" height="85" rx="8.5" fill="none" stroke="#e4e9e4" stroke-opacity=".28" />
+        </g>
+      </g>
+      <g class="vignette-tile" style="--tile-x:155px;--tile-y:-35px;--tile-angle:7deg">
+        <g transform="translate(350 107)">
+          <g clip-path="url(#privacy-tile-clip)">
+            <rect width="68" height="86" fill="#9ba3a0" />
+            <path d="M0 36h68v50H0Z" fill="#5c7880" />
+            <path d="M0 47q17-5 34 0t34 0M0 59q17-5 34 0t34 0M0 72q17-5 34 0t34 0" fill="none" stroke="#c2ceca" stroke-opacity=".45" />
+          </g>
+          <rect x=".5" y=".5" width="67" height="85" rx="8.5" fill="none" stroke="#e4e9e4" stroke-opacity=".28" />
+        </g>
+      </g>
+      <g class="vignette-tile" style="--tile-x:-160px;--tile-y:75px;--tile-angle:-5deg">
+        <g transform="translate(325 149)">
+          <g clip-path="url(#privacy-tile-clip)">
+            <rect width="68" height="86" fill="#aca99b" />
+            <path d="M-5 86V51l24-26 19 23 16-10 24 48" fill="#777d70" />
+            <path d="m10 86 27-38 13 20 17-4 11 22" fill="#515c52" />
+            <path d="m16 29 3-4 10 12-9-3Z" fill="#d0cfc0" />
+          </g>
+          <rect x=".5" y=".5" width="67" height="85" rx="8.5" fill="none" stroke="#e4e9e4" stroke-opacity=".28" />
+        </g>
+      </g>
+      <g class="vignette-lock">
+        <g class="vignette-shackle"><path d="M362 250v-6a8 8 0 0 1 16 0v6" fill="none" stroke="#dce1dd" stroke-width="2.5" stroke-linecap="round" /></g>
+        <rect x="358" y="249" width="24" height="20" rx="5" fill="#dce1dd" />
+        <path d="M370 257v5" stroke="#303b36" stroke-width="2.5" stroke-linecap="round" />
+      </g>
+    </g>
+  </svg>
+  <figcaption><span>Encrypted on your iPhone.</span><button class="vignette-replay" type="button" hidden><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 7a6 6 0 1 1 0 6M4 3v4h4" stroke-linecap="round" stroke-linejoin="round" /></svg>Replay illustration</button></figcaption>
+</figure>
+<script src="/privacy-vignette.js" defer></script>
 
 <div class="doc">
 
@@ -265,5 +345,8 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && lang.open) { lang.open = false; lang.querySelector('summary').focus(); }
 });
 </script>
+
+<script src="/presentation.js" data-enlarge="Enlarge screenshot: {name}" data-close="Close viewer" data-previous="Previous screenshot" data-next="Next screenshot" defer></script>
+<script src="/motion.js" data-label="Background motion" defer></script>
 </body>
 </html>

@@ -22,6 +22,7 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { -webkit-text-size-adjust: 100%; }
+html.graphite-site { background: #161819; color-scheme: dark; }
 body { background: var(--bg); color: var(--ink); font-family: var(--font); font-size: 16px; line-height: 1.5;
   -webkit-font-smoothing: antialiased; min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; }
 /* Keep the footer at the bottom of short pages. */
@@ -40,7 +41,7 @@ h1, h2 { font-weight: 600; }
 
 /* Home: the app's icon, what it does and where to get it, beside four
    screenshots. Wider than the other pages, header to footer, to fit them. */
-.lock-scene .wrap { width: min(1400px, 100% - 2 * var(--side)); }
+.home-scene .wrap { width: min(1400px, 100% - 2 * var(--side)); }
 .home { display: flex; align-items: center; justify-content: space-between; gap: 48px; padding: 48px 0; }
 .home-text { max-width: 360px; }
 .icon { width: 64px; height: 64px; border-radius: 15px; border: 1px solid var(--rule); }
@@ -63,6 +64,64 @@ h1, h2 { font-weight: 600; }
 .shots figure { margin: 0; }
 .shots figcaption { margin-top: 12px; font-size: 13px; color: var(--muted); text-align: center; }
 
+/* The photographs and layout are unchanged; native buttons add inspection. */
+.shot-open { display: block; padding: 0; border: 0; background: none; color: inherit;
+  cursor: zoom-in; border-radius: 12%; -webkit-tap-highlight-color: transparent; }
+.shot-open:focus-visible { outline-offset: 6px; }
+.shot-cue { display: inline-block; margin-inline-start: 6px; opacity: .55; }
+.reveal-pending { opacity: .65; transform: translateY(10px); }
+
+/* Native dialog supplies modal focus containment and makes the page inert.
+   The image flies using transforms; the backdrop and controls only dissolve. */
+.shot-viewer { position: fixed; inset: 0; width: 100%; height: 100%; max-width: none; max-height: none;
+  margin: 0; padding: 0; border: 0; background: transparent; color: #f2f2f3;
+  color-scheme: dark; overflow: hidden; font-family: var(--font); }
+.shot-viewer::backdrop { background: transparent; }
+.viewer-surface { position: absolute; inset: 0; background: rgb(17 18 19 / .97); }
+.viewer-toolbar { position: absolute; inset: max(20px, env(safe-area-inset-top)) 24px auto;
+  display: flex; align-items: center; justify-content: space-between; gap: 20px; z-index: 2; }
+.viewer-toolbar h2 { font-size: 15px; font-weight: 500; line-height: 1.4; }
+.shot-viewer button { display: inline-flex; align-items: center; justify-content: center; flex: none;
+  width: 44px; height: 44px; padding: 10px; border: 1px solid rgb(255 255 255 / .16);
+  border-radius: 50%; background: rgb(255 255 255 / .035); color: #f2f2f3; cursor: pointer; }
+.shot-viewer button:hover { background: rgb(255 255 255 / .1); border-color: rgb(255 255 255 / .3); }
+.shot-viewer button svg { width: 22px; height: 22px; }
+.viewer-stage { position: absolute; inset: 80px 24px 88px; display: flex; align-items: center; justify-content: center; }
+.viewer-image { display: block; flex: none; max-width: none; transform-origin: top left; object-fit: contain;
+  -webkit-mask: url(/shots/framed-18-pro-max/phone-mask.svg) center / 100% 100% no-repeat;
+  mask: url(/shots/framed-18-pro-max/phone-mask.svg) center / 100% 100% no-repeat;
+  user-select: none; -webkit-user-select: none; touch-action: pan-y; }
+.viewer-navigation { position: absolute; inset: auto 24px max(20px, env(safe-area-inset-bottom));
+  display: flex; justify-content: center; align-items: center; gap: 24px; }
+.viewer-count { min-width: 48px; text-align: center; font-size: 13px; color: #a5a6a8; font-variant-numeric: tabular-nums; direction: ltr; }
+[dir="rtl"] :is(.viewer-next, .viewer-previous) svg { transform: scaleX(-1); }
+.privacy-vignette { max-width: 640px; margin: 40px 0 0; border: 1px solid var(--rule);
+  border-radius: 20px; overflow: hidden; background: rgb(255 255 255 / .018); }
+.privacy-art { display: block; width: 100%; height: auto; aspect-ratio: 2 / 1; }
+.vignette-tile { transform-box: fill-box; transform-origin: center; }
+.vignette-shackle { transform-origin: 370px 250px; }
+.privacy-vignette figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
+  gap: 4px 16px; min-height: 76px; padding: 8px 20px 12px; border-top: 1px solid var(--rule);
+  color: var(--muted); font-size: 13px; }
+.vignette-replay { display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  min-height: 44px; padding: 8px 4px; border: 0; border-radius: 6px;
+  background: none; color: var(--ink); font: inherit; cursor: pointer; }
+.vignette-replay[hidden] { display: none; }
+.vignette-replay:disabled { opacity: .45; cursor: default; }
+.vignette-replay svg { width: 16px; height: 16px; }
+@media (max-width: 760px) {
+  .privacy-vignette figcaption { min-height: 96px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .privacy-vignette[data-state="ready"] .vignette-tile {
+    transform: translate(var(--tile-x), var(--tile-y)) rotate(var(--tile-angle)) scale(.94);
+  }
+  .privacy-vignette[data-state="ready"] .vignette-lock { opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal-pending { opacity: 1; transform: none; }
+}
+
 /* A matte graphite surface for the homepage. A broad, static tonal shift
    gives the canvas depth while the app screenshots supply the colour.
    Keep this dark in both device themes, as the original homepage was. */
@@ -73,39 +132,44 @@ h1, h2 { font-weight: 600; }
   --rule: rgb(255 255 255 / .12);
   --blue: #6ea2ff;
   color-scheme: dark;
+  isolation: isolate;
   background: linear-gradient(155deg, #242627 -35%, #191b1c 35%, #111213 100%);
 }
-/* Arriving: each page's pieces rise a few pixels into place, one after
-   another. The homepage title decrypts as it rises (decrypt.js). Once, on load. */
-@keyframes rise { from { opacity: 0; transform: translateY(8px); } }
-.home-text > *, .page > * { animation: rise .7s cubic-bezier(.2, .7, .2, 1) both; }
-.home-text > :nth-child(1) { animation-delay: .1s; }
-.home-text > :nth-child(2) { animation-delay: .18s; }
-.home-text > :nth-child(3) { animation-delay: .26s; }
-.home-text > :nth-child(4) { animation-delay: .34s; }
-.home-text > :nth-child(5) { animation-delay: .42s; }
-/* The screenshots take their time: once they're on screen (the script at the
-   end of index.html adds .shown), each rises further and settles out of a
-   slight zoom, a quarter of a second after the one before, its caption with
-   it. The easing slows right down at the end, so they come to rest rather
-   than stop. */
-@keyframes arrive { from { opacity: 0; transform: translateY(32px) scale(.96); } to { opacity: 1; transform: none; } }
-.js .shots figure { opacity: 0; }
-.js .shots.shown figure { animation: arrive 1.8s cubic-bezier(.16, 1, .3, 1) both; }
-.js .shots.shown figure:nth-child(2) { animation-delay: .25s; }
-.js .shots.shown figure:nth-child(3) { animation-delay: .5s; }
-.js .shots.shown figure:nth-child(4) { animation-delay: .75s; }
-/* The text pages are for reading, so theirs is quicker. */
-.page > * { animation-duration: .5s; }
-.page > :nth-child(2) { animation-delay: .04s; }
-.page > :nth-child(3) { animation-delay: .08s; }
-.page > :nth-child(n+4) { animation-delay: .12s; }
-/* Reduce Motion: show the content immediately, without entrance motion. */
-@media (prefers-reduced-motion: reduce) {
-  .home-text > *, .page > * { animation: none; }
-  .js .shots figure, .js .shots.shown figure { opacity: 1; animation: none; }
+/* One neutral wash, behind the content. The gradient itself stays fixed;
+   only its transform moves. Overscan keeps the edges outside the viewport.
+   With no script, unsupported motion preferences, or Reduce Motion: static. */
+@media (prefers-reduced-motion: no-preference) {
+  .lock-scene.motion-ready::before {
+    content: "";
+    position: fixed;
+    inset: -24px;
+    z-index: -1;
+    pointer-events: none;
+    background: linear-gradient(120deg, transparent 5%, rgb(255 255 255 / .018) 35%,
+      rgb(255 255 255 / .03) 52%, rgb(255 255 255 / .012) 72%, transparent 100%);
+    animation: graphite-drift 60s cubic-bezier(.45, 0, .55, 1) infinite;
+  }
+  .lock-scene.motion-paused::before { animation-play-state: paused; }
 }
-
+@keyframes graphite-drift {
+  0%, 100% { transform: translate3d(-16px, -8px, 0); }
+  50% { transform: translate3d(16px, 8px, 0); }
+}
+.motion-toggle {
+  display: inline-flex; align-items: center; gap: 6px;
+  min-height: 32px; padding: 4px 10px; border: 1px solid var(--rule);
+  border-radius: 999px; background: transparent; color: var(--muted);
+  font: inherit; cursor: pointer;
+}
+.motion-toggle[hidden] { display: none; }
+.motion-toggle:hover { color: var(--ink); border-color: var(--muted); }
+.motion-toggle svg { width: 12px; height: 12px; flex: none; }
+.motion-toggle .motion-play { display: none; }
+.motion-toggle[aria-pressed="false"] .motion-pause { display: none; }
+.motion-toggle[aria-pressed="false"] .motion-play { display: block; }
+@media (max-width: 760px) {
+  .motion-toggle { min-height: 44px; }
+}
 /* Header on the other pages: just the way home. */
 .site-head { padding: 24px 0 0; }
 .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 600; color: var(--ink); }
@@ -165,6 +229,7 @@ h1, h2 { font-weight: 600; }
 .site-foot { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px 32px;
   padding: 20px 0 28px; border-top: 1px solid var(--rule); font-size: 13px; color: var(--muted); }
 .foot-links { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 20px; }
+.lock-scene .foot-links { min-height: 32px; }
 .foot-links a { color: var(--muted); }
 .foot-links a:hover { color: var(--ink); }
 
@@ -234,13 +299,10 @@ h1, h2 { font-weight: 600; }
     padding-bottom: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: var(--side); }
   .shots figure { flex: none; width: min(44%, 260px); scroll-snap-align: start; }
   .shots img { height: auto; width: 100%; }
-  /* Without the rise: the row scrolls, so anything moved outside it is cut
-     off or briefly scrollable. Settling out of the zoom stays inside it. */
-  .js .shots.shown figure { animation-name: settle; }
 }
-@keyframes settle { from { opacity: 0; transform: scale(.94); } to { opacity: 1; transform: none; } }
 @media (max-width: 760px) {
   :root { --side: 20px; }
+  .lock-scene .foot-links { min-height: 44px; }
   .home { padding-top: 32px; }
   .page { padding: 36px 0 64px; }
   .features { grid-template-columns: minmax(0, 1fr); gap: 24px; margin-top: 36px; }
