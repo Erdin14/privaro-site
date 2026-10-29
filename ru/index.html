@@ -114,5 +114,12 @@ document.addEventListener('keydown', e => {
 
 <script src="/presentation.js" data-enlarge="Увеличить снимок экрана: {name}" data-close="Закрыть просмотр" data-previous="Предыдущий снимок экрана" data-next="Следующий снимок экрана" defer></script>
 <script src="/motion.js" data-label="Анимация фона" defer></script>
+
+<script>
+  window.va = window.va || function () { 
+    (window.vaq = window.vaq || []).push(arguments); 
+  };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>

@@ -131,5 +131,12 @@ document.addEventListener('keydown', e => {
 <script src="/presentation.js" data-enlarge="スクリーンショットを拡大：{name}" data-close="ビューアを閉じる" data-previous="前のスクリーンショット" data-next="次のスクリーンショット" defer></script>
 <script src="/price.js" defer></script>
 <script src="/motion.js" data-label="背景アニメーション" defer></script>
+
+<script>
+  window.va = window.va || function () { 
+    (window.vaq = window.vaq || []).push(arguments); 
+  };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
