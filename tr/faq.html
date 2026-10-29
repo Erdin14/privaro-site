@@ -127,5 +127,12 @@ document.addEventListener('keydown', e => {
 <script src="/presentation.js" data-enlarge="Ekran görüntüsünü büyüt: {name}" data-close="Görüntüleyiciyi kapat" data-previous="Önceki ekran görüntüsü" data-next="Sonraki ekran görüntüsü" defer></script>
 <script src="/price.js" defer></script>
 <script src="/motion.js" data-label="Arka plan hareketi" defer></script>
+
+<script>
+  window.va = window.va || function () { 
+    (window.vaq = window.vaq || []).push(arguments); 
+  };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
