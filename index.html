@@ -45,14 +45,6 @@
 </head>
 <body class="lock-scene">
 
-<!-- The app's lock screen background; see styles.css and scene.js. -->
-<div class="scene" aria-hidden="true">
-  <canvas class="aurora"></canvas>
-  <div class="scene-light"></div>
-  <div class="lattice"></div>
-  <div class="glint"><div></div></div>
-</div>
-
 <main class="home wrap">
   <div class="home-text">
     <img class="icon" src="/logo.png" width="64" height="64" alt="" />
@@ -112,7 +104,6 @@ document.addEventListener('keydown', e => {
   watch.observe(shots);
 })();
 </script>
-<script src="/scene.js" defer></script>
 <script src="/decrypt.js" defer></script>
 </body>
 </html>
