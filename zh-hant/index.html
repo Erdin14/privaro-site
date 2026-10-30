@@ -138,56 +138,52 @@
     <div class="safety-body">
       <div class="safety-art rise" style="--d:.2s">
 <figure class="privacy-vignette">
-  <svg class="privacy-art" viewBox="0 0 640 320" role="img" aria-labelledby="privacy-art-title" aria-describedby="privacy-art-desc" focusable="false">
-    <title id="privacy-art-title">裝置端保護</title>
-    <desc id="privacy-art-desc">照片進入 iPhone，隨後鎖閉合，示意裝置端加密。這不是即時安全檢查。</desc>
-    <defs>
-      <clipPath id="privacy-tile-clip"><rect width="68" height="86" rx="9" /></clipPath>
-    </defs>
-    <g transform="translate(-50)">
-      <rect x="296" y="18" width="148" height="284" rx="30" fill="#131617" stroke="#626968" stroke-width="1.5" />
-      <rect x="305" y="27" width="130" height="266" rx="23" fill="#1b1f20" stroke="#ffffff" stroke-opacity=".06" />
-      <rect x="346" y="35" width="48" height="11" rx="5.5" fill="#101213" />
-      <path d="M356 285h28" stroke="#69706f" stroke-width="2.5" stroke-linecap="round" />
-      <g class="vignette-tile" style="--tile-x:-178px;--tile-y:-18px;--tile-angle:-8deg">
-        <g transform="translate(315 68)">
-          <g clip-path="url(#privacy-tile-clip)">
-            <rect width="68" height="86" fill="#8a9791" />
-            <circle cx="48" cy="22" r="8" fill="#d8d8c9" />
-            <path d="m-8 69 27-31 27 31 15-18 20 35H-8Z" fill="#53665d" />
-            <path d="m-8 86 34-25 20 10 25-10 10 25" fill="#354b43" />
-          </g>
-          <rect x=".5" y=".5" width="67" height="85" rx="8.5" fill="none" stroke="#e4e9e4" stroke-opacity=".28" />
-        </g>
-      </g>
-      <g class="vignette-tile" style="--tile-x:155px;--tile-y:-35px;--tile-angle:7deg">
-        <g transform="translate(350 107)">
-          <g clip-path="url(#privacy-tile-clip)">
-            <rect width="68" height="86" fill="#9ba3a0" />
-            <path d="M0 36h68v50H0Z" fill="#5c7880" />
-            <path d="M0 47q17-5 34 0t34 0M0 59q17-5 34 0t34 0M0 72q17-5 34 0t34 0" fill="none" stroke="#c2ceca" stroke-opacity=".45" />
-          </g>
-          <rect x=".5" y=".5" width="67" height="85" rx="8.5" fill="none" stroke="#e4e9e4" stroke-opacity=".28" />
-        </g>
-      </g>
-      <g class="vignette-tile" style="--tile-x:-160px;--tile-y:75px;--tile-angle:-5deg">
-        <g transform="translate(325 149)">
-          <g clip-path="url(#privacy-tile-clip)">
-            <rect width="68" height="86" fill="#aca99b" />
-            <path d="M-5 86V51l24-26 19 23 16-10 24 48" fill="#777d70" />
-            <path d="m10 86 27-38 13 20 17-4 11 22" fill="#515c52" />
-            <path d="m16 29 3-4 10 12-9-3Z" fill="#d0cfc0" />
-          </g>
-          <rect x=".5" y=".5" width="67" height="85" rx="8.5" fill="none" stroke="#e4e9e4" stroke-opacity=".28" />
-        </g>
-      </g>
-      <g class="vignette-lock">
-        <g class="vignette-shackle"><path d="M362 250v-6a8 8 0 0 1 16 0v6" fill="none" stroke="#dce1dd" stroke-width="2.5" stroke-linecap="round" /></g>
-        <rect x="358" y="249" width="24" height="20" rx="5" fill="#dce1dd" />
-        <path d="M370 257v5" stroke="#303b36" stroke-width="2.5" stroke-linecap="round" />
-      </g>
-    </g>
-  </svg>
+  <!-- A photo on the phone is written over, line by line, as ciphertext; then
+       a lock closes over it. Illustrative only, never a live security check.
+       Without JavaScript, or with Reduce Motion, it shows the finished state. -->
+  <div class="privacy-art" role="img" aria-labelledby="privacy-art-title" aria-describedby="privacy-art-desc">
+    <span id="privacy-art-title" class="visually-hidden">裝置端保護</span>
+    <span id="privacy-art-desc" class="visually-hidden">iPhone 上的一張照片變成加密資料，隨後鎖閉合，示意裝置端加密。這不是即時安全檢查。</span>
+    <div class="vg-phone" aria-hidden="true">
+      <div class="vg-screen">
+        <svg class="vg-photo" viewBox="0 0 300 600" preserveAspectRatio="xMidYMin slice" focusable="false">
+          <defs>
+            <linearGradient id="vg-sky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#18202a" /><stop offset=".42" stop-color="#36424f" />
+              <stop offset=".74" stop-color="#8a8173" /><stop offset=".92" stop-color="#d9ac80" />
+            </linearGradient>
+            <radialGradient id="vg-sun"><stop offset="0" stop-color="#ffe3c0" stop-opacity=".85" /><stop offset=".25" stop-color="#f6c48f" stop-opacity=".45" /><stop offset="1" stop-color="#f6c48f" stop-opacity="0" /></radialGradient>
+            <linearGradient id="vg-far" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5d6772" /><stop offset="1" stop-color="#4a535d" /></linearGradient>
+            <linearGradient id="vg-mid" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#323a43" /><stop offset="1" stop-color="#262c33" /></linearGradient>
+            <linearGradient id="vg-water" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#a89077" /><stop offset=".18" stop-color="#4d535a" /><stop offset="1" stop-color="#13171b" />
+            </linearGradient>
+            <radialGradient id="vg-glint" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#f3cfa5" stop-opacity=".55" /><stop offset="1" stop-color="#f3cfa5" stop-opacity="0" /></radialGradient>
+          </defs>
+          <rect width="300" height="336" fill="url(#vg-sky)" />
+          <circle cx="198" cy="306" r="92" fill="url(#vg-sun)" />
+          <circle cx="198" cy="306" r="13" fill="#ffeacf" />
+          <path d="M0 300 42 263l36 21 44-49 40 41 43-27 42 30 53-37v95H0Z" fill="url(#vg-far)" />
+          <path d="M0 322 54 284l42 28 46-44 48 51 46-27 64 31v13H0Z" fill="url(#vg-mid)" />
+          <rect y="334" width="300" height="266" fill="url(#vg-water)" />
+          <ellipse cx="198" cy="372" rx="22" ry="44" fill="url(#vg-glint)" />
+          <path d="M150 352h96M168 366h60M140 384h112M176 401h44" stroke="#f1d2ad" stroke-opacity=".22" stroke-width="1.5" stroke-linecap="round" />
+          <path d="M0 470c52-20 96-12 150 4s108 8 150-8v134H0Z" fill="#0f1316" />
+        </svg>
+        <p class="vg-cipher">45Na99UPIE/JOGMzTIdfGUsJBQn7ZDJnqRjY0ZtJiaVW3ZlmtFuRABIufL5w+IGEWTzn2A9Wnlqr3FrHKwMuoROQWW1lLez8aaMqpoMqjCUe2dBq/NFs3+2X2XdKRV5USrKaw2F/DmGnuQrn2QmnLjPKadln1qVXuJsJYjBmqzql9Hhp0e7ZhKHpXCywzar04F9se0LC96xNC+mUPW22wPkxHit6rbzADwDtgcmRHrIrfaOLiDZAla1FOXfhLjPUvGsSBu/PReuynAWz2w6Jg+ZJWMk7I39DDZw/Af7cqJUMLM6kRm+fkA42L2E3gq22OhZuQlbYrQejQjignU6QzrYP1ApaTPm+kKs38HsIjHQEr/ABUpEgXJ2WcypjcFEYwKWl3HqqyzIzFwJhnEH0SGEDhdDLyjCn/iMjbkTaDq2nZydi6wsClOpI95udr3L+yuS34ps9+W+M6f41TnD9Y6ltBRH93kbdRpvF6g0U/EqhfrqWFUULadPm20QVt4K81YKOiNuwCGeM2oxhGIDf5Y795mRAC2Wh1qKThDL4A8ZwRl56Qa4H+ll1LnWQoulCtQDNHyk0ALn3CHAonbxLWRuGltW0S3DbLCObMN5mI9R+z/mXToZUt1MN7aVyAZbw1u59370F94e0SFTxa5w2fIMTKCbOiKhTFkzV4mUzhh8ZaMOTVEsvQp1A1GYmKBnBzbFFMSHkNE6zdp1Agn8OQ2BfTbw6PJhM4FYtGjvI3mIkEJVcgakB9qsa5Pvanka69BC4k6oPrzOWT8QasUfy2aCBTEqbCfKlNwUjumOeOr9gqzqCzgohOAelrTr6F34k5HzYddMkjQmyZrwDB3XWm4hRChzt1kQc/4o6YcwaM7OkFzJ43cujssjsc8JdK6soKp5xKeZWMLr2K2K4g4MjjkOSs1VKJhWNw3ILruceHXZ8RlYlWGxHWUfnbgdcnvjlNrrpi8Gsr3uV8pX5JoTjuWKnN/OHxjgM1UC8qb+aHPigVSBh0D/GufaKITO20bh8lKrLQahzI8db2dFP2OmhyYlE4/cDT2so2Wu/7rHZ+ra6g1d6pTHoMGujYS1lSzezSZpsphFANvTJ</p>
+        <span class="vg-scan"></span>
+        <span class="vg-ring"></span>
+        <span class="vg-lock">
+          <svg viewBox="0 0 24 24" focusable="false">
+            <g class="vg-shackle"><path d="M8 11V8a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></g>
+            <rect x="5.5" y="10.5" width="13" height="10" rx="2.6" fill="currentColor" />
+            <circle cx="12" cy="15.5" r="1.5" fill="#15181a" />
+          </svg>
+        </span>
+        <span class="vg-island"></span>
+      </div>
+    </div>
+  </div>
   <figcaption><span>在你的 iPhone 上加密。</span><button class="vignette-replay" type="button" hidden><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 7a6 6 0 1 1 0 6M4 3v4h4" stroke-linecap="round" stroke-linejoin="round" /></svg>重播插圖</button></figcaption>
 </figure>
 <script src="/privacy-vignette.js" defer></script>
