@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["Z6H8SAVXDF.com.erdincz.Privaro.app"],
+        "components": [
+          { "/": "/open", "comment": "Opens Privaro, for the Open button on In-App Events" },
+          { "/": "/open/*", "comment": "The same, with anything after /open" }
+        ]
+      }
+    ]
+  }
+}
