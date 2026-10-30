@@ -17,9 +17,9 @@
   button.setAttribute('aria-pressed', String(!paused));
   button.innerHTML = '<svg class="motion-pause" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true"><path d="M3 2h2v8H3zm4 0h2v8H7z"/></svg>' +
     '<svg class="motion-play" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true"><path d="m3 1 8 5-8 5z"/></svg>';
-  const label = document.createElement('span');
-  label.textContent = script.dataset.label;
-  button.append(label);
+  // Just the icon to see; the name for screen readers and the tooltip.
+  button.setAttribute('aria-label', script.dataset.label);
+  button.title = script.dataset.label;
   links.insertBefore(button, links.querySelector('.lang'));
 
   function sync() {
