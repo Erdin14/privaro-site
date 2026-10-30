@@ -14,9 +14,9 @@
 <link rel="stylesheet" href="/styles.css" />
 <link rel="stylesheet" href="/transitions.css" />
 <script>
-// Before anything is drawn. "motion" lets the entrances in styles.css wait
-// for the script at the end of the page; without it, or with Reduce Motion,
-// everything is simply there.
+// Before anything is drawn. "motion" lets the few entrances in styles.css
+// wait for the script at the end of the page; without it, or with Reduce
+// Motion, everything is simply there.
 (() => {
   const root = document.documentElement;
   if (!matchMedia('(prefers-reduced-motion: reduce)').matches) root.classList.add('motion');
@@ -49,75 +49,72 @@
 {{HEADER}}
 
 <main class="home">
-  <!-- The name, set large, beside what it is; then where to get it. -->
+  <!-- The name, set large, beside what it is. Under both, where to get it and
+       what it costs, in two plain sentences. -->
   <section class="hero wrap" aria-labelledby="hero-title">
     <div class="hero-mark">
-      <img class="hero-icon rise" style="--d:.05s" src="/logo.png" width="76" height="76" alt="" />
-      <h1 id="hero-title" class="wordmark"><span class="mask"><span class="rise" style="--anim:mask-rise;--d:.12s">Privaro</span></span></h1>
+      <img class="hero-icon" src="/logo.png" width="72" height="72" alt="" />
+      <h1 id="hero-title" class="wordmark"><span class="mask"><span class="rise" style="--anim:mask-rise">Privaro</span></span></h1>
     </div>
-    <div class="hero-copy">
-      <p class="tagline"><span class="mask"><span class="rise" style="--anim:mask-rise;--d:.38s">{{home_tagline}}</span></span></p>
-      <p class="lead rise" style="--d:.52s">{{hero_lead}}</p>
+    <div class="hero-copy rise" style="--anim:fade;--d:.35s">
+      <p class="tagline">{{home_tagline}}</p>
+      <p class="lead">{{hero_lead}}</p>
     </div>
-    <div class="buy rise" style="--anim:fade;--d:.62s">
+    <div class="buy">
       <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="{{badge_label}}">
         <img src="/appstore-badge-white.svg" width="150" height="50" alt="{{badge_label}}" />
       </a>
-      <dl class="specs">
-        <div>
-          <dt>{{nav_download}}</dt>
-          <dd><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3.5v9m0 0-3.5-3.5M10 12.5l3.5-3.5M4.5 16.5h11" /></svg><span>{{info_free}}</span></dd>
-        </div>
-        <div>
-          <dt>{{info_req_label}}</dt>
-          <dd><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="5.5" y="2.5" width="9" height="15" rx="2.25" /><path d="M8.75 15h2.5" /></svg><span>{{info_req_value}}</span></dd>
-        </div>
-        <div>
-          <dt>{{info_pro_label}}</dt>
-          <dd><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 2.75 2.1 4.4 4.65.6-3.4 3.25.85 4.75L10 13.4l-4.2 2.35.85-4.75-3.4-3.25 4.65-.6Z" /></svg><span>{{info_pro_value}}</span></dd>
-        </div>
-      </dl>
+      <p class="buy-note"><span>{{buy_free}}</span> <span>{{buy_pro}}</span></p>
     </div>
   </section>
 
-  <!-- Four screens, each a button that opens the viewer (presentation.js). -->
+  <!-- The app itself: four screens in a row, each with what it's for. Each is
+       a button that opens the viewer (presentation.js). -->
   <section class="gallery">
     <div class="shots wrap">
-      <figure class="rise" style="--anim:phone-in;--d:.7s;--i:0"><img src="{{SHOTS}}shot-lock.jpg" width="760" height="1573" alt="{{alt_lock}}" fetchpriority="high" /><figcaption>{{cap_lock}}</figcaption></figure>
-      <figure class="rise" style="--anim:phone-in;--d:.8s;--i:1"><img src="{{SHOTS}}shot-vault.jpg" width="760" height="1573" alt="{{alt_vault}}" /><figcaption>{{cap_vault}}</figcaption></figure>
-      <figure class="rise" style="--anim:phone-in;--d:.9s;--i:2"><img src="{{SHOTS}}shot-albums.jpg" width="760" height="1573" alt="{{alt_albums}}" decoding="async" /><figcaption>{{cap_albums}}</figcaption></figure>
-      <figure class="rise" style="--anim:phone-in;--d:1s;--i:3"><img src="{{SHOTS}}shot-privacy.jpg" width="760" height="1573" alt="{{alt_privacy}}" decoding="async" /><figcaption>{{cap_privacy}}</figcaption></figure>
+      <figure class="rise" style="--anim:phone-in;--i:0"><img src="{{SHOTS}}shot-lock.jpg" width="760" height="1573" alt="{{alt_lock}}" fetchpriority="high" /><figcaption><strong>{{cap_lock}}</strong> <span>{{shot_lock_d}}</span></figcaption></figure>
+      <figure class="rise" style="--anim:phone-in;--i:1"><img src="{{SHOTS}}shot-vault.jpg" width="760" height="1573" alt="{{alt_vault}}" /><figcaption><strong>{{cap_vault}}</strong> <span>{{shot_vault_d}}</span></figcaption></figure>
+      <figure class="rise" style="--anim:phone-in;--i:2"><img src="{{SHOTS}}shot-albums.jpg" width="760" height="1573" alt="{{alt_albums}}" decoding="async" /><figcaption><strong>{{cap_albums}}</strong> <span>{{shot_albums_d}}</span></figcaption></figure>
+      <figure class="rise" style="--anim:phone-in;--i:3"><img src="{{SHOTS}}shot-privacy.jpg" width="760" height="1573" alt="{{alt_privacy}}" decoding="async" /><figcaption><strong>{{cap_privacy}}</strong> <span>{{shot_privacy_d}}</span></figcaption></figure>
     </div>
   </section>
 
-  <!-- How it's kept private, in claims the Security Overview backs up. -->
+  <!-- How it's kept private: one statement, the illustration, and the facts
+       behind it as a list, in claims the Security Overview backs up. -->
   <section class="safety wrap" aria-labelledby="safety-title">
-    <p class="eyebrow rise">{{footer_security}}</p>
     <h2 id="safety-title" class="display">
       <span class="mask"><span class="rise" style="--anim:mask-rise">{{vignette_caption}}</span></span>
-      <span class="mask dim"><span class="rise" style="--anim:mask-rise;--d:.12s">{{home_sec_sub}}</span></span>
+      <span class="mask dim"><span class="rise" style="--anim:mask-rise;--d:.1s">{{home_sec_sub}}</span></span>
     </h2>
     <div class="safety-body">
-      <div class="safety-art rise" style="--d:.2s">
+      <div class="safety-art">
 {{VIGNETTE}}
       </div>
-      <ul class="facts">
-        <li class="rise" style="--d:.25s"><h3>AES-256</h3><p>{{fact1_d}}</p></li>
-        <li class="rise" style="--d:.33s"><h3>{{fact2_t}}</h3><p>{{fact2_d}}</p></li>
-        <li class="rise" style="--d:.41s"><h3>{{fact3_t}}</h3><p>{{fact3_d}}</p></li>
-        <li class="rise" style="--d:.49s"><h3>{{fact4_t}}</h3><p>{{fact4_d}}</p></li>
-      </ul>
+      <div class="safety-facts">
+        <dl class="ledger">
+          <div><dt>AES-256</dt><dd>{{fact1_d}}</dd></div>
+          <div><dt>{{fact2_t}}</dt><dd>{{fact2_d}}</dd></div>
+          <div><dt>{{fact3_t}}</dt><dd>{{fact3_d}}</dd></div>
+          <div><dt>{{fact4_t}}</dt><dd>{{fact4_d}}</dd></div>
+        </dl>
+        <a class="more" href="{{SECURITY_URL}}">{{home_sec_link}}</a>
+      </div>
     </div>
-    <a class="more rise" style="--d:.3s" href="{{SECURITY_URL}}">{{home_sec_link}}<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7.5 4.5 13 10l-5.5 5.5" /></svg></a>
   </section>
 
+  <!-- The last word, and the Lock Screen rising out of the bottom edge, the
+       way the phone does in the illustration above. -->
   <section class="closing wrap" aria-labelledby="closing-title">
-    <img class="closing-icon rise" src="/logo.png" width="96" height="96" alt="" loading="lazy" />
-    <h2 id="closing-title" class="display"><span class="mask"><span class="rise" style="--anim:mask-rise;--d:.08s">{{home_cta_title}}</span></span></h2>
-    <a class="appstore rise" style="--d:.2s" href="https://apps.apple.com/app/id6783131829" aria-label="{{badge_label}}">
-      <img src="/appstore-badge-white.svg" width="150" height="50" alt="{{badge_label}}" loading="lazy" />
-    </a>
-    <p class="closing-meta rise" style="--d:.28s">{{info_free}}<span aria-hidden="true"> · </span>{{info_req_value}}</p>
+    <div class="closing-copy">
+      <h2 id="closing-title" class="display"><span class="mask"><span class="rise" style="--anim:mask-rise">{{home_cta_title}}</span></span></h2>
+      <div class="buy">
+        <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="{{badge_label}}">
+          <img src="/appstore-badge-white.svg" width="150" height="50" alt="{{badge_label}}" loading="lazy" />
+        </a>
+        <p class="buy-note"><span>{{buy_free}}</span></p>
+      </div>
+    </div>
+    <div class="closing-shot"><img class="rise" style="--anim:phone-up" src="{{SHOTS}}shot-lock.jpg" width="760" height="1573" alt="" loading="lazy" decoding="async" /></div>
   </section>
 </main>
 
@@ -147,6 +144,5 @@
 })();
 </script>
 <script src="/price.js" defer></script>
-<script src="/motion.js" data-label="{{motion_label}}" defer></script>
 </body>
 </html>

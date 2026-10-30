@@ -42,9 +42,9 @@
 <link rel="stylesheet" href="/styles.css" />
 <link rel="stylesheet" href="/transitions.css" />
 <script>
-// Before anything is drawn. "motion" lets the entrances in styles.css wait
-// for the script at the end of the page; without it, or with Reduce Motion,
-// everything is simply there.
+// Before anything is drawn. "motion" lets the few entrances in styles.css
+// wait for the script at the end of the page; without it, or with Reduce
+// Motion, everything is simply there.
 (() => {
   const root = document.documentElement;
   if (!matchMedia('(prefers-reduced-motion: reduce)').matches) root.classList.add('motion');
@@ -87,56 +87,45 @@
 </header>
 
 <main class="home">
-  <!-- The name, set large, beside what it is; then where to get it. -->
+  <!-- The name, set large, beside what it is. Under both, where to get it and
+       what it costs, in two plain sentences. -->
   <section class="hero wrap" aria-labelledby="hero-title">
     <div class="hero-mark">
-      <img class="hero-icon rise" style="--d:.05s" src="/logo.png" width="76" height="76" alt="" />
-      <h1 id="hero-title" class="wordmark"><span class="mask"><span class="rise" style="--anim:mask-rise;--d:.12s">Privaro</span></span></h1>
+      <img class="hero-icon" src="/logo.png" width="72" height="72" alt="" />
+      <h1 id="hero-title" class="wordmark"><span class="mask"><span class="rise" style="--anim:mask-rise">Privaro</span></span></h1>
     </div>
-    <div class="hero-copy">
-      <p class="tagline"><span class="mask"><span class="rise" style="--anim:mask-rise;--d:.38s">A vault only you can open.</span></span></p>
-      <p class="lead rise" style="--d:.52s">Privaro is a vault for your iPhone. What you put in it is encrypted on the phone itself and only opens with Face ID or Privaro’s own passcode. There’s no account, and nothing is uploaded.</p>
+    <div class="hero-copy rise" style="--anim:fade;--d:.35s">
+      <p class="tagline">A vault only you can open.</p>
+      <p class="lead">Privaro is a vault for your iPhone. What you put in it is encrypted on the phone itself and only opens with Face ID or Privaro’s own passcode. There’s no account, and nothing is uploaded.</p>
     </div>
-    <div class="buy rise" style="--anim:fade;--d:.62s">
+    <div class="buy">
       <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="Download Privaro on the App Store">
         <img src="/appstore-badge-white.svg" width="150" height="50" alt="Download Privaro on the App Store" />
       </a>
-      <dl class="specs">
-        <div>
-          <dt>Download</dt>
-          <dd><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3.5v9m0 0-3.5-3.5M10 12.5l3.5-3.5M4.5 16.5h11" /></svg><span>Free</span></dd>
-        </div>
-        <div>
-          <dt>Requires</dt>
-          <dd><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="5.5" y="2.5" width="9" height="15" rx="2.25" /><path d="M8.75 15h2.5" /></svg><span>iOS 17.6 or later</span></dd>
-        </div>
-        <div>
-          <dt>Pro (optional)</dt>
-          <dd><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 2.75 2.1 4.4 4.65.6-3.4 3.25.85 4.75L10 13.4l-4.2 2.35.85-4.75-3.4-3.25 4.65-.6Z" /></svg><span><span class="price" data-price="pro">$4.99</span>, one-time purchase</span></dd>
-        </div>
-      </dl>
+      <p class="buy-note"><span>Free to download. Needs iOS 17.6 or later.</span> <span>Pro is optional: one payment of <span class="price" data-price="pro">$4.99</span>, nothing to renew.</span></p>
     </div>
   </section>
 
-  <!-- Four screens, each a button that opens the viewer (presentation.js). -->
+  <!-- The app itself: four screens in a row, each with what it's for. Each is
+       a button that opens the viewer (presentation.js). -->
   <section class="gallery">
     <div class="shots wrap">
-      <figure class="rise" style="--anim:phone-in;--d:.7s;--i:0"><img src="/shots/framed-18-pro-max/shot-lock.jpg" width="760" height="1573" alt="Privaro’s lock screen, ready for Face ID" fetchpriority="high" /><figcaption>Lock Screen</figcaption></figure>
-      <figure class="rise" style="--anim:phone-in;--d:.8s;--i:1"><img src="/shots/framed-18-pro-max/shot-vault.jpg" width="760" height="1573" alt="The vault: photos in a grid, sorted by month" /><figcaption>Vault</figcaption></figure>
-      <figure class="rise" style="--anim:phone-in;--d:.9s;--i:2"><img src="/shots/framed-18-pro-max/shot-albums.jpg" width="760" height="1573" alt="Albums in Privaro" decoding="async" /><figcaption>Albums</figcaption></figure>
-      <figure class="rise" style="--anim:phone-in;--d:1s;--i:3"><img src="/shots/framed-18-pro-max/shot-privacy.jpg" width="760" height="1573" alt="Privacy Mode settings: Home, Away and Travel" decoding="async" /><figcaption>Privacy Mode</figcaption></figure>
+      <figure class="rise" style="--anim:phone-in;--i:0"><img src="/shots/framed-18-pro-max/shot-lock.jpg" width="760" height="1573" alt="Privaro’s lock screen, ready for Face ID" fetchpriority="high" /><figcaption><strong>Lock Screen</strong> <span>Opens with Face ID, or a passcode of its own.</span></figcaption></figure>
+      <figure class="rise" style="--anim:phone-in;--i:1"><img src="/shots/framed-18-pro-max/shot-vault.jpg" width="760" height="1573" alt="The vault: photos in a grid, sorted by month" /><figcaption><strong>Vault</strong> <span>Everything you add is encrypted on the phone itself.</span></figcaption></figure>
+      <figure class="rise" style="--anim:phone-in;--i:2"><img src="/shots/framed-18-pro-max/shot-albums.jpg" width="760" height="1573" alt="Albums in Privaro" decoding="async" /><figcaption><strong>Albums</strong> <span>Sort photos and videos into albums.</span></figcaption></figure>
+      <figure class="rise" style="--anim:phone-in;--i:3"><img src="/shots/framed-18-pro-max/shot-privacy.jpg" width="760" height="1573" alt="Privacy Mode settings: Home, Away and Travel" decoding="async" /><figcaption><strong>Privacy Mode</strong> <span>Choose how strict Privaro is, wherever you are.</span></figcaption></figure>
     </div>
   </section>
 
-  <!-- How it's kept private, in claims the Security Overview backs up. -->
+  <!-- How it's kept private: one statement, the illustration, and the facts
+       behind it as a list, in claims the Security Overview backs up. -->
   <section class="safety wrap" aria-labelledby="safety-title">
-    <p class="eyebrow rise">Security</p>
     <h2 id="safety-title" class="display">
       <span class="mask"><span class="rise" style="--anim:mask-rise">Encrypted on your iPhone.</span></span>
-      <span class="mask dim"><span class="rise" style="--anim:mask-rise;--d:.12s">With a key that stays on it.</span></span>
+      <span class="mask dim"><span class="rise" style="--anim:mask-rise;--d:.1s">With a key that stays on it.</span></span>
     </h2>
     <div class="safety-body">
-      <div class="safety-art rise" style="--d:.2s">
+      <div class="safety-art">
 <figure class="privacy-vignette">
   <!-- A photo on the phone is written over, line by line, as ciphertext; then
        a lock closes over it. Illustrative only, never a live security check.
@@ -166,23 +155,31 @@
 </figure>
 <script src="/privacy-vignette.js" defer></script>
       </div>
-      <ul class="facts">
-        <li class="rise" style="--d:.25s"><h3>AES-256</h3><p>Every photo and video in your vault is encrypted with AES-256, right on the device.</p></li>
-        <li class="rise" style="--d:.33s"><h3>No account</h3><p>No sign-up, and no Privaro server holding your photos.</p></li>
-        <li class="rise" style="--d:.41s"><h3>Face ID or passcode</h3><p>The vault opens only with Face ID or Privaro’s own passcode.</p></li>
-        <li class="rise" style="--d:.49s"><h3>Works offline</h3><p>Your photos go online only if you turn on encrypted iCloud backup.</p></li>
-      </ul>
+      <div class="safety-facts">
+        <dl class="ledger">
+          <div><dt>AES-256</dt><dd>Every photo and video in your vault is encrypted with AES-256, right on the device.</dd></div>
+          <div><dt>No account</dt><dd>No sign-up, and no Privaro server holding your photos.</dd></div>
+          <div><dt>Face ID or passcode</dt><dd>The vault opens only with Face ID or Privaro’s own passcode.</dd></div>
+          <div><dt>Works offline</dt><dd>Your photos go online only if you turn on encrypted iCloud backup.</dd></div>
+        </dl>
+        <a class="more" href="/security">Read the security overview</a>
+      </div>
     </div>
-    <a class="more rise" style="--d:.3s" href="/security">Read the security overview<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7.5 4.5 13 10l-5.5 5.5" /></svg></a>
   </section>
 
+  <!-- The last word, and the Lock Screen rising out of the bottom edge, the
+       way the phone does in the illustration above. -->
   <section class="closing wrap" aria-labelledby="closing-title">
-    <img class="closing-icon rise" src="/logo.png" width="96" height="96" alt="" loading="lazy" />
-    <h2 id="closing-title" class="display"><span class="mask"><span class="rise" style="--anim:mask-rise;--d:.08s">What’s private stays private.</span></span></h2>
-    <a class="appstore rise" style="--d:.2s" href="https://apps.apple.com/app/id6783131829" aria-label="Download Privaro on the App Store">
-      <img src="/appstore-badge-white.svg" width="150" height="50" alt="Download Privaro on the App Store" loading="lazy" />
-    </a>
-    <p class="closing-meta rise" style="--d:.28s">Free<span aria-hidden="true"> · </span>iOS 17.6 or later</p>
+    <div class="closing-copy">
+      <h2 id="closing-title" class="display"><span class="mask"><span class="rise" style="--anim:mask-rise">Some photos are just for you.</span></span></h2>
+      <div class="buy">
+        <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="Download Privaro on the App Store">
+          <img src="/appstore-badge-white.svg" width="150" height="50" alt="Download Privaro on the App Store" loading="lazy" />
+        </a>
+        <p class="buy-note"><span>Free to download. Needs iOS 17.6 or later.</span></p>
+      </div>
+    </div>
+    <div class="closing-shot"><img class="rise" style="--anim:phone-up" src="/shots/framed-18-pro-max/shot-lock.jpg" width="760" height="1573" alt="" loading="lazy" decoding="async" /></div>
   </section>
 </main>
 
@@ -198,7 +195,7 @@
     <a href="mailto:erdincdubu@icloud.com">Contact</a>
     <details class="lang"><summary aria-label="Language"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>English</span><svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg></summary><div class="lang-menu"><p class="lang-head">Language</p><div class="lang-list"><a href="/" lang="en" hreflang="en" class="active" aria-current="true"><span>English</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></a><a href="/es" lang="es" hreflang="es"><span>Español</span></a><a href="/fr" lang="fr" hreflang="fr"><span>Français</span></a><a href="/de" lang="de" hreflang="de"><span>Deutsch</span></a><a href="/it" lang="it" hreflang="it"><span>Italiano</span></a><a href="/pt-br" lang="pt-BR" hreflang="pt-BR"><span>Português</span></a><a href="/zh" lang="zh-Hans" hreflang="zh-Hans"><span>简体中文</span></a><a href="/ko" lang="ko" hreflang="ko"><span>한국어</span></a><a href="/nl" lang="nl" hreflang="nl"><span>Nederlands</span></a><a href="/ja" lang="ja" hreflang="ja"><span>日本語</span></a><a href="/zh-hant" lang="zh-Hant" hreflang="zh-Hant"><span>繁體中文</span></a><a href="/ru" lang="ru" hreflang="ru"><span>Русский</span></a><a href="/tr" lang="tr" hreflang="tr"><span>Türkçe</span></a><a href="/id" lang="id" hreflang="id"><span>Bahasa Indonesia</span></a><a href="/hi" lang="hi" hreflang="hi"><span>हिन्दी</span></a><a href="/ar" lang="ar" hreflang="ar"><span>العربية</span></a><a href="/ur" lang="ur" hreflang="ur"><span>اردو</span></a></div></div></details>
   </nav>
-  <p class="foot-note">© <span id="year">2026</span> Privaro<span aria-hidden="true"> · </span>Made in the Netherlands. This site sets no cookies and has no trackers.</p>
+  <p class="foot-note">© <span id="year">2026</span> Privaro. Made in the Netherlands. This site sets no cookies and has no trackers.</p>
 </footer>
 
 <script>
@@ -241,6 +238,5 @@ document.addEventListener('keydown', e => {
 })();
 </script>
 <script src="/price.js" defer></script>
-<script src="/motion.js" data-label="Background motion" defer></script>
 </body>
 </html>

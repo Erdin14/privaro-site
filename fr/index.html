@@ -42,9 +42,9 @@
 <link rel="stylesheet" href="/styles.css" />
 <link rel="stylesheet" href="/transitions.css" />
 <script>
-// Before anything is drawn. "motion" lets the entrances in styles.css wait
-// for the script at the end of the page; without it, or with Reduce Motion,
-// everything is simply there.
+// Before anything is drawn. "motion" lets the few entrances in styles.css
+// wait for the script at the end of the page; without it, or with Reduce
+// Motion, everything is simply there.
 (() => {
   const root = document.documentElement;
   if (!matchMedia('(prefers-reduced-motion: reduce)').matches) root.classList.add('motion');
@@ -87,56 +87,45 @@
 </header>
 
 <main class="home">
-  <!-- The name, set large, beside what it is; then where to get it. -->
+  <!-- The name, set large, beside what it is. Under both, where to get it and
+       what it costs, in two plain sentences. -->
   <section class="hero wrap" aria-labelledby="hero-title">
     <div class="hero-mark">
-      <img class="hero-icon rise" style="--d:.05s" src="/logo.png" width="76" height="76" alt="" />
-      <h1 id="hero-title" class="wordmark"><span class="mask"><span class="rise" style="--anim:mask-rise;--d:.12s">Privaro</span></span></h1>
+      <img class="hero-icon" src="/logo.png" width="72" height="72" alt="" />
+      <h1 id="hero-title" class="wordmark"><span class="mask"><span class="rise" style="--anim:mask-rise">Privaro</span></span></h1>
     </div>
-    <div class="hero-copy">
-      <p class="tagline"><span class="mask"><span class="rise" style="--anim:mask-rise;--d:.38s">Un coffre-fort que vous seul pouvez ouvrir.</span></span></p>
-      <p class="lead rise" style="--d:.52s">Privaro est un coffre-fort pour votre iPhone. Ce que vous y placez est chiffré sur le téléphone lui-même et ne s’ouvre qu’avec Face ID ou le code de Privaro. Pas de compte, et rien n’est envoyé.</p>
+    <div class="hero-copy rise" style="--anim:fade;--d:.35s">
+      <p class="tagline">Un coffre-fort que vous seul pouvez ouvrir.</p>
+      <p class="lead">Privaro est un coffre-fort pour votre iPhone. Ce que vous y placez est chiffré sur le téléphone lui-même et ne s’ouvre qu’avec Face ID ou le code de Privaro. Pas de compte, et rien n’est envoyé.</p>
     </div>
-    <div class="buy rise" style="--anim:fade;--d:.62s">
+    <div class="buy">
       <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="Télécharger Privaro sur l’App Store">
         <img src="/appstore-badge-white.svg" width="150" height="50" alt="Télécharger Privaro sur l’App Store" />
       </a>
-      <dl class="specs">
-        <div>
-          <dt>Télécharger</dt>
-          <dd><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3.5v9m0 0-3.5-3.5M10 12.5l3.5-3.5M4.5 16.5h11" /></svg><span>Gratuit</span></dd>
-        </div>
-        <div>
-          <dt>Nécessite</dt>
-          <dd><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="5.5" y="2.5" width="9" height="15" rx="2.25" /><path d="M8.75 15h2.5" /></svg><span>iOS 17.6 ou ultérieur</span></dd>
-        </div>
-        <div>
-          <dt>Pro (facultatif)</dt>
-          <dd><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 2.75 2.1 4.4 4.65.6-3.4 3.25.85 4.75L10 13.4l-4.2 2.35.85-4.75-3.4-3.25 4.65-.6Z" /></svg><span><span class="price" data-price="pro">5,99 €</span>, achat unique</span></dd>
-        </div>
-      </dl>
+      <p class="buy-note"><span>Téléchargement gratuit. Nécessite iOS 17.6 ou ultérieur.</span> <span>Pro est facultatif : un seul paiement de <span class="price" data-price="pro">5,99 €</span>, rien à renouveler.</span></p>
     </div>
   </section>
 
-  <!-- Four screens, each a button that opens the viewer (presentation.js). -->
+  <!-- The app itself: four screens in a row, each with what it's for. Each is
+       a button that opens the viewer (presentation.js). -->
   <section class="gallery">
     <div class="shots wrap">
-      <figure class="rise" style="--anim:phone-in;--d:.7s;--i:0"><img src="/shots/framed-18-pro-max/fr/shot-lock.jpg" width="760" height="1573" alt="L’écran de verrouillage de Privaro, prêt pour Face ID" fetchpriority="high" /><figcaption>Écran de verrouillage</figcaption></figure>
-      <figure class="rise" style="--anim:phone-in;--d:.8s;--i:1"><img src="/shots/framed-18-pro-max/fr/shot-vault.jpg" width="760" height="1573" alt="Le coffre-fort : photos en grille, triées par mois" /><figcaption>Coffre</figcaption></figure>
-      <figure class="rise" style="--anim:phone-in;--d:.9s;--i:2"><img src="/shots/framed-18-pro-max/fr/shot-albums.jpg" width="760" height="1573" alt="Albums dans Privaro" decoding="async" /><figcaption>Albums</figcaption></figure>
-      <figure class="rise" style="--anim:phone-in;--d:1s;--i:3"><img src="/shots/framed-18-pro-max/fr/shot-privacy.jpg" width="760" height="1573" alt="Réglages du mode de confidentialité : Maison, Absent et Voyage" decoding="async" /><figcaption>Mode de confidentialité</figcaption></figure>
+      <figure class="rise" style="--anim:phone-in;--i:0"><img src="/shots/framed-18-pro-max/fr/shot-lock.jpg" width="760" height="1573" alt="L’écran de verrouillage de Privaro, prêt pour Face ID" fetchpriority="high" /><figcaption><strong>Écran de verrouillage</strong> <span>S’ouvre avec Face ID ou avec son propre code.</span></figcaption></figure>
+      <figure class="rise" style="--anim:phone-in;--i:1"><img src="/shots/framed-18-pro-max/fr/shot-vault.jpg" width="760" height="1573" alt="Le coffre-fort : photos en grille, triées par mois" /><figcaption><strong>Coffre</strong> <span>Tout ce que vous ajoutez est chiffré sur le téléphone lui-même.</span></figcaption></figure>
+      <figure class="rise" style="--anim:phone-in;--i:2"><img src="/shots/framed-18-pro-max/fr/shot-albums.jpg" width="760" height="1573" alt="Albums dans Privaro" decoding="async" /><figcaption><strong>Albums</strong> <span>Rangez photos et vidéos dans des albums.</span></figcaption></figure>
+      <figure class="rise" style="--anim:phone-in;--i:3"><img src="/shots/framed-18-pro-max/fr/shot-privacy.jpg" width="760" height="1573" alt="Réglages du mode de confidentialité : Maison, Absent et Voyage" decoding="async" /><figcaption><strong>Mode de confidentialité</strong> <span>Choisissez le niveau de rigueur de Privaro, où que vous soyez.</span></figcaption></figure>
     </div>
   </section>
 
-  <!-- How it's kept private, in claims the Security Overview backs up. -->
+  <!-- How it's kept private: one statement, the illustration, and the facts
+       behind it as a list, in claims the Security Overview backs up. -->
   <section class="safety wrap" aria-labelledby="safety-title">
-    <p class="eyebrow rise">Sécurité</p>
     <h2 id="safety-title" class="display">
       <span class="mask"><span class="rise" style="--anim:mask-rise">Chiffré sur votre iPhone.</span></span>
-      <span class="mask dim"><span class="rise" style="--anim:mask-rise;--d:.12s">Avec une clé qui y reste.</span></span>
+      <span class="mask dim"><span class="rise" style="--anim:mask-rise;--d:.1s">Avec une clé qui y reste.</span></span>
     </h2>
     <div class="safety-body">
-      <div class="safety-art rise" style="--d:.2s">
+      <div class="safety-art">
 <figure class="privacy-vignette">
   <!-- A photo on the phone is written over, line by line, as ciphertext; then
        a lock closes over it. Illustrative only, never a live security check.
@@ -166,23 +155,31 @@
 </figure>
 <script src="/privacy-vignette.js" defer></script>
       </div>
-      <ul class="facts">
-        <li class="rise" style="--d:.25s"><h3>AES-256</h3><p>Chaque photo et vidéo de votre coffre est chiffrée en AES-256, directement sur l’appareil.</p></li>
-        <li class="rise" style="--d:.33s"><h3>Sans compte</h3><p>Aucune inscription, et aucun serveur Privaro qui stocke vos photos.</p></li>
-        <li class="rise" style="--d:.41s"><h3>Face ID ou code</h3><p>Le coffre ne s’ouvre qu’avec Face ID ou le code de Privaro.</p></li>
-        <li class="rise" style="--d:.49s"><h3>Fonctionne hors ligne</h3><p>Vos photos ne passent en ligne que si vous activez la sauvegarde iCloud chiffrée.</p></li>
-      </ul>
+      <div class="safety-facts">
+        <dl class="ledger">
+          <div><dt>AES-256</dt><dd>Chaque photo et vidéo de votre coffre est chiffrée en AES-256, directement sur l’appareil.</dd></div>
+          <div><dt>Sans compte</dt><dd>Aucune inscription, et aucun serveur Privaro qui stocke vos photos.</dd></div>
+          <div><dt>Face ID ou code</dt><dd>Le coffre ne s’ouvre qu’avec Face ID ou le code de Privaro.</dd></div>
+          <div><dt>Fonctionne hors ligne</dt><dd>Vos photos ne passent en ligne que si vous activez la sauvegarde iCloud chiffrée.</dd></div>
+        </dl>
+        <a class="more" href="/security">Lire la présentation de la sécurité</a>
+      </div>
     </div>
-    <a class="more rise" style="--d:.3s" href="/security">Lire la présentation de la sécurité<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7.5 4.5 13 10l-5.5 5.5" /></svg></a>
   </section>
 
+  <!-- The last word, and the Lock Screen rising out of the bottom edge, the
+       way the phone does in the illustration above. -->
   <section class="closing wrap" aria-labelledby="closing-title">
-    <img class="closing-icon rise" src="/logo.png" width="96" height="96" alt="" loading="lazy" />
-    <h2 id="closing-title" class="display"><span class="mask"><span class="rise" style="--anim:mask-rise;--d:.08s">Ce qui est privé reste privé.</span></span></h2>
-    <a class="appstore rise" style="--d:.2s" href="https://apps.apple.com/app/id6783131829" aria-label="Télécharger Privaro sur l’App Store">
-      <img src="/appstore-badge-white.svg" width="150" height="50" alt="Télécharger Privaro sur l’App Store" loading="lazy" />
-    </a>
-    <p class="closing-meta rise" style="--d:.28s">Gratuit<span aria-hidden="true"> · </span>iOS 17.6 ou ultérieur</p>
+    <div class="closing-copy">
+      <h2 id="closing-title" class="display"><span class="mask"><span class="rise" style="--anim:mask-rise">Certaines photos ne sont que pour vous.</span></span></h2>
+      <div class="buy">
+        <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="Télécharger Privaro sur l’App Store">
+          <img src="/appstore-badge-white.svg" width="150" height="50" alt="Télécharger Privaro sur l’App Store" loading="lazy" />
+        </a>
+        <p class="buy-note"><span>Téléchargement gratuit. Nécessite iOS 17.6 ou ultérieur.</span></p>
+      </div>
+    </div>
+    <div class="closing-shot"><img class="rise" style="--anim:phone-up" src="/shots/framed-18-pro-max/fr/shot-lock.jpg" width="760" height="1573" alt="" loading="lazy" decoding="async" /></div>
   </section>
 </main>
 
@@ -198,7 +195,7 @@
     <a href="mailto:erdincdubu@icloud.com">Contact</a>
     <details class="lang"><summary aria-label="Langue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>Français</span><svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg></summary><div class="lang-menu"><p class="lang-head">Langue</p><div class="lang-list"><a href="/" lang="en" hreflang="en"><span>English</span></a><a href="/es" lang="es" hreflang="es"><span>Español</span></a><a href="/fr" lang="fr" hreflang="fr" class="active" aria-current="true"><span>Français</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></a><a href="/de" lang="de" hreflang="de"><span>Deutsch</span></a><a href="/it" lang="it" hreflang="it"><span>Italiano</span></a><a href="/pt-br" lang="pt-BR" hreflang="pt-BR"><span>Português</span></a><a href="/zh" lang="zh-Hans" hreflang="zh-Hans"><span>简体中文</span></a><a href="/ko" lang="ko" hreflang="ko"><span>한국어</span></a><a href="/nl" lang="nl" hreflang="nl"><span>Nederlands</span></a><a href="/ja" lang="ja" hreflang="ja"><span>日本語</span></a><a href="/zh-hant" lang="zh-Hant" hreflang="zh-Hant"><span>繁體中文</span></a><a href="/ru" lang="ru" hreflang="ru"><span>Русский</span></a><a href="/tr" lang="tr" hreflang="tr"><span>Türkçe</span></a><a href="/id" lang="id" hreflang="id"><span>Bahasa Indonesia</span></a><a href="/hi" lang="hi" hreflang="hi"><span>हिन्दी</span></a><a href="/ar" lang="ar" hreflang="ar"><span>العربية</span></a><a href="/ur" lang="ur" hreflang="ur"><span>اردو</span></a></div></div></details>
   </nav>
-  <p class="foot-note">© <span id="year">2026</span> Privaro<span aria-hidden="true"> · </span>Fait aux Pays-Bas. Ce site n’utilise ni cookies ni traceurs.</p>
+  <p class="foot-note">© <span id="year">2026</span> Privaro. Fait aux Pays-Bas. Ce site n’utilise ni cookies ni traceurs.</p>
 </footer>
 
 <script>
@@ -241,6 +238,5 @@ document.addEventListener('keydown', e => {
 })();
 </script>
 <script src="/price.js" defer></script>
-<script src="/motion.js" data-label="Animation de fond" defer></script>
 </body>
 </html>

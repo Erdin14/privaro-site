@@ -42,9 +42,9 @@
 <link rel="stylesheet" href="/styles.css" />
 <link rel="stylesheet" href="/transitions.css" />
 <script>
-// Before anything is drawn. "motion" lets the entrances in styles.css wait
-// for the script at the end of the page; without it, or with Reduce Motion,
-// everything is simply there.
+// Before anything is drawn. "motion" lets the few entrances in styles.css
+// wait for the script at the end of the page; without it, or with Reduce
+// Motion, everything is simply there.
 (() => {
   const root = document.documentElement;
   if (!matchMedia('(prefers-reduced-motion: reduce)').matches) root.classList.add('motion');
@@ -87,56 +87,45 @@
 </header>
 
 <main class="home">
-  <!-- The name, set large, beside what it is; then where to get it. -->
+  <!-- The name, set large, beside what it is. Under both, where to get it and
+       what it costs, in two plain sentences. -->
   <section class="hero wrap" aria-labelledby="hero-title">
     <div class="hero-mark">
-      <img class="hero-icon rise" style="--d:.05s" src="/logo.png" width="76" height="76" alt="" />
-      <h1 id="hero-title" class="wordmark"><span class="mask"><span class="rise" style="--anim:mask-rise;--d:.12s">Privaro</span></span></h1>
+      <img class="hero-icon" src="/logo.png" width="72" height="72" alt="" />
+      <h1 id="hero-title" class="wordmark"><span class="mask"><span class="rise" style="--anim:mask-rise">Privaro</span></span></h1>
     </div>
-    <div class="hero-copy">
-      <p class="tagline"><span class="mask"><span class="rise" style="--anim:mask-rise;--d:.38s">Yalnızca sizin açabileceğiniz bir kasa.</span></span></p>
-      <p class="lead rise" style="--d:.52s">Privaro, iPhone'unuz için bir kasadır. İçine koyduğunuz her şey telefonun kendisinde şifrelenir ve yalnızca Face ID veya Privaro'nun kendi parolasıyla açılır. Hesap gerekmez ve hiçbir şey yüklenmez.</p>
+    <div class="hero-copy rise" style="--anim:fade;--d:.35s">
+      <p class="tagline">Yalnızca sizin açabileceğiniz bir kasa.</p>
+      <p class="lead">Privaro, iPhone'unuz için bir kasadır. İçine koyduğunuz her şey telefonun kendisinde şifrelenir ve yalnızca Face ID veya Privaro'nun kendi parolasıyla açılır. Hesap gerekmez ve hiçbir şey yüklenmez.</p>
     </div>
-    <div class="buy rise" style="--anim:fade;--d:.62s">
+    <div class="buy">
       <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="Privaro'yu App Store'dan indirin">
         <img src="/appstore-badge-white.svg" width="150" height="50" alt="Privaro'yu App Store'dan indirin" />
       </a>
-      <dl class="specs">
-        <div>
-          <dt>İndir</dt>
-          <dd><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3.5v9m0 0-3.5-3.5M10 12.5l3.5-3.5M4.5 16.5h11" /></svg><span>Ücretsiz</span></dd>
-        </div>
-        <div>
-          <dt>Gereksinim</dt>
-          <dd><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="5.5" y="2.5" width="9" height="15" rx="2.25" /><path d="M8.75 15h2.5" /></svg><span>iOS 17.6 veya üstü</span></dd>
-        </div>
-        <div>
-          <dt>Pro (isteğe bağlı)</dt>
-          <dd><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 2.75 2.1 4.4 4.65.6-3.4 3.25.85 4.75L10 13.4l-4.2 2.35.85-4.75-3.4-3.25 4.65-.6Z" /></svg><span><span class="price" data-price="pro">₺249,99</span>, tek seferlik satın alım</span></dd>
-        </div>
-      </dl>
+      <p class="buy-note"><span>Ücretsiz indirin. iOS 17.6 veya üstü gerekir.</span> <span>Pro isteğe bağlıdır: tek seferlik <span class="price" data-price="pro">₺249,99</span>, yenileme yok.</span></p>
     </div>
   </section>
 
-  <!-- Four screens, each a button that opens the viewer (presentation.js). -->
+  <!-- The app itself: four screens in a row, each with what it's for. Each is
+       a button that opens the viewer (presentation.js). -->
   <section class="gallery">
     <div class="shots wrap">
-      <figure class="rise" style="--anim:phone-in;--d:.7s;--i:0"><img src="/shots/framed-18-pro-max/tr/shot-lock.jpg" width="760" height="1573" alt="Face ID için hazır Privaro kilit ekranı" fetchpriority="high" /><figcaption>Kilit ekranı</figcaption></figure>
-      <figure class="rise" style="--anim:phone-in;--d:.8s;--i:1"><img src="/shots/framed-18-pro-max/tr/shot-vault.jpg" width="760" height="1573" alt="Kasa: aylara göre sıralanmış, ızgara düzeninde fotoğraflar" /><figcaption>Kasa</figcaption></figure>
-      <figure class="rise" style="--anim:phone-in;--d:.9s;--i:2"><img src="/shots/framed-18-pro-max/tr/shot-albums.jpg" width="760" height="1573" alt="Privaro'daki albümler" decoding="async" /><figcaption>Albümler</figcaption></figure>
-      <figure class="rise" style="--anim:phone-in;--d:1s;--i:3"><img src="/shots/framed-18-pro-max/tr/shot-privacy.jpg" width="760" height="1573" alt="Gizlilik Modu ayarları: Ev, Dışarıda ve Seyahat" decoding="async" /><figcaption>Gizlilik Modu</figcaption></figure>
+      <figure class="rise" style="--anim:phone-in;--i:0"><img src="/shots/framed-18-pro-max/tr/shot-lock.jpg" width="760" height="1573" alt="Face ID için hazır Privaro kilit ekranı" fetchpriority="high" /><figcaption><strong>Kilit ekranı</strong> <span>Face ID ya da kendi parolasıyla açılır.</span></figcaption></figure>
+      <figure class="rise" style="--anim:phone-in;--i:1"><img src="/shots/framed-18-pro-max/tr/shot-vault.jpg" width="760" height="1573" alt="Kasa: aylara göre sıralanmış, ızgara düzeninde fotoğraflar" /><figcaption><strong>Kasa</strong> <span>Eklediğiniz her şey telefonun kendisinde şifrelenir.</span></figcaption></figure>
+      <figure class="rise" style="--anim:phone-in;--i:2"><img src="/shots/framed-18-pro-max/tr/shot-albums.jpg" width="760" height="1573" alt="Privaro'daki albümler" decoding="async" /><figcaption><strong>Albümler</strong> <span>Fotoğrafları ve videoları albümlere ayırın.</span></figcaption></figure>
+      <figure class="rise" style="--anim:phone-in;--i:3"><img src="/shots/framed-18-pro-max/tr/shot-privacy.jpg" width="760" height="1573" alt="Gizlilik Modu ayarları: Ev, Dışarıda ve Seyahat" decoding="async" /><figcaption><strong>Gizlilik Modu</strong> <span>Nerede olursanız olun, Privaro’nun ne kadar sıkı olacağını seçin.</span></figcaption></figure>
     </div>
   </section>
 
-  <!-- How it's kept private, in claims the Security Overview backs up. -->
+  <!-- How it's kept private: one statement, the illustration, and the facts
+       behind it as a list, in claims the Security Overview backs up. -->
   <section class="safety wrap" aria-labelledby="safety-title">
-    <p class="eyebrow rise">Güvenlik</p>
     <h2 id="safety-title" class="display">
       <span class="mask"><span class="rise" style="--anim:mask-rise">iPhone’unuzda şifrelenir.</span></span>
-      <span class="mask dim"><span class="rise" style="--anim:mask-rise;--d:.12s">Anahtarı da cihazda kalır.</span></span>
+      <span class="mask dim"><span class="rise" style="--anim:mask-rise;--d:.1s">Anahtarı da cihazda kalır.</span></span>
     </h2>
     <div class="safety-body">
-      <div class="safety-art rise" style="--d:.2s">
+      <div class="safety-art">
 <figure class="privacy-vignette">
   <!-- A photo on the phone is written over, line by line, as ciphertext; then
        a lock closes over it. Illustrative only, never a live security check.
@@ -166,23 +155,31 @@
 </figure>
 <script src="/privacy-vignette.js" defer></script>
       </div>
-      <ul class="facts">
-        <li class="rise" style="--d:.25s"><h3>AES-256</h3><p>Kasanızdaki her fotoğraf ve video, doğrudan cihazda AES-256 ile şifrelenir.</p></li>
-        <li class="rise" style="--d:.33s"><h3>Hesap yok</h3><p>Kayıt yok; fotoğraflarınızı tutan bir Privaro sunucusu da yok.</p></li>
-        <li class="rise" style="--d:.41s"><h3>Face ID veya parola</h3><p>Kasa yalnızca Face ID veya Privaro’nun kendi parolasıyla açılır.</p></li>
-        <li class="rise" style="--d:.49s"><h3>Çevrimdışı çalışır</h3><p>Fotoğraflarınız yalnızca şifreli iCloud yedeklemesini açarsanız çevrim içi olur.</p></li>
-      </ul>
+      <div class="safety-facts">
+        <dl class="ledger">
+          <div><dt>AES-256</dt><dd>Kasanızdaki her fotoğraf ve video, doğrudan cihazda AES-256 ile şifrelenir.</dd></div>
+          <div><dt>Hesap yok</dt><dd>Kayıt yok; fotoğraflarınızı tutan bir Privaro sunucusu da yok.</dd></div>
+          <div><dt>Face ID veya parola</dt><dd>Kasa yalnızca Face ID veya Privaro’nun kendi parolasıyla açılır.</dd></div>
+          <div><dt>Çevrimdışı çalışır</dt><dd>Fotoğraflarınız yalnızca şifreli iCloud yedeklemesini açarsanız çevrim içi olur.</dd></div>
+        </dl>
+        <a class="more" href="/security">Güvenlik özetini okuyun</a>
+      </div>
     </div>
-    <a class="more rise" style="--d:.3s" href="/security">Güvenlik özetini okuyun<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7.5 4.5 13 10l-5.5 5.5" /></svg></a>
   </section>
 
+  <!-- The last word, and the Lock Screen rising out of the bottom edge, the
+       way the phone does in the illustration above. -->
   <section class="closing wrap" aria-labelledby="closing-title">
-    <img class="closing-icon rise" src="/logo.png" width="96" height="96" alt="" loading="lazy" />
-    <h2 id="closing-title" class="display"><span class="mask"><span class="rise" style="--anim:mask-rise;--d:.08s">Özel olan, özel kalır.</span></span></h2>
-    <a class="appstore rise" style="--d:.2s" href="https://apps.apple.com/app/id6783131829" aria-label="Privaro'yu App Store'dan indirin">
-      <img src="/appstore-badge-white.svg" width="150" height="50" alt="Privaro'yu App Store'dan indirin" loading="lazy" />
-    </a>
-    <p class="closing-meta rise" style="--d:.28s">Ücretsiz<span aria-hidden="true"> · </span>iOS 17.6 veya üstü</p>
+    <div class="closing-copy">
+      <h2 id="closing-title" class="display"><span class="mask"><span class="rise" style="--anim:mask-rise">Bazı fotoğraflar yalnızca sizin içindir.</span></span></h2>
+      <div class="buy">
+        <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="Privaro'yu App Store'dan indirin">
+          <img src="/appstore-badge-white.svg" width="150" height="50" alt="Privaro'yu App Store'dan indirin" loading="lazy" />
+        </a>
+        <p class="buy-note"><span>Ücretsiz indirin. iOS 17.6 veya üstü gerekir.</span></p>
+      </div>
+    </div>
+    <div class="closing-shot"><img class="rise" style="--anim:phone-up" src="/shots/framed-18-pro-max/tr/shot-lock.jpg" width="760" height="1573" alt="" loading="lazy" decoding="async" /></div>
   </section>
 </main>
 
@@ -198,7 +195,7 @@
     <a href="mailto:erdincdubu@icloud.com">İletişim</a>
     <details class="lang"><summary aria-label="Dil"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>Türkçe</span><svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg></summary><div class="lang-menu"><p class="lang-head">Dil</p><div class="lang-list"><a href="/" lang="en" hreflang="en"><span>English</span></a><a href="/es" lang="es" hreflang="es"><span>Español</span></a><a href="/fr" lang="fr" hreflang="fr"><span>Français</span></a><a href="/de" lang="de" hreflang="de"><span>Deutsch</span></a><a href="/it" lang="it" hreflang="it"><span>Italiano</span></a><a href="/pt-br" lang="pt-BR" hreflang="pt-BR"><span>Português</span></a><a href="/zh" lang="zh-Hans" hreflang="zh-Hans"><span>简体中文</span></a><a href="/ko" lang="ko" hreflang="ko"><span>한국어</span></a><a href="/nl" lang="nl" hreflang="nl"><span>Nederlands</span></a><a href="/ja" lang="ja" hreflang="ja"><span>日本語</span></a><a href="/zh-hant" lang="zh-Hant" hreflang="zh-Hant"><span>繁體中文</span></a><a href="/ru" lang="ru" hreflang="ru"><span>Русский</span></a><a href="/tr" lang="tr" hreflang="tr" class="active" aria-current="true"><span>Türkçe</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></a><a href="/id" lang="id" hreflang="id"><span>Bahasa Indonesia</span></a><a href="/hi" lang="hi" hreflang="hi"><span>हिन्दी</span></a><a href="/ar" lang="ar" hreflang="ar"><span>العربية</span></a><a href="/ur" lang="ur" hreflang="ur"><span>اردو</span></a></div></div></details>
   </nav>
-  <p class="foot-note">© <span id="year">2026</span> Privaro<span aria-hidden="true"> · </span>Hollanda'da yapıldı. Bu site çerez kullanmaz ve izleyici içermez.</p>
+  <p class="foot-note">© <span id="year">2026</span> Privaro. Hollanda'da yapıldı. Bu site çerez kullanmaz ve izleyici içermez.</p>
 </footer>
 
 <script>
@@ -241,6 +238,5 @@ document.addEventListener('keydown', e => {
 })();
 </script>
 <script src="/price.js" defer></script>
-<script src="/motion.js" data-label="Arka plan hareketi" defer></script>
 </body>
 </html>

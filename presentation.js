@@ -94,7 +94,7 @@
   document.body.append(dialog);
   const sources = figures.map(figure => {
     const original = figure.querySelector('img');
-    const caption = figure.querySelector('figcaption').textContent;
+    const caption = figure.querySelector('figcaption strong').textContent;
     const button = document.createElement('button');
     button.type = 'button';
     button.className = 'shot-open';
@@ -102,11 +102,6 @@
     button.setAttribute('aria-haspopup', 'dialog');
     original.replaceWith(button);
     button.append(original);
-    const cue = document.createElement('span');
-    cue.className = 'shot-cue';
-    cue.setAttribute('aria-hidden', 'true');
-    cue.textContent = '↗';
-    figure.querySelector('figcaption').append(cue);
     return { original, caption, button, figure };
   });
   document.querySelector('.shots').classList.add('viewer-ready');
@@ -131,8 +126,8 @@
         const x = Math.min(Math.max((point.clientX - rect.left) / rect.width, 0), 1);
         const y = Math.min(Math.max((point.clientY - rect.top) / rect.height, 0), 1);
         button.classList.add('tilting');
-        button.style.setProperty('--ry', ((x - .5) * 12).toFixed(2) + 'deg');
-        button.style.setProperty('--rx', ((.5 - y) * 9).toFixed(2) + 'deg');
+        button.style.setProperty('--ry', ((x - .5) * 8).toFixed(2) + 'deg');
+        button.style.setProperty('--rx', ((.5 - y) * 6).toFixed(2) + 'deg');
         button.style.setProperty('--mx', (x * 100).toFixed(1) + '%');
         button.style.setProperty('--my', (y * 100).toFixed(1) + '%');
       });
@@ -169,8 +164,8 @@
     flight = animate(image, [{ transform: transform(from, base) }, { transform: transform(to, base) }], { duration });
     return flight;
   }
-  // A phone mid-entrance, or turned in the arc, is measured squared up, as
-  // the viewer will show it: its entrance is finished and its tilt let go.
+  // A phone mid-entrance, or leaning toward the pointer, is measured squared
+  // up, as the viewer will show it: its entrance is finished, its tilt let go.
   function settle(source) {
     source.figure.getAnimations().forEach(animation => animation.finish());
     untilt(source.button);
@@ -188,7 +183,6 @@
     setCurrent(index);
     fit();
     dialog.showModal();
-    document.dispatchEvent(new Event('privaro:viewerchange'));
     closing = false;
     fly(from, image.getBoundingClientRect(), 620);
     surfaceMotion = animate(surface, [{ opacity: 0 }, { opacity: 1 }], { duration: 420, easing: 'ease-out' });
@@ -219,9 +213,8 @@
     source.original.style.visibility = '';
     dialog.close();
     fades.forEach(animation => animation?.cancel());
-    // Back into the arc, slowly, now that it's in its place again.
+    // Free to lean again, now that it's in its place.
     requestAnimationFrame(() => sources.forEach(({ button }) => button.classList.remove('squared')));
-    document.dispatchEvent(new Event('privaro:viewerchange'));
     document.documentElement.style.overflow = overflow;
     document.body.style.paddingRight = padding;
     closing = false;
