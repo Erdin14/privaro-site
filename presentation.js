@@ -209,11 +209,16 @@
     source.button.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'instant' });
     const to = source.original.getBoundingClientRect();
     const returning = fly(from, to, 480);
-    animate(surface, [{ opacity: 1 }, { opacity: 0 }], { duration: 420, easing: 'ease-in-out' });
-    chrome.forEach(el => animate(el, [{ opacity: 1 }, { opacity: 0 }], { duration: 160 }));
+    // The fades hold their end until the dialog is gone: a fade that ended
+    // first would snap the dark surface and controls back for a frame or two.
+    const fades = [
+      animate(surface, [{ opacity: 1 }, { opacity: 0 }], { duration: 480, easing: 'ease-in-out', fill: 'forwards' }),
+      ...chrome.map(el => animate(el, [{ opacity: 1 }, { opacity: 0 }], { duration: 160, fill: 'forwards' }))
+    ];
     await finish(returning);
     source.original.style.visibility = '';
     dialog.close();
+    fades.forEach(animation => animation?.cancel());
     // Back into the arc, slowly, now that it's in its place again.
     requestAnimationFrame(() => sources.forEach(({ button }) => button.classList.remove('squared')));
     document.dispatchEvent(new Event('privaro:viewerchange'));
