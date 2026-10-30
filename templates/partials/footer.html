@@ -15,15 +15,17 @@
 
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
-// The language menu is a <details>; close it on a click elsewhere or on Escape.
-// On phones a click on the dimmed page lands on the <details> itself (its
-// ::before is the dimming), so that counts as elsewhere too.
-const lang = document.querySelector('.lang');
-document.addEventListener('click', e => {
+// The language menus (one beside the header's pill, one in the footer) are
+// <details>; close an open one on a click elsewhere or on Escape. On phones a
+// click on the dimmed page lands on the <details> itself (its ::before is the
+// dimming), so that counts as elsewhere too.
+const langs = document.querySelectorAll('.lang');
+document.addEventListener('click', e => langs.forEach(lang => {
   if (lang.open && (e.target === lang || !lang.contains(e.target))) lang.open = false;
-});
+}));
 document.addEventListener('keydown', e => {
-  if (e.key === 'Escape' && lang.open) { lang.open = false; lang.querySelector('summary').focus(); }
+  if (e.key !== 'Escape') return;
+  langs.forEach(lang => { if (lang.open) { lang.open = false; lang.querySelector('summary').focus(); } });
 });
 </script>
 
