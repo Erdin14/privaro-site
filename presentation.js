@@ -1,5 +1,8 @@
 // Product motion is progressive enhancement. The page is readable and the
 // gallery is visible before this script runs, or if animations are unavailable.
+// The homepage's entrances are CSS (.rise in styles.css); this adds what needs
+// a script: the header's solid state, the phones leaning toward the pointer,
+// the screenshot viewer, and the reveals on the longer pages.
 (() => {
   const script = document.currentScript;
   const reduce = matchMedia('(prefers-reduced-motion: reduce)');
@@ -14,7 +17,7 @@
   }
   const finish = animation => animation?.finished.catch(() => {});
   // A native page crossfade is already an entrance. Avoid layering another
-  // hero entrance over it; this also covers back/forward cache restoration.
+  // entrance over it; this also covers back/forward cache restoration.
   window.addEventListener('pagereveal', event => {
     if (event.viewTransition) active.forEach(animation => animation.cancel());
   });
@@ -26,20 +29,15 @@
     observer?.disconnect();
   });
 
-  // One opening composition. The CTA remains fully visible and interactive.
-  document.querySelectorAll('.home-text > :not(.appstore)').forEach((el, index) => {
-    animate(el, [{ opacity: .6, transform: 'translateY(7px)' }, { opacity: 1, transform: 'none' }],
-      { duration: 650, delay: Math.min(index * 45, 150), fill: 'backwards' });
-  });
-  const figures = [...document.querySelectorAll('.shots figure')];
-  const entrances = new Map();
-  function enter(figure, index) {
-    if (document.documentElement.classList.contains('page-crossfade')) return;
-    const desktop = matchMedia('(min-width: 1181px)').matches;
-    const from = desktop ? 'perspective(1000px) translateY(18px) rotateY(-2deg) scale(.985)' : 'translateY(10px) scale(.99)';
-    entrances.set(figure, animate(figure, [{ opacity: .4, transform: from }, { opacity: 1, transform: 'none' }],
-      { duration: desktop ? 900 : 650, delay: Math.min(index * 65, 195), fill: 'backwards' }));
+  // The header turns solid once anything has scrolled under it.
+  const head = document.querySelector('.site-head');
+  if (head) {
+    let queued = false;
+    const sync = () => { queued = false; head.classList.toggle('scrolled', scrollY > 4); };
+    addEventListener('scroll', () => { if (!queued) { queued = true; requestAnimationFrame(sync); } }, { passive: true });
+    sync();
   }
+
   // Only a few section headings and feature blocks; never animate every paragraph.
   if (!reduce.matches && 'IntersectionObserver' in window) {
     const candidates = [
@@ -66,14 +64,8 @@
     document.addEventListener('focusin', event => expose(event.target));
     window.addEventListener('hashchange', () => expose(document.getElementById(decodeURIComponent(location.hash.slice(1)))));
   }
-  if ('IntersectionObserver' in window && !reduce.matches) {
-    const watch = new IntersectionObserver(entries => entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      watch.unobserve(entry.target);
-      enter(entry.target, figures.indexOf(entry.target));
-    }), { threshold: .12 });
-    figures.forEach(figure => watch.observe(figure));
-  }
+
+  const figures = [...document.querySelectorAll('.shots figure')];
   if (!figures.length || typeof HTMLDialogElement === 'undefined') return;
 
   const icons = {
@@ -91,6 +83,7 @@
     '<div class="viewer-navigation viewer-chrome"><button class="viewer-previous" type="button">' + svg(icons.previous) + '</button><p class="viewer-count" role="status" aria-live="polite" aria-atomic="true"></p><button class="viewer-next" type="button">' + svg(icons.next) + '</button></div>';
   const image = dialog.querySelector('.viewer-image');
   const surface = dialog.querySelector('.viewer-surface');
+  const title = dialog.querySelector('#viewer-title');
   const chrome = [...dialog.querySelectorAll('.viewer-chrome')];
   const closeButton = dialog.querySelector('.viewer-close');
   const previousButton = dialog.querySelector('.viewer-previous');
@@ -117,6 +110,36 @@
     return { original, caption, button, figure };
   });
   document.querySelector('.shots').classList.add('viewer-ready');
+
+  // A phone leans a few degrees toward a mouse or trackpad pointer, and the
+  // light on its glass follows. Touch and Reduce Motion get no tilt. CSS
+  // reads --rx/--ry/--mx/--my; one frame at most per pointer move.
+  const fine = matchMedia('(hover: hover) and (pointer: fine)');
+  function untilt(button) {
+    button.classList.remove('tilting');
+    ['--rx', '--ry', '--mx', '--my'].forEach(name => button.style.removeProperty(name));
+  }
+  sources.forEach(({ button }) => {
+    let frame = 0, point;
+    button.addEventListener('pointermove', event => {
+      if (event.pointerType !== 'mouse' || !fine.matches || reduce.matches || dialog.open) return;
+      point = event;
+      if (frame) return;
+      frame = requestAnimationFrame(() => {
+        frame = 0;
+        const rect = button.getBoundingClientRect();
+        const x = Math.min(Math.max((point.clientX - rect.left) / rect.width, 0), 1);
+        const y = Math.min(Math.max((point.clientY - rect.top) / rect.height, 0), 1);
+        button.classList.add('tilting');
+        button.style.setProperty('--ry', ((x - .5) * 12).toFixed(2) + 'deg');
+        button.style.setProperty('--rx', ((.5 - y) * 9).toFixed(2) + 'deg');
+        button.style.setProperty('--mx', (x * 100).toFixed(1) + '%');
+        button.style.setProperty('--my', (y * 100).toFixed(1) + '%');
+      });
+    });
+    button.addEventListener('pointerleave', () => { cancelAnimationFrame(frame); frame = 0; untilt(button); });
+  });
+
   let current = 0, closing = false, flight, surfaceMotion;
   let chromeMotion = [];
   let overflow, padding;
@@ -131,10 +154,9 @@
     sources[current].original.style.visibility = '';
     current = (index + sources.length) % sources.length;
     const source = sources[current];
-    entrances.get(source.figure)?.cancel();
     image.src = source.original.currentSrc || source.original.src;
     image.alt = source.original.alt;
-    dialog.querySelector('#viewer-title').textContent = source.caption;
+    title.textContent = source.caption;
     dialog.querySelector('.viewer-count').textContent = numbers.format(current + 1) + ' / ' + numbers.format(sources.length);
     sources[current].original.style.visibility = 'hidden';
   }
@@ -147,9 +169,16 @@
     flight = animate(image, [{ transform: transform(from, base) }, { transform: transform(to, base) }], { duration });
     return flight;
   }
+  // A phone mid-entrance, or turned in the arc, is measured squared up, as
+  // the viewer will show it: its entrance is finished and its tilt let go.
+  function settle(source) {
+    source.figure.getAnimations().forEach(animation => animation.finish());
+    untilt(source.button);
+    source.button.classList.add('squared');
+  }
   function open(index) {
     if (dialog.open) return;
-    entrances.get(sources[index].figure)?.cancel();
+    settle(sources[index]);
     const from = sources[index].original.getBoundingClientRect();
     overflow = document.documentElement.style.overflow;
     padding = document.body.style.paddingRight;
@@ -161,9 +190,10 @@
     dialog.showModal();
     document.dispatchEvent(new Event('privaro:viewerchange'));
     closing = false;
-    fly(from, image.getBoundingClientRect(), 460);
-    surfaceMotion = animate(surface, [{ opacity: 0 }, { opacity: 1 }], { duration: 350 });
-    chromeMotion = chrome.map(el => animate(el, [{ opacity: 0 }, { opacity: 1 }], { duration: 280, delay: 100, fill: 'backwards' }));
+    fly(from, image.getBoundingClientRect(), 620);
+    surfaceMotion = animate(surface, [{ opacity: 0 }, { opacity: 1 }], { duration: 420, easing: 'ease-out' });
+    chromeMotion = chrome.map((el, i) => animate(el, [{ opacity: 0, transform: `translateY(${i ? 8 : -8}px)` }, { opacity: 1, transform: 'none' }],
+      { duration: 420, delay: 160, fill: 'backwards' }));
     closeButton.focus({ preventScroll: true });
   }
   async function close() {
@@ -174,26 +204,33 @@
     surfaceMotion?.cancel();
     chromeMotion.forEach(animation => animation?.cancel());
     const source = sources[current];
+    settle(source);
     // On phones, the last viewed image may be outside the horizontal strip.
     source.button.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'instant' });
     const to = source.original.getBoundingClientRect();
-    const returning = fly(from, to, 380);
-    animate(surface, [{ opacity: 1 }, { opacity: 0 }], { duration: 380 });
+    const returning = fly(from, to, 480);
+    animate(surface, [{ opacity: 1 }, { opacity: 0 }], { duration: 420, easing: 'ease-in-out' });
     chrome.forEach(el => animate(el, [{ opacity: 1 }, { opacity: 0 }], { duration: 160 }));
     await finish(returning);
     source.original.style.visibility = '';
     dialog.close();
+    // Back into the arc, slowly, now that it's in its place again.
+    requestAnimationFrame(() => sources.forEach(({ button }) => button.classList.remove('squared')));
     document.dispatchEvent(new Event('privaro:viewerchange'));
     document.documentElement.style.overflow = overflow;
     document.body.style.paddingRight = padding;
     closing = false;
     source.button.focus({ preventScroll: true });
   }
+  // The next screen slides in from the side it comes from, out of a little
+  // depth; the name above it follows.
   function step(delta) {
     if (!dialog.open || closing) return;
     flight?.cancel();
     setCurrent(current + delta);
-    flight = animate(image, [{ opacity: .55, transform: `translateX(${delta * (rtl ? -10 : 10)}px)` }, { opacity: 1, transform: 'none' }], { duration: 240 });
+    const shift = delta * (rtl ? -1 : 1) * 56;
+    flight = animate(image, [{ opacity: 0, transform: `translateX(${shift}px) scale(.94)` }, { opacity: 1, transform: 'none' }], { duration: 520 });
+    animate(title, [{ opacity: 0 }, { opacity: 1 }], { duration: 360 });
   }
   sources.forEach((source, index) => source.button.addEventListener('click', () => open(index)));
   closeButton.addEventListener('click', close);
