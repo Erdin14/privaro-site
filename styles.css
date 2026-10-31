@@ -234,24 +234,32 @@ h1, h2 { font-weight: 600; }
 }
 .reveal-pending { opacity: .65; transform: translateY(10px); }
 
-/* Security: one statement across the page; under it, the illustration and,
-   beside it, the facts as a list: what, then how. */
+/* Security: one statement across the page; under it one card, the
+   illustration's phone rising out of its bottom edge and, beside the phone,
+   the facts: each a title, then how. */
 .safety { padding-top: var(--section); }
 .safety .display { max-width: 12.5em; }
-.safety-body { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(var(--space-7), 6vw, 112px);
-  align-items: start; margin-top: var(--space-8); }
-.ledger > div { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: var(--space-5);
-  padding-block: var(--space-4) var(--space-5); border-top: 1px solid var(--rule); }
-.ledger > div:last-child { border-bottom: 1px solid var(--rule); }
-.ledger dt { font-size: var(--size-text); font-weight: 600; line-height: 1.45; letter-spacing: var(--track-text); }
-.ledger dd { font-size: var(--size-text); line-height: 1.5; letter-spacing: var(--track-text); color: var(--muted); }
+.safety-body { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); margin-top: var(--space-8);
+  border: 1px solid var(--rule); border-radius: var(--radius-surface); overflow: hidden; background: rgb(255 255 255 / .025); }
+.safety-art { position: relative; min-height: 440px; }
+.ledger { align-self: center; max-width: 36em; padding-block: var(--space-7); padding-inline: var(--space-2) var(--space-7); }
+.ledger > div { padding-block: var(--space-4); border-top: 1px solid var(--rule); }
+.ledger > div:first-child { padding-top: 0; border-top: 0; }
+.ledger > div:last-child { padding-bottom: 0; }
+.ledger dt { font-size: var(--size-lead); font-weight: 600; line-height: 1.35; letter-spacing: -.012em; }
+.ledger dd { margin-top: var(--space-1); font-size: var(--size-text); line-height: 1.5; letter-spacing: var(--track-text); color: var(--muted); }
 .more { display: inline-block; margin-top: var(--space-6); font-size: var(--size-text); color: var(--ink);
   text-decoration: underline; text-decoration-color: var(--dim); text-decoration-thickness: 1px; text-underline-offset: 4px;
   transition: text-decoration-color var(--dur-state) var(--ease-state); }
 .more:hover { text-decoration-color: var(--ink); }
-/* The headline above already says what the illustration's caption says. */
-.safety .privacy-vignette { max-width: none; margin: 0; }
-.safety .privacy-vignette figcaption { justify-content: flex-end; min-height: 0; padding: 2px 14px; }
+/* Here the illustration fills its half of the card, with a larger phone and
+   no card or caption of its own: the headline above already says what the
+   caption says. The replay button sits in the corner. */
+.safety .privacy-vignette { position: absolute; inset: 0; max-width: none; margin: 0; border: 0; border-radius: 0; background: none; }
+.safety .privacy-art { --pw: 52cqw; position: absolute; inset: 0; aspect-ratio: auto; }
+.safety .vg-phone { top: 64px; }
+.safety .privacy-vignette figcaption { position: absolute; top: var(--space-2); inset-inline-start: var(--space-3);
+  min-height: 0; padding: 0; border: 0; }
 .safety .privacy-vignette figcaption > span { display: none; }
 .safety .privacy-vignette figcaption:not(:has(.vignette-replay:not([hidden]))) { display: none; }
 
@@ -318,41 +326,37 @@ h1, h2 { font-weight: 600; }
 
 /* ---------------------------------------------------------------- Vignette */
 
-/* A phone rising out of the bottom of a card, a photo on its screen. Every
-   size is a share of the card's width (cqw), so it scales as one picture. */
+/* A phone rising out of the bottom of a card, a photo on its screen. The
+   phone's width (--pw) is a share of the card's (cqw), and everything on the
+   phone is a share of the phone's, so it scales as one picture at whatever
+   size a page gives it. */
 .privacy-vignette { max-width: 640px; margin: 40px 0 0; border: 1px solid var(--rule);
   border-radius: var(--radius-surface); overflow: hidden; background: rgb(255 255 255 / .025); }
-.privacy-art { position: relative; aspect-ratio: 2 / 1; overflow: hidden; container-type: inline-size; direction: ltr; }
-.vg-phone { position: absolute; left: 50%; top: 6cqw; width: 32cqw; aspect-ratio: 1 / 2.05; translate: -50% 0;
-  padding: .85cqw; border-radius: 5.6cqw;
+.privacy-art { --pw: 32cqw; position: relative; aspect-ratio: 2 / 1; overflow: hidden; container-type: inline-size; direction: ltr; }
+.vg-phone { position: absolute; left: 50%; top: 6cqw; width: var(--pw); aspect-ratio: 1 / 2.05; translate: -50% 0;
+  container-type: inline-size; padding: calc(var(--pw) * .0266); border-radius: calc(var(--pw) * .175);
   background: linear-gradient(150deg, #5c6165, #27292b 28%, #1b1d1f 72%, #3b3f42);
-  box-shadow: inset 0 0 0 .12cqw rgb(255 255 255 / .16), inset 0 0 0 .5cqw #0b0c0d, 0 4cqw 8cqw -2cqw rgb(0 0 0 / .75); }
-.vg-screen { position: relative; height: 100%; overflow: hidden; border-radius: 4.8cqw; background: #0d1012; }
-.vg-island { position: absolute; top: 1.5cqw; left: 50%; width: 8.4cqw; height: 2.5cqw; translate: -50% 0;
-  border-radius: 9cqw; background: #000; }
+  box-shadow: inset 0 0 0 calc(var(--pw) * .00375) rgb(255 255 255 / .16), inset 0 0 0 calc(var(--pw) * .0156) #0b0c0d,
+    0 calc(var(--pw) * .125) calc(var(--pw) * .25) calc(var(--pw) * -.0625) rgb(0 0 0 / .75); }
+.vg-screen { position: relative; height: 100%; overflow: hidden; border-radius: 15.8cqw; background: #0d1012; }
+.vg-island { position: absolute; top: 4.95cqw; left: 50%; width: 27.7cqw; height: 8.25cqw; translate: -50% 0;
+  border-radius: 30cqw; background: #000; }
 /* The finished state: the photo written over, the ciphertext in its place. */
 .vg-photo { position: absolute; inset: 0; display: block; width: 100%; height: 100%; max-width: none;
   object-fit: cover; object-position: 50% 0; clip-path: inset(100% 0 0 0); }
-.vg-cipher { position: absolute; inset: 0; margin: 0; padding: 7.5cqw 2.4cqw 0; overflow: hidden; word-break: break-all;
-  font: 500 1.5cqw/1.62 ui-monospace, "SF Mono", SFMono-Regular, Menlo, monospace; letter-spacing: .08em;
+.vg-cipher { position: absolute; inset: 0; margin: 0; padding: 24.75cqw 7.9cqw 0; overflow: hidden; word-break: break-all;
+  font: 500 4.95cqw/1.62 ui-monospace, "SF Mono", SFMono-Regular, Menlo, monospace; letter-spacing: .08em;
   color: rgb(205 216 228 / .4); user-select: none; -webkit-user-select: none; }
 @supports ((-webkit-background-clip: text) or (background-clip: text)) {
   .vg-cipher { color: transparent; background: linear-gradient(180deg, rgb(228 235 242 / .6), rgb(150 166 182 / .2) 75%);
     -webkit-background-clip: text; background-clip: text; }
 }
 /* The line that writes it: a hairline of light with a faint wake above. */
-.vg-scan { position: absolute; top: 0; left: -2%; right: -2%; height: .32cqw; margin-top: -.16cqw; opacity: 0; pointer-events: none;
+.vg-scan { position: absolute; top: 0; left: -2%; right: -2%; height: 1.06cqw; margin-top: -.53cqw; opacity: 0; pointer-events: none;
   background: linear-gradient(90deg, transparent, rgb(255 255 255 / .85) 18%, #fff 50%, rgb(255 255 255 / .85) 82%, transparent);
-  box-shadow: 0 0 1.6cqw .3cqw rgb(150 185 255 / .5); }
-.vg-scan::before { content: ""; position: absolute; left: 0; right: 0; bottom: 100%; height: 9cqw;
+  box-shadow: 0 0 5.3cqw 1cqw rgb(150 185 255 / .5); }
+.vg-scan::before { content: ""; position: absolute; left: 0; right: 0; bottom: 100%; height: 29.7cqw;
   background: linear-gradient(to top, rgb(150 185 255 / .14), transparent); }
-.vg-lock, .vg-ring { position: absolute; left: 50%; top: 31%; width: 11.5cqw; aspect-ratio: 1; border-radius: 50%;
-  transform: translate(-50%, -50%); }
-.vg-lock { display: grid; place-items: center; background: #16191b; color: #f5f5f7;
-  border: .12cqw solid rgb(255 255 255 / .16);
-  box-shadow: 0 0 5cqw 2.6cqw rgb(13 16 18 / .88), 0 1.5cqw 3cqw rgb(0 0 0 / .5); }
-.vg-lock svg { width: 5.4cqw; height: 5.4cqw; overflow: visible; }
-.vg-ring { border: .15cqw solid rgb(255 255 255 / .5); opacity: 0; pointer-events: none; }
 .privacy-vignette figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
   gap: 4px 16px; min-height: 76px; padding: 8px 20px 12px; border-top: 1px solid var(--rule);
   color: var(--muted); font-size: var(--size-small); }
@@ -369,8 +373,6 @@ h1, h2 { font-weight: 600; }
   /* Waiting to play (privacy-vignette.js): the photo, untouched. */
   .privacy-vignette[data-state="ready"] .vg-photo { clip-path: inset(0 0 0 0); }
   .privacy-vignette[data-state="ready"] .vg-cipher { clip-path: inset(0 0 100% 0); }
-  .privacy-vignette[data-state="ready"] .vg-lock { opacity: 0; }
-  .privacy-vignette[data-state="ready"] .vg-shackle { transform: translateY(-3.5px); }
 }
 @media (prefers-reduced-motion: reduce) {
   .reveal-pending { opacity: 1; transform: none; }
@@ -539,9 +541,8 @@ h1, h2 { font-weight: 600; }
     scrollbar-width: thin; scrollbar-color: rgb(255 255 255 / .18) transparent; }
   .shots figure { flex: none; width: min(56vw, 300px); max-width: none; scroll-snap-align: center; }
   .shots figure:first-child { scroll-snap-align: start; }
-  .safety-body { grid-template-columns: minmax(0, 1fr); }
-  .safety-art { max-width: 720px; }
-  .safety-facts { max-width: 40em; }
+  .safety-body { grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); }
+  .ledger { padding-block: var(--space-6); padding-inline: var(--space-2) var(--space-6); }
 }
 @media (max-width: 760px) {
   :root { --side: 20px; --size-lead: 16px; }
@@ -552,7 +553,11 @@ h1, h2 { font-weight: 600; }
   .hero .buy { flex-direction: column; align-items: flex-start; gap: var(--space-4); }
   .shots figure { width: min(64vw, 280px); }
   .display { font-size: clamp(36px, 10.4vw, 56px); }
-  .ledger > div { grid-template-columns: minmax(0, 1fr); gap: var(--space-1); padding-block: var(--space-3) var(--space-4); }
+  .safety-body { grid-template-columns: minmax(0, 1fr); }
+  .safety-art { min-height: 0; aspect-ratio: 4 / 3; }
+  .safety .privacy-art { --pw: 46cqw; }
+  .safety .vg-phone { top: var(--space-6); }
+  .ledger { padding: var(--space-5); border-top: 1px solid var(--rule); }
   .closing { grid-template-columns: minmax(0, 1fr); }
   .closing-copy { padding-bottom: var(--space-7); }
   .closing .buy { flex-direction: column; align-items: flex-start; gap: var(--space-4); }

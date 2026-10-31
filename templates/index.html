@@ -79,8 +79,9 @@
     </div>
   </section>
 
-  <!-- How it's kept private: one statement, the illustration, and the facts
-       behind it as a list, in claims the Security Overview backs up. -->
+  <!-- How it's kept private: one statement, then one card: the illustration
+       and, beside the phone, the facts behind it, in claims the Security
+       Overview backs up. -->
   <section class="safety wrap" aria-labelledby="safety-title">
     <h2 id="safety-title" class="display">
       <span class="mask"><span class="rise" style="--anim:mask-rise">{{vignette_caption}}</span></span>
@@ -90,16 +91,14 @@
       <div class="safety-art">
 {{VIGNETTE}}
       </div>
-      <div class="safety-facts">
-        <dl class="ledger">
-          <div><dt>AES-256</dt><dd>{{fact1_d}}</dd></div>
-          <div><dt>{{fact2_t}}</dt><dd>{{fact2_d}}</dd></div>
-          <div><dt>{{fact3_t}}</dt><dd>{{fact3_d}}</dd></div>
-          <div><dt>{{fact4_t}}</dt><dd>{{fact4_d}}</dd></div>
-        </dl>
-        <a class="more" href="{{SECURITY_URL}}">{{home_sec_link}}</a>
-      </div>
+      <dl class="ledger">
+        <div><dt>AES-256</dt><dd>{{fact1_d}}</dd></div>
+        <div><dt>{{fact2_t}}</dt><dd>{{fact2_d}}</dd></div>
+        <div><dt>{{fact3_t}}</dt><dd>{{fact3_d}}</dd></div>
+        <div><dt>{{fact4_t}}</dt><dd>{{fact4_d}}</dd></div>
+      </dl>
     </div>
+    <a class="more" href="{{SECURITY_URL}}">{{home_sec_link}}</a>
   </section>
 
   <!-- The last word, and the Lock Screen rising out of the bottom edge, the

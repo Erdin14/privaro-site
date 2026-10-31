@@ -120,8 +120,9 @@
     </div>
   </section>
 
-  <!-- How it's kept private: one statement, the illustration, and the facts
-       behind it as a list, in claims the Security Overview backs up. -->
+  <!-- How it's kept private: one statement, then one card: the illustration
+       and, beside the phone, the facts behind it, in claims the Security
+       Overview backs up. -->
   <section class="safety wrap" aria-labelledby="safety-title">
     <h2 id="safety-title" class="display">
       <span class="mask"><span class="rise" style="--anim:mask-rise">Crittografato sul tuo iPhone.</span></span>
@@ -130,26 +131,18 @@
     <div class="safety-body">
       <div class="safety-art">
 <figure class="privacy-vignette">
-  <!-- A photo on the phone is written over, line by line, as ciphertext; then
-       a lock closes over it. Illustrative only, never a live security check.
+  <!-- A photo on the phone is written over, line by line, as ciphertext.
+       Illustrative only, never a live security check.
        Without JavaScript, or with Reduce Motion, it shows the finished state. -->
   <div class="privacy-art" role="img" aria-labelledby="privacy-art-title" aria-describedby="privacy-art-desc">
     <span id="privacy-art-title" class="visually-hidden">Protezione sul dispositivo</span>
-    <span id="privacy-art-desc" class="visually-hidden">Una foto su un iPhone diventa dati cifrati e un lucchetto si chiude, illustrando la crittografia sul dispositivo. Non è un controllo di sicurezza in tempo reale.</span>
+    <span id="privacy-art-desc" class="visually-hidden">Una foto su un iPhone diventa dati cifrati, illustrando la crittografia sul dispositivo. Non è un controllo di sicurezza in tempo reale.</span>
     <div class="vg-phone" aria-hidden="true">
       <div class="vg-screen">
         <!-- "Snow-capped mountain reflected in a calm lake" by Timo Wielink, Unsplash License. -->
         <img class="vg-photo" src="/art/vignette-lake.jpg" width="600" height="900" alt="" loading="lazy" decoding="async" />
         <p class="vg-cipher">45Na99UPIE/JOGMzTIdfGUsJBQn7ZDJnqRjY0ZtJiaVW3ZlmtFuRABIufL5w+IGEWTzn2A9Wnlqr3FrHKwMuoROQWW1lLez8aaMqpoMqjCUe2dBq/NFs3+2X2XdKRV5USrKaw2F/DmGnuQrn2QmnLjPKadln1qVXuJsJYjBmqzql9Hhp0e7ZhKHpXCywzar04F9se0LC96xNC+mUPW22wPkxHit6rbzADwDtgcmRHrIrfaOLiDZAla1FOXfhLjPUvGsSBu/PReuynAWz2w6Jg+ZJWMk7I39DDZw/Af7cqJUMLM6kRm+fkA42L2E3gq22OhZuQlbYrQejQjignU6QzrYP1ApaTPm+kKs38HsIjHQEr/ABUpEgXJ2WcypjcFEYwKWl3HqqyzIzFwJhnEH0SGEDhdDLyjCn/iMjbkTaDq2nZydi6wsClOpI95udr3L+yuS34ps9+W+M6f41TnD9Y6ltBRH93kbdRpvF6g0U/EqhfrqWFUULadPm20QVt4K81YKOiNuwCGeM2oxhGIDf5Y795mRAC2Wh1qKThDL4A8ZwRl56Qa4H+ll1LnWQoulCtQDNHyk0ALn3CHAonbxLWRuGltW0S3DbLCObMN5mI9R+z/mXToZUt1MN7aVyAZbw1u59370F94e0SFTxa5w2fIMTKCbOiKhTFkzV4mUzhh8ZaMOTVEsvQp1A1GYmKBnBzbFFMSHkNE6zdp1Agn8OQ2BfTbw6PJhM4FYtGjvI3mIkEJVcgakB9qsa5Pvanka69BC4k6oPrzOWT8QasUfy2aCBTEqbCfKlNwUjumOeOr9gqzqCzgohOAelrTr6F34k5HzYddMkjQmyZrwDB3XWm4hRChzt1kQc/4o6YcwaM7OkFzJ43cujssjsc8JdK6soKp5xKeZWMLr2K2K4g4MjjkOSs1VKJhWNw3ILruceHXZ8RlYlWGxHWUfnbgdcnvjlNrrpi8Gsr3uV8pX5JoTjuWKnN/OHxjgM1UC8qb+aHPigVSBh0D/GufaKITO20bh8lKrLQahzI8db2dFP2OmhyYlE4/cDT2so2Wu/7rHZ+ra6g1d6pTHoMGujYS1lSzezSZpsphFANvTJ</p>
         <span class="vg-scan"></span>
-        <span class="vg-ring"></span>
-        <span class="vg-lock">
-          <svg viewBox="0 0 24 24" focusable="false">
-            <g class="vg-shackle"><path d="M8 11V8a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></g>
-            <rect x="5.5" y="10.5" width="13" height="10" rx="2.6" fill="currentColor" />
-            <circle cx="12" cy="15.5" r="1.5" fill="#15181a" />
-          </svg>
-        </span>
         <span class="vg-island"></span>
       </div>
     </div>
@@ -158,16 +151,14 @@
 </figure>
 <script src="/privacy-vignette.js" defer></script>
       </div>
-      <div class="safety-facts">
-        <dl class="ledger">
-          <div><dt>AES-256</dt><dd>Ogni foto e video nella cassaforte viene cifrato con AES-256, direttamente sul dispositivo.</dd></div>
-          <div><dt>Nessun account</dt><dd>Nessuna registrazione e nessun server di Privaro che conservi le tue foto.</dd></div>
-          <div><dt>Face ID o codice</dt><dd>La cassaforte si apre solo con Face ID o con il codice di Privaro.</dd></div>
-          <div><dt>Funziona offline</dt><dd>Le tue foto vanno online solo se attivi il backup iCloud cifrato.</dd></div>
-        </dl>
-        <a class="more" href="/security">Leggi la panoramica sulla sicurezza</a>
-      </div>
+      <dl class="ledger">
+        <div><dt>AES-256</dt><dd>Ogni foto e video nella cassaforte viene cifrato con AES-256, direttamente sul dispositivo.</dd></div>
+        <div><dt>Nessun account</dt><dd>Nessuna registrazione e nessun server di Privaro che conservi le tue foto.</dd></div>
+        <div><dt>Face ID o codice</dt><dd>La cassaforte si apre solo con Face ID o con il codice di Privaro.</dd></div>
+        <div><dt>Funziona offline</dt><dd>Le tue foto vanno online solo se attivi il backup iCloud cifrato.</dd></div>
+      </dl>
     </div>
+    <a class="more" href="/security">Leggi la panoramica sulla sicurezza</a>
   </section>
 
   <!-- The last word, and the Lock Screen rising out of the bottom edge, the
