@@ -5,3 +5,8 @@ i18n
 build.py
 _headers
 _redirects
+screenshots.html
+dist
+tests
+README.md
+.gitattributes
