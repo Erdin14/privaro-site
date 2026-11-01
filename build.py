@@ -7,7 +7,9 @@ language gets its own folder (/es/index.html, /es/pro.html, ...). Output is
 committed, so Vercel just serves static files (no build step on their end).
 
 Shared pieces live in templates/partials/ and are pulled in with {{HEADER}}
-and {{FOOTER}}. The build also writes 404.html, sitemap.xml and robots.txt.
+and {{FOOTER}}. The build also writes 404.html, sitemap.xml and robots.txt,
+and the security headers for both hosts: _headers for Cloudflare Pages
+(privaroapp.nl) and the "headers" in vercel.json, from SECURITY_HEADERS below.
 Pages in ENGLISH_ONLY (the security overview) are written once, to the root.
 
 Prices: Pro's App Store price per country comes from the App Store Connect
@@ -18,14 +20,39 @@ i18n/timezones.json maps time zones to countries; it was generated from the
 IANA tz database (zone.tab plus its links) and only needs a refresh if that
 changes.
 """
+import base64
 import csv
 import glob
 import hashlib
 import json
 import os
+import re
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 BASE_URL = "https://privaroapp.nl"
+
+# Security headers for every response, on both hosts. Nothing on the site needs
+# more than this: every script and file is our own, there are no forms, frames,
+# fonts or third-party requests, and no page needs the camera, location or the
+# like. The Content Security Policy is built in content_security_policy().
+SECURITY_HEADERS = [
+    # Browsers that have been here once refuse plain HTTP for a year, on every
+    # subdomain too. Not "preload": that's a separate, slow-to-undo opt-in.
+    ("Strict-Transport-Security", "max-age=31536000; includeSubDomains"),
+    ("X-Content-Type-Options", "nosniff"),
+    ("X-Frame-Options", "DENY"),
+    # Cross-site, only the origin is sent: App Store Connect still sees visits
+    # came from privaroapp.nl, never which page.
+    ("Referrer-Policy", "strict-origin-when-cross-origin"),
+    ("Permissions-Policy", ", ".join(f"{feature}=()" for feature in (
+        "accelerometer", "bluetooth", "browsing-topics", "camera", "display-capture", "geolocation",
+        "gyroscope", "hid", "magnetometer", "microphone", "midi", "payment", "serial", "usb"))),
+    # No other window gets a handle on ours, and no other site can embed our files.
+    ("Cross-Origin-Opener-Policy", "same-origin"),
+    ("Cross-Origin-Resource-Policy", "same-origin"),
+    ("X-Permitted-Cross-Domain-Policies", "none"),
+]
+INLINE_SCRIPT = re.compile(r"<script(?![^>]*\bsrc=)[^>]*>(.*?)</script>", re.S)
 
 # code, url-folder ("" = repo root), html lang attribute, autonym shown in the menu
 LANGS = [
@@ -233,6 +260,65 @@ def read_template(name):
     return html
 
 
+def inline_script_hashes():
+    """The SHA-256 of every inline <script> on every page we serve, for the
+    Content Security Policy. Read from the written pages, so a script edited in
+    a template is allowed as soon as the build runs, and nothing else is."""
+    hashes = set()
+    for path in glob.glob(os.path.join(ROOT, "**", "*.html"), recursive=True):
+        if os.path.relpath(path, ROOT).split(os.sep)[0] == "templates":
+            continue
+        with open(path, encoding="utf-8") as f:
+            for body in INLINE_SCRIPT.findall(f.read()):
+                hashes.add(base64.b64encode(hashlib.sha256(body.encode("utf-8")).digest()).decode())
+    return sorted(hashes)
+
+
+def content_security_policy():
+    """Scripts run only from our own files and the inline ones in our pages,
+    each pinned by its hash, so a script injected anywhere can't run. Inline
+    styles stay allowed: the pages set values like --anim in style attributes,
+    and CSS can't run code. Images and the film come from this site only;
+    nothing else is fetched, nothing may frame a page, and no form can post."""
+    scripts = " ".join(f"'sha256-{h}'" for h in inline_script_hashes())
+    return "; ".join([
+        "default-src 'none'",
+        f"script-src 'self' {scripts}",
+        "style-src 'self' 'unsafe-inline'",
+        "img-src 'self'",
+        "media-src 'self'",
+        "base-uri 'none'",
+        "form-action 'none'",
+        "frame-ancestors 'none'",
+        "upgrade-insecure-requests",
+    ])
+
+
+def write_security_headers():
+    """_headers for Cloudflare Pages and the headers in vercel.json, the same
+    on both. Cloudflare Pages also adds Access-Control-Allow-Origin: * to every
+    response by default; the "!" line takes it off."""
+    headers = [("Content-Security-Policy", content_security_policy())] + SECURITY_HEADERS
+    lines = ["# Written by build.py from SECURITY_HEADERS: edit it there, and vercel.json",
+             "# gets the same. Cloudflare Pages (privaroapp.nl) reads this file.",
+             "/*", "  ! Access-Control-Allow-Origin"]
+    lines += [f"  {name}: {value}" for name, value in headers]
+    lines += ["", "/.well-known/apple-app-site-association", "  Content-Type: application/json"]
+    write("_headers", "\n".join(lines) + "\n")
+
+    path = os.path.join(ROOT, "vercel.json")
+    with open(path, encoding="utf-8") as f:
+        config = json.load(f)
+    # vercel.app sends its own HSTS (and is preloaded), so it's left to Vercel there.
+    config["headers"] = [
+        {"source": "/(.*)", "headers": [{"key": name, "value": value} for name, value in headers
+                                        if name != "Strict-Transport-Security"]},
+        {"source": "/.well-known/apple-app-site-association",
+         "headers": [{"key": "Content-Type", "value": "application/json"}]},
+    ]
+    write("vercel.json", json.dumps(config, indent=2, ensure_ascii=False) + "\n")
+
+
 def film_version():
     """A short fingerprint of everything in film/. The page asks for the film by
     a URL that ends in it, so replacing the film changes its URLs and browsers
@@ -335,6 +421,9 @@ def main():
 
     write("sitemap.xml", sitemap())
     write("robots.txt", f"User-agent: *\nDisallow: /screenshots\n\nSitemap: {BASE_URL}/sitemap.xml\n")
+
+    # Last: the policy pins the inline scripts of the pages written above.
+    write_security_headers()
 
 
 if __name__ == "__main__":
