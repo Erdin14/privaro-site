@@ -22,6 +22,8 @@
         (matchMedia('(prefers-reduced-motion: reduce)').matches ? 'end' : 'start') + '.jpg?v={{FILM_VERSION}}';
       </script>
       <p id="film-words" class="visually-hidden">The film's words: Your private space. Opens only for you. Face ID, or a passcode of its own. Bring in photos and videos. From Photos, Files or the camera. Encrypted as they arrive. Right on your iPhone. Sorted into albums. Even album names are encrypted. Privacy that fits the moment. Choose how strict it is. Asked to open it? A fake passcode opens a decoy vault. Decoy Vault is part of Privaro Pro. Encrypted on your iPhone. With a key that stays on it. AES-256, no account, works offline. Change the icon. Or disguise it as an everyday app. Disguise icons are part of Privaro Pro. Your colour, on the lock screen. Indigo, Ocean, Emerald, Sunset and more. Hide it behind a calculator. Type your passcode, then press =. Privaro. Your space. Your privacy. Available on the App Store.</p>
+      <!-- Where the film is, along its bottom edge: click or drag it to move. -->
+      <div class="film-progress" role="slider" tabindex="0" aria-label="Film position" hidden><span class="film-progress-track"><span class="film-progress-fill"></span></span></div>
       <!-- Over the film's bottom corner, on their own. -->
       <span class="film-controls">
         <button class="film-button film-sound" type="button" aria-pressed="false" hidden><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8v4h3l4 3.5v-11L6 8z" /><path class="film-waves" d="M13 7.5a3.5 3.5 0 0 1 0 5M15 5a7 7 0 0 1 0 10" /><path class="film-muted" d="m13.5 8 4 4m0-4-4 4" /></svg>Sound</button>
