@@ -124,17 +124,20 @@
        recording of the real app (the Privaro repo's PromoVideo project).
        Its words are in the picture, in English, so build.py puts it on the
        English homepage only. film.js plays it once when it's on screen;
-       without JavaScript it's an ordinary video with controls. -->
+       without JavaScript it's an ordinary video with controls.
+       The ?v= on each address is a fingerprint of the files in film/
+       (build.py), so a new cut gets new addresses and no browser keeps
+       playing the old one. -->
   <section class="film wrap" aria-label="Privaro in 26 seconds">
     <figure class="film-card rise" style="--anim:fade">
       <video class="film-video" width="1920" height="1080" muted playsinline preload="none" controls aria-describedby="film-words">
-        <source src="/film/privaro-vertical.mp4" type="video/mp4" media="(max-width: 760px)" />
-        <source src="/film/privaro-landscape.mp4" type="video/mp4" />
+        <source src="/film/privaro-vertical.mp4?v=3627df86fc" type="video/mp4" media="(max-width: 760px)" />
+        <source src="/film/privaro-landscape.mp4?v=3627df86fc" type="video/mp4" />
       </video>
       <script>
       // The poster that matches the source the browser picked, before anything is drawn.
       document.currentScript.previousElementSibling.poster =
-        matchMedia('(max-width: 760px)').matches ? '/film/privaro-vertical.jpg' : '/film/privaro-landscape.jpg';
+        matchMedia('(max-width: 760px)').matches ? '/film/privaro-vertical.jpg?v=3627df86fc' : '/film/privaro-landscape.jpg?v=3627df86fc';
       </script>
       <p id="film-words" class="visually-hidden">The film's words: Your private space. Opens only for you. Face ID, or a passcode of its own. Bring in photos and videos. Encrypted the moment they’re added. Sorted into albums. Even album names are encrypted. Privacy that fits the moment. Choose how strict it is. Encrypted on your iPhone. With a key that stays on it. AES-256, no account, works offline. Privaro. Your space. Your privacy. Available on the App Store.</p>
       <figcaption>

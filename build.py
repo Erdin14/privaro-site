@@ -20,6 +20,7 @@ changes.
 """
 import csv
 import glob
+import hashlib
 import json
 import os
 
@@ -232,13 +233,26 @@ def read_template(name):
     return html
 
 
+def film_version():
+    """A short fingerprint of everything in film/. The page asks for the film by
+    a URL that ends in it, so replacing the film changes its URLs and browsers
+    fetch it again instead of replaying the copy they kept (privaroapp.nl lets
+    them keep video for hours)."""
+    digest = hashlib.sha256()
+    for path in sorted(glob.glob(os.path.join(ROOT, "film", "*"))):
+        digest.update(os.path.basename(path).encode())
+        with open(path, "rb") as f:
+            digest.update(f.read())
+    return digest.hexdigest()[:10]
+
+
 def film_block(code):
     """The homepage film. Its words are in the picture, in English, so only the
     English homepage shows it; every other language's page goes without."""
     if code != "en":
         return ""
     with open(os.path.join(ROOT, "templates", "partials", "film.html"), encoding="utf-8") as f:
-        return "\n" + f.read().rstrip("\n") + "\n"
+        return "\n" + f.read().rstrip("\n").replace("{{FILM_VERSION}}", film_version()) + "\n"
 
 
 def render(html, page, code, htmllang, head, strings, pricing):
