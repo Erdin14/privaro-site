@@ -181,6 +181,16 @@ h1, h2 { font-weight: 600; }
 .wordmark { margin-top: var(--space-5); margin-inline-start: -.045em; font-family: var(--display); font-size: var(--size-mark);
   font-weight: 700; line-height: .86; letter-spacing: var(--track-mark); color: var(--ink); }
 .wordmark .rise { display: inline-block; padding-inline-end: .06em; }
+/* "Privaro" briefly reads "Private" (the script at the end of index.html).
+   The letters underneath stay "ro", so screen readers and copying always
+   get the name; the "te" is only drawn over them. */
+.wordmark .rise { direction: ltr; }
+.wordmark .tail { position: relative; }
+/* Normal line height, so its baseline sits where the letters' does (the
+   name's own line height is too tight for an overlay to inherit). */
+.wordmark .tail::after { content: "te"; position: absolute; top: 0; left: 0; line-height: normal; visibility: hidden; color: var(--ink); }
+.wordmark .tail.flip { color: transparent; }
+.wordmark .tail.flip::after { visibility: visible; }
 .hero-copy { padding-bottom: .2em; }
 .tagline { font-family: var(--display); font-size: var(--size-title); font-weight: 600; line-height: 1.1;
   letter-spacing: var(--track-title); text-wrap: balance; }
