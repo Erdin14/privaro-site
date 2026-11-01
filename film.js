@@ -1,8 +1,8 @@
 // The homepage film: plays once, muted, when most of it is on screen, and
-// stops on its last frame, the end card. It never loops: it's a 26-second
+// stops on its last frame, the end card. It never loops: it's a minute-long
 // piece with a beginning and an end, and the page around it is for reading.
 // Scrolling away pauses it and coming back resumes it; Pause, Sound and Play
-// again are in its caption. With Reduce Motion it waits for Play.
+// again float over its corner. With Reduce Motion it waits for Play.
 (() => {
   const figure = document.querySelector('.film-card');
   if (!figure) return;

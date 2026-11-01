@@ -1,12 +1,13 @@
-  <!-- The app in motion: unlock to lock in 26 seconds, every screen a
-       recording of the real app (the Privaro repo's PromoVideo project).
+  <!-- The app in motion: a minute from unlock to the calculator disguise,
+       every screen a recording of the real app (the Privaro repo's
+       PromoVideo project).
        Its words are in the picture, in English, so build.py puts it on the
        English homepage only. film.js plays it once when it's on screen;
        without JavaScript it's an ordinary video with controls.
        The ?v= on each address is a fingerprint of the files in film/
        (build.py), so a new cut gets new addresses and no browser keeps
        playing the old one. -->
-  <section class="film wrap" aria-label="Privaro in 26 seconds">
+  <section class="film wrap" aria-label="Privaro in one minute">
     <figure class="film-card rise" style="--anim:fade">
       <video class="film-video" width="1920" height="1080" muted playsinline preload="none" controls aria-describedby="film-words">
         <source src="/film/privaro-vertical.mp4?v={{FILM_VERSION}}" type="video/mp4" media="(max-width: 760px)" />
@@ -20,7 +21,7 @@
         (matchMedia('(max-width: 760px)').matches ? 'vertical' : 'landscape') + '-' +
         (matchMedia('(prefers-reduced-motion: reduce)').matches ? 'end' : 'start') + '.jpg?v={{FILM_VERSION}}';
       </script>
-      <p id="film-words" class="visually-hidden">The film's words: Your private space. Opens only for you. Face ID, or a passcode of its own. Bring in photos and videos. Encrypted the moment they’re added. Sorted into albums. Even album names are encrypted. Privacy that fits the moment. Choose how strict it is. Encrypted on your iPhone. With a key that stays on it. AES-256, no account, works offline. Privaro. Your space. Your privacy. Available on the App Store.</p>
+      <p id="film-words" class="visually-hidden">The film's words: Your private space. Opens only for you. Face ID, or a passcode of its own. Bring in photos and videos. From Photos, Files or the camera. Encrypted as they arrive. Right on your iPhone. Sorted into albums. Even album names are encrypted. Privacy that fits the moment. Choose how strict it is. Asked to open it? A fake passcode opens a decoy vault. Decoy Vault is part of Privaro Pro. Encrypted on your iPhone. With a key that stays on it. AES-256, no account, works offline. Change the icon. Or disguise it as an everyday app. Disguise icons are part of Privaro Pro. Your colour, on the lock screen. Indigo, Ocean, Emerald, Sunset and more. Hide it behind a calculator. Type your passcode, then press =. Privaro. Your space. Your privacy. Available on the App Store.</p>
       <!-- Over the film's bottom corner, on their own. -->
       <span class="film-controls">
         <button class="film-button film-sound" type="button" aria-pressed="false" hidden><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8v4h3l4 3.5v-11L6 8z" /><path class="film-waves" d="M13 7.5a3.5 3.5 0 0 1 0 5M15 5a7 7 0 0 1 0 10" /><path class="film-muted" d="m13.5 8 4 4m0-4-4 4" /></svg>Sound</button>
