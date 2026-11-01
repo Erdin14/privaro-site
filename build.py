@@ -232,8 +232,18 @@ def read_template(name):
     return html
 
 
+def film_block(code):
+    """The homepage film. Its words are in the picture, in English, so only the
+    English homepage shows it; every other language's page goes without."""
+    if code != "en":
+        return ""
+    with open(os.path.join(ROOT, "templates", "partials", "film.html"), encoding="utf-8") as f:
+        return "\n" + f.read().rstrip("\n") + "\n"
+
+
 def render(html, page, code, htmllang, head, strings, pricing):
     """Fill in a template for one language. `page` decides where the language links go."""
+    html = html.replace("{{FILM}}", film_block(code))
     html = html.replace("{{LANG}}", htmllang)
     html = html.replace("{{DIR}}", "rtl" if code in RTL else "ltr")
     html = html.replace("{{SHOTS}}", SHOTS + (FOLDER[code] + "/" if FOLDER[code] else ""))

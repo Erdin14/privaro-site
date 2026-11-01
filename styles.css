@@ -95,11 +95,11 @@ h1, h2 { font-weight: 600; }
 .appstore:hover { opacity: .86; }
 
 /* Pressed controls give a little under the finger, then spring back. */
-:is(.appstore, .head-get, .vignette-replay, .lang summary, .shot-viewer button) {
+:is(.appstore, .head-get, .vignette-replay, .film-button, .lang summary, .shot-viewer button) {
   transition: scale var(--dur-reveal) var(--ease), color var(--dur-state) var(--ease-state),
     background-color var(--dur-state) var(--ease-state), border-color var(--dur-state) var(--ease-state),
     opacity var(--dur-state) var(--ease-state); }
-:is(.appstore, .head-get, .vignette-replay, .lang summary, .shot-viewer button):active {
+:is(.appstore, .head-get, .vignette-replay, .film-button, .lang summary, .shot-viewer button):active {
   scale: .97; transition-duration: var(--dur-press); }
 
 /* Header, on every page: one small pill floating at the top, like the
@@ -244,6 +244,32 @@ h1, h2 { font-weight: 600; }
 }
 .reveal-pending { opacity: .65; transform: translateY(10px); }
 
+/* Film: the app in motion, in one card like the security illustration's,
+   sized so all of it fits on screen at once. Wide on larger screens, upright
+   on phones (two sources, one <video>). Its caption carries the controls. */
+.film { padding-top: var(--section); }
+.film-card { width: min(100%, calc((100vh - 200px) * 16 / 9)); width: min(100%, calc((100svh - 200px) * 16 / 9));
+  margin: 0 auto; border: 1px solid var(--rule); border-radius: var(--radius-surface); overflow: hidden;
+  background: rgb(255 255 255 / .025); }
+.film-video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; background: #09090b; }
+.film-card[data-ready] .film-video { cursor: pointer; }
+.film figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
+  gap: 4px 16px; min-height: 76px; padding: 8px 20px 12px; border-top: 1px solid var(--rule);
+  color: var(--muted); font-size: var(--size-small); }
+.film-controls { display: flex; gap: var(--space-4); margin-inline-start: auto; }
+/* One icon per state: play, pause or play again; sound on or off. */
+.film-play :is(.film-icon-pause, .film-icon-again),
+.film-card[data-state="pause"] .film-play :is(.film-icon-play, .film-icon-again),
+.film-card[data-state="again"] .film-play :is(.film-icon-play, .film-icon-pause),
+.film-sound[aria-pressed="false"] .film-waves, .film-sound[aria-pressed="true"] .film-muted { display: none; }
+.film-card[data-state="pause"] .film-play .film-icon-pause,
+.film-card[data-state="again"] .film-play .film-icon-again { display: inline; }
+@media (max-width: 760px) {
+  .film-card { width: min(100%, calc((100vh - 200px) * 9 / 16)); width: min(100%, calc((100svh - 200px) * 9 / 16)); }
+  .film-video { aspect-ratio: 9 / 16; }
+  .film figcaption { padding-inline: 16px; }
+}
+
 /* Security: one statement across the page; under it one card, the
    illustration's phone rising out of its bottom edge and, beside the phone,
    the facts: each a title, then how. */
@@ -370,12 +396,12 @@ h1, h2 { font-weight: 600; }
 .privacy-vignette figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
   gap: 4px 16px; min-height: 76px; padding: 8px 20px 12px; border-top: 1px solid var(--rule);
   color: var(--muted); font-size: var(--size-small); }
-.vignette-replay { display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+.vignette-replay, .film-button { display: inline-flex; align-items: center; justify-content: center; gap: 6px;
   min-height: 44px; padding: 8px 4px; border: 0; border-radius: 6px;
   background: none; color: var(--ink); font: inherit; cursor: pointer; }
-.vignette-replay[hidden] { display: none; }
+:is(.vignette-replay, .film-button)[hidden] { display: none; }
 .vignette-replay:disabled { opacity: .45; cursor: default; }
-.vignette-replay svg { width: 16px; height: 16px; }
+:is(.vignette-replay, .film-button) svg { width: 16px; height: 16px; }
 @media (max-width: 760px) {
   .privacy-vignette figcaption { min-height: 96px; }
 }
@@ -387,7 +413,7 @@ h1, h2 { font-weight: 600; }
 @media (prefers-reduced-motion: reduce) {
   .reveal-pending { opacity: 1; transform: none; }
   .shot-open, .shot-open.tilting { transition: opacity .2s, filter .2s; }
-  :is(.appstore, .head-get, .vignette-replay, .lang summary, .shot-viewer button):active { scale: none; }
+  :is(.appstore, .head-get, .vignette-replay, .film-button, .lang summary, .shot-viewer button):active { scale: none; }
 }
 
 /* A matte graphite surface. A broad, static tonal shift gives the canvas
