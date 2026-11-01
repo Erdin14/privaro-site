@@ -131,22 +131,23 @@
   <section class="film wrap" aria-label="Privaro in 26 seconds">
     <figure class="film-card rise" style="--anim:fade">
       <video class="film-video" width="1920" height="1080" muted playsinline preload="none" controls aria-describedby="film-words">
-        <source src="/film/privaro-vertical.mp4?v=3627df86fc" type="video/mp4" media="(max-width: 760px)" />
-        <source src="/film/privaro-landscape.mp4?v=3627df86fc" type="video/mp4" />
+        <source src="/film/privaro-vertical.mp4?v=6644185604" type="video/mp4" media="(max-width: 760px)" />
+        <source src="/film/privaro-landscape.mp4?v=6644185604" type="video/mp4" />
       </video>
       <script>
-      // The poster that matches the source the browser picked, before anything is drawn.
-      document.currentScript.previousElementSibling.poster =
-        matchMedia('(max-width: 760px)').matches ? '/film/privaro-vertical.jpg?v=3627df86fc' : '/film/privaro-landscape.jpg?v=3627df86fc';
+      // The poster for the source the browser picked, before anything is drawn:
+      // the film's own first frame, so starting it changes nothing on screen, or
+      // with Reduce Motion, where it waits for Play, the end card.
+      document.currentScript.previousElementSibling.poster = '/film/privaro-' +
+        (matchMedia('(max-width: 760px)').matches ? 'vertical' : 'landscape') + '-' +
+        (matchMedia('(prefers-reduced-motion: reduce)').matches ? 'end' : 'start') + '.jpg?v=6644185604';
       </script>
       <p id="film-words" class="visually-hidden">The film's words: Your private space. Opens only for you. Face ID, or a passcode of its own. Bring in photos and videos. Encrypted the moment they’re added. Sorted into albums. Even album names are encrypted. Privacy that fits the moment. Choose how strict it is. Encrypted on your iPhone. With a key that stays on it. AES-256, no account, works offline. Privaro. Your space. Your privacy. Available on the App Store.</p>
-      <figcaption>
-        <span>From unlock to lock in 26 seconds. Every screen is the real app.</span>
-        <span class="film-controls">
-          <button class="film-button film-sound" type="button" aria-pressed="false" hidden><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8v4h3l4 3.5v-11L6 8z" /><path class="film-waves" d="M13 7.5a3.5 3.5 0 0 1 0 5M15 5a7 7 0 0 1 0 10" /><path class="film-muted" d="m13.5 8 4 4m0-4-4 4" /></svg>Sound</button>
-          <button class="film-button film-play" type="button" hidden><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="film-icon-play" d="M6.5 4.5v11l9-5.5z" /><path class="film-icon-pause" d="M7 4.5v11M13 4.5v11" /><path class="film-icon-again" d="M4 7a6 6 0 1 1 0 6M4 3v4h4" /></svg><span class="film-play-label">Play</span></button>
-        </span>
-      </figcaption>
+      <!-- Over the film's bottom corner, on their own. -->
+      <span class="film-controls">
+        <button class="film-button film-sound" type="button" aria-pressed="false" hidden><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8v4h3l4 3.5v-11L6 8z" /><path class="film-waves" d="M13 7.5a3.5 3.5 0 0 1 0 5M15 5a7 7 0 0 1 0 10" /><path class="film-muted" d="m13.5 8 4 4m0-4-4 4" /></svg>Sound</button>
+        <button class="film-button film-play" type="button" hidden><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="film-icon-play" d="M6.5 4.5v11l9-5.5z" /><path class="film-icon-pause" d="M7 4.5v11M13 4.5v11" /><path class="film-icon-again" d="M4 7a6 6 0 1 1 0 6M4 3v4h4" /></svg><span class="film-play-label">Play</span></button>
+      </span>
     </figure>
   </section>
   <script src="/film.js" defer></script>

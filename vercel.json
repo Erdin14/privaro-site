@@ -20,7 +20,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'none'; script-src 'self' 'sha256-2t9/JCd0ZJ0FCbrFDNSawlUyngRbBvnxVW83fqzl0/c=' 'sha256-8QA3Q3/K6rh8jBK+sSidsANJTy7SMTUk89PmJ+uFfMA=' 'sha256-QYQCB5ols9KKs/jl9VZ/8Z0AF1nisbMBbW7RX0Gf3Qs=' 'sha256-SOQ856XumM2LRxrneO7EVVApXE+AvvAxZuCyz6ijfJs=' 'sha256-bAfKoVzTF5RSF3eeE0rkO+gQ/Qu2WyTuO8kRCUBg2jA=' 'sha256-of4czD5YVBnVz1SHX75QKex+vTjOhM/XS6CC/Ntf2/o=' 'sha256-tVuiLzjNPDVI6pDETBxZTxftg4Tmtks6xw+BmT/cSWg='; style-src 'self' 'unsafe-inline'; img-src 'self'; media-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests"
+          "value": "default-src 'none'; script-src 'self' 'sha256-2t9/JCd0ZJ0FCbrFDNSawlUyngRbBvnxVW83fqzl0/c=' 'sha256-8QA3Q3/K6rh8jBK+sSidsANJTy7SMTUk89PmJ+uFfMA=' 'sha256-QYQCB5ols9KKs/jl9VZ/8Z0AF1nisbMBbW7RX0Gf3Qs=' 'sha256-SOQ856XumM2LRxrneO7EVVApXE+AvvAxZuCyz6ijfJs=' 'sha256-of4czD5YVBnVz1SHX75QKex+vTjOhM/XS6CC/Ntf2/o=' 'sha256-tVuiLzjNPDVI6pDETBxZTxftg4Tmtks6xw+BmT/cSWg=' 'sha256-uPZaQW9cCgHbQ1FP5Jfn+iXAF8l04CfD1J/iqkt5CC0='; style-src 'self' 'unsafe-inline'; img-src 'self'; media-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests"
         },
         {
           "key": "X-Content-Type-Options",
