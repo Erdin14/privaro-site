@@ -62,7 +62,12 @@
       if (target) { target.classList.remove('reveal-pending'); observer.unobserve(target); }
     };
     document.addEventListener('focusin', event => expose(event.target));
-    window.addEventListener('hashchange', () => expose(document.getElementById(decodeURIComponent(location.hash.slice(1)))));
+    window.addEventListener('hashchange', () => {
+      let id;
+      try { id = decodeURIComponent(location.hash.slice(1)); }
+      catch { return; } // An invalid escape is not an anchor destination.
+      expose(document.getElementById(id));
+    });
   }
 
   const figures = [...document.querySelectorAll('.shots figure')];

@@ -4,7 +4,8 @@
 Run from the repo root:  python3 build.py
 English is written to the repo root (/index.html, /pro.html); every other
 language gets its own folder (/es/index.html, /es/pro.html, ...). Output is
-committed, so Vercel just serves static files (no build step on their end).
+committed for the existing Vercel setup. Each build also packages only the
+intended public files into dist/, the Cloudflare Pages build output directory.
 
 Shared pieces live in templates/partials/ and are pulled in with {{HEADER}}
 and {{FOOTER}}. The build also writes 404.html, sitemap.xml and robots.txt,
@@ -27,9 +28,11 @@ import hashlib
 import json
 import os
 import re
+import shutil
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 BASE_URL = "https://privaroapp.nl"
+PUBLIC_DIR = os.path.join(ROOT, "dist")
 
 # Security headers for every response, on both hosts. Nothing on the site needs
 # more than this: every script and file is our own, there are no forms, frames,
@@ -262,15 +265,19 @@ def read_template(name):
     return html
 
 
+def public_pages():
+    """Only generated visitor-facing pages; never templates, legacy or dist/."""
+    return ([out_path(page, code) for page in PAGES for code, _, _, _ in LANGS]
+            + list(ENGLISH_ONLY.values()) + ["404.html"])
+
+
 def inline_script_hashes():
     """The SHA-256 of every inline <script> on every page we serve, for the
     Content Security Policy. Read from the written pages, so a script edited in
     a template is allowed as soon as the build runs, and nothing else is."""
     hashes = set()
-    for path in glob.glob(os.path.join(ROOT, "**", "*.html"), recursive=True):
-        if os.path.relpath(path, ROOT).split(os.sep)[0] == "templates":
-            continue
-        with open(path, encoding="utf-8") as f:
+    for rel in public_pages():
+        with open(os.path.join(ROOT, rel), encoding="utf-8") as f:
             for body in INLINE_SCRIPT.findall(f.read()):
                 hashes.add(base64.b64encode(hashlib.sha256(body.encode("utf-8")).digest()).decode())
     return sorted(hashes)
@@ -387,7 +394,7 @@ def write(rel, text):
         text = version_assets(text)
     dest = os.path.join(ROOT, rel)
     os.makedirs(os.path.dirname(dest) or ".", exist_ok=True)
-    with open(dest, "w", encoding="utf-8") as f:
+    with open(dest, "w", encoding="utf-8", newline="\n") as f:
         f.write(text)
     print("wrote", rel)
 
@@ -408,6 +415,46 @@ def sitemap():
         out.extend(["  <url>", f"    <loc>{BASE_URL}{page_url(page, 'en')}</loc>", "  </url>"])
     out.append("</urlset>")
     return "\n".join(out) + "\n"
+
+
+def package_public_site():
+    """Recreate the publication artifact from an explicit public-file manifest."""
+    files = public_pages() + [
+        "_headers", "_redirects", "robots.txt", "sitemap.xml",
+        ".well-known/apple-app-site-association", ".well-known/security.txt",
+        "styles.css", "transitions.css", "decrypt.js", "film.js",
+        "presentation.js", "price.js", "privacy-vignette.js",
+        "appstore-badge.svg", "appstore-badge-white.svg", "logo.png", "og.jpg",
+    ]
+    # Only media belongs in these asset trees; hidden/build/config files do not.
+    for directory in ("art", "shots", "film"):
+        for current, dirs, names in os.walk(os.path.join(ROOT, directory)):
+            if any(os.path.islink(os.path.join(current, name)) for name in dirs + names):
+                raise SystemExit("Refusing symlinks in public asset trees")
+            dirs[:] = sorted(name for name in dirs if not name.startswith("."))
+            for name in sorted(names):
+                if not name.startswith(".") and os.path.splitext(name)[1].lower() in {
+                    ".png", ".jpg", ".jpeg", ".svg", ".webp", ".avif", ".mp4"
+                }:
+                    files.append(os.path.relpath(os.path.join(current, name), ROOT))
+
+    # Resolve and check the exact fixed target before removing a stale artifact.
+    # Never let a symlink/junction redirect cleanup outside this repository.
+    if os.path.realpath(PUBLIC_DIR) != os.path.join(os.path.realpath(ROOT), "dist"):
+        raise SystemExit("Refusing an output directory redirected outside ROOT/dist")
+    if os.path.lexists(PUBLIC_DIR):
+        if os.path.islink(PUBLIC_DIR) or not os.path.isdir(PUBLIC_DIR):
+            raise SystemExit("dist must be a real directory")
+        shutil.rmtree(PUBLIC_DIR)
+    for rel in files:
+        source = os.path.join(ROOT, rel)
+        expected = os.path.normpath(os.path.join(os.path.realpath(ROOT), rel))
+        if os.path.normcase(os.path.realpath(source)) != os.path.normcase(expected):
+            raise SystemExit(f"Refusing redirected public source: {rel}")
+        dest = os.path.join(PUBLIC_DIR, rel)
+        os.makedirs(os.path.dirname(dest), exist_ok=True)
+        shutil.copyfile(source, dest)
+    print(f"packaged {len(files)} public files into dist/")
 
 
 def main():
@@ -443,6 +490,7 @@ def main():
 
     # Last: the policy pins the inline scripts of the pages written above.
     write_security_headers()
+    package_public_site()
 
 
 if __name__ == "__main__":
