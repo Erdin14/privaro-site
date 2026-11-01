@@ -1,0 +1,5 @@
+# Cloudflare Pages (privaroapp.nl) reads this file; vercel.json has the same
+# redirects for the Vercel copy. /open is the In-App Event's Open link: with
+# Privaro installed it opens the app, without it, the homepage.
+/open    /  302
+/open/*  /  302

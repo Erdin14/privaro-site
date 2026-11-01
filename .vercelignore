@@ -3,3 +3,5 @@ icon-180 copy.png
 templates
 i18n
 build.py
+_headers
+_redirects

@@ -24,7 +24,7 @@ import json
 import os
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-BASE_URL = "https://privaro-site.vercel.app"
+BASE_URL = "https://privaroapp.nl"
 
 # code, url-folder ("" = repo root), html lang attribute, autonym shown in the menu
 LANGS = [

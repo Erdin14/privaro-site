@@ -1,0 +1,10 @@
+# Cloudflare Pages (privaroapp.nl) reads this file; vercel.json says the same
+# for the Vercel copy. Keep the two in step.
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+/.well-known/apple-app-site-association
+  Content-Type: application/json
