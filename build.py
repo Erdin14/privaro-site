@@ -53,6 +53,8 @@ SECURITY_HEADERS = [
     ("X-Permitted-Cross-Domain-Policies", "none"),
 ]
 INLINE_SCRIPT = re.compile(r"<script(?![^>]*\bsrc=)[^>]*>(.*?)</script>", re.S)
+# Our own stylesheets and scripts, as the pages link them.
+LOCAL_ASSET = re.compile(r'((?:href|src)=")(/[\w./-]+\.(?:css|js))(")')
 
 # code, url-folder ("" = repo root), html lang attribute, autonym shown in the menu
 LANGS = [
@@ -366,7 +368,23 @@ def render(html, page, code, htmllang, head, strings, pricing):
     return html
 
 
+def fingerprint(rel):
+    """A short hash of one of our files, for its URL."""
+    with open(os.path.join(ROOT, rel.lstrip("/")), "rb") as f:
+        return hashlib.sha256(f.read()).hexdigest()[:10]
+
+
+def version_assets(html):
+    """Every stylesheet and script a page links gets ?v= and a hash of its
+    contents. privaroapp.nl lets browsers keep these for hours, so without it a
+    returning visitor gets a new page with yesterday's CSS; with it, changing a
+    file changes its URL and browsers fetch it again."""
+    return LOCAL_ASSET.sub(lambda m: f"{m.group(1)}{m.group(2)}?v={fingerprint(m.group(2))}{m.group(3)}", html)
+
+
 def write(rel, text):
+    if rel.endswith(".html"):
+        text = version_assets(text)
     dest = os.path.join(ROOT, rel)
     os.makedirs(os.path.dirname(dest) or ".", exist_ok=True)
     with open(dest, "w", encoding="utf-8") as f:
@@ -395,6 +413,12 @@ def sitemap():
 def main():
     strings = load_strings()
     pricing = load_pricing()
+    # price.js first: the pages link it by a hash of its contents.
+    with open(os.path.join(ROOT, "templates", "price.js"), encoding="utf-8") as f:
+        script = f.read()
+    data = {"base": pricing["base"], "lang": pricing["lang"], "zones": pricing["zones"], "usd": pricing["usd_local"],
+            "prices": {cc: [cur, amt] for cc, (cur, amt) in sorted(pricing["prices"].items())}}
+    write("price.js", script.replace("/*DATA*/null", json.dumps(data, ensure_ascii=False, separators=(",", ":"))))
     for page, _ in PAGES.items():
         template = read_template(PAGES[page])
         for code, _, htmllang, _ in LANGS:
@@ -413,11 +437,6 @@ def main():
                   '<meta name="robots" content="noindex" />', strings, pricing)
     write("404.html", html)
 
-    with open(os.path.join(ROOT, "templates", "price.js"), encoding="utf-8") as f:
-        script = f.read()
-    data = {"base": pricing["base"], "lang": pricing["lang"], "zones": pricing["zones"], "usd": pricing["usd_local"],
-            "prices": {cc: [cur, amt] for cc, (cur, amt) in sorted(pricing["prices"].items())}}
-    write("price.js", script.replace("/*DATA*/null", json.dumps(data, ensure_ascii=False, separators=(",", ":"))))
 
     write("sitemap.xml", sitemap())
     write("robots.txt", f"User-agent: *\nDisallow: /screenshots\n\nSitemap: {BASE_URL}/sitemap.xml\n")

@@ -39,8 +39,8 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" href="/logo.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css" />
-<link rel="stylesheet" href="/transitions.css" />
+<link rel="stylesheet" href="/styles.css?v=e891a457c5" />
+<link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
 <script>
 // Before anything is drawn. "motion" lets the few entrances in styles.css
 // wait for the script at the end of the page; without it, or with Reduce
@@ -149,7 +149,7 @@
   </div>
   <figcaption><span>Auf deinem iPhone verschlüsselt.</span><button class="vignette-replay" type="button" hidden><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 7a6 6 0 1 1 0 6M4 3v4h4" stroke-linecap="round" stroke-linejoin="round" /></svg>Illustration erneut abspielen</button></figcaption>
 </figure>
-<script src="/privacy-vignette.js" defer></script>
+<script src="/privacy-vignette.js?v=a70ccc2c58" defer></script>
       </div>
       <dl class="ledger">
         <div><dt>AES-256</dt><dd>Jedes Foto und Video im Tresor wird direkt auf dem Gerät mit AES-256 verschlüsselt.</dd></div>
@@ -208,7 +208,7 @@ document.addEventListener('keydown', e => {
 });
 </script>
 
-<script src="/presentation.js" data-enlarge="Screenshot vergrößern: {name}" data-close="Ansicht schließen" data-previous="Vorheriger Screenshot" data-next="Nächster Screenshot" defer></script>
+<script src="/presentation.js?v=b4d16e3c61" data-enlarge="Screenshot vergrößern: {name}" data-close="Ansicht schließen" data-previous="Vorheriger Screenshot" data-next="Nächster Screenshot" defer></script>
 <script>
 // Each entrance plays once it's on screen. Inline, like the line in <head>,
 // so a script that fails to load can never leave anything hidden.
@@ -248,6 +248,6 @@ document.addEventListener('keydown', e => {
   (arrival ? arrival.finished : Promise.resolve()).then(run, () => {});
 })();
 </script>
-<script src="/price.js" defer></script>
+<script src="/price.js?v=d61773a001" defer></script>
 </body>
 </html>
