@@ -9,7 +9,7 @@
 <meta name="color-scheme" content="dark" />
 <meta name="theme-color" content="#161819" />
 {{SEO}}
-<link rel="icon" href="/logo.png" />
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
 <link rel="stylesheet" href="/styles.css" />
 <link rel="stylesheet" href="/transitions.css" />
@@ -144,15 +144,16 @@
 </script>
 <script>
 // Privaro, Private: once the name has arrived, its last two letters glitch
-// to "te": two quick flicks, then a slightly longer look, and back. Three
-// flashes in all (no more than three in a second), once, never a loop; not
-// at all with Reduce Motion. The text stays "Privaro" throughout (see .tail
-// in styles.css).
+// to "te" and back, four times, a few seconds apart: two flicks, then long
+// enough on "Private" to read it. Never more than three flashes in a second,
+// never a loop, and not at all with Reduce Motion. The text stays "Privaro"
+// throughout (see .tail in styles.css).
 (() => {
   const tail = document.querySelector('.wordmark .tail');
   if (!tail || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  const beats = [[200, true], [260, false], [310, true], [370, false], [460, true], [640, false]];
-  const run = () => beats.forEach(([at, on]) => setTimeout(() => tail.classList.toggle('flip', on), at));
+  const glitch = [[0, true], [150, false], [300, true], [1500, false]];
+  const run = () => [300, 3500, 6700, 9900].forEach(start =>
+    glitch.forEach(([at, on]) => setTimeout(() => tail.classList.toggle('flip', on), start + at)));
   const arrival = tail.closest('.rise').getAnimations()[0];
   (arrival ? arrival.finished : Promise.resolve()).then(run, () => {});
 })();

@@ -424,7 +424,7 @@ def package_public_site():
         ".well-known/apple-app-site-association", ".well-known/security.txt",
         "styles.css", "transitions.css", "decrypt.js", "film.js",
         "presentation.js", "price.js", "privacy-vignette.js",
-        "appstore-badge.svg", "appstore-badge-white.svg", "logo.png", "og.jpg",
+        "appstore-badge.svg", "appstore-badge-white.svg", "logo.png", "favicon.png", "og.jpg",
     ]
     # Only media belongs in these asset trees; hidden/build/config files do not.
     for directory in ("art", "shots", "film"):

@@ -246,14 +246,14 @@ h1, h2 { font-weight: 600; }
 
 /* Film: the app in motion, in one card like the security illustration's,
    sized so all of it fits on screen at once. Wide on larger screens, upright
-   on phones (two sources, one <video>). Sound and Play sit over its bottom
-   corner, on their own: frosted, so they read on dark and bright frames.
-   Where it is shows as a fine line along the bottom edge, which thickens
-   under the pointer; it reaches a little higher than it looks, so it's easy
-   to grab. */
+   on phones (two sources, one <video>). Sound and Play sit under it, on
+   their own, so nothing covers the picture; it's sized so they fit on
+   screen with it. Where it is shows as a fine line along the film's bottom
+   edge, which thickens under the pointer; it reaches a little higher than
+   it looks, so it's easy to grab. */
 .film { padding-top: var(--section); }
-.film-card { position: relative; width: min(100%, calc((100vh - 200px) * 16 / 9)); width: min(100%, calc((100svh - 200px) * 16 / 9));
-  margin: 0 auto; border: 1px solid var(--rule); border-radius: var(--radius-surface); overflow: hidden;
+.film-card { width: min(100%, calc((100vh - 260px) * 16 / 9)); width: min(100%, calc((100svh - 260px) * 16 / 9)); margin: 0 auto; }
+.film-frame { position: relative; border: 1px solid var(--rule); border-radius: var(--radius-surface); overflow: hidden;
   background: rgb(255 255 255 / .025); }
 .film-video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; background: #09090b; }
 .film-card[data-ready] .film-video { cursor: pointer; }
@@ -266,11 +266,10 @@ h1, h2 { font-weight: 600; }
 .film-progress-fill { position: absolute; inset: 0; background: rgb(245 245 247 / .9); transform: scaleX(0); transform-origin: left; }
 :is(.film-progress:hover, .film-progress:focus-visible, .film-card[data-seeking] .film-progress) .film-progress-track { height: 6px; }
 .film-progress:focus-visible .film-progress-fill { background: var(--blue); }
-.film-controls { position: absolute; inset-inline-end: var(--space-4); bottom: var(--space-4); display: flex; gap: var(--space-2); }
-.film-controls .film-button { min-height: 40px; padding: 8px 14px 8px 12px; border-radius: 999px; color: #f5f5f7;
-  font-size: var(--size-small); font-weight: 500; background: rgb(18 18 20 / .5); box-shadow: inset 0 0 0 1px rgb(255 255 255 / .14);
-  -webkit-backdrop-filter: blur(14px) saturate(1.4); backdrop-filter: blur(14px) saturate(1.4); }
-.film-controls .film-button:hover { background: rgb(28 28 31 / .62); }
+.film-controls { display: flex; justify-content: flex-end; gap: var(--space-2); margin-top: var(--space-3); }
+.film-controls .film-button { min-height: 40px; padding: 8px 14px 8px 12px; border-radius: var(--radius-round); color: var(--ink);
+  font-size: var(--size-small); font-weight: 500; box-shadow: inset 0 0 0 1px var(--rule); }
+.film-controls .film-button:hover { background: color-mix(in srgb, var(--ink) 8%, transparent); }
 /* One icon per state: play, pause or play again; sound on or off. */
 .film-play :is(.film-icon-pause, .film-icon-again),
 .film-card[data-state="pause"] .film-play :is(.film-icon-play, .film-icon-again),
@@ -279,9 +278,8 @@ h1, h2 { font-weight: 600; }
 .film-card[data-state="pause"] .film-play .film-icon-pause,
 .film-card[data-state="again"] .film-play .film-icon-again { display: inline; }
 @media (max-width: 760px) {
-  .film-card { width: min(100%, calc((100vh - 200px) * 9 / 16)); width: min(100%, calc((100svh - 200px) * 9 / 16)); }
+  .film-card { width: min(100%, calc((100vh - 260px) * 9 / 16)); width: min(100%, calc((100svh - 260px) * 9 / 16)); }
   .film-video { aspect-ratio: 9 / 16; }
-  .film-controls { inset-inline-end: var(--space-3); bottom: var(--space-3); }
   .film-controls .film-button { min-height: 44px; }
   .film-progress { height: 20px; }
 }
