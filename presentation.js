@@ -83,9 +83,11 @@
   dialog.className = 'shot-viewer';
   dialog.setAttribute('aria-labelledby', 'viewer-title');
   dialog.innerHTML = '<div class="viewer-surface" aria-hidden="true"></div>' +
-    '<div class="viewer-toolbar viewer-chrome"><h2 id="viewer-title"></h2><button class="viewer-close" type="button" autofocus>' + svg(icons.close) + '</button></div>' +
+    '<div class="viewer-toolbar viewer-chrome"><h2 id="viewer-title"></h2><button class="viewer-close" type="button">' + svg(icons.close) + '</button></div>' +
     '<div class="viewer-stage"><img class="viewer-image" alt="" draggable="false"></div>' +
     '<div class="viewer-navigation viewer-chrome"><button class="viewer-previous" type="button">' + svg(icons.previous) + '</button><p class="viewer-count" role="status" aria-live="polite" aria-atomic="true"></p><button class="viewer-next" type="button">' + svg(icons.next) + '</button></div>';
+  // Focusable itself, for opening by touch or mouse (see open()).
+  dialog.tabIndex = -1;
   const image = dialog.querySelector('.viewer-image');
   const surface = dialog.querySelector('.viewer-surface');
   const title = dialog.querySelector('#viewer-title');
@@ -178,7 +180,7 @@
     untilt(source.button);
     source.button.classList.add('squared');
   }
-  function open(index) {
+  function open(index, keyboard) {
     if (dialog.open) return;
     settle(sources[index]);
     const from = sources[index].original.getBoundingClientRect();
@@ -195,7 +197,10 @@
     surfaceMotion = animate(surface, [{ opacity: 0 }, { opacity: 1 }], { duration: 420, easing: 'ease-out' });
     chromeMotion = chrome.map((el, i) => animate(el, [{ opacity: 0, transform: `translateY(${i ? 8 : -8}px)` }, { opacity: 1, transform: 'none' }],
       { duration: 420, delay: 160, fill: 'backwards' }));
-    closeButton.focus({ preventScroll: true });
+    // Opened from the keyboard, focus goes to Close, ring and all. Opened by
+    // a tap or click it goes to the viewer itself: Safari rings a button
+    // focused from a script even after a tap, and Tab still reaches Close.
+    (keyboard ? closeButton : dialog).focus({ preventScroll: true });
   }
   async function close() {
     if (!dialog.open || closing) return;
@@ -237,7 +242,8 @@
     flight = animate(image, [{ opacity: 0, transform: `translateX(${shift}px) scale(.94)` }, { opacity: 1, transform: 'none' }], { duration: 520 });
     animate(title, [{ opacity: 0 }, { opacity: 1 }], { duration: 360 });
   }
-  sources.forEach((source, index) => source.button.addEventListener('click', () => open(index)));
+  // A click from Enter or Space has no click count.
+  sources.forEach((source, index) => source.button.addEventListener('click', event => open(index, event.detail === 0)));
   closeButton.addEventListener('click', close);
   previousButton.addEventListener('click', () => step(-1));
   nextButton.addEventListener('click', () => step(1));

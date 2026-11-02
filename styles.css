@@ -108,6 +108,14 @@ h1, h2 { font-weight: 600; }
    one thing content scrolls under; it firms up once that happens
    (presentation.js adds .scrolled). */
 .site-head { position: sticky; top: 0; z-index: 30; padding: var(--space-3) var(--side) 0; pointer-events: none; }
+/* And then the top of the page softens away behind it, as a scroll edge does
+   on iPhone, so the words passing under the pill don't run into it. */
+.site-head::before { content: ""; position: absolute; inset: 0 0 -28px; z-index: -1; pointer-events: none;
+  background: linear-gradient(color-mix(in srgb, var(--bg) 92%, transparent) 40%, transparent);
+  -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+  -webkit-mask-image: linear-gradient(#000 45%, transparent); mask-image: linear-gradient(#000 45%, transparent);
+  opacity: 0; transition: opacity var(--dur-reveal) var(--ease-state); }
+.site-head.scrolled::before { opacity: 1; }
 .head-row { display: flex; align-items: center; gap: 2px; width: fit-content; max-width: 100%; margin-inline: auto;
   padding: var(--space-1); border: 1px solid var(--rule); border-radius: var(--radius-round); pointer-events: auto;
   background: var(--bg); background: color-mix(in srgb, var(--bg) 70%, transparent);
@@ -350,6 +358,12 @@ h1, h2 { font-weight: 600; }
   /* Arriving through a page crossfade, the top of the page is simply there. */
   .soft-arrival :is(.hero, .gallery) .rise { animation: none; }
 }
+/* On paper nothing waits to be scrolled to: what hasn't arrived yet would
+   print as its first frame, blank or faded. */
+@media print {
+  .motion .rise { animation: none; }
+  .reveal-pending { opacity: 1; transform: none; }
+}
 
 /* ---------------------------------------------------------------- Viewer */
 
@@ -359,6 +373,8 @@ h1, h2 { font-weight: 600; }
   margin: 0; padding: 0; border: 0; background: transparent; color: #f2f2f3;
   color-scheme: dark; overflow: hidden; font-family: var(--font); }
 .shot-viewer::backdrop { background: transparent; }
+/* It takes focus itself when opened by touch or mouse; that's no place for a ring. */
+.shot-viewer:focus { outline: none; }
 /* The page stays behind it, out of focus, rather than switched off. */
 .viewer-surface { position: absolute; inset: 0; background: rgb(17 18 19 / .97); }
 @supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {

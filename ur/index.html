@@ -39,7 +39,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=3b41336d45" />
+<link rel="stylesheet" href="/styles.css?v=3bab8fd376" />
 <link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
 <script>
 // Before anything is drawn. "motion" lets the few entrances in styles.css
@@ -208,7 +208,7 @@ document.addEventListener('keydown', e => {
 });
 </script>
 
-<script src="/presentation.js?v=2852ea6760" data-enlarge="اسکرین شاٹ بڑا کریں: {name}" data-close="ویوئر بند کریں" data-previous="پچھلا اسکرین شاٹ" data-next="اگلا اسکرین شاٹ" defer></script>
+<script src="/presentation.js?v=6c61f3b4b4" data-enlarge="اسکرین شاٹ بڑا کریں: {name}" data-close="ویوئر بند کریں" data-previous="پچھلا اسکرین شاٹ" data-next="اگلا اسکرین شاٹ" defer></script>
 <script>
 // Each entrance plays once it's on screen. Inline, like the line in <head>,
 // so a script that fails to load can never leave anything hidden.
@@ -241,12 +241,15 @@ document.addEventListener('keydown', e => {
 // throughout (see .tail in styles.css).
 (() => {
   const tail = document.querySelector('.wordmark .tail');
-  if (!tail || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)');
+  if (!tail || reduce.matches) return;
   const glitch = [[0, true], [150, false], [300, true], [1500, false]];
-  const run = () => [300, 3500, 6700, 9900].forEach(start =>
-    glitch.forEach(([at, on]) => setTimeout(() => tail.classList.toggle('flip', on), start + at)));
+  const run = () => reduce.matches || [300, 3500, 6700, 9900].forEach(start =>
+    glitch.forEach(([at, on]) => setTimeout(() => tail.classList.toggle('flip', on && !reduce.matches), start + at)));
+  // Arriving through a page crossfade, the name's entrance is cancelled
+  // (it's simply there), and that's the cue as much as its finishing.
   const arrival = tail.closest('.rise').getAnimations()[0];
-  (arrival ? arrival.finished : Promise.resolve()).then(run, () => {});
+  (arrival ? arrival.finished : Promise.resolve()).then(run, run);
 })();
 </script>
 <script src="/price.js?v=5174912724" defer></script>

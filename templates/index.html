@@ -150,12 +150,15 @@
 // throughout (see .tail in styles.css).
 (() => {
   const tail = document.querySelector('.wordmark .tail');
-  if (!tail || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)');
+  if (!tail || reduce.matches) return;
   const glitch = [[0, true], [150, false], [300, true], [1500, false]];
-  const run = () => [300, 3500, 6700, 9900].forEach(start =>
-    glitch.forEach(([at, on]) => setTimeout(() => tail.classList.toggle('flip', on), start + at)));
+  const run = () => reduce.matches || [300, 3500, 6700, 9900].forEach(start =>
+    glitch.forEach(([at, on]) => setTimeout(() => tail.classList.toggle('flip', on && !reduce.matches), start + at)));
+  // Arriving through a page crossfade, the name's entrance is cancelled
+  // (it's simply there), and that's the cue as much as its finishing.
   const arrival = tail.closest('.rise').getAnimations()[0];
-  (arrival ? arrival.finished : Promise.resolve()).then(run, () => {});
+  (arrival ? arrival.finished : Promise.resolve()).then(run, run);
 })();
 </script>
 <script src="/price.js" defer></script>
