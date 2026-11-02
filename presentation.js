@@ -29,11 +29,17 @@
     observer?.disconnect();
   });
 
-  // The header turns solid once anything has scrolled under it.
+  // The header turns solid once anything has scrolled under it. Past halfway
+  // down, the canvas beyond the page takes the colour of its foot (styles.css).
   const head = document.querySelector('.site-head');
   if (head) {
     let queued = false;
-    const sync = () => { queued = false; head.classList.toggle('scrolled', scrollY > 4); };
+    const root = document.documentElement;
+    const sync = () => {
+      queued = false;
+      head.classList.toggle('scrolled', scrollY > 4);
+      root.classList.toggle('near-end', scrollY > (root.scrollHeight - innerHeight) / 2);
+    };
     addEventListener('scroll', () => { if (!queued) { queued = true; requestAnimationFrame(sync); } }, { passive: true });
     sync();
   }

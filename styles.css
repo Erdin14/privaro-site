@@ -75,7 +75,14 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { -webkit-text-size-adjust: 100%; }
-html.graphite-site { background: #161819; color-scheme: dark; }
+/* The canvas shows past the ends of the page: behind a phone's status bar at
+   the top, and in the bounce at either end. Safari paints it one flat colour,
+   so it takes the colour of whichever end is nearer: the light top of the
+   graphite (a touch lighter on the homepage, for its light), or, past halfway
+   down (presentation.js adds .near-end), its dark foot. */
+html.graphite-site { background: #1f2122; color-scheme: dark; }
+html.graphite-site:where(:has(> body.home-scene)) { background: #222324; }
+html.graphite-site.near-end { background: #111213; }
 body { background: var(--bg); color: var(--ink); font-family: var(--font); font-size: 16px; line-height: 1.5;
   -webkit-font-smoothing: antialiased; min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; }
 /* Keep the footer at the bottom of short pages. */
