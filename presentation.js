@@ -29,11 +29,11 @@
     observer?.disconnect();
   });
 
-  // The header turns solid once anything has scrolled under it, and tucks in
-  // while the page goes down, opening out again on the way back up or near
-  // the top (styles.css). It stays open with Reduce Motion, while its language
-  // menu is open, and for keyboard focus. Past halfway down, the canvas
-  // beyond the page takes the colour of its foot.
+  // The header clears to glass once anything has scrolled under it, and on
+  // phones tucks in while the page goes down, opening out again on the way
+  // back up or near the top (styles.css). It stays open with Reduce Motion,
+  // while its language menu is open, and for keyboard focus. Past halfway
+  // down, the canvas beyond the page takes the colour of its foot.
   const head = document.querySelector('.site-head');
   if (head) {
     let queued = false, lastY = scrollY, travel = 0;

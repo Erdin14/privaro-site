@@ -115,7 +115,7 @@ h1, h2 { font-weight: 600; }
 /* Header, on every page: one small pill floating at the top, like the
    island at the top of an iPhone. The way home, the other pages, and the
    download. It's the one translucent thing on the site, because it's the
-   one thing content scrolls under; it firms up once that happens
+   one thing content scrolls under; it clears further once that happens
    (presentation.js adds .scrolled). */
 .site-head { position: sticky; top: 0; z-index: 30; padding: var(--space-3) var(--side) 0; pointer-events: none; }
 /* And then the top of the page softens away behind it, as a scroll edge does
@@ -133,24 +133,19 @@ h1, h2 { font-weight: 600; }
   box-shadow: 0 10px 30px -18px rgb(0 0 0 / .6);
   transition: background-color var(--dur-reveal) var(--ease-state), box-shadow var(--dur-reveal) var(--ease-state),
     padding var(--dur-glide) var(--ease-glide); }
-.site-head.scrolled .head-row { background: color-mix(in srgb, var(--bg) 88%, transparent);
-  box-shadow: 0 14px 36px -14px rgb(0 0 0 / .75); }
+/* Once the page is scrolled, the pill clears to glass: more of the page shows
+   through it, blurred well past reading, so its own words stay clear. */
+.site-head.scrolled .head-row { background: color-mix(in srgb, var(--bg) 46%, transparent);
+  box-shadow: 0 12px 32px -18px rgb(0 0 0 / .55); }
 .brand { display: inline-flex; align-items: center; gap: var(--space-2); padding: 2px var(--space-3) 2px 2px;
   border-radius: var(--radius-round); font-size: 14px; font-weight: 600; color: var(--ink); letter-spacing: -.01em;
   transition: gap var(--dur-glide) var(--ease-glide), padding var(--dur-glide) var(--ease-glide); }
 .brand:hover { text-decoration: none; }
 .brand img { width: 28px; height: 28px; border-radius: 8px; }
-/* Scrolling down, the pill tucks in: the name folds away behind the icon and
-   the pill draws in a little. Scrolling back up, or at the top, it opens out
-   again (presentation.js adds .compact). Slowly, both ways: the name fades
-   before it folds, and comes back once there's room for it. Its fold starts
-   just wider than the name, so it begins to close at once. */
+/* On phones the name can fold away (see .compact below). Its fold starts just
+   wider than the name, so it begins to close at once. */
 .brand-name { display: inline-block; max-width: 4.2em; overflow: hidden; white-space: nowrap;
   transition: max-width var(--dur-glide) var(--ease-glide), opacity var(--dur-reveal) calc(var(--dur-glide) / 3) var(--ease-state); }
-.site-head.compact .brand-name { max-width: 0; opacity: 0;
-  transition: max-width var(--dur-glide) var(--ease-glide), opacity calc(var(--dur-glide) / 2) var(--ease-state); }
-.site-head.compact .brand { gap: 0; padding: 2px; }
-.site-head.compact .head-row { padding: 2px; }
 .head-links { display: flex; align-items: center; padding-inline-start: 6px; border-inline-start: 1px solid var(--rule); font-size: var(--size-small); }
 .head-links a { padding: 6px var(--space-3); border-radius: var(--radius-round); color: var(--muted); white-space: nowrap;
   transition: color var(--dur-state) var(--ease-state), background-color var(--dur-state) var(--ease-state); }
@@ -167,7 +162,7 @@ h1, h2 { font-weight: 600; }
   font-size: var(--size-small); background: var(--bg); background: color-mix(in srgb, var(--bg) 70%, transparent);
   -webkit-backdrop-filter: saturate(1.4) blur(18px); backdrop-filter: saturate(1.4) blur(18px);
   box-shadow: 0 10px 30px -18px rgb(0 0 0 / .6); }
-.site-head.scrolled .lang summary { background: color-mix(in srgb, var(--bg) 88%, transparent); }
+.site-head.scrolled .lang summary { background: color-mix(in srgb, var(--bg) 46%, transparent); }
 .site-head .lang summary:hover, .site-head .lang[open] summary { color: var(--ink); }
 .site-head .lang summary .chevron { transform: rotate(180deg); }
 .site-head .lang[open] summary .chevron { transform: none; }
@@ -196,7 +191,15 @@ h1, h2 { font-weight: 600; }
       background-color var(--dur-state) var(--ease-state), border-color var(--dur-state) var(--ease-state),
       opacity var(--dur-state) var(--ease-state), width var(--dur-glide) var(--ease-glide), height var(--dur-glide) var(--ease-glide); }
   .site-head .lang summary:active { transition-duration: var(--dur-press); }
-  /* Tucked in, it stays as tall as the pill: 2px padding now, not 4px. */
+  /* Scrolling down, the pill tucks in: the name folds away behind the icon and
+     the pill draws in a little, the globe with it (2px padding now, not 4px).
+     Scrolling back up, or at the top, it opens out again (presentation.js adds
+     .compact). Slowly, both ways: the name fades before it folds, and comes
+     back once there's room for it. Wider screens keep the whole pill. */
+  .site-head.compact .brand-name { max-width: 0; opacity: 0;
+    transition: max-width var(--dur-glide) var(--ease-glide), opacity calc(var(--dur-glide) / 2) var(--ease-state); }
+  .site-head.compact .brand { gap: 0; padding: 2px; }
+  .site-head.compact .head-row { padding: 2px; }
   .site-head.compact .lang summary { width: 38px; height: 38px; }
   .site-head .lang summary :is(span, .chevron) { display: none; }
   .site-head .lang summary svg { width: 15px; height: 15px; }
