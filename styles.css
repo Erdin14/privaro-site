@@ -59,7 +59,7 @@
   --dur-scene: 1200ms;
   --dur-glide: 900ms;
   /* Arrivals: quick to start, long to settle. State changes: even. The
-     header tucking in and opening out: slow, and soft at both ends. */
+     header slipping away and back: slow, and soft at both ends. */
   --ease: cubic-bezier(.16, 1, .3, 1);
   --ease-state: cubic-bezier(.4, 0, .2, 1);
   --ease-glide: cubic-bezier(.45, 0, .15, 1);
@@ -132,20 +132,15 @@ h1, h2 { font-weight: 600; }
   -webkit-backdrop-filter: saturate(1.4) blur(18px); backdrop-filter: saturate(1.4) blur(18px);
   box-shadow: 0 10px 30px -18px rgb(0 0 0 / .6);
   transition: background-color var(--dur-reveal) var(--ease-state), box-shadow var(--dur-reveal) var(--ease-state),
-    padding var(--dur-glide) var(--ease-glide); }
+    opacity var(--dur-glide) var(--ease-glide); }
 /* Once the page is scrolled, the pill clears to glass: more of the page shows
    through it, blurred well past reading, so its own words stay clear. */
 .site-head.scrolled .head-row { background: color-mix(in srgb, var(--bg) 46%, transparent);
   box-shadow: 0 12px 32px -18px rgb(0 0 0 / .55); }
 .brand { display: inline-flex; align-items: center; gap: var(--space-2); padding: 2px var(--space-3) 2px 2px;
-  border-radius: var(--radius-round); font-size: 14px; font-weight: 600; color: var(--ink); letter-spacing: -.01em;
-  transition: gap var(--dur-glide) var(--ease-glide), padding var(--dur-glide) var(--ease-glide); }
+  border-radius: var(--radius-round); font-size: 14px; font-weight: 600; color: var(--ink); letter-spacing: -.01em; }
 .brand:hover { text-decoration: none; }
 .brand img { width: 28px; height: 28px; border-radius: 8px; }
-/* On phones the name can fold away (see .compact below). Its fold starts just
-   wider than the name, so it begins to close at once. */
-.brand-name { display: inline-block; max-width: 4.2em; overflow: hidden; white-space: nowrap;
-  transition: max-width var(--dur-glide) var(--ease-glide), opacity var(--dur-reveal) calc(var(--dur-glide) / 3) var(--ease-state); }
 .head-links { display: flex; align-items: center; padding-inline-start: 6px; border-inline-start: 1px solid var(--rule); font-size: var(--size-small); }
 .head-links a { padding: 6px var(--space-3); border-radius: var(--radius-round); color: var(--muted); white-space: nowrap;
   transition: color var(--dur-state) var(--ease-state), background-color var(--dur-state) var(--ease-state); }
@@ -189,18 +184,16 @@ h1, h2 { font-weight: 600; }
   .site-head .lang summary { width: 42px; height: 42px; align-self: center; padding: 0; justify-content: center;
     transition: scale var(--dur-reveal) var(--ease), color var(--dur-state) var(--ease-state),
       background-color var(--dur-state) var(--ease-state), border-color var(--dur-state) var(--ease-state),
-      opacity var(--dur-state) var(--ease-state), width var(--dur-glide) var(--ease-glide), height var(--dur-glide) var(--ease-glide); }
+      opacity var(--dur-glide) var(--ease-glide); }
   .site-head .lang summary:active { transition-duration: var(--dur-press); }
-  /* Scrolling down, the pill tucks in: the name folds away behind the icon and
-     the pill draws in a little, the globe with it (2px padding now, not 4px).
-     Scrolling back up, or at the top, it opens out again (presentation.js adds
-     .compact). Slowly, both ways: the name fades before it folds, and comes
-     back once there's room for it. Wider screens keep the whole pill. */
-  .site-head.compact .brand-name { max-width: 0; opacity: 0;
-    transition: max-width var(--dur-glide) var(--ease-glide), opacity calc(var(--dur-glide) / 2) var(--ease-state); }
-  .site-head.compact .brand { gap: 0; padding: 2px; }
-  .site-head.compact .head-row { padding: 2px; }
-  .site-head.compact .lang summary { width: 38px; height: 38px; }
+  /* Scrolling down, the header slips out of the way: the pill and the globe
+     fade out where they are, leaving the page the whole screen, and can't be
+     tapped while they're gone. They don't move: carried up to the top edge,
+     even a few pixels' worth, they'd have Safari fill the status bar behind
+     them again. Any scroll back up, or the top of the page, fades them back
+     (presentation.js adds .tucked). Slowly, both ways. Wider screens keep the
+     header in place. */
+  .site-head.tucked :is(.head-row, .lang summary) { opacity: 0; pointer-events: none; }
   .site-head .lang summary :is(span, .chevron) { display: none; }
   .site-head .lang summary svg { width: 15px; height: 15px; }
   /* The same sheet along the bottom as the footer's menu. */
