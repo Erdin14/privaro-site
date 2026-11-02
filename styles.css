@@ -386,11 +386,19 @@ h1, h2 { font-weight: 600; }
 @keyframes fade { from { opacity: 0; } }
 @keyframes mask-rise { from { transform: translateY(108%); } }
 @keyframes phone-in { from { opacity: 0; transform: perspective(1400px) translateY(96px) rotateX(16deg) scale(.94); } }
+@keyframes phone-settle { from { opacity: 0; transform: scale(.97); } }
 @keyframes phone-up { from { transform: translateY(24%); } }
 @media (prefers-reduced-motion: no-preference) {
   .motion .rise { animation: var(--anim, fade) var(--dur-scene) var(--ease) var(--d, 0s) both paused; }
   .motion .rise.in-view { animation-play-state: running; }
   .motion .shots .rise { --d: calc(.25s + var(--i) * .1s); animation-duration: 1400ms; }
+  /* Under a finger the phones arrive where they are, fading up and growing a
+     touch, rather than rising into place: rising while the finger scrolls the
+     page the same way, they outran it, as if dragged up. Before the rule
+     below, so a crossfade arrival still has them simply there. */
+  @media (pointer: coarse) {
+    .motion .shots .rise { animation-name: phone-settle; }
+  }
   /* Arriving through a page crossfade, the top of the page is simply there. */
   .soft-arrival :is(.hero, .gallery) .rise { animation: none; }
 }
