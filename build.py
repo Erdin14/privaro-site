@@ -13,10 +13,11 @@ and the security headers for both hosts: _headers for Cloudflare Pages
 (privaroapp.nl) and the "headers" in vercel.json, from SECURITY_HEADERS below.
 Pages in ENGLISH_ONLY (the security overview) are written once, to the root.
 
-Prices: Pro's App Store price per country comes from the App Store Connect
-CSV exports in i18n/prices/; i18n/prices.json says how to fall back. Each page
-is written with the price for its language's country ({{PRICE}}), and
-price.js swaps in the visitor's own country's price in their browser.
+Prices: Pro's App Store price per country comes from the CSV files in
+i18n/prices/ (our own price list, or App Store Connect's exports);
+i18n/prices.json says how to fall back. Each page is written with the price
+for its language's country ({{PRICE}}), and price.js swaps in the visitor's
+own country's price in their browser.
 i18n/timezones.json maps time zones to countries; it was generated from the
 IANA tz database (zone.tab plus its links) and only needs a refresh if that
 changes.
@@ -167,11 +168,17 @@ def load_pricing():
     for path in sorted(glob.glob(os.path.join(ROOT, "i18n", "prices", "*.csv"))):
         with open(path, encoding="utf-8-sig", newline="") as f:
             for row in csv.DictReader(f):
-                name = row["Countries or Regions"]
-                if name not in codes:
-                    raise SystemExit(f"{os.path.basename(path)}: no country code for {name!r}; add it to i18n/countries.json")
-                price = (row["Currency Code"], float(row["Price"]))
-                cc = codes[name]
+                # A price list of our own (Country, Country code, Currency,
+                # Price) gives the ISO code; an App Store Connect export only
+                # names the country.
+                if "Country code" in row:
+                    name, cc, currency = row["Country"], row["Country code"].strip().upper(), row["Currency"]
+                else:
+                    name, currency = row["Countries or Regions"], row["Currency Code"]
+                    if name not in codes:
+                        raise SystemExit(f"{os.path.basename(path)}: no country code for {name!r}; add it to i18n/countries.json")
+                    cc = codes[name]
+                price = (currency.strip().upper(), float(row["Price"]))
                 if prices.get(cc, price) != price:
                     raise SystemExit(f"Two different prices for {name}: {prices[cc]} and {price}")
                 prices[cc] = price

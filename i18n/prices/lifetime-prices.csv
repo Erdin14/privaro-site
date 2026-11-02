@@ -1,0 +1,176 @@
+﻿Country,Country code,Currency,Price
+Afghanistan,AF,USD,19.99
+Albania,AL,USD,22.99
+Algeria,DZ,USD,19.99
+Angola,AO,USD,19.99
+Anguilla,AI,USD,19.99
+Antigua and Barbuda,AG,USD,19.99
+Argentina,AR,USD,19.99
+Armenia,AM,USD,22.99
+Australia,AU,AUD,29.99
+Austria,AT,EUR,9.99
+Azerbaijan,AZ,USD,22.99
+Bahamas,BS,USD,19.99
+Bahrain,BH,USD,19.99
+Barbados,BB,USD,22.99
+Belarus,BY,USD,22.99
+Belgium,BE,EUR,9.99
+Belize,BZ,USD,19.99
+Benin,BJ,USD,22.99
+Bermuda,BM,USD,19.99
+Bhutan,BT,USD,19.99
+Bolivia,BO,USD,19.99
+Bosnia and Herzegovina,BA,EUR,9.99
+Botswana,BW,USD,19.99
+Brazil,BR,BRL,129.90
+British Virgin Islands,VG,USD,19.99
+Brunei,BN,USD,19.99
+Bulgaria,BG,EUR,9.99
+Burkina Faso,BF,USD,19.99
+Cambodia,KH,USD,19.99
+Cameroon,CM,USD,22.99
+Canada,CA,CAD,24.99
+Cape Verde,CV,USD,19.99
+Cayman Islands,KY,USD,19.99
+Chad,TD,USD,19.99
+Chile,CL,CLP,22990.00
+China,CN,CNY,148.00
+Colombia,CO,COP,99900.00
+Congo (DRC),CD,USD,19.99
+Congo (Republic),CG,USD,22.99
+Costa Rica,CR,USD,19.99
+Croatia,HR,EUR,9.99
+Cyprus,CY,EUR,9.99
+Czechia,CZ,CZK,499.00
+Côte d'Ivoire,CI,USD,22.99
+Denmark,DK,DKK,179.00
+Dominica,DM,USD,19.99
+Dominican Republic,DO,USD,19.99
+Ecuador,EC,USD,19.99
+Egypt,EG,EGP,249.99
+El Salvador,SV,USD,19.99
+Estonia,EE,EUR,9.99
+Eswatini,SZ,USD,19.99
+Fiji,FJ,USD,19.99
+Finland,FI,EUR,9.99
+France,FR,EUR,9.99
+Gabon,GA,USD,19.99
+Gambia,GM,USD,19.99
+Georgia,GE,USD,22.99
+Germany,DE,EUR,9.99
+Ghana,GH,USD,22.99
+Greece,GR,EUR,9.99
+Grenada,GD,USD,19.99
+Guatemala,GT,USD,19.99
+Guinea-Bissau,GW,USD,19.99
+Guyana,GY,USD,19.99
+Honduras,HN,USD,19.99
+Hong Kong,HK,HKD,148.00
+Hungary,HU,HUF,8990.00
+Iceland,IS,USD,22.99
+India,IN,INR,499.00
+Indonesia,ID,IDR,99000.00
+Iraq,IQ,USD,19.99
+Ireland,IE,EUR,9.99
+Israel,IL,ILS,59.90
+Italy,IT,EUR,9.99
+Jamaica,JM,USD,19.99
+Japan,JP,JPY,3000.00
+Jordan,JO,USD,19.99
+Kazakhstan,KZ,KZT,11990.00
+Kenya,KE,USD,22.99
+Kosovo,XK,EUR,9.99
+Kuwait,KW,USD,19.99
+Kyrgyzstan,KG,USD,19.99
+Laos,LA,USD,19.99
+Latvia,LV,EUR,9.99
+Lebanon,LB,USD,19.99
+Liberia,LR,USD,19.99
+Libya,LY,USD,19.99
+Lithuania,LT,EUR,9.99
+Luxembourg,LU,EUR,9.99
+Macao,MO,USD,19.99
+Madagascar,MG,USD,19.99
+Malawi,MW,USD,19.99
+Malaysia,MY,MYR,99.90
+Maldives,MV,USD,19.99
+Mali,ML,USD,19.99
+Malta,MT,EUR,9.99
+Mauritania,MR,USD,19.99
+Mauritius,MU,USD,22.99
+Mexico,MX,MXN,99.00
+Micronesia,FM,USD,19.99
+Moldova,MD,USD,22.99
+Mongolia,MN,USD,19.99
+Montenegro,ME,EUR,9.99
+Montserrat,MS,USD,19.99
+Morocco,MA,USD,22.99
+Mozambique,MZ,USD,19.99
+Myanmar,MM,USD,19.99
+Namibia,NA,USD,19.99
+Nauru,NR,USD,19.99
+Nepal,NP,USD,22.99
+Netherlands,NL,EUR,9.99
+New Zealand,NZ,NZD,39.99
+Nicaragua,NI,USD,19.99
+Niger,NE,USD,19.99
+Nigeria,NG,NGN,7900.00
+North Macedonia,MK,USD,19.99
+Norway,NO,NOK,249.00
+Oman,OM,USD,19.99
+Pakistan,PK,PKR,1500.00
+Palau,PW,USD,19.99
+Panama,PA,USD,19.99
+Papua New Guinea,PG,USD,19.99
+Paraguay,PY,USD,19.99
+Peru,PE,PEN,89.90
+Philippines,PH,PHP,299.00
+Poland,PL,PLN,99.99
+Portugal,PT,EUR,9.99
+Qatar,QA,QAR,69.99
+Romania,RO,RON,99.99
+Russia,RU,RUB,1790.00
+Rwanda,RW,USD,19.99
+Saint Kitts and Nevis,KN,USD,19.99
+Saint Lucia,LC,USD,19.99
+Saint Vincent and the Grenadines,VC,USD,19.99
+Saudi Arabia,SA,SAR,89.99
+Senegal,SN,USD,22.99
+Serbia,RS,EUR,9.99
+Seychelles,SC,USD,19.99
+Sierra Leone,SL,USD,19.99
+Singapore,SG,SGD,29.98
+Slovakia,SK,EUR,9.99
+Slovenia,SI,EUR,9.99
+Solomon Islands,SB,USD,19.99
+South Africa,ZA,ZAR,99.99
+South Korea,KR,KRW,33000.00
+Spain,ES,EUR,9.99
+Sri Lanka,LK,USD,19.99
+Suriname,SR,USD,19.99
+Sweden,SE,SEK,249.00
+Switzerland,CH,CHF,18.00
+São Tomé and Príncipe,ST,USD,19.99
+Taiwan,TW,TWD,690.00
+Tajikistan,TJ,USD,19.99
+Tanzania,TZ,TZS,59900.00
+Thailand,TH,THB,699.00
+Tonga,TO,USD,19.99
+Trinidad and Tobago,TT,USD,19.99
+Tunisia,TN,USD,19.99
+Turkey,TR,TRY,999.99
+Turkmenistan,TM,USD,19.99
+Turks and Caicos Islands,TC,USD,19.99
+Uganda,UG,USD,22.99
+Ukraine,UA,USD,22.99
+United Arab Emirates,AE,AED,79.99
+United Kingdom,GB,GBP,19.99
+United States,US,USD,19.99
+Uruguay,UY,USD,19.99
+Uzbekistan,UZ,USD,19.99
+Vanuatu,VU,USD,19.99
+Venezuela,VE,USD,19.99
+Vietnam,VN,VND,149000.00
+Yemen,YE,USD,19.99
+Zambia,ZM,USD,22.99
+Zimbabwe,ZW,USD,22.99

@@ -1,5 +1,5 @@
 {
-  "_about": "Pro's prices come from the App Store Connect exports in i18n/prices/ (In-App Purchases > Privaro Pro > Price Schedule; download the current prices as CSV). To update, replace those files and run build.py. i18n/countries.json maps App Store Connect's country names to ISO codes. The site guesses the visitor's country in their browser (time zone, then language settings); a country with no price falls back to the country of the page's language (lang_country), then to base.",
+  "_about": "Pro's prices come from the CSV files in i18n/prices/: lifetime-prices.csv (Country, Country code, Currency, Price), or App Store Connect exports (In-App Purchases > Privaro Pro > Price Schedule; download the current prices as CSV). To update, replace those files and run build.py; a country listed twice must have the same price in both. i18n/countries.json maps App Store Connect's country names to ISO codes. The site guesses the visitor's country in their browser (time zone, then language settings); a country with no price falls back to the country of the page's language (lang_country), then to base.",
   "base": "US",
   "lang_country": {
     "en": "US",
