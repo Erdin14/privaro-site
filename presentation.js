@@ -144,7 +144,7 @@
     button.addEventListener('pointerleave', () => { cancelAnimationFrame(frame); frame = 0; untilt(button); });
   });
 
-  let current = 0, closing = false, flight, surfaceMotion;
+  let current = 0, closing = false, byKeyboard = false, flight, surfaceMotion;
   let chromeMotion = [];
   let overflow, padding;
   const rtl = document.documentElement.dir === 'rtl';
@@ -200,6 +200,7 @@
     // Opened from the keyboard, focus goes to Close, ring and all. Opened by
     // a tap or click it goes to the viewer itself: Safari rings a button
     // focused from a script even after a tap, and Tab still reaches Close.
+    byKeyboard = keyboard;
     (keyboard ? closeButton : dialog).focus({ preventScroll: true });
   }
   async function close() {
@@ -212,7 +213,10 @@
     const source = sources[current];
     settle(source);
     // On phones, the last viewed image may be outside the horizontal strip.
+    // Only the strip moves for it: the page stays where it was left.
+    const top = scrollY;
     source.button.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'instant' });
+    scrollTo({ top, behavior: 'instant' });
     const to = source.original.getBoundingClientRect();
     const returning = fly(from, to, 480);
     // The fades hold their end until the dialog is gone: a fade that ended
@@ -230,7 +234,10 @@
     document.documentElement.style.overflow = overflow;
     document.body.style.paddingRight = padding;
     closing = false;
-    source.button.focus({ preventScroll: true });
+    // From the keyboard, back to the screenshot last shown. After a tap or
+    // click the dialog puts focus back where it was, so Safari doesn't ring
+    // the screenshot.
+    if (byKeyboard) source.button.focus({ preventScroll: true });
   }
   // The next screen slides in from the side it comes from, out of a little
   // depth; the name above it follows.
@@ -264,6 +271,10 @@
       step((event.key === 'ArrowRight' ? 1 : -1) * (rtl ? -1 : 1));
     }
   });
+  // Safari on iPhone scrolls the page under the viewer whatever the page's
+  // overflow and the viewer's touch-action say; only turning down the drag
+  // itself stops it. The swipe below only needs where a touch starts and ends.
+  dialog.addEventListener('touchmove', event => event.preventDefault(), { passive: false });
   let touch;
   image.addEventListener('touchstart', event => { touch = event.touches[0]; }, { passive: true });
   image.addEventListener('touchend', event => {

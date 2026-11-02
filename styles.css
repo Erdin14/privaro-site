@@ -153,6 +153,13 @@ h1, h2 { font-weight: 600; }
 .site-head .lang[open] .lang-menu { animation-name: menu-down; }
 @keyframes menu-down { from { opacity: 0; transform: translateY(-8px) scale(.96); } }
 @media (max-width: 760px) {
+  /* On a phone the header hangs a little below the top edge instead of
+     sitting on it: over a sticky bar that touches the top, Safari fills the
+     status bar with solid colour; otherwise it lets the page show through.
+     The softened page behind the pill fades in at its top to match. */
+  .site-head { top: var(--space-3); margin-top: var(--space-3); padding-top: 0; }
+  .site-head::before { -webkit-mask-image: linear-gradient(transparent, #000 14px, #000 50%, transparent);
+    mask-image: linear-gradient(transparent, #000 14px, #000 50%, transparent); }
   .head-links { display: none; }
   .head-get { min-height: 32px; }
   /* A circle as tall as the pill beside it (32px inside, 4px padding and a
@@ -371,7 +378,10 @@ h1, h2 { font-weight: 600; }
    The image flies using transforms; the backdrop and controls only dissolve. */
 .shot-viewer { position: fixed; inset: 0; width: 100%; height: 100%; max-width: none; max-height: none;
   margin: 0; padding: 0; border: 0; background: transparent; color: #f2f2f3;
-  color-scheme: dark; overflow: hidden; font-family: var(--font); }
+  color-scheme: dark; overflow: hidden; font-family: var(--font);
+  /* A drag on it never reaches the page behind (Safari on iPhone also needs
+     presentation.js to turn the drag down). */
+  touch-action: none; overscroll-behavior: contain; }
 .shot-viewer::backdrop { background: transparent; }
 /* It takes focus itself when opened by touch or mouse; that's no place for a ring. */
 .shot-viewer:focus { outline: none; }
