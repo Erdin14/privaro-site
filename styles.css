@@ -156,10 +156,12 @@ h1, h2 { font-weight: 600; }
   /* On a phone the header hangs a little below the top edge instead of
      sitting on it: over a sticky bar that touches the top, Safari fills the
      status bar with solid colour; otherwise it lets the page show through.
-     The softened page behind the pill fades in at its top to match. */
+     With the page showing above it as well, the softened band behind the
+     pill would read as a dark bar across the screen, so phones go without
+     it: the page passes around the glass pill, as it does around Safari's
+     own toolbar. */
   .site-head { top: var(--space-3); margin-top: var(--space-3); padding-top: 0; }
-  .site-head::before { -webkit-mask-image: linear-gradient(transparent, #000 14px, #000 50%, transparent);
-    mask-image: linear-gradient(transparent, #000 14px, #000 50%, transparent); }
+  .site-head::before { content: none; }
   .head-links { display: none; }
   .head-get { min-height: 32px; }
   /* A circle as tall as the pill beside it (32px inside, 4px padding and a
