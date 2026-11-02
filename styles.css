@@ -95,11 +95,11 @@ h1, h2 { font-weight: 600; }
 .appstore:hover { opacity: .86; }
 
 /* Pressed controls give a little under the finger, then spring back. */
-:is(.appstore, .head-get, .vignette-replay, .film-button, .lang summary, .shot-viewer button) {
+:is(.appstore, .head-get, .film-button, .lang summary, .shot-viewer button) {
   transition: scale var(--dur-reveal) var(--ease), color var(--dur-state) var(--ease-state),
     background-color var(--dur-state) var(--ease-state), border-color var(--dur-state) var(--ease-state),
     opacity var(--dur-state) var(--ease-state); }
-:is(.appstore, .head-get, .vignette-replay, .film-button, .lang summary, .shot-viewer button):active {
+:is(.appstore, .head-get, .film-button, .lang summary, .shot-viewer button):active {
   scale: .97; transition-duration: var(--dur-press); }
 
 /* Header, on every page: one small pill floating at the top, like the
@@ -147,7 +147,11 @@ h1, h2 { font-weight: 600; }
 @media (max-width: 760px) {
   .head-links { display: none; }
   .head-get { min-height: 32px; }
-  .site-head .lang summary { padding: 0; aspect-ratio: 1; justify-content: center; }
+  /* A circle as tall as the pill beside it (32px inside, 4px padding and a
+     1px border, top and bottom). Its size is set outright: Safari doesn't
+     work out a width from aspect-ratio when the height comes from stretching,
+     and left it a narrow sliver. */
+  .site-head .lang summary { width: 42px; height: 42px; align-self: center; padding: 0; justify-content: center; }
   .site-head .lang summary :is(span, .chevron) { display: none; }
   .site-head .lang summary svg { width: 15px; height: 15px; }
   /* The same sheet along the bottom as the footer's menu. */
@@ -181,6 +185,9 @@ h1, h2 { font-weight: 600; }
 .wordmark { margin-top: var(--space-5); margin-inline-start: -.045em; font-family: var(--display); font-size: var(--size-mark);
   font-weight: 700; line-height: .86; letter-spacing: var(--track-mark); color: var(--ink); }
 .wordmark .rise { display: inline-block; padding-inline-end: .06em; }
+/* At this tracking an r's arm runs into the letter after it, and the i into
+   the v, so those letters get a little more room after them. */
+.wordmark .open { letter-spacing: calc(var(--track-mark) + .03em); }
 /* "Privaro" briefly reads "Private" (the script at the end of index.html).
    The letters underneath stay "ro", so screen readers and copying always
    get the name; the "te" is only drawn over them. */
@@ -308,14 +315,11 @@ h1, h2 { font-weight: 600; }
 .more:hover { text-decoration-color: var(--ink); }
 /* Here the illustration fills its half of the card, with a larger phone and
    no card or caption of its own: the headline above already says what the
-   caption says. The replay button sits in the corner. */
+   caption says. It plays once, when it scrolls into view. */
 .safety .privacy-vignette { position: absolute; inset: 0; max-width: none; margin: 0; border: 0; border-radius: 0; background: none; }
 .safety .privacy-art { --pw: 52cqw; position: absolute; inset: 0; aspect-ratio: auto; }
 .safety .vg-phone { top: 64px; }
-.safety .privacy-vignette figcaption { position: absolute; top: var(--space-2); inset-inline-start: var(--space-3);
-  min-height: 0; padding: 0; border: 0; }
-.safety .privacy-vignette figcaption > span { display: none; }
-.safety .privacy-vignette figcaption:not(:has(.vignette-replay:not([hidden]))) { display: none; }
+.safety .privacy-vignette figcaption { display: none; }
 
 /* Closing: the last word on the left; on the right the Lock Screen, rising
    out of the hairline the page ends on, as the phone in the illustration
@@ -414,12 +418,11 @@ h1, h2 { font-weight: 600; }
 .privacy-vignette figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
   gap: 4px 16px; min-height: 76px; padding: 8px 20px 12px; border-top: 1px solid var(--rule);
   color: var(--muted); font-size: var(--size-small); }
-.vignette-replay, .film-button { display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+.film-button { display: inline-flex; align-items: center; justify-content: center; gap: 6px;
   min-height: 44px; padding: 8px 4px; border: 0; border-radius: 6px;
   background: none; color: var(--ink); font: inherit; cursor: pointer; }
-:is(.vignette-replay, .film-button)[hidden] { display: none; }
-.vignette-replay:disabled { opacity: .45; cursor: default; }
-:is(.vignette-replay, .film-button) svg { width: 16px; height: 16px; }
+.film-button[hidden] { display: none; }
+.film-button svg { width: 16px; height: 16px; }
 @media (max-width: 760px) {
   .privacy-vignette figcaption { min-height: 96px; }
 }
@@ -431,7 +434,7 @@ h1, h2 { font-weight: 600; }
 @media (prefers-reduced-motion: reduce) {
   .reveal-pending { opacity: 1; transform: none; }
   .shot-open, .shot-open.tilting { transition: opacity .2s, filter .2s; }
-  :is(.appstore, .head-get, .vignette-replay, .film-button, .lang summary, .shot-viewer button):active { scale: none; }
+  :is(.appstore, .head-get, .film-button, .lang summary, .shot-viewer button):active { scale: none; }
 }
 
 /* A matte graphite surface. A broad, static tonal shift gives the canvas

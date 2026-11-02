@@ -493,25 +493,6 @@
     "ar": "مشفّر على جهاز iPhone الخاص بك.",
     "ur": "آپ کے iPhone پر انکرپٹ کیا گیا۔"
   },
-  "vignette_replay": {
-    "en": "Replay illustration",
-    "es": "Repetir ilustración",
-    "fr": "Revoir l’illustration",
-    "de": "Illustration erneut abspielen",
-    "it": "Riproduci illustrazione",
-    "pt-BR": "Repetir ilustração",
-    "zh-Hans": "重播插图",
-    "ko": "일러스트 다시 재생",
-    "nl": "Illustratie opnieuw afspelen",
-    "ja": "イラストを再生",
-    "zh-Hant": "重播插圖",
-    "ru": "Повторить иллюстрацию",
-    "tr": "Çizimi yeniden oynat",
-    "id": "Putar ulang ilustrasi",
-    "hi": "चित्रण फिर चलाएँ",
-    "ar": "إعادة تشغيل الرسم",
-    "ur": "تصویر دوبارہ چلائیں"
-  },
   "vignette_description": {
     "en": "A photo on an iPhone turns into encrypted data, illustrating on-device encryption. This is not a live security check.",
     "es": "Una foto en un iPhone se convierte en datos cifrados para ilustrar el cifrado local. No es una comprobación de seguridad en tiempo real.",

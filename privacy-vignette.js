@@ -6,7 +6,6 @@
   const figure = document.querySelector('.privacy-vignette');
   if (!figure) return;
   const reduce = matchMedia('(prefers-reduced-motion: reduce)');
-  const replay = figure.querySelector('.vignette-replay');
   const screen = figure.querySelector('.vg-screen');
   const photo = figure.querySelector('.vg-photo');
   const cipher = figure.querySelector('.vg-cipher');
@@ -23,7 +22,6 @@
     clearTimeout(scramble);
     cipher.textContent = text;
     figure.dataset.state = 'complete';
-    replay.disabled = false;
   }
   // Freshly written ciphertext churns for a moment before it settles.
   function churn(token, until) {
@@ -40,7 +38,6 @@
     played = true;
     const token = run;
     figure.dataset.state = 'playing';
-    replay.disabled = true;
     const baseDelay = document.documentElement.classList.contains('page-crossfade') ? 180 : 0;
     function animate(el, frames, duration, delay, easing = ease) {
       const animation = el.animate(frames, { duration, delay: baseDelay + delay, easing, fill: 'backwards' });
@@ -62,15 +59,12 @@
     last.finished.catch(() => {}).then(() => {
       if (token !== run) return;
       figure.dataset.state = 'complete';
-      replay.disabled = false;
       animations = [];
     });
   }
   function sync() {
-    replay.hidden = !supported || reduce.matches;
     if (reduce.matches) { settle(); observer?.disconnect(); }
   }
-  replay.addEventListener('click', play);
   reduce.addEventListener('change', sync);
   document.addEventListener('visibilitychange', () => {
     if (document.hidden && figure.dataset.state === 'playing') settle();
