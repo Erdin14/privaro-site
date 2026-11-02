@@ -213,6 +213,9 @@
     setCurrent(index);
     fit();
     dialog.showModal();
+    // Past the page's ends, behind the status bar and the address bar, the
+    // canvas darkens with the surface (styles.css).
+    document.documentElement.classList.add('viewing');
     closing = false;
     fly(from, image.getBoundingClientRect(), 620);
     surfaceMotion = animate(surface, [{ opacity: 0 }, { opacity: 1 }], { duration: 420, easing: 'ease-out' });
@@ -246,6 +249,7 @@
       animate(surface, [{ opacity: 1 }, { opacity: 0 }], { duration: 480, easing: 'ease-in-out', fill: 'forwards' }),
       ...chrome.map(el => animate(el, [{ opacity: 1 }, { opacity: 0 }], { duration: 160, fill: 'forwards' }))
     ];
+    document.documentElement.classList.remove('viewing');
     await finish(returning);
     source.original.style.visibility = '';
     dialog.close();
