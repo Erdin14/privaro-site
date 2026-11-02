@@ -209,9 +209,13 @@ h1, h2 { font-weight: 600; }
 .gallery { margin-top: var(--space-9); }
 .shots { display: flex; justify-content: center; gap: clamp(20px, 2.6vw, 44px); }
 .shots figure { flex: 0 1 312px; min-width: 0; max-width: calc(72vh * .4832); margin: 0; perspective: 1600px; }
-/* Each screenshot is a JPEG of the phone in its frame, cut to the phone's
-   outline (body and side buttons) by a mask drawn from the same
-   measurements. A transparent AVIF came out blank in Chrome. */
+/* Each screenshot is the phone in its frame, cut to the phone's outline
+   (body and side buttons) by a mask drawn from the same measurements. It's
+   WebP, a quarter of the JPEG's size, with the JPEG for browsers without it;
+   the <picture> around each one takes no space of its own. AVIF came out
+   blank in Chrome, both transparent and from macOS's encoder (which writes a
+   tiled grid). */
+:is(.shots, .closing-shot) picture { display: contents; }
 .shots img { width: 100%; height: auto;
   -webkit-mask-image: url(/shots/framed-18-pro-max/phone-mask.svg); mask-image: url(/shots/framed-18-pro-max/phone-mask.svg);
   -webkit-mask-size: 100% 100%; mask-size: 100% 100%; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; }

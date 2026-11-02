@@ -105,8 +105,10 @@
     button.className = 'shot-open';
     button.setAttribute('aria-label', script.dataset.enlarge.replace('{name}', caption));
     button.setAttribute('aria-haspopup', 'dialog');
-    original.replaceWith(button);
-    button.append(original);
+    // The image moves with its <picture>, so it keeps the WebP the browser chose.
+    const shot = original.closest('picture') || original;
+    shot.replaceWith(button);
+    button.append(shot);
     return { original, caption, button, figure };
   });
   document.querySelector('.shots').classList.add('viewer-ready');

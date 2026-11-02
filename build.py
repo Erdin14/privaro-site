@@ -58,6 +58,7 @@ SECURITY_HEADERS = [
 INLINE_SCRIPT = re.compile(r"<script(?![^>]*\bsrc=)[^>]*>(.*?)</script>", re.S)
 # Our own stylesheets and scripts, as the pages link them.
 LOCAL_ASSET = re.compile(r'((?:href|src)=")(/[\w./-]+\.(?:css|js))(")')
+VERSIONED_ASSET = re.compile(r'(?:href|src)="(/[\w./-]+\.(?:css|js))\?v=[0-9a-f]+"')
 
 # code, url-folder ("" = repo root), html lang attribute, autonym shown in the menu
 LANGS = [
@@ -233,7 +234,7 @@ def seo_block(page, code, alternates=True):
         f'<meta property="og:title" content="{{{{meta_title_{meta}}}}}" />',
         f'<meta property="og:description" content="{{{{meta_desc_{meta}}}}}" />',
         f'<meta property="og:url" content="{url}" />',
-        f'<meta property="og:image" content="{BASE_URL}/og.jpg" />',
+        f'<meta property="og:image" content="{BASE_URL}/og.jpg?v={fingerprint("og.jpg")}" />',
         '<meta property="og:image:width" content="1200" />',
         '<meta property="og:image:height" content="630" />',
         f'<meta property="og:locale" content="{OG_LOCALE[code]}" />',
@@ -303,6 +304,24 @@ def content_security_policy():
     ])
 
 
+CACHE_FOREVER = "public, max-age=31536000, immutable"
+
+
+def fingerprinted_paths():
+    """Files every page asks for by a URL with ?v= and a hash of the file
+    (version_assets, film_version): a changed file gets a new URL, so browsers
+    can keep each one for a year without asking again. Read from the written
+    pages, so a file only gets this once nothing links it without its hash;
+    everything else keeps the hosts' few-hours default."""
+    versioned, bare = set(), set()
+    for rel in public_pages():
+        with open(os.path.join(ROOT, rel), encoding="utf-8") as f:
+            html = f.read()
+        versioned.update(VERSIONED_ASSET.findall(html))
+        bare.update(m.group(2) for m in LOCAL_ASSET.finditer(html))
+    return sorted(versioned - bare) + ["/film/*"]
+
+
 def write_security_headers():
     """_headers for Cloudflare Pages and the headers in vercel.json, the same
     on both. Cloudflare Pages also adds Access-Control-Allow-Origin: * to every
@@ -313,6 +332,8 @@ def write_security_headers():
              "/*", "  ! Access-Control-Allow-Origin"]
     lines += [f"  {name}: {value}" for name, value in headers]
     lines += ["", "/.well-known/apple-app-site-association", "  Content-Type: application/json"]
+    for path in fingerprinted_paths():
+        lines += ["", path, f"  Cache-Control: {CACHE_FOREVER}"]
     write("_headers", "\n".join(lines) + "\n")
 
     path = os.path.join(ROOT, "vercel.json")
@@ -324,6 +345,8 @@ def write_security_headers():
                                         if name != "Strict-Transport-Security"]},
         {"source": "/.well-known/apple-app-site-association",
          "headers": [{"key": "Content-Type", "value": "application/json"}]},
+        *({"source": path.replace("*", "(.*)"), "headers": [{"key": "Cache-Control", "value": CACHE_FOREVER}]}
+          for path in fingerprinted_paths()),
     ]
     write("vercel.json", json.dumps(config, indent=2, ensure_ascii=False) + "\n")
 

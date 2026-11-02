@@ -32,14 +32,14 @@
 <meta property="og:title" content="Privaro: a private photo and video vault for iPhone" />
 <meta property="og:description" content="Privaro keeps your private photos and videos encrypted on your iPhone, behind Face ID and a passcode of its own. No account, nothing uploaded." />
 <meta property="og:url" content="https://privaroapp.nl/" />
-<meta property="og:image" content="https://privaroapp.nl/og.jpg" />
+<meta property="og:image" content="https://privaroapp.nl/og.jpg?v=82627ffc6c" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:locale" content="en_US" />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=8a7caaac5f" />
+<link rel="stylesheet" href="/styles.css?v=457d6ca1b4" />
 <link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
 <script>
 // Before anything is drawn. "motion" lets the few entrances in styles.css
@@ -113,10 +113,10 @@
        a button that opens the viewer (presentation.js). -->
   <section class="gallery">
     <div class="shots wrap">
-      <figure class="rise" style="--anim:phone-in;--i:0"><img src="/shots/framed-18-pro-max/shot-lock.jpg" width="760" height="1573" alt="Privaro’s lock screen, ready for Face ID" fetchpriority="high" /><figcaption><strong>Lock Screen</strong> <span>Opens with Face ID, or a passcode of its own.</span></figcaption></figure>
-      <figure class="rise" style="--anim:phone-in;--i:1"><img src="/shots/framed-18-pro-max/shot-vault.jpg" width="760" height="1573" alt="The vault: photos in a grid, sorted by month" /><figcaption><strong>Vault</strong> <span>Everything you add is encrypted on the phone itself.</span></figcaption></figure>
-      <figure class="rise" style="--anim:phone-in;--i:2"><img src="/shots/framed-18-pro-max/shot-albums.jpg" width="760" height="1573" alt="Albums in Privaro" decoding="async" /><figcaption><strong>Albums</strong> <span>Sort photos and videos into albums.</span></figcaption></figure>
-      <figure class="rise" style="--anim:phone-in;--i:3"><img src="/shots/framed-18-pro-max/shot-privacy.jpg" width="760" height="1573" alt="Privacy Mode settings: Home, Away and Travel" decoding="async" /><figcaption><strong>Privacy Mode</strong> <span>Choose how strict Privaro is, wherever you are.</span></figcaption></figure>
+      <figure class="rise" style="--anim:phone-in;--i:0"><picture><source srcset="/shots/framed-18-pro-max/shot-lock.webp" type="image/webp" /><img src="/shots/framed-18-pro-max/shot-lock.jpg" width="760" height="1573" alt="Privaro’s lock screen, ready for Face ID" fetchpriority="high" /></picture><figcaption><strong>Lock Screen</strong> <span>Opens with Face ID, or a passcode of its own.</span></figcaption></figure>
+      <figure class="rise" style="--anim:phone-in;--i:1"><picture><source srcset="/shots/framed-18-pro-max/shot-vault.webp" type="image/webp" /><img src="/shots/framed-18-pro-max/shot-vault.jpg" width="760" height="1573" alt="The vault: photos in a grid, sorted by month" /></picture><figcaption><strong>Vault</strong> <span>Everything you add is encrypted on the phone itself.</span></figcaption></figure>
+      <figure class="rise" style="--anim:phone-in;--i:2"><picture><source srcset="/shots/framed-18-pro-max/shot-albums.webp" type="image/webp" /><img src="/shots/framed-18-pro-max/shot-albums.jpg" width="760" height="1573" alt="Albums in Privaro" decoding="async" /></picture><figcaption><strong>Albums</strong> <span>Sort photos and videos into albums.</span></figcaption></figure>
+      <figure class="rise" style="--anim:phone-in;--i:3"><picture><source srcset="/shots/framed-18-pro-max/shot-privacy.webp" type="image/webp" /><img src="/shots/framed-18-pro-max/shot-privacy.jpg" width="760" height="1573" alt="Privacy Mode settings: Home, Away and Travel" decoding="async" /></picture><figcaption><strong>Privacy Mode</strong> <span>Choose how strict Privaro is, wherever you are.</span></figcaption></figure>
     </div>
   </section>
 
@@ -133,8 +133,8 @@
     <figure class="film-card rise" style="--anim:fade">
       <div class="film-frame">
         <video class="film-video" width="1920" height="1080" muted playsinline preload="none" controls aria-describedby="film-words">
-          <source src="/film/privaro-vertical.mp4?v=166ae4bcac" type="video/mp4" media="(max-width: 760px)" />
-          <source src="/film/privaro-landscape.mp4?v=166ae4bcac" type="video/mp4" />
+          <source src="/film/privaro-vertical.mp4?v=fae27da241" type="video/mp4" media="(max-width: 760px)" />
+          <source src="/film/privaro-landscape.mp4?v=fae27da241" type="video/mp4" />
         </video>
         <script>
         // The poster for the source the browser picked, before anything is drawn:
@@ -142,7 +142,7 @@
         // with Reduce Motion, where it waits for Play, the end card.
         document.currentScript.previousElementSibling.poster = '/film/privaro-' +
           (matchMedia('(max-width: 760px)').matches ? 'vertical' : 'landscape') + '-' +
-          (matchMedia('(prefers-reduced-motion: reduce)').matches ? 'end' : 'start') + '.jpg?v=166ae4bcac';
+          (matchMedia('(prefers-reduced-motion: reduce)').matches ? 'end' : 'start') + '.jpg?v=fae27da241';
         </script>
         <p id="film-words" class="visually-hidden">The film's words: Your private space. Opens only for you. Face ID, or a passcode of its own. Bring in photos and videos. From Photos, Files or the camera. Encrypted as they arrive. Right on your iPhone. Sorted into albums. Even album names are encrypted. Privacy that fits the moment. Choose how strict it is. Asked to open it? A fake passcode opens a decoy vault. Decoy Vault is part of Privaro Pro. Encrypted on your iPhone. With a key that stays on it. AES-256, no account, works offline. Change the icon. Or disguise it as an everyday app. Disguise icons are part of Privaro Pro. Your colour, on the lock screen. Indigo, Ocean, Emerald, Sunset and more. Hide it behind a calculator. Type your passcode, then press =. Privaro. Your space. Your privacy. Available on the App Store.</p>
         <!-- Where the film is, along its bottom edge: click or drag it to move. -->
@@ -210,7 +210,7 @@
         <p class="buy-note"><span>Free to download. Needs iOS 17.6 or later.</span></p>
       </div>
     </div>
-    <div class="closing-shot"><img class="rise" style="--anim:phone-up" src="/shots/framed-18-pro-max/shot-lock.jpg" width="760" height="1573" alt="" loading="lazy" decoding="async" /></div>
+    <div class="closing-shot"><picture><source srcset="/shots/framed-18-pro-max/shot-lock.webp" type="image/webp" /><img class="rise" style="--anim:phone-up" src="/shots/framed-18-pro-max/shot-lock.jpg" width="760" height="1573" alt="" loading="lazy" decoding="async" /></picture></div>
   </section>
 </main>
 
@@ -245,7 +245,7 @@ document.addEventListener('keydown', e => {
 });
 </script>
 
-<script src="/presentation.js?v=4c7f843669" data-enlarge="Enlarge screenshot: {name}" data-close="Close viewer" data-previous="Previous screenshot" data-next="Next screenshot" defer></script>
+<script src="/presentation.js?v=2852ea6760" data-enlarge="Enlarge screenshot: {name}" data-close="Close viewer" data-previous="Previous screenshot" data-next="Next screenshot" defer></script>
 <script>
 // Each entrance plays once it's on screen. Inline, like the line in <head>,
 // so a script that fails to load can never leave anything hidden.

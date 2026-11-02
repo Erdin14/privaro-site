@@ -72,10 +72,10 @@
        a button that opens the viewer (presentation.js). -->
   <section class="gallery">
     <div class="shots wrap">
-      <figure class="rise" style="--anim:phone-in;--i:0"><img src="{{SHOTS}}shot-lock.jpg" width="760" height="1573" alt="{{alt_lock}}" fetchpriority="high" /><figcaption><strong>{{cap_lock}}</strong> <span>{{shot_lock_d}}</span></figcaption></figure>
-      <figure class="rise" style="--anim:phone-in;--i:1"><img src="{{SHOTS}}shot-vault.jpg" width="760" height="1573" alt="{{alt_vault}}" /><figcaption><strong>{{cap_vault}}</strong> <span>{{shot_vault_d}}</span></figcaption></figure>
-      <figure class="rise" style="--anim:phone-in;--i:2"><img src="{{SHOTS}}shot-albums.jpg" width="760" height="1573" alt="{{alt_albums}}" decoding="async" /><figcaption><strong>{{cap_albums}}</strong> <span>{{shot_albums_d}}</span></figcaption></figure>
-      <figure class="rise" style="--anim:phone-in;--i:3"><img src="{{SHOTS}}shot-privacy.jpg" width="760" height="1573" alt="{{alt_privacy}}" decoding="async" /><figcaption><strong>{{cap_privacy}}</strong> <span>{{shot_privacy_d}}</span></figcaption></figure>
+      <figure class="rise" style="--anim:phone-in;--i:0"><picture><source srcset="{{SHOTS}}shot-lock.webp" type="image/webp" /><img src="{{SHOTS}}shot-lock.jpg" width="760" height="1573" alt="{{alt_lock}}" fetchpriority="high" /></picture><figcaption><strong>{{cap_lock}}</strong> <span>{{shot_lock_d}}</span></figcaption></figure>
+      <figure class="rise" style="--anim:phone-in;--i:1"><picture><source srcset="{{SHOTS}}shot-vault.webp" type="image/webp" /><img src="{{SHOTS}}shot-vault.jpg" width="760" height="1573" alt="{{alt_vault}}" /></picture><figcaption><strong>{{cap_vault}}</strong> <span>{{shot_vault_d}}</span></figcaption></figure>
+      <figure class="rise" style="--anim:phone-in;--i:2"><picture><source srcset="{{SHOTS}}shot-albums.webp" type="image/webp" /><img src="{{SHOTS}}shot-albums.jpg" width="760" height="1573" alt="{{alt_albums}}" decoding="async" /></picture><figcaption><strong>{{cap_albums}}</strong> <span>{{shot_albums_d}}</span></figcaption></figure>
+      <figure class="rise" style="--anim:phone-in;--i:3"><picture><source srcset="{{SHOTS}}shot-privacy.webp" type="image/webp" /><img src="{{SHOTS}}shot-privacy.jpg" width="760" height="1573" alt="{{alt_privacy}}" decoding="async" /></picture><figcaption><strong>{{cap_privacy}}</strong> <span>{{shot_privacy_d}}</span></figcaption></figure>
     </div>
   </section>
 {{FILM}}
@@ -113,7 +113,7 @@
         <p class="buy-note"><span>{{buy_free}}</span></p>
       </div>
     </div>
-    <div class="closing-shot"><img class="rise" style="--anim:phone-up" src="{{SHOTS}}shot-lock.jpg" width="760" height="1573" alt="" loading="lazy" decoding="async" /></div>
+    <div class="closing-shot"><picture><source srcset="{{SHOTS}}shot-lock.webp" type="image/webp" /><img class="rise" style="--anim:phone-up" src="{{SHOTS}}shot-lock.jpg" width="760" height="1573" alt="" loading="lazy" decoding="async" /></picture></div>
   </section>
 </main>
 
