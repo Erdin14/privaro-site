@@ -380,15 +380,16 @@ h1, h2 { font-weight: 600; }
   text-decoration: underline; text-decoration-color: var(--dim); text-decoration-thickness: 1px; text-underline-offset: 4px;
   transition: text-decoration-color var(--dur-state) var(--ease-state); }
 .more:hover { text-decoration-color: var(--ink); }
-/* Here the illustration fills its half of the section, with a larger phone
-   and no card or caption of its own: the headline above already says what
-   the caption says. It plays once, when it scrolls into view. */
-.safety .privacy-vignette { position: absolute; inset: 0; max-width: none; margin: 0; border: 0; border-radius: 0; background: none; }
-.safety .privacy-art { --pw: 44cqw; position: absolute; inset: 0; aspect-ratio: auto; }
+/* Here, and in the Security page's opening, the illustration fills its
+   column, with a larger phone and no card or caption of its own: the words
+   beside it already say what the caption says. It plays once, when it
+   scrolls into view. */
+:is(.safety, .sec-hero) .privacy-vignette { position: absolute; inset: 0; max-width: none; margin: 0; border: 0; border-radius: 0; background: none; }
+:is(.safety, .sec-hero) .privacy-art { --pw: 44cqw; position: absolute; inset: 0; aspect-ratio: auto; }
 /* Anchored to the line rather than to the top, so whatever the column's
    height the phone rises out of the line with its top two-thirds showing. */
-.safety .vg-phone { top: auto; bottom: calc(var(--pw) * -.62); }
-.safety .privacy-vignette figcaption { display: none; }
+:is(.safety, .sec-hero) .vg-phone { top: auto; bottom: calc(var(--pw) * -.62); }
+:is(.safety, .sec-hero) .privacy-vignette figcaption { display: none; }
 
 /* Closing: the last word on the left; on the right the Lock Screen, rising
    out of the hairline the page ends on, as the phone in the illustration
@@ -678,9 +679,21 @@ h1, h2 { font-weight: 600; }
 .legal a { text-decoration: underline; text-underline-offset: 2px; }
 .legal .authoritative { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--rule); font-size: var(--size-small); color: var(--muted); }
 
-/* Security: a long read, so it opens with a list of its sections, and has tables. */
-.toc { max-width: 40em; margin-top: 32px; padding: 16px 0; border-top: 1px solid var(--rule);
-  border-bottom: 1px solid var(--rule); font-size: 15px; }
+/* Security: a long read. It opens as the homepage's security section does:
+   the words on one side and, on the other, the illustration's phone rising
+   out of the line the opening stands on. Then the list of its sections, and
+   chapters, each starting on a hairline under a larger heading. What it
+   protects against and what it can't sit side by side, marked as on the Pro
+   page: a blue dot for yes, an empty box for no. The known limitations are
+   numbered, and the way to report a problem is the last word. */
+.sec-hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(240px, 320px); column-gap: var(--space-8);
+  align-items: end; border-bottom: 1px solid var(--rule); }
+.sec-hero-copy { padding-bottom: var(--space-7); }
+.sec-hero h1 { font-size: clamp(44px, 5.6vw, 76px); }
+.sec-hero-art { position: relative; align-self: stretch; min-height: 380px; }
+.sec-hero .privacy-art { --pw: 80cqw; }
+.toc { max-width: 40em; margin-top: var(--space-7); padding: var(--space-4) 0; border-bottom: 1px solid var(--rule); font-size: 15px; }
+.toc-head { margin-bottom: var(--space-3); font-size: var(--size-small); font-weight: 500; color: var(--faint); }
 .toc ol { list-style: none; columns: 2; column-gap: 32px; }
 .toc li { margin-bottom: 4px; break-inside: avoid; }
 /* Navigation is muted words, as in the header and footer; blue is for the
@@ -693,12 +706,19 @@ h1, h2 { font-weight: 600; }
 @media (min-width: 1181px) {
   .long-read { display: grid; grid-template-columns: minmax(0, 40em) minmax(0, 1fr); column-gap: var(--space-8); }
   .long-read > * { grid-column: 1; }
-  .long-read > h1 { grid-column: 1 / -1; }
-  .long-read > .toc { grid-column: 2; grid-row: 3 / span 5; align-self: start; position: sticky; top: 104px;
-    margin-top: var(--space-5); padding: 0; padding-inline-start: var(--space-5); border: 0;
+  /* The opening spans both columns, on the same two, so the phone stands
+     over the list of sections. */
+  .long-read > .sec-hero { grid-column: 1 / -1; grid-template-columns: minmax(0, 40em) minmax(0, 1fr); }
+  .long-read > .toc { grid-column: 2; grid-row: 2; align-self: start; position: sticky; top: 104px;
+    margin-top: var(--space-8); padding: 0; padding-inline-start: var(--space-5); border: 0;
     border-inline-start: 1px solid var(--rule); font-size: var(--size-small); }
   .long-read > .toc ol { columns: 1; }
   .long-read > .toc li { margin-bottom: var(--space-2); }
+  /* The section being read, marked on the list's line (presentation.js). */
+  .long-read > .toc a { position: relative; display: block; }
+  .long-read > .toc a[aria-current] { color: var(--ink); }
+  .long-read > .toc a[aria-current]::before { content: ""; position: absolute; inset-inline-start: calc(-1 * var(--space-5) - 1px);
+    top: .1em; bottom: .1em; width: 2px; border-radius: 1px; background: var(--ink); }
 }
 .doc { max-width: 40em; margin-top: 48px; line-height: 1.6; }
 .doc h2 { font-size: 21px; line-height: 1.3; margin: 56px 0 12px; }
@@ -715,6 +735,38 @@ h1, h2 { font-weight: 600; }
 .doc :is(th, td):last-child { padding-inline-end: 0; }
 .doc th { font-size: var(--size-small); font-weight: 600; color: var(--muted); }
 .doc td:first-child { font-weight: 600; }
+.security .doc { margin-top: var(--space-8); }
+.security .doc h2 { font-family: var(--display); font-size: clamp(24px, 2.4vw, 32px); font-weight: 600; line-height: 1.15;
+  letter-spacing: var(--track-title); text-wrap: balance; margin: var(--space-9) 0 var(--space-4); padding-top: var(--space-6);
+  border-top: 1px solid var(--rule); }
+.security .doc h2:first-child { margin-top: 0; padding-top: 0; border-top: 0; }
+.security .doc h3 { font-size: 18px; margin: var(--space-6) 0 var(--space-2); }
+/* In short: the five things to know, larger, in full ink. */
+.doc .summary { list-style: none; display: grid; row-gap: var(--space-4); padding: 0; }
+.summary li { position: relative; margin: 0; padding-inline-start: 28px; font-size: var(--size-lead); line-height: 1.5; color: var(--ink); }
+.summary li::before { content: ""; position: absolute; inset-inline-start: 2px; top: .75em; width: 12px; height: 1px; background: var(--dim); }
+/* What it protects against, and what it can't, side by side. */
+.threats { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-rows: auto auto; column-gap: var(--space-6);
+  margin-top: var(--space-5); }
+/* Both columns share the grid's two rows, so the lists start level however
+   many lines either heading takes. */
+.threats > div { display: grid; grid-row: span 2; grid-template-rows: subgrid; }
+.doc .threats-head { margin-bottom: var(--space-4); font-weight: 600; color: var(--ink); }
+.doc .threats ul { list-style: none; display: grid; align-content: start; row-gap: var(--space-3); margin: 0; padding: 0; }
+.threats li { position: relative; margin: 0; padding-inline-start: 26px; font-size: 15px; line-height: 1.5; }
+.threats li::before { content: ""; position: absolute; inset-inline-start: 1px; top: calc(.75em - 6px); width: 12px; height: 12px; }
+.protects li::before { border-radius: 50%; background: var(--blue); box-shadow: 0 0 0 3px rgb(110 162 255 / .16); }
+.cannot li::before { border-radius: 3px; box-shadow: inset 0 0 0 1.5px var(--dim); }
+/* The known limitations, numbered in the margin. */
+.doc .known { list-style: none; display: grid; row-gap: var(--space-4); margin-top: var(--space-5); padding: 0; counter-reset: known; }
+.known li { counter-increment: known; position: relative; margin: 0; padding-inline-start: 40px; }
+.known li::before { content: counter(known); position: absolute; inset-inline-start: 0; top: -.1em; font-family: var(--display);
+  font-size: 22px; font-weight: 600; line-height: 1.4; color: var(--faint); font-variant-numeric: tabular-nums; }
+/* Reporting a problem: the page's last word, between two hairlines. */
+.report { margin-top: var(--space-9); padding-block: var(--space-7); border-block: 1px solid var(--rule); }
+.security .doc .report h2 { margin: 0 0 var(--space-4); padding: 0; border: 0; font-size: clamp(32px, 4vw, 52px); font-weight: 700;
+  line-height: 1.05; letter-spacing: var(--track-display); }
+.doc .report p { margin: 0; font-size: var(--size-lead); line-height: 1.55; color: var(--muted); }
 
 /* Footer: the links and the language menu in one centred row of plain words,
    as the header's are, and a single quiet line beneath it. */
@@ -854,6 +906,14 @@ h1, h2 { font-weight: 600; }
   .pro-price { margin-top: var(--space-7); padding-block: var(--space-7); }
   .legal { margin-top: 36px; }
   .toc ol { columns: 1; }
+  .sec-hero { grid-template-columns: minmax(0, 1fr); }
+  .sec-hero-copy { padding-bottom: var(--space-6); }
+  .sec-hero-art { min-height: 0; aspect-ratio: 4 / 3; }
+  .sec-hero .privacy-art { --pw: 46cqw; }
+  .threats { grid-template-columns: minmax(0, 1fr); grid-template-rows: none; row-gap: var(--space-6); }
+  .threats > div { display: block; grid-row: auto; }
+  .security .doc h2 { margin-top: var(--space-8); }
+  .report { margin-top: var(--space-8); padding-block: var(--space-6); }
   .doc { margin-top: 36px; }
   /* Three columns of sentences don't fit a phone: each row becomes a block,
      its cells labelled from the column heading. */

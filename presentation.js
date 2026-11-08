@@ -44,6 +44,30 @@
     sync();
   }
 
+  // On a long read, the list of sections marks the one being read: the last
+  // whose heading has passed the top third of the screen, or the last of all
+  // once the page is scrolled to its end.
+  const toc = document.querySelector('.long-read .toc');
+  if (toc) {
+    const links = [...toc.querySelectorAll('a[href^="#"]')]
+      .map(link => [link, document.getElementById(link.getAttribute('href').slice(1))]).filter(([, head]) => head);
+    let marked, queued = false;
+    const mark = () => {
+      queued = false;
+      const root = document.documentElement;
+      let current = links[0];
+      if (scrollY + innerHeight >= root.scrollHeight - 2) current = links[links.length - 1];
+      else for (const pair of links) if (pair[1].getBoundingClientRect().top < innerHeight / 3) current = pair;
+      if (!current || current[0] === marked) return;
+      marked?.removeAttribute('aria-current');
+      marked = current[0];
+      marked.setAttribute('aria-current', 'location');
+    };
+    addEventListener('scroll', () => { if (!queued) { queued = true; requestAnimationFrame(mark); } }, { passive: true });
+    addEventListener('resize', mark);
+    mark();
+  }
+
   const figures = [...document.querySelectorAll('.shots figure')];
   if (!figures.length || typeof HTMLDialogElement === 'undefined') return;
 

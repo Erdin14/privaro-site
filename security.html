@@ -20,7 +20,7 @@
 <meta name="apple-itunes-app" content="app-id=6783131829" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=314a4cb5f6" />
+<link rel="stylesheet" href="/styles.css?v=c82517555d" />
 <link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
 <script>
 // Register before first reveal, including restored history entries.
@@ -64,31 +64,16 @@
   </div>
 </header>
 
-<main class="page wrap long-read">
+<main class="page wrap long-read security">
 
-<h1>How Privaro protects your photos</h1>
-<p class="updated">Security overview · Privaro 1.4 for iPhone and iPad · Last updated: October 25, 2026</p>
-<p class="intro">Privaro is a vault for the photos and videos you want to keep to yourself. This page explains how it protects them: what is encrypted and how, what leaves your device, and what Privaro does <em>not</em> protect against.</p>
-<p class="note">It goes into more detail than the &ldquo;How Privaro Protects You&rdquo; page in the app&rsquo;s Settings, for anyone who wants to check our claims before trusting the app with their photos. If something here is unclear, or you think it&rsquo;s wrong, please <a href="#reporting">tell us</a>.</p>
-
-<nav class="toc" aria-label="On this page">
-  <ol>
-    <li><a href="#in-short">In short</a></li>
-    <li><a href="#threats">What Privaro is built to protect against</a></li>
-    <li><a href="#encryption">Encryption</a></li>
-    <li><a href="#unlocking">Unlocking</a></li>
-    <li><a href="#recovery-key">The recovery key</a></li>
-    <li><a href="#backups">Backups</a></li>
-    <li><a href="#sharing">Sharing and moving files</a></li>
-    <li><a href="#decoy">Decoy vault and duress passcode</a></li>
-    <li><a href="#other">Other protections</a></li>
-    <li><a href="#network">What leaves your device</a></li>
-    <li><a href="#limitations">Known limitations</a></li>
-    <li><a href="#reference">Cryptography reference</a></li>
-    <li><a href="#reporting">Reporting a security problem</a></li>
-  </ol>
-</nav>
-
+<header class="sec-hero">
+  <div class="sec-hero-copy">
+    <h1>How Privaro protects your photos</h1>
+    <p class="updated">Security overview · Privaro 1.4 for iPhone and iPad · Last updated: October 25, 2026</p>
+    <p class="intro">Privaro is a vault for the photos and videos you want to keep to yourself. This page explains how it protects them: what is encrypted and how, what leaves your device, and what Privaro does <em>not</em> protect against.</p>
+    <p class="note">It goes into more detail than the &ldquo;How Privaro Protects You&rdquo; page in the app&rsquo;s Settings, for anyone who wants to check our claims before trusting the app with their photos. If something here is unclear, or you think it&rsquo;s wrong, please <a href="#reporting">tell us</a>.</p>
+  </div>
+  <div class="sec-hero-art">
 <figure class="privacy-vignette">
   <!-- A photo on the phone is written over, line by line, as ciphertext.
        Illustrative only, never a live security check.
@@ -109,11 +94,32 @@
   <figcaption><span>Encrypted on your iPhone.</span></figcaption>
 </figure>
 <script src="/privacy-vignette.js?v=bb3a6a0bae" defer></script>
+  </div>
+</header>
+
+<nav class="toc" aria-labelledby="toc-head">
+  <p id="toc-head" class="toc-head">On this page</p>
+  <ol>
+    <li><a href="#in-short">In short</a></li>
+    <li><a href="#threats">What Privaro is built to protect against</a></li>
+    <li><a href="#encryption">Encryption</a></li>
+    <li><a href="#unlocking">Unlocking</a></li>
+    <li><a href="#recovery-key">The recovery key</a></li>
+    <li><a href="#backups">Backups</a></li>
+    <li><a href="#sharing">Sharing and moving files</a></li>
+    <li><a href="#decoy">Decoy vault and duress passcode</a></li>
+    <li><a href="#other">Other protections</a></li>
+    <li><a href="#network">What leaves your device</a></li>
+    <li><a href="#limitations">Known limitations</a></li>
+    <li><a href="#reference">Cryptography reference</a></li>
+    <li><a href="#reporting">Reporting a security problem</a></li>
+  </ol>
+</nav>
 
 <div class="doc">
 
   <h2 id="in-short">In short</h2>
-  <ul>
+  <ul class="summary">
     <li>Your photos and videos are encrypted on your device with AES-256-GCM, using Apple&rsquo;s CryptoKit. Thumbnails, captions, filenames, tags and album names are encrypted too.</li>
     <li>The encryption key is created on your device and never leaves it, except locked inside an iCloud backup that only your recovery key can open. We never have it, so we can&rsquo;t see your photos.</li>
     <li>No account, no servers of our own, no ads, no analytics and no crash-reporting tools.</li>
@@ -122,23 +128,29 @@
   </ul>
 
   <h2 id="threats">What Privaro is built to protect against</h2>
-  <p><strong>It is designed to protect your photos from:</strong></p>
-  <ul>
-    <li>Someone who picks up your phone while it&rsquo;s unlocked, or whom you hand it to.</li>
-    <li>Anyone browsing your Photos library, the Files app or your iPhone backups.</li>
-    <li>Someone who gets into your iCloud account.</li>
-    <li>Anyone who intercepts a file you share with Secure Share.</li>
-    <li>Screenshots and screen recordings of the vault (with capture protection, a Pro feature).</li>
-    <li>Being pressured to open the app, as far as a decoy vault or a duress passcode can help.</li>
-  </ul>
-  <p><strong>It can&rsquo;t protect your photos from:</strong></p>
-  <ul>
-    <li>Someone who knows your Privaro passcode, or can unlock it with your face or finger.</li>
-    <li>Forensic tools or a jailbroken iPhone that can read the iOS Keychain while your iPhone is unlocked (see <a href="#limitations">Known limitations</a>).</li>
-    <li>Malware that has taken over iOS itself.</li>
-    <li>A camera pointed at your screen.</li>
-    <li>Copies that have already left Privaro: exported files, photos saved back to Photos, or items you shared.</li>
-  </ul>
+  <div class="threats">
+    <div class="protects">
+      <p class="threats-head">It is designed to protect your photos from:</p>
+      <ul>
+        <li>Someone who picks up your phone while it&rsquo;s unlocked, or whom you hand it to.</li>
+        <li>Anyone browsing your Photos library, the Files app or your iPhone backups.</li>
+        <li>Someone who gets into your iCloud account.</li>
+        <li>Anyone who intercepts a file you share with Secure Share.</li>
+        <li>Screenshots and screen recordings of the vault (with capture protection, a Pro feature).</li>
+        <li>Being pressured to open the app, as far as a decoy vault or a duress passcode can help.</li>
+      </ul>
+    </div>
+    <div class="cannot">
+      <p class="threats-head">It can&rsquo;t protect your photos from:</p>
+      <ul>
+        <li>Someone who knows your Privaro passcode, or can unlock it with your face or finger.</li>
+        <li>Forensic tools or a jailbroken iPhone that can read the iOS Keychain while your iPhone is unlocked (see <a href="#limitations">Known limitations</a>).</li>
+        <li>Malware that has taken over iOS itself.</li>
+        <li>A camera pointed at your screen.</li>
+        <li>Copies that have already left Privaro: exported files, photos saved back to Photos, or items you shared.</li>
+      </ul>
+    </div>
+  </div>
 
   <h2 id="encryption">Encryption</h2>
 
@@ -262,7 +274,7 @@
 
   <h2 id="limitations">Known limitations</h2>
   <p>We&rsquo;d rather you know these than find them out later.</p>
-  <ol>
+  <ol class="known">
     <li><strong>On iPhone, your Privaro passcode is not part of the encryption.</strong> The vault key is protected by the iOS Keychain and your iPhone&rsquo;s own passcode. Your Privaro passcode and Face ID decide whether the app opens the vault, but the key isn&rsquo;t derived from them. So someone who can read the Keychain of your unlocked iPhone could decrypt the vault without your Privaro passcode, for example with forensic tools or on a jailbroken device. <strong>A strong iPhone passcode is your most important protection.</strong></li>
     <li><strong>Some information isn&rsquo;t encrypted by Privaro:</strong> dates, sizes, types, album structure and trusted places, as listed under <a href="#metadata">Information about your photos</a>. iOS file protection still applies.</li>
     <li><strong>The decoy vault shares the real vault&rsquo;s encryption key.</strong> It&rsquo;s a separation inside the app, not a cryptographic one.</li>
@@ -290,8 +302,10 @@
     </tbody>
   </table>
 
+  <section class="report" aria-labelledby="reporting">
   <h2 id="reporting">Reporting a security problem</h2>
   <p>If you find a security problem in Privaro, please email <a href="mailto:erdincdubu@icloud.com">erdincdubu@icloud.com</a> before making it public, so we can fix it first. We&rsquo;ll reply, keep you updated, credit you in the release notes if you&rsquo;d like, and give you a free lifetime code for Privaro Pro.</p>
+  </section>
 </div>
 
 </main>
@@ -327,6 +341,6 @@ document.addEventListener('keydown', e => {
 });
 </script>
 
-<script src="/presentation.js?v=93358bf2ee" data-enlarge="Enlarge screenshot: {name}" data-close="Close viewer" data-previous="Previous screenshot" data-next="Next screenshot" defer></script>
+<script src="/presentation.js?v=5e4dc8d83b" data-enlarge="Enlarge screenshot: {name}" data-close="Close viewer" data-previous="Previous screenshot" data-next="Next screenshot" defer></script>
 </body>
 </html>
