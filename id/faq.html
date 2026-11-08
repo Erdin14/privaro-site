@@ -38,7 +38,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=c9ceab4675" />
+<link rel="stylesheet" href="/styles.css?v=314a4cb5f6" />
 <link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
 <script>
 // Register before first reveal, including restored history entries.
@@ -82,18 +82,27 @@
   </div>
 </header>
 
-<main class="page wrap">
+<main class="page wrap faq-page">
 
-<h1>Pertanyaan</h1>
+  <h1>Pertanyaan</h1>
 
-<div class="faq ledger-list">
-  <div class="row"><h2>Apakah orang lain bisa melihat foto saya?</h2><p>Tidak. Foto Anda dienkripsi di iPhone dengan kunci yang tetap berada di sana. Tidak ada akun Privaro dan tidak ada server yang menyimpan foto Anda, jadi tidak ada yang bisa dilihat siapa pun, termasuk kami.</p></div>
-  <div class="row"><h2>Bagaimana jika saya lupa kode sandi?</h2><p>Saat menyiapkan Privaro, Anda mendapatkan kunci pemulihan. Simpan di tempat yang aman: kunci itu memungkinkan Anda membuat kode sandi baru. Tanpa kode sandi atau kunci pemulihan, brankas tidak dapat dibuka, bahkan oleh kami.</p></div>
-  <div class="row"><h2>Apa yang terjadi jika ponsel saya hilang?</h2><p>Jika Anda mengaktifkan cadangan iCloud terenkripsi (Pro), Anda dapat memulihkan brankas di iPhone baru dengan kunci pemulihan Anda. Pemulihan gratis. Tanpa cadangan, foto tetap terkunci di ponsel lama.</p></div>
-  <div class="row"><h2>Apakah ada batas ukuran video?</h2><p>Tidak per file. Ukuran berapa pun bisa, selama iPhone Anda masih punya ruang. Versi gratis menampung hingga 2,5 GB secara total, dan Pro tanpa batas.</p></div>
-  <div class="row"><h2>Apakah perlu koneksi internet?</h2><p>Tidak. Brankas Anda berfungsi sepenuhnya secara offline, dan foto Anda tidak pernah online kecuali Anda mengaktifkan cadangan iCloud.</p></div>
-  <div class="row"><h2>Apakah Pro berlangganan?</h2><p>Tidak. Pro adalah pembayaran satu kali sebesar <span class="price" data-price="pro">Rp 99.000</span>. Tidak ada yang diperpanjang dan tidak ada yang perlu dibatalkan.</p></div>
-</div>
+  <!-- Each question large on the left, its answer beside it, starting on the
+       same line. The answer's first sentence is the short answer, in full
+       ink; the rest explains, in grey. No lines between them. -->
+  <div class="qa">
+    <div id="who-can-see"><h2>Apakah orang lain bisa melihat foto saya?</h2><p><strong>Tidak.</strong> Foto Anda dienkripsi di iPhone dengan kunci yang tetap berada di sana. Tidak ada akun Privaro dan tidak ada server yang menyimpan foto Anda, jadi tidak ada yang bisa dilihat siapa pun, termasuk kami.</p></div>
+    <div id="forgot-passcode"><h2>Bagaimana jika saya lupa kode sandi?</h2><p><strong>Saat menyiapkan Privaro, Anda mendapatkan kunci pemulihan.</strong> Simpan di tempat yang aman: kunci itu memungkinkan Anda membuat kode sandi baru. Tanpa kode sandi atau kunci pemulihan, brankas tidak dapat dibuka, bahkan oleh kami.</p></div>
+    <div id="lost-phone"><h2>Apa yang terjadi jika ponsel saya hilang?</h2><p><strong>Jika Anda mengaktifkan cadangan iCloud terenkripsi (Pro), Anda dapat memulihkan brankas di iPhone baru dengan kunci pemulihan Anda.</strong> Pemulihan gratis. Tanpa cadangan, foto tetap terkunci di ponsel lama.</p></div>
+    <div id="video-size"><h2>Apakah ada batas ukuran video?</h2><p><strong>Tidak per file.</strong> Ukuran berapa pun bisa, selama iPhone Anda masih punya ruang. Versi gratis menampung hingga 2,5 GB secara total, dan Pro tanpa batas.</p></div>
+    <div id="offline"><h2>Apakah perlu koneksi internet?</h2><p><strong>Tidak.</strong> Brankas Anda berfungsi sepenuhnya secara offline, dan foto Anda tidak pernah online kecuali Anda mengaktifkan cadangan iCloud.</p></div>
+    <div id="subscription"><h2>Apakah Pro berlangganan?</h2><p><strong>Tidak.</strong> Pro adalah pembayaran satu kali sebesar <span class="price" data-price="pro">Rp 99.000</span>. Tidak ada yang diperpanjang dan tidak ada yang perlu dibatalkan.</p></div>
+  </div>
+
+  <!-- Where to go for what isn't here. -->
+  <section class="faq-more" aria-labelledby="faq-more-title">
+    <h2 id="faq-more-title">Ada pertanyaan lain?</h2>
+    <p><a class="more" href="mailto:erdincdubu@icloud.com">Kirimi kami email</a><a class="more" href="/security">Baca ikhtisar keamanan</a></p>
+  </section>
 
 </main>
 

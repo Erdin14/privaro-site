@@ -38,7 +38,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=c9ceab4675" />
+<link rel="stylesheet" href="/styles.css?v=314a4cb5f6" />
 <link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
 <script>
 // Register before first reveal, including restored history entries.
@@ -82,18 +82,27 @@
   </div>
 </header>
 
-<main class="page wrap">
+<main class="page wrap faq-page">
 
-<h1>자주 묻는 질문</h1>
+  <h1>자주 묻는 질문</h1>
 
-<div class="faq ledger-list">
-  <div class="row"><h2>다른 사람이 내 사진을 볼 수 있나요?</h2><p>아니요. 사진은 iPhone 안에서, 기기를 떠나지 않는 키로 암호화됩니다. Privaro 계정도, 사진을 보관하는 서버도 없으니 누구도 볼 수 없습니다. 저희도 마찬가지입니다.</p></div>
-  <div class="row"><h2>암호를 잊어버리면요?</h2><p>Privaro를 설정할 때 복구 키를 받습니다. 안전한 곳에 보관하세요. 이 키로 새 암호를 정할 수 있습니다. 암호나 복구 키가 없으면 보관함을 열 수 없고, 저희도 열 수 없습니다.</p></div>
-  <div class="row"><h2>휴대폰을 잃어버리면 어떻게 되나요?</h2><p>암호화된 iCloud 백업(Pro)을 켜 두었다면 새 iPhone에서 복구 키로 보관함을 복원할 수 있습니다. 복원은 무료입니다. 백업이 없으면 사진은 이전 휴대폰에 잠긴 채로 남습니다.</p></div>
-  <div class="row"><h2>동영상 크기 제한이 있나요?</h2><p>파일당 제한은 없습니다. iPhone에 공간만 있으면 어떤 크기든 됩니다. 무료 버전은 전체 2.5GB까지, Pro는 제한이 없습니다.</p></div>
-  <div class="row"><h2>인터넷 연결이 필요한가요?</h2><p>아니요. 보관함은 완전히 오프라인으로 작동하며, iCloud 백업을 켜지 않는 한 사진이 온라인에 올라가는 일은 없습니다.</p></div>
-  <div class="row"><h2>Pro는 구독인가요?</h2><p>아니요. Pro는 <span class="price" data-price="pro">₩33,000</span>를 한 번만 결제합니다. 갱신되는 것도, 해지할 것도 없습니다.</p></div>
-</div>
+  <!-- Each question large on the left, its answer beside it, starting on the
+       same line. The answer's first sentence is the short answer, in full
+       ink; the rest explains, in grey. No lines between them. -->
+  <div class="qa">
+    <div id="who-can-see"><h2>다른 사람이 내 사진을 볼 수 있나요?</h2><p><strong>아니요.</strong> 사진은 iPhone 안에서, 기기를 떠나지 않는 키로 암호화됩니다. Privaro 계정도, 사진을 보관하는 서버도 없으니 누구도 볼 수 없습니다. 저희도 마찬가지입니다.</p></div>
+    <div id="forgot-passcode"><h2>암호를 잊어버리면요?</h2><p><strong>Privaro를 설정할 때 복구 키를 받습니다.</strong> 안전한 곳에 보관하세요. 이 키로 새 암호를 정할 수 있습니다. 암호나 복구 키가 없으면 보관함을 열 수 없고, 저희도 열 수 없습니다.</p></div>
+    <div id="lost-phone"><h2>휴대폰을 잃어버리면 어떻게 되나요?</h2><p><strong>암호화된 iCloud 백업(Pro)을 켜 두었다면 새 iPhone에서 복구 키로 보관함을 복원할 수 있습니다.</strong> 복원은 무료입니다. 백업이 없으면 사진은 이전 휴대폰에 잠긴 채로 남습니다.</p></div>
+    <div id="video-size"><h2>동영상 크기 제한이 있나요?</h2><p><strong>파일당 제한은 없습니다.</strong> iPhone에 공간만 있으면 어떤 크기든 됩니다. 무료 버전은 전체 2.5GB까지, Pro는 제한이 없습니다.</p></div>
+    <div id="offline"><h2>인터넷 연결이 필요한가요?</h2><p><strong>아니요.</strong> 보관함은 완전히 오프라인으로 작동하며, iCloud 백업을 켜지 않는 한 사진이 온라인에 올라가는 일은 없습니다.</p></div>
+    <div id="subscription"><h2>Pro는 구독인가요?</h2><p><strong>아니요.</strong> Pro는 <span class="price" data-price="pro">₩33,000</span>를 한 번만 결제합니다. 갱신되는 것도, 해지할 것도 없습니다.</p></div>
+  </div>
+
+  <!-- Where to go for what isn't here. -->
+  <section class="faq-more" aria-labelledby="faq-more-title">
+    <h2 id="faq-more-title">다른 질문이 있나요?</h2>
+    <p><a class="more" href="mailto:erdincdubu@icloud.com">문의하기</a><a class="more" href="/security">보안 개요 읽기</a></p>
+  </section>
 
 </main>
 

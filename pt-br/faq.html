@@ -38,7 +38,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=c9ceab4675" />
+<link rel="stylesheet" href="/styles.css?v=314a4cb5f6" />
 <link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
 <script>
 // Register before first reveal, including restored history entries.
@@ -82,18 +82,27 @@
   </div>
 </header>
 
-<main class="page wrap">
+<main class="page wrap faq-page">
 
-<h1>Perguntas</h1>
+  <h1>Perguntas</h1>
 
-<div class="faq ledger-list">
-  <div class="row"><h2>Outra pessoa pode ver minhas fotos?</h2><p>Não. Elas são criptografadas no seu iPhone com uma chave que fica nele. Não existe conta Privaro nem servidor com suas fotos, então ninguém tem o que ver, nem nós.</p></div>
-  <div class="row"><h2>E se eu esquecer meu código?</h2><p>Ao configurar o Privaro, você recebe uma chave de recuperação. Guarde-a em lugar seguro: com ela você define um novo código. Sem o código ou a chave, o cofre não abre, nem para nós.</p></div>
-  <div class="row"><h2>O que acontece se eu perder o celular?</h2><p>Se você ativou o backup criptografado no iCloud (Pro), pode restaurar o cofre no novo iPhone com a sua chave de recuperação. Restaurar é grátis. Sem backup, as fotos ficam trancadas no aparelho antigo.</p></div>
-  <div class="row"><h2>Existe limite de tamanho para vídeos?</h2><p>Não por arquivo. Qualquer tamanho funciona desde que o iPhone tenha espaço. A versão grátis guarda até 2,5 GB no total, e o Pro não tem limite.</p></div>
-  <div class="row"><h2>Precisa de internet?</h2><p>Não. O cofre funciona totalmente offline, e suas fotos nunca vão para a internet, a menos que você ative o backup no iCloud.</p></div>
-  <div class="row"><h2>O Pro é uma assinatura?</h2><p>Não. O Pro é um pagamento único de <span class="price" data-price="pro">R$ 129,90</span>. Nada é renovado e não há nada para cancelar.</p></div>
-</div>
+  <!-- Each question large on the left, its answer beside it, starting on the
+       same line. The answer's first sentence is the short answer, in full
+       ink; the rest explains, in grey. No lines between them. -->
+  <div class="qa">
+    <div id="who-can-see"><h2>Outra pessoa pode ver minhas fotos?</h2><p><strong>Não.</strong> Elas são criptografadas no seu iPhone com uma chave que fica nele. Não existe conta Privaro nem servidor com suas fotos, então ninguém tem o que ver, nem nós.</p></div>
+    <div id="forgot-passcode"><h2>E se eu esquecer meu código?</h2><p><strong>Ao configurar o Privaro, você recebe uma chave de recuperação.</strong> Guarde-a em lugar seguro: com ela você define um novo código. Sem o código ou a chave, o cofre não abre, nem para nós.</p></div>
+    <div id="lost-phone"><h2>O que acontece se eu perder o celular?</h2><p><strong>Se você ativou o backup criptografado no iCloud (Pro), pode restaurar o cofre no novo iPhone com a sua chave de recuperação.</strong> Restaurar é grátis. Sem backup, as fotos ficam trancadas no aparelho antigo.</p></div>
+    <div id="video-size"><h2>Existe limite de tamanho para vídeos?</h2><p><strong>Não por arquivo.</strong> Qualquer tamanho funciona desde que o iPhone tenha espaço. A versão grátis guarda até 2,5 GB no total, e o Pro não tem limite.</p></div>
+    <div id="offline"><h2>Precisa de internet?</h2><p><strong>Não.</strong> O cofre funciona totalmente offline, e suas fotos nunca vão para a internet, a menos que você ative o backup no iCloud.</p></div>
+    <div id="subscription"><h2>O Pro é uma assinatura?</h2><p><strong>Não.</strong> O Pro é um pagamento único de <span class="price" data-price="pro">R$ 129,90</span>. Nada é renovado e não há nada para cancelar.</p></div>
+  </div>
+
+  <!-- Where to go for what isn't here. -->
+  <section class="faq-more" aria-labelledby="faq-more-title">
+    <h2 id="faq-more-title">Mais alguma dúvida?</h2>
+    <p><a class="more" href="mailto:erdincdubu@icloud.com">Fale com a gente</a><a class="more" href="/security">Ler a visão geral de segurança</a></p>
+  </section>
 
 </main>
 

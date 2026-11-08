@@ -38,7 +38,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=c9ceab4675" />
+<link rel="stylesheet" href="/styles.css?v=314a4cb5f6" />
 <link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
 <script>
 // Register before first reveal, including restored history entries.
@@ -82,18 +82,27 @@
   </div>
 </header>
 
-<main class="page wrap">
+<main class="page wrap faq-page">
 
-<h1>Fragen</h1>
+  <h1>Fragen</h1>
 
-<div class="faq ledger-list">
-  <div class="row"><h2>Kann jemand anderes meine Fotos sehen?</h2><p>Nein. Sie werden auf deinem iPhone mit einem Schlüssel verschlüsselt, der dort bleibt. Es gibt kein Privaro-Konto und keinen Server mit deinen Fotos, also gibt es für niemanden etwas zu sehen, auch nicht für uns.</p></div>
-  <div class="row"><h2>Was ist, wenn ich meinen Code vergesse?</h2><p>Bei der Einrichtung bekommst du einen Wiederherstellungsschlüssel. Bewahre ihn sicher auf: Damit kannst du einen neuen Code festlegen. Ohne Code oder Schlüssel lässt sich der Tresor nicht öffnen, auch nicht von uns.</p></div>
-  <div class="row"><h2>Was passiert, wenn ich mein iPhone verliere?</h2><p>Hast du das verschlüsselte iCloud-Backup (Pro) aktiviert, stellst du den Tresor mit deinem Wiederherstellungsschlüssel auf dem neuen iPhone wieder her. Das Wiederherstellen ist kostenlos. Ohne Backup bleiben die Fotos auf dem alten Gerät verschlossen.</p></div>
-  <div class="row"><h2>Gibt es eine Größenbeschränkung für Videos?</h2><p>Nicht pro Datei. Jede Größe geht, solange dein iPhone Platz hat. Die kostenlose Version fasst insgesamt bis zu 2,5 GB, Pro hat keine Grenze.</p></div>
-  <div class="row"><h2>Braucht es eine Internetverbindung?</h2><p>Nein. Dein Tresor funktioniert komplett offline, und deine Fotos gehen nie ins Internet, außer du aktivierst das iCloud-Backup.</p></div>
-  <div class="row"><h2>Ist Pro ein Abo?</h2><p>Nein. Pro ist eine einmalige Zahlung von <span class="price" data-price="pro">9,99 €</span>. Nichts verlängert sich, nichts muss gekündigt werden.</p></div>
-</div>
+  <!-- Each question large on the left, its answer beside it, starting on the
+       same line. The answer's first sentence is the short answer, in full
+       ink; the rest explains, in grey. No lines between them. -->
+  <div class="qa">
+    <div id="who-can-see"><h2>Kann jemand anderes meine Fotos sehen?</h2><p><strong>Nein.</strong> Sie werden auf deinem iPhone mit einem Schlüssel verschlüsselt, der dort bleibt. Es gibt kein Privaro-Konto und keinen Server mit deinen Fotos, also gibt es für niemanden etwas zu sehen, auch nicht für uns.</p></div>
+    <div id="forgot-passcode"><h2>Was ist, wenn ich meinen Code vergesse?</h2><p><strong>Bei der Einrichtung bekommst du einen Wiederherstellungsschlüssel.</strong> Bewahre ihn sicher auf: Damit kannst du einen neuen Code festlegen. Ohne Code oder Schlüssel lässt sich der Tresor nicht öffnen, auch nicht von uns.</p></div>
+    <div id="lost-phone"><h2>Was passiert, wenn ich mein iPhone verliere?</h2><p><strong>Hast du das verschlüsselte iCloud-Backup (Pro) aktiviert, stellst du den Tresor mit deinem Wiederherstellungsschlüssel auf dem neuen iPhone wieder her.</strong> Das Wiederherstellen ist kostenlos. Ohne Backup bleiben die Fotos auf dem alten Gerät verschlossen.</p></div>
+    <div id="video-size"><h2>Gibt es eine Größenbeschränkung für Videos?</h2><p><strong>Nicht pro Datei.</strong> Jede Größe geht, solange dein iPhone Platz hat. Die kostenlose Version fasst insgesamt bis zu 2,5 GB, Pro hat keine Grenze.</p></div>
+    <div id="offline"><h2>Braucht es eine Internetverbindung?</h2><p><strong>Nein.</strong> Dein Tresor funktioniert komplett offline, und deine Fotos gehen nie ins Internet, außer du aktivierst das iCloud-Backup.</p></div>
+    <div id="subscription"><h2>Ist Pro ein Abo?</h2><p><strong>Nein.</strong> Pro ist eine einmalige Zahlung von <span class="price" data-price="pro">9,99 €</span>. Nichts verlängert sich, nichts muss gekündigt werden.</p></div>
+  </div>
+
+  <!-- Where to go for what isn't here. -->
+  <section class="faq-more" aria-labelledby="faq-more-title">
+    <h2 id="faq-more-title">Noch etwas?</h2>
+    <p><a class="more" href="mailto:erdincdubu@icloud.com">Schreib uns</a><a class="more" href="/security">Sicherheitsübersicht lesen</a></p>
+  </section>
 
 </main>
 

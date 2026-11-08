@@ -38,7 +38,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=c9ceab4675" />
+<link rel="stylesheet" href="/styles.css?v=314a4cb5f6" />
 <link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
 <script>
 // Register before first reveal, including restored history entries.
@@ -82,18 +82,27 @@
   </div>
 </header>
 
-<main class="page wrap">
+<main class="page wrap faq-page">
 
-<h1>سوالات</h1>
+  <h1>سوالات</h1>
 
-<div class="faq ledger-list">
-  <div class="row"><h2>کیا کوئی اور میری تصاویر دیکھ سکتا ہے؟</h2><p>نہیں۔ وہ آپ کے iPhone پر ایک ایسی کلید سے انکرپٹ ہوتی ہیں جو اسی پر رہتی ہے۔ نہ کوئی Privaro اکاؤنٹ ہے اور نہ آپ کی تصاویر رکھنے والا کوئی سرور، اس لیے کسی کے دیکھنے کو کچھ ہے ہی نہیں، ہمارے لیے بھی نہیں۔</p></div>
-  <div class="row"><h2>اگر میں اپنا پاس کوڈ بھول جاؤں تو؟</h2><p>Privaro سیٹ اپ کرتے وقت آپ کو ایک ریکوری کلید ملتی ہے۔ اسے کسی محفوظ جگہ رکھیں: اس سے آپ نیا پاس کوڈ سیٹ کر سکتے ہیں۔ پاس کوڈ یا ریکوری کلید کے بغیر والٹ نہیں کھولا جا سکتا، ہم بھی نہیں کھول سکتے۔</p></div>
-  <div class="row"><h2>اگر میرا فون گم ہو جائے تو کیا ہوگا؟</h2><p>اگر آپ نے انکرپٹڈ iCloud بیک اپ (Pro) آن کیا تھا، تو آپ اپنی ریکوری کلید سے نئے iPhone پر والٹ بحال کر سکتے ہیں۔ بحال کرنا مفت ہے۔ بیک اپ کے بغیر تصاویر پرانے فون پر ہی لاک رہتی ہیں۔</p></div>
-  <div class="row"><h2>کیا ویڈیو کے سائز کی کوئی حد ہے؟</h2><p>فی فائل نہیں۔ جب تک آپ کے iPhone میں جگہ ہے، کوئی بھی سائز چلے گا۔ مفت ورژن میں مجموعی طور پر 2.5 GB تک رکھا جا سکتا ہے، اور Pro میں کوئی حد نہیں۔</p></div>
-  <div class="row"><h2>کیا اس کے لیے انٹرنیٹ کنکشن درکار ہے؟</h2><p>نہیں۔ آپ کا والٹ مکمل طور پر آف لائن کام کرتا ہے، اور جب تک آپ iCloud بیک اپ آن نہ کریں، آپ کی تصاویر کبھی آن لائن نہیں جاتیں۔</p></div>
-  <div class="row"><h2>کیا Pro سبسکرپشن ہے؟</h2><p>نہیں۔ Pro <span class="price" data-price="pro">Rs 1,500</span> کی ایک بار کی ادائیگی ہے۔ کچھ بھی تجدید نہیں ہوتا اور منسوخ کرنے کو کچھ نہیں۔</p></div>
-</div>
+  <!-- Each question large on the left, its answer beside it, starting on the
+       same line. The answer's first sentence is the short answer, in full
+       ink; the rest explains, in grey. No lines between them. -->
+  <div class="qa">
+    <div id="who-can-see"><h2>کیا کوئی اور میری تصاویر دیکھ سکتا ہے؟</h2><p><strong>نہیں۔</strong> وہ آپ کے iPhone پر ایک ایسی کلید سے انکرپٹ ہوتی ہیں جو اسی پر رہتی ہے۔ نہ کوئی Privaro اکاؤنٹ ہے اور نہ آپ کی تصاویر رکھنے والا کوئی سرور، اس لیے کسی کے دیکھنے کو کچھ ہے ہی نہیں، ہمارے لیے بھی نہیں۔</p></div>
+    <div id="forgot-passcode"><h2>اگر میں اپنا پاس کوڈ بھول جاؤں تو؟</h2><p><strong>Privaro سیٹ اپ کرتے وقت آپ کو ایک ریکوری کلید ملتی ہے۔</strong> اسے کسی محفوظ جگہ رکھیں: اس سے آپ نیا پاس کوڈ سیٹ کر سکتے ہیں۔ پاس کوڈ یا ریکوری کلید کے بغیر والٹ نہیں کھولا جا سکتا، ہم بھی نہیں کھول سکتے۔</p></div>
+    <div id="lost-phone"><h2>اگر میرا فون گم ہو جائے تو کیا ہوگا؟</h2><p><strong>اگر آپ نے انکرپٹڈ iCloud بیک اپ (Pro) آن کیا تھا، تو آپ اپنی ریکوری کلید سے نئے iPhone پر والٹ بحال کر سکتے ہیں۔</strong> بحال کرنا مفت ہے۔ بیک اپ کے بغیر تصاویر پرانے فون پر ہی لاک رہتی ہیں۔</p></div>
+    <div id="video-size"><h2>کیا ویڈیو کے سائز کی کوئی حد ہے؟</h2><p><strong>فی فائل نہیں۔</strong> جب تک آپ کے iPhone میں جگہ ہے، کوئی بھی سائز چلے گا۔ مفت ورژن میں مجموعی طور پر 2.5 GB تک رکھا جا سکتا ہے، اور Pro میں کوئی حد نہیں۔</p></div>
+    <div id="offline"><h2>کیا اس کے لیے انٹرنیٹ کنکشن درکار ہے؟</h2><p><strong>نہیں۔</strong> آپ کا والٹ مکمل طور پر آف لائن کام کرتا ہے، اور جب تک آپ iCloud بیک اپ آن نہ کریں، آپ کی تصاویر کبھی آن لائن نہیں جاتیں۔</p></div>
+    <div id="subscription"><h2>کیا Pro سبسکرپشن ہے؟</h2><p><strong>نہیں۔</strong> Pro <span class="price" data-price="pro">Rs 1,500</span> کی ایک بار کی ادائیگی ہے۔ کچھ بھی تجدید نہیں ہوتا اور منسوخ کرنے کو کچھ نہیں۔</p></div>
+  </div>
+
+  <!-- Where to go for what isn't here. -->
+  <section class="faq-more" aria-labelledby="faq-more-title">
+    <h2 id="faq-more-title">کچھ اور پوچھنا ہے؟</h2>
+    <p><a class="more" href="mailto:erdincdubu@icloud.com">ہمیں لکھیں</a><a class="more" href="/security">سیکیورٹی کا جائزہ پڑھیں</a></p>
+  </section>
 
 </main>
 

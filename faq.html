@@ -38,7 +38,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=c9ceab4675" />
+<link rel="stylesheet" href="/styles.css?v=314a4cb5f6" />
 <link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
 <script>
 // Register before first reveal, including restored history entries.
@@ -82,18 +82,27 @@
   </div>
 </header>
 
-<main class="page wrap">
+<main class="page wrap faq-page">
 
-<h1>Questions</h1>
+  <h1>Questions</h1>
 
-<div class="faq ledger-list">
-  <div class="row"><h2>Can anyone else see my photos?</h2><p>No. They’re encrypted on your iPhone with a key that stays on it. There’s no Privaro account and no server holding your photos, so there’s nothing for anyone to look at, us included.</p></div>
-  <div class="row"><h2>What if I forget my passcode?</h2><p>When you set up Privaro you get a recovery key. Keep it somewhere safe: it lets you set a new passcode. Without the passcode or the recovery key, the vault can’t be opened, not even by us.</p></div>
-  <div class="row"><h2>What happens if I lose my phone?</h2><p>If you turned on encrypted iCloud backup (Pro), you can restore the vault on your new iPhone with your recovery key. Restoring is free. Without a backup, the photos stay locked on the old phone.</p></div>
-  <div class="row"><h2>Is there a limit on video size?</h2><p>Not per file. Any size works as long as your iPhone has room. The free version holds up to 2.5 GB in total, and Pro has no limit.</p></div>
-  <div class="row"><h2>Does it need an internet connection?</h2><p>No. Your vault works completely offline, and your photos never go online unless you turn on iCloud backup.</p></div>
-  <div class="row"><h2>Is Pro a subscription?</h2><p>No. Pro is a single payment of <span class="price" data-price="pro">$19.99</span>. Nothing renews and there’s nothing to cancel.</p></div>
-</div>
+  <!-- Each question large on the left, its answer beside it, starting on the
+       same line. The answer's first sentence is the short answer, in full
+       ink; the rest explains, in grey. No lines between them. -->
+  <div class="qa">
+    <div id="who-can-see"><h2>Can anyone else see my photos?</h2><p><strong>No.</strong> They’re encrypted on your iPhone with a key that stays on it. There’s no Privaro account and no server holding your photos, so there’s nothing for anyone to look at, us included.</p></div>
+    <div id="forgot-passcode"><h2>What if I forget my passcode?</h2><p><strong>When you set up Privaro you get a recovery key.</strong> Keep it somewhere safe: it lets you set a new passcode. Without the passcode or the recovery key, the vault can’t be opened, not even by us.</p></div>
+    <div id="lost-phone"><h2>What happens if I lose my phone?</h2><p><strong>If you turned on encrypted iCloud backup (Pro), you can restore the vault on your new iPhone with your recovery key.</strong> Restoring is free. Without a backup, the photos stay locked on the old phone.</p></div>
+    <div id="video-size"><h2>Is there a limit on video size?</h2><p><strong>Not per file.</strong> Any size works as long as your iPhone has room. The free version holds up to 2.5 GB in total, and Pro has no limit.</p></div>
+    <div id="offline"><h2>Does it need an internet connection?</h2><p><strong>No.</strong> Your vault works completely offline, and your photos never go online unless you turn on iCloud backup.</p></div>
+    <div id="subscription"><h2>Is Pro a subscription?</h2><p><strong>No.</strong> Pro is a single payment of <span class="price" data-price="pro">$19.99</span>. Nothing renews and there’s nothing to cancel.</p></div>
+  </div>
+
+  <!-- Where to go for what isn't here. -->
+  <section class="faq-more" aria-labelledby="faq-more-title">
+    <h2 id="faq-more-title">Anything else?</h2>
+    <p><a class="more" href="mailto:erdincdubu@icloud.com">Write to us</a><a class="more" href="/security">Read the security overview</a></p>
+  </section>
 
 </main>
 

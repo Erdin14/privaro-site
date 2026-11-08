@@ -38,7 +38,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=c9ceab4675" />
+<link rel="stylesheet" href="/styles.css?v=314a4cb5f6" />
 <link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
 <script>
 // Register before first reveal, including restored history entries.
@@ -82,18 +82,27 @@
   </div>
 </header>
 
-<main class="page wrap">
+<main class="page wrap faq-page">
 
-<h1>常见问题</h1>
+  <h1>常见问题</h1>
 
-<div class="faq ledger-list">
-  <div class="row"><h2>别人能看到我的照片吗？</h2><p>不能。照片在你的 iPhone 上用一把从不离开手机的密钥加密。没有 Privaro 账户，也没有存放照片的服务器，所以任何人都看不到，包括我们。</p></div>
-  <div class="row"><h2>忘记密码怎么办？</h2><p>设置 Privaro 时，你会得到一个恢复密钥。请妥善保管：它可以让你设置新密码。没有密码或恢复密钥，保险库就无法打开，我们也不行。</p></div>
-  <div class="row"><h2>如果手机丢了怎么办？</h2><p>如果你开启了加密的 iCloud 备份（Pro），就能用恢复密钥在新 iPhone 上恢复保险库，恢复是免费的。没有备份的话，照片会一直锁在旧手机上。</p></div>
-  <div class="row"><h2>视频有大小限制吗？</h2><p>单个文件没有限制，只要 iPhone 有空间，多大都可以。免费版总共可存 2.5 GB，Pro 没有上限。</p></div>
-  <div class="row"><h2>需要联网吗？</h2><p>不需要。保险库可完全离线使用，除非你开启 iCloud 备份，否则照片永远不会上网。</p></div>
-  <div class="row"><h2>Pro 是订阅吗？</h2><p>不是。Pro 是一次性付款 <span class="price" data-price="pro">¥148</span>，不会续费，也无需取消。</p></div>
-</div>
+  <!-- Each question large on the left, its answer beside it, starting on the
+       same line. The answer's first sentence is the short answer, in full
+       ink; the rest explains, in grey. No lines between them. -->
+  <div class="qa">
+    <div id="who-can-see"><h2>别人能看到<wbr>我的照片吗？</h2><p><strong>不能。</strong>照片在你的 iPhone 上用一把从不离开手机的密钥加密。没有 Privaro 账户，也没有存放照片的服务器，所以任何人都看不到，包括我们。</p></div>
+    <div id="forgot-passcode"><h2>忘记密码<wbr>怎么办？</h2><p><strong>设置 Privaro 时，你会得到一个恢复密钥。</strong>请妥善保管：它可以让你设置新密码。没有密码或恢复密钥，保险库就无法打开，我们也不行。</p></div>
+    <div id="lost-phone"><h2>如果手机丢了<wbr>怎么办？</h2><p><strong>如果你开启了加密的 iCloud 备份（Pro），就能用恢复密钥在新 iPhone 上恢复保险库，恢复是免费的。</strong>没有备份的话，照片会一直锁在旧手机上。</p></div>
+    <div id="video-size"><h2>视频有<wbr>大小限制吗？</h2><p><strong>单个文件没有限制，只要 iPhone 有空间，多大都可以。</strong>免费版总共可存 2.5 GB，Pro 没有上限。</p></div>
+    <div id="offline"><h2>需要联网吗？</h2><p><strong>不需要。</strong>保险库可完全离线使用，除非你开启 iCloud 备份，否则照片永远不会上网。</p></div>
+    <div id="subscription"><h2>Pro 是订阅吗？</h2><p><strong>不是。</strong>Pro 是一次性付款 <span class="price" data-price="pro">¥148</span>，不会续费，也无需取消。</p></div>
+  </div>
+
+  <!-- Where to go for what isn't here. -->
+  <section class="faq-more" aria-labelledby="faq-more-title">
+    <h2 id="faq-more-title">还有<wbr>其他问题？</h2>
+    <p><a class="more" href="mailto:erdincdubu@icloud.com">给我们写信</a><a class="more" href="/security">阅读安全概览</a></p>
+  </section>
 
 </main>
 

@@ -38,7 +38,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=c9ceab4675" />
+<link rel="stylesheet" href="/styles.css?v=314a4cb5f6" />
 <link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
 <script>
 // Register before first reveal, including restored history entries.
@@ -82,18 +82,27 @@
   </div>
 </header>
 
-<main class="page wrap">
+<main class="page wrap faq-page">
 
-<h1>Вопросы</h1>
+  <h1>Вопросы</h1>
 
-<div class="faq ledger-list">
-  <div class="row"><h2>Может ли кто-то ещё увидеть мои фото?</h2><p>Нет. Они зашифрованы на вашем iPhone ключом, который никогда его не покидает. Нет ни аккаунта Privaro, ни сервера с вашими фото, поэтому смотреть никому нечего — в том числе и нам.</p></div>
-  <div class="row"><h2>Что, если я забуду код-пароль?</h2><p>При настройке Privaro вы получаете ключ восстановления. Храните его в надёжном месте: с ним можно задать новый код-пароль. Без код-пароля или ключа восстановления хранилище не открыть — даже нам.</p></div>
-  <div class="row"><h2>Что будет, если я потеряю телефон?</h2><p>Если вы включили зашифрованное резервное копирование в iCloud (Pro), хранилище можно восстановить на новом iPhone с помощью ключа восстановления. Восстановление бесплатно. Без резервной копии фото останутся заблокированными на старом телефоне.</p></div>
-  <div class="row"><h2>Есть ли ограничение на размер видео?</h2><p>На отдельный файл — нет. Подойдёт любой размер, если на iPhone хватает места. Бесплатная версия вмещает до 2,5 ГБ в сумме, в Pro ограничений нет.</p></div>
-  <div class="row"><h2>Нужно ли подключение к интернету?</h2><p>Нет. Хранилище полностью работает офлайн, и ваши фото никогда не попадают в сеть, если вы не включите резервное копирование в iCloud.</p></div>
-  <div class="row"><h2>Pro — это подписка?</h2><p>Нет. Pro — это разовый платёж <span class="price" data-price="pro">1 790 ₽</span>. Ничего не продлевается, и отменять нечего.</p></div>
-</div>
+  <!-- Each question large on the left, its answer beside it, starting on the
+       same line. The answer's first sentence is the short answer, in full
+       ink; the rest explains, in grey. No lines between them. -->
+  <div class="qa">
+    <div id="who-can-see"><h2>Может ли кто-то ещё увидеть мои фото?</h2><p><strong>Нет.</strong> Они зашифрованы на вашем iPhone ключом, который никогда его не покидает. Нет ни аккаунта Privaro, ни сервера с вашими фото, поэтому смотреть никому нечего — в том числе и нам.</p></div>
+    <div id="forgot-passcode"><h2>Что, если я забуду код-пароль?</h2><p><strong>При настройке Privaro вы получаете ключ восстановления.</strong> Храните его в надёжном месте: с ним можно задать новый код-пароль. Без код-пароля или ключа восстановления хранилище не открыть — даже нам.</p></div>
+    <div id="lost-phone"><h2>Что будет, если я потеряю телефон?</h2><p><strong>Если вы включили зашифрованное резервное копирование в iCloud (Pro), хранилище можно восстановить на новом iPhone с помощью ключа восстановления.</strong> Восстановление бесплатно. Без резервной копии фото останутся заблокированными на старом телефоне.</p></div>
+    <div id="video-size"><h2>Есть ли ограничение на размер видео?</h2><p><strong>На отдельный файл — нет.</strong> Подойдёт любой размер, если на iPhone хватает места. Бесплатная версия вмещает до 2,5 ГБ в сумме, в Pro ограничений нет.</p></div>
+    <div id="offline"><h2>Нужно ли подключение к интернету?</h2><p><strong>Нет.</strong> Хранилище полностью работает офлайн, и ваши фото никогда не попадают в сеть, если вы не включите резервное копирование в iCloud.</p></div>
+    <div id="subscription"><h2>Pro — это подписка?</h2><p><strong>Нет.</strong> Pro — это разовый платёж <span class="price" data-price="pro">1 790 ₽</span>. Ничего не продлевается, и отменять нечего.</p></div>
+  </div>
+
+  <!-- Where to go for what isn't here. -->
+  <section class="faq-more" aria-labelledby="faq-more-title">
+    <h2 id="faq-more-title">Что-то ещё?</h2>
+    <p><a class="more" href="mailto:erdincdubu@icloud.com">Напишите нам</a><a class="more" href="/security">Читать обзор безопасности</a></p>
+  </section>
 
 </main>
 

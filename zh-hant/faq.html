@@ -38,7 +38,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=c9ceab4675" />
+<link rel="stylesheet" href="/styles.css?v=314a4cb5f6" />
 <link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
 <script>
 // Register before first reveal, including restored history entries.
@@ -82,18 +82,27 @@
   </div>
 </header>
 
-<main class="page wrap">
+<main class="page wrap faq-page">
 
-<h1>常見問題</h1>
+  <h1>常見問題</h1>
 
-<div class="faq ledger-list">
-  <div class="row"><h2>其他人看得到我的照片嗎？</h2><p>看不到。照片在你的 iPhone 上加密，金鑰也只留在 iPhone 上。沒有 Privaro 帳號，也沒有存放你照片的伺服器，所以包括我們在內，沒有人能看到任何內容。</p></div>
-  <div class="row"><h2>如果我忘記密碼怎麼辦？</h2><p>設定 Privaro 時你會拿到一組復原密鑰。請把它存放在安全的地方：它能讓你設定新密碼。沒有密碼或復原密鑰，保險庫就無法打開，連我們也打不開。</p></div>
-  <div class="row"><h2>如果手機遺失了怎麼辦？</h2><p>如果你開啟了加密 iCloud 備份（Pro），就可以用你的復原密鑰在新 iPhone 上還原保險庫。還原是免費的。沒有備份的話，照片會一直鎖在舊手機上。</p></div>
-  <div class="row"><h2>影片大小有限制嗎？</h2><p>單一檔案沒有限制。只要 iPhone 有空間，任何大小都可以。免費版總共可存放 2.5 GB，Pro 則沒有限制。</p></div>
-  <div class="row"><h2>需要網路連線嗎？</h2><p>不需要。保險庫完全可以離線運作，除非你開啟 iCloud 備份，否則你的照片永遠不會上網。</p></div>
-  <div class="row"><h2>Pro 是訂閱制嗎？</h2><p>不是。Pro 是一次性付款 <span class="price" data-price="pro">$690</span>。不會自動續約，也沒有需要取消的東西。</p></div>
-</div>
+  <!-- Each question large on the left, its answer beside it, starting on the
+       same line. The answer's first sentence is the short answer, in full
+       ink; the rest explains, in grey. No lines between them. -->
+  <div class="qa">
+    <div id="who-can-see"><h2>其他人看得到<wbr>我的照片嗎？</h2><p><strong>看不到。</strong>照片在你的 iPhone 上加密，金鑰也只留在 iPhone 上。沒有 Privaro 帳號，也沒有存放你照片的伺服器，所以包括我們在內，沒有人能看到任何內容。</p></div>
+    <div id="forgot-passcode"><h2>如果我忘記密碼<wbr>怎麼辦？</h2><p><strong>設定 Privaro 時你會拿到一組復原密鑰。</strong>請把它存放在安全的地方：它能讓你設定新密碼。沒有密碼或復原密鑰，保險庫就無法打開，連我們也打不開。</p></div>
+    <div id="lost-phone"><h2>如果手機遺失了<wbr>怎麼辦？</h2><p><strong>如果你開啟了加密 iCloud 備份（Pro），就可以用你的復原密鑰在新 iPhone 上還原保險庫。</strong>還原是免費的。沒有備份的話，照片會一直鎖在舊手機上。</p></div>
+    <div id="video-size"><h2>影片大小<wbr>有限制嗎？</h2><p><strong>單一檔案沒有限制。</strong>只要 iPhone 有空間，任何大小都可以。免費版總共可存放 2.5 GB，Pro 則沒有限制。</p></div>
+    <div id="offline"><h2>需要網路連線嗎？</h2><p><strong>不需要。</strong>保險庫完全可以離線運作，除非你開啟 iCloud 備份，否則你的照片永遠不會上網。</p></div>
+    <div id="subscription"><h2>Pro 是訂閱制嗎？</h2><p><strong>不是。</strong>Pro 是一次性付款 <span class="price" data-price="pro">$690</span>。不會自動續約，也沒有需要取消的東西。</p></div>
+  </div>
+
+  <!-- Where to go for what isn't here. -->
+  <section class="faq-more" aria-labelledby="faq-more-title">
+    <h2 id="faq-more-title">還有<wbr>其他問題？</h2>
+    <p><a class="more" href="mailto:erdincdubu@icloud.com">寫信給我們</a><a class="more" href="/security">閱讀安全概覽</a></p>
+  </section>
 
 </main>
 

@@ -41,18 +41,27 @@
 
 {{HEADER}}
 
-<main class="page wrap">
+<main class="page wrap faq-page">
 
-<h1>{{faq_h1}}</h1>
+  <h1>{{faq_h1}}</h1>
 
-<div class="faq ledger-list">
-  <div class="row"><h2>{{faq1_q}}</h2><p>{{faq1_a}}</p></div>
-  <div class="row"><h2>{{faq2_q}}</h2><p>{{faq2_a}}</p></div>
-  <div class="row"><h2>{{faq3_q}}</h2><p>{{faq3_a}}</p></div>
-  <div class="row"><h2>{{faq4_q}}</h2><p>{{faq4_a}}</p></div>
-  <div class="row"><h2>{{faq5_q}}</h2><p>{{faq5_a}}</p></div>
-  <div class="row"><h2>{{faq6_q}}</h2><p>{{faq6_a}}</p></div>
-</div>
+  <!-- Each question large on the left, its answer beside it, starting on the
+       same line. The answer's first sentence is the short answer, in full
+       ink; the rest explains, in grey. No lines between them. -->
+  <div class="qa">
+    <div id="who-can-see"><h2>{{faq1_q}}</h2><p>{{faq1_a}}</p></div>
+    <div id="forgot-passcode"><h2>{{faq2_q}}</h2><p>{{faq2_a}}</p></div>
+    <div id="lost-phone"><h2>{{faq3_q}}</h2><p>{{faq3_a}}</p></div>
+    <div id="video-size"><h2>{{faq4_q}}</h2><p>{{faq4_a}}</p></div>
+    <div id="offline"><h2>{{faq5_q}}</h2><p>{{faq5_a}}</p></div>
+    <div id="subscription"><h2>{{faq6_q}}</h2><p>{{faq6_a}}</p></div>
+  </div>
+
+  <!-- Where to go for what isn't here. -->
+  <section class="faq-more" aria-labelledby="faq-more-title">
+    <h2 id="faq-more-title">{{faq_more}}</h2>
+    <p><a class="more" href="mailto:erdincdubu@icloud.com">{{faq_write}}</a><a class="more" href="{{SECURITY_URL}}">{{home_sec_link}}</a></p>
+  </section>
 
 </main>
 

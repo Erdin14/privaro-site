@@ -38,7 +38,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=c9ceab4675" />
+<link rel="stylesheet" href="/styles.css?v=314a4cb5f6" />
 <link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
 <script>
 // Register before first reveal, including restored history entries.
@@ -82,18 +82,27 @@
   </div>
 </header>
 
-<main class="page wrap">
+<main class="page wrap faq-page">
 
-<h1>सवाल</h1>
+  <h1>सवाल</h1>
 
-<div class="faq ledger-list">
-  <div class="row"><h2>क्या कोई और मेरी फ़ोटो देख सकता है?</h2><p>नहीं। वे आपके iPhone पर एक ऐसी कुंजी से एन्क्रिप्ट होती हैं जो उसी पर रहती है। न कोई Privaro अकाउंट है और न ही आपकी फ़ोटो रखने वाला कोई सर्वर, इसलिए किसी के देखने के लिए कुछ है ही नहीं, हमारे लिए भी नहीं।</p></div>
-  <div class="row"><h2>अगर मैं अपना पासकोड भूल जाऊँ तो?</h2><p>Privaro सेट अप करते समय आपको एक रिकवरी कुंजी मिलती है। इसे किसी सुरक्षित जगह रखें: इससे आप नया पासकोड सेट कर सकते हैं। पासकोड या रिकवरी कुंजी के बिना तिजोरी नहीं खोली जा सकती, हम भी नहीं खोल सकते।</p></div>
-  <div class="row"><h2>अगर मेरा फ़ोन खो जाए तो क्या होगा?</h2><p>अगर आपने एन्क्रिप्टेड iCloud बैकअप (Pro) चालू किया था, तो आप अपनी रिकवरी कुंजी से नए iPhone पर तिजोरी रिस्टोर कर सकते हैं। रिस्टोर करना मुफ़्त है। बैकअप के बिना, फ़ोटो पुराने फ़ोन पर ही लॉक रहती हैं।</p></div>
-  <div class="row"><h2>क्या वीडियो के साइज़ की कोई सीमा है?</h2><p>हर फ़ाइल के लिए नहीं। जब तक आपके iPhone में जगह है, कोई भी साइज़ चलेगा। मुफ़्त वर्शन में कुल 2.5 GB तक रखा जा सकता है, और Pro में कोई सीमा नहीं है।</p></div>
-  <div class="row"><h2>क्या इसके लिए इंटरनेट कनेक्शन चाहिए?</h2><p>नहीं। आपकी तिजोरी पूरी तरह ऑफ़लाइन काम करती है, और जब तक आप iCloud बैकअप चालू नहीं करते, आपकी फ़ोटो कभी ऑनलाइन नहीं जातीं।</p></div>
-  <div class="row"><h2>क्या Pro एक सब्सक्रिप्शन है?</h2><p>नहीं। Pro <span class="price" data-price="pro">₹499</span> का एक बार का भुगतान है। कुछ भी रिन्यू नहीं होता और रद्द करने के लिए कुछ नहीं है।</p></div>
-</div>
+  <!-- Each question large on the left, its answer beside it, starting on the
+       same line. The answer's first sentence is the short answer, in full
+       ink; the rest explains, in grey. No lines between them. -->
+  <div class="qa">
+    <div id="who-can-see"><h2>क्या कोई और मेरी फ़ोटो देख सकता है?</h2><p><strong>नहीं।</strong> वे आपके iPhone पर एक ऐसी कुंजी से एन्क्रिप्ट होती हैं जो उसी पर रहती है। न कोई Privaro अकाउंट है और न ही आपकी फ़ोटो रखने वाला कोई सर्वर, इसलिए किसी के देखने के लिए कुछ है ही नहीं, हमारे लिए भी नहीं।</p></div>
+    <div id="forgot-passcode"><h2>अगर मैं अपना पासकोड भूल जाऊँ तो?</h2><p><strong>Privaro सेट अप करते समय आपको एक रिकवरी कुंजी मिलती है।</strong> इसे किसी सुरक्षित जगह रखें: इससे आप नया पासकोड सेट कर सकते हैं। पासकोड या रिकवरी कुंजी के बिना तिजोरी नहीं खोली जा सकती, हम भी नहीं खोल सकते।</p></div>
+    <div id="lost-phone"><h2>अगर मेरा फ़ोन खो जाए तो क्या होगा?</h2><p><strong>अगर आपने एन्क्रिप्टेड iCloud बैकअप (Pro) चालू किया था, तो आप अपनी रिकवरी कुंजी से नए iPhone पर तिजोरी रिस्टोर कर सकते हैं।</strong> रिस्टोर करना मुफ़्त है। बैकअप के बिना, फ़ोटो पुराने फ़ोन पर ही लॉक रहती हैं।</p></div>
+    <div id="video-size"><h2>क्या वीडियो के साइज़ की कोई सीमा है?</h2><p><strong>हर फ़ाइल के लिए नहीं।</strong> जब तक आपके iPhone में जगह है, कोई भी साइज़ चलेगा। मुफ़्त वर्शन में कुल 2.5 GB तक रखा जा सकता है, और Pro में कोई सीमा नहीं है।</p></div>
+    <div id="offline"><h2>क्या इसके लिए इंटरनेट कनेक्शन चाहिए?</h2><p><strong>नहीं।</strong> आपकी तिजोरी पूरी तरह ऑफ़लाइन काम करती है, और जब तक आप iCloud बैकअप चालू नहीं करते, आपकी फ़ोटो कभी ऑनलाइन नहीं जातीं।</p></div>
+    <div id="subscription"><h2>क्या Pro एक सब्सक्रिप्शन है?</h2><p><strong>नहीं।</strong> Pro <span class="price" data-price="pro">₹499</span> का एक बार का भुगतान है। कुछ भी रिन्यू नहीं होता और रद्द करने के लिए कुछ नहीं है।</p></div>
+  </div>
+
+  <!-- Where to go for what isn't here. -->
+  <section class="faq-more" aria-labelledby="faq-more-title">
+    <h2 id="faq-more-title">कुछ और पूछना है?</h2>
+    <p><a class="more" href="mailto:erdincdubu@icloud.com">हमें लिखें</a><a class="more" href="/security">सुरक्षा का सार पढ़ें</a></p>
+  </section>
 
 </main>
 

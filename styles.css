@@ -559,15 +559,26 @@ h1, h2 { font-weight: 600; }
 .note { max-width: 40em; margin-top: 16px; font-size: 15px; color: var(--muted); }
 .note strong { color: var(--ink); font-weight: 600; }
 
-/* The questions: the homepage's ledger at the page's
-   width. Rows between hairlines, the title on the left and what it means on
-   the right in a reading measure, so the titles read down the page as an
-   index of what's there. */
-.ledger-list { list-style: none; margin-top: var(--space-7); border-top: 1px solid var(--rule); }
-.ledger-list > * { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); column-gap: var(--space-6);
-  padding-block: var(--space-5); border-bottom: 1px solid var(--rule); }
-.ledger-list h2 { font-size: var(--size-lead); line-height: 1.4; letter-spacing: -.012em; }
-.ledger-list p { font-size: var(--size-text); line-height: 1.55; letter-spacing: var(--track-text); color: var(--muted); }
+/* Questions. Each question set large on the left and its answer beside
+   it, starting on the same line, in the column the Pro page's descriptions
+   use. The answer's first sentence is the short answer, in full ink, so the
+   page can be read by its answers alone; the rest explains, in grey. Space,
+   not lines, between them. At the end, where to ask what isn't here. */
+.faq-page { --qa-columns: minmax(0, 1fr) minmax(300px, 480px); }
+.faq-page h1 { font-size: clamp(44px, 5.6vw, 76px); }
+.qa { display: grid; row-gap: var(--space-8); margin-top: var(--space-8); }
+.qa > div { display: grid; grid-template-columns: var(--qa-columns); column-gap: var(--space-7); align-items: baseline;
+  scroll-margin-top: 104px; }
+.qa h2 { font-family: var(--display); font-size: var(--size-title); font-weight: 600; line-height: 1.15;
+  letter-spacing: var(--track-title); text-wrap: balance; }
+.qa p { font-size: var(--size-lead); line-height: 1.55; letter-spacing: var(--track-text); color: var(--muted); }
+.qa p strong { color: var(--ink); font-weight: 500; }
+.faq-more { display: grid; grid-template-columns: var(--qa-columns); column-gap: var(--space-7); align-items: baseline;
+  margin-top: var(--space-9); padding-block: var(--space-7); border-block: 1px solid var(--rule); }
+.faq-more h2 { font-family: var(--display); font-size: clamp(36px, 4.4vw, 60px); font-weight: 700; line-height: 1.05;
+  letter-spacing: var(--track-display); text-wrap: balance; }
+.faq-more p { display: flex; flex-wrap: wrap; gap: var(--space-3) var(--space-6); }
+.faq-more .more { margin-top: 0; font-size: var(--size-lead); }
 /* Pro. What Pro is, and one switch, Free or Pro, that the rest of the page
    answers to: the three limits under it, and the twelve features, one to a
    row, which dim to empty boxes on Free and light up on Pro. Then what's the
@@ -767,17 +778,17 @@ h1, h2 { font-weight: 600; }
 /* Scripts other than Latin and Cyrillic. Letter-spacing would pull Arabic and
    Urdu's joined letters apart and crowds Devanagari and CJK, and Arabic, Urdu
    and Hindi need taller lines so marks above and below don't collide. */
-:is(:lang(ar), :lang(ur), :lang(hi)) :is(.tagline, .display, .display .answer, .limit, .pro-figure p, .page h1, .buy-note, .ledger dt, .ledger dd, .shots figcaption) { letter-spacing: 0; }
-:is(:lang(zh), :lang(ja), :lang(ko)) :is(.tagline, .display, .display .answer, .limit, .page h1) { letter-spacing: -.01em; }
+:is(:lang(ar), :lang(ur), :lang(hi)) :is(.tagline, .display, .display .answer, .limit, .pro-figure p, .qa h2, .faq-more h2, .page h1, .buy-note, .ledger dt, .ledger dd, .shots figcaption) { letter-spacing: 0; }
+:is(:lang(zh), :lang(ja), :lang(ko)) :is(.tagline, .display, .display .answer, .limit, .qa h2, .faq-more h2, .page h1) { letter-spacing: -.01em; }
 /* Chinese and Japanese may break between any two characters; display lines
    break between phrases, where the strings mark it with <wbr>, and inside
    one only when a phrase is wider than the screen. */
-:is(:lang(zh), :lang(ja)) :is(.tagline, .display, .page h1) { word-break: keep-all; overflow-wrap: anywhere; }
-:is(:lang(ar), :lang(hi)) :is(.tagline, .display, .limit) { line-height: 1.3; }
+:is(:lang(zh), :lang(ja)) :is(.tagline, .display, .page h1, .qa h2, .faq-more h2) { word-break: keep-all; overflow-wrap: anywhere; }
+:is(:lang(ar), :lang(hi)) :is(.tagline, .display, .limit, .qa h2, .faq-more h2) { line-height: 1.3; }
 :is(:lang(ar), :lang(hi)) .mask { padding-block: .2em .25em; margin-block: -.2em -.25em; }
 :lang(ur) body { line-height: 1.8; }
 :lang(ur) .page h1 { line-height: 1.6; }
-:lang(ur) :is(.tagline, .display, .limit) { line-height: 1.45; }
+:lang(ur) :is(.tagline, .display, .limit, .qa h2, .faq-more h2) { line-height: 1.45; }
 :lang(ur) .mask { padding-block: .35em .45em; margin-block: -.35em -.45em; }
 
 /* Tablets and narrower windows: the hero stacks, and the phones become a row
@@ -806,6 +817,10 @@ h1, h2 { font-weight: 600; }
 }
 @media (max-width: 900px) {
   .pro-price { grid-template-columns: minmax(0, 1fr); }
+  /* Each answer under its question: beside it, a long word in a question
+     (German, Dutch, Italian) no longer fits its column. */
+  .qa > div, .faq-more { grid-template-columns: minmax(0, 1fr); row-gap: var(--space-3); }
+  .faq-more { row-gap: var(--space-5); }
   .pro-pay { margin-top: var(--space-5); }
 }
 @media (max-width: 760px) {
@@ -827,7 +842,8 @@ h1, h2 { font-weight: 600; }
   .closing-shot { width: min(62vw, 260px); justify-self: center; }
   .page { padding: 40px 0 64px; }
   .page .intro { font-size: 17px; }
-  .ledger-list { margin-top: var(--space-6); }
+  .qa { row-gap: var(--space-7); margin-top: var(--space-7); }
+  .faq-more { margin-top: var(--space-8); }
   /* The limits one above the other, the features' names over what they do. */
   .limits { grid-template-columns: minmax(0, 1fr); margin-top: var(--space-7); }
   .limits > div, .limits > div:first-child, .limits > div:last-child { padding: var(--space-5) 0; }
@@ -836,7 +852,6 @@ h1, h2 { font-weight: 600; }
   .pro-list li { grid-template-columns: minmax(0, 1fr); row-gap: var(--space-1); padding-inline-start: 30px; }
   .basics ul { gap: var(--space-2) var(--space-5); }
   .pro-price { margin-top: var(--space-7); padding-block: var(--space-7); }
-  .ledger-list > * { grid-template-columns: minmax(0, 1fr); row-gap: var(--space-1); padding-block: var(--space-4); }
   .legal { margin-top: 36px; }
   .toc ol { columns: 1; }
   .doc { margin-top: 36px; }

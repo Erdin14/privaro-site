@@ -38,7 +38,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=c9ceab4675" />
+<link rel="stylesheet" href="/styles.css?v=314a4cb5f6" />
 <link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
 <script>
 // Register before first reveal, including restored history entries.
@@ -82,18 +82,27 @@
   </div>
 </header>
 
-<main class="page wrap">
+<main class="page wrap faq-page">
 
-<h1>Preguntas</h1>
+  <h1>Preguntas</h1>
 
-<div class="faq ledger-list">
-  <div class="row"><h2>¿Alguien más puede ver mis fotos?</h2><p>No. Se cifran en tu iPhone con una clave que no sale de él. No hay cuenta de Privaro ni servidor que guarde tus fotos, así que nadie tiene nada que ver, ni siquiera nosotros.</p></div>
-  <div class="row"><h2>¿Y si olvido mi código?</h2><p>Al configurar Privaro recibes una clave de recuperación. Guárdala en un lugar seguro: con ella puedes poner un código nuevo. Sin el código ni la clave, la caja fuerte no se puede abrir, ni siquiera nosotros.</p></div>
-  <div class="row"><h2>¿Qué pasa si pierdo el teléfono?</h2><p>Si activaste la copia cifrada en iCloud (Pro), puedes restaurar la caja fuerte en tu nuevo iPhone con tu clave de recuperación. Restaurar es gratis. Sin copia, las fotos se quedan bloqueadas en el teléfono antiguo.</p></div>
-  <div class="row"><h2>¿Hay límite de tamaño para los vídeos?</h2><p>No por archivo. Cualquier tamaño sirve mientras tu iPhone tenga espacio. La versión gratuita guarda hasta 2,5 GB en total y Pro no tiene límite.</p></div>
-  <div class="row"><h2>¿Necesita conexión a internet?</h2><p>No. La caja fuerte funciona sin conexión y tus fotos nunca salen a internet a menos que actives la copia en iCloud.</p></div>
-  <div class="row"><h2>¿Pro es una suscripción?</h2><p>No. Pro es un único pago de <span class="price" data-price="pro">9,99 €</span>. No se renueva nada y no hay nada que cancelar.</p></div>
-</div>
+  <!-- Each question large on the left, its answer beside it, starting on the
+       same line. The answer's first sentence is the short answer, in full
+       ink; the rest explains, in grey. No lines between them. -->
+  <div class="qa">
+    <div id="who-can-see"><h2>¿Alguien más puede ver mis fotos?</h2><p><strong>No.</strong> Se cifran en tu iPhone con una clave que no sale de él. No hay cuenta de Privaro ni servidor que guarde tus fotos, así que nadie tiene nada que ver, ni siquiera nosotros.</p></div>
+    <div id="forgot-passcode"><h2>¿Y si olvido mi código?</h2><p><strong>Al configurar Privaro recibes una clave de recuperación.</strong> Guárdala en un lugar seguro: con ella puedes poner un código nuevo. Sin el código ni la clave, la caja fuerte no se puede abrir, ni siquiera nosotros.</p></div>
+    <div id="lost-phone"><h2>¿Qué pasa si pierdo el teléfono?</h2><p><strong>Si activaste la copia cifrada en iCloud (Pro), puedes restaurar la caja fuerte en tu nuevo iPhone con tu clave de recuperación.</strong> Restaurar es gratis. Sin copia, las fotos se quedan bloqueadas en el teléfono antiguo.</p></div>
+    <div id="video-size"><h2>¿Hay límite de tamaño para los vídeos?</h2><p><strong>No por archivo.</strong> Cualquier tamaño sirve mientras tu iPhone tenga espacio. La versión gratuita guarda hasta 2,5 GB en total y Pro no tiene límite.</p></div>
+    <div id="offline"><h2>¿Necesita conexión a internet?</h2><p><strong>No.</strong> La caja fuerte funciona sin conexión y tus fotos nunca salen a internet a menos que actives la copia en iCloud.</p></div>
+    <div id="subscription"><h2>¿Pro es una suscripción?</h2><p><strong>No.</strong> Pro es un único pago de <span class="price" data-price="pro">9,99 €</span>. No se renueva nada y no hay nada que cancelar.</p></div>
+  </div>
+
+  <!-- Where to go for what isn't here. -->
+  <section class="faq-more" aria-labelledby="faq-more-title">
+    <h2 id="faq-more-title">¿Algo más?</h2>
+    <p><a class="more" href="mailto:erdincdubu@icloud.com">Escríbenos</a><a class="more" href="/security">Leer el resumen de seguridad</a></p>
+  </section>
 
 </main>
 

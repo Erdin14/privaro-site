@@ -38,7 +38,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=c9ceab4675" />
+<link rel="stylesheet" href="/styles.css?v=314a4cb5f6" />
 <link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
 <script>
 // Register before first reveal, including restored history entries.
@@ -82,18 +82,27 @@
   </div>
 </header>
 
-<main class="page wrap">
+<main class="page wrap faq-page">
 
-<h1>Questions</h1>
+  <h1>Questions</h1>
 
-<div class="faq ledger-list">
-  <div class="row"><h2>Quelqu’un d’autre peut-il voir mes photos ?</h2><p>Non. Elles sont chiffrées sur votre iPhone avec une clé qui ne le quitte pas. Il n’y a ni compte Privaro ni serveur qui stocke vos photos : personne n’a rien à voir, nous non plus.</p></div>
-  <div class="row"><h2>Et si j’oublie mon code ?</h2><p>En configurant Privaro, vous recevez une clé de récupération. Gardez-la en lieu sûr : elle permet de définir un nouveau code. Sans le code ni la clé, le coffre ne peut pas être ouvert, même par nous.</p></div>
-  <div class="row"><h2>Que se passe-t-il si je perds mon téléphone ?</h2><p>Si vous avez activé la sauvegarde iCloud chiffrée (Pro), vous pouvez restaurer le coffre sur votre nouvel iPhone avec votre clé de récupération. La restauration est gratuite. Sans sauvegarde, les photos restent verrouillées sur l’ancien téléphone.</p></div>
-  <div class="row"><h2>Y a-t-il une limite de taille pour les vidéos ?</h2><p>Pas par fichier. Toutes les tailles passent tant que votre iPhone a de la place. La version gratuite contient jusqu’à 2,5 Go au total, Pro n’a pas de limite.</p></div>
-  <div class="row"><h2>Faut-il une connexion internet ?</h2><p>Non. Le coffre fonctionne entièrement hors ligne, et vos photos ne vont jamais en ligne sauf si vous activez la sauvegarde iCloud.</p></div>
-  <div class="row"><h2>Pro est-il un abonnement ?</h2><p>Non. Pro est un paiement unique de <span class="price" data-price="pro">9,99 €</span>. Rien ne se renouvelle, rien à résilier.</p></div>
-</div>
+  <!-- Each question large on the left, its answer beside it, starting on the
+       same line. The answer's first sentence is the short answer, in full
+       ink; the rest explains, in grey. No lines between them. -->
+  <div class="qa">
+    <div id="who-can-see"><h2>Quelqu’un d’autre peut-il voir mes photos ?</h2><p><strong>Non.</strong> Elles sont chiffrées sur votre iPhone avec une clé qui ne le quitte pas. Il n’y a ni compte Privaro ni serveur qui stocke vos photos : personne n’a rien à voir, nous non plus.</p></div>
+    <div id="forgot-passcode"><h2>Et si j’oublie mon code ?</h2><p><strong>En configurant Privaro, vous recevez une clé de récupération.</strong> Gardez-la en lieu sûr : elle permet de définir un nouveau code. Sans le code ni la clé, le coffre ne peut pas être ouvert, même par nous.</p></div>
+    <div id="lost-phone"><h2>Que se passe-t-il si je perds mon téléphone ?</h2><p><strong>Si vous avez activé la sauvegarde iCloud chiffrée (Pro), vous pouvez restaurer le coffre sur votre nouvel iPhone avec votre clé de récupération.</strong> La restauration est gratuite. Sans sauvegarde, les photos restent verrouillées sur l’ancien téléphone.</p></div>
+    <div id="video-size"><h2>Y a-t-il une limite de taille pour les vidéos ?</h2><p><strong>Pas par fichier.</strong> Toutes les tailles passent tant que votre iPhone a de la place. La version gratuite contient jusqu’à 2,5 Go au total, Pro n’a pas de limite.</p></div>
+    <div id="offline"><h2>Faut-il une connexion internet ?</h2><p><strong>Non.</strong> Le coffre fonctionne entièrement hors ligne, et vos photos ne vont jamais en ligne sauf si vous activez la sauvegarde iCloud.</p></div>
+    <div id="subscription"><h2>Pro est-il un abonnement ?</h2><p><strong>Non.</strong> Pro est un paiement unique de <span class="price" data-price="pro">9,99 €</span>. Rien ne se renouvelle, rien à résilier.</p></div>
+  </div>
+
+  <!-- Where to go for what isn't here. -->
+  <section class="faq-more" aria-labelledby="faq-more-title">
+    <h2 id="faq-more-title">Autre chose ?</h2>
+    <p><a class="more" href="mailto:erdincdubu@icloud.com">Écrivez-nous</a><a class="more" href="/security">Lire la présentation de la sécurité</a></p>
+  </section>
 
 </main>
 

@@ -38,7 +38,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=c9ceab4675" />
+<link rel="stylesheet" href="/styles.css?v=314a4cb5f6" />
 <link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
 <script>
 // Register before first reveal, including restored history entries.
@@ -82,18 +82,27 @@
   </div>
 </header>
 
-<main class="page wrap">
+<main class="page wrap faq-page">
 
-<h1>Vragen</h1>
+  <h1>Vragen</h1>
 
-<div class="faq ledger-list">
-  <div class="row"><h2>Kan iemand anders mijn foto’s zien?</h2><p>Nee. Ze worden op je iPhone versleuteld met een sleutel die daar blijft. Er is geen Privaro-account en geen server met je foto’s, dus er valt voor niemand iets te zien, ook niet voor ons.</p></div>
-  <div class="row"><h2>Wat als ik mijn code vergeet?</h2><p>Bij het instellen van Privaro krijg je een herstelsleutel. Bewaar die goed: daarmee stel je een nieuwe code in. Zonder code of herstelsleutel kan de kluis niet open, ook niet door ons.</p></div>
-  <div class="row"><h2>Wat gebeurt er als ik mijn telefoon kwijtraak?</h2><p>Had je de versleutelde iCloud-back-up (Pro) aan, dan zet je de kluis met je herstelsleutel terug op je nieuwe iPhone. Terugzetten is gratis. Zonder back-up blijven de foto’s op de oude telefoon op slot.</p></div>
-  <div class="row"><h2>Is er een limiet voor de grootte van video’s?</h2><p>Niet per bestand. Elke grootte werkt zolang je iPhone ruimte heeft. De gratis versie bewaart tot 2,5 GB in totaal, Pro heeft geen limiet.</p></div>
-  <div class="row"><h2>Heb je een internetverbinding nodig?</h2><p>Nee. Je kluis werkt volledig offline, en je foto’s gaan nooit online tenzij je de iCloud-back-up aanzet.</p></div>
-  <div class="row"><h2>Is Pro een abonnement?</h2><p>Nee. Pro is een eenmalige betaling van <span class="price" data-price="pro">€ 9,99</span>. Er wordt niets verlengd en er valt niets op te zeggen.</p></div>
-</div>
+  <!-- Each question large on the left, its answer beside it, starting on the
+       same line. The answer's first sentence is the short answer, in full
+       ink; the rest explains, in grey. No lines between them. -->
+  <div class="qa">
+    <div id="who-can-see"><h2>Kan iemand anders mijn foto’s zien?</h2><p><strong>Nee.</strong> Ze worden op je iPhone versleuteld met een sleutel die daar blijft. Er is geen Privaro-account en geen server met je foto’s, dus er valt voor niemand iets te zien, ook niet voor ons.</p></div>
+    <div id="forgot-passcode"><h2>Wat als ik mijn code vergeet?</h2><p><strong>Bij het instellen van Privaro krijg je een herstelsleutel.</strong> Bewaar die goed: daarmee stel je een nieuwe code in. Zonder code of herstelsleutel kan de kluis niet open, ook niet door ons.</p></div>
+    <div id="lost-phone"><h2>Wat gebeurt er als ik mijn telefoon kwijtraak?</h2><p><strong>Had je de versleutelde iCloud-back-up (Pro) aan, dan zet je de kluis met je herstelsleutel terug op je nieuwe iPhone.</strong> Terugzetten is gratis. Zonder back-up blijven de foto’s op de oude telefoon op slot.</p></div>
+    <div id="video-size"><h2>Is er een limiet voor de grootte van video’s?</h2><p><strong>Niet per bestand.</strong> Elke grootte werkt zolang je iPhone ruimte heeft. De gratis versie bewaart tot 2,5 GB in totaal, Pro heeft geen limiet.</p></div>
+    <div id="offline"><h2>Heb je een internetverbinding nodig?</h2><p><strong>Nee.</strong> Je kluis werkt volledig offline, en je foto’s gaan nooit online tenzij je de iCloud-back-up aanzet.</p></div>
+    <div id="subscription"><h2>Is Pro een abonnement?</h2><p><strong>Nee.</strong> Pro is een eenmalige betaling van <span class="price" data-price="pro">€ 9,99</span>. Er wordt niets verlengd en er valt niets op te zeggen.</p></div>
+  </div>
+
+  <!-- Where to go for what isn't here. -->
+  <section class="faq-more" aria-labelledby="faq-more-title">
+    <h2 id="faq-more-title">Nog iets?</h2>
+    <p><a class="more" href="mailto:erdincdubu@icloud.com">Mail ons</a><a class="more" href="/security">Lees het beveiligingsoverzicht</a></p>
+  </section>
 
 </main>
 

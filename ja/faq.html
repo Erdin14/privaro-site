@@ -38,7 +38,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=c9ceab4675" />
+<link rel="stylesheet" href="/styles.css?v=314a4cb5f6" />
 <link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
 <script>
 // Register before first reveal, including restored history entries.
@@ -82,18 +82,27 @@
   </div>
 </header>
 
-<main class="page wrap">
+<main class="page wrap faq-page">
 
-<h1>よくある質問</h1>
+  <h1>よくある質問</h1>
 
-<div class="faq ledger-list">
-  <div class="row"><h2>ほかの人に写真を見られることはありますか？</h2><p>ありません。写真は iPhone 上で暗号化され、その鍵も iPhone から出ることはありません。Privaro のアカウントも写真を保管するサーバーもないため、私たちを含め誰にも見ることはできません。</p></div>
-  <div class="row"><h2>パスコードを忘れたらどうなりますか？</h2><p>Privaro の設定時に復旧キーが発行されます。安全な場所に保管してください。復旧キーがあれば新しいパスコードを設定できます。パスコードも復旧キーもない場合、保管庫は開けません。私たちにも開けません。</p></div>
-  <div class="row"><h2>iPhone をなくしたらどうなりますか？</h2><p>暗号化された iCloud バックアップ（Pro）をオンにしていれば、新しい iPhone に復旧キーを使って保管庫を復元できます。復元は無料です。バックアップがない場合、写真は古い iPhone にロックされたままになります。</p></div>
-  <div class="row"><h2>ビデオのサイズに制限はありますか？</h2><p>ファイルごとの制限はありません。iPhone に空き容量があれば、どんなサイズでも大丈夫です。無料版は合計 2.5 GB まで、Pro は無制限です。</p></div>
-  <div class="row"><h2>インターネット接続は必要ですか？</h2><p>必要ありません。保管庫は完全にオフラインで動作し、iCloud バックアップをオンにしない限り、写真がオンラインに出ることはありません。</p></div>
-  <div class="row"><h2>Pro はサブスクリプションですか？</h2><p>いいえ。Pro は <span class="price" data-price="pro">￥3,000</span> の一回払いです。自動更新もなく、解約の手続きもありません。</p></div>
-</div>
+  <!-- Each question large on the left, its answer beside it, starting on the
+       same line. The answer's first sentence is the short answer, in full
+       ink; the rest explains, in grey. No lines between them. -->
+  <div class="qa">
+    <div id="who-can-see"><h2>ほかの人に<wbr>写真を<wbr>見られることは<wbr>ありますか？</h2><p><strong>ありません。</strong>写真は iPhone 上で暗号化され、その鍵も iPhone から出ることはありません。Privaro のアカウントも写真を保管するサーバーもないため、私たちを含め誰にも見ることはできません。</p></div>
+    <div id="forgot-passcode"><h2>パスコードを<wbr>忘れたら<wbr>どうなりますか？</h2><p><strong>Privaro の設定時に復旧キーが発行されます。</strong>安全な場所に保管してください。復旧キーがあれば新しいパスコードを設定できます。パスコードも復旧キーもない場合、保管庫は開けません。私たちにも開けません。</p></div>
+    <div id="lost-phone"><h2>iPhone を<wbr>なくしたら<wbr>どうなりますか？</h2><p><strong>暗号化された iCloud バックアップ（Pro）をオンにしていれば、新しい iPhone に復旧キーを使って保管庫を復元できます。</strong>復元は無料です。バックアップがない場合、写真は古い iPhone にロックされたままになります。</p></div>
+    <div id="video-size"><h2>ビデオの<wbr>サイズに<wbr>制限は<wbr>ありますか？</h2><p><strong>ファイルごとの制限はありません。</strong>iPhone に空き容量があれば、どんなサイズでも大丈夫です。無料版は合計 2.5 GB まで、Pro は無制限です。</p></div>
+    <div id="offline"><h2>インターネット接続は<wbr>必要ですか？</h2><p><strong>必要ありません。</strong>保管庫は完全にオフラインで動作し、iCloud バックアップをオンにしない限り、写真がオンラインに出ることはありません。</p></div>
+    <div id="subscription"><h2>Pro は<wbr>サブスクリプションですか？</h2><p><strong>いいえ。</strong>Pro は <span class="price" data-price="pro">￥3,000</span> の一回払いです。自動更新もなく、解約の手続きもありません。</p></div>
+  </div>
+
+  <!-- Where to go for what isn't here. -->
+  <section class="faq-more" aria-labelledby="faq-more-title">
+    <h2 id="faq-more-title">ほかに<wbr>ご質問は？</h2>
+    <p><a class="more" href="mailto:erdincdubu@icloud.com">お問い合わせ</a><a class="more" href="/security">セキュリティの概要を読む</a></p>
+  </section>
 
 </main>
 

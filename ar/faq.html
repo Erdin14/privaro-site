@@ -38,7 +38,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=c9ceab4675" />
+<link rel="stylesheet" href="/styles.css?v=314a4cb5f6" />
 <link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
 <script>
 // Register before first reveal, including restored history entries.
@@ -82,18 +82,27 @@
   </div>
 </header>
 
-<main class="page wrap">
+<main class="page wrap faq-page">
 
-<h1>أسئلة</h1>
+  <h1>أسئلة</h1>
 
-<div class="faq ledger-list">
-  <div class="row"><h2>هل يمكن لأي شخص آخر رؤية صوري؟</h2><p>لا. صورك مشفّرة على iPhone بمفتاح يبقى عليه. لا يوجد حساب Privaro ولا خادم يحتفظ بصورك، لذا لا يوجد ما يمكن لأحد أن يطّلع عليه، بما في ذلك نحن.</p></div>
-  <div class="row"><h2>ماذا لو نسيت رمز الدخول؟</h2><p>عند إعداد Privaro تحصل على مفتاح استرداد. احتفظ به في مكان آمن: فهو يتيح لك تعيين رمز دخول جديد. بدون رمز الدخول أو مفتاح الاسترداد لا يمكن فتح الخزنة، ولا حتى من قِبلنا.</p></div>
-  <div class="row"><h2>ماذا يحدث إذا فقدت هاتفي؟</h2><p>إذا فعّلت النسخ الاحتياطي المشفّر على iCloud ‏(Pro)، يمكنك استعادة الخزنة على iPhone الجديد باستخدام مفتاح الاسترداد. الاستعادة مجانية. بدون نسخة احتياطية، تبقى الصور مقفلة على الهاتف القديم.</p></div>
-  <div class="row"><h2>هل يوجد حدّ لحجم الفيديو؟</h2><p>ليس لكل ملف. أي حجم يعمل ما دام في iPhone مساحة كافية. تتّسع النسخة المجانية لما يصل إلى 2.5 غيغابايت إجمالًا، ولا حدّ في Pro.</p></div>
-  <div class="row"><h2>هل يحتاج إلى اتصال بالإنترنت؟</h2><p>لا. تعمل خزنتك دون اتصال بالكامل، ولا تذهب صورك إلى الإنترنت أبدًا ما لم تفعّل النسخ الاحتياطي على iCloud.</p></div>
-  <div class="row"><h2>هل Pro اشتراك؟</h2><p>لا. Pro دفعة واحدة بقيمة <span class="price" data-price="pro">‏89.99 ر.س.‏</span>. لا شيء يتجدد، ولا شيء لإلغائه.</p></div>
-</div>
+  <!-- Each question large on the left, its answer beside it, starting on the
+       same line. The answer's first sentence is the short answer, in full
+       ink; the rest explains, in grey. No lines between them. -->
+  <div class="qa">
+    <div id="who-can-see"><h2>هل يمكن لأي شخص آخر رؤية صوري؟</h2><p><strong>لا.</strong> صورك مشفّرة على iPhone بمفتاح يبقى عليه. لا يوجد حساب Privaro ولا خادم يحتفظ بصورك، لذا لا يوجد ما يمكن لأحد أن يطّلع عليه، بما في ذلك نحن.</p></div>
+    <div id="forgot-passcode"><h2>ماذا لو نسيت رمز الدخول؟</h2><p><strong>عند إعداد Privaro تحصل على مفتاح استرداد.</strong> احتفظ به في مكان آمن: فهو يتيح لك تعيين رمز دخول جديد. بدون رمز الدخول أو مفتاح الاسترداد لا يمكن فتح الخزنة، ولا حتى من قِبلنا.</p></div>
+    <div id="lost-phone"><h2>ماذا يحدث إذا فقدت هاتفي؟</h2><p><strong>إذا فعّلت النسخ الاحتياطي المشفّر على iCloud ‏(Pro)، يمكنك استعادة الخزنة على iPhone الجديد باستخدام مفتاح الاسترداد.</strong> الاستعادة مجانية. بدون نسخة احتياطية، تبقى الصور مقفلة على الهاتف القديم.</p></div>
+    <div id="video-size"><h2>هل يوجد حدّ لحجم الفيديو؟</h2><p><strong>ليس لكل ملف.</strong> أي حجم يعمل ما دام في iPhone مساحة كافية. تتّسع النسخة المجانية لما يصل إلى 2.5 غيغابايت إجمالًا، ولا حدّ في Pro.</p></div>
+    <div id="offline"><h2>هل يحتاج إلى اتصال بالإنترنت؟</h2><p><strong>لا.</strong> تعمل خزنتك دون اتصال بالكامل، ولا تذهب صورك إلى الإنترنت أبدًا ما لم تفعّل النسخ الاحتياطي على iCloud.</p></div>
+    <div id="subscription"><h2>هل Pro اشتراك؟</h2><p><strong>لا.</strong> Pro دفعة واحدة بقيمة <span class="price" data-price="pro">‏89.99 ر.س.‏</span>. لا شيء يتجدد، ولا شيء لإلغائه.</p></div>
+  </div>
+
+  <!-- Where to go for what isn't here. -->
+  <section class="faq-more" aria-labelledby="faq-more-title">
+    <h2 id="faq-more-title">هل لديك سؤال آخر؟</h2>
+    <p><a class="more" href="mailto:erdincdubu@icloud.com">راسلنا</a><a class="more" href="/security">اقرأ نظرة عامة على الأمان</a></p>
+  </section>
 
 </main>
 

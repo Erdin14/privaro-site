@@ -38,7 +38,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=c9ceab4675" />
+<link rel="stylesheet" href="/styles.css?v=314a4cb5f6" />
 <link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
 <script>
 // Register before first reveal, including restored history entries.
@@ -82,18 +82,27 @@
   </div>
 </header>
 
-<main class="page wrap">
+<main class="page wrap faq-page">
 
-<h1>Domande</h1>
+  <h1>Domande</h1>
 
-<div class="faq ledger-list">
-  <div class="row"><h2>Qualcun altro può vedere le mie foto?</h2><p>No. Sono cifrate sul tuo iPhone con una chiave che non lo lascia mai. Non c’è un account Privaro né un server con le tue foto: nessuno ha niente da vedere, nemmeno noi.</p></div>
-  <div class="row"><h2>E se dimentico il codice?</h2><p>Quando configuri Privaro ricevi una chiave di recupero. Conservala al sicuro: ti permette di impostare un nuovo codice. Senza codice né chiave, la cassaforte non si può aprire, neanche da noi.</p></div>
-  <div class="row"><h2>Cosa succede se perdo il telefono?</h2><p>Se hai attivato il backup iCloud cifrato (Pro), puoi ripristinare la cassaforte sul nuovo iPhone con la tua chiave di recupero. Il ripristino è gratuito. Senza backup, le foto restano bloccate sul vecchio telefono.</p></div>
-  <div class="row"><h2>C’è un limite di dimensione per i video?</h2><p>Non per singolo file. Va bene qualsiasi dimensione, purché l’iPhone abbia spazio. La versione gratuita contiene fino a 2,5 GB in totale, Pro non ha limiti.</p></div>
-  <div class="row"><h2>Serve una connessione a internet?</h2><p>No. La cassaforte funziona completamente offline e le tue foto non vanno mai online, a meno che tu non attivi il backup iCloud.</p></div>
-  <div class="row"><h2>Pro è un abbonamento?</h2><p>No. Pro è un pagamento unico di <span class="price" data-price="pro">9,99 €</span>. Non si rinnova nulla e non c’è niente da disdire.</p></div>
-</div>
+  <!-- Each question large on the left, its answer beside it, starting on the
+       same line. The answer's first sentence is the short answer, in full
+       ink; the rest explains, in grey. No lines between them. -->
+  <div class="qa">
+    <div id="who-can-see"><h2>Qualcun altro può vedere le mie foto?</h2><p><strong>No.</strong> Sono cifrate sul tuo iPhone con una chiave che non lo lascia mai. Non c’è un account Privaro né un server con le tue foto: nessuno ha niente da vedere, nemmeno noi.</p></div>
+    <div id="forgot-passcode"><h2>E se dimentico il codice?</h2><p><strong>Quando configuri Privaro ricevi una chiave di recupero.</strong> Conservala al sicuro: ti permette di impostare un nuovo codice. Senza codice né chiave, la cassaforte non si può aprire, neanche da noi.</p></div>
+    <div id="lost-phone"><h2>Cosa succede se perdo il telefono?</h2><p><strong>Se hai attivato il backup iCloud cifrato (Pro), puoi ripristinare la cassaforte sul nuovo iPhone con la tua chiave di recupero.</strong> Il ripristino è gratuito. Senza backup, le foto restano bloccate sul vecchio telefono.</p></div>
+    <div id="video-size"><h2>C’è un limite di dimensione per i video?</h2><p><strong>Non per singolo file.</strong> Va bene qualsiasi dimensione, purché l’iPhone abbia spazio. La versione gratuita contiene fino a 2,5 GB in totale, Pro non ha limiti.</p></div>
+    <div id="offline"><h2>Serve una connessione a internet?</h2><p><strong>No.</strong> La cassaforte funziona completamente offline e le tue foto non vanno mai online, a meno che tu non attivi il backup iCloud.</p></div>
+    <div id="subscription"><h2>Pro è un abbonamento?</h2><p><strong>No.</strong> Pro è un pagamento unico di <span class="price" data-price="pro">9,99 €</span>. Non si rinnova nulla e non c’è niente da disdire.</p></div>
+  </div>
+
+  <!-- Where to go for what isn't here. -->
+  <section class="faq-more" aria-labelledby="faq-more-title">
+    <h2 id="faq-more-title">Qualcos’altro?</h2>
+    <p><a class="more" href="mailto:erdincdubu@icloud.com">Scrivici</a><a class="more" href="/security">Leggi la panoramica sulla sicurezza</a></p>
+  </section>
 
 </main>
 
