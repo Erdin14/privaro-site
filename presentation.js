@@ -29,33 +29,20 @@
     observer?.disconnect();
   });
 
-  // The header clears to glass once anything has scrolled under it, and on
-  // phones fades out of the way while the page goes down, coming back on the
-  // way up or near the top (styles.css). It stays with Reduce Motion, while
-  // its language menu is open, and for keyboard focus. Past halfway down, the
-  // canvas beyond the page takes the colour of its foot.
+  // Once anything has scrolled under the header, the top of the page softens
+  // away behind it (styles.css). Past halfway down, the canvas beyond the page
+  // takes the colour of its foot.
   const head = document.querySelector('.site-head');
   if (head) {
-    let queued = false, lastY = scrollY, travel = 0;
+    let queued = false;
     const root = document.documentElement;
-    const menu = head.querySelector('.lang');
     const sync = () => {
       queued = false;
       const end = root.scrollHeight - innerHeight;
-      // Safari reports its bounce past either end; that isn't a change of direction.
-      const y = Math.min(Math.max(scrollY, 0), Math.max(end, 0));
-      const step = y - lastY;
-      lastY = y;
-      // How far the page has gone one way, so a small wobble doesn't count.
-      if (step) travel = Math.sign(step) === Math.sign(travel) ? travel + step : step;
       head.classList.toggle('scrolled', scrollY > 4);
       root.classList.toggle('near-end', end > 0 && scrollY > end / 2);
-      if (y < 96 || reduce.matches || menu?.open) head.classList.remove('tucked');
-      else if (travel > 24) head.classList.add('tucked');
-      else if (travel < -12) head.classList.remove('tucked');
     };
     addEventListener('scroll', () => { if (!queued) { queued = true; requestAnimationFrame(sync); } }, { passive: true });
-    head.addEventListener('focusin', () => head.classList.remove('tucked'));
     sync();
   }
 

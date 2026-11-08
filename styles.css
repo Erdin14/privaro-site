@@ -57,12 +57,9 @@
   --dur-state: 240ms;
   --dur-reveal: 700ms;
   --dur-scene: 1200ms;
-  --dur-glide: 900ms;
-  /* Arrivals: quick to start, long to settle. State changes: even. The
-     header slipping away and back: slow, and soft at both ends. */
+  /* Arrivals: quick to start, long to settle. State changes: even. */
   --ease: cubic-bezier(.16, 1, .3, 1);
   --ease-state: cubic-bezier(.4, 0, .2, 1);
-  --ease-glide: cubic-bezier(.45, 0, .15, 1);
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -114,90 +111,89 @@ h1, h2 { font-weight: 600; }
 :is(.appstore, .head-get, .film-button, .lang summary, .shot-viewer button):active {
   scale: .97; transition-duration: var(--dur-press); }
 
-/* Header, on every page: one small pill floating at the top, like the
-   island at the top of an iPhone. The way home, the other pages, and the
-   download. It's the one translucent thing on the site, because it's the
-   one thing content scrolls under; it clears further once that happens
-   (presentation.js adds .scrolled). */
-.site-head { position: sticky; top: 0; z-index: 30; padding: var(--space-3) var(--side) 0; pointer-events: none; }
-/* And then the top of the page softens away behind it, as a scroll edge does
-   on iPhone, so the words passing under the pill don't run into it. */
-.site-head::before { content: ""; position: absolute; inset: 0 0 -28px; z-index: -1; pointer-events: none;
-  background: linear-gradient(color-mix(in srgb, var(--bg) 92%, transparent) 40%, transparent);
-  -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
-  -webkit-mask-image: linear-gradient(#000 45%, transparent); mask-image: linear-gradient(#000 45%, transparent);
+/* Header, on every page: the seam. One hairline across the top of the page,
+   as wide as the page's content, with the name set into the middle of it
+   like the lock on a vault door. The other pages on one side of it, the
+   language and the download on the other. Nothing is boxed in: the words sit
+   on the page itself, as everything else on the site does, and the line
+   stops short of each of them. */
+.site-head { position: sticky; top: 0; z-index: 30; padding: 22px var(--side) 0; pointer-events: none; }
+/* On wider screens it stays at the top as the page scrolls under it, and the
+   top of the page softens away behind it, as a scroll edge does on iPhone, so
+   the words passing under don't run into its own (presentation.js adds
+   .scrolled). With no glass of its own, the band does all of that, so it's
+   nearly solid where the words are and fades out below the line. */
+.site-head::before { content: ""; position: absolute; inset: 0 0 -36px; z-index: -1; pointer-events: none;
+  background: linear-gradient(color-mix(in srgb, var(--bg) 96%, transparent) 50%, transparent);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  -webkit-mask-image: linear-gradient(#000 55%, transparent); mask-image: linear-gradient(#000 55%, transparent);
   opacity: 0; transition: opacity var(--dur-reveal) var(--ease-state); }
 .site-head.scrolled::before { opacity: 1; }
-.head-row { display: flex; align-items: center; gap: 2px; width: fit-content; max-width: 100%; margin-inline: auto;
-  padding: var(--space-1); border: 1px solid var(--rule); border-radius: var(--radius-round); pointer-events: auto;
-  background: var(--bg); background: color-mix(in srgb, var(--bg) 70%, transparent);
-  -webkit-backdrop-filter: saturate(1.4) blur(18px); backdrop-filter: saturate(1.4) blur(18px);
-  box-shadow: 0 10px 30px -18px rgb(0 0 0 / .6);
-  transition: background-color var(--dur-reveal) var(--ease-state), box-shadow var(--dur-reveal) var(--ease-state),
-    opacity var(--dur-glide) var(--ease-glide); }
-/* Once the page is scrolled, the pill clears to glass: more of the page shows
-   through it, blurred well past reading, so its own words stay clear. */
-.site-head.scrolled .head-row { background: color-mix(in srgb, var(--bg) 46%, transparent);
-  box-shadow: 0 12px 32px -18px rgb(0 0 0 / .55); }
-.brand { display: inline-flex; align-items: center; gap: var(--space-2); padding: 2px var(--space-3) 2px 2px;
-  border-radius: var(--radius-round); font-size: 14px; font-weight: 600; color: var(--ink); letter-spacing: -.01em; }
+/* Three columns, the outer two equal, so the name stays in the middle
+   however long the words on either side are in a given language. Only the
+   links take the pointer: the rest of the header lets it through to the page. */
+.head-bar { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center;
+  width: min(1000px, 100%); margin-inline: auto; font-size: 14px; }
+.home-scene .head-bar { width: min(1400px, 100%); }
+.head-links, .head-end { display: flex; align-items: center; gap: 28px; }
+:is(.head-links a, .brand, .site-head .lang, .head-get) { pointer-events: auto; }
+/* The line: one length either side of the name, taking whatever room the
+   words leave. */
+.head-links::after, .head-end::before { content: ""; flex: 1; min-width: var(--space-4); height: 1px; background: var(--rule); }
+.brand { display: inline-flex; align-items: center; gap: 10px; padding: var(--space-2) 22px; border-radius: 10px;
+  font-size: 15px; font-weight: 600; color: var(--ink); letter-spacing: -.01em; white-space: nowrap; }
 .brand:hover { text-decoration: none; }
-.brand img { width: 28px; height: 28px; border-radius: 8px; }
-.head-links { display: flex; align-items: center; padding-inline-start: 6px; border-inline-start: 1px solid var(--rule); font-size: var(--size-small); }
-.head-links a { padding: 6px var(--space-3); border-radius: var(--radius-round); color: var(--muted); white-space: nowrap;
-  transition: color var(--dur-state) var(--ease-state), background-color var(--dur-state) var(--ease-state); }
-.head-links a:hover { color: var(--ink); background: color-mix(in srgb, var(--ink) 8%, transparent); text-decoration: none; }
-.head-get { display: inline-flex; align-items: center; min-height: 30px; margin-inline-start: var(--space-1); padding: 5px 14px;
-  border-radius: var(--radius-round); background: var(--ink); color: var(--bg); font-size: var(--size-small); font-weight: 600; white-space: nowrap; }
-.head-get:hover { text-decoration: none; opacity: .88; }
-/* Beside the pill, the language menu as a round button of the same glass,
-   opening downwards. On phones, just the globe. */
-.head-bar { display: flex; justify-content: center; align-items: stretch; gap: var(--space-2); max-width: 100%; }
-.head-bar .head-row { margin-inline: 0; min-width: 0; }
-.site-head .lang { display: flex; pointer-events: auto; }
-.site-head .lang summary { min-height: 0; padding: 0 14px 0 12px; border: 1px solid var(--rule); color: var(--muted);
-  font-size: var(--size-small); background: var(--bg); background: color-mix(in srgb, var(--bg) 70%, transparent);
-  -webkit-backdrop-filter: saturate(1.4) blur(18px); backdrop-filter: saturate(1.4) blur(18px);
-  box-shadow: 0 10px 30px -18px rgb(0 0 0 / .6); }
-.site-head.scrolled .lang summary { background: color-mix(in srgb, var(--bg) 46%, transparent); }
-.site-head .lang summary:hover, .site-head .lang[open] summary { color: var(--ink); }
+.brand img { width: 26px; height: 26px; border-radius: 7px; }
+.head-links a { padding-block: var(--space-2); color: var(--muted); white-space: nowrap;
+  transition: color var(--dur-state) var(--ease-state); }
+.head-links a:hover { color: var(--ink); text-decoration: none; }
+/* The download: the one word in full ink, underlined as the page's other
+   "go on" links are (.more). */
+.head-get { display: inline-flex; align-items: center; padding-block: var(--space-2); color: var(--ink); font-weight: 600;
+  white-space: nowrap; text-decoration: underline; text-decoration-color: var(--dim); text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
+  transition: scale var(--dur-reveal) var(--ease), text-decoration-color var(--dur-state) var(--ease-state); }
+.head-get:hover { text-decoration: underline; text-decoration-color: var(--ink); text-underline-offset: 5px; }
+/* The language menu, as plain words beside the download, opening downwards. */
+.site-head .lang { display: flex; }
+.site-head .lang summary { min-height: 0; padding-block: var(--space-2); }
 .site-head .lang summary .chevron { transform: rotate(180deg); }
 .site-head .lang[open] summary .chevron { transform: none; }
 .site-head .lang-menu { top: calc(100% + 10px); bottom: auto; transform-origin: top right; }
 [dir="rtl"] .site-head .lang-menu { transform-origin: top left; }
 .site-head .lang[open] .lang-menu { animation-name: menu-down; }
 @keyframes menu-down { from { opacity: 0; transform: translateY(-8px) scale(.96); } }
-@media (max-width: 760px) {
-  /* On a phone the header hangs a little below the top edge instead of
-     sitting on it: over a sticky bar that touches the top, Safari fills the
-     status bar with solid colour; otherwise it lets the page show through.
-     With the page showing above it as well, the softened band behind the
-     pill would read as a dark bar across the screen, so phones go without
-     it: the page passes around the glass pill, as it does around Safari's
-     own toolbar. */
-  .site-head { top: var(--space-3); margin-top: var(--space-3); padding-top: 0; }
-  .site-head::before { content: none; }
-  .head-links { display: none; }
-  .head-get { min-height: 32px; }
-  /* A circle as tall as the pill beside it (32px inside, 4px padding and a
-     1px border, top and bottom). Its size is set outright: Safari doesn't
-     work out a width from aspect-ratio when the height comes from stretching,
-     and left it a narrow sliver. */
-  .site-head .lang summary { width: 42px; height: 42px; align-self: center; padding: 0; justify-content: center;
-    transition: scale var(--dur-reveal) var(--ease), color var(--dur-state) var(--ease-state),
-      background-color var(--dur-state) var(--ease-state), border-color var(--dur-state) var(--ease-state),
-      opacity var(--dur-glide) var(--ease-glide); }
-  .site-head .lang summary:active { transition-duration: var(--dur-press); }
-  /* Scrolling down, the header slips out of the way: the pill and the globe
-     fade out where they are, leaving the page the whole screen, and can't be
-     tapped while they're gone. They don't move: carried up to the top edge,
-     even a few pixels' worth, they'd have Safari fill the status bar behind
-     them again. Any scroll back up, or the top of the page, fades them back
-     (presentation.js adds .tucked). Slowly, both ways. Wider screens keep the
-     header in place. */
-  .site-head.tucked :is(.head-row, .lang summary) { opacity: 0; pointer-events: none; }
+/* Narrower screens: a little less air between the words, and the language
+   menu as just the globe, so every language's words fit either side of the
+   name. */
+@media (max-width: 1080px) {
+  .head-links, .head-end { gap: 22px; }
+  .brand { padding-inline: 18px; }
   .site-head .lang summary :is(span, .chevron) { display: none; }
   .site-head .lang summary svg { width: 15px; height: 15px; }
+}
+@media (max-width: 900px) {
+  .head-bar { font-size: var(--size-small); }
+  .head-links, .head-end { gap: var(--space-4); }
+  .brand { padding-inline: 14px; }
+}
+@media (max-width: 760px) {
+  /* On a phone the header stays where the page starts and scrolls away with
+     it. Following the page down, it would need a band behind it to stay
+     readable, and on a phone that reads as a dark bar across the screen; a
+     sticky bar at the top also has Safari fill the status bar with solid
+     colour. The way to the other pages is in the footer. */
+  .site-head { position: relative; padding-top: 18px; }
+  .site-head::before { content: none; }
+  /* The name on the left, the line, then the globe and the download. */
+  .head-bar { grid-template-columns: auto minmax(0, 1fr); }
+  .head-links { display: none; }
+  .brand { padding-inline: 0 var(--space-4); font-size: 16px; }
+  .head-end { gap: 20px; }
+  .head-get { padding-block: 11px; font-size: 15px; }
+  /* The globe alone, with room around it for a finger. */
+  .site-head .lang summary { width: 44px; height: 44px; margin-inline: -12px; padding: 0; justify-content: center; }
+  .site-head .lang summary svg { width: 17px; height: 17px; }
   /* The same sheet along the bottom as the footer's menu. */
   .site-head .lang-menu { inset: auto 12px 12px; transform-origin: bottom; }
   .site-head .lang[open] .lang-menu { animation-name: menu-in; }
@@ -567,30 +563,26 @@ h1, h2 { font-weight: 600; }
 .doc th { font-size: var(--size-small); font-weight: 600; color: var(--muted); }
 .doc td:first-child { font-weight: 600; }
 
-/* Footer: the links and the language menu in one slim pill, centred, and a
-   single quiet line beneath it. */
+/* Footer: the links and the language menu in one centred row of plain words,
+   as the header's are, and a single quiet line beneath it. */
 .site-foot { display: flex; flex-direction: column; align-items: center; gap: 14px;
   padding: var(--space-5) 0 28px; font-size: var(--size-small); color: var(--muted); }
-.foot-links { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 2px; max-width: 100%;
-  padding: var(--space-1); border: 1px solid var(--rule); border-radius: var(--radius-round);
-  background: color-mix(in srgb, var(--ink) 3%, transparent); }
-.foot-links a { padding: 6px 11px; border-radius: var(--radius-round); color: var(--muted); white-space: nowrap;
-  transition: color var(--dur-state) var(--ease-state), background-color var(--dur-state) var(--ease-state); }
-.foot-links a:hover { color: var(--ink); background: color-mix(in srgb, var(--ink) 8%, transparent); text-decoration: none; }
-.foot-links > a:last-of-type { margin-inline-end: 6px; }
+.foot-links { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0 var(--space-5); max-width: 100%; }
+.foot-links a { padding-block: 6px; color: var(--muted); white-space: nowrap; transition: color var(--dur-state) var(--ease-state); }
+.foot-links a:hover { color: var(--ink); text-decoration: none; }
 .foot-note { max-width: 46em; font-size: 12px; line-height: 1.5; color: var(--faint); text-align: center; text-wrap: balance; }
 
-/* Language menu, in the footer, so it opens upwards. The button is a small
-   pill whose chevron turns over while it's open; the menu is a frosted panel
-   that rises into place, seventeen languages in two columns, the current one
+/* Language menu, in the footer, so it opens upwards. The button is the globe
+   and the language's name, plain words like the links beside it, with a
+   chevron that turns over while it's open; the menu is a frosted panel that
+   rises into place, seventeen languages in two columns, the current one
    ticked. It opens slowly: the panel grows out of the button's corner over
    half a second, easing to a stop, and the languages fade in just behind it. */
 .lang { position: relative; }
 .lang summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;
-  min-height: 30px; padding: 4px 11px 4px 10px; border-radius: var(--radius-round);
-  background: color-mix(in srgb, var(--ink) 7%, transparent); }
+  min-height: 30px; padding-block: 4px; border-radius: var(--radius-round); color: var(--muted); }
 .lang summary::-webkit-details-marker { display: none; }
-.lang summary:hover, .lang[open] summary { color: var(--ink); background: color-mix(in srgb, var(--ink) 12%, transparent); }
+.lang summary:hover, .lang[open] summary { color: var(--ink); }
 .lang summary svg { width: 13px; height: 13px; flex: none; }
 .lang summary .chevron { width: 10px; height: 10px; transition: transform .45s cubic-bezier(.22, 1, .36, 1); }
 .lang[open] summary .chevron { transform: rotate(180deg); }
@@ -697,8 +689,6 @@ h1, h2 { font-weight: 600; }
   .doc td { padding: 0; border: 0; }
   .doc td + td { margin-top: 4px; }
   .doc td[data-label]::before { content: attr(data-label) ": "; color: var(--muted); }
-  /* Too many links for one pill on a phone: a tight cluster instead. */
-  .foot-links { padding: 0; border: 0; background: none; row-gap: 4px; }
-  .foot-links a { padding: 6px 9px; }
-  .foot-links > a:last-of-type { margin-inline-end: 4px; }
+  /* Too many links for one row on a phone: a tight cluster instead. */
+  .foot-links { gap: var(--space-1) 18px; }
 }
