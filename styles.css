@@ -4,10 +4,10 @@
    same graphite.
 
    The system, in brief:
-   - Type: Apple's own font, one family, and the system's own monospace for
-     what is data rather than prose: the ciphertext, code, a document's date.
-     Character comes from scale and weight, not from a second face: a second
-     family would mean a font download from somewhere, on a site that
+   - Type: Apple's own font, one family, for everything, the ciphertext in
+     the illustration included; no monospace anywhere. Character comes
+     from scale and weight, not from a second face: a second family would
+     mean a font download from somewhere, on a site that
      promises no trackers. Four roles: the mark (the name), display (a
      section's one statement), title, and text. Bold where something is being
      said, regular where it informs or answers.
@@ -36,9 +36,6 @@
   --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   /* At display sizes Apple's system font switches to its Display cut by itself. */
   --display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  /* The system's own monospace, for what is data rather than prose: the
-     ciphertext in the illustration, code, and the date stamp on documents. */
-  --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
 
   --size-mark: clamp(88px, 17vw, 264px);
   --size-display: clamp(40px, 6.4vw, 96px);
@@ -108,6 +105,8 @@ a { color: var(--blue); text-decoration: none; }
 a:hover { text-decoration: underline; text-underline-offset: 3px; }
 img { max-width: 100%; display: block; }
 :focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+/* Browsers set code in their own monospace; here it's the text like the rest. */
+:is(code, kbd, samp, pre) { font-family: inherit; font-size: inherit; }
 /* No paragraph, caption or list item ends on a line of one word. */
 :is(p, li, dd, figcaption) { text-wrap: pretty; }
 h1, h2 { font-weight: 600; }
@@ -502,7 +501,7 @@ h1, h2 { font-weight: 600; }
 .vg-photo { position: absolute; inset: 0; display: block; width: 100%; height: 100%; max-width: none;
   object-fit: cover; object-position: 50% 0; clip-path: inset(100% 0 0 0); }
 .vg-cipher { position: absolute; inset: 0; margin: 0; padding: 24.75cqw 7.9cqw 0; overflow: hidden; word-break: break-all;
-  font: 500 4.95cqw/1.62 var(--mono); letter-spacing: .08em;
+  font: 500 4.95cqw/1.62 var(--font); letter-spacing: .08em;
   color: rgb(205 216 228 / .4); user-select: none; -webkit-user-select: none; }
 @supports ((-webkit-background-clip: text) or (background-clip: text)) {
   .vg-cipher { color: transparent; background: linear-gradient(180deg, rgb(228 235 242 / .6), rgb(150 166 182 / .2) 75%);
@@ -555,9 +554,7 @@ h1, h2 { font-weight: 600; }
 .page { padding: 56px 0 88px; }
 .page h1 { font-family: var(--display); font-size: clamp(36px, 4.8vw, 60px); font-weight: 700; line-height: 1.04;
   letter-spacing: -.035em; max-width: 16em; overflow-wrap: break-word; text-wrap: balance; }
-/* When a document was written, stamped under its title like a date on a
-   form, in the monospace the site keeps for data. */
-.page .updated { margin-top: var(--space-3); font-family: var(--mono); font-size: 12px; letter-spacing: 0; color: var(--muted); }
+.page .updated { margin-top: var(--space-3); font-size: var(--size-small); color: var(--muted); }
 .page .intro { font-size: 19px; line-height: 1.5; color: var(--muted); max-width: 34em; margin-top: 18px; }
 .note { max-width: 40em; margin-top: 16px; font-size: 15px; color: var(--muted); }
 .note strong { color: var(--ink); font-weight: 600; }
@@ -601,7 +598,7 @@ h1, h2 { font-weight: 600; }
   transition: translate var(--dur-reveal) var(--ease); }
 #plan-pro:checked ~ .knob { translate: 100% 0; }
 [dir="rtl"] #plan-pro:checked ~ .knob { translate: -100% 0; }
-.plan-hint { margin-top: var(--space-3); font: 12px/1.4 var(--mono); color: var(--faint); }
+.plan-hint { margin-top: var(--space-3); font-size: var(--size-small); line-height: 1.4; color: var(--faint); }
 /* Words that differ between Free and Pro: both are there, one over the
    other, and only the side the switch is on shows (and is read out). */
 .swap { display: grid; }
@@ -617,7 +614,7 @@ h1, h2 { font-weight: 600; }
 .limits > div:first-child { padding-inline-start: 0; }
 .limits > div:last-child { padding-inline-end: 0; }
 .limits > div + div { border-inline-start: 1px solid var(--rule); }
-.limits dt, .pro-list h2, .basics h2 { font: 400 12px/1.4 var(--mono); letter-spacing: 0; color: var(--faint); }
+.limits dt, .pro-list h2, .basics h2 { font-size: var(--size-small); font-weight: 500; line-height: 1.4; letter-spacing: 0; color: var(--faint); }
 .limit { margin-top: var(--space-2); font-family: var(--display); font-size: min(60px, 17cqi); font-weight: 700; line-height: 1.02;
   letter-spacing: -.035em; text-wrap: balance; transition: color var(--dur-reveal) var(--ease-state); }
 .limit-note { margin-top: var(--space-3); max-width: 22em; font-size: 14px; line-height: 1.5; color: var(--muted); }
@@ -702,7 +699,6 @@ h1, h2 { font-weight: 600; }
 .doc :is(ul, ol) { margin: 0 0 16px; padding-inline-start: 20px; }
 .doc li { margin-bottom: 6px; }
 .doc a { text-decoration: underline; text-underline-offset: 2px; }
-.doc code { font-family: var(--mono); font-size: .9em; }
 .doc table { width: 100%; border-collapse: collapse; margin: 4px 0 20px; font-size: 14px; line-height: 1.45; }
 .doc :is(th, td) { text-align: start; vertical-align: top; padding: 10px 16px 10px 0; border-bottom: 1px solid var(--rule); }
 .doc :is(th, td):last-child { padding-inline-end: 0; }
@@ -773,10 +769,6 @@ h1, h2 { font-weight: 600; }
    and Hindi need taller lines so marks above and below don't collide. */
 :is(:lang(ar), :lang(ur), :lang(hi)) :is(.tagline, .display, .display .answer, .limit, .pro-figure p, .page h1, .buy-note, .ledger dt, .ledger dd, .shots figcaption) { letter-spacing: 0; }
 :is(:lang(zh), :lang(ja), :lang(ko)) :is(.tagline, .display, .display .answer, .limit, .page h1) { letter-spacing: -.01em; }
-/* A monospace face has no joined Arabic or Urdu letters, nor Devanagari's
-   headline, and pulls them apart: those scripts set their small labels in
-   the text face. */
-:is(:lang(ar), :lang(ur), :lang(hi)) :is(.page .updated, .limits dt, .pro-list h2, .basics h2, .plan-hint) { font-family: var(--font); }
 /* Chinese and Japanese may break between any two characters; display lines
    break between phrases, where the strings mark it with <wbr>, and inside
    one only when a phrase is wider than the screen. */
