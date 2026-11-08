@@ -360,15 +360,13 @@ h1, h2 { font-weight: 600; }
   .film-progress { height: 20px; }
 }
 
-/* Security: one statement across the page; under it a hairline across the
-   page, the illustration's phone rising out of it, as the Lock Screen rises
-   out of the line the page ends on, and beside the phone, standing on the
-   same line, the facts: each a title, then how, and under them the way to
-   the whole overview. No card: the line is enough to stand them on. */
+/* Security: one statement across the page; under it the illustration's
+   phone, its foot fading into the page, and beside it the facts: each a
+   title, then how, and under them the way to the whole overview. */
 .safety { padding-top: var(--section); }
 .safety .display { max-width: 12.5em; }
 .safety-body { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: var(--gutter);
-  margin-top: var(--space-8); border-bottom: 1px solid var(--rule); }
+  margin-top: var(--space-8); }
 .safety-art { position: relative; min-height: 460px; }
 .safety-facts { align-self: end; max-width: 36em; padding-bottom: var(--space-7); }
 .ledger > div { padding-block: var(--space-4); border-top: 1px solid var(--rule); }
@@ -386,20 +384,21 @@ h1, h2 { font-weight: 600; }
    scrolls into view. */
 :is(.safety, .sec-hero) .privacy-vignette { position: absolute; inset: 0; max-width: none; margin: 0; border: 0; border-radius: 0; background: none; }
 :is(.safety, .sec-hero) .privacy-art { --pw: 44cqw; position: absolute; inset: 0; aspect-ratio: auto; }
-/* Anchored to the line rather than to the top, so whatever the column's
-   height the phone rises out of the line with its top two-thirds showing. */
+/* Anchored to the foot of its column rather than to the top, so whatever
+   the column's height its top two-thirds show; the foot fades into the page,
+   as every phone on the site does, rather than ending on a line. */
+:is(.safety, .sec-hero) .privacy-art { -webkit-mask-image: linear-gradient(#000 55%, transparent); mask-image: linear-gradient(#000 55%, transparent); }
 :is(.safety, .sec-hero) .vg-phone { top: auto; bottom: calc(var(--pw) * -.62); }
 :is(.safety, .sec-hero) .privacy-vignette figcaption { display: none; }
 
-/* Closing: the last word on the left; on the right the Lock Screen, rising
-   out of the hairline the page ends on, as the phone in the illustration
-   rises out of its card. */
+/* Closing: the last word on the left; on the right the Lock Screen, its
+   foot fading into the page, as the phone in the illustration does. */
 .closing { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; column-gap: var(--space-7);
-  padding-top: var(--section); border-bottom: 1px solid var(--rule); }
+  padding-top: var(--section); }
 .closing-copy { padding-bottom: var(--space-9); }
 .closing .display { max-width: 9em; }
 .closing .buy { margin-top: var(--space-7); }
-.closing-shot { width: clamp(220px, 23vw, 330px); aspect-ratio: 760 / 960; overflow: hidden; }
+.closing-shot { width: clamp(220px, 23vw, 330px); aspect-ratio: 760 / 960; overflow: hidden; -webkit-mask-image: linear-gradient(#000 55%, transparent); mask-image: linear-gradient(#000 55%, transparent); }
 .closing-shot img { width: 100%; height: auto;
   -webkit-mask: url(/shots/framed-18-pro-max/phone-mask.svg) center / 100% 100% no-repeat;
   mask: url(/shots/framed-18-pro-max/phone-mask.svg) center / 100% 100% no-repeat; }
@@ -683,7 +682,6 @@ h1, h2 { font-weight: 600; }
 /* Centred between the header and the footer, however tall the window. */
 .missing { display: flex; flex-direction: column; justify-content: center; padding-block: 72px; }
 .missing-body { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; column-gap: var(--space-7); }
-.missing-shot { -webkit-mask-image: linear-gradient(#000 55%, transparent); mask-image: linear-gradient(#000 55%, transparent); }
 .missing-copy { padding-bottom: var(--space-9); }
 .missing-code { font-size: var(--size-small); font-weight: 500; color: var(--faint); }
 .missing h1 { max-width: 9em; margin-top: var(--space-3); font-size: clamp(44px, 6.4vw, 96px); line-height: 1; letter-spacing: var(--track-display); }
@@ -742,14 +740,14 @@ h1, h2 { font-weight: 600; }
 .legal-page .authoritative { margin-top: var(--space-9); padding-top: var(--space-5); border-top: 1px solid var(--rule);
   font-size: var(--size-small); color: var(--faint); }
 /* Security: a long read. It opens as the homepage's security section does:
-   the words on one side and, on the other, the illustration's phone rising
-   out of the line the opening stands on. Then the list of its sections, and
+   the words on one side and, on the other, the illustration's phone, its
+   foot fading into the page. Then the list of its sections, and
    chapters, each starting on a hairline under a larger heading. What it
    protects against and what it can't sit side by side, marked as on the Pro
    page: a check for yes, a dash for no. The known limitations are
    numbered, and the way to report a problem is the last word. */
 .sec-hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(240px, 320px); column-gap: var(--space-8);
-  align-items: end; border-bottom: 1px solid var(--rule); }
+  align-items: end; }
 .sec-hero-copy { padding-bottom: var(--space-7); }
 .sec-hero h1 { font-size: clamp(44px, 5.6vw, 76px); }
 .sec-hero-art { position: relative; align-self: stretch; min-height: 380px; }
@@ -947,9 +945,9 @@ h1, h2 { font-weight: 600; }
   .hero .buy { flex-direction: column; align-items: flex-start; gap: var(--space-4); }
   .shots figure { width: min(64vw, 280px); }
   .display { font-size: clamp(36px, 10.4vw, 56px); }
-  /* One above the other: the phone rising out of the line, the facts under it. */
+  /* One above the other: the phone, the facts under it. */
   .safety-body { grid-template-columns: minmax(0, 1fr); border-bottom: 0; }
-  .safety-art { min-height: 0; aspect-ratio: 4 / 3; border-bottom: 1px solid var(--rule); }
+  .safety-art { min-height: 0; aspect-ratio: 4 / 3; }
   .safety-facts { max-width: none; padding: var(--space-5) 0 0; }
   .safety .privacy-art { --pw: 46cqw; }
   .closing { grid-template-columns: minmax(0, 1fr); }
