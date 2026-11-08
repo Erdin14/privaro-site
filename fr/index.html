@@ -39,7 +39,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=876dbe3129" />
+<link rel="stylesheet" href="/styles.css?v=6a3d34af46" />
 <link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
 <script>
 // Before anything is drawn. "motion" lets the few entrances in styles.css
@@ -91,10 +91,10 @@
 
 <main class="home">
   <!-- The name, set large, beside what it is. Under both, where to get it and
-       what it costs, in two plain sentences. -->
+       what it costs, in two plain sentences. The icon is in the header, just
+       above: the name doesn't need it twice. -->
   <section class="hero wrap" aria-labelledby="hero-title">
     <div class="hero-mark">
-      <img class="hero-icon" src="/logo.png" width="72" height="72" alt="" />
       <h1 id="hero-title" class="wordmark"><span class="mask"><span class="rise" style="--anim:mask-rise">P<span class="open">ri</span>va<span class="tail"><span class="open">r</span>o</span></span></span></h1>
     </div>
     <div class="hero-copy rise" style="--anim:fade;--d:.35s">
@@ -120,13 +120,14 @@
     </div>
   </section>
 
-  <!-- How it's kept private: one statement, then one card: the illustration
-       and, beside the phone, the facts behind it, in claims the Security
-       Overview backs up. -->
+  <!-- How it's kept private: one statement, then, on a hairline across the
+       page, the illustration's phone rising out of it and beside it the facts
+       behind the statement, in claims the Security Overview backs up, with
+       the way to that overview under them. -->
   <section class="safety wrap" aria-labelledby="safety-title">
     <h2 id="safety-title" class="display">
       <span class="mask"><span class="rise" style="--anim:mask-rise">Chiffré sur votre iPhone.</span></span>
-      <span class="mask dim"><span class="rise" style="--anim:mask-rise;--d:.1s">Avec une clé qui y reste.</span></span>
+      <span class="mask answer"><span class="rise" style="--anim:mask-rise;--d:.1s">Avec une clé qui y reste.</span></span>
     </h2>
     <div class="safety-body">
       <div class="safety-art">
@@ -151,14 +152,16 @@
 </figure>
 <script src="/privacy-vignette.js?v=bb3a6a0bae" defer></script>
       </div>
-      <dl class="ledger">
-        <div><dt>AES-256</dt><dd>Chaque photo et vidéo de votre coffre est chiffrée en AES-256, directement sur l’appareil.</dd></div>
-        <div><dt>Sans compte</dt><dd>Aucune inscription, et aucun serveur Privaro qui stocke vos photos.</dd></div>
-        <div><dt>Face ID ou code</dt><dd>Le coffre ne s’ouvre qu’avec Face ID ou le code de Privaro.</dd></div>
-        <div><dt>Fonctionne hors ligne</dt><dd>Vos photos ne passent en ligne que si vous activez la sauvegarde iCloud chiffrée.</dd></div>
-      </dl>
+      <div class="safety-facts">
+        <dl class="ledger">
+          <div><dt>AES-256</dt><dd>Chaque photo et vidéo de votre coffre est chiffrée en AES-256, directement sur l’appareil.</dd></div>
+          <div><dt>Sans compte</dt><dd>Aucune inscription, et aucun serveur Privaro qui stocke vos photos.</dd></div>
+          <div><dt>Face ID ou code</dt><dd>Le coffre ne s’ouvre qu’avec Face ID ou le code de Privaro.</dd></div>
+          <div><dt>Fonctionne hors ligne</dt><dd>Vos photos ne passent en ligne que si vous activez la sauvegarde iCloud chiffrée.</dd></div>
+        </dl>
+        <a class="more" href="/security">Lire la présentation de la sécurité</a>
+      </div>
     </div>
-    <a class="more" href="/security">Lire la présentation de la sécurité</a>
   </section>
 
   <!-- The last word, and the Lock Screen rising out of the bottom edge, the
@@ -208,7 +211,7 @@ document.addEventListener('keydown', e => {
 });
 </script>
 
-<script src="/presentation.js?v=90e52c1033" data-enlarge="Agrandir la capture : {name}" data-close="Fermer la visionneuse" data-previous="Capture précédente" data-next="Capture suivante" defer></script>
+<script src="/presentation.js?v=93358bf2ee" data-enlarge="Agrandir la capture : {name}" data-close="Fermer la visionneuse" data-previous="Capture précédente" data-next="Capture suivante" defer></script>
 <script>
 // Each entrance plays once it's on screen. Inline, like the line in <head>,
 // so a script that fails to load can never leave anything hidden.

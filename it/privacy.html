@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it" dir="ltr">
+<html lang="it" dir="ltr" class="graphite-site">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -34,13 +34,38 @@
 <meta property="og:image:height" content="630" />
 <meta property="og:locale" content="it_IT" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="color-scheme" content="light dark" />
+<meta name="color-scheme" content="dark" />
 <meta name="apple-itunes-app" content="app-id=6783131829" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=876dbe3129" />
+<link rel="stylesheet" href="/styles.css?v=6a3d34af46" />
+<link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
+<script>
+// Register before first reveal, including restored history entries.
+(() => {
+  let transition;
+  window.addEventListener("pagereveal", event => {
+    transition = event.viewTransition;
+    if (!transition) {
+      document.documentElement.classList.remove("page-crossfade");
+      return;
+    }
+    const current = transition;
+    document.documentElement.classList.add("page-crossfade");
+    current.finished.catch(() => {}).finally(() => {
+      if (transition !== current) return;
+      transition = null;
+      document.documentElement.classList.remove("page-crossfade");
+    });
+  });
+  // Intent takes priority over decoration; never consume the user's event.
+  const interrupt = () => transition?.skipTransition();
+  window.addEventListener("pointerdown", interrupt, { capture: true, passive: true });
+  window.addEventListener("keydown", interrupt, { capture: true });
+})();
+</script>
 </head>
-<body>
+<body class="lock-scene">
 
 <header class="site-head">
   <div class="head-bar">
@@ -156,6 +181,6 @@ document.addEventListener('keydown', e => {
 });
 </script>
 
-<script src="/presentation.js?v=90e52c1033" data-enlarge="Ingrandisci schermata: {name}" data-close="Chiudi visualizzatore" data-previous="Schermata precedente" data-next="Schermata successiva" defer></script>
+<script src="/presentation.js?v=93358bf2ee" data-enlarge="Ingrandisci schermata: {name}" data-close="Chiudi visualizzatore" data-previous="Schermata precedente" data-next="Schermata successiva" defer></script>
 </body>
 </html>

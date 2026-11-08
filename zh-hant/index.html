@@ -39,7 +39,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=876dbe3129" />
+<link rel="stylesheet" href="/styles.css?v=6a3d34af46" />
 <link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
 <script>
 // Before anything is drawn. "motion" lets the few entrances in styles.css
@@ -91,10 +91,10 @@
 
 <main class="home">
   <!-- The name, set large, beside what it is. Under both, where to get it and
-       what it costs, in two plain sentences. -->
+       what it costs, in two plain sentences. The icon is in the header, just
+       above: the name doesn't need it twice. -->
   <section class="hero wrap" aria-labelledby="hero-title">
     <div class="hero-mark">
-      <img class="hero-icon" src="/logo.png" width="72" height="72" alt="" />
       <h1 id="hero-title" class="wordmark"><span class="mask"><span class="rise" style="--anim:mask-rise">P<span class="open">ri</span>va<span class="tail"><span class="open">r</span>o</span></span></span></h1>
     </div>
     <div class="hero-copy rise" style="--anim:fade;--d:.35s">
@@ -120,13 +120,14 @@
     </div>
   </section>
 
-  <!-- How it's kept private: one statement, then one card: the illustration
-       and, beside the phone, the facts behind it, in claims the Security
-       Overview backs up. -->
+  <!-- How it's kept private: one statement, then, on a hairline across the
+       page, the illustration's phone rising out of it and beside it the facts
+       behind the statement, in claims the Security Overview backs up, with
+       the way to that overview under them. -->
   <section class="safety wrap" aria-labelledby="safety-title">
     <h2 id="safety-title" class="display">
       <span class="mask"><span class="rise" style="--anim:mask-rise">在你的 iPhone 上加密。</span></span>
-      <span class="mask dim"><span class="rise" style="--anim:mask-rise;--d:.1s">金鑰<wbr>始終留在<wbr>手機上。</span></span>
+      <span class="mask answer"><span class="rise" style="--anim:mask-rise;--d:.1s">金鑰<wbr>始終留在<wbr>手機上。</span></span>
     </h2>
     <div class="safety-body">
       <div class="safety-art">
@@ -151,14 +152,16 @@
 </figure>
 <script src="/privacy-vignette.js?v=bb3a6a0bae" defer></script>
       </div>
-      <dl class="ledger">
-        <div><dt>AES-256</dt><dd>保險庫中的每張照片和每段影片都直接在裝置上以 AES-256 加密。</dd></div>
-        <div><dt>不需要帳號</dt><dd>無須註冊，也沒有 Privaro 伺服器保存你的照片。</dd></div>
-        <div><dt>Face ID 或密碼</dt><dd>保險庫只能用 Face ID 或 Privaro 自己的密碼打開。</dd></div>
-        <div><dt>離線可用</dt><dd>只有開啟加密 iCloud 備份時，你的照片才會上網。</dd></div>
-      </dl>
+      <div class="safety-facts">
+        <dl class="ledger">
+          <div><dt>AES-256</dt><dd>保險庫中的每張照片和每段影片都直接在裝置上以 AES-256 加密。</dd></div>
+          <div><dt>不需要帳號</dt><dd>無須註冊，也沒有 Privaro 伺服器保存你的照片。</dd></div>
+          <div><dt>Face ID 或密碼</dt><dd>保險庫只能用 Face ID 或 Privaro 自己的密碼打開。</dd></div>
+          <div><dt>離線可用</dt><dd>只有開啟加密 iCloud 備份時，你的照片才會上網。</dd></div>
+        </dl>
+        <a class="more" href="/security">閱讀安全概覽</a>
+      </div>
     </div>
-    <a class="more" href="/security">閱讀安全概覽</a>
   </section>
 
   <!-- The last word, and the Lock Screen rising out of the bottom edge, the
@@ -208,7 +211,7 @@ document.addEventListener('keydown', e => {
 });
 </script>
 
-<script src="/presentation.js?v=90e52c1033" data-enlarge="放大截圖：{name}" data-close="關閉檢視器" data-previous="上一張截圖" data-next="下一張截圖" defer></script>
+<script src="/presentation.js?v=93358bf2ee" data-enlarge="放大截圖：{name}" data-close="關閉檢視器" data-previous="上一張截圖" data-next="下一張截圖" defer></script>
 <script>
 // Each entrance plays once it's on screen. Inline, like the line in <head>,
 // so a script that fails to load can never leave anything hidden.

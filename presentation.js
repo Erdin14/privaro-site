@@ -1,8 +1,10 @@
 // Product motion is progressive enhancement. The page is readable and the
 // gallery is visible before this script runs, or if animations are unavailable.
 // The homepage's entrances are CSS (.rise in styles.css); this adds what needs
-// a script: the header's solid state, the phones leaning toward the pointer,
-// the screenshot viewer, and the reveals on the longer pages.
+// a script: the header's softened band, the phones leaning toward the
+// pointer, and the screenshot viewer. The reading pages have no entrances at
+// all: their words are simply there, and nothing on them can be hidden from
+// a link or a search.
 (() => {
   const script = document.currentScript;
   const reduce = matchMedia('(prefers-reduced-motion: reduce)');
@@ -21,12 +23,8 @@
   window.addEventListener('pagereveal', event => {
     if (event.viewTransition) active.forEach(animation => animation.cancel());
   });
-  let observer;
   reduce.addEventListener('change', () => {
-    if (!reduce.matches) return;
-    active.forEach(animation => animation.cancel());
-    document.querySelectorAll('.reveal-pending').forEach(el => el.classList.remove('reveal-pending'));
-    observer?.disconnect();
+    if (reduce.matches) active.forEach(animation => animation.cancel());
   });
 
   // Once anything has scrolled under the header, the top of the page softens
@@ -44,38 +42,6 @@
     };
     addEventListener('scroll', () => { if (!queued) { queued = true; requestAnimationFrame(sync); } }, { passive: true });
     sync();
-  }
-
-  // Only a few section headings and feature blocks; never animate every paragraph.
-  if (!reduce.matches && 'IntersectionObserver' in window) {
-    const candidates = [
-      ...document.querySelectorAll('.features > li'),
-      ...[...document.querySelectorAll('.doc > h2')].filter((_, i) => i % 3 === 0),
-      ...[...document.querySelectorAll('.faq > h2')].filter((_, i) => i % 3 === 0)
-    ];
-    observer = new IntersectionObserver(entries => entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      observer.unobserve(entry.target);
-      entry.target.classList.remove('reveal-pending');
-      animate(entry.target, [{ opacity: .65, transform: 'translateY(10px)' }, { opacity: 1, transform: 'none' }]);
-    }), { threshold: .15, rootMargin: '0px 0px -24px 0px' });
-    candidates.forEach(el => {
-      if (el.getBoundingClientRect().top < innerHeight + 24 || el.matches(':target')) return;
-      el.classList.add('reveal-pending');
-      observer.observe(el);
-    });
-    // Anchor jumps and keyboard focus must expose their destination immediately.
-    const expose = el => {
-      const target = el?.closest('.reveal-pending');
-      if (target) { target.classList.remove('reveal-pending'); observer.unobserve(target); }
-    };
-    document.addEventListener('focusin', event => expose(event.target));
-    window.addEventListener('hashchange', () => {
-      let id;
-      try { id = decodeURIComponent(location.hash.slice(1)); }
-      catch { return; } // An invalid escape is not an anchor destination.
-      expose(document.getElementById(id));
-    });
   }
 
   const figures = [...document.querySelectorAll('.shots figure')];

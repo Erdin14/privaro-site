@@ -12,18 +12,17 @@ root. `.vercelignore` does not configure Cloudflare publication.
 
 ## Validate locally
 
-Requires Python 3 and Node.js; no packages need installing:
+Requires Python 3; no packages need installing:
 
 ```sh
 python3 tests/publication.py
-node tests/fragments.cjs
 ```
 
 The publication check verifies 87 pages, local links/assets and their versions,
 CSP hashes, required special files, excluded paths, stale-output cleanup and
-repeatable builds. Fragment checks execute the shared script with a small DOM
-adapter: malformed escapes are ignored and a valid encoded anchor still reveals
-its destination.
+repeatable builds. (The reading pages no longer hide anything until it is
+scrolled to, so there is no longer a fragment check: an anchor can't land on
+hidden text.)
 
 ## Cloudflare publication settings — apply only during an approved release
 

@@ -1,20 +1,29 @@
 /* Privaro. The homepage is a short product story on matte graphite: the
    name, what it is and what it costs; the app itself; how it keeps things
-   private; a last word. The other pages are plain text.
+   private; a last word. The other pages are documents, plain text on the
+   same graphite.
 
    The system, in brief:
-   - Type: Apple's own font, one family. Character comes from scale and
-     weight, not from a second face: a second family would mean a font
-     download from somewhere, on a site that promises no trackers. Four
-     roles: the mark (the name), display (a section's one statement), title,
-     and text. Bold where something is being said, regular where it informs.
+   - Type: Apple's own font, one family, and the system's own monospace for
+     what is data rather than prose: the ciphertext, code, a document's date.
+     Character comes from scale and weight, not from a second face: a second
+     family would mean a font download from somewhere, on a site that
+     promises no trackers. Four roles: the mark (the name), display (a
+     section's one statement), title, and text. Bold where something is being
+     said, regular where it informs or answers.
    - Colour: graphite, three greys of ink, one hairline, and the logo's blue
-     for links. The screenshots supply the colour.
-   - Space: a 4px grid, in a few named steps, and one rhythm between
-     sections.
-   - Shape: round controls (999px), soft surfaces (24px), and nothing else.
-   - Motion: four durations and two curves. Headlines rise out of their own
-     line; the phones arrive once; everything else is simply there. */
+     for links inside the text; navigation is muted words. The screenshots
+     supply the colour.
+   - Line: the hairline is the site's one ornament. The header is a seam with
+     the name set into it, lists are rows between hairlines, and the phones
+     rise out of a line rather than sit in boxes.
+   - Space: a 4px grid, in a few named steps, one rhythm between sections,
+     and one gutter shared by the gallery and the section under it.
+   - Shape: round controls (999px), soft surfaces (24px) for the film and the
+     Security page's illustration, and nothing else.
+   - Motion: four durations and two curves, on the homepage only. Headlines
+     rise out of their own line; the phones arrive once; everything else,
+     and every word on the reading pages, is simply there. */
 :root {
   --bg: #ffffff;
   --ink: #111111;
@@ -27,6 +36,9 @@
   --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   /* At display sizes Apple's system font switches to its Display cut by itself. */
   --display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  /* The system's own monospace, for what is data rather than prose: the
+     ciphertext in the illustration, code, and the date stamp on documents. */
+  --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
 
   --size-mark: clamp(88px, 17vw, 264px);
   --size-display: clamp(40px, 6.4vw, 96px);
@@ -49,6 +61,9 @@
   --space-8: 64px;
   --space-9: 96px;
   --section: clamp(112px, 18vh, 200px);
+  /* The gap between the phones in the gallery, and between the homepage's
+     two halves below it, so the facts start where the third phone does. */
+  --gutter: clamp(20px, 2.6vw, 44px);
 
   --radius-round: 999px;
   --radius-surface: 24px;
@@ -93,6 +108,8 @@ a { color: var(--blue); text-decoration: none; }
 a:hover { text-decoration: underline; text-underline-offset: 3px; }
 img { max-width: 100%; display: block; }
 :focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+/* No paragraph, caption or list item ends on a line of one word. */
+:is(p, li, dd, figcaption) { text-wrap: pretty; }
 h1, h2 { font-weight: 600; }
 /* Korean wraps between words, not inside them. */
 :lang(ko) { word-break: keep-all; }
@@ -209,7 +226,10 @@ h1, h2 { font-weight: 600; }
 
 .display { font-family: var(--display); font-size: var(--size-display); font-weight: 700; line-height: 1;
   letter-spacing: var(--track-display); text-wrap: balance; }
-.display .dim { color: var(--dim); }
+/* A statement and its answer: the answer in regular weight, the same white,
+   so the two lines read as one sentence in two voices, not as a headline
+   and a greyed-out aside. Regular needs a little less tightening. */
+.display .answer { font-weight: 400; letter-spacing: -.034em; }
 /* A headline line rises out of its own mask. The padding keeps accents and
    descenders inside it. */
 .mask { display: block; overflow: hidden; overflow: clip; padding-block: .1em .14em; margin-block: -.1em -.14em; }
@@ -219,10 +239,15 @@ h1, h2 { font-weight: 600; }
    name's baseline. Under both, behind a hairline, the badge and two plain
    sentences on what it costs and needs. */
 .hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(300px, 420px); align-items: end;
-  column-gap: clamp(var(--space-6), 6vw, 112px); padding-top: clamp(var(--space-7), 8vh, 104px); }
-.hero-icon { width: 72px; height: 72px; border-radius: 16px;
-  box-shadow: 0 0 0 1px rgb(255 255 255 / .08), 0 20px 40px -14px rgb(0 0 0 / .6); }
-.wordmark { margin-top: var(--space-5); margin-inline-start: -.045em; font-family: var(--display); font-size: var(--size-mark);
+  column-gap: clamp(var(--space-6), 6vw, 112px); padding-top: clamp(var(--space-8), 13vh, 144px); }
+/* The name is as large as its own column lets it be. Its width is a little
+   over three times its size in every system font, so it's capped at a
+   share of the column (cqi) as well as by its size on the scale: sized by
+   the screen alone, it ran its last letter past the column's edge just
+   above the tablet layout and on phones. */
+.hero-mark { container-type: inline-size; }
+.wordmark { margin-inline-start: -.045em; font-family: var(--display); font-size: var(--size-mark);
+  font-size: min(var(--size-mark), 29.5cqi);
   font-weight: 700; line-height: .86; letter-spacing: var(--track-mark); color: var(--ink); }
 .wordmark .rise { display: inline-block; padding-inline-end: .06em; }
 /* At this tracking an r's arm runs into the letter after it, and the i into
@@ -254,7 +279,7 @@ h1, h2 { font-weight: 600; }
    labelled with what it's for. A phone leans a little toward the pointer
    (presentation.js) and the others step back. */
 .gallery { margin-top: var(--space-9); }
-.shots { display: flex; justify-content: center; gap: clamp(20px, 2.6vw, 44px); }
+.shots { display: flex; justify-content: center; gap: var(--gutter); }
 .shots figure { flex: 0 1 312px; min-width: 0; max-width: calc(72vh * .4832); margin: 0; perspective: 1600px; }
 /* Each screenshot is the phone in its frame, cut to the phone's outline
    (body and side buttons) by a mask drawn from the same measurements. It's
@@ -293,7 +318,6 @@ h1, h2 { font-weight: 600; }
 @media (hover: hover) and (min-width: 1181px) {
   .shots:has(.shot-open:hover) .shot-open:not(:hover) { opacity: .55; scale: .98; }
 }
-.reveal-pending { opacity: .65; transform: translateY(10px); }
 
 /* Film: the app in motion, in one card like the security illustration's,
    sized so all of it fits on screen at once. Wide on larger screens, upright
@@ -335,15 +359,17 @@ h1, h2 { font-weight: 600; }
   .film-progress { height: 20px; }
 }
 
-/* Security: one statement across the page; under it one card, the
-   illustration's phone rising out of its bottom edge and, beside the phone,
-   the facts: each a title, then how. */
+/* Security: one statement across the page; under it a hairline across the
+   page, the illustration's phone rising out of it, as the Lock Screen rises
+   out of the line the page ends on, and beside the phone, standing on the
+   same line, the facts: each a title, then how, and under them the way to
+   the whole overview. No card: the line is enough to stand them on. */
 .safety { padding-top: var(--section); }
 .safety .display { max-width: 12.5em; }
-.safety-body { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); margin-top: var(--space-8);
-  border: 1px solid var(--rule); border-radius: var(--radius-surface); overflow: hidden; background: rgb(255 255 255 / .025); }
-.safety-art { position: relative; min-height: 440px; }
-.ledger { align-self: center; max-width: 36em; padding-block: var(--space-7); padding-inline: var(--space-2) var(--space-7); }
+.safety-body { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: var(--gutter);
+  margin-top: var(--space-8); border-bottom: 1px solid var(--rule); }
+.safety-art { position: relative; min-height: 460px; }
+.safety-facts { align-self: end; max-width: 36em; padding-bottom: var(--space-7); }
 .ledger > div { padding-block: var(--space-4); border-top: 1px solid var(--rule); }
 .ledger > div:first-child { padding-top: 0; border-top: 0; }
 .ledger > div:last-child { padding-bottom: 0; }
@@ -353,12 +379,14 @@ h1, h2 { font-weight: 600; }
   text-decoration: underline; text-decoration-color: var(--dim); text-decoration-thickness: 1px; text-underline-offset: 4px;
   transition: text-decoration-color var(--dur-state) var(--ease-state); }
 .more:hover { text-decoration-color: var(--ink); }
-/* Here the illustration fills its half of the card, with a larger phone and
-   no card or caption of its own: the headline above already says what the
-   caption says. It plays once, when it scrolls into view. */
+/* Here the illustration fills its half of the section, with a larger phone
+   and no card or caption of its own: the headline above already says what
+   the caption says. It plays once, when it scrolls into view. */
 .safety .privacy-vignette { position: absolute; inset: 0; max-width: none; margin: 0; border: 0; border-radius: 0; background: none; }
-.safety .privacy-art { --pw: 52cqw; position: absolute; inset: 0; aspect-ratio: auto; }
-.safety .vg-phone { top: 64px; }
+.safety .privacy-art { --pw: 44cqw; position: absolute; inset: 0; aspect-ratio: auto; }
+/* Anchored to the line rather than to the top, so whatever the column's
+   height the phone rises out of the line with its top two-thirds showing. */
+.safety .vg-phone { top: auto; bottom: calc(var(--pw) * -.62); }
 .safety .privacy-vignette figcaption { display: none; }
 
 /* Closing: the last word on the left; on the right the Lock Screen, rising
@@ -402,7 +430,17 @@ h1, h2 { font-weight: 600; }
    print as its first frame, blank or faded. */
 @media print {
   .motion .rise { animation: none; }
-  .reveal-pending { opacity: 1; transform: none; }
+  /* Paper is white and printers leave backgrounds out, so the graphite's
+     light words would print as nearly nothing: on paper the site is dark
+     ink on white, and the header and controls that only work on a screen
+     stay off it. */
+  /* "html" in front so these win over the graphite, set further down. */
+  html.graphite-site, html .lock-scene, html .home-scene.lock-scene { background: #fff; }
+  html .lock-scene { --bg: #fff; --ink: #111; --muted: #4a4a4f; --faint: #5c5c61; --dim: #6e6e73; --rule: #d2d2d7;
+    --blue: #1d4fc0; color-scheme: light; }
+  .site-head { position: static; }
+  .site-head::before, .lang, .film-controls, .film-progress { display: none; }
+  .long-read > .toc { position: static; }
 }
 
 /* ---------------------------------------------------------------- Viewer */
@@ -462,7 +500,7 @@ h1, h2 { font-weight: 600; }
 .vg-photo { position: absolute; inset: 0; display: block; width: 100%; height: 100%; max-width: none;
   object-fit: cover; object-position: 50% 0; clip-path: inset(100% 0 0 0); }
 .vg-cipher { position: absolute; inset: 0; margin: 0; padding: 24.75cqw 7.9cqw 0; overflow: hidden; word-break: break-all;
-  font: 500 4.95cqw/1.62 ui-monospace, "SF Mono", SFMono-Regular, Menlo, monospace; letter-spacing: .08em;
+  font: 500 4.95cqw/1.62 var(--mono); letter-spacing: .08em;
   color: rgb(205 216 228 / .4); user-select: none; -webkit-user-select: none; }
 @supports ((-webkit-background-clip: text) or (background-clip: text)) {
   .vg-cipher { color: transparent; background: linear-gradient(180deg, rgb(228 235 242 / .6), rgb(150 166 182 / .2) 75%);
@@ -491,7 +529,6 @@ h1, h2 { font-weight: 600; }
   .privacy-vignette[data-state="ready"] .vg-cipher { clip-path: inset(0 0 100% 0); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .reveal-pending { opacity: 1; transform: none; }
   .shot-open, .shot-open.tilting { transition: opacity .2s, filter .2s; }
   :is(.appstore, .head-get, .film-button, .lang summary, .shot-viewer button):active { scale: none; }
 }
@@ -516,20 +553,23 @@ h1, h2 { font-weight: 600; }
 .page { padding: 56px 0 88px; }
 .page h1 { font-family: var(--display); font-size: clamp(36px, 4.8vw, 60px); font-weight: 700; line-height: 1.04;
   letter-spacing: -.035em; max-width: 16em; overflow-wrap: break-word; text-wrap: balance; }
-.page .updated { font-size: var(--size-small); color: var(--muted); margin-top: 12px; }
+/* When a document was written, stamped under its title like a date on a
+   form, in the monospace the site keeps for data. */
+.page .updated { margin-top: var(--space-3); font-family: var(--mono); font-size: 12px; letter-spacing: 0; color: var(--muted); }
 .page .intro { font-size: 19px; line-height: 1.5; color: var(--muted); max-width: 34em; margin-top: 18px; }
 .note { max-width: 40em; margin-top: 16px; font-size: 15px; color: var(--muted); }
 .note strong { color: var(--ink); font-weight: 600; }
 
-.features { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 28px 56px; margin-top: 48px; }
-.features h2 { font-size: 16px; }
-.features p { font-size: 15px; color: var(--muted); margin-top: 2px; }
-.page .appstore { margin-top: 48px; }
-
-.faq { max-width: 40em; margin-top: 40px; }
-.faq h2 { font-size: 17px; margin-top: 32px; }
-.faq h2:first-child { margin-top: 0; }
-.faq p { color: var(--muted); margin-top: 6px; }
+/* Pro's features and the questions: the homepage's ledger at the page's
+   width. Rows between hairlines, the title on the left and what it means on
+   the right in a reading measure, so the titles read down the page as an
+   index of what's there. */
+.ledger-list { list-style: none; margin-top: var(--space-7); border-top: 1px solid var(--rule); }
+.ledger-list > * { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); column-gap: var(--space-6);
+  padding-block: var(--space-5); border-bottom: 1px solid var(--rule); }
+.ledger-list h2 { font-size: var(--size-lead); line-height: 1.4; letter-spacing: -.012em; }
+.ledger-list p { font-size: var(--size-text); line-height: 1.55; letter-spacing: var(--track-text); color: var(--muted); }
+.page .appstore { margin-top: var(--space-7); }
 
 .legal { max-width: 40em; margin-top: 48px; line-height: 1.6; counter-reset: legal-section; }
 .legal h2 { font-size: 17px; margin: 36px 0 8px; counter-increment: legal-section; }
@@ -546,6 +586,23 @@ h1, h2 { font-weight: 600; }
   border-bottom: 1px solid var(--rule); font-size: 15px; }
 .toc ol { list-style: none; columns: 2; column-gap: 32px; }
 .toc li { margin-bottom: 4px; break-inside: avoid; }
+/* Navigation is muted words, as in the header and footer; blue is for the
+   links inside the text. */
+.toc a { color: var(--muted); transition: color var(--dur-state) var(--ease-state); }
+.toc a:hover { color: var(--ink); text-decoration: none; }
+/* Wide screens: the list of sections stays beside the text as it scrolls,
+   in the room the text's measure leaves, so every section is a click away
+   from anywhere in it. */
+@media (min-width: 1181px) {
+  .long-read { display: grid; grid-template-columns: minmax(0, 40em) minmax(0, 1fr); column-gap: var(--space-8); }
+  .long-read > * { grid-column: 1; }
+  .long-read > h1 { grid-column: 1 / -1; }
+  .long-read > .toc { grid-column: 2; grid-row: 3 / span 5; align-self: start; position: sticky; top: 104px;
+    margin-top: var(--space-5); padding: 0; padding-inline-start: var(--space-5); border: 0;
+    border-inline-start: 1px solid var(--rule); font-size: var(--size-small); }
+  .long-read > .toc ol { columns: 1; }
+  .long-read > .toc li { margin-bottom: var(--space-2); }
+}
 .doc { max-width: 40em; margin-top: 48px; line-height: 1.6; }
 .doc h2 { font-size: 21px; line-height: 1.3; margin: 56px 0 12px; }
 .doc h2:first-child { margin-top: 0; }
@@ -556,7 +613,7 @@ h1, h2 { font-weight: 600; }
 .doc :is(ul, ol) { margin: 0 0 16px; padding-inline-start: 20px; }
 .doc li { margin-bottom: 6px; }
 .doc a { text-decoration: underline; text-underline-offset: 2px; }
-.doc code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .9em; }
+.doc code { font-family: var(--mono); font-size: .9em; }
 .doc table { width: 100%; border-collapse: collapse; margin: 4px 0 20px; font-size: 14px; line-height: 1.45; }
 .doc :is(th, td) { text-align: start; vertical-align: top; padding: 10px 16px 10px 0; border-bottom: 1px solid var(--rule); }
 .doc :is(th, td):last-child { padding-inline-end: 0; }
@@ -625,8 +682,8 @@ h1, h2 { font-weight: 600; }
 /* Scripts other than Latin and Cyrillic. Letter-spacing would pull Arabic and
    Urdu's joined letters apart and crowds Devanagari and CJK, and Arabic, Urdu
    and Hindi need taller lines so marks above and below don't collide. */
-:is(:lang(ar), :lang(ur), :lang(hi)) :is(.tagline, .display, .page h1, .buy-note, .ledger dt, .ledger dd, .shots figcaption) { letter-spacing: 0; }
-:is(:lang(zh), :lang(ja), :lang(ko)) :is(.tagline, .display, .page h1) { letter-spacing: -.01em; }
+:is(:lang(ar), :lang(ur), :lang(hi)) :is(.tagline, .display, .display .answer, .page h1, .buy-note, .ledger dt, .ledger dd, .shots figcaption) { letter-spacing: 0; }
+:is(:lang(zh), :lang(ja), :lang(ko)) :is(.tagline, .display, .display .answer, .page h1) { letter-spacing: -.01em; }
 /* Chinese and Japanese may break between any two characters; display lines
    break between phrases, where the strings mark it with <wbr>, and inside
    one only when a phrase is wider than the screen. */
@@ -642,7 +699,7 @@ h1, h2 { font-weight: 600; }
    that scrolls sideways from edge to edge, the next one peeking in. */
 @media (max-width: 1180px) {
   .hero { grid-template-columns: minmax(0, 1fr); }
-  .wordmark { font-size: clamp(84px, 21vw, 220px); }
+  .wordmark { font-size: clamp(84px, 21vw, 220px); font-size: min(clamp(84px, 21vw, 220px), 29.5cqi); }
   .hero-copy { margin-top: var(--space-6); max-width: 36em; }
   .hero .buy { margin-top: var(--space-7); }
   .gallery { margin-top: var(--space-8); }
@@ -654,29 +711,31 @@ h1, h2 { font-weight: 600; }
   .shots figure { flex: none; width: min(56vw, 300px); max-width: none; scroll-snap-align: center; }
   .shots figure:first-child { scroll-snap-align: start; }
   .safety-body { grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); }
-  .ledger { padding-block: var(--space-6); padding-inline: var(--space-2) var(--space-6); }
+  .safety-facts { padding-bottom: var(--space-6); }
+  .safety-art { min-height: 0; }
+  .safety .privacy-art { --pw: 60cqw; }
 }
 @media (max-width: 760px) {
   :root { --side: 20px; --size-lead: 16px; }
-  .hero { padding-top: var(--space-6); }
-  .hero-icon { width: 60px; height: 60px; border-radius: 14px; }
-  .wordmark { margin-top: var(--space-4); font-size: min(29vw, 140px); }
+  .hero { padding-top: var(--space-7); }
+  .wordmark { font-size: min(29vw, 140px); font-size: min(29.5cqi, 140px); }
   .tagline { font-size: clamp(26px, 7.4vw, 34px); }
   .hero .buy { flex-direction: column; align-items: flex-start; gap: var(--space-4); }
   .shots figure { width: min(64vw, 280px); }
   .display { font-size: clamp(36px, 10.4vw, 56px); }
-  .safety-body { grid-template-columns: minmax(0, 1fr); }
-  .safety-art { min-height: 0; aspect-ratio: 4 / 3; }
+  /* One above the other: the phone rising out of the line, the facts under it. */
+  .safety-body { grid-template-columns: minmax(0, 1fr); border-bottom: 0; }
+  .safety-art { min-height: 0; aspect-ratio: 4 / 3; border-bottom: 1px solid var(--rule); }
+  .safety-facts { max-width: none; padding: var(--space-5) 0 0; }
   .safety .privacy-art { --pw: 46cqw; }
-  .safety .vg-phone { top: var(--space-6); }
-  .ledger { padding: var(--space-5); border-top: 1px solid var(--rule); }
   .closing { grid-template-columns: minmax(0, 1fr); }
   .closing-copy { padding-bottom: var(--space-7); }
   .closing .buy { flex-direction: column; align-items: flex-start; gap: var(--space-4); }
   .closing-shot { width: min(62vw, 260px); justify-self: center; }
   .page { padding: 40px 0 64px; }
   .page .intro { font-size: 17px; }
-  .features { grid-template-columns: minmax(0, 1fr); gap: 24px; margin-top: 36px; }
+  .ledger-list { margin-top: var(--space-6); }
+  .ledger-list > * { grid-template-columns: minmax(0, 1fr); row-gap: var(--space-1); padding-block: var(--space-4); }
   .legal { margin-top: 36px; }
   .toc ol { columns: 1; }
   .doc { margin-top: 36px; }
