@@ -87,7 +87,7 @@
   <!-- The title, when it was written, and who it's from. -->
   <header class="legal-hero">
     <h1>Politique de confidentialité</h1>
-    <p class="updated">Date d’entrée en vigueur : 28 juin 2026 · Dernière mise à jour : 28 juin 2026</p>
+    <p class="updated">Date d’entrée en vigueur : 28 juin 2026 · Dernière mise à jour : 8 novembre 2026</p>
     <p class="intro">Privaro (« Privaro », « l’app », « nous » ou « notre ») est un coffre privé et chiffré pour photos et vidéos sur iOS, fourni par Erdinc Zarbo, Pays-Bas. Cette politique de confidentialité explique comment Privaro traite vos informations.</p>
   </header>
 
@@ -135,7 +135,7 @@
   <section class="article" id="on-device" aria-labelledby="on-device-h">
     <h2 id="on-device-h">Votre contenu reste sur votre appareil (et il est chiffré)</h2>
     <div class="article-body">
-      <p>Tout ce que vous ajoutez à Privaro (photos, vidéos, miniatures, albums, légendes, tags et noms de fichiers) est chiffré sur votre appareil avec le chiffrement AES-256-GCM, standard du secteur. La clé est générée sur votre appareil et conservée dans le trousseau iOS ; elle est protégée par le code ou la biométrie de votre appareil et par votre code Privaro. Les fichiers chiffrés sont stockés dans l’espace privé de l’app avec une protection de fichier complète et sont exclus des sauvegardes non chiffrées.</p>
+      <p>Tout ce que vous ajoutez à Privaro (photos, vidéos, miniatures, albums, légendes, tags et noms de fichiers) est chiffré sur votre appareil avec le chiffrement AES-256-GCM, standard du secteur. La clé est générée sur votre appareil et conservée dans le trousseau iOS ; elle est protégée par le code de votre appareil et n’est disponible que sur cet appareil. Votre code Privaro et la biométrie déterminent qui peut ouvrir le coffre dans l’app. Les fichiers chiffrés sont stockés dans l’espace privé de l’app avec une protection de fichier complète et sont exclus des sauvegardes non chiffrées.</p>
       <p>Comme le chiffrement a lieu sur votre appareil et que la clé ne le quitte jamais, nous n’avons aucun moyen d’accéder à votre contenu, de le déchiffrer ou de le récupérer. Si vous oubliez votre code et votre clé de récupération, vos données ne pourront être récupérées ni par nous ni par quiconque.</p>
     </div>
   </section>
@@ -144,7 +144,7 @@
     <div class="article-body">
       <p>Ces fonctionnalités sont désactivées par défaut et ne fonctionnent que si vous choisissez de les utiliser :</p>
       <ul>
-        <li><strong>Sauvegarde iCloud chiffrée (optionnelle, Pro).</strong> Si vous l’activez, Privaro enregistre une copie chiffrée de votre coffre dans votre propre compte iCloud. Les données sont chiffrées sur votre appareil avant l’envoi ; la clé est encapsulée à l’aide d’une clé dérivée de votre code (PBKDF2-HMAC-SHA256). Nous ne recevons jamais votre sauvegarde ni votre clé. iCloud est exploité par Apple et régi par la <a href="https://www.apple.com/legal/privacy/">politique de confidentialité d’Apple</a>.</li>
+        <li><strong>Sauvegarde iCloud chiffrée (optionnelle, Pro).</strong> Si vous l’activez, Privaro enregistre une copie chiffrée de votre coffre dans votre propre compte iCloud. Les données sont chiffrées sur votre appareil avant l’envoi ; la clé est encapsulée à l’aide d’une clé dérivée de votre clé de récupération (PBKDF2-HMAC-SHA256). Nous ne recevons jamais votre sauvegarde ni votre clé. iCloud est exploité par Apple et régi par la <a href="https://www.apple.com/legal/privacy/">politique de confidentialité d’Apple</a>.</li>
         <li><strong>Partage / export.</strong> Lorsque vous partagez ou exportez un élément (y compris les fichiers chiffrés <code>.privaroshare</code> ou « Enregistrer dans Photos »), ce contenu quitte le coffre selon vos instructions. Sa destination et sa protection dépendent alors du service que vous choisissez.</li>
         <li><strong>Transfert Wi-Fi (optionnel).</strong> Permet de transférer des fichiers entre votre appareil et un navigateur sur le même réseau local. Cette connexion est locale et n’est pas chiffrée pendant le transit : ne l’utilisez que sur un réseau de confiance. Les fichiers sont chiffrés dès leur importation dans le coffre. Aucune donnée ne nous est envoyée ni ne transite par internet pendant un transfert.</li>
       </ul>

@@ -87,7 +87,7 @@
   <!-- The title, when it was written, and who it's from. -->
   <header class="legal-hero">
     <h1>隐私政策</h1>
-    <p class="updated">生效日期：2026 年 6 月 28 日 · 最后更新：2026 年 6 月 28 日</p>
+    <p class="updated">生效日期：2026 年 6 月 28 日 · 最后更新：2026 年 11 月 8 日</p>
     <p class="intro">Privaro（“Privaro”“本应用”“我们”）是一款面向 iOS 的私密加密照片与视频保险库，由荷兰的 Erdinc Zarbo 提供。本隐私政策说明 Privaro 如何处理你的信息。</p>
   </header>
 
@@ -135,7 +135,7 @@
   <section class="article" id="on-device" aria-labelledby="on-device-h">
     <h2 id="on-device-h">你的内容留在设备上（并且已加密）</h2>
     <div class="article-body">
-      <p>你添加到 Privaro 的一切（照片、视频、缩略图、相簿、说明、标签和文件名）都会在你的设备上使用业界标准的 AES-256-GCM 加密。密钥在设备上生成并保存在 iOS 钥匙串中，受设备密码/生物识别以及你的 Privaro 密码保护。加密文件存放在应用的私有存储空间中并启用完整文件保护，且不会包含在未加密的设备备份内。</p>
+      <p>你添加到 Privaro 的一切（照片、视频、缩略图、相簿、说明、标签和文件名）都会在你的设备上使用业界标准的 AES-256-GCM 加密。密钥在设备上生成并保存在 iOS 钥匙串中，受设备密码保护，且只能在这台设备上使用。你的 Privaro 密码和生物识别决定谁能在应用中打开保险库。加密文件存放在应用的私有存储空间中并启用完整文件保护，且不会包含在未加密的设备备份内。</p>
       <p>由于加密在你的设备上完成且密钥从不离开设备，我们无法访问、解密或恢复你的保险库内容。如果你同时忘记密码和恢复密钥，我们以及任何人都无法恢复你的数据。</p>
     </div>
   </section>
@@ -144,7 +144,7 @@
     <div class="article-body">
       <p>以下功能默认关闭，只有在你选择使用时才会运行：</p>
       <ul>
-        <li><strong>加密 iCloud 备份（可选，Pro）。</strong>启用后，Privaro 会在你自己的 iCloud 账户中保存保险库的加密副本。数据在上传前已在设备上加密；密钥使用由你的密码派生的密钥封装（PBKDF2-HMAC-SHA256）。我们绝不会收到你的备份或密钥。iCloud 由 Apple 运营，适用 <a href="https://www.apple.com/legal/privacy/">Apple 隐私政策</a>。</li>
+        <li><strong>加密 iCloud 备份（可选，Pro）。</strong>启用后，Privaro 会在你自己的 iCloud 账户中保存保险库的加密副本。数据在上传前已在设备上加密；密钥使用由你的恢复密钥派生的密钥封装（PBKDF2-HMAC-SHA256）。我们绝不会收到你的备份或密钥。iCloud 由 Apple 运营，适用 <a href="https://www.apple.com/legal/privacy/">Apple 隐私政策</a>。</li>
         <li><strong>共享 / 导出。</strong>当你共享或导出某个项目时（包括加密的 <code>.privaroshare</code> 文件或“存储到照片”），该内容会按你的指示离开保险库。此后它去往何处、如何受到保护，取决于你选择的目的地。</li>
         <li><strong>Wi-Fi 传输（可选）。</strong>可在你的设备与同一局域网中的浏览器之间传输文件。该连接为本地连接，传输过程中未加密，因此请仅在你信任的网络中使用。文件一旦导入保险库即被加密。传输过程中不会向我们或通过互联网发送任何数据。</li>
       </ul>

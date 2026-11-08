@@ -87,7 +87,7 @@
   <!-- The title, when it was written, and who it's from. -->
   <header class="legal-hero">
     <h1>Privacy Policy</h1>
-    <p class="updated">Effective date: June 28, 2026 · Last updated: June 28, 2026</p>
+    <p class="updated">Effective date: June 28, 2026 · Last updated: November 8, 2026</p>
     <p class="intro">Privaro (“Privaro,” “the app,” “we,” “us,” or “our”) is a private, encrypted photo and video vault for iOS, provided by Erdinc Zarbo, the Netherlands. This Privacy Policy explains how Privaro handles your information.</p>
   </header>
 
@@ -135,7 +135,7 @@
   <section class="article" id="on-device" aria-labelledby="on-device-h">
     <h2 id="on-device-h">Your content stays on your device (and is encrypted)</h2>
     <div class="article-body">
-      <p>Everything you add to Privaro (photos, videos, thumbnails, albums, captions, tags, and file names) is encrypted on your device using industry-standard AES-256-GCM encryption. The encryption key is generated on your device and stored in the iOS Keychain; it is protected by your device passcode/biometrics and your Privaro passcode. Encrypted files are stored in the app’s private storage with full file protection and are excluded from unencrypted device backups.</p>
+      <p>Everything you add to Privaro (photos, videos, thumbnails, albums, captions, tags, and file names) is encrypted on your device using industry-standard AES-256-GCM encryption. The encryption key is generated on your device and stored in the iOS Keychain; it is protected by your device passcode and available only on this device. Your Privaro passcode and biometrics control who can open the vault in the app. Encrypted files are stored in the app’s private storage with full file protection and are excluded from unencrypted device backups.</p>
       <p>Because encryption happens on your device and the key never leaves it, we have no ability to access, decrypt, or recover your vault content. If you forget your passcode and your recovery key, your data cannot be recovered by us or anyone else.</p>
     </div>
   </section>
@@ -144,7 +144,7 @@
     <div class="article-body">
       <p>These features are off by default and only operate when you choose to use them:</p>
       <ul>
-        <li><strong>Encrypted iCloud Backup (optional, Pro).</strong> If you enable it, Privaro stores an encrypted copy of your vault in your own iCloud account. The data is encrypted on your device before upload; the key is wrapped using a key derived from your passcode (PBKDF2-HMAC-SHA256). We never receive your backup or your key. iCloud is operated by Apple and governed by <a href="https://www.apple.com/legal/privacy/">Apple’s Privacy Policy</a>.</li>
+        <li><strong>Encrypted iCloud Backup (optional, Pro).</strong> If you enable it, Privaro stores an encrypted copy of your vault in your own iCloud account. The data is encrypted on your device before upload; the key is wrapped using a key derived from your recovery key (PBKDF2-HMAC-SHA256). We never receive your backup or your key. iCloud is operated by Apple and governed by <a href="https://www.apple.com/legal/privacy/">Apple’s Privacy Policy</a>.</li>
         <li><strong>Sharing / Export.</strong> When you share or export an item (including encrypted <code>.privaroshare</code> files or “Save to Photos”), that content leaves the vault as you direct. Where it goes and how it’s protected is then governed by the destination you choose.</li>
         <li><strong>Wi-Fi Transfer (optional).</strong> Lets you transfer files between your device and a browser on the same local network. This connection is local and is not encrypted in transit, so only use it on a network you trust. Files are encrypted as soon as they’re imported into the vault. No data is sent to us or over the internet during a transfer.</li>
       </ul>
