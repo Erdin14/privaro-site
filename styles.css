@@ -679,12 +679,11 @@ h1, h2 { font-weight: 600; }
 .pro-pay .appstore { margin-top: var(--space-4); }
 
 /* Not found: what happened and where to go instead, on one side; on the
-   other the Lock Screen rising out of the line the page ends on, as at the
-   end of the homepage. */
+   other the Lock Screen, fading out at its foot into the page. */
 /* Centred between the header and the footer, however tall the window. */
 .missing { display: flex; flex-direction: column; justify-content: center; padding-block: 72px; }
-.missing-body { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; column-gap: var(--space-7);
-  border-bottom: 1px solid var(--rule); }
+.missing-body { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; column-gap: var(--space-7); }
+.missing-shot { -webkit-mask-image: linear-gradient(#000 55%, transparent); mask-image: linear-gradient(#000 55%, transparent); }
 .missing-copy { padding-bottom: var(--space-9); }
 .missing-code { font-size: var(--size-small); font-weight: 500; color: var(--faint); }
 .missing h1 { max-width: 9em; margin-top: var(--space-3); font-size: clamp(44px, 6.4vw, 96px); line-height: 1; letter-spacing: var(--track-display); }
