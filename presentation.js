@@ -44,6 +44,50 @@
     sync();
   }
 
+  // A link to a part of the same page glides there instead of jumping: quick
+  // to start, soft to stop, in 0.4s for a short hop and never more than 0.75s
+  // however far. It lands where the browser would (the target's
+  // scroll-margin, clear of the header), puts the address in the history so
+  // Back works, and hands focus to the target for the keyboard and screen
+  // readers. Any scroll of the reader's own stops it; with Reduce Motion it's
+  // the browser's ordinary jump.
+  document.addEventListener('click', event => {
+    if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    const link = event.target.closest?.('a[href^="#"]');
+    if (!link || reduce.matches) return;
+    let id;
+    try { id = decodeURIComponent(link.getAttribute('href').slice(1)); } catch { return; }
+    const target = id && document.getElementById(id);
+    if (!target) return;
+    event.preventDefault();
+    const margin = parseFloat(getComputedStyle(target).scrollMarginTop) || 0;
+    const end = Math.max(0, Math.min(target.getBoundingClientRect().top + scrollY - margin,
+      document.documentElement.scrollHeight - innerHeight));
+    const start = scrollY, distance = end - start;
+    const duration = Math.min(750, 400 + Math.abs(distance) * .05);
+    const ease = t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    if (location.hash !== '#' + link.getAttribute('href').slice(1)) history.pushState(null, '', link.getAttribute('href'));
+    const land = () => {
+      if (!target.matches('a, button, input, select, textarea, [tabindex]')) target.setAttribute('tabindex', '-1');
+      target.focus({ preventScroll: true });
+    };
+    if (Math.abs(distance) < 2) return land();
+    let begun, frame;
+    const stop = () => {
+      cancelAnimationFrame(frame);
+      ['wheel', 'touchstart', 'keydown'].forEach(name => removeEventListener(name, stop));
+    };
+    ['wheel', 'touchstart', 'keydown'].forEach(name => addEventListener(name, stop, { passive: true }));
+    const step = now => {
+      begun ??= now;
+      const t = Math.min((now - begun) / duration, 1);
+      scrollTo(0, start + distance * ease(t));
+      if (t < 1) frame = requestAnimationFrame(step);
+      else { stop(); land(); }
+    };
+    frame = requestAnimationFrame(step);
+  });
+
   // On a long read, the list of sections marks the one being read: the last
   // whose heading has passed the top third of the screen, or the last of all
   // once the page is scrolled to its end.
