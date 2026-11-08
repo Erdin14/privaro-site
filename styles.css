@@ -678,6 +678,23 @@ h1, h2 { font-weight: 600; }
 .pro-pay p { font-size: var(--size-lead); line-height: 1.45; color: var(--ink); }
 .pro-pay .appstore { margin-top: var(--space-4); }
 
+/* Not found: what happened and where to go instead, on one side; on the
+   other the Lock Screen rising out of the line the page ends on, as at the
+   end of the homepage. */
+/* Centred between the header and the footer, however tall the window. */
+.missing { display: flex; flex-direction: column; justify-content: center; padding-block: 72px; }
+.missing-body { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; column-gap: var(--space-7);
+  border-bottom: 1px solid var(--rule); }
+.missing-copy { padding-bottom: var(--space-9); }
+.missing-code { font-size: var(--size-small); font-weight: 500; color: var(--faint); }
+.missing h1 { max-width: 9em; margin-top: var(--space-3); font-size: clamp(44px, 6.4vw, 96px); line-height: 1; letter-spacing: var(--track-display); }
+.missing .intro { max-width: 30em; }
+.missing-home { margin-top: var(--space-7); font-size: var(--size-lead); }
+/* The other pages, for phones, where the header doesn't list them; wider
+   screens have them in the header just above. */
+.missing-others { display: none; flex-wrap: wrap; gap: var(--space-2) var(--space-5); margin-top: var(--space-4); font-size: 15px; }
+.missing-others a { color: var(--muted); transition: color var(--dur-state) var(--ease-state); }
+.missing-others a:hover { color: var(--ink); text-decoration: none; }
 /* The legal pages, Terms of Use and Privacy Policy. The title, when it was
    written and what it covers; then the one thing to read if nothing else
    (the Terms' warning, the Policy's short version), set large between two
@@ -940,6 +957,9 @@ h1, h2 { font-weight: 600; }
   .closing-copy { padding-bottom: var(--space-7); }
   .closing .buy { flex-direction: column; align-items: flex-start; gap: var(--space-4); }
   .closing-shot { width: min(62vw, 260px); justify-self: center; }
+  .missing-body { grid-template-columns: minmax(0, 1fr); }
+  .missing-others { display: flex; }
+  .missing-copy { padding-bottom: var(--space-7); }
   .page { padding: 40px 0 64px; }
   .page .intro { font-size: 17px; }
   .qa { row-gap: var(--space-7); margin-top: var(--space-7); }
