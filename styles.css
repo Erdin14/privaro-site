@@ -369,9 +369,8 @@ h1, h2 { font-weight: 600; }
   margin-top: var(--space-8); }
 .safety-art { position: relative; min-height: 460px; }
 .safety-facts { align-self: end; max-width: 36em; padding-bottom: var(--space-7); }
-.ledger > div { padding-block: var(--space-4); border-top: 1px solid var(--rule); }
-.ledger > div:first-child { padding-top: 0; border-top: 0; }
-.ledger > div:last-child { padding-bottom: 0; }
+/* The facts, one under another, with space rather than lines between them. */
+.ledger { display: grid; row-gap: var(--space-6); }
 .ledger dt { font-size: var(--size-lead); font-weight: 600; line-height: 1.35; letter-spacing: -.012em; }
 .ledger dd { margin-top: var(--space-1); font-size: var(--size-text); line-height: 1.5; letter-spacing: var(--track-text); color: var(--muted); }
 .more { display: inline-block; margin-top: var(--space-6); font-size: var(--size-text); color: var(--ink);
