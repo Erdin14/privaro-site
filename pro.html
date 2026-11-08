@@ -38,7 +38,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=6a3d34af46" />
+<link rel="stylesheet" href="/styles.css?v=02ecd410af" />
 <link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
 <script>
 // Register before first reveal, including restored history entries.
@@ -82,33 +82,69 @@
   </div>
 </header>
 
-<main class="page wrap">
+<main class="page wrap pro">
 
-<h1>Everything Pro unlocks.</h1>
-<p class="intro">Pro is a one-time purchase of <span class="price" data-price="pro">$19.99</span>. It lifts the limits of the free version and adds everything below, on every device signed in to your Apple Account. Nothing renews and there’s nothing to cancel.</p>
-<p class="note"><strong>Free or Pro, the basics never change:</strong> everything is encrypted on your device with AES-256, there’s no account, and only you can open your vault.</p>
+  <!-- What Pro is, on one side; what it costs, on the other, its last line
+       on the headline's baseline. Under both, behind a hairline, where to
+       get it, and what stays the same without it. -->
+  <section class="pro-hero" aria-labelledby="pro-title">
+    <h1 id="pro-title">Everything Pro unlocks.</h1>
+    <p class="intro">Pro is a one-time purchase of <span class="price" data-price="pro">$19.99</span>. It lifts the limits of the free version and adds everything below, on every device signed in to your Apple Account. Nothing renews and there’s nothing to cancel.</p>
+    <div class="buy">
+      <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="Download Privaro on the App Store"><img src="/appstore-badge-white.svg" width="150" height="50" alt="Download Privaro on the App Store" /></a>
+      <p class="note"><strong>Free or Pro, the basics never change:</strong> everything is encrypted on your device with AES-256, there’s no account, and only you can open your vault.</p>
+    </div>
+  </section>
 
-<ul class="features ledger-list">
-  <li><h2>Unlimited storage</h2><p>The free vault holds up to 2.5 GB. Pro has no cap: the only limit is the free space on your iPhone.</p></li>
-  <li><h2>Unlimited albums and folders</h2><p>Free includes up to 5 albums. With Pro you can make as many albums as you like and put folders inside folders.</p></li>
-  <li><h2>Per-album passwords</h2><p>Give an album its own password. It stays locked even while the rest of the vault is open.</p></li>
-  <li><h2>Location-based lock</h2><p>Only allow the vault to unlock in places you trust, like your home. Anywhere else, it stays locked even with the right passcode.</p></li>
-  <li><h2>Decoy vault</h2><p>Set a second passcode that opens a separate vault with harmless photos in it. If you’re ever pushed to unlock Privaro, enter that one, and your real vault stays out of sight.</p></li>
-  <li><h2>Duress wipe</h2><p>Set a passcode that erases the whole vault, decoy included, the moment it’s entered. It’s meant for the worst case, and it can’t be undone.</p></li>
-  <li><h2>Break-in capture</h2><p>If someone enters the wrong passcode, Privaro can silently take a photo with the front camera and log the attempt with a timestamp, so you know if anyone has tried to get into your vault.</p></li>
-  <li><h2>Screenshot and recording protection</h2><p>Stops your vault from being captured by screenshots, screen recording or AirPlay while the app is open, so nothing leaks to your camera roll or to a screen mirror by accident.</p></li>
-  <li><h2>Disguise app icon</h2><p>Hide Privaro behind an everyday icon and name, like Calculator or Notes, so it doesn’t stand out on your Home Screen. Color icon variants are free; the disguises are Pro.</p></li>
-  <li><h2>Encrypted iCloud backup and export</h2><p>Back up your vault to your own iCloud, or export it as a single encrypted file. Both are encrypted on your device before they leave, so no one (including us) can read them. Restoring a backup is always free, even without Pro.</p></li>
-  <li><h2>Wi-Fi transfer</h2><p>Send files into the vault from any computer's web browser over your local network. No cable, no cloud, and no extra app to install on your computer.</p></li>
-  <li><h2>Secure share</h2><p>Send photos or videos to another Privaro user as an encrypted file that only opens with a passphrase you choose. Nothing passes through us on the way.</p></li>
-</ul>
+  <!-- The twelve features, in the five things they're for. Each chapter is a
+       line across the page with its name under it on the left. -->
+  <section class="chapter" aria-labelledby="more-room">
+    <h2 id="more-room">More room</h2>
+    <ul>
+      <li><h3>Unlimited storage</h3><p>The free vault holds up to 2.5 GB. Pro has no cap: the only limit is the free space on your iPhone.</p></li>
+      <li><h3>Unlimited albums and folders</h3><p>Free includes up to 5 albums. With Pro you can make as many albums as you like and put folders inside folders.</p></li>
+    </ul>
+  </section>
+  <section class="chapter" aria-labelledby="extra-locks">
+    <h2 id="extra-locks">Extra locks</h2>
+    <ul>
+      <li><h3>Per-album passwords</h3><p>Give an album its own password. It stays locked even while the rest of the vault is open.</p></li>
+      <li><h3>Location-based lock</h3><p>Only allow the vault to unlock in places you trust, like your home. Anywhere else, it stays locked even with the right passcode.</p></li>
+    </ul>
+  </section>
+  <section class="chapter" aria-labelledby="if-someone-tries">
+    <h2 id="if-someone-tries">If someone tries to get in</h2>
+    <ul>
+      <li><h3>Decoy vault</h3><p>Set a second passcode that opens a separate vault with harmless photos in it. If you’re ever pushed to unlock Privaro, enter that one, and your real vault stays out of sight.</p></li>
+      <li><h3>Duress wipe</h3><p>Set a passcode that erases the whole vault, decoy included, the moment it’s entered. It’s meant for the worst case, and it can’t be undone.</p></li>
+      <li><h3>Break-in capture</h3><p>If someone enters the wrong passcode, Privaro can silently take a photo with the front camera and log the attempt with a timestamp, so you know if anyone has tried to get into your vault.</p></li>
+    </ul>
+  </section>
+  <section class="chapter" aria-labelledby="out-of-sight">
+    <h2 id="out-of-sight">Out of sight</h2>
+    <ul>
+      <li><h3>Screenshot and recording protection</h3><p>Stops your vault from being captured by screenshots, screen recording or AirPlay while the app is open, so nothing leaks to your camera roll or to a screen mirror by accident.</p></li>
+      <li><h3>Disguise app icon</h3><p>Hide Privaro behind an everyday icon and name, like Calculator or Notes, so it doesn’t stand out on your Home Screen. Color icon variants are free; the disguises are Pro.</p></li>
+    </ul>
+  </section>
+  <section class="chapter" aria-labelledby="moving-files">
+    <h2 id="moving-files">Moving files in and out</h2>
+    <ul>
+      <li><h3>Encrypted iCloud backup and export</h3><p>Back up your vault to your own iCloud, or export it as a single encrypted file. Both are encrypted on your device before they leave, so no one (including us) can read them. Restoring a backup is always free, even without Pro.</p></li>
+      <li><h3>Wi-Fi transfer</h3><p>Send files into the vault from any computer's web browser over your local network. No cable, no cloud, and no extra app to install on your computer.</p></li>
+      <li><h3>Secure share</h3><p>Send photos or videos to another Privaro user as an encrypted file that only opens with a passphrase you choose. Nothing passes through us on the way.</p></li>
+    </ul>
+  </section>
 
-<a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="Download Privaro on the App Store">
-  <picture>
-    <source srcset="/appstore-badge-white.svg" />
-    <img src="/appstore-badge.svg" alt="Download Privaro on the App Store" />
-  </picture>
-</a>
+  <!-- The price once more, set large, and where to pay it. The page ends on
+       a line, as the homepage does. -->
+  <section class="pro-price">
+    <div class="pro-figure"><p><span class="price" data-price="pro">$19.99</span></p></div>
+    <div class="pro-pay">
+      <p>One payment, nothing to renew.</p>
+      <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="Download Privaro on the App Store"><img src="/appstore-badge-white.svg" width="150" height="50" alt="Download Privaro on the App Store" /></a>
+    </div>
+  </section>
 
 </main>
 

@@ -38,7 +38,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=6a3d34af46" />
+<link rel="stylesheet" href="/styles.css?v=02ecd410af" />
 <link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
 <script>
 // Register before first reveal, including restored history entries.
@@ -82,33 +82,69 @@
   </div>
 </header>
 
-<main class="page wrap">
+<main class="page wrap pro">
 
-<h1>Semua yang dibuka oleh Pro.</h1>
-<p class="intro">Pro adalah pembelian satu kali seharga <span class="price" data-price="pro">Rp 99.000</span>. Pro menghapus batasan versi gratis dan menambahkan semua fitur di bawah ini, di setiap perangkat yang masuk ke Akun Apple Anda. Tidak ada yang diperpanjang dan tidak ada yang perlu dibatalkan.</p>
-<p class="note"><strong>Gratis atau Pro, dasarnya tidak pernah berubah:</strong> semuanya dienkripsi di perangkat Anda dengan AES-256, tidak ada akun, dan hanya Anda yang dapat membuka brankas Anda.</p>
+  <!-- What Pro is, on one side; what it costs, on the other, its last line
+       on the headline's baseline. Under both, behind a hairline, where to
+       get it, and what stays the same without it. -->
+  <section class="pro-hero" aria-labelledby="pro-title">
+    <h1 id="pro-title">Semua yang dibuka oleh Pro.</h1>
+    <p class="intro">Pro adalah pembelian satu kali seharga <span class="price" data-price="pro">Rp 99.000</span>. Pro menghapus batasan versi gratis dan menambahkan semua fitur di bawah ini, di setiap perangkat yang masuk ke Akun Apple Anda. Tidak ada yang diperpanjang dan tidak ada yang perlu dibatalkan.</p>
+    <div class="buy">
+      <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="Unduh Privaro di App Store"><img src="/appstore-badge-white.svg" width="150" height="50" alt="Unduh Privaro di App Store" /></a>
+      <p class="note"><strong>Gratis atau Pro, dasarnya tidak pernah berubah:</strong> semuanya dienkripsi di perangkat Anda dengan AES-256, tidak ada akun, dan hanya Anda yang dapat membuka brankas Anda.</p>
+    </div>
+  </section>
 
-<ul class="features ledger-list">
-  <li><h2>Penyimpanan tanpa batas</h2><p>Brankas gratis menampung hingga 2,5 GB. Pro tidak punya batas: satu-satunya batas adalah ruang kosong di iPhone Anda.</p></li>
-  <li><h2>Album dan folder tanpa batas</h2><p>Versi gratis mencakup hingga 5 album. Dengan Pro, Anda bisa membuat album sebanyak yang Anda mau dan menaruh folder di dalam folder.</p></li>
-  <li><h2>Kata sandi per album</h2><p>Beri album kata sandinya sendiri. Album tetap terkunci meskipun bagian lain brankas sedang terbuka.</p></li>
-  <li><h2>Kunci berbasis lokasi</h2><p>Izinkan brankas dibuka hanya di tempat yang Anda percayai, seperti rumah Anda. Di tempat lain, brankas tetap terkunci meskipun kode sandinya benar.</p></li>
-  <li><h2>Brankas umpan</h2><p>Atur kode sandi kedua yang membuka brankas terpisah berisi foto-foto yang tidak berbahaya. Jika Anda dipaksa membuka Privaro, masukkan kode itu, dan brankas asli Anda tetap tersembunyi.</p></li>
-  <li><h2>Penghapusan darurat</h2><p>Atur kode sandi yang menghapus seluruh brankas, termasuk brankas umpan, saat kode itu dimasukkan. Fitur ini untuk keadaan terburuk, dan tidak dapat dibatalkan.</p></li>
-  <li><h2>Penangkapan pembobolan</h2><p>Jika seseorang memasukkan kode sandi yang salah, Privaro dapat diam-diam mengambil foto dengan kamera depan dan mencatat upaya itu beserta waktunya, sehingga Anda tahu jika ada yang mencoba masuk ke brankas Anda.</p></li>
-  <li><h2>Perlindungan dari tangkapan layar dan rekaman</h2><p>Mencegah brankas Anda terekam lewat tangkapan layar, rekaman layar, atau AirPlay selama aplikasi terbuka, sehingga tidak ada yang bocor ke rol kamera atau layar yang dicerminkan secara tidak sengaja.</p></li>
-  <li><h2>Ikon aplikasi samaran</h2><p>Sembunyikan Privaro di balik ikon dan nama sehari-hari, seperti Kalkulator atau Catatan, agar tidak mencolok di Layar Utama Anda. Varian ikon berwarna gratis; samarannya termasuk Pro.</p></li>
-  <li><h2>Cadangan iCloud terenkripsi dan ekspor</h2><p>Cadangkan brankas ke iCloud Anda sendiri, atau ekspor sebagai satu file terenkripsi. Keduanya dienkripsi di perangkat Anda sebelum keluar, sehingga tidak ada yang (termasuk kami) dapat membacanya. Memulihkan cadangan selalu gratis, bahkan tanpa Pro.</p></li>
-  <li><h2>Transfer Wi-Fi</h2><p>Kirim file ke brankas dari peramban web komputer mana pun melalui jaringan lokal Anda. Tanpa kabel, tanpa cloud, dan tanpa aplikasi tambahan yang perlu diinstal di komputer.</p></li>
-  <li><h2>Berbagi aman</h2><p>Kirim foto atau video ke pengguna Privaro lain sebagai file terenkripsi yang hanya bisa dibuka dengan frasa sandi pilihan Anda. Tidak ada yang melewati kami di tengah jalan.</p></li>
-</ul>
+  <!-- The twelve features, in the five things they're for. Each chapter is a
+       line across the page with its name under it on the left. -->
+  <section class="chapter" aria-labelledby="more-room">
+    <h2 id="more-room">Ruang lebih luas</h2>
+    <ul>
+      <li><h3>Penyimpanan tanpa batas</h3><p>Brankas gratis menampung hingga 2,5 GB. Pro tidak punya batas: satu-satunya batas adalah ruang kosong di iPhone Anda.</p></li>
+      <li><h3>Album dan folder tanpa batas</h3><p>Versi gratis mencakup hingga 5 album. Dengan Pro, Anda bisa membuat album sebanyak yang Anda mau dan menaruh folder di dalam folder.</p></li>
+    </ul>
+  </section>
+  <section class="chapter" aria-labelledby="extra-locks">
+    <h2 id="extra-locks">Kunci tambahan</h2>
+    <ul>
+      <li><h3>Kata sandi per album</h3><p>Beri album kata sandinya sendiri. Album tetap terkunci meskipun bagian lain brankas sedang terbuka.</p></li>
+      <li><h3>Kunci berbasis lokasi</h3><p>Izinkan brankas dibuka hanya di tempat yang Anda percayai, seperti rumah Anda. Di tempat lain, brankas tetap terkunci meskipun kode sandinya benar.</p></li>
+    </ul>
+  </section>
+  <section class="chapter" aria-labelledby="if-someone-tries">
+    <h2 id="if-someone-tries">Jika ada yang mencoba masuk</h2>
+    <ul>
+      <li><h3>Brankas umpan</h3><p>Atur kode sandi kedua yang membuka brankas terpisah berisi foto-foto yang tidak berbahaya. Jika Anda dipaksa membuka Privaro, masukkan kode itu, dan brankas asli Anda tetap tersembunyi.</p></li>
+      <li><h3>Penghapusan darurat</h3><p>Atur kode sandi yang menghapus seluruh brankas, termasuk brankas umpan, saat kode itu dimasukkan. Fitur ini untuk keadaan terburuk, dan tidak dapat dibatalkan.</p></li>
+      <li><h3>Penangkapan pembobolan</h3><p>Jika seseorang memasukkan kode sandi yang salah, Privaro dapat diam-diam mengambil foto dengan kamera depan dan mencatat upaya itu beserta waktunya, sehingga Anda tahu jika ada yang mencoba masuk ke brankas Anda.</p></li>
+    </ul>
+  </section>
+  <section class="chapter" aria-labelledby="out-of-sight">
+    <h2 id="out-of-sight">Jauh dari pandangan</h2>
+    <ul>
+      <li><h3>Perlindungan dari tangkapan layar dan rekaman</h3><p>Mencegah brankas Anda terekam lewat tangkapan layar, rekaman layar, atau AirPlay selama aplikasi terbuka, sehingga tidak ada yang bocor ke rol kamera atau layar yang dicerminkan secara tidak sengaja.</p></li>
+      <li><h3>Ikon aplikasi samaran</h3><p>Sembunyikan Privaro di balik ikon dan nama sehari-hari, seperti Kalkulator atau Catatan, agar tidak mencolok di Layar Utama Anda. Varian ikon berwarna gratis; samarannya termasuk Pro.</p></li>
+    </ul>
+  </section>
+  <section class="chapter" aria-labelledby="moving-files">
+    <h2 id="moving-files">Memindahkan file</h2>
+    <ul>
+      <li><h3>Cadangan iCloud terenkripsi dan ekspor</h3><p>Cadangkan brankas ke iCloud Anda sendiri, atau ekspor sebagai satu file terenkripsi. Keduanya dienkripsi di perangkat Anda sebelum keluar, sehingga tidak ada yang (termasuk kami) dapat membacanya. Memulihkan cadangan selalu gratis, bahkan tanpa Pro.</p></li>
+      <li><h3>Transfer Wi-Fi</h3><p>Kirim file ke brankas dari peramban web komputer mana pun melalui jaringan lokal Anda. Tanpa kabel, tanpa cloud, dan tanpa aplikasi tambahan yang perlu diinstal di komputer.</p></li>
+      <li><h3>Berbagi aman</h3><p>Kirim foto atau video ke pengguna Privaro lain sebagai file terenkripsi yang hanya bisa dibuka dengan frasa sandi pilihan Anda. Tidak ada yang melewati kami di tengah jalan.</p></li>
+    </ul>
+  </section>
 
-<a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="Unduh Privaro di App Store">
-  <picture>
-    <source srcset="/appstore-badge-white.svg" />
-    <img src="/appstore-badge.svg" alt="Unduh Privaro di App Store" />
-  </picture>
-</a>
+  <!-- The price once more, set large, and where to pay it. The page ends on
+       a line, as the homepage does. -->
+  <section class="pro-price">
+    <div class="pro-figure"><p><span class="price" data-price="pro">Rp 99.000</span></p></div>
+    <div class="pro-pay">
+      <p>Sekali bayar, tanpa perpanjangan.</p>
+      <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="Unduh Privaro di App Store"><img src="/appstore-badge-white.svg" width="150" height="50" alt="Unduh Privaro di App Store" /></a>
+    </div>
+  </section>
 
 </main>
 

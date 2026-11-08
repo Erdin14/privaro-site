@@ -41,33 +41,69 @@
 
 {{HEADER}}
 
-<main class="page wrap">
+<main class="page wrap pro">
 
-<h1>{{pro_h1}}</h1>
-<p class="intro">{{pro_intro}}</p>
-<p class="note"><strong>{{pro_callout_strong}}</strong> {{pro_callout_rest}}</p>
+  <!-- What Pro is, on one side; what it costs, on the other, its last line
+       on the headline's baseline. Under both, behind a hairline, where to
+       get it, and what stays the same without it. -->
+  <section class="pro-hero" aria-labelledby="pro-title">
+    <h1 id="pro-title">{{pro_h1}}</h1>
+    <p class="intro">{{pro_intro}}</p>
+    <div class="buy">
+      <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="{{badge_label}}"><img src="/appstore-badge-white.svg" width="150" height="50" alt="{{badge_label}}" /></a>
+      <p class="note"><strong>{{pro_callout_strong}}</strong> {{pro_callout_rest}}</p>
+    </div>
+  </section>
 
-<ul class="features ledger-list">
-  <li><h2>{{prof2_t}}</h2><p>{{prof2_d}}</p></li>
-  <li><h2>{{prof3_t}}</h2><p>{{prof3_d}}</p></li>
-  <li><h2>{{prof7_t}}</h2><p>{{prof7_d}}</p></li>
-  <li><h2>{{prof11_t}}</h2><p>{{prof11_d}}</p></li>
-  <li><h2>{{prof8_t}}</h2><p>{{prof8_d}}</p></li>
-  <li><h2>{{prof9_t}}</h2><p>{{prof9_d}}</p></li>
-  <li><h2>{{prof5_t}}</h2><p>{{prof5_d}}</p></li>
-  <li><h2>{{prof4_t}}</h2><p>{{prof4_d}}</p></li>
-  <li><h2>{{prof12_t}}</h2><p>{{prof12_d}}</p></li>
-  <li><h2>{{prof6_t}}</h2><p>{{prof6_d}}</p></li>
-  <li><h2>{{prof10_t}}</h2><p>{{prof10_d}}</p></li>
-  <li><h2>{{prof13_t}}</h2><p>{{prof13_d}}</p></li>
-</ul>
+  <!-- The twelve features, in the five things they're for. Each chapter is a
+       line across the page with its name under it on the left. -->
+  <section class="chapter" aria-labelledby="more-room">
+    <h2 id="more-room">{{pro_g1}}</h2>
+    <ul>
+      <li><h3>{{prof2_t}}</h3><p>{{prof2_d}}</p></li>
+      <li><h3>{{prof3_t}}</h3><p>{{prof3_d}}</p></li>
+    </ul>
+  </section>
+  <section class="chapter" aria-labelledby="extra-locks">
+    <h2 id="extra-locks">{{pro_g2}}</h2>
+    <ul>
+      <li><h3>{{prof7_t}}</h3><p>{{prof7_d}}</p></li>
+      <li><h3>{{prof11_t}}</h3><p>{{prof11_d}}</p></li>
+    </ul>
+  </section>
+  <section class="chapter" aria-labelledby="if-someone-tries">
+    <h2 id="if-someone-tries">{{pro_g3}}</h2>
+    <ul>
+      <li><h3>{{prof8_t}}</h3><p>{{prof8_d}}</p></li>
+      <li><h3>{{prof9_t}}</h3><p>{{prof9_d}}</p></li>
+      <li><h3>{{prof5_t}}</h3><p>{{prof5_d}}</p></li>
+    </ul>
+  </section>
+  <section class="chapter" aria-labelledby="out-of-sight">
+    <h2 id="out-of-sight">{{pro_g4}}</h2>
+    <ul>
+      <li><h3>{{prof4_t}}</h3><p>{{prof4_d}}</p></li>
+      <li><h3>{{prof12_t}}</h3><p>{{prof12_d}}</p></li>
+    </ul>
+  </section>
+  <section class="chapter" aria-labelledby="moving-files">
+    <h2 id="moving-files">{{pro_g5}}</h2>
+    <ul>
+      <li><h3>{{prof6_t}}</h3><p>{{prof6_d}}</p></li>
+      <li><h3>{{prof10_t}}</h3><p>{{prof10_d}}</p></li>
+      <li><h3>{{prof13_t}}</h3><p>{{prof13_d}}</p></li>
+    </ul>
+  </section>
 
-<a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="{{badge_label}}">
-  <picture>
-    <source srcset="/appstore-badge-white.svg" />
-    <img src="/appstore-badge.svg" alt="{{badge_label}}" />
-  </picture>
-</a>
+  <!-- The price once more, set large, and where to pay it. The page ends on
+       a line, as the homepage does. -->
+  <section class="pro-price">
+    <div class="pro-figure"><p>{{PRICE}}</p></div>
+    <div class="pro-pay">
+      <p>{{pro_once}}</p>
+      <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="{{badge_label}}"><img src="/appstore-badge-white.svg" width="150" height="50" alt="{{badge_label}}" /></a>
+    </div>
+  </section>
 
 </main>
 

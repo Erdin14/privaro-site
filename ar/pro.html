@@ -38,7 +38,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=6a3d34af46" />
+<link rel="stylesheet" href="/styles.css?v=02ecd410af" />
 <link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
 <script>
 // Register before first reveal, including restored history entries.
@@ -82,33 +82,69 @@
   </div>
 </header>
 
-<main class="page wrap">
+<main class="page wrap pro">
 
-<h1>كل ما يفتحه Pro.</h1>
-<p class="intro">Pro عملية شراء لمرة واحدة بقيمة <span class="price" data-price="pro">‏89.99 ر.س.‏</span>. يرفع قيود النسخة المجانية ويضيف كل ما يلي على كل جهاز مسجّل الدخول إلى حساب Apple الخاص بك. لا شيء يتجدد، ولا شيء لإلغائه.</p>
-<p class="note"><strong>مجانيًا كان أو Pro، الأساسيات لا تتغير:</strong> كل شيء مشفّر على جهازك بتشفير AES-256، ولا يوجد حساب، ولا أحد غيرك يستطيع فتح خزنتك.</p>
+  <!-- What Pro is, on one side; what it costs, on the other, its last line
+       on the headline's baseline. Under both, behind a hairline, where to
+       get it, and what stays the same without it. -->
+  <section class="pro-hero" aria-labelledby="pro-title">
+    <h1 id="pro-title">كل ما يفتحه Pro.</h1>
+    <p class="intro">Pro عملية شراء لمرة واحدة بقيمة <span class="price" data-price="pro">‏89.99 ر.س.‏</span>. يرفع قيود النسخة المجانية ويضيف كل ما يلي على كل جهاز مسجّل الدخول إلى حساب Apple الخاص بك. لا شيء يتجدد، ولا شيء لإلغائه.</p>
+    <div class="buy">
+      <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="نزّل Privaro من App Store"><img src="/appstore-badge-white.svg" width="150" height="50" alt="نزّل Privaro من App Store" /></a>
+      <p class="note"><strong>مجانيًا كان أو Pro، الأساسيات لا تتغير:</strong> كل شيء مشفّر على جهازك بتشفير AES-256، ولا يوجد حساب، ولا أحد غيرك يستطيع فتح خزنتك.</p>
+    </div>
+  </section>
 
-<ul class="features ledger-list">
-  <li><h2>تخزين بلا حدود</h2><p>تتّسع الخزنة المجانية لما يصل إلى 2.5 غيغابايت. لا حدّ في Pro: القيد الوحيد هو المساحة الفارغة على iPhone.</p></li>
-  <li><h2>ألبومات ومجلدات بلا حدود</h2><p>تتضمن النسخة المجانية حتى 5 ألبومات. مع Pro يمكنك إنشاء أي عدد تريده من الألبومات ووضع مجلدات داخل مجلدات.</p></li>
-  <li><h2>كلمة سر لكل ألبوم</h2><p>امنح الألبوم كلمة سر خاصة به. يبقى مقفلًا حتى عندما يكون باقي الخزنة مفتوحًا.</p></li>
-  <li><h2>القفل حسب الموقع</h2><p>اسمح بفتح الخزنة فقط في الأماكن التي تثق بها، مثل منزلك. في أي مكان آخر، تبقى مقفلة حتى مع رمز الدخول الصحيح.</p></li>
-  <li><h2>الخزنة الوهمية</h2><p>عيّن رمز دخول ثانيًا يفتح خزنة منفصلة فيها صور غير مهمة. إذا أُجبرت يومًا على فتح Privaro، فأدخل هذا الرمز، وتبقى خزنتك الحقيقية بعيدة عن الأنظار.</p></li>
-  <li><h2>مسح الطوارئ</h2><p>عيّن رمز دخول يمسح الخزنة كلها، بما فيها الخزنة الوهمية، لحظة إدخاله. إنه مخصص لأسوأ الحالات، ولا يمكن التراجع عنه.</p></li>
-  <li><h2>تصوير الاقتحام</h2><p>إذا أدخل أحدهم رمز دخول خاطئًا، يمكن لـ Privaro التقاط صورة بصمت بالكاميرا الأمامية وتسجيل المحاولة مع وقتها، فتعرف إن كان أحد قد حاول دخول خزنتك.</p></li>
-  <li><h2>الحماية من لقطات الشاشة والتسجيل</h2><p>يمنع التقاط خزنتك بلقطات الشاشة أو تسجيل الشاشة أو AirPlay ما دام التطبيق مفتوحًا، فلا يتسرّب شيء إلى ألبوم الكاميرا أو إلى شاشة منعكسة عن طريق الخطأ.</p></li>
-  <li><h2>أيقونة تطبيق متخفية</h2><p>أخفِ Privaro خلف أيقونة واسم مألوفين، مثل الآلة الحاسبة أو الملاحظات، كي لا يلفت الانتباه على شاشتك الرئيسية. أشكال الأيقونة الملوّنة مجانية؛ أما التخفي فمن ميزات Pro.</p></li>
-  <li><h2>نسخ احتياطي مشفّر على iCloud وتصدير</h2><p>انسخ خزنتك احتياطيًا إلى iCloud الخاص بك، أو صدّرها كملف مشفّر واحد. يُشفَّر كلاهما على جهازك قبل مغادرته، فلا يستطيع أحد (بما في ذلك نحن) قراءتهما. استعادة النسخة الاحتياطية مجانية دائمًا، حتى بدون Pro.</p></li>
-  <li><h2>النقل عبر Wi-Fi</h2><p>أرسل الملفات إلى الخزنة من متصفح أي كمبيوتر عبر شبكتك المحلية. بلا كابل، وبلا سحابة، وبلا تطبيق إضافي لتثبيته على الكمبيوتر.</p></li>
-  <li><h2>المشاركة الآمنة</h2><p>أرسل صورًا أو فيديوهات إلى مستخدم آخر لـ Privaro كملف مشفّر لا يُفتح إلا بعبارة مرور تختارها أنت. لا يمر شيء عبرنا في الطريق.</p></li>
-</ul>
+  <!-- The twelve features, in the five things they're for. Each chapter is a
+       line across the page with its name under it on the left. -->
+  <section class="chapter" aria-labelledby="more-room">
+    <h2 id="more-room">مساحة أكبر</h2>
+    <ul>
+      <li><h3>تخزين بلا حدود</h3><p>تتّسع الخزنة المجانية لما يصل إلى 2.5 غيغابايت. لا حدّ في Pro: القيد الوحيد هو المساحة الفارغة على iPhone.</p></li>
+      <li><h3>ألبومات ومجلدات بلا حدود</h3><p>تتضمن النسخة المجانية حتى 5 ألبومات. مع Pro يمكنك إنشاء أي عدد تريده من الألبومات ووضع مجلدات داخل مجلدات.</p></li>
+    </ul>
+  </section>
+  <section class="chapter" aria-labelledby="extra-locks">
+    <h2 id="extra-locks">أقفال إضافية</h2>
+    <ul>
+      <li><h3>كلمة سر لكل ألبوم</h3><p>امنح الألبوم كلمة سر خاصة به. يبقى مقفلًا حتى عندما يكون باقي الخزنة مفتوحًا.</p></li>
+      <li><h3>القفل حسب الموقع</h3><p>اسمح بفتح الخزنة فقط في الأماكن التي تثق بها، مثل منزلك. في أي مكان آخر، تبقى مقفلة حتى مع رمز الدخول الصحيح.</p></li>
+    </ul>
+  </section>
+  <section class="chapter" aria-labelledby="if-someone-tries">
+    <h2 id="if-someone-tries">إذا حاول أحد الدخول</h2>
+    <ul>
+      <li><h3>الخزنة الوهمية</h3><p>عيّن رمز دخول ثانيًا يفتح خزنة منفصلة فيها صور غير مهمة. إذا أُجبرت يومًا على فتح Privaro، فأدخل هذا الرمز، وتبقى خزنتك الحقيقية بعيدة عن الأنظار.</p></li>
+      <li><h3>مسح الطوارئ</h3><p>عيّن رمز دخول يمسح الخزنة كلها، بما فيها الخزنة الوهمية، لحظة إدخاله. إنه مخصص لأسوأ الحالات، ولا يمكن التراجع عنه.</p></li>
+      <li><h3>تصوير الاقتحام</h3><p>إذا أدخل أحدهم رمز دخول خاطئًا، يمكن لـ Privaro التقاط صورة بصمت بالكاميرا الأمامية وتسجيل المحاولة مع وقتها، فتعرف إن كان أحد قد حاول دخول خزنتك.</p></li>
+    </ul>
+  </section>
+  <section class="chapter" aria-labelledby="out-of-sight">
+    <h2 id="out-of-sight">بعيدًا عن الأنظار</h2>
+    <ul>
+      <li><h3>الحماية من لقطات الشاشة والتسجيل</h3><p>يمنع التقاط خزنتك بلقطات الشاشة أو تسجيل الشاشة أو AirPlay ما دام التطبيق مفتوحًا، فلا يتسرّب شيء إلى ألبوم الكاميرا أو إلى شاشة منعكسة عن طريق الخطأ.</p></li>
+      <li><h3>أيقونة تطبيق متخفية</h3><p>أخفِ Privaro خلف أيقونة واسم مألوفين، مثل الآلة الحاسبة أو الملاحظات، كي لا يلفت الانتباه على شاشتك الرئيسية. أشكال الأيقونة الملوّنة مجانية؛ أما التخفي فمن ميزات Pro.</p></li>
+    </ul>
+  </section>
+  <section class="chapter" aria-labelledby="moving-files">
+    <h2 id="moving-files">نقل الملفات</h2>
+    <ul>
+      <li><h3>نسخ احتياطي مشفّر على iCloud وتصدير</h3><p>انسخ خزنتك احتياطيًا إلى iCloud الخاص بك، أو صدّرها كملف مشفّر واحد. يُشفَّر كلاهما على جهازك قبل مغادرته، فلا يستطيع أحد (بما في ذلك نحن) قراءتهما. استعادة النسخة الاحتياطية مجانية دائمًا، حتى بدون Pro.</p></li>
+      <li><h3>النقل عبر Wi-Fi</h3><p>أرسل الملفات إلى الخزنة من متصفح أي كمبيوتر عبر شبكتك المحلية. بلا كابل، وبلا سحابة، وبلا تطبيق إضافي لتثبيته على الكمبيوتر.</p></li>
+      <li><h3>المشاركة الآمنة</h3><p>أرسل صورًا أو فيديوهات إلى مستخدم آخر لـ Privaro كملف مشفّر لا يُفتح إلا بعبارة مرور تختارها أنت. لا يمر شيء عبرنا في الطريق.</p></li>
+    </ul>
+  </section>
 
-<a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="نزّل Privaro من App Store">
-  <picture>
-    <source srcset="/appstore-badge-white.svg" />
-    <img src="/appstore-badge.svg" alt="نزّل Privaro من App Store" />
-  </picture>
-</a>
+  <!-- The price once more, set large, and where to pay it. The page ends on
+       a line, as the homepage does. -->
+  <section class="pro-price">
+    <div class="pro-figure"><p><span class="price" data-price="pro">‏89.99 ر.س.‏</span></p></div>
+    <div class="pro-pay">
+      <p>دفعة واحدة، بلا تجديد.</p>
+      <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="نزّل Privaro من App Store"><img src="/appstore-badge-white.svg" width="150" height="50" alt="نزّل Privaro من App Store" /></a>
+    </div>
+  </section>
 
 </main>
 

@@ -38,7 +38,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=6a3d34af46" />
+<link rel="stylesheet" href="/styles.css?v=02ecd410af" />
 <link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
 <script>
 // Register before first reveal, including restored history entries.
@@ -82,33 +82,69 @@
   </div>
 </header>
 
-<main class="page wrap">
+<main class="page wrap pro">
 
-<h1>Alles, was Pro freischaltet.</h1>
-<p class="intro">Pro ist ein Einmalkauf für <span class="price" data-price="pro">9,99 €</span>. Es hebt die Grenzen der kostenlosen Version auf und bringt alles, was unten steht, auf jedes Gerät mit deinem Apple Account. Nichts verlängert sich, nichts muss gekündigt werden.</p>
-<p class="note"><strong>Ob kostenlos oder Pro, die Grundlagen ändern sich nie:</strong> Alles wird auf deinem Gerät mit AES-256 verschlüsselt, es gibt kein Konto, und nur du kannst deinen Tresor öffnen.</p>
+  <!-- What Pro is, on one side; what it costs, on the other, its last line
+       on the headline's baseline. Under both, behind a hairline, where to
+       get it, and what stays the same without it. -->
+  <section class="pro-hero" aria-labelledby="pro-title">
+    <h1 id="pro-title">Alles, was Pro freischaltet.</h1>
+    <p class="intro">Pro ist ein Einmalkauf für <span class="price" data-price="pro">9,99 €</span>. Es hebt die Grenzen der kostenlosen Version auf und bringt alles, was unten steht, auf jedes Gerät mit deinem Apple Account. Nichts verlängert sich, nichts muss gekündigt werden.</p>
+    <div class="buy">
+      <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="Privaro im App Store laden"><img src="/appstore-badge-white.svg" width="150" height="50" alt="Privaro im App Store laden" /></a>
+      <p class="note"><strong>Ob kostenlos oder Pro, die Grundlagen ändern sich nie:</strong> Alles wird auf deinem Gerät mit AES-256 verschlüsselt, es gibt kein Konto, und nur du kannst deinen Tresor öffnen.</p>
+    </div>
+  </section>
 
-<ul class="features ledger-list">
-  <li><h2>Unbegrenzter Speicher</h2><p>Die kostenlose Version fasst bis zu 2,5 GB. Pro hat keine Obergrenze. Die einzige Grenze ist der freie Speicher auf deinem iPhone.</p></li>
-  <li><h2>Unbegrenzte Alben und Ordner</h2><p>Kostenlos sind bis zu 5 Alben enthalten. Mit Pro legst du so viele an, wie du willst, und kannst Ordner in Ordner packen.</p></li>
-  <li><h2>Passwörter pro Album</h2><p>Gib einem Album ein eigenes Passwort. Es bleibt gesperrt, auch wenn der restliche Tresor offen ist.</p></li>
-  <li><h2>Standortbasierte Sperre</h2><p>Erlaube das Entsperren des Tresors nur an Orten, denen du vertraust, etwa zu Hause. Überall sonst bleibt er gesperrt, selbst mit dem richtigen Code.</p></li>
-  <li><h2>Schein-Tresor</h2><p>Lege einen zweiten Code fest, der einen separaten Tresor mit harmlosen Fotos öffnet. Wirst du je gedrängt, Privaro zu entsperren, gibst du diesen ein, und dein echter Tresor bleibt unsichtbar.</p></li>
-  <li><h2>Notlöschung</h2><p>Lege einen Code fest, der den ganzen Tresor samt Köder löscht, sobald er eingegeben wird. Er ist für den schlimmsten Fall gedacht und lässt sich nicht rückgängig machen.</p></li>
-  <li><h2>Einbruchsaufnahme</h2><p>Gibt jemand einen falschen Code ein, kann Privaro lautlos ein Foto mit der Frontkamera aufnehmen und den Versuch mit Zeitstempel protokollieren, damit du weißt, ob jemand versucht hat, in deinen Tresor zu gelangen.</p></li>
-  <li><h2>Schutz vor Screenshots und Aufnahmen</h2><p>Verhindert, dass dein Tresor bei geöffneter App per Screenshot, Bildschirmaufnahme oder AirPlay erfasst wird, damit nichts versehentlich in deine Aufnahmen oder auf einen gespiegelten Bildschirm gelangt.</p></li>
-  <li><h2>Getarntes App-Symbol</h2><p>Verstecke Privaro hinter einem alltäglichen Symbol und Namen wie Rechner oder Notizen, damit es auf dem Home-Bildschirm nicht auffällt. Farbvarianten des Symbols sind kostenlos; die Tarnungen sind Pro.</p></li>
-  <li><h2>Verschlüsseltes iCloud-Backup und Export</h2><p>Sichere deinen Tresor in deinem eigenen iCloud oder exportiere ihn als einzelne verschlüsselte Datei. Beides wird auf deinem Gerät verschlüsselt, bevor es es verlässt, sodass niemand (auch wir nicht) es lesen kann. Das Wiederherstellen eines Backups ist immer kostenlos, auch ohne Pro.</p></li>
-  <li><h2>WLAN-Übertragung</h2><p>Sende Dateien über dein lokales Netzwerk vom Webbrowser eines beliebigen Computers in den Tresor. Kein Kabel, keine Cloud und keine zusätzliche App auf dem Computer.</p></li>
-  <li><h2>Sicheres Teilen</h2><p>Schicke Fotos oder Videos an andere Privaro-Nutzer als verschlüsselte Datei, die sich nur mit einer von dir gewählten Passphrase öffnen lässt. Nichts läuft dabei über uns.</p></li>
-</ul>
+  <!-- The twelve features, in the five things they're for. Each chapter is a
+       line across the page with its name under it on the left. -->
+  <section class="chapter" aria-labelledby="more-room">
+    <h2 id="more-room">Mehr Platz</h2>
+    <ul>
+      <li><h3>Unbegrenzter Speicher</h3><p>Die kostenlose Version fasst bis zu 2,5 GB. Pro hat keine Obergrenze. Die einzige Grenze ist der freie Speicher auf deinem iPhone.</p></li>
+      <li><h3>Unbegrenzte Alben und Ordner</h3><p>Kostenlos sind bis zu 5 Alben enthalten. Mit Pro legst du so viele an, wie du willst, und kannst Ordner in Ordner packen.</p></li>
+    </ul>
+  </section>
+  <section class="chapter" aria-labelledby="extra-locks">
+    <h2 id="extra-locks">Zusätzliche Schlösser</h2>
+    <ul>
+      <li><h3>Passwörter pro Album</h3><p>Gib einem Album ein eigenes Passwort. Es bleibt gesperrt, auch wenn der restliche Tresor offen ist.</p></li>
+      <li><h3>Standortbasierte Sperre</h3><p>Erlaube das Entsperren des Tresors nur an Orten, denen du vertraust, etwa zu Hause. Überall sonst bleibt er gesperrt, selbst mit dem richtigen Code.</p></li>
+    </ul>
+  </section>
+  <section class="chapter" aria-labelledby="if-someone-tries">
+    <h2 id="if-someone-tries">Wenn jemand hineinwill</h2>
+    <ul>
+      <li><h3>Schein-Tresor</h3><p>Lege einen zweiten Code fest, der einen separaten Tresor mit harmlosen Fotos öffnet. Wirst du je gedrängt, Privaro zu entsperren, gibst du diesen ein, und dein echter Tresor bleibt unsichtbar.</p></li>
+      <li><h3>Notlöschung</h3><p>Lege einen Code fest, der den ganzen Tresor samt Köder löscht, sobald er eingegeben wird. Er ist für den schlimmsten Fall gedacht und lässt sich nicht rückgängig machen.</p></li>
+      <li><h3>Einbruchsaufnahme</h3><p>Gibt jemand einen falschen Code ein, kann Privaro lautlos ein Foto mit der Frontkamera aufnehmen und den Versuch mit Zeitstempel protokollieren, damit du weißt, ob jemand versucht hat, in deinen Tresor zu gelangen.</p></li>
+    </ul>
+  </section>
+  <section class="chapter" aria-labelledby="out-of-sight">
+    <h2 id="out-of-sight">Außer Sichtweite</h2>
+    <ul>
+      <li><h3>Schutz vor Screenshots und Aufnahmen</h3><p>Verhindert, dass dein Tresor bei geöffneter App per Screenshot, Bildschirmaufnahme oder AirPlay erfasst wird, damit nichts versehentlich in deine Aufnahmen oder auf einen gespiegelten Bildschirm gelangt.</p></li>
+      <li><h3>Getarntes App-Symbol</h3><p>Verstecke Privaro hinter einem alltäglichen Symbol und Namen wie Rechner oder Notizen, damit es auf dem Home-Bildschirm nicht auffällt. Farbvarianten des Symbols sind kostenlos; die Tarnungen sind Pro.</p></li>
+    </ul>
+  </section>
+  <section class="chapter" aria-labelledby="moving-files">
+    <h2 id="moving-files">Dateien übertragen</h2>
+    <ul>
+      <li><h3>Verschlüsseltes iCloud-Backup und Export</h3><p>Sichere deinen Tresor in deinem eigenen iCloud oder exportiere ihn als einzelne verschlüsselte Datei. Beides wird auf deinem Gerät verschlüsselt, bevor es es verlässt, sodass niemand (auch wir nicht) es lesen kann. Das Wiederherstellen eines Backups ist immer kostenlos, auch ohne Pro.</p></li>
+      <li><h3>WLAN-Übertragung</h3><p>Sende Dateien über dein lokales Netzwerk vom Webbrowser eines beliebigen Computers in den Tresor. Kein Kabel, keine Cloud und keine zusätzliche App auf dem Computer.</p></li>
+      <li><h3>Sicheres Teilen</h3><p>Schicke Fotos oder Videos an andere Privaro-Nutzer als verschlüsselte Datei, die sich nur mit einer von dir gewählten Passphrase öffnen lässt. Nichts läuft dabei über uns.</p></li>
+    </ul>
+  </section>
 
-<a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="Privaro im App Store laden">
-  <picture>
-    <source srcset="/appstore-badge-white.svg" />
-    <img src="/appstore-badge.svg" alt="Privaro im App Store laden" />
-  </picture>
-</a>
+  <!-- The price once more, set large, and where to pay it. The page ends on
+       a line, as the homepage does. -->
+  <section class="pro-price">
+    <div class="pro-figure"><p><span class="price" data-price="pro">9,99 €</span></p></div>
+    <div class="pro-pay">
+      <p>Einmal bezahlen, kein Abo.</p>
+      <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="Privaro im App Store laden"><img src="/appstore-badge-white.svg" width="150" height="50" alt="Privaro im App Store laden" /></a>
+    </div>
+  </section>
 
 </main>
 

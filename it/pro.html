@@ -38,7 +38,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=6a3d34af46" />
+<link rel="stylesheet" href="/styles.css?v=02ecd410af" />
 <link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
 <script>
 // Register before first reveal, including restored history entries.
@@ -82,33 +82,69 @@
   </div>
 </header>
 
-<main class="page wrap">
+<main class="page wrap pro">
 
-<h1>Tutto ciò che Pro sblocca.</h1>
-<p class="intro">Pro è un acquisto unico da <span class="price" data-price="pro">9,99 €</span>. Elimina i limiti della versione gratuita e aggiunge tutto quello che trovi qui sotto, su ogni dispositivo collegato al tuo Apple Account. Nulla si rinnova e non c’è niente da disdire.</p>
-<p class="note"><strong>Gratis o Pro, le basi non cambiano mai:</strong> tutto è cifrato sul tuo dispositivo con AES-256, non c’è un account e solo tu puoi aprire la tua cassaforte.</p>
+  <!-- What Pro is, on one side; what it costs, on the other, its last line
+       on the headline's baseline. Under both, behind a hairline, where to
+       get it, and what stays the same without it. -->
+  <section class="pro-hero" aria-labelledby="pro-title">
+    <h1 id="pro-title">Tutto ciò che Pro sblocca.</h1>
+    <p class="intro">Pro è un acquisto unico da <span class="price" data-price="pro">9,99 €</span>. Elimina i limiti della versione gratuita e aggiunge tutto quello che trovi qui sotto, su ogni dispositivo collegato al tuo Apple Account. Nulla si rinnova e non c’è niente da disdire.</p>
+    <div class="buy">
+      <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="Scarica Privaro dall’App Store"><img src="/appstore-badge-white.svg" width="150" height="50" alt="Scarica Privaro dall’App Store" /></a>
+      <p class="note"><strong>Gratis o Pro, le basi non cambiano mai:</strong> tutto è cifrato sul tuo dispositivo con AES-256, non c’è un account e solo tu puoi aprire la tua cassaforte.</p>
+    </div>
+  </section>
 
-<ul class="features ledger-list">
-  <li><h2>Spazio illimitato</h2><p>La versione gratuita contiene fino a 2,5 GB. Pro non ha limiti: conta solo lo spazio libero sul tuo iPhone.</p></li>
-  <li><h2>Album e cartelle illimitati</h2><p>La versione gratuita include fino a 5 album. Con Pro puoi crearne quanti ne vuoi e mettere cartelle dentro altre cartelle.</p></li>
-  <li><h2>Password per album</h2><p>Dai a un album una password tutta sua. Resta bloccato anche quando il resto della cassaforte è aperto.</p></li>
-  <li><h2>Blocco in base al luogo</h2><p>Consenti lo sblocco della cassaforte solo in luoghi fidati, come casa tua. Altrove resta bloccata anche con il codice giusto.</p></li>
-  <li><h2>Cassaforte esca</h2><p>Imposta un secondo codice che apre una cassaforte separata con foto innocue. Se qualcuno ti costringe a sbloccare Privaro, inserisci quello: la tua cassaforte vera resta invisibile.</p></li>
-  <li><h2>Cancellazione di emergenza</h2><p>Imposta un codice che cancella l’intera cassaforte, esca compresa, appena viene digitato. È pensato per il caso peggiore ed è irreversibile.</p></li>
-  <li><h2>Cattura delle intrusioni</h2><p>Se qualcuno inserisce un codice errato, Privaro può scattare in silenzio una foto con la fotocamera frontale e registrare il tentativo con data e ora, così sai se qualcuno ha provato a entrare nella tua cassaforte.</p></li>
-  <li><h2>Protezione da screenshot e registrazioni</h2><p>Impedisce che la cassaforte venga catturata tramite screenshot, registrazione dello schermo o AirPlay mentre l'app è aperta, così nulla finisce per sbaglio nel rullino o su uno schermo specchiato.</p></li>
-  <li><h2>Icona dell'app camuffata</h2><p>Nascondi Privaro dietro un'icona e un nome di tutti i giorni, come Calcolatrice o Note, così non si nota nella schermata Home. Le varianti di colore dell'icona sono gratuite; i camuffamenti sono Pro.</p></li>
-  <li><h2>Backup iCloud cifrato ed esportazione</h2><p>Esegui il backup della cassaforte sul tuo iCloud o esportala come un unico file cifrato. Entrambi vengono cifrati sul tuo dispositivo prima di uscire, così nessuno (noi compresi) può leggerli. Ripristinare un backup è sempre gratuito, anche senza Pro.</p></li>
-  <li><h2>Trasferimento Wi-Fi</h2><p>Invia file nella cassaforte dal browser di qualsiasi computer tramite la tua rete locale. Niente cavi, niente cloud e nessuna app aggiuntiva da installare sul computer.</p></li>
-  <li><h2>Condivisione sicura</h2><p>Invia foto o video a un altro utente di Privaro come file cifrato, che si apre solo con una passphrase scelta da te. Nulla passa da noi.</p></li>
-</ul>
+  <!-- The twelve features, in the five things they're for. Each chapter is a
+       line across the page with its name under it on the left. -->
+  <section class="chapter" aria-labelledby="more-room">
+    <h2 id="more-room">Più spazio</h2>
+    <ul>
+      <li><h3>Spazio illimitato</h3><p>La versione gratuita contiene fino a 2,5 GB. Pro non ha limiti: conta solo lo spazio libero sul tuo iPhone.</p></li>
+      <li><h3>Album e cartelle illimitati</h3><p>La versione gratuita include fino a 5 album. Con Pro puoi crearne quanti ne vuoi e mettere cartelle dentro altre cartelle.</p></li>
+    </ul>
+  </section>
+  <section class="chapter" aria-labelledby="extra-locks">
+    <h2 id="extra-locks">Serrature in più</h2>
+    <ul>
+      <li><h3>Password per album</h3><p>Dai a un album una password tutta sua. Resta bloccato anche quando il resto della cassaforte è aperto.</p></li>
+      <li><h3>Blocco in base al luogo</h3><p>Consenti lo sblocco della cassaforte solo in luoghi fidati, come casa tua. Altrove resta bloccata anche con il codice giusto.</p></li>
+    </ul>
+  </section>
+  <section class="chapter" aria-labelledby="if-someone-tries">
+    <h2 id="if-someone-tries">Se qualcuno prova a entrare</h2>
+    <ul>
+      <li><h3>Cassaforte esca</h3><p>Imposta un secondo codice che apre una cassaforte separata con foto innocue. Se qualcuno ti costringe a sbloccare Privaro, inserisci quello: la tua cassaforte vera resta invisibile.</p></li>
+      <li><h3>Cancellazione di emergenza</h3><p>Imposta un codice che cancella l’intera cassaforte, esca compresa, appena viene digitato. È pensato per il caso peggiore ed è irreversibile.</p></li>
+      <li><h3>Cattura delle intrusioni</h3><p>Se qualcuno inserisce un codice errato, Privaro può scattare in silenzio una foto con la fotocamera frontale e registrare il tentativo con data e ora, così sai se qualcuno ha provato a entrare nella tua cassaforte.</p></li>
+    </ul>
+  </section>
+  <section class="chapter" aria-labelledby="out-of-sight">
+    <h2 id="out-of-sight">Lontano da occhi indiscreti</h2>
+    <ul>
+      <li><h3>Protezione da screenshot e registrazioni</h3><p>Impedisce che la cassaforte venga catturata tramite screenshot, registrazione dello schermo o AirPlay mentre l'app è aperta, così nulla finisce per sbaglio nel rullino o su uno schermo specchiato.</p></li>
+      <li><h3>Icona dell'app camuffata</h3><p>Nascondi Privaro dietro un'icona e un nome di tutti i giorni, come Calcolatrice o Note, così non si nota nella schermata Home. Le varianti di colore dell'icona sono gratuite; i camuffamenti sono Pro.</p></li>
+    </ul>
+  </section>
+  <section class="chapter" aria-labelledby="moving-files">
+    <h2 id="moving-files">Spostare i file</h2>
+    <ul>
+      <li><h3>Backup iCloud cifrato ed esportazione</h3><p>Esegui il backup della cassaforte sul tuo iCloud o esportala come un unico file cifrato. Entrambi vengono cifrati sul tuo dispositivo prima di uscire, così nessuno (noi compresi) può leggerli. Ripristinare un backup è sempre gratuito, anche senza Pro.</p></li>
+      <li><h3>Trasferimento Wi-Fi</h3><p>Invia file nella cassaforte dal browser di qualsiasi computer tramite la tua rete locale. Niente cavi, niente cloud e nessuna app aggiuntiva da installare sul computer.</p></li>
+      <li><h3>Condivisione sicura</h3><p>Invia foto o video a un altro utente di Privaro come file cifrato, che si apre solo con una passphrase scelta da te. Nulla passa da noi.</p></li>
+    </ul>
+  </section>
 
-<a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="Scarica Privaro dall’App Store">
-  <picture>
-    <source srcset="/appstore-badge-white.svg" />
-    <img src="/appstore-badge.svg" alt="Scarica Privaro dall’App Store" />
-  </picture>
-</a>
+  <!-- The price once more, set large, and where to pay it. The page ends on
+       a line, as the homepage does. -->
+  <section class="pro-price">
+    <div class="pro-figure"><p><span class="price" data-price="pro">9,99 €</span></p></div>
+    <div class="pro-pay">
+      <p>Un solo pagamento, nessun rinnovo.</p>
+      <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="Scarica Privaro dall’App Store"><img src="/appstore-badge-white.svg" width="150" height="50" alt="Scarica Privaro dall’App Store" /></a>
+    </div>
+  </section>
 
 </main>
 
