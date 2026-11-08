@@ -38,7 +38,7 @@
 <meta name="apple-itunes-app" content="app-id=6783131829" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=79f5af2618" />
+<link rel="stylesheet" href="/styles.css?v=2f7512af8e" />
 <link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
 <script>
 // Register before first reveal, including restored history entries.
@@ -82,71 +82,134 @@
   </div>
 </header>
 
-<main class="page wrap">
+<main class="page wrap legal-page privacy">
 
-<h1>隐私政策</h1>
-<p class="updated">生效日期：2026 年 6 月 28 日 · 最后更新：2026 年 6 月 28 日</p>
-<p class="intro">Privaro（“Privaro”“本应用”“我们”）是一款面向 iOS 的私密加密照片与视频保险库，由荷兰的 Erdinc Zarbo 提供。本隐私政策说明 Privaro 如何处理你的信息。</p>
-<p class="note"><strong>简而言之：</strong> Privaro 从设计之初就以隐私为前提。你的照片、视频、相簿、说明和标签均在设备上加密，绝不会发送给我们。我们没有账户系统，不运营存储你内容的服务器，也无法看到保险库中的内容。没有广告，也没有跟踪。唯一离开设备的数据，只有 Apple 处理购买所需的信息。</p>
+  <!-- The title, when it was written, and who it's from. -->
+  <header class="legal-hero">
+    <h1>隐私政策</h1>
+    <p class="updated">生效日期：2026 年 6 月 28 日 · 最后更新：2026 年 6 月 28 日</p>
+    <p class="intro">Privaro（“Privaro”“本应用”“我们”）是一款面向 iOS 的私密加密照片与视频保险库，由荷兰的 Erdinc Zarbo 提供。本隐私政策说明 Privaro 如何处理你的信息。</p>
+  </header>
 
-<div class="legal">
-  <h2>我们不收集的信息</h2>
-  <ul>
-    <li>我们<strong>不会</strong>收集、查看或存储你的照片、视频或任何保险库内容。</li>
-    <li>我们<strong>没有</strong>账户系统，也<strong>不会</strong>为使用本应用而索取你的姓名、电子邮件或电话号码。</li>
-    <li>我们<strong>不会</strong>运营任何接收你保险库数据的服务器。</li>
-    <li>我们<strong>不会</strong>使用分析、崩溃报告或跟踪类 SDK。</li>
-    <li>我们<strong>不会</strong>向任何人出售或出租你的个人信息。</li>
-    <li>我们<strong>不会</strong>跨其他应用或网站跟踪你。</li>
-  </ul>
+  <!-- The short version, for anyone who reads nothing else: set large,
+       between two lines. -->
+  <aside class="legal-callout" aria-label="简而言之：">
+    <p class="legal-callout-label">简而言之：</p>
+    <p class="legal-callout-body">Privaro 从设计之初就以隐私为前提。<strong>你的照片、视频、相簿、说明和标签均在设备上加密，绝不会发送给我们。</strong>我们没有账户系统，不运营存储你内容的服务器，也无法看到保险库中的内容。没有广告，也没有跟踪。唯一离开设备的数据，只有 Apple 处理购买所需的信息。</p>
+  </aside>
 
-  <h2>你的内容留在设备上（并且已加密）</h2>
-  <p>你添加到 Privaro 的一切（照片、视频、缩略图、相簿、说明、标签和文件名）都会在你的设备上使用业界标准的 AES-256-GCM 加密。密钥在设备上生成并保存在 iOS 钥匙串中，受设备密码/生物识别以及你的 Privaro 密码保护。加密文件存放在应用的私有存储空间中并启用完整文件保护，且不会包含在未加密的设备备份内。</p>
-  <p>由于加密在你的设备上完成且密钥从不离开设备，我们无法访问、解密或恢复你的保险库内容。如果你同时忘记密码和恢复密钥，我们以及任何人都无法恢复你的数据。</p>
+  <!-- The sections, numbered as they are below, each a link to it. -->
+  <nav class="legal-index" aria-labelledby="legal-index-h">
+    <p id="legal-index-h" class="legal-index-label">Op deze pagina</p>
+    <ol>
+      <li><a href="#not-collected">我们不收集的信息</a></li>
+      <li><a href="#on-device">你的内容留在设备上（并且已加密）</a></li>
+      <li><a href="#optional-features">会让数据离开设备的可选功能</a></li>
+      <li><a href="#permissions">设备权限及申请原因</a></li>
+      <li><a href="#purchases">购买（Apple）</a></li>
+      <li><a href="#retention">数据保留与删除</a></li>
+      <li><a href="#children">儿童隐私</a></li>
+      <li><a href="#your-rights">你的权利</a></li>
+      <li><a href="#security">安全</a></li>
+      <li><a href="#changes">本政策的变更</a></li>
+      <li><a href="#contact">联系我们</a></li>
+    </ol>
+  </nav>
 
-  <h2>会让数据离开设备的可选功能</h2>
-  <p>以下功能默认关闭，只有在你选择使用时才会运行：</p>
-  <ul>
-    <li><strong>加密 iCloud 备份（可选，Pro）。</strong>启用后，Privaro 会在你自己的 iCloud 账户中保存保险库的加密副本。数据在上传前已在设备上加密；密钥使用由你的密码派生的密钥封装（PBKDF2-HMAC-SHA256）。我们绝不会收到你的备份或密钥。iCloud 由 Apple 运营，适用 <a href="https://www.apple.com/legal/privacy/">Apple 隐私政策</a>。</li>
-    <li><strong>共享 / 导出。</strong>当你共享或导出某个项目时（包括加密的 <code>.privaroshare</code> 文件或“存储到照片”），该内容会按你的指示离开保险库。此后它去往何处、如何受到保护，取决于你选择的目的地。</li>
-    <li><strong>Wi-Fi 传输（可选）。</strong>可在你的设备与同一局域网中的浏览器之间传输文件。该连接为本地连接，传输过程中未加密，因此请仅在你信任的网络中使用。文件一旦导入保险库即被加密。传输过程中不会向我们或通过互联网发送任何数据。</li>
-  </ul>
-
-  <h2>设备权限及申请原因</h2>
-  <p>Privaro 仅在需要时申请这些权限，数据仅在你的设备上用于所述目的：</p>
-  <ul>
-    <li><strong>照片</strong>：将你选择的照片/视频导入保险库，并在你需要时将项目重新保存出去。</li>
-    <li><strong>相机</strong>：直接将照片/视频拍摄到保险库、用于应用内相机，以及在你启用后于解锁失败时拍照（“闯入拍照”）。这些照片会被加密并仅存储在你的设备上，你可以随时查看和删除。</li>
-    <li><strong>麦克风</strong>：为你在应用内拍摄的视频录制声音。</li>
-    <li><strong>面容 ID / 触控 ID（生物识别）</strong>：用于解锁保险库。生物识别验证完全由 iOS 处理，Privaro 绝不会接收或存储你的生物识别数据。</li>
-    <li><strong>位置（可选，“基于位置的锁定”）</strong>：启用后，设备位置会在设备本地进行检查，以判断是否允许在你标记为受信任的地点解锁。你的位置不会被收集、记录或传输给我们。</li>
-    <li><strong>本地网络</strong>：用于上文所述的可选 Wi-Fi 传输功能。</li>
-  </ul>
-
-  <h2>购买（Apple）</h2>
-  <p>Privaro Pro 通过 Apple 的 StoreKit / App Store 以一次性购买的方式出售。交易与付款由 Apple 处理，我们不会收到你的付款信息。购买状态通过你的 Apple 账户管理。请参阅 <a href="https://www.apple.com/legal/privacy/">Apple 隐私政策</a>。</p>
-
-  <h2>数据保留与删除</h2>
-  <p>你的内容会一直保留在设备上，直到你删除它。删除的项目会移入“最近删除”，并在 30 天后永久移除（如果你选择，也可立即移除）。删除应用会清除其应用数据；若你启用了 iCloud 备份，可在应用内或通过 iCloud 存储设置将其移除。由于我们不持有你的数据，我们这边没有任何内容需要删除。</p>
-
-  <h2>儿童隐私</h2>
-  <p>Privaro 并非面向 13 周岁以下（或你所在国家/地区要求的最低年龄以下）的儿童，我们也不会在知情的情况下收集儿童的个人信息。</p>
-
-  <h2>你的权利</h2>
-  <p>根据你的居住地（例如欧盟/英国 GDPR 或加州 CCPA/CPRA），你可能有权访问、更正、删除或限制处理你的个人信息。由于 Privaro 仅将内容存储在你的设备上，且我们的服务器不保存关于你的个人数据，你可以直接在应用中管理或删除数据来行使其中大部分权利。如有任何疑问或请求，请通过下方联系方式与我们联系。</p>
-
-  <h2>安全</h2>
-  <p>我们采用设备端 AES-256-GCM 加密、使用 iOS 钥匙串存储密钥、以 PBKDF2 对密码进行哈希，并启用 iOS 文件保护。没有任何存储或传输方式是 100% 安全的，你选择使用的 Wi-Fi 传输等功能也存在上文所述的限制。妥善保管你的密码和恢复密钥是你的责任。</p>
-
-  <h2>本政策的变更</h2>
-  <p>我们可能会不时更新本隐私政策。届时将修改上方的“最后更新”日期，重大变更也会在应用内或我们的网站上说明。</p>
-
-  <h2>联系我们</h2>
-  <p>如果你对本隐私政策或你的隐私有任何疑问，请通过以下方式联系我们：<br />
-  <a href="mailto:erdincdubu@icloud.com">erdincdubu@icloud.com</a></p>
+  <!-- Each section an article: its number and title on the left, the text
+       on the right, in a reading measure. -->
+  <div class="articles">
+  <section class="article" id="not-collected" aria-labelledby="not-collected-h">
+    <h2 id="not-collected-h">我们不收集的信息</h2>
+    <div class="article-body">
+      <ul>
+        <li>我们<strong>不会</strong>收集、查看或存储你的照片、视频或任何保险库内容。</li>
+        <li>我们<strong>没有</strong>账户系统，也<strong>不会</strong>为使用本应用而索取你的姓名、电子邮件或电话号码。</li>
+        <li>我们<strong>不会</strong>运营任何接收你保险库数据的服务器。</li>
+        <li>我们<strong>不会</strong>使用分析、崩溃报告或跟踪类 SDK。</li>
+        <li>我们<strong>不会</strong>向任何人出售或出租你的个人信息。</li>
+        <li>我们<strong>不会</strong>跨其他应用或网站跟踪你。</li>
+      </ul>
+    </div>
+  </section>
+  <section class="article" id="on-device" aria-labelledby="on-device-h">
+    <h2 id="on-device-h">你的内容留在设备上（并且已加密）</h2>
+    <div class="article-body">
+      <p>你添加到 Privaro 的一切（照片、视频、缩略图、相簿、说明、标签和文件名）都会在你的设备上使用业界标准的 AES-256-GCM 加密。密钥在设备上生成并保存在 iOS 钥匙串中，受设备密码/生物识别以及你的 Privaro 密码保护。加密文件存放在应用的私有存储空间中并启用完整文件保护，且不会包含在未加密的设备备份内。</p>
+      <p>由于加密在你的设备上完成且密钥从不离开设备，我们无法访问、解密或恢复你的保险库内容。如果你同时忘记密码和恢复密钥，我们以及任何人都无法恢复你的数据。</p>
+    </div>
+  </section>
+  <section class="article" id="optional-features" aria-labelledby="optional-features-h">
+    <h2 id="optional-features-h">会让数据离开设备的可选功能</h2>
+    <div class="article-body">
+      <p>以下功能默认关闭，只有在你选择使用时才会运行：</p>
+      <ul>
+        <li><strong>加密 iCloud 备份（可选，Pro）。</strong>启用后，Privaro 会在你自己的 iCloud 账户中保存保险库的加密副本。数据在上传前已在设备上加密；密钥使用由你的密码派生的密钥封装（PBKDF2-HMAC-SHA256）。我们绝不会收到你的备份或密钥。iCloud 由 Apple 运营，适用 <a href="https://www.apple.com/legal/privacy/">Apple 隐私政策</a>。</li>
+        <li><strong>共享 / 导出。</strong>当你共享或导出某个项目时（包括加密的 <code>.privaroshare</code> 文件或“存储到照片”），该内容会按你的指示离开保险库。此后它去往何处、如何受到保护，取决于你选择的目的地。</li>
+        <li><strong>Wi-Fi 传输（可选）。</strong>可在你的设备与同一局域网中的浏览器之间传输文件。该连接为本地连接，传输过程中未加密，因此请仅在你信任的网络中使用。文件一旦导入保险库即被加密。传输过程中不会向我们或通过互联网发送任何数据。</li>
+      </ul>
+    </div>
+  </section>
+  <section class="article" id="permissions" aria-labelledby="permissions-h">
+    <h2 id="permissions-h">设备权限及申请原因</h2>
+    <div class="article-body">
+      <p>Privaro 仅在需要时申请这些权限，数据仅在你的设备上用于所述目的：</p>
+      <ul>
+        <li><strong>照片</strong>：将你选择的照片/视频导入保险库，并在你需要时将项目重新保存出去。</li>
+        <li><strong>相机</strong>：直接将照片/视频拍摄到保险库、用于应用内相机，以及在你启用后于解锁失败时拍照（“闯入拍照”）。这些照片会被加密并仅存储在你的设备上，你可以随时查看和删除。</li>
+        <li><strong>麦克风</strong>：为你在应用内拍摄的视频录制声音。</li>
+        <li><strong>面容 ID / 触控 ID（生物识别）</strong>：用于解锁保险库。生物识别验证完全由 iOS 处理，Privaro 绝不会接收或存储你的生物识别数据。</li>
+        <li><strong>位置（可选，“基于位置的锁定”）</strong>：启用后，设备位置会在设备本地进行检查，以判断是否允许在你标记为受信任的地点解锁。你的位置不会被收集、记录或传输给我们。</li>
+        <li><strong>本地网络</strong>：用于上文所述的可选 Wi-Fi 传输功能。</li>
+      </ul>
+    </div>
+  </section>
+  <section class="article" id="purchases" aria-labelledby="purchases-h">
+    <h2 id="purchases-h">购买（Apple）</h2>
+    <div class="article-body">
+      <p>Privaro Pro 通过 Apple 的 StoreKit / App Store 以一次性购买的方式出售。交易与付款由 Apple 处理，我们不会收到你的付款信息。购买状态通过你的 Apple 账户管理。请参阅 <a href="https://www.apple.com/legal/privacy/">Apple 隐私政策</a>。</p>
+    </div>
+  </section>
+  <section class="article" id="retention" aria-labelledby="retention-h">
+    <h2 id="retention-h">数据保留与删除</h2>
+    <div class="article-body">
+      <p>你的内容会一直保留在设备上，直到你删除它。删除的项目会移入“最近删除”，并在 30 天后永久移除（如果你选择，也可立即移除）。删除应用会清除其应用数据；若你启用了 iCloud 备份，可在应用内或通过 iCloud 存储设置将其移除。由于我们不持有你的数据，我们这边没有任何内容需要删除。</p>
+    </div>
+  </section>
+  <section class="article" id="children" aria-labelledby="children-h">
+    <h2 id="children-h">儿童隐私</h2>
+    <div class="article-body">
+      <p>Privaro 并非面向 13 周岁以下（或你所在国家/地区要求的最低年龄以下）的儿童，我们也不会在知情的情况下收集儿童的个人信息。</p>
+    </div>
+  </section>
+  <section class="article" id="your-rights" aria-labelledby="your-rights-h">
+    <h2 id="your-rights-h">你的权利</h2>
+    <div class="article-body">
+      <p>根据你的居住地（例如欧盟/英国 GDPR 或加州 CCPA/CPRA），你可能有权访问、更正、删除或限制处理你的个人信息。由于 Privaro 仅将内容存储在你的设备上，且我们的服务器不保存关于你的个人数据，你可以直接在应用中管理或删除数据来行使其中大部分权利。如有任何疑问或请求，请通过下方联系方式与我们联系。</p>
+    </div>
+  </section>
+  <section class="article" id="security" aria-labelledby="security-h">
+    <h2 id="security-h">安全</h2>
+    <div class="article-body">
+      <p>我们采用设备端 AES-256-GCM 加密、使用 iOS 钥匙串存储密钥、以 PBKDF2 对密码进行哈希，并启用 iOS 文件保护。没有任何存储或传输方式是 100% 安全的，你选择使用的 Wi-Fi 传输等功能也存在上文所述的限制。妥善保管你的密码和恢复密钥是你的责任。</p>
+    </div>
+  </section>
+  <section class="article" id="changes" aria-labelledby="changes-h">
+    <h2 id="changes-h">本政策的变更</h2>
+    <div class="article-body">
+      <p>我们可能会不时更新本隐私政策。届时将修改上方的“最后更新”日期，重大变更也会在应用内或我们的网站上说明。</p>
+    </div>
+  </section>
+  <section class="article" id="contact" aria-labelledby="contact-h">
+    <h2 id="contact-h">联系我们</h2>
+    <div class="article-body">
+      <p>如果你对本隐私政策或你的隐私有任何疑问，请通过以下方式联系我们：<br />
+      <a href="mailto:erdincdubu@icloud.com">erdincdubu@icloud.com</a></p>
+    </div>
+  </section>
+  </div>
 
   <p class="authoritative">本政策亦提供其他语言版本。如有出入，以英文版本为准。</p>
-</div>
 
 </main>
 

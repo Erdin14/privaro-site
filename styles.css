@@ -678,38 +678,30 @@ h1, h2 { font-weight: 600; }
 .pro-pay p { font-size: var(--size-lead); line-height: 1.45; color: var(--ink); }
 .pro-pay .appstore { margin-top: var(--space-4); }
 
-.legal { max-width: 40em; margin-top: 48px; line-height: 1.6; counter-reset: legal-section; }
-.legal h2 { font-size: 17px; margin: 36px 0 8px; counter-increment: legal-section; }
-.legal h2:first-child { margin-top: 0; }
-.legal h2::before { content: counter(legal-section) ". "; color: var(--muted); font-weight: 400; }
-.legal p { margin-bottom: 12px; }
-.legal ul { margin: 0 0 16px; padding-inline-start: 20px; }
-.legal li { margin-bottom: 6px; }
-.legal a { text-decoration: underline; text-underline-offset: 2px; }
-.legal .authoritative { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--rule); font-size: var(--size-small); color: var(--muted); }
-
-/* Terms. The title, when it was written and what it covers; then the one
-   thing to read if nothing else, set large between two lines, its key
-   sentence in full ink; then the sections, numbered, as links; then each
-   section as an article, its number and title on the left and the text on
-   the right in a reading measure, starting on the same line, with space
-   rather than lines between them, as on the Questions page. */
-.terms { --terms-columns: minmax(0, 1fr) minmax(300px, 520px); }
-.terms-hero h1 { font-size: clamp(44px, 5.6vw, 76px); }
-.terms-hero .intro { max-width: 36em; }
-.terms-warning { margin-top: var(--space-8); padding-block: var(--space-6) var(--space-7); border-block: 1px solid var(--rule); }
-.terms-warning-label, .terms-index-label { font-size: var(--size-small); font-weight: 500; color: var(--faint); }
-.terms-warning-body { margin-top: var(--space-3); max-width: 32em; font-family: var(--display); font-size: clamp(21px, 2.1vw, 28px);
+/* The legal pages, Terms of Use and Privacy Policy. The title, when it was
+   written and what it covers; then the one thing to read if nothing else
+   (the Terms' warning, the Policy's short version), set large between two
+   lines, its key sentence in full ink; then the sections, numbered, as
+   links; then each section as an article, its number and title on the left
+   and the text on the right in a reading measure, starting on the same
+   line, with space rather than lines between them, as on the Questions
+   page. */
+.legal-page { --legal-columns: minmax(0, 1fr) minmax(300px, 520px); }
+.legal-hero h1 { font-size: clamp(44px, 5.6vw, 76px); }
+.legal-hero .intro { max-width: 36em; }
+.legal-callout { margin-top: var(--space-8); padding-block: var(--space-6) var(--space-7); border-block: 1px solid var(--rule); }
+.legal-callout-label, .legal-index-label { font-size: var(--size-small); font-weight: 500; color: var(--faint); }
+.legal-callout-body { margin-top: var(--space-3); max-width: 32em; font-family: var(--display); font-size: clamp(21px, 2.1vw, 28px);
   line-height: 1.38; letter-spacing: -.014em; color: var(--muted); }
-.terms-warning-body strong { color: var(--ink); font-weight: 600; }
-.terms-index { margin-top: var(--space-7); }
-.terms-index ol { list-style: none; columns: 3; column-gap: var(--space-6); margin-top: var(--space-3); counter-reset: terms-index; }
-.terms-index li { display: flex; gap: var(--space-3); padding-block: 3px; break-inside: avoid; counter-increment: terms-index; font-size: 15px; }
-.terms-index li::before { content: counter(terms-index); flex: none; width: 1.4em; text-align: end; color: var(--faint); font-variant-numeric: tabular-nums; }
-.terms-index a { color: var(--muted); transition: color var(--dur-state) var(--ease-state); }
-.terms-index a:hover { color: var(--ink); text-decoration: none; }
+.legal-callout-body strong { color: var(--ink); font-weight: 600; }
+.legal-index { margin-top: var(--space-7); }
+.legal-index ol { list-style: none; columns: 3; column-gap: var(--space-6); margin-top: var(--space-3); counter-reset: legal-index; }
+.legal-index li { display: flex; gap: var(--space-3); padding-block: 3px; break-inside: avoid; counter-increment: legal-index; font-size: 15px; }
+.legal-index li::before { content: counter(legal-index); flex: none; width: 1.4em; text-align: end; color: var(--faint); font-variant-numeric: tabular-nums; }
+.legal-index a { color: var(--muted); transition: color var(--dur-state) var(--ease-state); }
+.legal-index a:hover { color: var(--ink); text-decoration: none; }
 .articles { display: grid; row-gap: var(--space-8); margin-top: var(--space-9); counter-reset: article; }
-.article { display: grid; grid-template-columns: var(--terms-columns); column-gap: var(--space-7); align-items: baseline;
+.article { display: grid; grid-template-columns: var(--legal-columns); column-gap: var(--space-7); align-items: baseline;
   counter-increment: article; scroll-margin-top: 104px; }
 .article h2 { position: relative; padding-inline-start: 56px; font-family: var(--display); font-size: clamp(22px, 2vw, 28px);
   font-weight: 600; line-height: 1.2; letter-spacing: var(--track-title); text-wrap: balance; }
@@ -719,6 +711,7 @@ h1, h2 { font-weight: 600; }
   color: var(--faint); font-weight: 500; font-variant-numeric: tabular-nums; }
 .article-body { font-size: var(--size-lead); line-height: 1.6; letter-spacing: var(--track-text); color: var(--muted); }
 .article-body p + p, .article-body ul + p { margin-top: var(--space-4); }
+.article-body p + ul { margin-top: var(--space-4); }
 .article-body strong { color: var(--ink); font-weight: 600; }
 .article-body a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--dim); text-underline-offset: 4px; }
 .article-body a:hover { text-decoration-color: var(--ink); }
@@ -730,7 +723,7 @@ h1, h2 { font-weight: 600; }
 :is(:lang(de), :lang(nl)) .article :is(h2, .article-body) { -webkit-hyphens: auto; hyphens: auto; }
 .article-body li { position: relative; padding-inline-start: 26px; }
 .article-body li::before { content: ""; position: absolute; inset-inline-start: 2px; top: .8em; width: 12px; height: 1px; background: var(--dim); }
-.terms .authoritative { margin-top: var(--space-9); padding-top: var(--space-5); border-top: 1px solid var(--rule);
+.legal-page .authoritative { margin-top: var(--space-9); padding-top: var(--space-5); border-top: 1px solid var(--rule);
   font-size: var(--size-small); color: var(--faint); }
 /* Security: a long read. It opens as the homepage's security section does:
    the words on one side and, on the other, the illustration's phone rising
@@ -881,7 +874,7 @@ h1, h2 { font-weight: 600; }
 /* Scripts other than Latin and Cyrillic. Letter-spacing would pull Arabic and
    Urdu's joined letters apart and crowds Devanagari and CJK, and Arabic, Urdu
    and Hindi need taller lines so marks above and below don't collide. */
-:is(:lang(ar), :lang(ur), :lang(hi)) :is(.tagline, .display, .display .answer, .limit, .pro-figure p, .qa h2, .faq-more h2, .article h2, .terms-warning-body, .page h1, .buy-note, .ledger dt, .ledger dd, .shots figcaption) { letter-spacing: 0; }
+:is(:lang(ar), :lang(ur), :lang(hi)) :is(.tagline, .display, .display .answer, .limit, .pro-figure p, .qa h2, .faq-more h2, .article h2, .legal-callout-body, .page h1, .buy-note, .ledger dt, .ledger dd, .shots figcaption) { letter-spacing: 0; }
 :is(:lang(zh), :lang(ja), :lang(ko)) :is(.tagline, .display, .display .answer, .limit, .qa h2, .faq-more h2, .article h2, .page h1) { letter-spacing: -.01em; }
 /* Chinese and Japanese may break between any two characters; display lines
    break between phrases, where the strings mark it with <wbr>, and inside
@@ -923,7 +916,7 @@ h1, h2 { font-weight: 600; }
   /* Each section's text under its title. */
   .article { grid-template-columns: minmax(0, 1fr); row-gap: var(--space-3); }
   .article-body { padding-inline-start: 56px; }
-  .terms-index ol { columns: 2; }
+  .legal-index ol { columns: 2; }
   /* Each answer under its question: beside it, a long word in a question
      (German, Dutch, Italian) no longer fits its column. */
   .qa > div, .faq-more { grid-template-columns: minmax(0, 1fr); row-gap: var(--space-3); }
@@ -959,12 +952,11 @@ h1, h2 { font-weight: 600; }
   .pro-list li { grid-template-columns: minmax(0, 1fr); row-gap: var(--space-1); padding-inline-start: 30px; }
   .basics ul { gap: var(--space-2) var(--space-5); }
   .pro-price { margin-top: var(--space-7); padding-block: var(--space-7); }
-  .legal { margin-top: 36px; }
-  .terms-index ol { columns: 1; }
+  .legal-index ol { columns: 1; }
   .articles { row-gap: var(--space-7); margin-top: var(--space-8); }
   .article h2, .article-body { padding-inline-start: 40px; }
   .article h2::before { width: 26px; }
-  .terms-warning { margin-top: var(--space-7); }
+  .legal-callout { margin-top: var(--space-7); }
   .toc ol { columns: 1; }
   .sec-hero { grid-template-columns: minmax(0, 1fr); }
   .sec-hero-copy { padding-bottom: var(--space-6); }

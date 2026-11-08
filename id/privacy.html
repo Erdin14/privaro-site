@@ -38,7 +38,7 @@
 <meta name="apple-itunes-app" content="app-id=6783131829" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=79f5af2618" />
+<link rel="stylesheet" href="/styles.css?v=2f7512af8e" />
 <link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
 <script>
 // Register before first reveal, including restored history entries.
@@ -82,71 +82,134 @@
   </div>
 </header>
 
-<main class="page wrap">
+<main class="page wrap legal-page privacy">
 
-<h1>Kebijakan Privasi</h1>
-<p class="updated">Tanggal berlaku: 28 Juni 2026 · Terakhir diperbarui: 28 Juni 2026</p>
-<p class="intro">Privaro (“Privaro”, “aplikasi”, “kami”, atau “milik kami”) adalah brankas foto dan video pribadi yang terenkripsi untuk iOS, disediakan oleh Erdinc Zarbo, Belanda. Kebijakan Privasi ini menjelaskan cara Privaro menangani informasi Anda.</p>
-<p class="note"><strong>Singkatnya:</strong> Privaro dirancang untuk privat sejak awal. Foto, video, album, keterangan, dan tag Anda dienkripsi di perangkat Anda dan tidak pernah dikirim kepada kami. Kami tidak memiliki sistem akun, tidak mengoperasikan server yang menyimpan konten Anda, dan tidak dapat melihat isi brankas Anda. Tidak ada iklan dan tidak ada pelacakan. Satu-satunya data yang keluar dari perangkat Anda adalah data yang dibutuhkan Apple untuk memproses pembelian.</p>
+  <!-- The title, when it was written, and who it's from. -->
+  <header class="legal-hero">
+    <h1>Kebijakan Privasi</h1>
+    <p class="updated">Tanggal berlaku: 28 Juni 2026 · Terakhir diperbarui: 28 Juni 2026</p>
+    <p class="intro">Privaro (“Privaro”, “aplikasi”, “kami”, atau “milik kami”) adalah brankas foto dan video pribadi yang terenkripsi untuk iOS, disediakan oleh Erdinc Zarbo, Belanda. Kebijakan Privasi ini menjelaskan cara Privaro menangani informasi Anda.</p>
+  </header>
 
-<div class="legal">
-  <h2>Informasi yang tidak kami kumpulkan</h2>
-  <ul>
-    <li>Kami <strong>tidak</strong> mengumpulkan, melihat, atau menyimpan foto, video, atau konten brankas apa pun milik Anda.</li>
-    <li>Kami <strong>tidak</strong> memiliki akun pengguna, dan kami <strong>tidak</strong> meminta nama, email, atau nomor telepon Anda untuk menggunakan aplikasi.</li>
-    <li>Kami <strong>tidak</strong> mengoperasikan server yang menerima data brankas Anda.</li>
-    <li>Kami <strong>tidak</strong> menggunakan SDK analitik, pelaporan kerusakan, atau pelacakan.</li>
-    <li>Kami <strong>tidak</strong> menjual atau menyewakan informasi pribadi Anda kepada siapa pun.</li>
-    <li>Kami <strong>tidak</strong> melacak Anda di aplikasi atau situs web lain.</li>
-  </ul>
+  <!-- The short version, for anyone who reads nothing else: set large,
+       between two lines. -->
+  <aside class="legal-callout" aria-label="Singkatnya:">
+    <p class="legal-callout-label">Singkatnya:</p>
+    <p class="legal-callout-body">Privaro dirancang untuk privat sejak awal. <strong>Foto, video, album, keterangan, dan tag Anda dienkripsi di perangkat Anda dan tidak pernah dikirim kepada kami.</strong> Kami tidak memiliki sistem akun, tidak mengoperasikan server yang menyimpan konten Anda, dan tidak dapat melihat isi brankas Anda. Tidak ada iklan dan tidak ada pelacakan. Satu-satunya data yang keluar dari perangkat Anda adalah data yang dibutuhkan Apple untuk memproses pembelian.</p>
+  </aside>
 
-  <h2>Konten Anda tetap di perangkat Anda (dan terenkripsi)</h2>
-  <p>Semua yang Anda tambahkan ke Privaro (foto, video, gambar mini, album, keterangan, tag, dan nama file) dienkripsi di perangkat Anda menggunakan enkripsi AES-256-GCM standar industri. Kunci enkripsi dibuat di perangkat Anda dan disimpan di Rantai Kunci iOS; kunci ini dilindungi oleh kode sandi/biometrik perangkat Anda dan kode sandi Privaro Anda. File terenkripsi disimpan di penyimpanan pribadi aplikasi dengan perlindungan file penuh dan dikecualikan dari cadangan perangkat yang tidak terenkripsi.</p>
-  <p>Karena enkripsi terjadi di perangkat Anda dan kuncinya tidak pernah meninggalkan perangkat, kami tidak memiliki kemampuan untuk mengakses, mendekripsi, atau memulihkan konten brankas Anda. Jika Anda lupa kode sandi dan kunci pemulihan, data Anda tidak dapat dipulihkan oleh kami maupun orang lain.</p>
+  <!-- The sections, numbered as they are below, each a link to it. -->
+  <nav class="legal-index" aria-labelledby="legal-index-h">
+    <p id="legal-index-h" class="legal-index-label">Di halaman ini</p>
+    <ol>
+      <li><a href="#not-collected">Informasi yang tidak kami kumpulkan</a></li>
+      <li><a href="#on-device">Konten Anda tetap di perangkat Anda (dan terenkripsi)</a></li>
+      <li><a href="#optional-features">Fitur opsional yang melibatkan data keluar dari perangkat Anda</a></li>
+      <li><a href="#permissions">Izin perangkat dan alasan kami memintanya</a></li>
+      <li><a href="#purchases">Pembelian (Apple)</a></li>
+      <li><a href="#retention">Penyimpanan dan penghapusan data</a></li>
+      <li><a href="#children">Privasi anak-anak</a></li>
+      <li><a href="#your-rights">Hak-hak Anda</a></li>
+      <li><a href="#security">Keamanan</a></li>
+      <li><a href="#changes">Perubahan pada kebijakan ini</a></li>
+      <li><a href="#contact">Hubungi kami</a></li>
+    </ol>
+  </nav>
 
-  <h2>Fitur opsional yang melibatkan data keluar dari perangkat Anda</h2>
-  <p>Fitur-fitur ini nonaktif secara default dan hanya berfungsi saat Anda memilih untuk menggunakannya:</p>
-  <ul>
-    <li><strong>Cadangan iCloud Terenkripsi (opsional, Pro).</strong> Jika Anda mengaktifkannya, Privaro menyimpan salinan terenkripsi brankas Anda di akun iCloud Anda sendiri. Data dienkripsi di perangkat Anda sebelum diunggah; kuncinya dibungkus menggunakan kunci yang diturunkan dari kode sandi Anda (PBKDF2-HMAC-SHA256). Kami tidak pernah menerima cadangan atau kunci Anda. iCloud dioperasikan oleh Apple dan tunduk pada <a href="https://www.apple.com/legal/privacy/">Kebijakan Privasi Apple</a>.</li>
-    <li><strong>Berbagi / Ekspor.</strong> Saat Anda membagikan atau mengekspor item (termasuk file <code>.privaroshare</code> terenkripsi atau “Simpan ke Foto”), konten tersebut keluar dari brankas sesuai arahan Anda. Ke mana konten itu pergi dan bagaimana perlindungannya kemudian bergantung pada tujuan yang Anda pilih.</li>
-    <li><strong>Transfer Wi-Fi (opsional).</strong> Memungkinkan Anda mentransfer file antara perangkat Anda dan peramban di jaringan lokal yang sama. Koneksi ini bersifat lokal dan tidak dienkripsi selama transfer, jadi gunakan hanya di jaringan yang Anda percayai. File dienkripsi segera setelah diimpor ke brankas. Tidak ada data yang dikirim kepada kami atau melalui internet selama transfer.</li>
-  </ul>
-
-  <h2>Izin perangkat dan alasan kami memintanya</h2>
-  <p>Privaro hanya meminta izin ini saat diperlukan, dan datanya digunakan di perangkat Anda untuk tujuan yang disebutkan:</p>
-  <ul>
-    <li><strong>Foto</strong>: untuk mengimpor foto/video yang Anda pilih ke brankas, dan untuk menyimpan item kembali ke luar jika Anda mau.</li>
-    <li><strong>Kamera</strong>: untuk mengambil foto/video langsung ke brankas dengan kamera dalam aplikasi, dan, jika Anda mengaktifkannya, untuk mengambil foto saat upaya membuka kunci gagal (“penangkapan pembobolan”). Foto pembobolan dienkripsi dan hanya disimpan di perangkat Anda; Anda dapat melihat dan menghapusnya kapan saja.</li>
-    <li><strong>Mikrofon</strong>: untuk merekam audio pada video yang Anda ambil di aplikasi.</li>
-    <li><strong>Face ID / Touch ID (biometrik)</strong>: untuk membuka kunci brankas Anda. Autentikasi biometrik sepenuhnya ditangani oleh iOS; Privaro tidak pernah menerima atau menyimpan data biometrik Anda.</li>
-    <li><strong>Lokasi (opsional, “Kunci Berbasis Lokasi”)</strong>: jika Anda mengaktifkannya, lokasi perangkat Anda diperiksa di perangkat Anda untuk menentukan apakah pembukaan kunci diizinkan di tempat yang telah Anda tandai sebagai tepercaya. Lokasi Anda tidak dikumpulkan, dicatat, atau dikirimkan kepada kami.</li>
-    <li><strong>Jaringan Lokal</strong>: untuk fitur Transfer Wi-Fi opsional yang dijelaskan di atas.</li>
-  </ul>
-
-  <h2>Pembelian (Apple)</h2>
-  <p>Privaro Pro dijual sebagai pembelian satu kali melalui StoreKit / App Store milik Apple. Apple memproses transaksi dan pembayaran Anda; kami tidak menerima detail pembayaran Anda. Status pembelian ditangani melalui Akun Apple Anda. Lihat <a href="https://www.apple.com/legal/privacy/">Kebijakan Privasi Apple</a>.</p>
-
-  <h2>Penyimpanan dan penghapusan data</h2>
-  <p>Konten Anda tetap berada di perangkat Anda sampai Anda menghapusnya. Item yang dihapus dipindahkan ke “Baru-baru ini Dihapus” dan dihapus secara permanen setelah 30 hari (atau segera jika Anda memilihnya). Menghapus aplikasi akan menghapus data aplikasinya; jika Anda mengaktifkan Cadangan iCloud, Anda dapat menghapusnya dari dalam aplikasi atau melalui pengaturan penyimpanan iCloud. Karena kami tidak menyimpan data Anda, tidak ada yang perlu kami hapus di pihak kami.</p>
-
-  <h2>Privasi anak-anak</h2>
-  <p>Privaro tidak ditujukan untuk anak-anak di bawah 13 tahun (atau usia minimum yang berlaku di negara Anda), dan kami tidak dengan sengaja mengumpulkan informasi pribadi dari anak-anak.</p>
-
-  <h2>Hak-hak Anda</h2>
-  <p>Tergantung tempat tinggal Anda (misalnya, berdasarkan GDPR UE/Inggris atau CCPA/CPRA California), Anda mungkin memiliki hak untuk mengakses, memperbaiki, menghapus, atau membatasi pemrosesan informasi pribadi Anda. Karena Privaro hanya menyimpan konten Anda di perangkat Anda dan kami tidak menyimpan data pribadi tentang Anda di server kami, Anda dapat menggunakan sebagian besar hak ini secara langsung dengan mengelola atau menghapus data di aplikasi. Untuk pertanyaan atau permintaan apa pun, hubungi kami melalui detail di bawah ini.</p>
-
-  <h2>Keamanan</h2>
-  <p>Kami menggunakan enkripsi AES-256-GCM di perangkat, Rantai Kunci iOS untuk penyimpanan kunci, hashing kode sandi PBKDF2, dan perlindungan file iOS. Tidak ada metode penyimpanan atau transmisi yang 100% aman, dan fitur yang Anda pilih untuk digunakan, seperti Transfer Wi-Fi, memiliki keterbatasan yang dijelaskan di atas. Anda bertanggung jawab untuk menjaga keamanan kode sandi dan kunci pemulihan Anda.</p>
-
-  <h2>Perubahan pada kebijakan ini</h2>
-  <p>Kami dapat memperbarui Kebijakan Privasi ini dari waktu ke waktu. Kami akan merevisi tanggal “Terakhir diperbarui” di atas, dan perubahan penting akan ditampilkan di aplikasi atau di situs web kami.</p>
-
-  <h2>Hubungi kami</h2>
-  <p>Jika Anda memiliki pertanyaan tentang Kebijakan Privasi ini atau privasi Anda, hubungi kami di:<br />
-  <a href="mailto:erdincdubu@icloud.com">erdincdubu@icloud.com</a></p>
+  <!-- Each section an article: its number and title on the left, the text
+       on the right, in a reading measure. -->
+  <div class="articles">
+  <section class="article" id="not-collected" aria-labelledby="not-collected-h">
+    <h2 id="not-collected-h">Informasi yang tidak kami kumpulkan</h2>
+    <div class="article-body">
+      <ul>
+        <li>Kami <strong>tidak</strong> mengumpulkan, melihat, atau menyimpan foto, video, atau konten brankas apa pun milik Anda.</li>
+        <li>Kami <strong>tidak</strong> memiliki akun pengguna, dan kami <strong>tidak</strong> meminta nama, email, atau nomor telepon Anda untuk menggunakan aplikasi.</li>
+        <li>Kami <strong>tidak</strong> mengoperasikan server yang menerima data brankas Anda.</li>
+        <li>Kami <strong>tidak</strong> menggunakan SDK analitik, pelaporan kerusakan, atau pelacakan.</li>
+        <li>Kami <strong>tidak</strong> menjual atau menyewakan informasi pribadi Anda kepada siapa pun.</li>
+        <li>Kami <strong>tidak</strong> melacak Anda di aplikasi atau situs web lain.</li>
+      </ul>
+    </div>
+  </section>
+  <section class="article" id="on-device" aria-labelledby="on-device-h">
+    <h2 id="on-device-h">Konten Anda tetap di perangkat Anda (dan terenkripsi)</h2>
+    <div class="article-body">
+      <p>Semua yang Anda tambahkan ke Privaro (foto, video, gambar mini, album, keterangan, tag, dan nama file) dienkripsi di perangkat Anda menggunakan enkripsi AES-256-GCM standar industri. Kunci enkripsi dibuat di perangkat Anda dan disimpan di Rantai Kunci iOS; kunci ini dilindungi oleh kode sandi/biometrik perangkat Anda dan kode sandi Privaro Anda. File terenkripsi disimpan di penyimpanan pribadi aplikasi dengan perlindungan file penuh dan dikecualikan dari cadangan perangkat yang tidak terenkripsi.</p>
+      <p>Karena enkripsi terjadi di perangkat Anda dan kuncinya tidak pernah meninggalkan perangkat, kami tidak memiliki kemampuan untuk mengakses, mendekripsi, atau memulihkan konten brankas Anda. Jika Anda lupa kode sandi dan kunci pemulihan, data Anda tidak dapat dipulihkan oleh kami maupun orang lain.</p>
+    </div>
+  </section>
+  <section class="article" id="optional-features" aria-labelledby="optional-features-h">
+    <h2 id="optional-features-h">Fitur opsional yang melibatkan data keluar dari perangkat Anda</h2>
+    <div class="article-body">
+      <p>Fitur-fitur ini nonaktif secara default dan hanya berfungsi saat Anda memilih untuk menggunakannya:</p>
+      <ul>
+        <li><strong>Cadangan iCloud Terenkripsi (opsional, Pro).</strong> Jika Anda mengaktifkannya, Privaro menyimpan salinan terenkripsi brankas Anda di akun iCloud Anda sendiri. Data dienkripsi di perangkat Anda sebelum diunggah; kuncinya dibungkus menggunakan kunci yang diturunkan dari kode sandi Anda (PBKDF2-HMAC-SHA256). Kami tidak pernah menerima cadangan atau kunci Anda. iCloud dioperasikan oleh Apple dan tunduk pada <a href="https://www.apple.com/legal/privacy/">Kebijakan Privasi Apple</a>.</li>
+        <li><strong>Berbagi / Ekspor.</strong> Saat Anda membagikan atau mengekspor item (termasuk file <code>.privaroshare</code> terenkripsi atau “Simpan ke Foto”), konten tersebut keluar dari brankas sesuai arahan Anda. Ke mana konten itu pergi dan bagaimana perlindungannya kemudian bergantung pada tujuan yang Anda pilih.</li>
+        <li><strong>Transfer Wi-Fi (opsional).</strong> Memungkinkan Anda mentransfer file antara perangkat Anda dan peramban di jaringan lokal yang sama. Koneksi ini bersifat lokal dan tidak dienkripsi selama transfer, jadi gunakan hanya di jaringan yang Anda percayai. File dienkripsi segera setelah diimpor ke brankas. Tidak ada data yang dikirim kepada kami atau melalui internet selama transfer.</li>
+      </ul>
+    </div>
+  </section>
+  <section class="article" id="permissions" aria-labelledby="permissions-h">
+    <h2 id="permissions-h">Izin perangkat dan alasan kami memintanya</h2>
+    <div class="article-body">
+      <p>Privaro hanya meminta izin ini saat diperlukan, dan datanya digunakan di perangkat Anda untuk tujuan yang disebutkan:</p>
+      <ul>
+        <li><strong>Foto</strong>: untuk mengimpor foto/video yang Anda pilih ke brankas, dan untuk menyimpan item kembali ke luar jika Anda mau.</li>
+        <li><strong>Kamera</strong>: untuk mengambil foto/video langsung ke brankas dengan kamera dalam aplikasi, dan, jika Anda mengaktifkannya, untuk mengambil foto saat upaya membuka kunci gagal (“penangkapan pembobolan”). Foto pembobolan dienkripsi dan hanya disimpan di perangkat Anda; Anda dapat melihat dan menghapusnya kapan saja.</li>
+        <li><strong>Mikrofon</strong>: untuk merekam audio pada video yang Anda ambil di aplikasi.</li>
+        <li><strong>Face ID / Touch ID (biometrik)</strong>: untuk membuka kunci brankas Anda. Autentikasi biometrik sepenuhnya ditangani oleh iOS; Privaro tidak pernah menerima atau menyimpan data biometrik Anda.</li>
+        <li><strong>Lokasi (opsional, “Kunci Berbasis Lokasi”)</strong>: jika Anda mengaktifkannya, lokasi perangkat Anda diperiksa di perangkat Anda untuk menentukan apakah pembukaan kunci diizinkan di tempat yang telah Anda tandai sebagai tepercaya. Lokasi Anda tidak dikumpulkan, dicatat, atau dikirimkan kepada kami.</li>
+        <li><strong>Jaringan Lokal</strong>: untuk fitur Transfer Wi-Fi opsional yang dijelaskan di atas.</li>
+      </ul>
+    </div>
+  </section>
+  <section class="article" id="purchases" aria-labelledby="purchases-h">
+    <h2 id="purchases-h">Pembelian (Apple)</h2>
+    <div class="article-body">
+      <p>Privaro Pro dijual sebagai pembelian satu kali melalui StoreKit / App Store milik Apple. Apple memproses transaksi dan pembayaran Anda; kami tidak menerima detail pembayaran Anda. Status pembelian ditangani melalui Akun Apple Anda. Lihat <a href="https://www.apple.com/legal/privacy/">Kebijakan Privasi Apple</a>.</p>
+    </div>
+  </section>
+  <section class="article" id="retention" aria-labelledby="retention-h">
+    <h2 id="retention-h">Penyimpanan dan penghapusan data</h2>
+    <div class="article-body">
+      <p>Konten Anda tetap berada di perangkat Anda sampai Anda menghapusnya. Item yang dihapus dipindahkan ke “Baru-baru ini Dihapus” dan dihapus secara permanen setelah 30 hari (atau segera jika Anda memilihnya). Menghapus aplikasi akan menghapus data aplikasinya; jika Anda mengaktifkan Cadangan iCloud, Anda dapat menghapusnya dari dalam aplikasi atau melalui pengaturan penyimpanan iCloud. Karena kami tidak menyimpan data Anda, tidak ada yang perlu kami hapus di pihak kami.</p>
+    </div>
+  </section>
+  <section class="article" id="children" aria-labelledby="children-h">
+    <h2 id="children-h">Privasi anak-anak</h2>
+    <div class="article-body">
+      <p>Privaro tidak ditujukan untuk anak-anak di bawah 13 tahun (atau usia minimum yang berlaku di negara Anda), dan kami tidak dengan sengaja mengumpulkan informasi pribadi dari anak-anak.</p>
+    </div>
+  </section>
+  <section class="article" id="your-rights" aria-labelledby="your-rights-h">
+    <h2 id="your-rights-h">Hak-hak Anda</h2>
+    <div class="article-body">
+      <p>Tergantung tempat tinggal Anda (misalnya, berdasarkan GDPR UE/Inggris atau CCPA/CPRA California), Anda mungkin memiliki hak untuk mengakses, memperbaiki, menghapus, atau membatasi pemrosesan informasi pribadi Anda. Karena Privaro hanya menyimpan konten Anda di perangkat Anda dan kami tidak menyimpan data pribadi tentang Anda di server kami, Anda dapat menggunakan sebagian besar hak ini secara langsung dengan mengelola atau menghapus data di aplikasi. Untuk pertanyaan atau permintaan apa pun, hubungi kami melalui detail di bawah ini.</p>
+    </div>
+  </section>
+  <section class="article" id="security" aria-labelledby="security-h">
+    <h2 id="security-h">Keamanan</h2>
+    <div class="article-body">
+      <p>Kami menggunakan enkripsi AES-256-GCM di perangkat, Rantai Kunci iOS untuk penyimpanan kunci, hashing kode sandi PBKDF2, dan perlindungan file iOS. Tidak ada metode penyimpanan atau transmisi yang 100% aman, dan fitur yang Anda pilih untuk digunakan, seperti Transfer Wi-Fi, memiliki keterbatasan yang dijelaskan di atas. Anda bertanggung jawab untuk menjaga keamanan kode sandi dan kunci pemulihan Anda.</p>
+    </div>
+  </section>
+  <section class="article" id="changes" aria-labelledby="changes-h">
+    <h2 id="changes-h">Perubahan pada kebijakan ini</h2>
+    <div class="article-body">
+      <p>Kami dapat memperbarui Kebijakan Privasi ini dari waktu ke waktu. Kami akan merevisi tanggal “Terakhir diperbarui” di atas, dan perubahan penting akan ditampilkan di aplikasi atau di situs web kami.</p>
+    </div>
+  </section>
+  <section class="article" id="contact" aria-labelledby="contact-h">
+    <h2 id="contact-h">Hubungi kami</h2>
+    <div class="article-body">
+      <p>Jika Anda memiliki pertanyaan tentang Kebijakan Privasi ini atau privasi Anda, hubungi kami di:<br />
+      <a href="mailto:erdincdubu@icloud.com">erdincdubu@icloud.com</a></p>
+    </div>
+  </section>
+  </div>
 
   <p class="authoritative">Kebijakan ini juga tersedia dalam bahasa lain. Jika terdapat perbedaan, versi bahasa Inggris yang berlaku.</p>
-</div>
 
 </main>
 
