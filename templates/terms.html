@@ -41,63 +41,134 @@
 
 {{HEADER}}
 
-<main class="page wrap">
+<main class="page wrap terms">
 
-<h1>{{terms_h1}}</h1>
-<p class="updated">{{priv_updated}}</p>
-<p class="intro">{{terms_intro}}</p>
-<p class="note"><strong>{{terms_callout_label}}</strong> {{terms_callout_body}}</p>
+  <!-- The title, when it was written, and what it covers. -->
+  <header class="terms-hero">
+    <h1>{{terms_h1}}</h1>
+    <p class="updated">{{priv_updated}}</p>
+    <p class="intro">{{terms_intro}}</p>
+  </header>
 
-<div class="legal">
-  <h2>{{terms_s1_h}}</h2>
-  <p>{{terms_s1_p1}}</p>
+  <!-- The one thing to read if nothing else: set large, between two lines. -->
+  <aside class="terms-warning" aria-label="{{terms_callout_label}}">
+    <p class="terms-warning-label">{{terms_callout_label}}</p>
+    <p class="terms-warning-body">{{terms_callout_body}}</p>
+  </aside>
 
-  <h2>{{terms_s2_h}}</h2>
-  <ul>
-    <li>{{terms_s2_li1}}</li>
-    <li>{{terms_s2_li2}}</li>
-    <li>{{terms_s2_li3}}</li>
-    <li>{{terms_s2_li4}}</li>
-    <li>{{terms_s2_li5}}</li>
-  </ul>
+  <!-- The sections, numbered as they are below, each a link to it. -->
+  <nav class="terms-index" aria-labelledby="terms-index-h">
+    <p id="terms-index-h" class="terms-index-label">{{legal_toc}}</p>
+    <ol>
+      <li><a href="#license">{{terms_s1_h}}</a></li>
+      <li><a href="#responsibilities">{{terms_s2_h}}</a></li>
+      <li><a href="#data-loss">{{terms_s3_h}}</a></li>
+      <li><a href="#erasing-features">{{terms_s4_h}}</a></li>
+      <li><a href="#purchases">{{terms_s5_h}}</a></li>
+      <li><a href="#disclaimers">{{terms_s6_h}}</a></li>
+      <li><a href="#liability">{{terms_s7_h}}</a></li>
+      <li><a href="#indemnification">{{terms_s8_h}}</a></li>
+      <li><a href="#apple">{{terms_s9_h}}</a></li>
+      <li><a href="#changes">{{terms_s10_h}}</a></li>
+      <li><a href="#governing-law">{{terms_s11_h}}</a></li>
+      <li><a href="#severability">{{terms_s12_h}}</a></li>
+      <li><a href="#contact">{{terms_s13_h}}</a></li>
+    </ol>
+  </nav>
 
-  <h2>{{terms_s3_h}}</h2>
-  <p>{{terms_s3_p1}}</p>
+  <!-- Each section an article: its number and title on the left, the text
+       on the right, in a reading measure. Space, not lines, between them. -->
+  <div class="articles">
+  <section class="article" id="license" aria-labelledby="license-h">
+    <h2 id="license-h">{{terms_s1_h}}</h2>
+    <div class="article-body">
+      <p>{{terms_s1_p1}}</p>
+    </div>
+  </section>
+  <section class="article" id="responsibilities" aria-labelledby="responsibilities-h">
+    <h2 id="responsibilities-h">{{terms_s2_h}}</h2>
+    <div class="article-body">
+      <ul>
+        <li>{{terms_s2_li1}}</li>
+        <li>{{terms_s2_li2}}</li>
+        <li>{{terms_s2_li3}}</li>
+        <li>{{terms_s2_li4}}</li>
+        <li>{{terms_s2_li5}}</li>
+      </ul>
+    </div>
+  </section>
+  <section class="article" id="data-loss" aria-labelledby="data-loss-h">
+    <h2 id="data-loss-h">{{terms_s3_h}}</h2>
+    <div class="article-body">
+      <p>{{terms_s3_p1}}</p>
+    </div>
+  </section>
+  <section class="article" id="erasing-features" aria-labelledby="erasing-features-h">
+    <h2 id="erasing-features-h">{{terms_s4_h}}</h2>
+    <div class="article-body">
+      <p>{{terms_s4_p1}}</p>
+      <p>{{terms_s4_p2}}</p>
+    </div>
+  </section>
+  <section class="article" id="purchases" aria-labelledby="purchases-h">
+    <h2 id="purchases-h">{{terms_s5_h}}</h2>
+    <div class="article-body">
+      <p>{{terms_s5_p1}}</p>
+    </div>
+  </section>
+  <section class="article" id="disclaimers" aria-labelledby="disclaimers-h">
+    <h2 id="disclaimers-h">{{terms_s6_h}}</h2>
+    <div class="article-body">
+      <p>{{terms_s6_p1}}</p>
+      <p>{{terms_s6_p2}}</p>
+    </div>
+  </section>
+  <section class="article" id="liability" aria-labelledby="liability-h">
+    <h2 id="liability-h">{{terms_s7_h}}</h2>
+    <div class="article-body">
+      <p>{{terms_s7_p1}}</p>
+      <p>{{terms_s7_p2}}</p>
+    </div>
+  </section>
+  <section class="article" id="indemnification" aria-labelledby="indemnification-h">
+    <h2 id="indemnification-h">{{terms_s8_h}}</h2>
+    <div class="article-body">
+      <p>{{terms_s8_p1}}</p>
+    </div>
+  </section>
+  <section class="article" id="apple" aria-labelledby="apple-h">
+    <h2 id="apple-h">{{terms_s9_h}}</h2>
+    <div class="article-body">
+      <p>{{terms_s9_p1}}</p>
+    </div>
+  </section>
+  <section class="article" id="changes" aria-labelledby="changes-h">
+    <h2 id="changes-h">{{terms_s10_h}}</h2>
+    <div class="article-body">
+      <p>{{terms_s10_p1}}</p>
+    </div>
+  </section>
+  <section class="article" id="governing-law" aria-labelledby="governing-law-h">
+    <h2 id="governing-law-h">{{terms_s11_h}}</h2>
+    <div class="article-body">
+      <p>{{terms_s11_p1}}</p>
+    </div>
+  </section>
+  <section class="article" id="severability" aria-labelledby="severability-h">
+    <h2 id="severability-h">{{terms_s12_h}}</h2>
+    <div class="article-body">
+      <p>{{terms_s12_p1}}</p>
+    </div>
+  </section>
+  <section class="article" id="contact" aria-labelledby="contact-h">
+    <h2 id="contact-h">{{terms_s13_h}}</h2>
+    <div class="article-body">
+      <p>{{terms_s13_p1}} <a href="mailto:erdincdubu@icloud.com">erdincdubu@icloud.com</a></p>
+    </div>
+  </section>
+  </div>
 
-  <h2>{{terms_s4_h}}</h2>
-  <p>{{terms_s4_p1}}</p>
-  <p>{{terms_s4_p2}}</p>
-
-  <h2>{{terms_s5_h}}</h2>
-  <p>{{terms_s5_p1}}</p>
-
-  <h2>{{terms_s6_h}}</h2>
-  <p>{{terms_s6_p1}}</p>
-  <p>{{terms_s6_p2}}</p>
-
-  <h2>{{terms_s7_h}}</h2>
-  <p>{{terms_s7_p1}}</p>
-  <p>{{terms_s7_p2}}</p>
-
-  <h2>{{terms_s8_h}}</h2>
-  <p>{{terms_s8_p1}}</p>
-
-  <h2>{{terms_s9_h}}</h2>
-  <p>{{terms_s9_p1}}</p>
-
-  <h2>{{terms_s10_h}}</h2>
-  <p>{{terms_s10_p1}}</p>
-
-  <h2>{{terms_s11_h}}</h2>
-  <p>{{terms_s11_p1}}</p>
-
-  <h2>{{terms_s12_h}}</h2>
-  <p>{{terms_s12_p1}}</p>
-
-  <h2>{{terms_s13_h}}</h2>
-  <p>{{terms_s13_p1}} <a href="mailto:erdincdubu@icloud.com">erdincdubu@icloud.com</a></p>
   <p class="authoritative">{{priv_authoritative}}</p>
-</div>
 
 </main>
 

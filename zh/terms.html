@@ -38,7 +38,7 @@
 <meta name="apple-itunes-app" content="app-id=6783131829" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=5a978f849c" />
+<link rel="stylesheet" href="/styles.css?v=79f5af2618" />
 <link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
 <script>
 // Register before first reveal, including restored history entries.
@@ -82,63 +82,134 @@
   </div>
 </header>
 
-<main class="page wrap">
+<main class="page wrap terms">
 
-<h1>使用条款</h1>
-<p class="updated">生效日期：2026 年 6 月 28 日 · 最后更新：2026 年 6 月 28 日</p>
-<p class="intro">本使用条款（“条款”）规范你对由 Erdinc Zarbo（“我们”）提供的 Privaro 应用（“Privaro”“本应用”）的使用。下载或使用 Privaro 即表示你同意本条款。若你不同意，请勿使用本应用。</p>
-<p class="note"><strong>请仔细阅读。</strong> Privaro 使用仅你掌握的密钥在你的设备上加密内容。这意味着，如果你同时丢失密码和恢复密钥，<strong>包括我们在内的任何人都无法恢复你的数据。</strong>Privaro 还包含有意永久删除数据的功能。妥善保管密码与恢复密钥、如何配置本应用，以及自行保留备份，均由你负责。</p>
+  <!-- The title, when it was written, and what it covers. -->
+  <header class="terms-hero">
+    <h1>使用条款</h1>
+    <p class="updated">生效日期：2026 年 6 月 28 日 · 最后更新：2026 年 6 月 28 日</p>
+    <p class="intro">本使用条款（“条款”）规范你对由 Erdinc Zarbo（“我们”）提供的 Privaro 应用（“Privaro”“本应用”）的使用。下载或使用 Privaro 即表示你同意本条款。若你不同意，请勿使用本应用。</p>
+  </header>
 
-<div class="legal">
-  <h2>许可</h2>
-  <p>我们授予你一项个人的、非独占的、不可转让的、可撤销的许可，允许你依照本条款及 Apple App Store 服务条款，在你拥有或控制的 Apple 设备上使用 Privaro。除法律允许的范围外，你不得复制、修改、反向工程、反编译、出售、分许可或分发本应用。</p>
+  <!-- The one thing to read if nothing else: set large, between two lines. -->
+  <aside class="terms-warning" aria-label="请仔细阅读。">
+    <p class="terms-warning-label">请仔细阅读。</p>
+    <p class="terms-warning-body">Privaro 使用仅你掌握的密钥在你的设备上加密内容。这意味着，如果你同时丢失密码和恢复密钥，<strong>包括我们在内的任何人都无法恢复你的数据。</strong>Privaro 还包含有意永久删除数据的功能。妥善保管密码与恢复密钥、如何配置本应用，以及自行保留备份，均由你负责。</p>
+  </aside>
 
-  <h2>你的责任</h2>
-  <ul>
-    <li>你有责任保护你的密码、恢复密钥和设备。</li>
-    <li>你对存放在本应用中的内容负责，并须确保你有权存放这些内容。</li>
-    <li>你对如何启用和配置本应用的功能负责，包括其安全与数据清除功能。</li>
-    <li>你同意不使用 Privaro 存放或分享任何违法内容或侵犯他人权利的内容。</li>
-    <li>你同意不将本应用用于任何非法目的或以违反适用法律的方式使用。</li>
-  </ul>
+  <!-- The sections, numbered as they are below, each a link to it. -->
+  <nav class="terms-index" aria-labelledby="terms-index-h">
+    <p id="terms-index-h" class="terms-index-label">Op deze pagina</p>
+    <ol>
+      <li><a href="#license">许可</a></li>
+      <li><a href="#responsibilities">你的责任</a></li>
+      <li><a href="#data-loss">数据丢失与备份</a></li>
+      <li><a href="#erasing-features">安全与数据清除功能</a></li>
+      <li><a href="#purchases">购买</a></li>
+      <li><a href="#disclaimers">免责声明</a></li>
+      <li><a href="#liability">责任限制</a></li>
+      <li><a href="#indemnification">赔偿</a></li>
+      <li><a href="#apple">Apple</a></li>
+      <li><a href="#changes">本条款的变更</a></li>
+      <li><a href="#governing-law">适用法律</a></li>
+      <li><a href="#severability">可分割性</a></li>
+      <li><a href="#contact">联系我们</a></li>
+    </ol>
+  </nav>
 
-  <h2>数据丢失与备份</h2>
-  <p>由于 Privaro 采用设备端零知识加密，我们无法为你重置密码、恢复加密密钥或还原内容。下列任一情形都可能导致你的内容永久且不可恢复地丢失：丢失或遗忘密码与恢复密钥；设备丢失、被盗、损坏、维修、重置或更换；删除本应用或其数据；操作系统或硬件故障；或未保留最新且可用的备份。保留自己的备份完全由你负责。你可自行决定并自担风险使用本应用的可选备份、还原与传输功能，我们不保证其可用性、完整性或成功。</p>
+  <!-- Each section an article: its number and title on the left, the text
+       on the right, in a reading measure. Space, not lines, between them. -->
+  <div class="articles">
+  <section class="article" id="license" aria-labelledby="license-h">
+    <h2 id="license-h">许可</h2>
+    <div class="article-body">
+      <p>我们授予你一项个人的、非独占的、不可转让的、可撤销的许可，允许你依照本条款及 Apple App Store 服务条款，在你拥有或控制的 Apple 设备上使用 Privaro。除法律允许的范围外，你不得复制、修改、反向工程、反编译、出售、分许可或分发本应用。</p>
+    </div>
+  </section>
+  <section class="article" id="responsibilities" aria-labelledby="responsibilities-h">
+    <h2 id="responsibilities-h">你的责任</h2>
+    <div class="article-body">
+      <ul>
+        <li>你有责任保护你的密码、恢复密钥和设备。</li>
+        <li>你对存放在本应用中的内容负责，并须确保你有权存放这些内容。</li>
+        <li>你对如何启用和配置本应用的功能负责，包括其安全与数据清除功能。</li>
+        <li>你同意不使用 Privaro 存放或分享任何违法内容或侵犯他人权利的内容。</li>
+        <li>你同意不将本应用用于任何非法目的或以违反适用法律的方式使用。</li>
+      </ul>
+    </div>
+  </section>
+  <section class="article" id="data-loss" aria-labelledby="data-loss-h">
+    <h2 id="data-loss-h">数据丢失与备份</h2>
+    <div class="article-body">
+      <p>由于 Privaro 采用设备端零知识加密，我们无法为你重置密码、恢复加密密钥或还原内容。下列任一情形都可能导致你的内容永久且不可恢复地丢失：丢失或遗忘密码与恢复密钥；设备丢失、被盗、损坏、维修、重置或更换；删除本应用或其数据；操作系统或硬件故障；或未保留最新且可用的备份。保留自己的备份完全由你负责。你可自行决定并自担风险使用本应用的可选备份、还原与传输功能，我们不保证其可用性、完整性或成功。</p>
+    </div>
+  </section>
+  <section class="article" id="erasing-features" aria-labelledby="erasing-features-h">
+    <h2 id="erasing-features-h">安全与数据清除功能</h2>
+    <div class="article-body">
+      <p>Privaro 包含一些有意设计用于删除你的数据或改变其访问方式的可选功能，包括胁迫清除、诱饵保险库、恐慌锁定及类似工具。这些功能会完全按所述方式运作，并可能造成有意的、永久的数据丢失。</p>
+      <p>特别是，若你启用<strong>胁迫清除</strong>，输入胁迫密码（例如在锁定界面）将立即、永久且不可逆地清除你真正的保险库及其中的一切。这是设计使然，没有确认提示、无法撤销、无法恢复，即使发生在你未曾预料的情形下也是如此。是否启用这些功能以及如何配置由你决定；你须独自为该决定以及由此导致的数据丢失或无法访问负责；并且你同意，对于因你使用这些功能而被删除、隐藏或变得无法访问的数据，我们不承担责任。除非你完全理解并接受其行为，否则请勿启用这些功能。</p>
+    </div>
+  </section>
+  <section class="article" id="purchases" aria-labelledby="purchases-h">
+    <h2 id="purchases-h">购买</h2>
+    <div class="article-body">
+      <p>Privaro 通过 Apple App Store 提供可选的付费升级（“Privaro Pro”），以一次性购买的方式出售。没有订阅，也不会自动续订。确认购买时将通过你的 Apple 账户扣款，升级适用于登录该 Apple 账户的所有设备。价格可能因地区而异，并在购买时显示。除法律或 Apple 政策要求外，款项不予退还；退款请求由 Apple 处理。</p>
+    </div>
+  </section>
+  <section class="article" id="disclaimers" aria-labelledby="disclaimers-h">
+    <h2 id="disclaimers-h">免责声明</h2>
+    <div class="article-body">
+      <p>Privaro 按“现状”和“现有”提供，不作任何明示或默示的保证，包括但不限于对适销性、特定用途适用性和不侵权的默示保证。虽然我们使用强度高的行业标准加密，但我们不保证本应用不会中断、没有错误或能满足你的要求，也没有任何安全措施能被保证无法攻破。对于传输过程中未加密的 Wi-Fi 传输等功能，你须自担风险，并仅在你信任的网络中使用。</p>
+      <p>Privaro 是一款面向消费者的软件工具，并非安全保证。我们不保证它能保护你的内容免受所有威胁，包括有决心的攻击者、对设备的取证检查、恶意软件、操作系统或第三方组件的漏洞，或法律及人身胁迫。你有责任评估本应用是否适合你的具体需求与威胁模型。</p>
+    </div>
+  </section>
+  <section class="article" id="liability" aria-labelledby="liability-h">
+    <h2 id="liability-h">责任限制</h2>
+    <div class="article-body">
+      <p>在法律允许的最大范围内，对于因你使用（或无法使用）Privaro 而产生或与之相关的任何间接、附带、特殊、后果性或惩罚性损害，或任何数据、利润或内容的损失，我们概不负责，即使已被告知此类损害的可能性。对于与本应用相关的任何索赔，我们的全部责任不超过你在索赔发生前十二个月内为本应用向我们支付的金额；若未支付任何金额，则以象征性金额为限。</p>
+      <p>某些司法辖区不允许排除默示保证或限制特定损害，因此上述部分内容可能不适用于你。在此情况下，我们的责任以适用法律允许的最大范围为限，且本条款中的任何内容均不限制或排除你居住国强制性法律赋予你的、不可放弃的权利。</p>
+    </div>
+  </section>
+  <section class="article" id="indemnification" aria-labelledby="indemnification-h">
+    <h2 id="indemnification-h">赔偿</h2>
+    <div class="article-body">
+      <p>在法律允许的最大范围内，你同意就下列事项引起或与之相关的任何索赔、损害、损失、责任与费用（包括合理的律师费）向 Erdinc Zarbo 作出赔偿并使其免受损害：你存放或分享的内容；你对本应用的使用或滥用；你违反本条款；或你违反任何法律或任何第三方的权利。</p>
+    </div>
+  </section>
+  <section class="article" id="apple" aria-labelledby="apple-h">
+    <h2 id="apple-h">Apple</h2>
+    <div class="article-body">
+      <p>本条款是你与我们之间的约定，而非与 Apple 之间的约定。Apple 不对本应用或其内容负责。Apple 及其子公司是本条款的第三方受益人，并可对你执行本条款。你对本应用的使用还须遵守《Apple 媒体服务条款与条件》。</p>
+    </div>
+  </section>
+  <section class="article" id="changes" aria-labelledby="changes-h">
+    <h2 id="changes-h">本条款的变更</h2>
+    <div class="article-body">
+      <p>我们可能会不时更新本条款。届时将修改上方的“最后更新”日期，重大变更也会在应用内或我们的网站上说明。变更生效后你继续使用本应用，即表示接受更新后的条款。</p>
+    </div>
+  </section>
+  <section class="article" id="governing-law" aria-labelledby="governing-law-h">
+    <h2 id="governing-law-h">适用法律</h2>
+    <div class="article-body">
+      <p>本条款受荷兰法律管辖，不考虑其冲突法规则，但你居住国的强制性消费者保护法律适用的情形除外。</p>
+    </div>
+  </section>
+  <section class="article" id="severability" aria-labelledby="severability-h">
+    <h2 id="severability-h">可分割性</h2>
+    <div class="article-body">
+      <p>若本条款的任何条款被认定为无效或不可执行，该条款将在必要的最小范围内受到限制或删除，其余条款仍完全有效。</p>
+    </div>
+  </section>
+  <section class="article" id="contact" aria-labelledby="contact-h">
+    <h2 id="contact-h">联系我们</h2>
+    <div class="article-body">
+      <p>对本条款有疑问？请通过以下方式联系我们： <a href="mailto:erdincdubu@icloud.com">erdincdubu@icloud.com</a></p>
+    </div>
+  </section>
+  </div>
 
-  <h2>安全与数据清除功能</h2>
-  <p>Privaro 包含一些有意设计用于删除你的数据或改变其访问方式的可选功能，包括胁迫清除、诱饵保险库、恐慌锁定及类似工具。这些功能会完全按所述方式运作，并可能造成有意的、永久的数据丢失。</p>
-  <p>特别是，若你启用<strong>胁迫清除</strong>，输入胁迫密码（例如在锁定界面）将立即、永久且不可逆地清除你真正的保险库及其中的一切。这是设计使然，没有确认提示、无法撤销、无法恢复，即使发生在你未曾预料的情形下也是如此。是否启用这些功能以及如何配置由你决定；你须独自为该决定以及由此导致的数据丢失或无法访问负责；并且你同意，对于因你使用这些功能而被删除、隐藏或变得无法访问的数据，我们不承担责任。除非你完全理解并接受其行为，否则请勿启用这些功能。</p>
-
-  <h2>购买</h2>
-  <p>Privaro 通过 Apple App Store 提供可选的付费升级（“Privaro Pro”），以一次性购买的方式出售。没有订阅，也不会自动续订。确认购买时将通过你的 Apple 账户扣款，升级适用于登录该 Apple 账户的所有设备。价格可能因地区而异，并在购买时显示。除法律或 Apple 政策要求外，款项不予退还；退款请求由 Apple 处理。</p>
-
-  <h2>免责声明</h2>
-  <p>Privaro 按“现状”和“现有”提供，不作任何明示或默示的保证，包括但不限于对适销性、特定用途适用性和不侵权的默示保证。虽然我们使用强度高的行业标准加密，但我们不保证本应用不会中断、没有错误或能满足你的要求，也没有任何安全措施能被保证无法攻破。对于传输过程中未加密的 Wi-Fi 传输等功能，你须自担风险，并仅在你信任的网络中使用。</p>
-  <p>Privaro 是一款面向消费者的软件工具，并非安全保证。我们不保证它能保护你的内容免受所有威胁，包括有决心的攻击者、对设备的取证检查、恶意软件、操作系统或第三方组件的漏洞，或法律及人身胁迫。你有责任评估本应用是否适合你的具体需求与威胁模型。</p>
-
-  <h2>责任限制</h2>
-  <p>在法律允许的最大范围内，对于因你使用（或无法使用）Privaro 而产生或与之相关的任何间接、附带、特殊、后果性或惩罚性损害，或任何数据、利润或内容的损失，我们概不负责，即使已被告知此类损害的可能性。对于与本应用相关的任何索赔，我们的全部责任不超过你在索赔发生前十二个月内为本应用向我们支付的金额；若未支付任何金额，则以象征性金额为限。</p>
-  <p>某些司法辖区不允许排除默示保证或限制特定损害，因此上述部分内容可能不适用于你。在此情况下，我们的责任以适用法律允许的最大范围为限，且本条款中的任何内容均不限制或排除你居住国强制性法律赋予你的、不可放弃的权利。</p>
-
-  <h2>赔偿</h2>
-  <p>在法律允许的最大范围内，你同意就下列事项引起或与之相关的任何索赔、损害、损失、责任与费用（包括合理的律师费）向 Erdinc Zarbo 作出赔偿并使其免受损害：你存放或分享的内容；你对本应用的使用或滥用；你违反本条款；或你违反任何法律或任何第三方的权利。</p>
-
-  <h2>Apple</h2>
-  <p>本条款是你与我们之间的约定，而非与 Apple 之间的约定。Apple 不对本应用或其内容负责。Apple 及其子公司是本条款的第三方受益人，并可对你执行本条款。你对本应用的使用还须遵守《Apple 媒体服务条款与条件》。</p>
-
-  <h2>本条款的变更</h2>
-  <p>我们可能会不时更新本条款。届时将修改上方的“最后更新”日期，重大变更也会在应用内或我们的网站上说明。变更生效后你继续使用本应用，即表示接受更新后的条款。</p>
-
-  <h2>适用法律</h2>
-  <p>本条款受荷兰法律管辖，不考虑其冲突法规则，但你居住国的强制性消费者保护法律适用的情形除外。</p>
-
-  <h2>可分割性</h2>
-  <p>若本条款的任何条款被认定为无效或不可执行，该条款将在必要的最小范围内受到限制或删除，其余条款仍完全有效。</p>
-
-  <h2>联系我们</h2>
-  <p>对本条款有疑问？请通过以下方式联系我们： <a href="mailto:erdincdubu@icloud.com">erdincdubu@icloud.com</a></p>
   <p class="authoritative">本政策亦提供其他语言版本。如有出入，以英文版本为准。</p>
-</div>
 
 </main>
 

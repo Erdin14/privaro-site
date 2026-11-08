@@ -38,7 +38,7 @@
 <meta name="apple-itunes-app" content="app-id=6783131829" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=5a978f849c" />
+<link rel="stylesheet" href="/styles.css?v=79f5af2618" />
 <link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
 <script>
 // Register before first reveal, including restored history entries.
@@ -82,63 +82,134 @@
   </div>
 </header>
 
-<main class="page wrap">
+<main class="page wrap terms">
 
-<h1>이용약관</h1>
-<p class="updated">시행일: 2026년 6월 28일 · 최종 업데이트: 2026년 6월 28일</p>
-<p class="intro">본 이용약관(이하 ‘약관’)은 Erdinc Zarbo(이하 ‘당사’)가 제공하는 Privaro 앱(이하 ‘Privaro’, ‘본 앱’)의 이용에 적용됩니다. Privaro를 다운로드하거나 사용하면 본 약관에 동의하는 것으로 간주됩니다. 동의하지 않으신다면 본 앱을 사용하지 마십시오.</p>
-<p class="note"><strong>반드시 읽어주세요.</strong> Privaro는 사용자만이 관리하는 키로 기기에서 콘텐츠를 암호화합니다. 즉, 암호와 복구 키를 모두 잃어버리면 <strong>당사를 포함해 누구도 데이터를 복구할 수 없습니다.</strong> 또한 Privaro에는 의도적으로 데이터를 영구 삭제하는 기능이 포함되어 있습니다. 암호와 복구 키를 안전하게 보관하는 것, 앱을 어떻게 설정할지, 그리고 자체 백업을 유지하는 것은 사용자의 책임입니다.</p>
+  <!-- The title, when it was written, and what it covers. -->
+  <header class="terms-hero">
+    <h1>이용약관</h1>
+    <p class="updated">시행일: 2026년 6월 28일 · 최종 업데이트: 2026년 6월 28일</p>
+    <p class="intro">본 이용약관(이하 ‘약관’)은 Erdinc Zarbo(이하 ‘당사’)가 제공하는 Privaro 앱(이하 ‘Privaro’, ‘본 앱’)의 이용에 적용됩니다. Privaro를 다운로드하거나 사용하면 본 약관에 동의하는 것으로 간주됩니다. 동의하지 않으신다면 본 앱을 사용하지 마십시오.</p>
+  </header>
 
-<div class="legal">
-  <h2>라이선스</h2>
-  <p>당사는 본 약관 및 Apple App Store 서비스 약관에 따라, 사용자가 소유하거나 관리하는 Apple 기기에서 Privaro를 사용할 수 있는 개인적, 비독점적, 양도 불가, 철회 가능한 라이선스를 부여합니다. 법률이 허용하는 범위를 제외하고 본 앱을 복제, 수정, 역설계, 디컴파일, 판매, 재라이선스하거나 배포할 수 없습니다.</p>
+  <!-- The one thing to read if nothing else: set large, between two lines. -->
+  <aside class="terms-warning" aria-label="반드시 읽어주세요.">
+    <p class="terms-warning-label">반드시 읽어주세요.</p>
+    <p class="terms-warning-body">Privaro는 사용자만이 관리하는 키로 기기에서 콘텐츠를 암호화합니다. 즉, 암호와 복구 키를 모두 잃어버리면 <strong>당사를 포함해 누구도 데이터를 복구할 수 없습니다.</strong> 또한 Privaro에는 의도적으로 데이터를 영구 삭제하는 기능이 포함되어 있습니다. 암호와 복구 키를 안전하게 보관하는 것, 앱을 어떻게 설정할지, 그리고 자체 백업을 유지하는 것은 사용자의 책임입니다.</p>
+  </aside>
 
-  <h2>사용자의 책임</h2>
-  <ul>
-    <li>암호, 복구 키, 기기를 보호할 책임은 사용자에게 있습니다.</li>
-    <li>앱에 저장하는 콘텐츠와 그 저장 권한을 보유하는지에 대한 책임은 사용자에게 있습니다.</li>
-    <li>보안 및 삭제 기능을 포함해 앱의 기능을 어떻게 활성화하고 설정할지에 대한 책임은 사용자에게 있습니다.</li>
-    <li>불법이거나 타인의 권리를 침해하는 콘텐츠를 저장·공유하는 데 Privaro를 사용하지 않는 데 동의합니다.</li>
-    <li>불법적인 목적이나 관련 법률을 위반하는 방식으로 본 앱을 사용하지 않는 데 동의합니다.</li>
-  </ul>
+  <!-- The sections, numbered as they are below, each a link to it. -->
+  <nav class="terms-index" aria-labelledby="terms-index-h">
+    <p id="terms-index-h" class="terms-index-label">이 페이지의 내용</p>
+    <ol>
+      <li><a href="#license">라이선스</a></li>
+      <li><a href="#responsibilities">사용자의 책임</a></li>
+      <li><a href="#data-loss">데이터 손실과 백업</a></li>
+      <li><a href="#erasing-features">보안 및 데이터 삭제 기능</a></li>
+      <li><a href="#purchases">구매</a></li>
+      <li><a href="#disclaimers">면책 조항</a></li>
+      <li><a href="#liability">책임의 제한</a></li>
+      <li><a href="#indemnification">면책 보상</a></li>
+      <li><a href="#apple">Apple</a></li>
+      <li><a href="#changes">약관의 변경</a></li>
+      <li><a href="#governing-law">준거법</a></li>
+      <li><a href="#severability">가분성</a></li>
+      <li><a href="#contact">문의</a></li>
+    </ol>
+  </nav>
 
-  <h2>데이터 손실과 백업</h2>
-  <p>Privaro의 기기 내 제로 지식 암호화 방식으로 인해, 당사는 사용자의 암호를 재설정하거나 암호화 키를 복구하거나 콘텐츠를 대신 복원할 수 없습니다. 다음 중 어느 경우에도 콘텐츠가 영구적으로 복구 불가능하게 손실될 수 있습니다. 암호와 복구 키의 분실 또는 망각, 기기의 분실·도난·손상·수리·초기화·교체, 앱 또는 그 데이터의 삭제, 운영체제나 하드웨어 장애, 최신의 정상 작동하는 백업 미보유. 자체 백업 유지는 전적으로 사용자의 책임입니다. 선택적 백업·복원·전송 기능은 사용자의 판단과 위험 부담으로 사용하며, 당사는 그 가용성·완전성·성공을 보장하지 않습니다.</p>
+  <!-- Each section an article: its number and title on the left, the text
+       on the right, in a reading measure. Space, not lines, between them. -->
+  <div class="articles">
+  <section class="article" id="license" aria-labelledby="license-h">
+    <h2 id="license-h">라이선스</h2>
+    <div class="article-body">
+      <p>당사는 본 약관 및 Apple App Store 서비스 약관에 따라, 사용자가 소유하거나 관리하는 Apple 기기에서 Privaro를 사용할 수 있는 개인적, 비독점적, 양도 불가, 철회 가능한 라이선스를 부여합니다. 법률이 허용하는 범위를 제외하고 본 앱을 복제, 수정, 역설계, 디컴파일, 판매, 재라이선스하거나 배포할 수 없습니다.</p>
+    </div>
+  </section>
+  <section class="article" id="responsibilities" aria-labelledby="responsibilities-h">
+    <h2 id="responsibilities-h">사용자의 책임</h2>
+    <div class="article-body">
+      <ul>
+        <li>암호, 복구 키, 기기를 보호할 책임은 사용자에게 있습니다.</li>
+        <li>앱에 저장하는 콘텐츠와 그 저장 권한을 보유하는지에 대한 책임은 사용자에게 있습니다.</li>
+        <li>보안 및 삭제 기능을 포함해 앱의 기능을 어떻게 활성화하고 설정할지에 대한 책임은 사용자에게 있습니다.</li>
+        <li>불법이거나 타인의 권리를 침해하는 콘텐츠를 저장·공유하는 데 Privaro를 사용하지 않는 데 동의합니다.</li>
+        <li>불법적인 목적이나 관련 법률을 위반하는 방식으로 본 앱을 사용하지 않는 데 동의합니다.</li>
+      </ul>
+    </div>
+  </section>
+  <section class="article" id="data-loss" aria-labelledby="data-loss-h">
+    <h2 id="data-loss-h">데이터 손실과 백업</h2>
+    <div class="article-body">
+      <p>Privaro의 기기 내 제로 지식 암호화 방식으로 인해, 당사는 사용자의 암호를 재설정하거나 암호화 키를 복구하거나 콘텐츠를 대신 복원할 수 없습니다. 다음 중 어느 경우에도 콘텐츠가 영구적으로 복구 불가능하게 손실될 수 있습니다. 암호와 복구 키의 분실 또는 망각, 기기의 분실·도난·손상·수리·초기화·교체, 앱 또는 그 데이터의 삭제, 운영체제나 하드웨어 장애, 최신의 정상 작동하는 백업 미보유. 자체 백업 유지는 전적으로 사용자의 책임입니다. 선택적 백업·복원·전송 기능은 사용자의 판단과 위험 부담으로 사용하며, 당사는 그 가용성·완전성·성공을 보장하지 않습니다.</p>
+    </div>
+  </section>
+  <section class="article" id="erasing-features" aria-labelledby="erasing-features-h">
+    <h2 id="erasing-features-h">보안 및 데이터 삭제 기능</h2>
+    <div class="article-body">
+      <p>Privaro에는 강압 삭제, 미끼 보관함, 패닉 잠금 등 데이터를 삭제하거나 접근 방식을 변경하도록 의도적으로 설계된 선택 기능이 포함되어 있습니다. 이러한 기능은 설명된 대로 정확히 작동하며 의도적이고 영구적인 데이터 손실을 초래할 수 있습니다.</p>
+      <p>특히 <strong>강압 삭제</strong>를 활성화한 경우, (예를 들어 잠금 화면에서) 강압용 암호를 입력하면 실제 보관함과 그 안의 모든 항목이 즉시, 영구적으로, 되돌릴 수 없게 삭제됩니다. 이는 설계상 의도된 동작이며 확인 창도, 실행 취소도, 복구도 없습니다. 예상하지 못한 상황에서도 마찬가지입니다. 이러한 기능을 활성화할지와 어떻게 설정할지는 사용자가 결정하며, 그 결정과 그로 인한 데이터 손실 또는 접근 불가에 대한 책임은 전적으로 사용자에게 있습니다. 또한 이러한 기능의 사용으로 삭제, 은닉되거나 접근할 수 없게 된 데이터에 대해 당사가 책임지지 않는다는 데 동의합니다. 동작 방식을 완전히 이해하고 받아들이는 경우에만 활성화하십시오.</p>
+    </div>
+  </section>
+  <section class="article" id="purchases" aria-labelledby="purchases-h">
+    <h2 id="purchases-h">구매</h2>
+    <div class="article-body">
+      <p>Privaro는 Apple App Store를 통해 판매되는 일회성 구매 형태의 선택적 유료 업그레이드(‘Privaro Pro’)를 제공합니다. 구독은 없으며 갱신되는 것도 없습니다. 구매 확인 시 Apple 계정으로 결제되며, 업그레이드는 해당 Apple 계정에 로그인한 모든 기기에 적용됩니다. 가격은 지역에 따라 다를 수 있으며 구매 시점에 표시됩니다. 법률이나 Apple 정책이 요구하는 경우를 제외하고 결제 금액은 환불되지 않으며, 환불 요청은 Apple이 처리합니다.</p>
+    </div>
+  </section>
+  <section class="article" id="disclaimers" aria-labelledby="disclaimers-h">
+    <h2 id="disclaimers-h">면책 조항</h2>
+    <div class="article-body">
+      <p>Privaro는 상품성, 특정 목적 적합성, 비침해에 대한 묵시적 보증을 포함하여 명시적이든 묵시적이든 어떠한 종류의 보증 없이 ‘있는 그대로’, ‘이용 가능한 상태로’ 제공됩니다. 당사는 강력한 업계 표준 암호화를 사용하지만, 앱이 중단 없이 오류 없이 작동하거나 사용자의 요구를 충족한다고 보증하지 않으며, 어떠한 보안 조치도 뚫리지 않는다고 보장되지 않습니다. 전송 중 암호화되지 않는 Wi-Fi 전송과 같은 기능은 사용자의 위험 부담으로, 신뢰할 수 있는 네트워크에서만 사용하십시오.</p>
+      <p>Privaro는 소비자용 소프트웨어 도구이지 안전을 보장하는 수단이 아닙니다. 당사는 결연한 공격자, 기기에 대한 포렌식 분석, 악성코드, 운영체제나 제3자 구성요소의 취약점, 법적 또는 물리적 강요를 포함한 모든 위협으로부터 콘텐츠를 보호한다고 보증하지 않습니다. 본 앱이 사용자의 필요와 위협 모델에 적합한지 평가할 책임은 사용자에게 있습니다.</p>
+    </div>
+  </section>
+  <section class="article" id="liability" aria-labelledby="liability-h">
+    <h2 id="liability-h">책임의 제한</h2>
+    <div class="article-body">
+      <p>법률이 허용하는 최대 범위에서, 당사는 Privaro의 사용(또는 사용 불능)으로 인해 발생하거나 이와 관련된 간접적, 부수적, 특별, 결과적 또는 징벌적 손해, 데이터·이익·콘텐츠의 손실에 대해 어떠한 경우에도 책임지지 않으며, 그러한 손해의 가능성을 사전에 고지받았더라도 마찬가지입니다. 본 앱과 관련된 모든 청구에 대한 당사의 총 책임은 청구 이전 12개월 동안 사용자가 본 앱에 대해 당사에 지급한 금액을 초과하지 않으며, 지급 금액이 없는 경우 명목상의 금액을 초과하지 않습니다.</p>
+      <p>일부 관할권에서는 묵시적 보증의 배제나 특정 손해의 제한을 허용하지 않으므로 위 내용의 일부가 적용되지 않을 수 있습니다. 그러한 경우 당사의 책임은 관련 법률이 허용하는 최대 범위로 제한되며, 본 약관의 어떠한 내용도 거주 국가의 강행 법규에 따라 포기할 수 없는 권리를 제한하거나 배제하지 않습니다.</p>
+    </div>
+  </section>
+  <section class="article" id="indemnification" aria-labelledby="indemnification-h">
+    <h2 id="indemnification-h">면책 보상</h2>
+    <div class="article-body">
+      <p>법률이 허용하는 최대 범위에서, 사용자는 저장하거나 공유한 콘텐츠, 본 앱의 사용 또는 오용, 본 약관 위반, 법률이나 제3자 권리의 침해로 인해 발생하거나 이와 관련된 모든 청구, 손해, 손실, 책임 및 비용(합리적인 법률 비용 포함)으로부터 Erdinc Zarbo를 면책하고 보호하는 데 동의합니다.</p>
+    </div>
+  </section>
+  <section class="article" id="apple" aria-labelledby="apple-h">
+    <h2 id="apple-h">Apple</h2>
+    <div class="article-body">
+      <p>본 약관은 사용자와 당사 사이의 계약이며 Apple과의 계약이 아닙니다. Apple은 본 앱이나 그 콘텐츠에 대해 책임지지 않습니다. Apple과 그 자회사는 본 약관의 제3자 수익자이며 사용자에게 본 약관을 집행할 수 있습니다. 본 앱의 사용은 Apple 미디어 서비스 이용약관도 준수해야 합니다.</p>
+    </div>
+  </section>
+  <section class="article" id="changes" aria-labelledby="changes-h">
+    <h2 id="changes-h">약관의 변경</h2>
+    <div class="article-body">
+      <p>당사는 본 약관을 수시로 업데이트할 수 있습니다. 위의 ‘최종 업데이트’ 날짜를 갱신하며, 중요한 변경 사항은 앱이나 웹사이트에 안내합니다. 변경 사항이 적용된 후에도 본 앱을 계속 사용하면 업데이트된 약관에 동의한 것으로 간주됩니다.</p>
+    </div>
+  </section>
+  <section class="article" id="governing-law" aria-labelledby="governing-law-h">
+    <h2 id="governing-law-h">준거법</h2>
+    <div class="article-body">
+      <p>본 약관은 거주 국가의 강행적 소비자 보호 법규가 적용되는 경우를 제외하고, 국제사법 원칙을 배제한 네덜란드 법률의 적용을 받습니다.</p>
+    </div>
+  </section>
+  <section class="article" id="severability" aria-labelledby="severability-h">
+    <h2 id="severability-h">가분성</h2>
+    <div class="article-body">
+      <p>본 약관의 어느 조항이 무효이거나 집행 불가능한 것으로 판단되는 경우, 해당 조항은 필요한 최소한의 범위에서 제한되거나 삭제되며 나머지 조항은 완전한 효력을 유지합니다.</p>
+    </div>
+  </section>
+  <section class="article" id="contact" aria-labelledby="contact-h">
+    <h2 id="contact-h">문의</h2>
+    <div class="article-body">
+      <p>본 약관에 대한 문의는 다음으로 연락해 주세요. <a href="mailto:erdincdubu@icloud.com">erdincdubu@icloud.com</a></p>
+    </div>
+  </section>
+  </div>
 
-  <h2>보안 및 데이터 삭제 기능</h2>
-  <p>Privaro에는 강압 삭제, 미끼 보관함, 패닉 잠금 등 데이터를 삭제하거나 접근 방식을 변경하도록 의도적으로 설계된 선택 기능이 포함되어 있습니다. 이러한 기능은 설명된 대로 정확히 작동하며 의도적이고 영구적인 데이터 손실을 초래할 수 있습니다.</p>
-  <p>특히 <strong>강압 삭제</strong>를 활성화한 경우, (예를 들어 잠금 화면에서) 강압용 암호를 입력하면 실제 보관함과 그 안의 모든 항목이 즉시, 영구적으로, 되돌릴 수 없게 삭제됩니다. 이는 설계상 의도된 동작이며 확인 창도, 실행 취소도, 복구도 없습니다. 예상하지 못한 상황에서도 마찬가지입니다. 이러한 기능을 활성화할지와 어떻게 설정할지는 사용자가 결정하며, 그 결정과 그로 인한 데이터 손실 또는 접근 불가에 대한 책임은 전적으로 사용자에게 있습니다. 또한 이러한 기능의 사용으로 삭제, 은닉되거나 접근할 수 없게 된 데이터에 대해 당사가 책임지지 않는다는 데 동의합니다. 동작 방식을 완전히 이해하고 받아들이는 경우에만 활성화하십시오.</p>
-
-  <h2>구매</h2>
-  <p>Privaro는 Apple App Store를 통해 판매되는 일회성 구매 형태의 선택적 유료 업그레이드(‘Privaro Pro’)를 제공합니다. 구독은 없으며 갱신되는 것도 없습니다. 구매 확인 시 Apple 계정으로 결제되며, 업그레이드는 해당 Apple 계정에 로그인한 모든 기기에 적용됩니다. 가격은 지역에 따라 다를 수 있으며 구매 시점에 표시됩니다. 법률이나 Apple 정책이 요구하는 경우를 제외하고 결제 금액은 환불되지 않으며, 환불 요청은 Apple이 처리합니다.</p>
-
-  <h2>면책 조항</h2>
-  <p>Privaro는 상품성, 특정 목적 적합성, 비침해에 대한 묵시적 보증을 포함하여 명시적이든 묵시적이든 어떠한 종류의 보증 없이 ‘있는 그대로’, ‘이용 가능한 상태로’ 제공됩니다. 당사는 강력한 업계 표준 암호화를 사용하지만, 앱이 중단 없이 오류 없이 작동하거나 사용자의 요구를 충족한다고 보증하지 않으며, 어떠한 보안 조치도 뚫리지 않는다고 보장되지 않습니다. 전송 중 암호화되지 않는 Wi-Fi 전송과 같은 기능은 사용자의 위험 부담으로, 신뢰할 수 있는 네트워크에서만 사용하십시오.</p>
-  <p>Privaro는 소비자용 소프트웨어 도구이지 안전을 보장하는 수단이 아닙니다. 당사는 결연한 공격자, 기기에 대한 포렌식 분석, 악성코드, 운영체제나 제3자 구성요소의 취약점, 법적 또는 물리적 강요를 포함한 모든 위협으로부터 콘텐츠를 보호한다고 보증하지 않습니다. 본 앱이 사용자의 필요와 위협 모델에 적합한지 평가할 책임은 사용자에게 있습니다.</p>
-
-  <h2>책임의 제한</h2>
-  <p>법률이 허용하는 최대 범위에서, 당사는 Privaro의 사용(또는 사용 불능)으로 인해 발생하거나 이와 관련된 간접적, 부수적, 특별, 결과적 또는 징벌적 손해, 데이터·이익·콘텐츠의 손실에 대해 어떠한 경우에도 책임지지 않으며, 그러한 손해의 가능성을 사전에 고지받았더라도 마찬가지입니다. 본 앱과 관련된 모든 청구에 대한 당사의 총 책임은 청구 이전 12개월 동안 사용자가 본 앱에 대해 당사에 지급한 금액을 초과하지 않으며, 지급 금액이 없는 경우 명목상의 금액을 초과하지 않습니다.</p>
-  <p>일부 관할권에서는 묵시적 보증의 배제나 특정 손해의 제한을 허용하지 않으므로 위 내용의 일부가 적용되지 않을 수 있습니다. 그러한 경우 당사의 책임은 관련 법률이 허용하는 최대 범위로 제한되며, 본 약관의 어떠한 내용도 거주 국가의 강행 법규에 따라 포기할 수 없는 권리를 제한하거나 배제하지 않습니다.</p>
-
-  <h2>면책 보상</h2>
-  <p>법률이 허용하는 최대 범위에서, 사용자는 저장하거나 공유한 콘텐츠, 본 앱의 사용 또는 오용, 본 약관 위반, 법률이나 제3자 권리의 침해로 인해 발생하거나 이와 관련된 모든 청구, 손해, 손실, 책임 및 비용(합리적인 법률 비용 포함)으로부터 Erdinc Zarbo를 면책하고 보호하는 데 동의합니다.</p>
-
-  <h2>Apple</h2>
-  <p>본 약관은 사용자와 당사 사이의 계약이며 Apple과의 계약이 아닙니다. Apple은 본 앱이나 그 콘텐츠에 대해 책임지지 않습니다. Apple과 그 자회사는 본 약관의 제3자 수익자이며 사용자에게 본 약관을 집행할 수 있습니다. 본 앱의 사용은 Apple 미디어 서비스 이용약관도 준수해야 합니다.</p>
-
-  <h2>약관의 변경</h2>
-  <p>당사는 본 약관을 수시로 업데이트할 수 있습니다. 위의 ‘최종 업데이트’ 날짜를 갱신하며, 중요한 변경 사항은 앱이나 웹사이트에 안내합니다. 변경 사항이 적용된 후에도 본 앱을 계속 사용하면 업데이트된 약관에 동의한 것으로 간주됩니다.</p>
-
-  <h2>준거법</h2>
-  <p>본 약관은 거주 국가의 강행적 소비자 보호 법규가 적용되는 경우를 제외하고, 국제사법 원칙을 배제한 네덜란드 법률의 적용을 받습니다.</p>
-
-  <h2>가분성</h2>
-  <p>본 약관의 어느 조항이 무효이거나 집행 불가능한 것으로 판단되는 경우, 해당 조항은 필요한 최소한의 범위에서 제한되거나 삭제되며 나머지 조항은 완전한 효력을 유지합니다.</p>
-
-  <h2>문의</h2>
-  <p>본 약관에 대한 문의는 다음으로 연락해 주세요. <a href="mailto:erdincdubu@icloud.com">erdincdubu@icloud.com</a></p>
   <p class="authoritative">본 방침은 다른 언어로도 제공됩니다. 내용이 다를 경우 영어 버전이 우선합니다.</p>
-</div>
 
 </main>
 

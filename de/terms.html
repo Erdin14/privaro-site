@@ -38,7 +38,7 @@
 <meta name="apple-itunes-app" content="app-id=6783131829" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=5a978f849c" />
+<link rel="stylesheet" href="/styles.css?v=79f5af2618" />
 <link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
 <script>
 // Register before first reveal, including restored history entries.
@@ -82,63 +82,134 @@
   </div>
 </header>
 
-<main class="page wrap">
+<main class="page wrap terms">
 
-<h1>Nutzungsbedingungen</h1>
-<p class="updated">Gültig ab: 28. Juni 2026 · Zuletzt aktualisiert: 28. Juni 2026</p>
-<p class="intro">Diese Nutzungsbedingungen („Bedingungen“) regeln deine Nutzung der App Privaro („Privaro“, „die App“), bereitgestellt von Erdinc Zarbo („wir“, „uns“ oder „unser“). Mit dem Laden oder Nutzen von Privaro stimmst du diesen Bedingungen zu. Wenn du nicht zustimmst, nutze die App bitte nicht.</p>
-<p class="note"><strong>Bitte sorgfältig lesen.</strong> Privaro verschlüsselt deine Inhalte auf deinem Gerät mit einem Schlüssel, den nur du kontrollierst. Das bedeutet: Wenn du deinen Code und deinen Wiederherstellungsschlüssel verlierst, <strong>kann niemand deine Daten wiederherstellen – auch wir nicht.</strong> Privaro enthält außerdem Funktionen, die Daten absichtlich dauerhaft löschen. Du bist dafür verantwortlich, Code und Wiederherstellungsschlüssel sicher aufzubewahren, die App zu konfigurieren und eigene Backups zu führen.</p>
+  <!-- The title, when it was written, and what it covers. -->
+  <header class="terms-hero">
+    <h1>Nutzungsbedingungen</h1>
+    <p class="updated">Gültig ab: 28. Juni 2026 · Zuletzt aktualisiert: 28. Juni 2026</p>
+    <p class="intro">Diese Nutzungsbedingungen („Bedingungen“) regeln deine Nutzung der App Privaro („Privaro“, „die App“), bereitgestellt von Erdinc Zarbo („wir“, „uns“ oder „unser“). Mit dem Laden oder Nutzen von Privaro stimmst du diesen Bedingungen zu. Wenn du nicht zustimmst, nutze die App bitte nicht.</p>
+  </header>
 
-<div class="legal">
-  <h2>Lizenz</h2>
-  <p>Wir gewähren dir eine persönliche, nicht exklusive, nicht übertragbare, widerrufliche Lizenz zur Nutzung von Privaro auf Apple-Geräten, die du besitzt oder kontrollierst, gemäß diesen Bedingungen und den Nutzungsbedingungen des Apple App Store. Du darfst die App nicht kopieren, verändern, zurückentwickeln, dekompilieren, verkaufen, unterlizenzieren oder verbreiten, außer soweit gesetzlich erlaubt.</p>
+  <!-- The one thing to read if nothing else: set large, between two lines. -->
+  <aside class="terms-warning" aria-label="Bitte sorgfältig lesen.">
+    <p class="terms-warning-label">Bitte sorgfältig lesen.</p>
+    <p class="terms-warning-body">Privaro verschlüsselt deine Inhalte auf deinem Gerät mit einem Schlüssel, den nur du kontrollierst. Das bedeutet: Wenn du deinen Code und deinen Wiederherstellungsschlüssel verlierst, <strong>kann niemand deine Daten wiederherstellen – auch wir nicht.</strong> Privaro enthält außerdem Funktionen, die Daten absichtlich dauerhaft löschen. Du bist dafür verantwortlich, Code und Wiederherstellungsschlüssel sicher aufzubewahren, die App zu konfigurieren und eigene Backups zu führen.</p>
+  </aside>
 
-  <h2>Deine Pflichten</h2>
-  <ul>
-    <li>Du bist für den Schutz deines Codes, deines Wiederherstellungsschlüssels und deines Geräts verantwortlich.</li>
-    <li>Du bist für die in der App gespeicherten Inhalte verantwortlich und dafür, dass du zu deren Speicherung berechtigt bist.</li>
-    <li>Du bist dafür verantwortlich, wie du die Funktionen der App aktivierst und konfigurierst, einschließlich der Sicherheits- und Löschfunktionen.</li>
-    <li>Du verpflichtest dich, Privaro nicht zum Speichern oder Teilen rechtswidriger Inhalte oder von Inhalten zu nutzen, die Rechte Dritter verletzen.</li>
-    <li>Du verpflichtest dich, die App nicht für rechtswidrige Zwecke oder unter Verstoß gegen geltendes Recht zu nutzen.</li>
-  </ul>
+  <!-- The sections, numbered as they are below, each a link to it. -->
+  <nav class="terms-index" aria-labelledby="terms-index-h">
+    <p id="terms-index-h" class="terms-index-label">En esta página</p>
+    <ol>
+      <li><a href="#license">Lizenz</a></li>
+      <li><a href="#responsibilities">Deine Pflichten</a></li>
+      <li><a href="#data-loss">Datenverlust und Backups</a></li>
+      <li><a href="#erasing-features">Sicherheits- und Löschfunktionen</a></li>
+      <li><a href="#purchases">Käufe</a></li>
+      <li><a href="#disclaimers">Haftungsausschlüsse</a></li>
+      <li><a href="#liability">Haftungsbeschränkung</a></li>
+      <li><a href="#indemnification">Freistellung</a></li>
+      <li><a href="#apple">Apple</a></li>
+      <li><a href="#changes">Änderungen dieser Bedingungen</a></li>
+      <li><a href="#governing-law">Anwendbares Recht</a></li>
+      <li><a href="#severability">Salvatorische Klausel</a></li>
+      <li><a href="#contact">Kontakt</a></li>
+    </ol>
+  </nav>
 
-  <h2>Datenverlust und Backups</h2>
-  <p>Aufgrund der Zero-Knowledge-Verschlüsselung auf dem Gerät können wir deinen Code nicht zurücksetzen, deinen Schlüssel nicht wiederherstellen und deine Inhalte nicht für dich wiederherstellen. Jedes der folgenden Ereignisse kann zu dauerhaftem, nicht behebbarem Verlust deiner Inhalte führen: Verlust oder Vergessen von Code und Wiederherstellungsschlüssel; Verlust, Diebstahl, Beschädigung, Reparatur, Zurücksetzen oder Austausch deines Geräts; Löschen der App oder ihrer Daten; Betriebssystem- oder Hardwarefehler; oder das Fehlen eines aktuellen, funktionierenden Backups. Für eigene Backups bist allein du verantwortlich. Die optionalen Backup-, Wiederherstellungs- und Übertragungsfunktionen nutzt du nach eigenem Ermessen und auf eigenes Risiko; wir garantieren weder deren Verfügbarkeit noch Vollständigkeit oder Erfolg.</p>
+  <!-- Each section an article: its number and title on the left, the text
+       on the right, in a reading measure. Space, not lines, between them. -->
+  <div class="articles">
+  <section class="article" id="license" aria-labelledby="license-h">
+    <h2 id="license-h">Lizenz</h2>
+    <div class="article-body">
+      <p>Wir gewähren dir eine persönliche, nicht exklusive, nicht übertragbare, widerrufliche Lizenz zur Nutzung von Privaro auf Apple-Geräten, die du besitzt oder kontrollierst, gemäß diesen Bedingungen und den Nutzungsbedingungen des Apple App Store. Du darfst die App nicht kopieren, verändern, zurückentwickeln, dekompilieren, verkaufen, unterlizenzieren oder verbreiten, außer soweit gesetzlich erlaubt.</p>
+    </div>
+  </section>
+  <section class="article" id="responsibilities" aria-labelledby="responsibilities-h">
+    <h2 id="responsibilities-h">Deine Pflichten</h2>
+    <div class="article-body">
+      <ul>
+        <li>Du bist für den Schutz deines Codes, deines Wiederherstellungsschlüssels und deines Geräts verantwortlich.</li>
+        <li>Du bist für die in der App gespeicherten Inhalte verantwortlich und dafür, dass du zu deren Speicherung berechtigt bist.</li>
+        <li>Du bist dafür verantwortlich, wie du die Funktionen der App aktivierst und konfigurierst, einschließlich der Sicherheits- und Löschfunktionen.</li>
+        <li>Du verpflichtest dich, Privaro nicht zum Speichern oder Teilen rechtswidriger Inhalte oder von Inhalten zu nutzen, die Rechte Dritter verletzen.</li>
+        <li>Du verpflichtest dich, die App nicht für rechtswidrige Zwecke oder unter Verstoß gegen geltendes Recht zu nutzen.</li>
+      </ul>
+    </div>
+  </section>
+  <section class="article" id="data-loss" aria-labelledby="data-loss-h">
+    <h2 id="data-loss-h">Datenverlust und Backups</h2>
+    <div class="article-body">
+      <p>Aufgrund der Zero-Knowledge-Verschlüsselung auf dem Gerät können wir deinen Code nicht zurücksetzen, deinen Schlüssel nicht wiederherstellen und deine Inhalte nicht für dich wiederherstellen. Jedes der folgenden Ereignisse kann zu dauerhaftem, nicht behebbarem Verlust deiner Inhalte führen: Verlust oder Vergessen von Code und Wiederherstellungsschlüssel; Verlust, Diebstahl, Beschädigung, Reparatur, Zurücksetzen oder Austausch deines Geräts; Löschen der App oder ihrer Daten; Betriebssystem- oder Hardwarefehler; oder das Fehlen eines aktuellen, funktionierenden Backups. Für eigene Backups bist allein du verantwortlich. Die optionalen Backup-, Wiederherstellungs- und Übertragungsfunktionen nutzt du nach eigenem Ermessen und auf eigenes Risiko; wir garantieren weder deren Verfügbarkeit noch Vollständigkeit oder Erfolg.</p>
+    </div>
+  </section>
+  <section class="article" id="erasing-features" aria-labelledby="erasing-features-h">
+    <h2 id="erasing-features-h">Sicherheits- und Löschfunktionen</h2>
+    <div class="article-body">
+      <p>Privaro enthält optionale Funktionen, die bewusst dafür ausgelegt sind, deine Daten zu löschen oder den Zugriff darauf zu verändern, darunter Notfall-Löschung, Täuschungstresor, Panik-Sperre und ähnliche Werkzeuge. Diese Funktionen arbeiten genau wie beschrieben und können absichtlichen, dauerhaften Datenverlust verursachen.</p>
+      <p>Insbesondere gilt: Wenn du die <strong>Notfall-Löschung</strong> aktivierst, wird durch Eingabe des Notfallcodes (etwa am Sperrbildschirm) dein echter Tresor samt Inhalt sofort, dauerhaft und unwiderruflich gelöscht – so vorgesehen, ohne Bestätigungsabfrage, ohne Rückgängigmachen und ohne Wiederherstellung, auch in Situationen, die du nicht vorhergesehen hast. Du entscheidest, ob und wie du diese Funktionen aktivierst; du allein trägst die Verantwortung für diese Entscheidung und für jeden daraus folgenden Verlust deiner Daten oder deren Unzugänglichkeit; und du erkennst an, dass wir für Daten, die durch deine Nutzung dieser Funktionen gelöscht, verborgen oder unzugänglich gemacht werden, nicht haften. Aktiviere diese Funktionen nur, wenn du ihr Verhalten vollständig verstehst und akzeptierst.</p>
+    </div>
+  </section>
+  <section class="article" id="purchases" aria-labelledby="purchases-h">
+    <h2 id="purchases-h">Käufe</h2>
+    <div class="article-body">
+      <p>Privaro bietet ein optionales kostenpflichtiges Upgrade („Privaro Pro“) als einmaligen Kauf über den Apple App Store an. Es gibt kein Abo und nichts verlängert sich. Die Zahlung wird bei Kaufbestätigung über deinen Apple Account abgerechnet, und das Upgrade gilt für alle Geräte, die bei diesem Apple Account angemeldet sind. Preise können je nach Region variieren und werden beim Kauf angezeigt. Soweit nicht gesetzlich oder durch Apples Richtlinien vorgeschrieben, sind Zahlungen nicht erstattungsfähig; Erstattungsanfragen bearbeitet Apple.</p>
+    </div>
+  </section>
+  <section class="article" id="disclaimers" aria-labelledby="disclaimers-h">
+    <h2 id="disclaimers-h">Haftungsausschlüsse</h2>
+    <div class="article-body">
+      <p>Privaro wird „wie besehen“ und „wie verfügbar“ bereitgestellt, ohne ausdrückliche oder stillschweigende Gewährleistungen jeglicher Art, einschließlich stillschweigender Gewährleistungen der Marktgängigkeit, der Eignung für einen bestimmten Zweck und der Nichtverletzung von Rechten. Zwar verwenden wir starke, branchenübliche Verschlüsselung, wir gewährleisten jedoch nicht, dass die App unterbrechungsfrei oder fehlerfrei läuft oder deinen Anforderungen entspricht; keine Sicherheitsmaßnahme ist garantiert undurchdringlich. Funktionen wie die WLAN-Übertragung, die während der Übertragung nicht verschlüsselt ist, nutzt du auf eigenes Risiko und nur in Netzwerken, denen du vertraust.</p>
+      <p>Privaro ist ein Verbrauchersoftware-Werkzeug, keine Sicherheitsgarantie. Wir gewährleisten nicht, dass es deine Inhalte vor allen Bedrohungen schützt, einschließlich entschlossener Angreifer, forensischer Untersuchung eines Geräts, Schadsoftware, Schwachstellen im Betriebssystem oder in Komponenten Dritter oder rechtlichem beziehungsweise physischem Zwang. Du bist dafür verantwortlich zu beurteilen, ob die App für deine Bedürfnisse und dein Bedrohungsmodell geeignet ist.</p>
+    </div>
+  </section>
+  <section class="article" id="liability" aria-labelledby="liability-h">
+    <h2 id="liability-h">Haftungsbeschränkung</h2>
+    <div class="article-body">
+      <p>Soweit gesetzlich zulässig, haften wir in keinem Fall für indirekte, zufällige, besondere, Folge- oder Strafschäden oder für den Verlust von Daten, Gewinnen oder Inhalten, die sich aus deiner Nutzung (oder der Unmöglichkeit der Nutzung) von Privaro ergeben, selbst wenn auf die Möglichkeit solcher Schäden hingewiesen wurde. Unsere Gesamthaftung für Ansprüche im Zusammenhang mit der App übersteigt nicht den Betrag, den du in den zwölf Monaten vor dem Anspruch für die App an uns gezahlt hast, oder – falls nichts gezahlt wurde – einen symbolischen Betrag.</p>
+      <p>In manchen Rechtsordnungen sind der Ausschluss stillschweigender Gewährleistungen oder die Beschränkung bestimmter Schäden unzulässig, sodass Teile des Vorstehenden für dich möglicherweise nicht gelten. In diesem Fall ist unsere Haftung auf das gesetzlich zulässige Höchstmaß beschränkt, und nichts in diesen Bedingungen beschränkt oder schließt Rechte aus, auf die nach zwingendem Recht deines Wohnsitzlandes nicht verzichtet werden kann.</p>
+    </div>
+  </section>
+  <section class="article" id="indemnification" aria-labelledby="indemnification-h">
+    <h2 id="indemnification-h">Freistellung</h2>
+    <div class="article-body">
+      <p>Soweit gesetzlich zulässig, stellst du Erdinc Zarbo von allen Ansprüchen, Schäden, Verlusten, Verbindlichkeiten und Kosten (einschließlich angemessener Anwaltskosten) frei, die sich ergeben aus oder zusammenhängen mit: den von dir gespeicherten oder geteilten Inhalten; deiner Nutzung oder missbräuchlichen Nutzung der App; deinem Verstoß gegen diese Bedingungen; oder deinem Verstoß gegen Gesetze oder Rechte Dritter.</p>
+    </div>
+  </section>
+  <section class="article" id="apple" aria-labelledby="apple-h">
+    <h2 id="apple-h">Apple</h2>
+    <div class="article-body">
+      <p>Diese Bedingungen bestehen zwischen dir und uns, nicht mit Apple. Apple ist nicht für die App oder ihre Inhalte verantwortlich. Apple und seine Tochtergesellschaften sind Drittbegünstigte dieser Bedingungen und können sie dir gegenüber durchsetzen. Deine Nutzung der App muss außerdem den Apple-Media-Services-Geschäftsbedingungen entsprechen.</p>
+    </div>
+  </section>
+  <section class="article" id="changes" aria-labelledby="changes-h">
+    <h2 id="changes-h">Änderungen dieser Bedingungen</h2>
+    <div class="article-body">
+      <p>Wir können diese Bedingungen von Zeit zu Zeit aktualisieren. Wir passen das oben stehende Datum „Zuletzt aktualisiert“ an, und wesentliche Änderungen werden in der App oder auf unserer Website kenntlich gemacht. Deine fortgesetzte Nutzung der App nach Inkrafttreten der Änderungen gilt als Zustimmung zu den aktualisierten Bedingungen.</p>
+    </div>
+  </section>
+  <section class="article" id="governing-law" aria-labelledby="governing-law-h">
+    <h2 id="governing-law-h">Anwendbares Recht</h2>
+    <div class="article-body">
+      <p>Diese Bedingungen unterliegen dem Recht der Niederlande unter Ausschluss seiner Kollisionsnormen, soweit nicht zwingende Verbraucherschutzvorschriften deines Wohnsitzlandes gelten.</p>
+    </div>
+  </section>
+  <section class="article" id="severability" aria-labelledby="severability-h">
+    <h2 id="severability-h">Salvatorische Klausel</h2>
+    <div class="article-body">
+      <p>Sollte eine Bestimmung dieser Bedingungen unwirksam oder undurchsetzbar sein, wird sie im geringstmöglichen Umfang eingeschränkt oder gestrichen; die übrigen Bestimmungen bleiben in vollem Umfang wirksam.</p>
+    </div>
+  </section>
+  <section class="article" id="contact" aria-labelledby="contact-h">
+    <h2 id="contact-h">Kontakt</h2>
+    <div class="article-body">
+      <p>Fragen zu diesen Bedingungen? Kontaktiere uns unter <a href="mailto:erdincdubu@icloud.com">erdincdubu@icloud.com</a></p>
+    </div>
+  </section>
+  </div>
 
-  <h2>Sicherheits- und Löschfunktionen</h2>
-  <p>Privaro enthält optionale Funktionen, die bewusst dafür ausgelegt sind, deine Daten zu löschen oder den Zugriff darauf zu verändern, darunter Notfall-Löschung, Täuschungstresor, Panik-Sperre und ähnliche Werkzeuge. Diese Funktionen arbeiten genau wie beschrieben und können absichtlichen, dauerhaften Datenverlust verursachen.</p>
-  <p>Insbesondere gilt: Wenn du die <strong>Notfall-Löschung</strong> aktivierst, wird durch Eingabe des Notfallcodes (etwa am Sperrbildschirm) dein echter Tresor samt Inhalt sofort, dauerhaft und unwiderruflich gelöscht – so vorgesehen, ohne Bestätigungsabfrage, ohne Rückgängigmachen und ohne Wiederherstellung, auch in Situationen, die du nicht vorhergesehen hast. Du entscheidest, ob und wie du diese Funktionen aktivierst; du allein trägst die Verantwortung für diese Entscheidung und für jeden daraus folgenden Verlust deiner Daten oder deren Unzugänglichkeit; und du erkennst an, dass wir für Daten, die durch deine Nutzung dieser Funktionen gelöscht, verborgen oder unzugänglich gemacht werden, nicht haften. Aktiviere diese Funktionen nur, wenn du ihr Verhalten vollständig verstehst und akzeptierst.</p>
-
-  <h2>Käufe</h2>
-  <p>Privaro bietet ein optionales kostenpflichtiges Upgrade („Privaro Pro“) als einmaligen Kauf über den Apple App Store an. Es gibt kein Abo und nichts verlängert sich. Die Zahlung wird bei Kaufbestätigung über deinen Apple Account abgerechnet, und das Upgrade gilt für alle Geräte, die bei diesem Apple Account angemeldet sind. Preise können je nach Region variieren und werden beim Kauf angezeigt. Soweit nicht gesetzlich oder durch Apples Richtlinien vorgeschrieben, sind Zahlungen nicht erstattungsfähig; Erstattungsanfragen bearbeitet Apple.</p>
-
-  <h2>Haftungsausschlüsse</h2>
-  <p>Privaro wird „wie besehen“ und „wie verfügbar“ bereitgestellt, ohne ausdrückliche oder stillschweigende Gewährleistungen jeglicher Art, einschließlich stillschweigender Gewährleistungen der Marktgängigkeit, der Eignung für einen bestimmten Zweck und der Nichtverletzung von Rechten. Zwar verwenden wir starke, branchenübliche Verschlüsselung, wir gewährleisten jedoch nicht, dass die App unterbrechungsfrei oder fehlerfrei läuft oder deinen Anforderungen entspricht; keine Sicherheitsmaßnahme ist garantiert undurchdringlich. Funktionen wie die WLAN-Übertragung, die während der Übertragung nicht verschlüsselt ist, nutzt du auf eigenes Risiko und nur in Netzwerken, denen du vertraust.</p>
-  <p>Privaro ist ein Verbrauchersoftware-Werkzeug, keine Sicherheitsgarantie. Wir gewährleisten nicht, dass es deine Inhalte vor allen Bedrohungen schützt, einschließlich entschlossener Angreifer, forensischer Untersuchung eines Geräts, Schadsoftware, Schwachstellen im Betriebssystem oder in Komponenten Dritter oder rechtlichem beziehungsweise physischem Zwang. Du bist dafür verantwortlich zu beurteilen, ob die App für deine Bedürfnisse und dein Bedrohungsmodell geeignet ist.</p>
-
-  <h2>Haftungsbeschränkung</h2>
-  <p>Soweit gesetzlich zulässig, haften wir in keinem Fall für indirekte, zufällige, besondere, Folge- oder Strafschäden oder für den Verlust von Daten, Gewinnen oder Inhalten, die sich aus deiner Nutzung (oder der Unmöglichkeit der Nutzung) von Privaro ergeben, selbst wenn auf die Möglichkeit solcher Schäden hingewiesen wurde. Unsere Gesamthaftung für Ansprüche im Zusammenhang mit der App übersteigt nicht den Betrag, den du in den zwölf Monaten vor dem Anspruch für die App an uns gezahlt hast, oder – falls nichts gezahlt wurde – einen symbolischen Betrag.</p>
-  <p>In manchen Rechtsordnungen sind der Ausschluss stillschweigender Gewährleistungen oder die Beschränkung bestimmter Schäden unzulässig, sodass Teile des Vorstehenden für dich möglicherweise nicht gelten. In diesem Fall ist unsere Haftung auf das gesetzlich zulässige Höchstmaß beschränkt, und nichts in diesen Bedingungen beschränkt oder schließt Rechte aus, auf die nach zwingendem Recht deines Wohnsitzlandes nicht verzichtet werden kann.</p>
-
-  <h2>Freistellung</h2>
-  <p>Soweit gesetzlich zulässig, stellst du Erdinc Zarbo von allen Ansprüchen, Schäden, Verlusten, Verbindlichkeiten und Kosten (einschließlich angemessener Anwaltskosten) frei, die sich ergeben aus oder zusammenhängen mit: den von dir gespeicherten oder geteilten Inhalten; deiner Nutzung oder missbräuchlichen Nutzung der App; deinem Verstoß gegen diese Bedingungen; oder deinem Verstoß gegen Gesetze oder Rechte Dritter.</p>
-
-  <h2>Apple</h2>
-  <p>Diese Bedingungen bestehen zwischen dir und uns, nicht mit Apple. Apple ist nicht für die App oder ihre Inhalte verantwortlich. Apple und seine Tochtergesellschaften sind Drittbegünstigte dieser Bedingungen und können sie dir gegenüber durchsetzen. Deine Nutzung der App muss außerdem den Apple-Media-Services-Geschäftsbedingungen entsprechen.</p>
-
-  <h2>Änderungen dieser Bedingungen</h2>
-  <p>Wir können diese Bedingungen von Zeit zu Zeit aktualisieren. Wir passen das oben stehende Datum „Zuletzt aktualisiert“ an, und wesentliche Änderungen werden in der App oder auf unserer Website kenntlich gemacht. Deine fortgesetzte Nutzung der App nach Inkrafttreten der Änderungen gilt als Zustimmung zu den aktualisierten Bedingungen.</p>
-
-  <h2>Anwendbares Recht</h2>
-  <p>Diese Bedingungen unterliegen dem Recht der Niederlande unter Ausschluss seiner Kollisionsnormen, soweit nicht zwingende Verbraucherschutzvorschriften deines Wohnsitzlandes gelten.</p>
-
-  <h2>Salvatorische Klausel</h2>
-  <p>Sollte eine Bestimmung dieser Bedingungen unwirksam oder undurchsetzbar sein, wird sie im geringstmöglichen Umfang eingeschränkt oder gestrichen; die übrigen Bestimmungen bleiben in vollem Umfang wirksam.</p>
-
-  <h2>Kontakt</h2>
-  <p>Fragen zu diesen Bedingungen? Kontaktiere uns unter <a href="mailto:erdincdubu@icloud.com">erdincdubu@icloud.com</a></p>
   <p class="authoritative">Diese Erklärung ist auch in anderen Sprachen verfügbar. Bei Abweichungen ist die englische Fassung maßgeblich.</p>
-</div>
 
 </main>
 

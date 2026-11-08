@@ -38,7 +38,7 @@
 <meta name="apple-itunes-app" content="app-id=6783131829" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=5a978f849c" />
+<link rel="stylesheet" href="/styles.css?v=79f5af2618" />
 <link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
 <script>
 // Register before first reveal, including restored history entries.
@@ -82,63 +82,134 @@
   </div>
 </header>
 
-<main class="page wrap">
+<main class="page wrap terms">
 
-<h1>Términos de uso</h1>
-<p class="updated">Fecha de entrada en vigor: 28 de junio de 2026 · Última actualización: 28 de junio de 2026</p>
-<p class="intro">Estos Términos de uso («Términos») rigen tu uso de la app Privaro («Privaro», «la app»), ofrecida por Erdinc Zarbo («nosotros» o «nuestro»). Al descargar o usar Privaro, aceptas estos Términos. Si no los aceptas, no uses la app.</p>
-<p class="note"><strong>Léelo con atención.</strong> Privaro cifra tu contenido en tu dispositivo con una clave que solo tú controlas. Esto significa que si pierdes tu código y tu clave de recuperación, <strong>nadie, ni siquiera nosotros, puede recuperar tus datos.</strong> Privaro también incluye funciones que borran datos de forma permanente a propósito. Eres responsable de guardar tu código y tu clave de recuperación, de cómo configuras la app y de mantener tus propias copias de seguridad.</p>
+  <!-- The title, when it was written, and what it covers. -->
+  <header class="terms-hero">
+    <h1>Términos de uso</h1>
+    <p class="updated">Fecha de entrada en vigor: 28 de junio de 2026 · Última actualización: 28 de junio de 2026</p>
+    <p class="intro">Estos Términos de uso («Términos») rigen tu uso de la app Privaro («Privaro», «la app»), ofrecida por Erdinc Zarbo («nosotros» o «nuestro»). Al descargar o usar Privaro, aceptas estos Términos. Si no los aceptas, no uses la app.</p>
+  </header>
 
-<div class="legal">
-  <h2>Licencia</h2>
-  <p>Te concedemos una licencia personal, no exclusiva, intransferible y revocable para usar Privaro en dispositivos Apple de tu propiedad o bajo tu control, conforme a estos Términos y a los Términos de servicio de la App Store de Apple. No puedes copiar, modificar, aplicar ingeniería inversa, descompilar, vender, sublicenciar ni distribuir la app salvo en la medida permitida por la ley.</p>
+  <!-- The one thing to read if nothing else: set large, between two lines. -->
+  <aside class="terms-warning" aria-label="Léelo con atención.">
+    <p class="terms-warning-label">Léelo con atención.</p>
+    <p class="terms-warning-body">Privaro cifra tu contenido en tu dispositivo con una clave que solo tú controlas. Esto significa que si pierdes tu código y tu clave de recuperación, <strong>nadie, ni siquiera nosotros, puede recuperar tus datos.</strong> Privaro también incluye funciones que borran datos de forma permanente a propósito. Eres responsable de guardar tu código y tu clave de recuperación, de cómo configuras la app y de mantener tus propias copias de seguridad.</p>
+  </aside>
 
-  <h2>Tus responsabilidades</h2>
-  <ul>
-    <li>Eres responsable de proteger tu código, tu clave de recuperación y tu dispositivo.</li>
-    <li>Eres responsable del contenido que guardas en la app y de tener derecho a guardarlo.</li>
-    <li>Eres responsable de cómo activas y configuras las funciones de la app, incluidas las de seguridad y borrado.</li>
-    <li>Aceptas no usar Privaro para guardar o compartir contenido ilegal o que infrinja los derechos de terceros.</li>
-    <li>Aceptas no usar la app con fines ilícitos ni en infracción de ninguna ley aplicable.</li>
-  </ul>
+  <!-- The sections, numbered as they are below, each a link to it. -->
+  <nav class="terms-index" aria-labelledby="terms-index-h">
+    <p id="terms-index-h" class="terms-index-label">Auf dieser Seite</p>
+    <ol>
+      <li><a href="#license">Licencia</a></li>
+      <li><a href="#responsibilities">Tus responsabilidades</a></li>
+      <li><a href="#data-loss">Pérdida de datos y copias de seguridad</a></li>
+      <li><a href="#erasing-features">Funciones de seguridad y borrado</a></li>
+      <li><a href="#purchases">Compras</a></li>
+      <li><a href="#disclaimers">Exenciones de responsabilidad</a></li>
+      <li><a href="#liability">Limitación de responsabilidad</a></li>
+      <li><a href="#indemnification">Indemnización</a></li>
+      <li><a href="#apple">Apple</a></li>
+      <li><a href="#changes">Cambios en estos Términos</a></li>
+      <li><a href="#governing-law">Ley aplicable</a></li>
+      <li><a href="#severability">Divisibilidad</a></li>
+      <li><a href="#contact">Contacto</a></li>
+    </ol>
+  </nav>
 
-  <h2>Pérdida de datos y copias de seguridad</h2>
-  <p>Debido al cifrado de conocimiento cero en el dispositivo, no podemos restablecer tu código, recuperar tu clave de cifrado ni restaurar tu contenido. Cualquiera de estas situaciones puede provocar la pérdida permanente e irrecuperable de tu contenido: perder u olvidar tu código y tu clave de recuperación; pérdida, robo, daño, reparación, restablecimiento o sustitución de tu dispositivo; eliminación de la app o de sus datos; fallos del sistema operativo o del hardware; o no mantener una copia de seguridad actual y funcional. Mantener tus propias copias de seguridad es responsabilidad exclusivamente tuya. Usas las funciones opcionales de copia, restauración y transferencia a tu criterio y por tu cuenta y riesgo, y no garantizamos su disponibilidad, integridad ni éxito.</p>
+  <!-- Each section an article: its number and title on the left, the text
+       on the right, in a reading measure. Space, not lines, between them. -->
+  <div class="articles">
+  <section class="article" id="license" aria-labelledby="license-h">
+    <h2 id="license-h">Licencia</h2>
+    <div class="article-body">
+      <p>Te concedemos una licencia personal, no exclusiva, intransferible y revocable para usar Privaro en dispositivos Apple de tu propiedad o bajo tu control, conforme a estos Términos y a los Términos de servicio de la App Store de Apple. No puedes copiar, modificar, aplicar ingeniería inversa, descompilar, vender, sublicenciar ni distribuir la app salvo en la medida permitida por la ley.</p>
+    </div>
+  </section>
+  <section class="article" id="responsibilities" aria-labelledby="responsibilities-h">
+    <h2 id="responsibilities-h">Tus responsabilidades</h2>
+    <div class="article-body">
+      <ul>
+        <li>Eres responsable de proteger tu código, tu clave de recuperación y tu dispositivo.</li>
+        <li>Eres responsable del contenido que guardas en la app y de tener derecho a guardarlo.</li>
+        <li>Eres responsable de cómo activas y configuras las funciones de la app, incluidas las de seguridad y borrado.</li>
+        <li>Aceptas no usar Privaro para guardar o compartir contenido ilegal o que infrinja los derechos de terceros.</li>
+        <li>Aceptas no usar la app con fines ilícitos ni en infracción de ninguna ley aplicable.</li>
+      </ul>
+    </div>
+  </section>
+  <section class="article" id="data-loss" aria-labelledby="data-loss-h">
+    <h2 id="data-loss-h">Pérdida de datos y copias de seguridad</h2>
+    <div class="article-body">
+      <p>Debido al cifrado de conocimiento cero en el dispositivo, no podemos restablecer tu código, recuperar tu clave de cifrado ni restaurar tu contenido. Cualquiera de estas situaciones puede provocar la pérdida permanente e irrecuperable de tu contenido: perder u olvidar tu código y tu clave de recuperación; pérdida, robo, daño, reparación, restablecimiento o sustitución de tu dispositivo; eliminación de la app o de sus datos; fallos del sistema operativo o del hardware; o no mantener una copia de seguridad actual y funcional. Mantener tus propias copias de seguridad es responsabilidad exclusivamente tuya. Usas las funciones opcionales de copia, restauración y transferencia a tu criterio y por tu cuenta y riesgo, y no garantizamos su disponibilidad, integridad ni éxito.</p>
+    </div>
+  </section>
+  <section class="article" id="erasing-features" aria-labelledby="erasing-features-h">
+    <h2 id="erasing-features-h">Funciones de seguridad y borrado</h2>
+    <div class="article-body">
+      <p>Privaro incluye funciones opcionales diseñadas a propósito para borrar tus datos o cambiar cómo se puede acceder a ellos, entre ellas Borrado de coacción, Bóveda señuelo, Bloqueo de pánico y herramientas similares. Estas funciones se comportan exactamente como se describe y pueden causar pérdida de datos intencionada y permanente.</p>
+      <p>En particular, si activas el <strong>Borrado de coacción</strong>, introducir el código de coacción (por ejemplo, en la pantalla de bloqueo) borrará tu bóveda real y todo su contenido de forma inmediata, permanente e irreversible, por diseño, sin aviso de confirmación, sin deshacer y sin recuperación, incluso en circunstancias que no hubieras previsto. Tú decides si activas estas funciones y cómo las configuras; eres el único responsable de esa decisión y de cualquier pérdida de datos o imposibilidad de acceder a ellos que se derive; y aceptas que no somos responsables de los datos borrados, ocultados o inaccesibles por tu uso de estas funciones. No las actives salvo que comprendas y aceptes plenamente cómo se comportan.</p>
+    </div>
+  </section>
+  <section class="article" id="purchases" aria-labelledby="purchases-h">
+    <h2 id="purchases-h">Compras</h2>
+    <div class="article-body">
+      <p>Privaro ofrece una mejora de pago opcional («Privaro Pro») como compra única a través de la App Store de Apple. No hay suscripción y nada se renueva. El pago se carga a tu Apple Account al confirmar la compra, y la mejora se aplica a todos los dispositivos con esa Apple Account. Los precios pueden variar por región y se muestran en el momento de la compra. Salvo cuando lo exija la ley o las políticas de Apple, los pagos no son reembolsables; las solicitudes de reembolso las gestiona Apple.</p>
+    </div>
+  </section>
+  <section class="article" id="disclaimers" aria-labelledby="disclaimers-h">
+    <h2 id="disclaimers-h">Exenciones de responsabilidad</h2>
+    <div class="article-body">
+      <p>Privaro se ofrece «tal cual» y «según disponibilidad», sin garantías de ningún tipo, expresas o implícitas, incluidas entre otras las garantías implícitas de comerciabilidad, idoneidad para un fin concreto y no infracción. Aunque usamos cifrado sólido y estándar del sector, no garantizamos que la app funcione sin interrupciones ni errores, ni que cumpla tus requisitos, y ninguna medida de seguridad es impenetrable por garantía. Usas funciones como la transferencia por Wi-Fi, que no está cifrada en tránsito, por tu cuenta y riesgo y solo en redes de confianza.</p>
+      <p>Privaro es una herramienta de software de consumo, no una garantía de seguridad. No garantizamos que proteja tu contenido frente a todas las amenazas, incluidos atacantes decididos, análisis forense de un dispositivo, malware, vulnerabilidades del sistema operativo o de componentes de terceros, o coacción legal o física. Eres responsable de evaluar si la app es adecuada para tus necesidades y tu modelo de amenaza.</p>
+    </div>
+  </section>
+  <section class="article" id="liability" aria-labelledby="liability-h">
+    <h2 id="liability-h">Limitación de responsabilidad</h2>
+    <div class="article-body">
+      <p>En la máxima medida permitida por la ley, en ningún caso seremos responsables de daños indirectos, incidentales, especiales, consecuentes o punitivos, ni de la pérdida de datos, beneficios o contenido, derivados de tu uso (o de la imposibilidad de usar) Privaro, incluso si se advirtió de la posibilidad de tales daños. Nuestra responsabilidad total por cualquier reclamación relacionada con la app no superará el importe que nos hayas pagado por ella en los doce meses anteriores a la reclamación o, si no se pagó nada, una cantidad simbólica.</p>
+      <p>Algunas jurisdicciones no permiten la exclusión de garantías implícitas ni la limitación de ciertos daños, por lo que parte de lo anterior podría no aplicarse a ti. En ese caso, nuestra responsabilidad se limita al máximo permitido por la ley aplicable, y nada en estos Términos limita ni excluye derechos irrenunciables que te correspondan según la ley imperativa de tu país de residencia.</p>
+    </div>
+  </section>
+  <section class="article" id="indemnification" aria-labelledby="indemnification-h">
+    <h2 id="indemnification-h">Indemnización</h2>
+    <div class="article-body">
+      <p>En la máxima medida permitida por la ley, aceptas indemnizar y mantener indemne a Erdinc Zarbo frente a reclamaciones, daños, pérdidas, responsabilidades y gastos (incluidos honorarios legales razonables) derivados de o relacionados con: el contenido que guardas o compartes; tu uso o uso indebido de la app; tu incumplimiento de estos Términos; o tu infracción de cualquier ley o de los derechos de terceros.</p>
+    </div>
+  </section>
+  <section class="article" id="apple" aria-labelledby="apple-h">
+    <h2 id="apple-h">Apple</h2>
+    <div class="article-body">
+      <p>Estos Términos son entre tú y nosotros, no con Apple. Apple no es responsable de la app ni de su contenido. Apple y sus filiales son terceros beneficiarios de estos Términos y pueden hacerlos valer frente a ti. Tu uso de la app también debe cumplir los Términos y condiciones de Apple Media Services.</p>
+    </div>
+  </section>
+  <section class="article" id="changes" aria-labelledby="changes-h">
+    <h2 id="changes-h">Cambios en estos Términos</h2>
+    <div class="article-body">
+      <p>Podemos actualizar estos Términos de vez en cuando. Revisaremos la fecha de «Última actualización» de arriba, y los cambios significativos se reflejarán en la app o en nuestro sitio web. Si sigues usando la app después de que los cambios entren en vigor, aceptas los Términos actualizados.</p>
+    </div>
+  </section>
+  <section class="article" id="governing-law" aria-labelledby="governing-law-h">
+    <h2 id="governing-law-h">Ley aplicable</h2>
+    <div class="article-body">
+      <p>Estos Términos se rigen por las leyes de los Países Bajos, sin atender a sus normas de conflicto de leyes, salvo cuando se apliquen normas imperativas de protección al consumidor de tu país de residencia.</p>
+    </div>
+  </section>
+  <section class="article" id="severability" aria-labelledby="severability-h">
+    <h2 id="severability-h">Divisibilidad</h2>
+    <div class="article-body">
+      <p>Si alguna disposición de estos Términos se considera inválida o inaplicable, se limitará o eliminará en la mínima medida necesaria, y las demás disposiciones seguirán plenamente vigentes.</p>
+    </div>
+  </section>
+  <section class="article" id="contact" aria-labelledby="contact-h">
+    <h2 id="contact-h">Contacto</h2>
+    <div class="article-body">
+      <p>¿Dudas sobre estos Términos? Escríbenos a <a href="mailto:erdincdubu@icloud.com">erdincdubu@icloud.com</a></p>
+    </div>
+  </section>
+  </div>
 
-  <h2>Funciones de seguridad y borrado</h2>
-  <p>Privaro incluye funciones opcionales diseñadas a propósito para borrar tus datos o cambiar cómo se puede acceder a ellos, entre ellas Borrado de coacción, Bóveda señuelo, Bloqueo de pánico y herramientas similares. Estas funciones se comportan exactamente como se describe y pueden causar pérdida de datos intencionada y permanente.</p>
-  <p>En particular, si activas el <strong>Borrado de coacción</strong>, introducir el código de coacción (por ejemplo, en la pantalla de bloqueo) borrará tu bóveda real y todo su contenido de forma inmediata, permanente e irreversible, por diseño, sin aviso de confirmación, sin deshacer y sin recuperación, incluso en circunstancias que no hubieras previsto. Tú decides si activas estas funciones y cómo las configuras; eres el único responsable de esa decisión y de cualquier pérdida de datos o imposibilidad de acceder a ellos que se derive; y aceptas que no somos responsables de los datos borrados, ocultados o inaccesibles por tu uso de estas funciones. No las actives salvo que comprendas y aceptes plenamente cómo se comportan.</p>
-
-  <h2>Compras</h2>
-  <p>Privaro ofrece una mejora de pago opcional («Privaro Pro») como compra única a través de la App Store de Apple. No hay suscripción y nada se renueva. El pago se carga a tu Apple Account al confirmar la compra, y la mejora se aplica a todos los dispositivos con esa Apple Account. Los precios pueden variar por región y se muestran en el momento de la compra. Salvo cuando lo exija la ley o las políticas de Apple, los pagos no son reembolsables; las solicitudes de reembolso las gestiona Apple.</p>
-
-  <h2>Exenciones de responsabilidad</h2>
-  <p>Privaro se ofrece «tal cual» y «según disponibilidad», sin garantías de ningún tipo, expresas o implícitas, incluidas entre otras las garantías implícitas de comerciabilidad, idoneidad para un fin concreto y no infracción. Aunque usamos cifrado sólido y estándar del sector, no garantizamos que la app funcione sin interrupciones ni errores, ni que cumpla tus requisitos, y ninguna medida de seguridad es impenetrable por garantía. Usas funciones como la transferencia por Wi-Fi, que no está cifrada en tránsito, por tu cuenta y riesgo y solo en redes de confianza.</p>
-  <p>Privaro es una herramienta de software de consumo, no una garantía de seguridad. No garantizamos que proteja tu contenido frente a todas las amenazas, incluidos atacantes decididos, análisis forense de un dispositivo, malware, vulnerabilidades del sistema operativo o de componentes de terceros, o coacción legal o física. Eres responsable de evaluar si la app es adecuada para tus necesidades y tu modelo de amenaza.</p>
-
-  <h2>Limitación de responsabilidad</h2>
-  <p>En la máxima medida permitida por la ley, en ningún caso seremos responsables de daños indirectos, incidentales, especiales, consecuentes o punitivos, ni de la pérdida de datos, beneficios o contenido, derivados de tu uso (o de la imposibilidad de usar) Privaro, incluso si se advirtió de la posibilidad de tales daños. Nuestra responsabilidad total por cualquier reclamación relacionada con la app no superará el importe que nos hayas pagado por ella en los doce meses anteriores a la reclamación o, si no se pagó nada, una cantidad simbólica.</p>
-  <p>Algunas jurisdicciones no permiten la exclusión de garantías implícitas ni la limitación de ciertos daños, por lo que parte de lo anterior podría no aplicarse a ti. En ese caso, nuestra responsabilidad se limita al máximo permitido por la ley aplicable, y nada en estos Términos limita ni excluye derechos irrenunciables que te correspondan según la ley imperativa de tu país de residencia.</p>
-
-  <h2>Indemnización</h2>
-  <p>En la máxima medida permitida por la ley, aceptas indemnizar y mantener indemne a Erdinc Zarbo frente a reclamaciones, daños, pérdidas, responsabilidades y gastos (incluidos honorarios legales razonables) derivados de o relacionados con: el contenido que guardas o compartes; tu uso o uso indebido de la app; tu incumplimiento de estos Términos; o tu infracción de cualquier ley o de los derechos de terceros.</p>
-
-  <h2>Apple</h2>
-  <p>Estos Términos son entre tú y nosotros, no con Apple. Apple no es responsable de la app ni de su contenido. Apple y sus filiales son terceros beneficiarios de estos Términos y pueden hacerlos valer frente a ti. Tu uso de la app también debe cumplir los Términos y condiciones de Apple Media Services.</p>
-
-  <h2>Cambios en estos Términos</h2>
-  <p>Podemos actualizar estos Términos de vez en cuando. Revisaremos la fecha de «Última actualización» de arriba, y los cambios significativos se reflejarán en la app o en nuestro sitio web. Si sigues usando la app después de que los cambios entren en vigor, aceptas los Términos actualizados.</p>
-
-  <h2>Ley aplicable</h2>
-  <p>Estos Términos se rigen por las leyes de los Países Bajos, sin atender a sus normas de conflicto de leyes, salvo cuando se apliquen normas imperativas de protección al consumidor de tu país de residencia.</p>
-
-  <h2>Divisibilidad</h2>
-  <p>Si alguna disposición de estos Términos se considera inválida o inaplicable, se limitará o eliminará en la mínima medida necesaria, y las demás disposiciones seguirán plenamente vigentes.</p>
-
-  <h2>Contacto</h2>
-  <p>¿Dudas sobre estos Términos? Escríbenos a <a href="mailto:erdincdubu@icloud.com">erdincdubu@icloud.com</a></p>
   <p class="authoritative">Esta política también está disponible en otros idiomas. En caso de discrepancia, prevalece la versión en inglés.</p>
-</div>
 
 </main>
 

@@ -38,7 +38,7 @@
 <meta name="apple-itunes-app" content="app-id=6783131829" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=5a978f849c" />
+<link rel="stylesheet" href="/styles.css?v=79f5af2618" />
 <link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
 <script>
 // Register before first reveal, including restored history entries.
@@ -82,63 +82,134 @@
   </div>
 </header>
 
-<main class="page wrap">
+<main class="page wrap terms">
 
-<h1>Kullanım Koşulları</h1>
-<p class="updated">Yürürlük tarihi: 28 Haziran 2026 · Son güncelleme: 28 Haziran 2026</p>
-<p class="intro">Bu Kullanım Koşulları (“Koşullar”), Erdinc Zarbo (“biz”, “bize” veya “bizim”) tarafından sunulan Privaro uygulamasını (“Privaro”, “uygulama”) kullanımınızı düzenler. Privaro'yu indirerek veya kullanarak bu Koşulları kabul etmiş olursunuz. Kabul etmiyorsanız lütfen uygulamayı kullanmayın.</p>
-<p class="note"><strong>Lütfen dikkatlice okuyun.</strong> Privaro, içeriğinizi aygıtınızda yalnızca sizin kontrol ettiğiniz bir anahtarla şifreler. Bu, parolanızı ve kurtarma anahtarınızı kaybederseniz <strong>biz dahil hiç kimsenin verilerinizi kurtaramayacağı</strong> anlamına gelir. Privaro ayrıca verileri bilerek kalıcı olarak silen özellikler içerir. Parolanızı ve kurtarma anahtarınızı güvende tutmaktan, uygulamayı nasıl yapılandırdığınızdan ve kendi yedeklerinizi almaktan siz sorumlusunuz.</p>
+  <!-- The title, when it was written, and what it covers. -->
+  <header class="terms-hero">
+    <h1>Kullanım Koşulları</h1>
+    <p class="updated">Yürürlük tarihi: 28 Haziran 2026 · Son güncelleme: 28 Haziran 2026</p>
+    <p class="intro">Bu Kullanım Koşulları (“Koşullar”), Erdinc Zarbo (“biz”, “bize” veya “bizim”) tarafından sunulan Privaro uygulamasını (“Privaro”, “uygulama”) kullanımınızı düzenler. Privaro'yu indirerek veya kullanarak bu Koşulları kabul etmiş olursunuz. Kabul etmiyorsanız lütfen uygulamayı kullanmayın.</p>
+  </header>
 
-<div class="legal">
-  <h2>Lisans</h2>
-  <p>Size, bu Koşullar ve Apple App Store Hizmet Koşulları uyarınca, sahip olduğunuz veya kontrol ettiğiniz Apple aygıtlarında Privaro'yu kullanmanız için kişisel, münhasır olmayan, devredilemez ve geri alınabilir bir lisans veririz. Yasaların izin verdiği durumlar dışında uygulamayı kopyalayamaz, değiştiremez, tersine mühendislik uygulayamaz, kaynak koda dönüştüremez, satamaz, alt lisanslayamaz veya dağıtamazsınız.</p>
+  <!-- The one thing to read if nothing else: set large, between two lines. -->
+  <aside class="terms-warning" aria-label="Lütfen dikkatlice okuyun.">
+    <p class="terms-warning-label">Lütfen dikkatlice okuyun.</p>
+    <p class="terms-warning-body">Privaro, içeriğinizi aygıtınızda yalnızca sizin kontrol ettiğiniz bir anahtarla şifreler. Bu, parolanızı ve kurtarma anahtarınızı kaybederseniz <strong>biz dahil hiç kimsenin verilerinizi kurtaramayacağı</strong> anlamına gelir. Privaro ayrıca verileri bilerek kalıcı olarak silen özellikler içerir. Parolanızı ve kurtarma anahtarınızı güvende tutmaktan, uygulamayı nasıl yapılandırdığınızdan ve kendi yedeklerinizi almaktan siz sorumlusunuz.</p>
+  </aside>
 
-  <h2>Sorumluluklarınız</h2>
-  <ul>
-    <li>Parolanızı, kurtarma anahtarınızı ve aygıtınızı korumaktan siz sorumlusunuz.</li>
-    <li>Uygulamada sakladığınız içerikten ve onu saklama hakkına sahip olduğunuzdan emin olmaktan siz sorumlusunuz.</li>
-    <li>Güvenlik ve veri silme özellikleri dahil, uygulamanın özelliklerini nasıl açtığınızdan ve yapılandırdığınızdan siz sorumlusunuz.</li>
-    <li>Privaro'yu yasa dışı veya başkalarının haklarını ihlal eden herhangi bir içeriği saklamak ya da paylaşmak için kullanmamayı kabul edersiniz.</li>
-    <li>Uygulamayı yasa dışı herhangi bir amaçla veya yürürlükteki herhangi bir yasayı ihlal ederek kullanmamayı kabul edersiniz.</li>
-  </ul>
+  <!-- The sections, numbered as they are below, each a link to it. -->
+  <nav class="terms-index" aria-labelledby="terms-index-h">
+    <p id="terms-index-h" class="terms-index-label">Bu sayfada</p>
+    <ol>
+      <li><a href="#license">Lisans</a></li>
+      <li><a href="#responsibilities">Sorumluluklarınız</a></li>
+      <li><a href="#data-loss">Veri kaybı ve yedekler</a></li>
+      <li><a href="#erasing-features">Güvenlik ve veri silme özellikleri</a></li>
+      <li><a href="#purchases">Satın alımlar</a></li>
+      <li><a href="#disclaimers">Sorumluluk reddi</a></li>
+      <li><a href="#liability">Sorumluluğun sınırlandırılması</a></li>
+      <li><a href="#indemnification">Tazminat</a></li>
+      <li><a href="#apple">Apple</a></li>
+      <li><a href="#changes">Bu Koşullardaki değişiklikler</a></li>
+      <li><a href="#governing-law">Uygulanacak hukuk</a></li>
+      <li><a href="#severability">Bölünebilirlik</a></li>
+      <li><a href="#contact">İletişim</a></li>
+    </ol>
+  </nav>
 
-  <h2>Veri kaybı ve yedekler</h2>
-  <p>Privaro'nun sıfır bilgili, aygıt üzerinde şifrelemesi nedeniyle parolanızı sıfırlayamaz, şifreleme anahtarınızı kurtaramaz veya içeriğinizi sizin için geri yükleyemeyiz. Aşağıdakilerden herhangi biri içeriğinizin kalıcı ve kurtarılamaz biçimde kaybolmasına yol açabilir: parolanızı ve kurtarma anahtarınızı kaybetmek veya unutmak; aygıtınızın kaybolması, çalınması, hasar görmesi, onarılması, sıfırlanması veya değiştirilmesi; uygulamanın veya verilerinin silinmesi; işletim sistemi veya donanım arızaları; ya da güncel, çalışan bir yedek bulundurmamak. Kendi yedeklerinizi almaktan yalnızca siz sorumlusunuz. Uygulamanın isteğe bağlı yedekleme, geri yükleme ve aktarım özelliklerini kendi takdirinizle ve riski size ait olmak üzere kullanırsınız; bunların kullanılabilirliğini, eksiksizliğini veya başarısını garanti etmeyiz.</p>
+  <!-- Each section an article: its number and title on the left, the text
+       on the right, in a reading measure. Space, not lines, between them. -->
+  <div class="articles">
+  <section class="article" id="license" aria-labelledby="license-h">
+    <h2 id="license-h">Lisans</h2>
+    <div class="article-body">
+      <p>Size, bu Koşullar ve Apple App Store Hizmet Koşulları uyarınca, sahip olduğunuz veya kontrol ettiğiniz Apple aygıtlarında Privaro'yu kullanmanız için kişisel, münhasır olmayan, devredilemez ve geri alınabilir bir lisans veririz. Yasaların izin verdiği durumlar dışında uygulamayı kopyalayamaz, değiştiremez, tersine mühendislik uygulayamaz, kaynak koda dönüştüremez, satamaz, alt lisanslayamaz veya dağıtamazsınız.</p>
+    </div>
+  </section>
+  <section class="article" id="responsibilities" aria-labelledby="responsibilities-h">
+    <h2 id="responsibilities-h">Sorumluluklarınız</h2>
+    <div class="article-body">
+      <ul>
+        <li>Parolanızı, kurtarma anahtarınızı ve aygıtınızı korumaktan siz sorumlusunuz.</li>
+        <li>Uygulamada sakladığınız içerikten ve onu saklama hakkına sahip olduğunuzdan emin olmaktan siz sorumlusunuz.</li>
+        <li>Güvenlik ve veri silme özellikleri dahil, uygulamanın özelliklerini nasıl açtığınızdan ve yapılandırdığınızdan siz sorumlusunuz.</li>
+        <li>Privaro'yu yasa dışı veya başkalarının haklarını ihlal eden herhangi bir içeriği saklamak ya da paylaşmak için kullanmamayı kabul edersiniz.</li>
+        <li>Uygulamayı yasa dışı herhangi bir amaçla veya yürürlükteki herhangi bir yasayı ihlal ederek kullanmamayı kabul edersiniz.</li>
+      </ul>
+    </div>
+  </section>
+  <section class="article" id="data-loss" aria-labelledby="data-loss-h">
+    <h2 id="data-loss-h">Veri kaybı ve yedekler</h2>
+    <div class="article-body">
+      <p>Privaro'nun sıfır bilgili, aygıt üzerinde şifrelemesi nedeniyle parolanızı sıfırlayamaz, şifreleme anahtarınızı kurtaramaz veya içeriğinizi sizin için geri yükleyemeyiz. Aşağıdakilerden herhangi biri içeriğinizin kalıcı ve kurtarılamaz biçimde kaybolmasına yol açabilir: parolanızı ve kurtarma anahtarınızı kaybetmek veya unutmak; aygıtınızın kaybolması, çalınması, hasar görmesi, onarılması, sıfırlanması veya değiştirilmesi; uygulamanın veya verilerinin silinmesi; işletim sistemi veya donanım arızaları; ya da güncel, çalışan bir yedek bulundurmamak. Kendi yedeklerinizi almaktan yalnızca siz sorumlusunuz. Uygulamanın isteğe bağlı yedekleme, geri yükleme ve aktarım özelliklerini kendi takdirinizle ve riski size ait olmak üzere kullanırsınız; bunların kullanılabilirliğini, eksiksizliğini veya başarısını garanti etmeyiz.</p>
+    </div>
+  </section>
+  <section class="article" id="erasing-features" aria-labelledby="erasing-features-h">
+    <h2 id="erasing-features-h">Güvenlik ve veri silme özellikleri</h2>
+    <div class="article-body">
+      <p>Privaro, verilerinizi silmek veya verilere nasıl erişilebileceğini değiştirmek için bilerek tasarlanmış isteğe bağlı özellikler içerir; bunlar arasında Panik Silme, Sahte Kasa, Panik Kilidi ve benzeri araçlar bulunur. Bu özellikler tam olarak açıklandığı gibi çalışır ve kasıtlı, kalıcı veri kaybına neden olabilir.</p>
+      <p>Özellikle <strong>Panik Silme</strong>'yi açarsanız, panik parolasını girmek (örneğin kilit ekranında) gerçek kasanızı ve içindeki her şeyi, tasarımı gereği, onay istemi olmadan, geri alma ve kurtarma imkânı olmadan, öngörmediğiniz durumlar da dahil olmak üzere hemen, kalıcı ve geri döndürülemez biçimde siler. Bu özellikleri açıp açmayacağınıza ve nasıl yapılandıracağınıza siz karar verirsiniz; bu karardan ve bunun sonucunda verilerinizin kaybolmasından veya verilerinize erişememenizden yalnızca siz sorumlusunuz; ayrıca bu özellikleri kullanmanız sonucunda silinen, gizlenen veya erişilemez hale gelen hiçbir veriden sorumlu olmadığımızı kabul edersiniz. Nasıl çalıştıklarını tam olarak anlamadan ve kabul etmeden bu özellikleri açmayın.</p>
+    </div>
+  </section>
+  <section class="article" id="purchases" aria-labelledby="purchases-h">
+    <h2 id="purchases-h">Satın alımlar</h2>
+    <div class="article-body">
+      <p>Privaro, Apple App Store aracılığıyla tek seferlik bir satın alım olarak satılan isteğe bağlı ücretli bir yükseltme (“Privaro Pro”) sunar. Abonelik yoktur ve hiçbir şey yenilenmez. Ödeme, satın alma onaylandığında Apple Hesabınızdan tahsil edilir ve yükseltme o Apple Hesabıyla oturum açılmış her aygıt için geçerlidir. Fiyatlar bölgeye göre değişebilir ve satın alma sırasında gösterilir. Yasaların veya Apple politikalarının gerektirdiği durumlar dışında ödemeler iade edilmez; iade talepleri Apple tarafından ele alınır.</p>
+    </div>
+  </section>
+  <section class="article" id="disclaimers" aria-labelledby="disclaimers-h">
+    <h2 id="disclaimers-h">Sorumluluk reddi</h2>
+    <div class="article-body">
+      <p>Privaro, satılabilirlik, belirli bir amaca uygunluk ve ihlal etmeme ile ilgili zımni garantiler dahil ancak bunlarla sınırlı olmamak üzere, açık veya zımni hiçbir garanti olmaksızın “olduğu gibi” ve “mevcut olduğu şekliyle” sunulur. Güçlü, sektör standardı şifreleme kullansak da uygulamanın kesintisiz veya hatasız olacağını ya da gereksinimlerinizi karşılayacağını garanti etmeyiz ve hiçbir güvenlik önleminin aşılamaz olduğu garanti edilmez. Aktarım sırasında şifrelenmeyen Wi-Fi Aktarımı gibi özellikleri riski size ait olmak üzere ve yalnızca güvendiğiniz ağlarda kullanırsınız.</p>
+      <p>Privaro bir tüketici yazılım aracıdır, güvenlik garantisi değildir. İçeriğinizi kararlı saldırganlar, bir aygıtın adli incelemesi, kötü amaçlı yazılımlar, işletim sistemindeki veya üçüncü taraf bileşenlerdeki güvenlik açıkları ya da hukuki veya fiziksel zorlama dahil olmak üzere tüm tehditlere karşı koruyacağını garanti etmeyiz. Uygulamanın kendi ihtiyaçlarınıza ve tehdit modelinize uygun olup olmadığını değerlendirmek sizin sorumluluğunuzdadır.</p>
+    </div>
+  </section>
+  <section class="article" id="liability" aria-labelledby="liability-h">
+    <h2 id="liability-h">Sorumluluğun sınırlandırılması</h2>
+    <div class="article-body">
+      <p>Yasaların izin verdiği azami ölçüde, Privaro'yu kullanmanızdan (veya kullanamamanızdan) kaynaklanan ya da bununla ilgili hiçbir dolaylı, arızi, özel, sonuç olarak ortaya çıkan veya cezai zarardan ya da herhangi bir veri, kâr veya içerik kaybından, bu tür zararların olasılığı bize bildirilmiş olsa bile, hiçbir durumda sorumlu olmayacağız. Uygulamayla ilgili herhangi bir talep için toplam sorumluluğumuz, talepten önceki on iki ay içinde uygulama için bize ödediğiniz tutarı veya hiçbir ödeme yapılmadıysa sembolik bir tutarı aşmayacaktır.</p>
+      <p>Bazı yargı bölgeleri zımni garantilerin hariç tutulmasına veya belirli zararların sınırlandırılmasına izin vermez; bu nedenle yukarıdakilerin bir kısmı sizin için geçerli olmayabilir. Bu durumda sorumluluğumuz yürürlükteki yasanın izin verdiği azami ölçüde sınırlıdır ve bu Koşulların hiçbir hükmü, ikamet ettiğiniz ülkenin emredici hukuku uyarınca feragat edilemeyen haklarınızı sınırlamaz veya hariç tutmaz.</p>
+    </div>
+  </section>
+  <section class="article" id="indemnification" aria-labelledby="indemnification-h">
+    <h2 id="indemnification-h">Tazminat</h2>
+    <div class="article-body">
+      <p>Yasaların izin verdiği azami ölçüde, sakladığınız veya paylaştığınız içerikten; uygulamayı kullanmanızdan veya kötüye kullanmanızdan; bu Koşulları ihlal etmenizden; ya da herhangi bir yasayı veya üçüncü bir tarafın haklarını ihlal etmenizden kaynaklanan veya bunlarla ilgili her türlü talep, zarar, kayıp, yükümlülük ve masrafa (makul avukatlık ücretleri dahil) karşı Erdinc Zarbo'yu tazmin etmeyi ve zarar görmemesini sağlamayı kabul edersiniz.</p>
+    </div>
+  </section>
+  <section class="article" id="apple" aria-labelledby="apple-h">
+    <h2 id="apple-h">Apple</h2>
+    <div class="article-body">
+      <p>Bu Koşullar Apple ile değil, sizinle bizim aramızdadır. Apple, uygulamadan veya içeriğinden sorumlu değildir. Apple ve bağlı şirketleri bu Koşulların üçüncü taraf lehtarlarıdır ve bunları size karşı uygulayabilir. Uygulamayı kullanımınız ayrıca Apple Medya Hizmetleri Şartlar ve Koşulları'na uygun olmalıdır.</p>
+    </div>
+  </section>
+  <section class="article" id="changes" aria-labelledby="changes-h">
+    <h2 id="changes-h">Bu Koşullardaki değişiklikler</h2>
+    <div class="article-body">
+      <p>Bu Koşulları zaman zaman güncelleyebiliriz. Yukarıdaki “Son güncelleme” tarihini değiştiririz ve önemli değişiklikleri uygulamada veya web sitemizde belirtiriz. Değişiklikler yürürlüğe girdikten sonra uygulamayı kullanmaya devam etmeniz, güncellenmiş Koşulları kabul ettiğiniz anlamına gelir.</p>
+    </div>
+  </section>
+  <section class="article" id="governing-law" aria-labelledby="governing-law-h">
+    <h2 id="governing-law-h">Uygulanacak hukuk</h2>
+    <div class="article-body">
+      <p>Bu Koşullar, kanunlar ihtilafı kurallarına bakılmaksızın Hollanda yasalarına tabidir; ikamet ettiğiniz ülkenin emredici tüketici koruma yasalarının uygulandığı durumlar bunun dışındadır.</p>
+    </div>
+  </section>
+  <section class="article" id="severability" aria-labelledby="severability-h">
+    <h2 id="severability-h">Bölünebilirlik</h2>
+    <div class="article-body">
+      <p>Bu Koşulların herhangi bir hükmünün geçersiz veya uygulanamaz olduğu tespit edilirse, söz konusu hüküm gereken en az ölçüde sınırlandırılır veya kaldırılır ve diğer hükümler tam olarak yürürlükte kalmaya devam eder.</p>
+    </div>
+  </section>
+  <section class="article" id="contact" aria-labelledby="contact-h">
+    <h2 id="contact-h">İletişim</h2>
+    <div class="article-body">
+      <p>Bu Koşullar hakkında sorularınız mı var? Bize şu adresten ulaşın: <a href="mailto:erdincdubu@icloud.com">erdincdubu@icloud.com</a></p>
+    </div>
+  </section>
+  </div>
 
-  <h2>Güvenlik ve veri silme özellikleri</h2>
-  <p>Privaro, verilerinizi silmek veya verilere nasıl erişilebileceğini değiştirmek için bilerek tasarlanmış isteğe bağlı özellikler içerir; bunlar arasında Panik Silme, Sahte Kasa, Panik Kilidi ve benzeri araçlar bulunur. Bu özellikler tam olarak açıklandığı gibi çalışır ve kasıtlı, kalıcı veri kaybına neden olabilir.</p>
-  <p>Özellikle <strong>Panik Silme</strong>'yi açarsanız, panik parolasını girmek (örneğin kilit ekranında) gerçek kasanızı ve içindeki her şeyi, tasarımı gereği, onay istemi olmadan, geri alma ve kurtarma imkânı olmadan, öngörmediğiniz durumlar da dahil olmak üzere hemen, kalıcı ve geri döndürülemez biçimde siler. Bu özellikleri açıp açmayacağınıza ve nasıl yapılandıracağınıza siz karar verirsiniz; bu karardan ve bunun sonucunda verilerinizin kaybolmasından veya verilerinize erişememenizden yalnızca siz sorumlusunuz; ayrıca bu özellikleri kullanmanız sonucunda silinen, gizlenen veya erişilemez hale gelen hiçbir veriden sorumlu olmadığımızı kabul edersiniz. Nasıl çalıştıklarını tam olarak anlamadan ve kabul etmeden bu özellikleri açmayın.</p>
-
-  <h2>Satın alımlar</h2>
-  <p>Privaro, Apple App Store aracılığıyla tek seferlik bir satın alım olarak satılan isteğe bağlı ücretli bir yükseltme (“Privaro Pro”) sunar. Abonelik yoktur ve hiçbir şey yenilenmez. Ödeme, satın alma onaylandığında Apple Hesabınızdan tahsil edilir ve yükseltme o Apple Hesabıyla oturum açılmış her aygıt için geçerlidir. Fiyatlar bölgeye göre değişebilir ve satın alma sırasında gösterilir. Yasaların veya Apple politikalarının gerektirdiği durumlar dışında ödemeler iade edilmez; iade talepleri Apple tarafından ele alınır.</p>
-
-  <h2>Sorumluluk reddi</h2>
-  <p>Privaro, satılabilirlik, belirli bir amaca uygunluk ve ihlal etmeme ile ilgili zımni garantiler dahil ancak bunlarla sınırlı olmamak üzere, açık veya zımni hiçbir garanti olmaksızın “olduğu gibi” ve “mevcut olduğu şekliyle” sunulur. Güçlü, sektör standardı şifreleme kullansak da uygulamanın kesintisiz veya hatasız olacağını ya da gereksinimlerinizi karşılayacağını garanti etmeyiz ve hiçbir güvenlik önleminin aşılamaz olduğu garanti edilmez. Aktarım sırasında şifrelenmeyen Wi-Fi Aktarımı gibi özellikleri riski size ait olmak üzere ve yalnızca güvendiğiniz ağlarda kullanırsınız.</p>
-  <p>Privaro bir tüketici yazılım aracıdır, güvenlik garantisi değildir. İçeriğinizi kararlı saldırganlar, bir aygıtın adli incelemesi, kötü amaçlı yazılımlar, işletim sistemindeki veya üçüncü taraf bileşenlerdeki güvenlik açıkları ya da hukuki veya fiziksel zorlama dahil olmak üzere tüm tehditlere karşı koruyacağını garanti etmeyiz. Uygulamanın kendi ihtiyaçlarınıza ve tehdit modelinize uygun olup olmadığını değerlendirmek sizin sorumluluğunuzdadır.</p>
-
-  <h2>Sorumluluğun sınırlandırılması</h2>
-  <p>Yasaların izin verdiği azami ölçüde, Privaro'yu kullanmanızdan (veya kullanamamanızdan) kaynaklanan ya da bununla ilgili hiçbir dolaylı, arızi, özel, sonuç olarak ortaya çıkan veya cezai zarardan ya da herhangi bir veri, kâr veya içerik kaybından, bu tür zararların olasılığı bize bildirilmiş olsa bile, hiçbir durumda sorumlu olmayacağız. Uygulamayla ilgili herhangi bir talep için toplam sorumluluğumuz, talepten önceki on iki ay içinde uygulama için bize ödediğiniz tutarı veya hiçbir ödeme yapılmadıysa sembolik bir tutarı aşmayacaktır.</p>
-  <p>Bazı yargı bölgeleri zımni garantilerin hariç tutulmasına veya belirli zararların sınırlandırılmasına izin vermez; bu nedenle yukarıdakilerin bir kısmı sizin için geçerli olmayabilir. Bu durumda sorumluluğumuz yürürlükteki yasanın izin verdiği azami ölçüde sınırlıdır ve bu Koşulların hiçbir hükmü, ikamet ettiğiniz ülkenin emredici hukuku uyarınca feragat edilemeyen haklarınızı sınırlamaz veya hariç tutmaz.</p>
-
-  <h2>Tazminat</h2>
-  <p>Yasaların izin verdiği azami ölçüde, sakladığınız veya paylaştığınız içerikten; uygulamayı kullanmanızdan veya kötüye kullanmanızdan; bu Koşulları ihlal etmenizden; ya da herhangi bir yasayı veya üçüncü bir tarafın haklarını ihlal etmenizden kaynaklanan veya bunlarla ilgili her türlü talep, zarar, kayıp, yükümlülük ve masrafa (makul avukatlık ücretleri dahil) karşı Erdinc Zarbo'yu tazmin etmeyi ve zarar görmemesini sağlamayı kabul edersiniz.</p>
-
-  <h2>Apple</h2>
-  <p>Bu Koşullar Apple ile değil, sizinle bizim aramızdadır. Apple, uygulamadan veya içeriğinden sorumlu değildir. Apple ve bağlı şirketleri bu Koşulların üçüncü taraf lehtarlarıdır ve bunları size karşı uygulayabilir. Uygulamayı kullanımınız ayrıca Apple Medya Hizmetleri Şartlar ve Koşulları'na uygun olmalıdır.</p>
-
-  <h2>Bu Koşullardaki değişiklikler</h2>
-  <p>Bu Koşulları zaman zaman güncelleyebiliriz. Yukarıdaki “Son güncelleme” tarihini değiştiririz ve önemli değişiklikleri uygulamada veya web sitemizde belirtiriz. Değişiklikler yürürlüğe girdikten sonra uygulamayı kullanmaya devam etmeniz, güncellenmiş Koşulları kabul ettiğiniz anlamına gelir.</p>
-
-  <h2>Uygulanacak hukuk</h2>
-  <p>Bu Koşullar, kanunlar ihtilafı kurallarına bakılmaksızın Hollanda yasalarına tabidir; ikamet ettiğiniz ülkenin emredici tüketici koruma yasalarının uygulandığı durumlar bunun dışındadır.</p>
-
-  <h2>Bölünebilirlik</h2>
-  <p>Bu Koşulların herhangi bir hükmünün geçersiz veya uygulanamaz olduğu tespit edilirse, söz konusu hüküm gereken en az ölçüde sınırlandırılır veya kaldırılır ve diğer hükümler tam olarak yürürlükte kalmaya devam eder.</p>
-
-  <h2>İletişim</h2>
-  <p>Bu Koşullar hakkında sorularınız mı var? Bize şu adresten ulaşın: <a href="mailto:erdincdubu@icloud.com">erdincdubu@icloud.com</a></p>
   <p class="authoritative">Bu politika başka dillerde de mevcuttur. Herhangi bir farklılık durumunda İngilizce sürüm esas alınır.</p>
-</div>
 
 </main>
 
