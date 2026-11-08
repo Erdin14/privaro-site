@@ -571,32 +571,84 @@ h1, h2 { font-weight: 600; }
   padding-block: var(--space-5); border-bottom: 1px solid var(--rule); }
 .ledger-list h2 { font-size: var(--size-lead); line-height: 1.4; letter-spacing: -.012em; }
 .ledger-list p { font-size: var(--size-text); line-height: 1.55; letter-spacing: var(--track-text); color: var(--muted); }
-/* Pro. It opens as the homepage does: what it is, large, on one side, and
-   the sentence with the price on the other, its last line on the
-   headline's baseline; under both, behind a hairline, the badge and what
-   never changes without it. Then the twelve features in the five things
-   they're for, each chapter a hairline across the page with its name on
-   the left. Last, the price set large beside where to pay it, between
-   the line the chapters end on and the one the page ends on. */
-/* One grid for all three, so the sentence, every feature and the place to
-   pay start on the same line down the page. */
+/* Pro. What Pro is, and one switch, Free or Pro, that the rest of the page
+   answers to: the three limits under it, and the twelve features, one to a
+   row, which dim to empty boxes on Free and light up on Pro. Then what's the
+   same either way, and the price set large beside where to pay it. The
+   switch is two radio buttons drawn as one control, so it needs no script
+   and works from the keyboard; with Reduce Motion it changes at once. */
+/* The features' descriptions and the place to pay share one column edge. */
 .pro { --pro-columns: minmax(0, 1fr) minmax(300px, 480px); }
-.pro-hero { display: grid; grid-template-columns: var(--pro-columns); align-items: end; column-gap: var(--space-7); }
-.pro-hero h1 { max-width: none; }
-.pro-hero .intro { margin-top: 0; padding-bottom: .15em; font-size: var(--size-lead); line-height: 1.55; }
+.pro-hero { display: flex; flex-direction: column; align-items: center; text-align: center; }
+.pro-hero h1 { font-size: clamp(44px, 5.6vw, 76px); }
+.pro-hero .intro { max-width: 36em; margin-top: var(--space-4); font-size: var(--size-lead); line-height: 1.55; }
 /* The one figure in the sentence, in full ink. */
 .pro .intro .price { color: var(--ink); font-weight: 600; }
-.pro-hero .buy { margin-top: var(--space-7); padding-top: var(--space-6); border-top: 1px solid var(--rule); }
-.pro-hero .note { max-width: 46em; margin-top: 0; }
-.chapter { display: grid; grid-template-columns: var(--pro-columns); column-gap: var(--space-7);
-  padding-block: var(--space-6) var(--space-7); border-top: 1px solid var(--rule); }
-.pro-hero + .chapter { margin-top: var(--space-9); }
-.chapter h2 { font-family: var(--display); font-size: var(--size-title); line-height: 1.1;
-  letter-spacing: var(--track-title); text-wrap: balance; }
-.chapter ul { list-style: none; display: grid; row-gap: var(--space-5); }
-.chapter h3 { font-size: var(--size-lead); font-weight: 600; line-height: 1.4; letter-spacing: -.012em; }
-.chapter li p { margin-top: var(--space-1); font-size: var(--size-text); line-height: 1.55;
-  letter-spacing: var(--track-text); color: var(--muted); }
+/* The switch: a groove with the two words in it, and a knob that slides
+   under the one that's on. */
+.plan { position: relative; display: grid; grid-template-columns: 1fr 1fr; width: min(300px, 100%); min-inline-size: 0;
+  margin: var(--space-7) 0 0; padding: 5px; border: 0; border-radius: var(--radius-round); background: #0c0d0e;
+  box-shadow: inset 0 1px 3px rgb(0 0 0 / .8), 0 1px 0 rgb(255 255 255 / .07); }
+.plan input { position: absolute; opacity: 0; pointer-events: none; }
+.plan label { position: relative; z-index: 1; display: flex; align-items: center; justify-content: center; min-height: 52px;
+  padding-inline: var(--space-3); border-radius: var(--radius-round); color: var(--muted); font-size: 18px; font-weight: 600;
+  cursor: pointer; transition: color var(--dur-state) var(--ease-state); }
+.plan label:hover { color: var(--ink); }
+.plan input:checked + label { color: #111; cursor: default; }
+.plan input:focus-visible + label { outline: 2px solid var(--blue); outline-offset: 3px; }
+.plan .knob { position: absolute; inset-block: 5px; inset-inline-start: 5px; width: calc(50% - 5px); border-radius: var(--radius-round);
+  background: linear-gradient(#fafafa, #dcdcde); box-shadow: 0 6px 16px -4px rgb(0 0 0 / .7), inset 0 -1px 0 rgb(0 0 0 / .15);
+  transition: translate var(--dur-reveal) var(--ease); }
+#plan-pro:checked ~ .knob { translate: 100% 0; }
+[dir="rtl"] #plan-pro:checked ~ .knob { translate: -100% 0; }
+.plan-hint { margin-top: var(--space-3); font: 12px/1.4 var(--mono); color: var(--faint); }
+/* Words that differ between Free and Pro: both are there, one over the
+   other, and only the side the switch is on shows (and is read out). */
+.swap { display: grid; }
+.swap > * { grid-area: 1 / 1; }
+.pro .when-free, .pro:has(#plan-free:checked) .when-pro { opacity: 0; visibility: hidden; translate: 0 .3em;
+  transition: opacity var(--dur-state) var(--ease-state), translate var(--dur-reveal) var(--ease), visibility 0s var(--dur-state); }
+.pro .when-pro, .pro:has(#plan-free:checked) .when-free { opacity: 1; visibility: visible; translate: none;
+  transition: opacity var(--dur-state) var(--ease-state), translate var(--dur-reveal) var(--ease), visibility 0s; }
+/* The three limits, between hairlines. Each figure is as large as its
+   column lets it be, in any language. */
+.limits { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: var(--space-8); border-block: 1px solid var(--rule); }
+.limits > div { container-type: inline-size; padding: var(--space-6) var(--space-5); }
+.limits > div:first-child { padding-inline-start: 0; }
+.limits > div:last-child { padding-inline-end: 0; }
+.limits > div + div { border-inline-start: 1px solid var(--rule); }
+.limits dt, .pro-list h2, .basics h2 { font: 400 12px/1.4 var(--mono); letter-spacing: 0; color: var(--faint); }
+.limit { margin-top: var(--space-2); font-family: var(--display); font-size: min(60px, 17cqi); font-weight: 700; line-height: 1.02;
+  letter-spacing: -.035em; text-wrap: balance; transition: color var(--dur-reveal) var(--ease-state); }
+.limit-note { margin-top: var(--space-3); max-width: 22em; font-size: 14px; line-height: 1.5; color: var(--muted); }
+/* The features: plain rows, a mark, the name, and what it does. */
+.pro-list { margin-top: var(--space-8); }
+.pro-list ul { list-style: none; display: grid; row-gap: var(--space-5); margin-top: var(--space-5); }
+.pro-list li { position: relative; display: grid; grid-template-columns: var(--pro-columns); column-gap: var(--space-7);
+  padding-inline-start: 34px; }
+.pro-list li::before { content: ""; position: absolute; inset-inline-start: 2px; top: calc(var(--size-lead) * .7 - 7px);
+  width: 14px; height: 14px; border-radius: 50%; background: var(--blue); box-shadow: 0 0 0 4px rgb(110 162 255 / .16);
+  transition: background-color var(--dur-state) var(--ease-state), box-shadow var(--dur-state) var(--ease-state),
+    border-radius var(--dur-state) var(--ease-state); }
+.pro-list h3 { font-size: var(--size-lead); font-weight: 600; line-height: 1.4; letter-spacing: -.012em;
+  transition: color var(--dur-state) var(--ease-state); }
+.pro-list li p { font-size: var(--size-text); line-height: 1.55; letter-spacing: var(--track-text); color: var(--muted);
+  transition: color var(--dur-state) var(--ease-state); }
+/* On Free: the figures go grey, and every feature dims to an empty box.
+   Still readable: what Free doesn't have is worth reading too. */
+.pro:has(#plan-free:checked) .limit { color: var(--faint); }
+.pro:has(#plan-free:checked) .pro-list li::before { border-radius: 4px; background: transparent; box-shadow: inset 0 0 0 1.5px var(--dim); }
+.pro:has(#plan-free:checked) .pro-list h3 { color: var(--faint); }
+/* The dimmest grey that still reads at 4.5:1 on the graphite behind the list. */
+.pro:has(#plan-free:checked) .pro-list li p { color: #85868b; }
+@media (prefers-reduced-motion: reduce) {
+  .pro *, .pro .pro-list li::before { transition: none !important; }
+}
+/* What's the same either way. */
+.basics { margin-top: var(--space-8); text-align: center; }
+.basics ul { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-2) var(--space-7);
+  margin-top: var(--space-3); font-size: var(--size-lead); font-weight: 600; }
+.pro-price { margin-top: var(--space-8); }
 .pro-price { display: grid; grid-template-columns: var(--pro-columns); align-items: end;
   column-gap: var(--space-7); padding-block: var(--space-8); border-block: 1px solid var(--rule); }
 /* As large as a section's statement, and never wider than its column,
@@ -719,17 +771,21 @@ h1, h2 { font-weight: 600; }
 /* Scripts other than Latin and Cyrillic. Letter-spacing would pull Arabic and
    Urdu's joined letters apart and crowds Devanagari and CJK, and Arabic, Urdu
    and Hindi need taller lines so marks above and below don't collide. */
-:is(:lang(ar), :lang(ur), :lang(hi)) :is(.tagline, .display, .display .answer, .chapter h2, .pro-figure p, .page h1, .buy-note, .ledger dt, .ledger dd, .shots figcaption) { letter-spacing: 0; }
-:is(:lang(zh), :lang(ja), :lang(ko)) :is(.tagline, .display, .display .answer, .chapter h2, .page h1) { letter-spacing: -.01em; }
+:is(:lang(ar), :lang(ur), :lang(hi)) :is(.tagline, .display, .display .answer, .limit, .pro-figure p, .page h1, .buy-note, .ledger dt, .ledger dd, .shots figcaption) { letter-spacing: 0; }
+:is(:lang(zh), :lang(ja), :lang(ko)) :is(.tagline, .display, .display .answer, .limit, .page h1) { letter-spacing: -.01em; }
+/* A monospace face has no joined Arabic or Urdu letters, nor Devanagari's
+   headline, and pulls them apart: those scripts set their small labels in
+   the text face. */
+:is(:lang(ar), :lang(ur), :lang(hi)) :is(.page .updated, .limits dt, .pro-list h2, .basics h2, .plan-hint) { font-family: var(--font); }
 /* Chinese and Japanese may break between any two characters; display lines
    break between phrases, where the strings mark it with <wbr>, and inside
    one only when a phrase is wider than the screen. */
-:is(:lang(zh), :lang(ja)) :is(.tagline, .display, .page h1, .chapter h2) { word-break: keep-all; overflow-wrap: anywhere; }
-:is(:lang(ar), :lang(hi)) :is(.tagline, .display, .chapter h2) { line-height: 1.3; }
+:is(:lang(zh), :lang(ja)) :is(.tagline, .display, .page h1) { word-break: keep-all; overflow-wrap: anywhere; }
+:is(:lang(ar), :lang(hi)) :is(.tagline, .display, .limit) { line-height: 1.3; }
 :is(:lang(ar), :lang(hi)) .mask { padding-block: .2em .25em; margin-block: -.2em -.25em; }
 :lang(ur) body { line-height: 1.8; }
 :lang(ur) .page h1 { line-height: 1.6; }
-:lang(ur) :is(.tagline, .display, .chapter h2) { line-height: 1.45; }
+:lang(ur) :is(.tagline, .display, .limit) { line-height: 1.45; }
 :lang(ur) .mask { padding-block: .35em .45em; margin-block: -.35em -.45em; }
 
 /* Tablets and narrower windows: the hero stacks, and the phones become a row
@@ -752,14 +808,12 @@ h1, h2 { font-weight: 600; }
   .safety-art { min-height: 0; }
   .safety .privacy-art { --pw: 60cqw; }
 }
-/* Narrower windows: the features' column gives the chapter names more of
-   the width, so the longest word in any language fits under its line. */
+/* Narrower windows: the features' names get more of the width. */
 @media (max-width: 1080px) {
   .pro { --pro-columns: minmax(0, 2fr) minmax(0, 3fr); }
 }
 @media (max-width: 900px) {
-  .pro-hero, .pro-price { grid-template-columns: minmax(0, 1fr); }
-  .pro-hero .intro { max-width: 34em; margin-top: var(--space-5); }
+  .pro-price { grid-template-columns: minmax(0, 1fr); }
   .pro-pay { margin-top: var(--space-5); }
 }
 @media (max-width: 760px) {
@@ -782,10 +836,14 @@ h1, h2 { font-weight: 600; }
   .page { padding: 40px 0 64px; }
   .page .intro { font-size: 17px; }
   .ledger-list { margin-top: var(--space-6); }
-  .chapter { grid-template-columns: minmax(0, 1fr); row-gap: var(--space-5); padding-block: var(--space-5) var(--space-6); }
-  .pro-hero + .chapter { margin-top: var(--space-8); }
-  .pro-hero .buy { flex-direction: column; align-items: flex-start; gap: var(--space-4); }
-  .pro-price { padding-block: var(--space-7); }
+  /* The limits one above the other, the features' names over what they do. */
+  .limits { grid-template-columns: minmax(0, 1fr); margin-top: var(--space-7); }
+  .limits > div, .limits > div:first-child, .limits > div:last-child { padding: var(--space-5) 0; }
+  .limits > div + div { border-inline-start: 0; border-top: 1px solid var(--rule); }
+  .pro-list { margin-top: var(--space-7); }
+  .pro-list li { grid-template-columns: minmax(0, 1fr); row-gap: var(--space-1); padding-inline-start: 30px; }
+  .basics ul { gap: var(--space-2) var(--space-5); }
+  .pro-price { margin-top: var(--space-7); padding-block: var(--space-7); }
   .ledger-list > * { grid-template-columns: minmax(0, 1fr); row-gap: var(--space-1); padding-block: var(--space-4); }
   .legal { margin-top: 36px; }
   .toc ol { columns: 1; }

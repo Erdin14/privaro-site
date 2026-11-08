@@ -38,7 +38,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=02ecd410af" />
+<link rel="stylesheet" href="/styles.css?v=d81e5b3d06" />
 <link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
 <script>
 // Register before first reveal, including restored history entries.
@@ -84,60 +84,55 @@
 
 <main class="page wrap pro">
 
-  <!-- What Pro is, on one side; what it costs, on the other, its last line
-       on the headline's baseline. Under both, behind a hairline, where to
-       get it, and what stays the same without it. -->
+  <!-- What Pro is, and one switch: Free or Pro. It's two radio buttons drawn
+       as one control, so it needs no script, and the page answers to it
+       (styles.css): the limits under it change, and the features dim to
+       empty boxes on Free and light up on Pro. It starts on Pro. -->
   <section class="pro-hero" aria-labelledby="pro-title">
     <h1 id="pro-title">Pro で<wbr>使えるように<wbr>なること。</h1>
     <p class="intro">Pro は <span class="price" data-price="pro">￥3,000</span> の買い切りです。無料版の制限がなくなり、以下のすべての機能が、同じ Apple アカウントでサインインしているすべてのデバイスで使えるようになります。自動更新はなく、解約の必要もありません。</p>
-    <div class="buy">
-      <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="App Store で Privaro をダウンロード"><img src="/appstore-badge-white.svg" width="150" height="50" alt="App Store で Privaro をダウンロード" /></a>
-      <p class="note"><strong>無料でも Pro でも、基本は変わりません：</strong> すべてはデバイス上で AES-256 により暗号化され、アカウントは不要で、保管庫を開けるのはあなただけです。</p>
-    </div>
+    <fieldset class="plan">
+      <legend class="visually-hidden">無料版と Pro を比較</legend>
+      <input type="radio" name="plan" id="plan-free" value="free" /><label for="plan-free">無料版</label>
+      <input type="radio" name="plan" id="plan-pro" value="pro" checked /><label for="plan-pro">Pro</label>
+      <span class="knob" aria-hidden="true"></span>
+    </fieldset>
+    <p class="plan-hint">切り替えて比べてみてください。</p>
   </section>
 
-  <!-- The twelve features, in the five things they're for. Each chapter is a
-       line across the page with its name under it on the left. -->
-  <section class="chapter" aria-labelledby="more-room">
-    <h2 id="more-room">上限なし</h2>
+  <!-- The three limits, as they are on the side the switch is on. -->
+  <dl class="limits">
+      <div><dt>ストレージ</dt><dd class="limit swap"><span class="when-free">2.5 GB</span><span class="when-pro">上限なし</span></dd><dd class="limit-note swap"><span class="when-free">それ以上は入りません。</span><span class="when-pro">制限は iPhone の空き容量だけです。</span></dd></div>
+      <div><dt>アルバム</dt><dd class="limit swap"><span class="when-free">5</span><span class="when-pro">無制限</span></dd><dd class="limit-note swap"><span class="when-free">フォルダーの中にフォルダーは入れられません。</span><span class="when-pro">フォルダーの中にフォルダーも入れられます。</span></dd></div>
+      <div><dt>パスコード</dt><dd class="limit swap"><span class="when-free">1</span><span class="when-pro">3</span></dd><dd class="limit-note swap"><span class="when-free">あなたのパスコードだけ。</span><span class="when-pro">あなたのパスコード、おとり用、そしてすべてを消去するもの。</span></dd></div>
+  </dl>
+
+  <!-- The twelve features, one to a row. -->
+  <section class="pro-list" aria-labelledby="pro-list-title">
+    <h2 id="pro-list-title" class="swap"><span class="when-free">無料版にはない機能</span><span class="when-pro">Pro に含まれる機能</span></h2>
     <ul>
       <li><h3>無制限のストレージ</h3><p>無料版の保管庫は最大 2.5 GB です。Pro には上限がなく、制限は iPhone の空き容量だけです。</p></li>
       <li><h3>アルバムとフォルダーが無制限</h3><p>無料版ではアルバムは 5 個までです。Pro なら、アルバムをいくつでも作成でき、フォルダーの中にフォルダーを入れることもできます。</p></li>
-    </ul>
-  </section>
-  <section class="chapter" aria-labelledby="extra-locks">
-    <h2 id="extra-locks">さらに<wbr>鍵をかける</h2>
-    <ul>
       <li><h3>アルバムごとのパスワード</h3><p>アルバムに専用のパスワードを設定できます。保管庫のほかの部分が開いていても、そのアルバムはロックされたままです。</p></li>
       <li><h3>位置ベースのロック</h3><p>自宅など、信頼できる場所でだけ保管庫のロックを解除できるようにします。それ以外の場所では、正しいパスコードでもロックされたままです。</p></li>
-    </ul>
-  </section>
-  <section class="chapter" aria-labelledby="if-someone-tries">
-    <h2 id="if-someone-tries">誰かが<wbr>開けようとしたら</h2>
-    <ul>
       <li><h3>おとり保管庫</h3><p>2つ目のパスコードを設定すると、当たり障りのない写真が入った別の保管庫が開きます。Privaro のロック解除を迫られたときはそちらを入力すれば、本当の保管庫は見えないままです。</p></li>
       <li><h3>緊急消去</h3><p>入力した瞬間に、おとりも含めて保管庫全体を消去するパスコードを設定できます。最悪の事態のための機能で、元に戻すことはできません。</p></li>
       <li><h3>侵入捕獲</h3><p>誰かが間違ったパスコードを入力すると、Privaro は前面カメラで静かに写真を撮り、日時とともに記録できます。誰かが保管庫に入ろうとしたかどうかがわかります。</p></li>
-    </ul>
-  </section>
-  <section class="chapter" aria-labelledby="out-of-sight">
-    <h2 id="out-of-sight">人目に<wbr>触れずに</h2>
-    <ul>
       <li><h3>スクリーンショット・画面収録の防止</h3><p>アプリを開いている間、スクリーンショット、画面収録、AirPlay で保管庫の中身が記録されないようにします。うっかりカメラロールや画面ミラーリング先に漏れることはありません。</p></li>
       <li><h3>アプリアイコンの偽装</h3><p>計算機やメモのような普段使いのアイコンと名前に Privaro を隠し、ホーム画面で目立たないようにします。カラーアイコンのバリエーションは無料、偽装アイコンは Pro です。</p></li>
-    </ul>
-  </section>
-  <section class="chapter" aria-labelledby="moving-files">
-    <h2 id="moving-files">ファイルの<wbr>出し入れ</h2>
-    <ul>
       <li><h3>暗号化された iCloud バックアップと書き出し</h3><p>保管庫をご自身の iCloud にバックアップしたり、暗号化された1つのファイルとして書き出したりできます。どちらもデバイスを離れる前に暗号化されるため、私たちを含め誰にも読めません。バックアップの復元は、Pro がなくてもいつでも無料です。</p></li>
       <li><h3>Wi-Fi 転送</h3><p>ローカルネットワーク経由で、どのコンピュータの Web ブラウザからでも保管庫にファイルを送れます。ケーブルもクラウドも、コンピュータへの追加アプリのインストールも不要です。</p></li>
       <li><h3>セキュアシェア</h3><p>写真やビデオを、あなたが決めたパスフレーズでしか開けない暗号化ファイルとして、ほかの Privaro ユーザーに送れます。途中で私たちを経由することはありません。</p></li>
     </ul>
   </section>
 
-  <!-- The price once more, set large, and where to pay it. The page ends on
-       a line, as the homepage does. -->
+  <!-- What's the same either way. -->
+  <section class="basics">
+    <h2>無料でも Pro でも、基本は変わりません：</h2>
+    <ul><li>AES-256</li><li>アカウント不要</li><li>Face ID またはパスコード</li><li>オフラインで動作</li></ul>
+  </section>
+
+  <!-- The price once more, set large, and where to pay it. -->
   <section class="pro-price">
     <div class="pro-figure"><p><span class="price" data-price="pro">￥3,000</span></p></div>
     <div class="pro-pay">

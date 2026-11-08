@@ -38,7 +38,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=02ecd410af" />
+<link rel="stylesheet" href="/styles.css?v=d81e5b3d06" />
 <link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
 <script>
 // Register before first reveal, including restored history entries.
@@ -84,60 +84,55 @@
 
 <main class="page wrap pro">
 
-  <!-- What Pro is, on one side; what it costs, on the other, its last line
-       on the headline's baseline. Under both, behind a hairline, where to
-       get it, and what stays the same without it. -->
+  <!-- What Pro is, and one switch: Free or Pro. It's two radio buttons drawn
+       as one control, so it needs no script, and the page answers to it
+       (styles.css): the limits under it change, and the features dim to
+       empty boxes on Free and light up on Pro. It starts on Pro. -->
   <section class="pro-hero" aria-labelledby="pro-title">
     <h1 id="pro-title">Всё, что открывает Pro.</h1>
     <p class="intro">Pro — это разовая покупка за <span class="price" data-price="pro">1 790 ₽</span>. Она снимает ограничения бесплатной версии и добавляет всё, что описано ниже, на каждом устройстве, где выполнен вход в ваш Аккаунт Apple. Ничего не продлевается, и отменять нечего.</p>
-    <div class="buy">
-      <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="Загрузите Privaro в App Store"><img src="/appstore-badge-white.svg" width="150" height="50" alt="Загрузите Privaro в App Store" /></a>
-      <p class="note"><strong>Бесплатно или Pro — основа неизменна:</strong> всё шифруется на вашем устройстве с помощью AES-256, аккаунта нет, и открыть хранилище можете только вы.</p>
-    </div>
+    <fieldset class="plan">
+      <legend class="visually-hidden">Сравнить бесплатную версию и Pro</legend>
+      <input type="radio" name="plan" id="plan-free" value="free" /><label for="plan-free">Бесплатно</label>
+      <input type="radio" name="plan" id="plan-pro" value="pro" checked /><label for="plan-pro">Pro</label>
+      <span class="knob" aria-hidden="true"></span>
+    </fieldset>
+    <p class="plan-hint">Переключите, чтобы сравнить.</p>
   </section>
 
-  <!-- The twelve features, in the five things they're for. Each chapter is a
-       line across the page with its name under it on the left. -->
-  <section class="chapter" aria-labelledby="more-room">
-    <h2 id="more-room">Больше места</h2>
+  <!-- The three limits, as they are on the side the switch is on. -->
+  <dl class="limits">
+      <div><dt>Хранилище</dt><dd class="limit swap"><span class="when-free">2,5 ГБ</span><span class="when-pro">Без лимита</span></dd><dd class="limit-note swap"><span class="when-free">Дальше места нет.</span><span class="when-pro">Ограничение одно — свободное место на вашем iPhone.</span></dd></div>
+      <div><dt>Альбомы</dt><dd class="limit swap"><span class="when-free">5</span><span class="when-pro">Безлимитно</span></dd><dd class="limit-note swap"><span class="when-free">Без папок в папках.</span><span class="when-pro">И папки в папках.</span></dd></div>
+      <div><dt>Код-пароли</dt><dd class="limit swap"><span class="when-free">1</span><span class="when-pro">3</span></dd><dd class="limit-note swap"><span class="when-free">Ваш.</span><span class="when-pro">Ваш, ложный и тот, что всё стирает.</span></dd></div>
+  </dl>
+
+  <!-- The twelve features, one to a row. -->
+  <section class="pro-list" aria-labelledby="pro-list-title">
+    <h2 id="pro-list-title" class="swap"><span class="when-free">Нет в бесплатной версии</span><span class="when-pro">Входит в Pro</span></h2>
     <ul>
       <li><h3>Безлимитное хранилище</h3><p>Бесплатное хранилище вмещает до 2,5 ГБ. В Pro лимита нет: ограничение одно — свободное место на вашем iPhone.</p></li>
       <li><h3>Безлимитные альбомы и папки</h3><p>В бесплатной версии — до 5 альбомов. С Pro можно создавать сколько угодно альбомов и вкладывать папки в папки.</p></li>
-    </ul>
-  </section>
-  <section class="chapter" aria-labelledby="extra-locks">
-    <h2 id="extra-locks">Дополнительные замки</h2>
-    <ul>
       <li><h3>Пароли для альбомов</h3><p>Задайте альбому собственный пароль. Он останется заблокированным, даже когда остальное хранилище открыто.</p></li>
       <li><h3>Блокировка по местоположению</h3><p>Разрешите разблокировку хранилища только в доверенных местах, например дома. В любом другом месте оно останется заблокированным даже с правильным код-паролем.</p></li>
-    </ul>
-  </section>
-  <section class="chapter" aria-labelledby="if-someone-tries">
-    <h2 id="if-someone-tries">Если кто‑то пытается войти</h2>
-    <ul>
       <li><h3>Ложное хранилище</h3><p>Задайте второй код-пароль, который открывает отдельное хранилище с безобидными фото. Если вас когда-нибудь заставят разблокировать Privaro, введите его — и настоящее хранилище останется скрытым.</p></li>
       <li><h3>Тревожное стирание</h3><p>Задайте код-пароль, который в момент ввода стирает всё хранилище, включая ложное. Он нужен на самый крайний случай, и это действие нельзя отменить.</p></li>
       <li><h3>Фото при взломе</h3><p>Если кто-то введёт неверный код-пароль, Privaro может незаметно сделать снимок фронтальной камерой и записать попытку с указанием времени — так вы узнаете, пытался ли кто-то проникнуть в ваше хранилище.</p></li>
-    </ul>
-  </section>
-  <section class="chapter" aria-labelledby="out-of-sight">
-    <h2 id="out-of-sight">Вне поля зрения</h2>
-    <ul>
       <li><h3>Защита от снимков и записи экрана</h3><p>Не позволяет захватить хранилище снимком экрана, записью экрана или через AirPlay, пока приложение открыто, — так ничего случайно не попадёт в фотопленку или на экран при повторе.</p></li>
       <li><h3>Маскировка значка приложения</h3><p>Спрячьте Privaro за привычным значком и названием, например «Калькулятор» или «Заметки», чтобы оно не выделялось на экране «Домой». Цветные варианты значка бесплатны, маскировка — в Pro.</p></li>
-    </ul>
-  </section>
-  <section class="chapter" aria-labelledby="moving-files">
-    <h2 id="moving-files">Перенос файлов</h2>
-    <ul>
       <li><h3>Зашифрованная резервная копия в iCloud и экспорт</h3><p>Сохраняйте резервную копию хранилища в собственном iCloud или экспортируйте его в один зашифрованный файл. В обоих случаях данные шифруются на устройстве до отправки, поэтому никто (включая нас) не сможет их прочитать. Восстановление из резервной копии всегда бесплатно, даже без Pro.</p></li>
       <li><h3>Передача по Wi-Fi</h3><p>Отправляйте файлы в хранилище из браузера любого компьютера по локальной сети. Без кабеля, без облака и без дополнительных программ на компьютере.</p></li>
       <li><h3>Безопасная отправка</h3><p>Отправляйте фото или видео другому пользователю Privaro в виде зашифрованного файла, который открывается только с выбранной вами парольной фразой. По пути ничего не проходит через нас.</p></li>
     </ul>
   </section>
 
-  <!-- The price once more, set large, and where to pay it. The page ends on
-       a line, as the homepage does. -->
+  <!-- What's the same either way. -->
+  <section class="basics">
+    <h2>Бесплатно или Pro — основа неизменна:</h2>
+    <ul><li>AES-256</li><li>Без аккаунта</li><li>Face ID или код-пароль</li><li>Работает офлайн</li></ul>
+  </section>
+
+  <!-- The price once more, set large, and where to pay it. -->
   <section class="pro-price">
     <div class="pro-figure"><p><span class="price" data-price="pro">1 790 ₽</span></p></div>
     <div class="pro-pay">

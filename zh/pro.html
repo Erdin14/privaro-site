@@ -38,7 +38,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=02ecd410af" />
+<link rel="stylesheet" href="/styles.css?v=d81e5b3d06" />
 <link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
 <script>
 // Register before first reveal, including restored history entries.
@@ -84,60 +84,55 @@
 
 <main class="page wrap pro">
 
-  <!-- What Pro is, on one side; what it costs, on the other, its last line
-       on the headline's baseline. Under both, behind a hairline, where to
-       get it, and what stays the same without it. -->
+  <!-- What Pro is, and one switch: Free or Pro. It's two radio buttons drawn
+       as one control, so it needs no script, and the page answers to it
+       (styles.css): the limits under it change, and the features dim to
+       empty boxes on Free and light up on Pro. It starts on Pro. -->
   <section class="pro-hero" aria-labelledby="pro-title">
     <h1 id="pro-title">Pro 解锁的一切。</h1>
     <p class="intro">Pro 是一次性购买，价格 <span class="price" data-price="pro">¥148</span>。它解除免费版的限制，并加入下面的所有功能，登录同一 Apple 账户的所有设备都能使用。无需续订，也没有什么需要取消。</p>
-    <div class="buy">
-      <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="在 App Store 下载 Privaro"><img src="/appstore-badge-white.svg" width="150" height="50" alt="在 App Store 下载 Privaro" /></a>
-      <p class="note"><strong>无论免费还是 Pro，核心始终不变：</strong> 所有内容都在你的设备上用 AES-256 加密，无需账户，只有你能打开保险库。</p>
-    </div>
+    <fieldset class="plan">
+      <legend class="visually-hidden">比较免费版与 Pro</legend>
+      <input type="radio" name="plan" id="plan-free" value="free" /><label for="plan-free">免费版</label>
+      <input type="radio" name="plan" id="plan-pro" value="pro" checked /><label for="plan-pro">Pro</label>
+      <span class="knob" aria-hidden="true"></span>
+    </fieldset>
+    <p class="plan-hint">切换看看区别。</p>
   </section>
 
-  <!-- The twelve features, in the five things they're for. Each chapter is a
-       line across the page with its name under it on the left. -->
-  <section class="chapter" aria-labelledby="more-room">
-    <h2 id="more-room">更多空间</h2>
+  <!-- The three limits, as they are on the side the switch is on. -->
+  <dl class="limits">
+      <div><dt>存储空间</dt><dd class="limit swap"><span class="when-free">2.5 GB</span><span class="when-pro">无上限</span></dd><dd class="limit-note swap"><span class="when-free">存满即止。</span><span class="when-pro">唯一的限制是你 iPhone 上的可用空间。</span></dd></div>
+      <div><dt>相簿</dt><dd class="limit swap"><span class="when-free">5</span><span class="when-pro">无限</span></dd><dd class="limit-note swap"><span class="when-free">文件夹不能嵌套。</span><span class="when-pro">文件夹里还能再建文件夹。</span></dd></div>
+      <div><dt>密码</dt><dd class="limit swap"><span class="when-free">1</span><span class="when-pro">3</span></dd><dd class="limit-note swap"><span class="when-free">你自己的。</span><span class="when-pro">你自己的、一个诱饵密码，和一个抹除一切的密码。</span></dd></div>
+  </dl>
+
+  <!-- The twelve features, one to a row. -->
+  <section class="pro-list" aria-labelledby="pro-list-title">
+    <h2 id="pro-list-title" class="swap"><span class="when-free">免费版不含</span><span class="when-pro">Pro 包含</span></h2>
     <ul>
       <li><h3>无限存储</h3><p>免费版最多可存放 2.5 GB。Pro 没有上限，唯一的限制是你 iPhone 上的可用空间。</p></li>
       <li><h3>无限相簿与文件夹</h3><p>免费版最多包含 5 个相簿。Pro 不限相簿数量，文件夹里还可以再建文件夹。</p></li>
-    </ul>
-  </section>
-  <section class="chapter" aria-labelledby="extra-locks">
-    <h2 id="extra-locks">额外的锁</h2>
-    <ul>
       <li><h3>按相簿设密码</h3><p>为相簿单独设置密码。即使保险库的其他部分已打开，这个相簿仍保持锁定。</p></li>
       <li><h3>基于位置的锁定</h3><p>仅允许在你信任的地点（例如家里）解锁保险库。在其他任何地方，即使输入正确密码也保持锁定。</p></li>
-    </ul>
-  </section>
-  <section class="chapter" aria-labelledby="if-someone-tries">
-    <h2 id="if-someone-tries">如果有人<wbr>想闯入</h2>
-    <ul>
       <li><h3>诱饵保险库</h3><p>设置第二个密码，用来打开一个只有普通照片的独立保险库。万一有人逼你解锁 Privaro，就输入这个密码，真正的保险库不会露面。</p></li>
       <li><h3>胁迫抹除</h3><p>设置一个密码，一旦输入就会抹除整个保险库，包括诱饵。这是为最坏的情况准备的，无法撤销。</p></li>
       <li><h3>闯入抓拍</h3><p>如果有人输入错误密码，Privaro 可以用前置摄像头悄悄拍照，并记录带时间戳的尝试，让你知道是否有人试图进入你的保险库。</p></li>
-    </ul>
-  </section>
-  <section class="chapter" aria-labelledby="out-of-sight">
-    <h2 id="out-of-sight">不露痕迹</h2>
-    <ul>
       <li><h3>防截屏与录屏保护</h3><p>在应用打开时，阻止通过截屏、录屏或 AirPlay 捕获你的保险库，避免内容意外泄露到相机胶卷或投屏画面。</p></li>
       <li><h3>伪装应用图标</h3><p>把 Privaro 伪装成日常的图标和名称，例如「计算器」或「备忘录」，让它在主屏幕上不显眼。图标的颜色款式免费；伪装款式为 Pro 专属。</p></li>
-    </ul>
-  </section>
-  <section class="chapter" aria-labelledby="moving-files">
-    <h2 id="moving-files">导入<wbr>与导出</h2>
-    <ul>
       <li><h3>加密 iCloud 备份与导出</h3><p>把保险库备份到你自己的 iCloud，或导出为单个加密文件。两者在离开设备前都会加密，因此任何人（包括我们）都无法读取。恢复备份始终免费，即使没有 Pro。</p></li>
       <li><h3>Wi-Fi 传输</h3><p>通过本地网络，从任意电脑的浏览器把文件传入保险库。无需数据线、无需云端，也无需在电脑上安装额外应用。</p></li>
       <li><h3>安全分享</h3><p>把照片或视频作为加密文件发给另一位 Privaro 用户，只有用你设定的口令才能打开。传输过程中不会经过我们。</p></li>
     </ul>
   </section>
 
-  <!-- The price once more, set large, and where to pay it. The page ends on
-       a line, as the homepage does. -->
+  <!-- What's the same either way. -->
+  <section class="basics">
+    <h2>无论免费还是 Pro，核心始终不变：</h2>
+    <ul><li>AES-256</li><li>无需账户</li><li>面容 ID 或密码</li><li>离线可用</li></ul>
+  </section>
+
+  <!-- The price once more, set large, and where to pay it. -->
   <section class="pro-price">
     <div class="pro-figure"><p><span class="price" data-price="pro">¥148</span></p></div>
     <div class="pro-pay">

@@ -38,7 +38,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=02ecd410af" />
+<link rel="stylesheet" href="/styles.css?v=d81e5b3d06" />
 <link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
 <script>
 // Register before first reveal, including restored history entries.
@@ -84,60 +84,55 @@
 
 <main class="page wrap pro">
 
-  <!-- What Pro is, on one side; what it costs, on the other, its last line
-       on the headline's baseline. Under both, behind a hairline, where to
-       get it, and what stays the same without it. -->
+  <!-- What Pro is, and one switch: Free or Pro. It's two radio buttons drawn
+       as one control, so it needs no script, and the page answers to it
+       (styles.css): the limits under it change, and the features dim to
+       empty boxes on Free and light up on Pro. It starts on Pro. -->
   <section class="pro-hero" aria-labelledby="pro-title">
     <h1 id="pro-title">Tutto ciò che Pro sblocca.</h1>
     <p class="intro">Pro è un acquisto unico da <span class="price" data-price="pro">9,99 €</span>. Elimina i limiti della versione gratuita e aggiunge tutto quello che trovi qui sotto, su ogni dispositivo collegato al tuo Apple Account. Nulla si rinnova e non c’è niente da disdire.</p>
-    <div class="buy">
-      <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="Scarica Privaro dall’App Store"><img src="/appstore-badge-white.svg" width="150" height="50" alt="Scarica Privaro dall’App Store" /></a>
-      <p class="note"><strong>Gratis o Pro, le basi non cambiano mai:</strong> tutto è cifrato sul tuo dispositivo con AES-256, non c’è un account e solo tu puoi aprire la tua cassaforte.</p>
-    </div>
+    <fieldset class="plan">
+      <legend class="visually-hidden">Confronta Gratis e Pro</legend>
+      <input type="radio" name="plan" id="plan-free" value="free" /><label for="plan-free">Gratis</label>
+      <input type="radio" name="plan" id="plan-pro" value="pro" checked /><label for="plan-pro">Pro</label>
+      <span class="knob" aria-hidden="true"></span>
+    </fieldset>
+    <p class="plan-hint">Cambia per confrontare.</p>
   </section>
 
-  <!-- The twelve features, in the five things they're for. Each chapter is a
-       line across the page with its name under it on the left. -->
-  <section class="chapter" aria-labelledby="more-room">
-    <h2 id="more-room">Più spazio</h2>
+  <!-- The three limits, as they are on the side the switch is on. -->
+  <dl class="limits">
+      <div><dt>Spazio</dt><dd class="limit swap"><span class="when-free">2,5 GB</span><span class="when-pro">Senza limiti</span></dd><dd class="limit-note swap"><span class="when-free">Oltre, non c’è più spazio.</span><span class="when-pro">Conta solo lo spazio libero sul tuo iPhone.</span></dd></div>
+      <div><dt>Album</dt><dd class="limit swap"><span class="when-free">5</span><span class="when-pro">Illimitati</span></dd><dd class="limit-note swap"><span class="when-free">Niente cartelle dentro altre cartelle.</span><span class="when-pro">E cartelle dentro altre cartelle.</span></dd></div>
+      <div><dt>Codici</dt><dd class="limit swap"><span class="when-free">1</span><span class="when-pro">3</span></dd><dd class="limit-note swap"><span class="when-free">Il tuo.</span><span class="when-pro">Il tuo, uno esca e uno che cancella tutto.</span></dd></div>
+  </dl>
+
+  <!-- The twelve features, one to a row. -->
+  <section class="pro-list" aria-labelledby="pro-list-title">
+    <h2 id="pro-list-title" class="swap"><span class="when-free">Non incluso in Gratis</span><span class="when-pro">Incluso in Pro</span></h2>
     <ul>
       <li><h3>Spazio illimitato</h3><p>La versione gratuita contiene fino a 2,5 GB. Pro non ha limiti: conta solo lo spazio libero sul tuo iPhone.</p></li>
       <li><h3>Album e cartelle illimitati</h3><p>La versione gratuita include fino a 5 album. Con Pro puoi crearne quanti ne vuoi e mettere cartelle dentro altre cartelle.</p></li>
-    </ul>
-  </section>
-  <section class="chapter" aria-labelledby="extra-locks">
-    <h2 id="extra-locks">Serrature in più</h2>
-    <ul>
       <li><h3>Password per album</h3><p>Dai a un album una password tutta sua. Resta bloccato anche quando il resto della cassaforte è aperto.</p></li>
       <li><h3>Blocco in base al luogo</h3><p>Consenti lo sblocco della cassaforte solo in luoghi fidati, come casa tua. Altrove resta bloccata anche con il codice giusto.</p></li>
-    </ul>
-  </section>
-  <section class="chapter" aria-labelledby="if-someone-tries">
-    <h2 id="if-someone-tries">Se qualcuno prova a entrare</h2>
-    <ul>
       <li><h3>Cassaforte esca</h3><p>Imposta un secondo codice che apre una cassaforte separata con foto innocue. Se qualcuno ti costringe a sbloccare Privaro, inserisci quello: la tua cassaforte vera resta invisibile.</p></li>
       <li><h3>Cancellazione di emergenza</h3><p>Imposta un codice che cancella l’intera cassaforte, esca compresa, appena viene digitato. È pensato per il caso peggiore ed è irreversibile.</p></li>
       <li><h3>Cattura delle intrusioni</h3><p>Se qualcuno inserisce un codice errato, Privaro può scattare in silenzio una foto con la fotocamera frontale e registrare il tentativo con data e ora, così sai se qualcuno ha provato a entrare nella tua cassaforte.</p></li>
-    </ul>
-  </section>
-  <section class="chapter" aria-labelledby="out-of-sight">
-    <h2 id="out-of-sight">Lontano da occhi indiscreti</h2>
-    <ul>
       <li><h3>Protezione da screenshot e registrazioni</h3><p>Impedisce che la cassaforte venga catturata tramite screenshot, registrazione dello schermo o AirPlay mentre l'app è aperta, così nulla finisce per sbaglio nel rullino o su uno schermo specchiato.</p></li>
       <li><h3>Icona dell'app camuffata</h3><p>Nascondi Privaro dietro un'icona e un nome di tutti i giorni, come Calcolatrice o Note, così non si nota nella schermata Home. Le varianti di colore dell'icona sono gratuite; i camuffamenti sono Pro.</p></li>
-    </ul>
-  </section>
-  <section class="chapter" aria-labelledby="moving-files">
-    <h2 id="moving-files">Spostare i file</h2>
-    <ul>
       <li><h3>Backup iCloud cifrato ed esportazione</h3><p>Esegui il backup della cassaforte sul tuo iCloud o esportala come un unico file cifrato. Entrambi vengono cifrati sul tuo dispositivo prima di uscire, così nessuno (noi compresi) può leggerli. Ripristinare un backup è sempre gratuito, anche senza Pro.</p></li>
       <li><h3>Trasferimento Wi-Fi</h3><p>Invia file nella cassaforte dal browser di qualsiasi computer tramite la tua rete locale. Niente cavi, niente cloud e nessuna app aggiuntiva da installare sul computer.</p></li>
       <li><h3>Condivisione sicura</h3><p>Invia foto o video a un altro utente di Privaro come file cifrato, che si apre solo con una passphrase scelta da te. Nulla passa da noi.</p></li>
     </ul>
   </section>
 
-  <!-- The price once more, set large, and where to pay it. The page ends on
-       a line, as the homepage does. -->
+  <!-- What's the same either way. -->
+  <section class="basics">
+    <h2>Gratis o Pro, le basi non cambiano mai:</h2>
+    <ul><li>AES-256</li><li>Nessun account</li><li>Face ID o codice</li><li>Funziona offline</li></ul>
+  </section>
+
+  <!-- The price once more, set large, and where to pay it. -->
   <section class="pro-price">
     <div class="pro-figure"><p><span class="price" data-price="pro">9,99 €</span></p></div>
     <div class="pro-pay">

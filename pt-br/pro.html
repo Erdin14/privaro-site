@@ -38,7 +38,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=02ecd410af" />
+<link rel="stylesheet" href="/styles.css?v=d81e5b3d06" />
 <link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
 <script>
 // Register before first reveal, including restored history entries.
@@ -84,60 +84,55 @@
 
 <main class="page wrap pro">
 
-  <!-- What Pro is, on one side; what it costs, on the other, its last line
-       on the headline's baseline. Under both, behind a hairline, where to
-       get it, and what stays the same without it. -->
+  <!-- What Pro is, and one switch: Free or Pro. It's two radio buttons drawn
+       as one control, so it needs no script, and the page answers to it
+       (styles.css): the limits under it change, and the features dim to
+       empty boxes on Free and light up on Pro. It starts on Pro. -->
   <section class="pro-hero" aria-labelledby="pro-title">
     <h1 id="pro-title">Tudo o que o Pro desbloqueia.</h1>
     <p class="intro">O Pro é uma compra única de <span class="price" data-price="pro">R$ 129,90</span>. Ele tira os limites da versão gratuita e adiciona tudo o que está abaixo, em todos os aparelhos conectados à sua Apple Account. Nada renova e não há nada para cancelar.</p>
-    <div class="buy">
-      <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="Baixe o Privaro na App Store"><img src="/appstore-badge-white.svg" width="150" height="50" alt="Baixe o Privaro na App Store" /></a>
-      <p class="note"><strong>Grátis ou Pro, o básico nunca muda:</strong> tudo é criptografado no seu aparelho com AES-256, não há conta e só você pode abrir o seu cofre.</p>
-    </div>
+    <fieldset class="plan">
+      <legend class="visually-hidden">Compare Grátis e Pro</legend>
+      <input type="radio" name="plan" id="plan-free" value="free" /><label for="plan-free">Grátis</label>
+      <input type="radio" name="plan" id="plan-pro" value="pro" checked /><label for="plan-pro">Pro</label>
+      <span class="knob" aria-hidden="true"></span>
+    </fieldset>
+    <p class="plan-hint">Alterne para comparar.</p>
   </section>
 
-  <!-- The twelve features, in the five things they're for. Each chapter is a
-       line across the page with its name under it on the left. -->
-  <section class="chapter" aria-labelledby="more-room">
-    <h2 id="more-room">Mais espaço</h2>
+  <!-- The three limits, as they are on the side the switch is on. -->
+  <dl class="limits">
+      <div><dt>Armazenamento</dt><dd class="limit swap"><span class="when-free">2,5 GB</span><span class="when-pro">Sem limite</span></dd><dd class="limit-note swap"><span class="when-free">Depois disso, não cabe mais.</span><span class="when-pro">Só depende do espaço livre no seu iPhone.</span></dd></div>
+      <div><dt>Álbuns</dt><dd class="limit swap"><span class="when-free">5</span><span class="when-pro">Ilimitados</span></dd><dd class="limit-note swap"><span class="when-free">Sem pastas dentro de pastas.</span><span class="when-pro">E pastas dentro de pastas.</span></dd></div>
+      <div><dt>Senhas</dt><dd class="limit swap"><span class="when-free">1</span><span class="when-pro">3</span></dd><dd class="limit-note swap"><span class="when-free">A sua.</span><span class="when-pro">A sua, uma falsa e uma que apaga tudo.</span></dd></div>
+  </dl>
+
+  <!-- The twelve features, one to a row. -->
+  <section class="pro-list" aria-labelledby="pro-list-title">
+    <h2 id="pro-list-title" class="swap"><span class="when-free">Fora do Grátis</span><span class="when-pro">Incluído no Pro</span></h2>
     <ul>
       <li><h3>Armazenamento ilimitado</h3><p>A versão gratuita comporta até 2,5 GB. O Pro não tem limite: só depende do espaço livre no seu iPhone.</p></li>
       <li><h3>Álbuns e pastas ilimitados</h3><p>O Grátis inclui até 5 álbuns. Com o Pro você cria quantos quiser e pode colocar pastas dentro de pastas.</p></li>
-    </ul>
-  </section>
-  <section class="chapter" aria-labelledby="extra-locks">
-    <h2 id="extra-locks">Travas extras</h2>
-    <ul>
       <li><h3>Senhas por álbum</h3><p>Dê a um álbum uma senha própria. Ele continua trancado mesmo com o resto do cofre aberto.</p></li>
       <li><h3>Bloqueio por localização</h3><p>Permita que o cofre seja desbloqueado apenas em lugares confiáveis, como a sua casa. Em qualquer outro lugar, ele continua bloqueado mesmo com a senha certa.</p></li>
-    </ul>
-  </section>
-  <section class="chapter" aria-labelledby="if-someone-tries">
-    <h2 id="if-someone-tries">Se alguém tentar entrar</h2>
-    <ul>
       <li><h3>Cofre falso</h3><p>Defina uma segunda senha que abre um cofre separado com fotos inofensivas. Se um dia pressionarem você a desbloquear o Privaro, digite essa, e o seu cofre real continua escondido.</p></li>
       <li><h3>Limpeza sob coação</h3><p>Defina uma senha que apaga o cofre inteiro, incluindo o falso, assim que é digitada. É para o pior caso e não pode ser desfeito.</p></li>
       <li><h3>Captura de invasão</h3><p>Se alguém digitar a senha errada, o Privaro pode tirar uma foto silenciosamente com a câmera frontal e registrar a tentativa com data e hora, para você saber se alguém tentou entrar no seu cofre.</p></li>
-    </ul>
-  </section>
-  <section class="chapter" aria-labelledby="out-of-sight">
-    <h2 id="out-of-sight">Longe de olhares curiosos</h2>
-    <ul>
       <li><h3>Proteção contra capturas e gravação</h3><p>Impede que o seu cofre seja capturado por capturas, gravação de tela ou AirPlay enquanto o app está aberto, para que nada vaze sem querer para o rolo da câmera ou para uma tela espelhada.</p></li>
       <li><h3>Ícone do app disfarçado</h3><p>Esconda o Privaro atrás de um ícone e nome do dia a dia, como Calculadora ou Notas, para não chamar atenção na sua tela de início. As variações de cor do ícone são grátis; os disfarces são Pro.</p></li>
-    </ul>
-  </section>
-  <section class="chapter" aria-labelledby="moving-files">
-    <h2 id="moving-files">Transferir arquivos</h2>
-    <ul>
       <li><h3>Backup criptografado no iCloud e exportação</h3><p>Faça backup do seu cofre no seu próprio iCloud ou exporte-o como um único arquivo criptografado. Ambos são criptografados no seu dispositivo antes de sair, então ninguém (nem nós) consegue ler. Restaurar um backup é sempre grátis, mesmo sem o Pro.</p></li>
       <li><h3>Transferência por Wi-Fi</h3><p>Envie arquivos para o cofre pelo navegador de qualquer computador na sua rede local. Sem cabo, sem nuvem e sem instalar outro app no computador.</p></li>
       <li><h3>Compartilhamento seguro</h3><p>Envie fotos ou vídeos para outra pessoa que usa o Privaro como um arquivo criptografado que só abre com uma frase secreta escolhida por você. Nada passa por nós.</p></li>
     </ul>
   </section>
 
-  <!-- The price once more, set large, and where to pay it. The page ends on
-       a line, as the homepage does. -->
+  <!-- What's the same either way. -->
+  <section class="basics">
+    <h2>Grátis ou Pro, o básico nunca muda:</h2>
+    <ul><li>AES-256</li><li>Sem conta</li><li>Face ID ou código</li><li>Funciona offline</li></ul>
+  </section>
+
+  <!-- The price once more, set large, and where to pay it. -->
   <section class="pro-price">
     <div class="pro-figure"><p><span class="price" data-price="pro">R$ 129,90</span></p></div>
     <div class="pro-pay">

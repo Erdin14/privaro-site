@@ -43,60 +43,55 @@
 
 <main class="page wrap pro">
 
-  <!-- What Pro is, on one side; what it costs, on the other, its last line
-       on the headline's baseline. Under both, behind a hairline, where to
-       get it, and what stays the same without it. -->
+  <!-- What Pro is, and one switch: Free or Pro. It's two radio buttons drawn
+       as one control, so it needs no script, and the page answers to it
+       (styles.css): the limits under it change, and the features dim to
+       empty boxes on Free and light up on Pro. It starts on Pro. -->
   <section class="pro-hero" aria-labelledby="pro-title">
     <h1 id="pro-title">{{pro_h1}}</h1>
     <p class="intro">{{pro_intro}}</p>
-    <div class="buy">
-      <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="{{badge_label}}"><img src="/appstore-badge-white.svg" width="150" height="50" alt="{{badge_label}}" /></a>
-      <p class="note"><strong>{{pro_callout_strong}}</strong> {{pro_callout_rest}}</p>
-    </div>
+    <fieldset class="plan">
+      <legend class="visually-hidden">{{pro_compare}}</legend>
+      <input type="radio" name="plan" id="plan-free" value="free" /><label for="plan-free">{{pro_free}}</label>
+      <input type="radio" name="plan" id="plan-pro" value="pro" checked /><label for="plan-pro">Pro</label>
+      <span class="knob" aria-hidden="true"></span>
+    </fieldset>
+    <p class="plan-hint">{{pro_flip}}</p>
   </section>
 
-  <!-- The twelve features, in the five things they're for. Each chapter is a
-       line across the page with its name under it on the left. -->
-  <section class="chapter" aria-labelledby="more-room">
-    <h2 id="more-room">{{pro_g1}}</h2>
+  <!-- The three limits, as they are on the side the switch is on. -->
+  <dl class="limits">
+      <div><dt>{{pro_s1}}</dt><dd class="limit swap"><span class="when-free">{{pro_s1_free}}</span><span class="when-pro">{{pro_s1_pro}}</span></dd><dd class="limit-note swap"><span class="when-free">{{pro_s1_free_d}}</span><span class="when-pro">{{pro_s1_pro_d}}</span></dd></div>
+      <div><dt>{{pro_s2}}</dt><dd class="limit swap"><span class="when-free">5</span><span class="when-pro">{{pro_s2_pro}}</span></dd><dd class="limit-note swap"><span class="when-free">{{pro_s2_free_d}}</span><span class="when-pro">{{pro_s2_pro_d}}</span></dd></div>
+      <div><dt>{{pro_s3}}</dt><dd class="limit swap"><span class="when-free">1</span><span class="when-pro">3</span></dd><dd class="limit-note swap"><span class="when-free">{{pro_s3_free_d}}</span><span class="when-pro">{{pro_s3_pro_d}}</span></dd></div>
+  </dl>
+
+  <!-- The twelve features, one to a row. -->
+  <section class="pro-list" aria-labelledby="pro-list-title">
+    <h2 id="pro-list-title" class="swap"><span class="when-free">{{pro_list_free}}</span><span class="when-pro">{{pro_list_pro}}</span></h2>
     <ul>
       <li><h3>{{prof2_t}}</h3><p>{{prof2_d}}</p></li>
       <li><h3>{{prof3_t}}</h3><p>{{prof3_d}}</p></li>
-    </ul>
-  </section>
-  <section class="chapter" aria-labelledby="extra-locks">
-    <h2 id="extra-locks">{{pro_g2}}</h2>
-    <ul>
       <li><h3>{{prof7_t}}</h3><p>{{prof7_d}}</p></li>
       <li><h3>{{prof11_t}}</h3><p>{{prof11_d}}</p></li>
-    </ul>
-  </section>
-  <section class="chapter" aria-labelledby="if-someone-tries">
-    <h2 id="if-someone-tries">{{pro_g3}}</h2>
-    <ul>
       <li><h3>{{prof8_t}}</h3><p>{{prof8_d}}</p></li>
       <li><h3>{{prof9_t}}</h3><p>{{prof9_d}}</p></li>
       <li><h3>{{prof5_t}}</h3><p>{{prof5_d}}</p></li>
-    </ul>
-  </section>
-  <section class="chapter" aria-labelledby="out-of-sight">
-    <h2 id="out-of-sight">{{pro_g4}}</h2>
-    <ul>
       <li><h3>{{prof4_t}}</h3><p>{{prof4_d}}</p></li>
       <li><h3>{{prof12_t}}</h3><p>{{prof12_d}}</p></li>
-    </ul>
-  </section>
-  <section class="chapter" aria-labelledby="moving-files">
-    <h2 id="moving-files">{{pro_g5}}</h2>
-    <ul>
       <li><h3>{{prof6_t}}</h3><p>{{prof6_d}}</p></li>
       <li><h3>{{prof10_t}}</h3><p>{{prof10_d}}</p></li>
       <li><h3>{{prof13_t}}</h3><p>{{prof13_d}}</p></li>
     </ul>
   </section>
 
-  <!-- The price once more, set large, and where to pay it. The page ends on
-       a line, as the homepage does. -->
+  <!-- What's the same either way. -->
+  <section class="basics">
+    <h2>{{pro_callout_strong}}</h2>
+    <ul><li>AES-256</li><li>{{fact2_t}}</li><li>{{fact3_t}}</li><li>{{fact4_t}}</li></ul>
+  </section>
+
+  <!-- The price once more, set large, and where to pay it. -->
   <section class="pro-price">
     <div class="pro-figure"><p>{{PRICE}}</p></div>
     <div class="pro-pay">
