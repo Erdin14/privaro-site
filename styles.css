@@ -582,7 +582,7 @@ h1, h2 { font-weight: 600; }
 .faq-more .more { margin-top: 0; font-size: var(--size-lead); }
 /* Pro. What Pro is, and one switch, Free or Pro, that the rest of the page
    answers to: the three limits under it, and the twelve features, one to a
-   row, which dim to empty boxes on Free and light up on Pro. Then what's the
+   row, each checked on Pro and dashed on Free. Then what's the
    same either way, and the price set large beside where to pay it. The
    switch is two radio buttons drawn as one control, so it needs no script
    and works from the keyboard; with Reduce Motion it changes at once. */
@@ -630,28 +630,37 @@ h1, h2 { font-weight: 600; }
 .limit { margin-top: var(--space-2); font-family: var(--display); font-size: min(60px, 17cqi); font-weight: 700; line-height: 1.02;
   letter-spacing: -.035em; text-wrap: balance; transition: color var(--dur-reveal) var(--ease-state); }
 .limit-note { margin-top: var(--space-3); max-width: 22em; font-size: 14px; line-height: 1.5; color: var(--muted); }
+/* Yes and no, wherever a list says which: a thin check in the text's ink
+   for yes, a short grey dash for no. The check is two borders of a small
+   box turned 45 degrees; the dash is the same box laid flat, so one can
+   turn into the other. */
+.mark-yes::before, .mark-no::before { content: ""; position: absolute; box-sizing: border-box; border: 0 solid var(--ink);
+  transition: width var(--dur-state) var(--ease-state), height var(--dur-state) var(--ease-state),
+    rotate var(--dur-state) var(--ease-state), top var(--dur-state) var(--ease-state),
+    inset-inline-start var(--dur-state) var(--ease-state), border-color var(--dur-state) var(--ease-state); }
+.mark-yes::before { inset-inline-start: 4px; top: calc(var(--mark-line) / 2 - 9px); width: 7px; height: 12px;
+  border-width: 0 1.75px 1.75px 0; rotate: 45deg; }
+.mark-no::before { inset-inline-start: 1px; top: calc(var(--mark-line) / 2 - 1px); width: 12px; height: 1.75px;
+  border-width: 0 0 1.75px; border-color: var(--dim); rotate: 0deg; }
 /* The features: plain rows, a mark, the name, and what it does. */
 .pro-list { margin-top: var(--space-8); }
 .pro-list ul { list-style: none; display: grid; row-gap: var(--space-5); margin-top: var(--space-5); }
-.pro-list li { position: relative; display: grid; grid-template-columns: var(--pro-columns); column-gap: var(--space-7);
-  padding-inline-start: 34px; }
-.pro-list li::before { content: ""; position: absolute; inset-inline-start: 2px; top: calc(var(--size-lead) * .7 - 7px);
-  width: 14px; height: 14px; border-radius: 50%; background: var(--blue); box-shadow: 0 0 0 4px rgb(110 162 255 / .16);
-  transition: background-color var(--dur-state) var(--ease-state), box-shadow var(--dur-state) var(--ease-state),
-    border-radius var(--dur-state) var(--ease-state); }
+.pro-list li { --mark-line: calc(var(--size-lead) * 1.4); position: relative; display: grid; grid-template-columns: var(--pro-columns);
+  column-gap: var(--space-7); padding-inline-start: 34px; }
 .pro-list h3 { font-size: var(--size-lead); font-weight: 600; line-height: 1.4; letter-spacing: -.012em;
   transition: color var(--dur-state) var(--ease-state); }
 .pro-list li p { font-size: var(--size-text); line-height: 1.55; letter-spacing: var(--track-text); color: var(--muted);
   transition: color var(--dur-state) var(--ease-state); }
-/* On Free: the figures go grey, and every feature dims to an empty box.
+/* On Free: the figures go grey, and every feature's check lies down into a dash.
    Still readable: what Free doesn't have is worth reading too. */
 .pro:has(#plan-free:checked) .limit { color: var(--faint); }
-.pro:has(#plan-free:checked) .pro-list li::before { border-radius: 4px; background: transparent; box-shadow: inset 0 0 0 1.5px var(--dim); }
+.pro:has(#plan-free:checked) .pro-list li::before { inset-inline-start: 1px; top: calc(var(--mark-line) / 2 - 1px); width: 12px; height: 1.75px;
+  border-width: 0 0 1.75px; border-color: var(--dim); rotate: 0deg; }
 .pro:has(#plan-free:checked) .pro-list h3 { color: var(--faint); }
 /* The dimmest grey that still reads at 4.5:1 on the graphite behind the list. */
 .pro:has(#plan-free:checked) .pro-list li p { color: #85868b; }
 @media (prefers-reduced-motion: reduce) {
-  .pro *, .pro .pro-list li::before { transition: none !important; }
+  .pro *, .pro .pro-list li::before, .mark-yes::before, .mark-no::before { transition: none !important; }
 }
 /* What's the same either way. */
 .basics { margin-top: var(--space-8); text-align: center; }
@@ -684,7 +693,7 @@ h1, h2 { font-weight: 600; }
    out of the line the opening stands on. Then the list of its sections, and
    chapters, each starting on a hairline under a larger heading. What it
    protects against and what it can't sit side by side, marked as on the Pro
-   page: a blue dot for yes, an empty box for no. The known limitations are
+   page: a check for yes, a dash for no. The known limitations are
    numbered, and the way to report a problem is the last word. */
 .sec-hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(240px, 320px); column-gap: var(--space-8);
   align-items: end; border-bottom: 1px solid var(--rule); }
@@ -754,9 +763,7 @@ h1, h2 { font-weight: 600; }
 .doc .threats-head { margin-bottom: var(--space-4); font-weight: 600; color: var(--ink); }
 .doc .threats ul { list-style: none; display: grid; align-content: start; row-gap: var(--space-3); margin: 0; padding: 0; }
 .threats li { position: relative; margin: 0; padding-inline-start: 26px; font-size: 15px; line-height: 1.5; }
-.threats li::before { content: ""; position: absolute; inset-inline-start: 1px; top: calc(.75em - 6px); width: 12px; height: 12px; }
-.protects li::before { border-radius: 50%; background: var(--blue); box-shadow: 0 0 0 3px rgb(110 162 255 / .16); }
-.cannot li::before { border-radius: 3px; box-shadow: inset 0 0 0 1.5px var(--dim); }
+.threats li { --mark-line: 1.5em; }
 /* The known limitations, numbered in the margin. */
 .doc .known { list-style: none; display: grid; row-gap: var(--space-4); margin-top: var(--space-5); padding: 0; counter-reset: known; }
 .known li { counter-increment: known; position: relative; margin: 0; padding-inline-start: 40px; }
