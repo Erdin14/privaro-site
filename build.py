@@ -258,7 +258,9 @@ def switcher_block(page, cur, label):
         else:
             items.append(f'<a href="{page_url(page, code)}" lang="{htmllang}" hreflang="{htmllang}">'
                          f'<span>{name}</span></a>')
-    return (f'<details class="lang"><summary aria-label="{label}">{GLOBE}'
+    # The button's name includes the word on it ("Language: English"), so
+    # asking for it by what it shows works with voice control.
+    return (f'<details class="lang"><summary aria-label="{label}: {AUTONYM[cur]}">{GLOBE}'
             f'<span>{AUTONYM[cur]}</span>{CHEVRON}</summary>'
             f'<div class="lang-menu"><p class="lang-head">{label}</p>'
             f'<div class="lang-list">{"".join(items)}</div></div></details>')
@@ -380,8 +382,10 @@ def film_block(code):
         return "\n" + f.read().rstrip("\n").replace("{{FILM_VERSION}}", film_version()) + "\n"
 
 
-def render(html, page, code, htmllang, head, strings, pricing):
-    """Fill in a template for one language. `page` decides where the language links go."""
+def render(html, page, code, htmllang, head, strings, pricing, here=None):
+    """Fill in a template for one language. `page` decides where the language
+    links go; `here` is the page's own address, whose links in the header and
+    footer are marked as the current page."""
     html = html.replace("{{FILM}}", film_block(code))
     html = html.replace("{{LANG}}", htmllang)
     html = html.replace("{{DIR}}", "rtl" if code in RTL else "ltr")
@@ -402,6 +406,8 @@ def render(html, page, code, htmllang, head, strings, pricing):
     if "{{" in html:
         leftover = html[html.index("{{"):html.index("{{") + 40]
         raise SystemExit(f"Unreplaced token in {page}/{code}: {leftover!r}")
+    if here:
+        html = html.replace(f'<a href="{here}">', f'<a href="{here}" aria-current="page">')
     return html
 
 
@@ -499,14 +505,15 @@ def main():
     for page, _ in PAGES.items():
         template = read_template(PAGES[page])
         for code, _, htmllang, _ in LANGS:
-            html = render(template, page, code, htmllang, seo_block(page, code), strings, pricing)
+            html = render(template, page, code, htmllang, seo_block(page, code), strings, pricing,
+                          here=page_url(page, code))
             write(out_path(page, code), html)
 
     # English only, with no language alternates; like the 404's, the language
     # menu leads to each homepage.
     for page, name in ENGLISH_ONLY.items():
         html = render(read_template(name), "index", "en", "en", seo_block(page, "en", alternates=False),
-                      strings, pricing)
+                      strings, pricing, here=page_url(page, "en"))
         write(name, html)
 
     # One English 404 for every path; its language menu leads to each homepage.

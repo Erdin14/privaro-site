@@ -173,6 +173,9 @@ main:focus { outline: none; }
 .head-links a { padding-block: var(--space-2); color: var(--muted); white-space: nowrap;
   transition: color var(--dur-state) var(--ease-state); }
 .head-links a:hover { color: var(--ink); text-decoration: none; }
+/* The page you're on, in full ink, in the header and the footer (build.py
+   marks it). */
+:is(.head-links, .foot-links) a[aria-current] { color: var(--ink); }
 /* The download: the one word in full ink, underlined as the page's other
    "go on" links are (.more). */
 .head-get { display: inline-flex; align-items: center; padding-block: var(--space-2); color: var(--ink); font-weight: 600;
@@ -208,12 +211,22 @@ main:focus { outline: none; }
      it. Following the page down, it would need a band behind it to stay
      readable, and on a phone that reads as a dark bar across the screen; a
      sticky bar at the top also has Safari fill the status bar with solid
-     colour. The way to the other pages is in the footer. */
+     colour. */
   .site-head { position: relative; padding-top: 18px; }
   .site-head::before { content: none; }
-  /* The name on the left, the line, then the globe and the download. */
+  /* The name on the left, the line, then the globe and the download. Under
+     them, the other pages as a line of plain words, the way a masthead
+     lists its sections: the only way to them used to be the footer, a long
+     scroll away on the Security page. No button and nothing to open. */
   .head-bar { grid-template-columns: auto minmax(0, 1fr); }
-  .head-links { display: none; }
+  .brand { grid-area: 1 / 1; }
+  .head-end { grid-area: 1 / 2; }
+  /* The gap gives a little on the narrowest phones, where Russian and
+     Japanese would otherwise take a second line. */
+  .head-links { grid-area: 2 / 1 / auto / -1; flex-wrap: wrap; gap: 0 clamp(10px, 4.4vw, var(--space-5)); font-size: 14px; }
+  .head-links::after { content: none; }
+  /* Tall enough for a finger. */
+  .head-links a { padding-block: 12px; }
   .brand { padding-inline: 0 var(--space-4); font-size: 16px; }
   .head-end { gap: 20px; }
   .head-get { padding-block: 11px; font-size: 15px; }
@@ -289,7 +302,7 @@ main:focus { outline: none; }
 @media (hover: hover) and (pointer: fine) and (min-width: 1181px) {
   .handoff { display: flex; align-items: center; gap: var(--space-4); font-size: var(--size-small); line-height: 1.4;
     letter-spacing: var(--track-text); color: var(--muted); }
-  .handoff img { flex: none; width: 84px; height: 84px; border-radius: 10px; }
+  .handoff img { flex: none; width: 72px; height: 72px; border-radius: 9px; }
   .handoff span { max-width: 9em; text-wrap: balance; }
   /* In the hero it starts where the words above it do: the row takes the
      hero's own two columns. */
@@ -311,8 +324,13 @@ main:focus { outline: none; }
    labelled with what it's for. A phone leans a little toward the pointer
    (presentation.js) and the others step back. */
 .gallery { margin-top: var(--space-9); }
-.shots { display: flex; justify-content: center; gap: var(--gutter); }
-.shots figure { flex: 0 1 312px; min-width: 0; max-width: calc(72vh * .4832); margin: 0; perspective: 1600px; }
+/* Four columns of the page itself, so the first phone starts on the page's
+   left edge and the third on its centre line, where the facts, the
+   passcodes' descriptions and the links under them start. Centred as a
+   group, the row sat a few pixels to a few dozen inside both, depending on
+   the window's height. */
+.shots { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); column-gap: var(--gutter); }
+.shots figure { min-width: 0; max-width: min(312px, 72vh * .4832); margin: 0; perspective: 1600px; }
 /* Each screenshot is the phone in its frame, cut to the phone's outline
    (body and side buttons) by a mask drawn from the same measurements. It's
    WebP, a quarter of the JPEG's size, with the JPEG for browsers without it;
@@ -323,10 +341,13 @@ main:focus { outline: none; }
 .shots img { width: 100%; height: auto;
   -webkit-mask-image: url(/shots/framed-18-pro-max/phone-mask.svg); mask-image: url(/shots/framed-18-pro-max/phone-mask.svg);
   -webkit-mask-size: 100% 100%; mask-size: 100% 100%; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; }
-.shots figcaption { margin-top: var(--space-5); padding-inline: var(--space-1); font-size: var(--size-text); line-height: 1.45;
+/* A name and a line, set as the facts further down are (.ledger): the
+   page's small lists share one size and weight. The 2px is the phone's side
+   buttons: the words start under its body. */
+.shots figcaption { margin-top: var(--space-5); padding-inline: 2px; font-size: var(--size-text); line-height: 1.5;
   letter-spacing: var(--track-text); }
-.shots figcaption strong { display: block; font-weight: 600; color: var(--ink); }
-.shots figcaption > span { display: block; margin-top: 2px; color: var(--muted); }
+.shots figcaption strong { display: block; font-size: var(--size-lead); font-weight: 600; line-height: 1.35; letter-spacing: -.012em; color: var(--ink); }
+.shots figcaption > span { display: block; margin-top: var(--space-1); color: var(--muted); }
 
 .shot-open { position: relative; display: block; width: 100%; padding: 0; border: 0; background: none; color: inherit;
   cursor: zoom-in; border-radius: 12%; -webkit-tap-highlight-color: transparent;
@@ -367,7 +388,9 @@ main:focus { outline: none; }
 .film-progress { position: absolute; inset-inline: 0; bottom: 0; height: 14px; display: flex; align-items: flex-end;
   cursor: pointer; touch-action: none; }
 .film-progress[hidden] { display: none; }
-.film-progress:focus-visible { outline: none; }
+/* The keyboard's ring, inside the film's bottom edge: before the film has
+   played, the line turning blue was a change to nothing. */
+.film-progress:focus-visible { outline: 2px solid var(--blue); outline-offset: -2px; }
 .film-progress-track { position: relative; width: 100%; height: 3px; background: rgb(255 255 255 / .2);
   transition: height var(--dur-state) var(--ease-state); }
 .film-progress-fill { position: absolute; inset: 0; background: rgb(245 245 247 / .9); transform: scaleX(0); transform-origin: left; }
@@ -424,9 +447,18 @@ main:focus { outline: none; }
    own scrolling writes the photo over (privacy-vignette.js): untouched as
    it comes up the screen, ciphertext by the time it's read. */
 .safety .privacy-art { --pw: 58cqw; }
+/* On wide screens it stands on the page's left edge, as the first phone of
+   the gallery above and the passcodes below do, with the facts on the
+   centre line: every section on the same two edges. (Centred in its half
+   it was on neither.) */
+@media (min-width: 1181px) {
+  .safety .vg-phone { left: 0; translate: none; }
+  [dir="rtl"] .safety .vg-phone { left: auto; right: 0; }
+}
 
 /* Guard: what Pro does when it isn't you at the lock. One question across
-   the page; under it three passcodes, each the lock screen's four dots and,
+   the page; under it three passcodes, each the six dots of Privaro's own
+   passcode screen (thin rings that fill, sized as the app draws them) and,
    beside its name, what it does, on the edge the facts above start on. The
    dots are the only drawing: typed and kept for the decoy, typed and gone
    for the wipe, typed, shaken off and left empty for the wrong one. That
@@ -440,15 +472,17 @@ main:focus { outline: none; }
 .code h3 { font-family: var(--display); font-size: var(--size-title); font-weight: 600; line-height: 1.15;
   letter-spacing: var(--track-title); text-wrap: balance; }
 .code p { max-width: 36em; font-size: var(--size-lead); line-height: 1.55; letter-spacing: var(--track-text); color: var(--muted); }
-.dots { grid-column: 1 / -1; justify-self: start; display: flex; gap: 17px; margin-bottom: var(--space-5); }
-.dots i { width: 15px; height: 15px; border: 1.5px solid var(--ink); border-radius: 50%; background: var(--ink); }
-/* How each ends, and all there is without motion: four dots; four specks;
-   four empty rings. */
+.dots { grid-column: 1 / -1; justify-self: start; display: flex; gap: 13px; margin-bottom: var(--space-5); }
+.dots i { width: 11px; height: 11px; border: 1px solid var(--ink); border-radius: 50%; background: var(--ink); }
+/* How each ends, and all there is without motion: six dots; six specks;
+   six empty rings. */
 .code-wipe .dots i { scale: .3; }
 .code-wrong .dots i { background: transparent; }
 .guard-foot { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: var(--gutter); align-items: center;
   margin-top: var(--space-8); padding-top: var(--space-6); border-top: 1px solid var(--rule); }
 .guard-foot .more { justify-self: start; margin-top: 0; font-size: var(--size-lead); }
+.guard-price { font-size: var(--size-lead); line-height: 1.5; letter-spacing: var(--track-text); color: var(--muted); }
+.guard-price .price { margin-inline-end: .35em; color: var(--ink); font-weight: 600; }
 
 /* Closing: the last word on the left; on the right the Lock Screen, its
    foot fading into the page, as the phone in the illustration does. */
@@ -483,16 +517,17 @@ main:focus { outline: none; }
   .motion .rise { animation: var(--anim, fade) var(--dur-scene) var(--ease) var(--d, 0s) both paused; }
   .motion .rise.in-view { animation-play-state: running; }
   /* Each row types its passcode once, when it's on screen, a beat after
-     the one above it: a key every 130ms, then what that passcode does. */
+     the one above it: a key every 110ms, a breath, then what that passcode
+     does. */
   .motion .code { --row: 0s; }
   .motion .code-wipe { --row: .25s; }
   .motion .code-wrong { --row: .5s; }
-  .motion .dots i { --key: calc(var(--row) + .3s + var(--n) * .13s); }
+  .motion .dots i { --key: calc(var(--row) + .3s + var(--n) * .11s); }
   .motion .code-decoy .dots i { animation: dot-type 1ms linear var(--key) both; }
   .motion .code-wipe .dots i { animation: dot-type 1ms linear var(--key) both,
-    dot-gone var(--dur-reveal) var(--ease) calc(var(--row) + 1.3s + var(--n) * .07s) both; }
-  .motion .code-wrong .dots i { animation: dot-try calc(1.5s - var(--n) * .13s) linear var(--key) both; }
-  .motion .code-wrong .dots { animation: dots-shake .45s var(--ease-state) calc(var(--row) + 1.05s) both; }
+    dot-gone var(--dur-reveal) var(--ease) calc(var(--row) + 1.4s + var(--n) * .05s) both; }
+  .motion .code-wrong .dots i { animation: dot-try calc(1.35s - var(--n) * .11s) linear var(--key) both; }
+  .motion .code-wrong .dots { animation: dots-shake .45s var(--ease-state) calc(var(--row) + 1.2s) both; }
   .motion .code:not(.in-view) :is(.dots, .dots i) { animation-play-state: paused; }
   .motion .shots .rise { --d: calc(.25s + var(--i) * .1s); animation-duration: 1400ms; }
   /* Under a finger the phones arrive where they are, fading up and growing a
@@ -972,7 +1007,7 @@ main:focus { outline: none; }
 /* Scripts other than Latin and Cyrillic. Letter-spacing would pull Arabic and
    Urdu's joined letters apart and crowds Devanagari and CJK, and Arabic, Urdu
    and Hindi need taller lines so marks above and below don't collide. */
-:is(:lang(ar), :lang(ur), :lang(hi)) :is(.tagline, .display, .display .answer, .limit, .pro-figure p, .qa h2, .faq-more h2, .article h2, .legal-callout-body, .page h1, .buy-note, .ledger dt, .ledger dd, .shots figcaption, .code h3, .code p, .handoff) { letter-spacing: 0; }
+:is(:lang(ar), :lang(ur), :lang(hi)) :is(.tagline, .display, .display .answer, .limit, .pro-figure p, .qa h2, .faq-more h2, .article h2, .legal-callout-body, .page h1, .buy-note, .ledger dt, .ledger dd, .shots figcaption, .shots figcaption strong, .code h3, .code p, .handoff, .guard-price) { letter-spacing: 0; }
 :is(:lang(zh), :lang(ja), :lang(ko)) :is(.tagline, .display, .display .answer, .limit, .qa h2, .faq-more h2, .article h2, .page h1, .code h3) { letter-spacing: -.01em; }
 /* Chinese and Japanese may break between any two characters; display lines
    break between phrases, where the strings mark it with <wbr>, and inside
@@ -998,7 +1033,7 @@ main:focus { outline: none; }
   .gallery { margin-top: var(--space-8); }
   /* The room at the bottom is for the row's scrollbar: Safari takes its height
      out of the row rather than adding it, which cut off the captions. */
-  .shots.wrap { width: auto; margin-inline: 0; justify-content: flex-start; gap: var(--space-4);
+  .shots.wrap { display: flex; width: auto; margin-inline: 0; justify-content: flex-start; gap: var(--space-4);
     padding: var(--space-2) var(--side) var(--space-5); overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: var(--side);
     scrollbar-width: thin; scrollbar-color: rgb(255 255 255 / .18) transparent; }
   .shots figure { flex: none; width: min(56vw, 300px); max-width: none; scroll-snap-align: center; }

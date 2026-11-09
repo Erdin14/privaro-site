@@ -5,7 +5,9 @@
 // On the Security page, where it's on screen from the start, it plays once.
 // On the homepage the reader's own scrolling writes it: the photo is whole
 // as the phone comes up the screen and ciphertext by the time it reaches
-// the top, and scrolling back reads it out again. Played once on its
+// the top. One way only: scrolling back doesn't bring the photo back,
+// because that is the one thing the illustration is there to say. Once it's
+// written, nothing here listens to the page any more. Played once on its
 // own it was two seconds that were easy to miss, and then a dim phone.
 (() => {
   const figure = document.querySelector('.privacy-vignette');
@@ -89,36 +91,40 @@
     // The phone's foot is below the edge of its column, so the line only
     // has to cross the part of the screen that shows.
     const reach = .74;
-    let queued = false, last = -1, stamp = 0;
-    const draw = () => {
+    let queued = false, furthest = 0, listening = false;
+    const queue = () => { if (!queued) { queued = true; requestAnimationFrame(draw); } };
+    const listen = on => {
+      if (on === listening) return;
+      listening = on;
+      (on ? addEventListener : removeEventListener)('scroll', queue, { passive: true });
+      (on ? addEventListener : removeEventListener)('resize', queue);
+    };
+    function draw() {
       queued = false;
-      if (reduce.matches || figure.dataset.state !== 'scrub') return;
+      if (reduce.matches || figure.dataset.state !== 'scrub') return listen(false);
       const top = figure.getBoundingClientRect().top;
       // Whole until its top is just past halfway up the screen, so the photo
-      // has been seen; written by the time the top nears the header.
-      const p = Math.min(1, Math.max(0, (innerHeight * .56 - top) / (innerHeight * .44)));
-      if (p === last) return;
-      last = p;
-      figure.style.setProperty('--cut', (p < 1 ? p * reach * 100 : 100).toFixed(2) + '%');
+      // has been seen; written by the time the top nears the header. Only
+      // ever further: the line never goes back up.
+      const p = Math.max(furthest, Math.min(1, (innerHeight * .56 - top) / (innerHeight * .44)));
+      if (p === furthest && p > 0) return;
+      furthest = p;
+      // The ciphertext itself holds still: only the line moves. (It churned
+      // as it was written, which under a finger read as the whole screen
+      // flickering.)
+      figure.style.setProperty('--cut', (p * reach * 100).toFixed(2) + '%');
       figure.style.setProperty('--scan', Math.max(0, Math.min(1, p / .05, (1 - p) / .08)).toFixed(2));
-      clearTimeout(scramble);
-      if (p > 0 && p < 1) {
-        const now = performance.now();
-        if (now - stamp > 70) { stamp = now; cipher.textContent = churned(); }
-        scramble = setTimeout(() => { cipher.textContent = text; }, 180);
-      } else cipher.textContent = text;
-    };
-    const queue = () => { if (!queued) { queued = true; requestAnimationFrame(draw); } };
+      if (p >= 1) { listen(false); figure.dataset.state = 'complete'; }
+    }
     const begin = () => {
-      if (reduce.matches) return;
+      if (reduce.matches || furthest >= 1) return;
       figure.dataset.state = 'scrub';
-      last = -1;
+      listen(true);
       draw();
     };
-    addEventListener('scroll', queue, { passive: true });
-    addEventListener('resize', queue);
-    // Back from the page cache, where leaving had settled it.
-    addEventListener('pageshow', begin);
+    // Back from the page cache, where leaving had settled it: as far as it
+    // had got, and on from there.
+    addEventListener('pageshow', event => { if (event.persisted) begin(); });
     begin();
     return;
   }

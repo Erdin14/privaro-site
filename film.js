@@ -113,11 +113,16 @@
   describe();
 
   if (!('IntersectionObserver' in window)) return;
-  // Start fetching a screen or so before it arrives, so it's ready to play.
+  // A screen or so before it arrives, fetch what describes it (its length,
+  // for the line along its edge), not the film: asked for all of it this
+  // early, a browser may download tens of megabytes for someone who scrolls
+  // straight past. The picture itself starts arriving when it starts to
+  // play; until then the poster is its first frame, so nothing is seen to
+  // wait.
   const near = new IntersectionObserver(entries => {
     if (!entries.some(entry => entry.isIntersecting)) return;
     near.disconnect();
-    if (!frugal) video.preload = 'auto';
+    if (!frugal) video.preload = 'metadata';
   }, { rootMargin: '100% 0px' });
   near.observe(figure);
   const watch = new IntersectionObserver(entries => entries.forEach(entry => {
