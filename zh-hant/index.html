@@ -39,7 +39,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=620c2dd8b9" />
+<link rel="stylesheet" href="/styles.css?v=1e1c624545" />
 <link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
 <script>
 // Before anything is drawn. "motion" lets the few entrances in styles.css
@@ -74,6 +74,7 @@
 </head>
 <body class="lock-scene home-scene">
 
+<a class="skip" href="#main">跳至主要內容</a>
 <header class="site-head">
   <div class="head-bar">
     <nav class="head-links" aria-label="Privaro">
@@ -89,7 +90,7 @@
   </div>
 </header>
 
-<main class="home">
+<main id="main" class="home">
   <!-- The name, set large, beside what it is. Under both, where to get it and
        what it costs, in two plain sentences. The icon is in the header, just
        above: the name doesn't need it twice. -->
@@ -102,10 +103,17 @@
       <p class="lead">Privaro 是 iPhone 上的保險庫。放進去的內容會在手機本身加密，只有 Face ID 或 Privaro 自己的密碼才能打開。不需要帳號，也不會上傳任何內容。</p>
     </div>
     <div class="buy">
-      <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="在 App Store 下載 Privaro">
-        <img src="/appstore-badge-white.svg" width="150" height="50" alt="在 App Store 下載 Privaro" />
-      </a>
-      <p class="buy-note"><span>免費下載。需要 iOS 17.6 或以上版本。</span> <span>Pro 為選用項目：一次性支付 <span class="price" data-price="pro">$690</span>，無需續訂。</span></p>
+      <div class="buy-get">
+        <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="在 App Store 下載 Privaro">
+          <img src="/appstore-badge-white.svg" width="150" height="50" alt="在 App Store 下載 Privaro" />
+        </a>
+        <p class="buy-note"><span>免費下載。需要 iOS 17.6 或以上版本。</span> <span>Pro 為選用項目：一次性支付 <span class="price" data-price="pro">$690</span>，無需續訂。</span></p>
+      </div>
+      <!-- On a computer the badge opens the App Store on the wrong device: the
+           same address as a code the phone's camera reads. Only shown where
+           there's a mouse and room (styles.css); it says nothing the badge
+           doesn't, so screen readers skip it. -->
+      <p class="handoff" aria-hidden="true"><img src="/qr-appstore.svg" width="84" height="84" alt="" /><span>用 iPhone 掃描</span></p>
     </div>
   </section>
 
@@ -149,7 +157,7 @@
   </div>
   <figcaption><span>在你的 iPhone 上加密。</span></figcaption>
 </figure>
-<script src="/privacy-vignette.js?v=bb3a6a0bae" defer></script>
+<script src="/privacy-vignette.js?v=1e4d128924" defer></script>
       </div>
       <div class="safety-facts">
         <dl class="ledger">
@@ -163,16 +171,53 @@
     </div>
   </section>
 
+  <!-- When it isn't you at the lock: the three things Pro does with a
+       passcode, each drawn with the lock screen's own four dots. The decoy's
+       are typed and stay; the wipe's are typed and gone; the wrong one's are
+       typed, shaken off as iPhone does, and left empty. The words are the
+       Pro page's own, so the two can't disagree. Without JavaScript, or with
+       Reduce Motion, the dots simply show how each one ends. -->
+  <section class="guard wrap" aria-labelledby="guard-title">
+    <h2 id="guard-title" class="display"><span class="mask"><span class="rise" style="--anim:mask-rise">如果別人<wbr>想打開呢？</span></span></h2>
+    <!-- Said before the three, not after: none of them is in the free app.
+         What Pro costs comes after them. -->
+    <p class="guard-note">Pro 包含</p>
+    <ul class="codes">
+      <li class="code code-decoy rise" style="--anim:none">
+        <span class="dots" aria-hidden="true"><i style="--n:0"></i><i style="--n:1"></i><i style="--n:2"></i><i style="--n:3"></i></span>
+        <h3>誘餌保險庫</h3>
+        <p>設定第二組密碼，打開另一個裝有無害照片的獨立保險庫。如果你被迫解鎖 Privaro，就輸入這組密碼，你真正的保險庫會一直隱藏起來。</p>
+      </li>
+      <li class="code code-wipe rise" style="--anim:none">
+        <span class="dots" aria-hidden="true"><i style="--n:0"></i><i style="--n:1"></i><i style="--n:2"></i><i style="--n:3"></i></span>
+        <h3>脅迫清除</h3>
+        <p>設定一組密碼，一輸入就會清除整個保險庫，包括誘餌保險庫。這是為最壞的情況準備的，而且無法復原。</p>
+      </li>
+      <li class="code code-wrong rise" style="--anim:none">
+        <span class="dots" aria-hidden="true"><i style="--n:0"></i><i style="--n:1"></i><i style="--n:2"></i><i style="--n:3"></i></span>
+        <h3>闖入拍照</h3>
+        <p>如果有人輸入錯誤的密碼，Privaro 可以用前置相機悄悄拍照，並記錄嘗試的時間，讓你知道是否有人試圖進入你的保險庫。</p>
+      </li>
+    </ul>
+    <div class="guard-foot">
+      <p class="buy-note"><span>Pro 為選用項目：一次性支付 <span class="price" data-price="pro">$690</span>，無需續訂。</span></p>
+      <a class="more" href="/zh-hant/pro">Pro 功能</a>
+    </div>
+  </section>
+
   <!-- The last word, and the Lock Screen, its foot fading into the page,
        the way the phone does in the illustration above. -->
   <section class="closing wrap" aria-labelledby="closing-title">
     <div class="closing-copy">
       <h2 id="closing-title" class="display"><span class="mask"><span class="rise" style="--anim:mask-rise">護照、收據，<wbr>還有驚喜計畫。</span></span></h2>
       <div class="buy">
-        <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="在 App Store 下載 Privaro">
-          <img src="/appstore-badge-white.svg" width="150" height="50" alt="在 App Store 下載 Privaro" loading="lazy" />
-        </a>
-        <p class="buy-note"><span>免費下載。需要 iOS 17.6 或以上版本。</span></p>
+        <div class="buy-get">
+          <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="在 App Store 下載 Privaro">
+            <img src="/appstore-badge-white.svg" width="150" height="50" alt="在 App Store 下載 Privaro" loading="lazy" />
+          </a>
+          <p class="buy-note"><span>免費下載。需要 iOS 17.6 或以上版本。</span></p>
+        </div>
+        <p class="handoff" aria-hidden="true"><img src="/qr-appstore.svg" width="84" height="84" alt="" loading="lazy" /><span>用 iPhone 掃描</span></p>
       </div>
     </div>
     <div class="closing-shot"><picture><source srcset="/shots/framed-18-pro-max/zh-hant/shot-lock.webp" type="image/webp" /><img class="rise" style="--anim:phone-up" src="/shots/framed-18-pro-max/zh-hant/shot-lock.jpg" width="760" height="1573" alt="" loading="lazy" decoding="async" /></picture></div>
@@ -237,17 +282,18 @@ document.addEventListener('keydown', e => {
 </script>
 <script>
 // Privaro, Private: once the name has arrived, its last two letters glitch
-// to "te" and back, four times, a few seconds apart: two flicks, then long
-// enough on "Private" to read it. Never more than three flashes in a second,
-// never a loop, and not at all with Reduce Motion. The text stays "Privaro"
-// throughout (see .tail in styles.css).
+// to "te" and back, once: two flicks, then long enough on "Private" to read
+// it. Once is a wink; repeated, the largest word on the page spent half of
+// a first visit not being the product's name. Never more than three flashes
+// in a second, never a loop, and not at all with Reduce Motion. The text
+// stays "Privaro" throughout (see .tail in styles.css).
 (() => {
   const tail = document.querySelector('.wordmark .tail');
   const reduce = matchMedia('(prefers-reduced-motion: reduce)');
   if (!tail || reduce.matches) return;
-  const glitch = [[0, true], [150, false], [300, true], [1500, false]];
-  const run = () => reduce.matches || [300, 3500, 6700, 9900].forEach(start =>
-    glitch.forEach(([at, on]) => setTimeout(() => tail.classList.toggle('flip', on && !reduce.matches), start + at)));
+  const glitch = [[900, true], [1050, false], [1200, true], [2300, false]];
+  const run = () => reduce.matches ||
+    glitch.forEach(([at, on]) => setTimeout(() => tail.classList.toggle('flip', on && !reduce.matches), at));
   // Arriving through a page crossfade, the name's entrance is cancelled
   // (it's simply there), and that's the cue as much as its finishing.
   const arrival = tail.closest('.rise').getAnimations()[0];

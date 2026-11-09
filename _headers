@@ -2,7 +2,7 @@
 # gets the same. Cloudflare Pages (privaroapp.nl) reads this file.
 /*
   ! Access-Control-Allow-Origin
-  Content-Security-Policy: default-src 'none'; script-src 'self' 'sha256-2t9/JCd0ZJ0FCbrFDNSawlUyngRbBvnxVW83fqzl0/c=' 'sha256-8QA3Q3/K6rh8jBK+sSidsANJTy7SMTUk89PmJ+uFfMA=' 'sha256-Nk3V3eu84J2aX2x8ej3JRWNEA/C5wWumEsFut7g7pfA=' 'sha256-SOQ856XumM2LRxrneO7EVVApXE+AvvAxZuCyz6ijfJs=' 'sha256-pW4OTDRX/lodWp6JJiW+I7GIec4ER54T5aQBDAkX8pE=' 'sha256-tVuiLzjNPDVI6pDETBxZTxftg4Tmtks6xw+BmT/cSWg='; style-src 'self' 'unsafe-inline'; img-src 'self'; media-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+  Content-Security-Policy: default-src 'none'; script-src 'self' 'sha256-2t9/JCd0ZJ0FCbrFDNSawlUyngRbBvnxVW83fqzl0/c=' 'sha256-8QA3Q3/K6rh8jBK+sSidsANJTy7SMTUk89PmJ+uFfMA=' 'sha256-Nk3V3eu84J2aX2x8ej3JRWNEA/C5wWumEsFut7g7pfA=' 'sha256-SOQ856XumM2LRxrneO7EVVApXE+AvvAxZuCyz6ijfJs=' 'sha256-fbIMpSTTIQ1r7C8x0IA/lIckaZ/nhPAd5M/q4DygOVg=' 'sha256-tVuiLzjNPDVI6pDETBxZTxftg4Tmtks6xw+BmT/cSWg='; style-src 'self' 'unsafe-inline'; img-src 'self'; media-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
   Strict-Transport-Security: max-age=31536000; includeSubDomains
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY

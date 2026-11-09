@@ -2,6 +2,11 @@
 // screen, and the photo behind it becomes ciphertext.
 // Illustrative, never an authentication simulation. The markup is the
 // finished state; no script or Reduce Motion leaves it that way.
+// On the Security page, where it's on screen from the start, it plays once.
+// On the homepage the reader's own scrolling writes it: the photo is whole
+// as the phone comes up the screen and ciphertext by the time it reaches
+// the top, and scrolling back reads it out again. Played once on its
+// own it was two seconds that were easy to miss, and then a dim phone.
 (() => {
   const figure = document.querySelector('.privacy-vignette');
   if (!figure) return;
@@ -24,12 +29,15 @@
     figure.dataset.state = 'complete';
   }
   // Freshly written ciphertext churns for a moment before it settles.
+  function churned() {
+    let out = '';
+    for (let i = 0; i < text.length; i++) out += Math.random() < .18 ? glyphs[Math.random() * 64 | 0] : text[i];
+    return out;
+  }
   function churn(token, until) {
     if (token !== run) return;
     if (performance.now() >= until) { cipher.textContent = text; return; }
-    let out = '';
-    for (let i = 0; i < text.length; i++) out += Math.random() < .18 ? glyphs[Math.random() * 64 | 0] : text[i];
-    cipher.textContent = out;
+    cipher.textContent = churned();
     scramble = setTimeout(() => churn(token, until), 70);
   }
   function play() {
@@ -77,6 +85,43 @@
   window.addEventListener('pagehide', settle);
   sync();
   if (!supported || reduce.matches) return;
+  if (figure.closest('.safety')) {
+    // The phone's foot is below the edge of its column, so the line only
+    // has to cross the part of the screen that shows.
+    const reach = .74;
+    let queued = false, last = -1, stamp = 0;
+    const draw = () => {
+      queued = false;
+      if (reduce.matches || figure.dataset.state !== 'scrub') return;
+      const top = figure.getBoundingClientRect().top;
+      // Whole until its top is just past halfway up the screen, so the photo
+      // has been seen; written by the time the top nears the header.
+      const p = Math.min(1, Math.max(0, (innerHeight * .56 - top) / (innerHeight * .44)));
+      if (p === last) return;
+      last = p;
+      figure.style.setProperty('--cut', (p < 1 ? p * reach * 100 : 100).toFixed(2) + '%');
+      figure.style.setProperty('--scan', Math.max(0, Math.min(1, p / .05, (1 - p) / .08)).toFixed(2));
+      clearTimeout(scramble);
+      if (p > 0 && p < 1) {
+        const now = performance.now();
+        if (now - stamp > 70) { stamp = now; cipher.textContent = churned(); }
+        scramble = setTimeout(() => { cipher.textContent = text; }, 180);
+      } else cipher.textContent = text;
+    };
+    const queue = () => { if (!queued) { queued = true; requestAnimationFrame(draw); } };
+    const begin = () => {
+      if (reduce.matches) return;
+      figure.dataset.state = 'scrub';
+      last = -1;
+      draw();
+    };
+    addEventListener('scroll', queue, { passive: true });
+    addEventListener('resize', queue);
+    // Back from the page cache, where leaving had settled it.
+    addEventListener('pageshow', begin);
+    begin();
+    return;
+  }
   if ('IntersectionObserver' in window) {
     figure.dataset.state = 'ready';
     observer = new IntersectionObserver(entries => {

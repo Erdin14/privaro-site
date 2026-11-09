@@ -39,7 +39,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=620c2dd8b9" />
+<link rel="stylesheet" href="/styles.css?v=1e1c624545" />
 <link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
 <script>
 // Before anything is drawn. "motion" lets the few entrances in styles.css
@@ -74,6 +74,7 @@
 </head>
 <body class="lock-scene home-scene">
 
+<a class="skip" href="#main">مرکزی مواد پر جائیں</a>
 <header class="site-head">
   <div class="head-bar">
     <nav class="head-links" aria-label="Privaro">
@@ -89,7 +90,7 @@
   </div>
 </header>
 
-<main class="home">
+<main id="main" class="home">
   <!-- The name, set large, beside what it is. Under both, where to get it and
        what it costs, in two plain sentences. The icon is in the header, just
        above: the name doesn't need it twice. -->
@@ -102,10 +103,17 @@
       <p class="lead">Privaro آپ کے iPhone کے لیے ایک والٹ ہے۔ آپ اس میں جو کچھ رکھتے ہیں وہ فون پر ہی انکرپٹ ہوتا ہے اور صرف Face ID یا Privaro کے اپنے پاس کوڈ سے کھلتا ہے۔ کوئی اکاؤنٹ نہیں ہے، اور کچھ بھی اپ لوڈ نہیں ہوتا۔</p>
     </div>
     <div class="buy">
-      <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="App Store سے Privaro ڈاؤن لوڈ کریں">
-        <img src="/appstore-badge-white.svg" width="150" height="50" alt="App Store سے Privaro ڈاؤن لوڈ کریں" />
-      </a>
-      <p class="buy-note"><span>مفت ڈاؤن لوڈ۔ iOS 17.6 یا اس کے بعد کا ورژن درکار ہے۔</span> <span>Pro اختیاری ہے: <span class="price" data-price="pro">Rs 1,500</span> کی ایک بار ادائیگی، کوئی تجدید نہیں۔</span></p>
+      <div class="buy-get">
+        <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="App Store سے Privaro ڈاؤن لوڈ کریں">
+          <img src="/appstore-badge-white.svg" width="150" height="50" alt="App Store سے Privaro ڈاؤن لوڈ کریں" />
+        </a>
+        <p class="buy-note"><span>مفت ڈاؤن لوڈ۔ iOS 17.6 یا اس کے بعد کا ورژن درکار ہے۔</span> <span>Pro اختیاری ہے: <span class="price" data-price="pro">Rs 1,500</span> کی ایک بار ادائیگی، کوئی تجدید نہیں۔</span></p>
+      </div>
+      <!-- On a computer the badge opens the App Store on the wrong device: the
+           same address as a code the phone's camera reads. Only shown where
+           there's a mouse and room (styles.css); it says nothing the badge
+           doesn't, so screen readers skip it. -->
+      <p class="handoff" aria-hidden="true"><img src="/qr-appstore.svg" width="84" height="84" alt="" /><span>اپنے iPhone سے اسکین کریں</span></p>
     </div>
   </section>
 
@@ -149,7 +157,7 @@
   </div>
   <figcaption><span>آپ کے iPhone پر انکرپٹ کیا گیا۔</span></figcaption>
 </figure>
-<script src="/privacy-vignette.js?v=bb3a6a0bae" defer></script>
+<script src="/privacy-vignette.js?v=1e4d128924" defer></script>
       </div>
       <div class="safety-facts">
         <dl class="ledger">
@@ -163,16 +171,53 @@
     </div>
   </section>
 
+  <!-- When it isn't you at the lock: the three things Pro does with a
+       passcode, each drawn with the lock screen's own four dots. The decoy's
+       are typed and stay; the wipe's are typed and gone; the wrong one's are
+       typed, shaken off as iPhone does, and left empty. The words are the
+       Pro page's own, so the two can't disagree. Without JavaScript, or with
+       Reduce Motion, the dots simply show how each one ends. -->
+  <section class="guard wrap" aria-labelledby="guard-title">
+    <h2 id="guard-title" class="display"><span class="mask"><span class="rise" style="--anim:mask-rise">اگر کوئی اور اسے کھولنا چاہے تو؟</span></span></h2>
+    <!-- Said before the three, not after: none of them is in the free app.
+         What Pro costs comes after them. -->
+    <p class="guard-note">Pro میں شامل</p>
+    <ul class="codes">
+      <li class="code code-decoy rise" style="--anim:none">
+        <span class="dots" aria-hidden="true"><i style="--n:0"></i><i style="--n:1"></i><i style="--n:2"></i><i style="--n:3"></i></span>
+        <h3>جعلی والٹ</h3>
+        <p>ایک دوسرا پاس کوڈ سیٹ کریں جو بے ضرر تصاویر والا ایک الگ والٹ کھولتا ہے۔ اگر کبھی آپ کو Privaro کھولنے پر مجبور کیا جائے تو وہی پاس کوڈ ڈالیں، اور آپ کا اصلی والٹ نظروں سے اوجھل رہتا ہے۔</p>
+      </li>
+      <li class="code code-wipe rise" style="--anim:none">
+        <span class="dots" aria-hidden="true"><i style="--n:0"></i><i style="--n:1"></i><i style="--n:2"></i><i style="--n:3"></i></span>
+        <h3>ہنگامی حذف</h3>
+        <p>ایک ایسا پاس کوڈ سیٹ کریں جو ڈالتے ہی جعلی والٹ سمیت پورا والٹ مٹا دیتا ہے۔ یہ بدترین صورتحال کے لیے ہے، اور اسے واپس نہیں کیا جا سکتا۔</p>
+      </li>
+      <li class="code code-wrong rise" style="--anim:none">
+        <span class="dots" aria-hidden="true"><i style="--n:0"></i><i style="--n:1"></i><i style="--n:2"></i><i style="--n:3"></i></span>
+        <h3>بریک ان کیپچر</h3>
+        <p>اگر کوئی غلط پاس کوڈ ڈالے تو Privaro خاموشی سے سامنے والے کیمرے سے تصویر لے سکتا ہے اور اس کوشش کو وقت کے ساتھ درج کر سکتا ہے، تاکہ آپ کو معلوم ہو کہ کسی نے آپ کے والٹ میں داخل ہونے کی کوشش کی ہے یا نہیں۔</p>
+      </li>
+    </ul>
+    <div class="guard-foot">
+      <p class="buy-note"><span>Pro اختیاری ہے: <span class="price" data-price="pro">Rs 1,500</span> کی ایک بار ادائیگی، کوئی تجدید نہیں۔</span></p>
+      <a class="more" href="/ur/pro">Pro فیچرز</a>
+    </div>
+  </section>
+
   <!-- The last word, and the Lock Screen, its foot fading into the page,
        the way the phone does in the illustration above. -->
   <section class="closing wrap" aria-labelledby="closing-title">
     <div class="closing-copy">
       <h2 id="closing-title" class="display"><span class="mask"><span class="rise" style="--anim:mask-rise">پاسپورٹ، رسیدوں اور سرپرائز منصوبوں کے لیے۔</span></span></h2>
       <div class="buy">
-        <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="App Store سے Privaro ڈاؤن لوڈ کریں">
-          <img src="/appstore-badge-white.svg" width="150" height="50" alt="App Store سے Privaro ڈاؤن لوڈ کریں" loading="lazy" />
-        </a>
-        <p class="buy-note"><span>مفت ڈاؤن لوڈ۔ iOS 17.6 یا اس کے بعد کا ورژن درکار ہے۔</span></p>
+        <div class="buy-get">
+          <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="App Store سے Privaro ڈاؤن لوڈ کریں">
+            <img src="/appstore-badge-white.svg" width="150" height="50" alt="App Store سے Privaro ڈاؤن لوڈ کریں" loading="lazy" />
+          </a>
+          <p class="buy-note"><span>مفت ڈاؤن لوڈ۔ iOS 17.6 یا اس کے بعد کا ورژن درکار ہے۔</span></p>
+        </div>
+        <p class="handoff" aria-hidden="true"><img src="/qr-appstore.svg" width="84" height="84" alt="" loading="lazy" /><span>اپنے iPhone سے اسکین کریں</span></p>
       </div>
     </div>
     <div class="closing-shot"><picture><source srcset="/shots/framed-18-pro-max/ur/shot-lock.webp" type="image/webp" /><img class="rise" style="--anim:phone-up" src="/shots/framed-18-pro-max/ur/shot-lock.jpg" width="760" height="1573" alt="" loading="lazy" decoding="async" /></picture></div>
@@ -237,17 +282,18 @@ document.addEventListener('keydown', e => {
 </script>
 <script>
 // Privaro, Private: once the name has arrived, its last two letters glitch
-// to "te" and back, four times, a few seconds apart: two flicks, then long
-// enough on "Private" to read it. Never more than three flashes in a second,
-// never a loop, and not at all with Reduce Motion. The text stays "Privaro"
-// throughout (see .tail in styles.css).
+// to "te" and back, once: two flicks, then long enough on "Private" to read
+// it. Once is a wink; repeated, the largest word on the page spent half of
+// a first visit not being the product's name. Never more than three flashes
+// in a second, never a loop, and not at all with Reduce Motion. The text
+// stays "Privaro" throughout (see .tail in styles.css).
 (() => {
   const tail = document.querySelector('.wordmark .tail');
   const reduce = matchMedia('(prefers-reduced-motion: reduce)');
   if (!tail || reduce.matches) return;
-  const glitch = [[0, true], [150, false], [300, true], [1500, false]];
-  const run = () => reduce.matches || [300, 3500, 6700, 9900].forEach(start =>
-    glitch.forEach(([at, on]) => setTimeout(() => tail.classList.toggle('flip', on && !reduce.matches), start + at)));
+  const glitch = [[900, true], [1050, false], [1200, true], [2300, false]];
+  const run = () => reduce.matches ||
+    glitch.forEach(([at, on]) => setTimeout(() => tail.classList.toggle('flip', on && !reduce.matches), at));
   // Arriving through a page crossfade, the name's entrance is cancelled
   // (it's simply there), and that's the cue as much as its finishing.
   const arrival = tail.closest('.rise').getAnimations()[0];

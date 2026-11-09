@@ -3,7 +3,9 @@
 // piece with a beginning and an end, and the page around it is for reading.
 // Scrolling away pauses it and coming back resumes it; Pause, Sound and Play
 // again sit under it, and the line along its bottom edge shows where it is
-// and moves it. With Reduce Motion it waits for Play.
+// and moves it. With Reduce Motion it waits for Play; so it does for anyone
+// who has asked their browser to save data, and then nothing of the film is
+// fetched until they press it: it's some tens of megabytes.
 (() => {
   const figure = document.querySelector('.film-card');
   if (!figure) return;
@@ -14,8 +16,9 @@
   const progress = figure.querySelector('.film-progress');
   const fill = progress.querySelector('.film-progress-fill');
   const reduce = matchMedia('(prefers-reduced-motion: reduce)');
+  const frugal = navigator.connection?.saveData === true;
   // Paused by the person, not by scrolling: scrolling back never overrides it.
-  let held = reduce.matches;
+  let held = reduce.matches || frugal;
   let inView = false;
 
   video.removeAttribute('controls');
@@ -114,7 +117,7 @@
   const near = new IntersectionObserver(entries => {
     if (!entries.some(entry => entry.isIntersecting)) return;
     near.disconnect();
-    video.preload = 'auto';
+    if (!frugal) video.preload = 'auto';
   }, { rootMargin: '100% 0px' });
   near.observe(figure);
   const watch = new IntersectionObserver(entries => entries.forEach(entry => {
