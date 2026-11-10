@@ -161,9 +161,11 @@
   // that it can't be used to tell one device from another (Tor Browser, and
   // Firefox with its fingerprinting resistance on). Encrypting those would
   // be encrypting nonsense, so the demo checks first, with four colours it
-  // knows, and says so if they come back wrong. Browsers that only nudge a
-  // value by one or two pass: the photo is then encrypted with that nudge,
-  // which nobody can see.
+  // knows, and says so if they come back wrong. Browsers that only nudge
+  // each value a little (Safari's private windows, Brave) pass: the photo
+  // is then encrypted with that nudge, which nobody can see. Made-up pixels
+  // would have to land within 16 of all twelve values to pass: about one
+  // chance in fifty billion.
   function readable() {
     try {
       const probe = document.createElement('canvas'), swatches = [[18, 52, 86], [201, 120, 33], [240, 240, 240], [7, 160, 99]];
@@ -176,7 +178,7 @@
       const data = context.getImageData(0, 0, 8, 8).data;
       return swatches.every((rgb, i) => {
         const at = (((i >> 1) * 4 + 1) * 8 + (i % 2) * 4 + 1) * 4;
-        return data[at + 3] === 255 && rgb.every((channel, k) => Math.abs(data[at + k] - channel) <= 6);
+        return data[at + 3] === 255 && rgb.every((channel, k) => Math.abs(data[at + k] - channel) <= 16);
       });
     } catch {
       return false;
