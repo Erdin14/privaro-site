@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Privaro: the link preview picture</title>
+<!-- The picture a link to the site is shown with (og.jpg, 1200 by 630). This
+     page is that picture; og/render.js photographs it. Not published.
+
+     It is the homepage, said once: the name, the one sentence, and the Lock
+     Screen standing in front of the vault, the way the gallery deals the
+     other screens out from behind it. Two phones, upright, and nothing else.
+
+     What holds it together, since none of it shows:
+     - One margin, 76px, on all four sides, and again between the name and
+       the phones. The phones start on the picture's centre line.
+     - The name's capitals start level with the top of the phone. The hairline
+       is exactly as long as the name.
+     - The sentence's last line sits on the same baseline as "Privaro" on the
+       Lock Screen.
+     - One light, high and to the left, as on the homepage: the lighter
+       graphite is up there, and the shadow falls down and to the right.
+
+     Sizes are for the smallest place it's shown (a message bubble, a quarter
+     of this size): the name is still 38px there, the sentence 11px. Nothing
+     that matters is nearer an edge than the margin, so a platform that trims
+     the picture trims graphite. -->
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  /* The homepage's own (.lock-scene in styles.css). */
+  --ink: #f5f5f7;
+  --rule: rgb(255 255 255 / .12);
+  /* Named, not left to the system: the picture has to come out the same on
+     any machine. Inter's Display cut is the open face nearest Apple's, and
+     the one the site's own stack falls back to. render.js checks it's this
+     that was drawn. */
+  --display: "Inter Display", sans-serif;
+  --edge: 76px;
+  --mark: 152px;
+  /* A phone's width, and how much of the one behind shows: from where
+     "caption, or tag" begins in its search field, so no word is cut. With
+     the margin, these put the phones' left edge at 600px. */
+  --phone: 334.2px;
+  --shown: .568;
+}
+html, body { width: 1200px; height: 630px; overflow: hidden; }
+body { position: relative; background: #111213; color: var(--ink); font-family: var(--display);
+  -webkit-font-smoothing: antialiased; }
+
+/* The homepage's graphite and its light, scaled to this size. Over it, a
+   grain too fine to see as texture: a gradient this dark has only ten or so
+   greys to cross, and JPEG turns each step into a staircase of blocks. The
+   grain breaks the steps up. It lies under the phones and the words, never
+   on them. */
+.paper { position: absolute; inset: 0; isolation: isolate;
+  background:
+    radial-gradient(940px 600px at 6% -10%, rgb(255 255 255 / .06), transparent 64%),
+    linear-gradient(155deg, #232526 -35%, #18191a 38%, #111213 100%); }
+.paper::after { content: ""; position: absolute; inset: 0; mix-blend-mode: overlay; opacity: .3;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+
+/* The words. Two voices in one family, as on the site: the name bold, the
+   sentence regular and the same white, not a greyed-out aside. */
+.words > * { position: absolute; left: var(--edge); }
+/* Set as the homepage sets it (.wordmark): the same tracking, the same room
+   after the r and the i. The top is the capitals' top (.1365em of a line of
+   1 is above them in this face), and the margin takes the P's side bearing
+   off, so its stem is on the edge the sentence starts from. */
+.mark { top: calc(var(--edge) - .1365em); margin-left: -.058em; font-size: var(--mark); font-weight: 700; line-height: 1;
+  letter-spacing: -.058em; }
+.mark .open { letter-spacing: -.028em; }
+.line { bottom: 181px; font-size: 46px; font-weight: 400; line-height: 1.1; letter-spacing: -.034em; }
+.rule { bottom: 152px; width: 448px; height: 1px; background: var(--rule); }
+/* Apple's badge, as Apple draws it: the black one, whose grey outline is for
+   dark ground. It says "iPhone app" at any size, by its shape alone. */
+.badge { bottom: var(--edge); display: block; width: auto; height: 46px; }
+
+/* The phones are the homepage's screenshots, cut to the phone's outline by
+   the same mask, and they end the way the homepage's do: fading into the
+   page, not cut off by its edge. */
+.phones { position: absolute; top: 0; right: var(--edge); width: calc(var(--phone) * (1 + var(--shown))); height: 100%;
+  -webkit-mask-image: linear-gradient(#000 74%, transparent 96%); mask-image: linear-gradient(#000 74%, transparent 96%); }
+.phone { position: absolute; width: var(--phone); }
+.phone img { display: block; width: 100%; height: auto;
+  -webkit-mask: url(/shots/framed-18-pro-max/phone-mask.svg) center / 100% 100% no-repeat;
+  mask: url(/shots/framed-18-pro-max/phone-mask.svg) center / 100% 100% no-repeat; }
+.lock { top: var(--edge); left: 0; filter: drop-shadow(24px 16px 32px rgb(0 0 0 / .5)); }
+/* Behind, half a margin lower, and a touch dimmer: a white screen at full
+   strength would be the first thing seen, ahead of the name. */
+.vault { top: calc(var(--edge) * 1.5); right: 0; }
+.vault img { filter: brightness(.92); }
+</style>
+</head>
+<body>
+  <div class="paper"></div>
+  <div class="phones">
+    <div class="phone vault"><img src="/shots/framed-18-pro-max/shot-vault.jpg" alt="" /></div>
+    <div class="phone lock"><img src="/shots/framed-18-pro-max/shot-lock.jpg" alt="" /></div>
+  </div>
+  <div class="words">
+    <p class="mark">P<span class="open">ri</span>va<span class="open">r</span>o</p>
+    <p class="line">A vault only<br />you can open.</p>
+    <i class="rule"></i>
+    <img class="badge" src="/appstore-badge.svg" alt="Download on the App Store" />
+  </div>
+</body>
+</html>

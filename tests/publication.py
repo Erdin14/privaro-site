@@ -26,7 +26,7 @@ dist = ROOT / "dist"
 (dist / "build.py").write_text("stale test fixture", encoding="utf-8")
 rebuild()
 for forbidden in ("build.py", "templates", "i18n", "index.legacy.html", "screenshots.html",
-                  "vercel.json", ".git", ".env", "tests", "README.md", "transitions.css", "decrypt.js"):
+                  "vercel.json", ".git", ".env", "tests", "og", "README.md", "transitions.css", "decrypt.js"):
     assert not (dist / forbidden).exists(), forbidden
 pages = list(dist.rglob("*.html"))
 assert len(pages) == 103, "six pages in each of 17 languages, and the 404, must remain"
@@ -58,6 +58,32 @@ for page in pages:
         if version and url.path.endswith((".css", ".js")):
             digest = hashlib.sha256((dist / rel).read_bytes()).hexdigest()[:10]
             assert version[1] == digest, (page, reference)
+
+
+def jpeg_size(data):
+    """A JPEG's width and height, from its frame header."""
+    at = 2
+    while at < len(data):
+        marker, length = data[at + 1], int.from_bytes(data[at + 2:at + 4], "big")
+        if 0xC0 <= marker <= 0xCF and marker not in (0xC4, 0xC8, 0xCC):
+            return int.from_bytes(data[at + 7:at + 9], "big"), int.from_bytes(data[at + 5:at + 7], "big")
+        at += 2 + length
+
+
+# The link preview picture: every page names the one that is published, by
+# its hash, and says the size it really is. It stays small: previews are
+# fetched on mobile data, and some apps show none for a heavy picture.
+preview = (dist / "og.jpg").read_bytes()
+assert jpeg_size(preview) == (1200, 630), "og.jpg must be 1200 by 630"
+assert len(preview) < 300_000, "og.jpg must stay under 300 KB"
+named = f'{build.BASE_URL}/og.jpg?v={hashlib.sha256(preview).hexdigest()[:10]}'
+for page in pages:
+    html = page.read_text(encoding="utf-8")
+    if page.name == "404.html" and page.parent == dist:
+        continue
+    assert re.findall(r'<meta property="og:image" content="([^"]+)"', html) == [named], page
+    assert ('<meta property="og:image:width" content="1200" />' in html
+            and '<meta property="og:image:height" content="630" />' in html), page
 
 
 def served(path):

@@ -24,11 +24,41 @@ files, excluded paths, stale-output cleanup and repeatable builds. It also
 checks what a search engine reads: every canonical, `hreflang`, `og:url` and
 sitemap address is one Cloudflare serves directly, never one it redirects
 (`/nl/`, not `/nl`); language alternates are reciprocal; structured data is
-valid JSON and claims no rating. And it checks the translations: every string
+valid JSON and claims no rating; the link preview picture is the file, and the
+size, every page says it is. And it checks the translations: every string
 exists in every language, in that language's own script, with typographic
 apostrophes and, in French, no-break spaces before `? ! ; :`. (The reading
 pages no longer hide anything until it is scrolled to, so there is no longer a
 fragment check: an anchor can't land on hidden text.)
+
+## The link preview picture
+
+`og.jpg` (1200 by 630) is what a link to the site is shown with in Messages,
+WhatsApp, Discord, X and the rest. It is drawn by `og/og.html`, a page that
+uses the site's own screenshots, badge and graphite, and photographed by
+`og/render.js`. The notes in `og/og.html` say what lines up with what.
+
+To change it, edit `og/og.html`, then:
+
+```sh
+node og/render.js preview.jpg   # look first
+node og/render.js               # writes og.jpg
+python3 build.py                # every page names og.jpg by its hash
+python3 tests/publication.py
+```
+
+`render.js` needs Node, Playwright with its Chromium
+(`npm install --no-save playwright && npx playwright install chromium`) and
+the [Inter](https://rsms.me/inter/) typeface installed; it stops, and writes
+nothing, if the words were drawn in any other face. None of this is needed to
+build or publish the site: the picture is committed, and `og/` is published by
+neither host. Rendering twice gives the same file, byte for byte, on one
+machine; another machine's Chromium may differ in a few bytes, so the hash in
+the pages changes only when the picture is rendered again.
+
+Apps keep a link's preview for days, so one shared before a change may show
+the old picture for a while. The new address (`og.jpg?v=…`) is what a fresh
+share fetches.
 
 ## What is published, and what stays in the source
 

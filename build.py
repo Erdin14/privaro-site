@@ -321,8 +321,8 @@ def seo_block(page, code, strings, pricing, alternates=True, canonical=None):
         '<meta property="og:image:height" content="630" />',
         # What the preview picture shows, for whoever can't see it. In English
         # on every page: the words in the picture are.
-        '<meta property="og:image:alt" content="Privaro. Your space. Your privacy. Available on the App Store. '
-        'Three iPhones show the vault, Privacy Mode and the lock screen." />',
+        '<meta property="og:image:alt" content="Privaro. A vault only you can open. Download on the App Store. '
+        'Two iPhones: the lock screen in front, and behind it the vault with its photos." />',
         f'<meta property="og:locale" content="{OG_LOCALE[canonical or code]}" />',
         '<meta name="twitter:card" content="summary_large_image" />',
     ])
