@@ -39,7 +39,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=6e912f31cb" />
+<link rel="stylesheet" href="/styles.css?v=925f1f6cf6" />
 <link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
 <script>
 // Before anything is drawn. "motion" lets the few entrances in styles.css
@@ -93,16 +93,20 @@
 <main id="main" class="home">
   <!-- The name, set large, beside what it is. Under both, where to get it and
        what it costs, in two plain sentences. The icon is in the header, just
-       above: the name doesn't need it twice. -->
+       above: the name doesn't need it twice.
+       The name is drawn letter by letter (its last two turn over, once: see
+       the script at the end), so the heading says it whole for screen
+       readers and the letters themselves are left out of what's read. -->
   <section class="hero wrap" aria-labelledby="hero-title">
     <div class="hero-mark">
-      <h1 id="hero-title" class="wordmark"><span class="mask"><span class="rise" style="--anim:mask-rise">P<span class="open">ri</span>va<span class="tail"><span class="open">r</span>o</span></span></span></h1>
+      <h1 id="hero-title" class="wordmark" aria-label="Privaro"><span class="mask" aria-hidden="true"><span class="rise" style="--anim:mask-rise">P<span class="open">ri</span>va<span class="tail"><span class="roll" data-to="t"><span class="open">r</span></span><span class="roll" data-to="e"><span>o</span></span></span></span></span></h1>
     </div>
-    <div class="hero-copy rise" style="--anim:fade;--d:.35s">
+    <div class="hero-copy rise" style="--anim:fade;--d:.3s">
       <p class="tagline">Хранилище, которое откроете только вы.</p>
       <p class="lead">Privaro — это хранилище для вашего iPhone. Всё, что вы в него кладёте, шифруется на самом телефоне и открывается только по Face ID или собственному код-паролю Privaro. Аккаунт не нужен, и ничего не загружается в сеть.</p>
     </div>
     <div class="buy">
+      <span class="rule rise" style="--anim:draw;--d:.15s" aria-hidden="true"></span>
       <div class="buy-get">
         <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="Загрузите Privaro в App Store">
           <img src="/appstore-badge-white.svg" width="150" height="50" alt="Загрузите Privaro в App Store" />
@@ -118,13 +122,16 @@
   </section>
 
   <!-- The app itself: four screens in a row, each with what it's for. Each is
-       a button that opens the viewer (presentation.js). -->
+       a button that opens the viewer (presentation.js). The Lock Screen is
+       there from the start; the other three are dealt out from behind it.
+       It's the phone inside each figure that moves, never the figure: the
+       row snaps to the figures when it's swiped, and would follow one. -->
   <section class="gallery">
     <div class="shots wrap">
-      <figure class="rise" style="--anim:phone-in;--i:0"><picture><source srcset="/shots/framed-18-pro-max/ru/shot-lock.webp" type="image/webp" /><img src="/shots/framed-18-pro-max/ru/shot-lock.jpg" width="760" height="1573" alt="Экран блокировки Privaro, готовый к Face ID" fetchpriority="high" /></picture><figcaption><strong>Экран блокировки</strong> <span>Открывается по Face ID или собственному код-паролю.</span></figcaption></figure>
-      <figure class="rise" style="--anim:phone-in;--i:1"><picture><source srcset="/shots/framed-18-pro-max/ru/shot-vault.webp" type="image/webp" /><img src="/shots/framed-18-pro-max/ru/shot-vault.jpg" width="760" height="1573" alt="Хранилище: фото сеткой, по месяцам" /></picture><figcaption><strong>Хранилище</strong> <span>Поиск по имени файла, подписи или тегу.</span></figcaption></figure>
-      <figure class="rise" style="--anim:phone-in;--i:2"><picture><source srcset="/shots/framed-18-pro-max/ru/shot-albums.webp" type="image/webp" /><img src="/shots/framed-18-pro-max/ru/shot-albums.jpg" width="760" height="1573" alt="Альбомы в Privaro" decoding="async" /></picture><figcaption><strong>Альбомы</strong> <span>Шифруются даже названия альбомов.</span></figcaption></figure>
-      <figure class="rise" style="--anim:phone-in;--i:3"><picture><source srcset="/shots/framed-18-pro-max/ru/shot-privacy.webp" type="image/webp" /><img src="/shots/framed-18-pro-max/ru/shot-privacy.jpg" width="760" height="1573" alt="Настройки режима конфиденциальности: Дома, Вне дома и Поездка" decoding="async" /></picture><figcaption><strong>Режим конфиденциальности</strong> <span>Выбирайте, насколько строг Privaro, где бы вы ни были.</span></figcaption></figure>
+      <figure style="--i:0"><div class="phone rise" style="--anim:none"><picture><source srcset="/shots/framed-18-pro-max/ru/shot-lock.webp" type="image/webp" /><img src="/shots/framed-18-pro-max/ru/shot-lock.jpg" width="760" height="1573" alt="Экран блокировки Privaro, готовый к Face ID" fetchpriority="high" /></picture></div><figcaption><strong>Экран блокировки</strong> <span>Открывается по Face ID или собственному код-паролю.</span></figcaption></figure>
+      <figure style="--i:1"><div class="phone rise" style="--anim:deal"><picture><source srcset="/shots/framed-18-pro-max/ru/shot-vault.webp" type="image/webp" /><img src="/shots/framed-18-pro-max/ru/shot-vault.jpg" width="760" height="1573" alt="Хранилище: фото сеткой, по месяцам" /></picture></div><figcaption><strong>Хранилище</strong> <span>Поиск по имени файла, подписи или тегу.</span></figcaption></figure>
+      <figure style="--i:2"><div class="phone rise" style="--anim:deal"><picture><source srcset="/shots/framed-18-pro-max/ru/shot-albums.webp" type="image/webp" /><img src="/shots/framed-18-pro-max/ru/shot-albums.jpg" width="760" height="1573" alt="Альбомы в Privaro" decoding="async" /></picture></div><figcaption><strong>Альбомы</strong> <span>Шифруются даже названия альбомов.</span></figcaption></figure>
+      <figure style="--i:3"><div class="phone rise" style="--anim:deal"><picture><source srcset="/shots/framed-18-pro-max/ru/shot-privacy.webp" type="image/webp" /><img src="/shots/framed-18-pro-max/ru/shot-privacy.jpg" width="760" height="1573" alt="Настройки режима конфиденциальности: Дома, Вне дома и Поездка" decoding="async" /></picture></div><figcaption><strong>Режим конфиденциальности</strong> <span>Выбирайте, насколько строг Privaro, где бы вы ни были.</span></figcaption></figure>
     </div>
   </section>
 
@@ -141,15 +148,16 @@
 <figure class="privacy-vignette">
   <!-- A photo on the phone is written over, line by line, as ciphertext.
        Illustrative only, never a live security check.
-       Without JavaScript, or with Reduce Motion, it shows the finished state. -->
+       Without JavaScript, or with Reduce Motion, it shows the finished state:
+       the ciphertext, with the photo's pane (over it) left hidden. -->
   <div class="privacy-art" role="img" aria-labelledby="privacy-art-title" aria-describedby="privacy-art-desc">
     <span id="privacy-art-title" class="visually-hidden">Защита на устройстве</span>
     <span id="privacy-art-desc" class="visually-hidden">Фото на iPhone превращается в зашифрованные данные, иллюстрируя шифрование на устройстве. Это не проверка безопасности в реальном времени.</span>
     <div class="vg-phone" aria-hidden="true">
       <div class="vg-screen">
-        <!-- "Snow-capped mountain reflected in a calm lake" by Timo Wielink, Unsplash License. -->
-        <img class="vg-photo" src="/art/vignette-lake.jpg" width="600" height="900" alt="" loading="lazy" decoding="async" />
         <p class="vg-cipher">45Na99UPIE/JOGMzTIdfGUsJBQn7ZDJnqRjY0ZtJiaVW3ZlmtFuRABIufL5w+IGEWTzn2A9Wnlqr3FrHKwMuoROQWW1lLez8aaMqpoMqjCUe2dBq/NFs3+2X2XdKRV5USrKaw2F/DmGnuQrn2QmnLjPKadln1qVXuJsJYjBmqzql9Hhp0e7ZhKHpXCywzar04F9se0LC96xNC+mUPW22wPkxHit6rbzADwDtgcmRHrIrfaOLiDZAla1FOXfhLjPUvGsSBu/PReuynAWz2w6Jg+ZJWMk7I39DDZw/Af7cqJUMLM6kRm+fkA42L2E3gq22OhZuQlbYrQejQjignU6QzrYP1ApaTPm+kKs38HsIjHQEr/ABUpEgXJ2WcypjcFEYwKWl3HqqyzIzFwJhnEH0SGEDhdDLyjCn/iMjbkTaDq2nZydi6wsClOpI95udr3L+yuS34ps9+W+M6f41TnD9Y6ltBRH93kbdRpvF6g0U/EqhfrqWFUULadPm20QVt4K81YKOiNuwCGeM2oxhGIDf5Y795mRAC2Wh1qKThDL4A8ZwRl56Qa4H+ll1LnWQoulCtQDNHyk0ALn3CHAonbxLWRuGltW0S3DbLCObMN5mI9R+z/mXToZUt1MN7aVyAZbw1u59370F94e0SFTxa5w2fIMTKCbOiKhTFkzV4mUzhh8ZaMOTVEsvQp1A1GYmKBnBzbFFMSHkNE6zdp1Agn8OQ2BfTbw6PJhM4FYtGjvI3mIkEJVcgakB9qsa5Pvanka69BC4k6oPrzOWT8QasUfy2aCBTEqbCfKlNwUjumOeOr9gqzqCzgohOAelrTr6F34k5HzYddMkjQmyZrwDB3XWm4hRChzt1kQc/4o6YcwaM7OkFzJ43cujssjsc8JdK6soKp5xKeZWMLr2K2K4g4MjjkOSs1VKJhWNw3ILruceHXZ8RlYlWGxHWUfnbgdcnvjlNrrpi8Gsr3uV8pX5JoTjuWKnN/OHxjgM1UC8qb+aHPigVSBh0D/GufaKITO20bh8lKrLQahzI8db2dFP2OmhyYlE4/cDT2so2Wu/7rHZ+ra6g1d6pTHoMGujYS1lSzezSZpsphFANvTJ</p>
+        <!-- "Snow-capped mountain reflected in a calm lake" by Timo Wielink, Unsplash License. -->
+        <div class="vg-pane"><img class="vg-photo" src="/art/vignette-lake.jpg" width="600" height="900" alt="" loading="lazy" decoding="async" /></div>
         <span class="vg-scan"></span>
         <span class="vg-island"></span>
       </div>
@@ -157,7 +165,7 @@
   </div>
   <figcaption><span>Зашифровано на вашем iPhone.</span></figcaption>
 </figure>
-<script src="/privacy-vignette.js?v=a18a9ce606" defer></script>
+<script src="/privacy-vignette.js?v=7796fe20f2" defer></script>
       </div>
       <div class="safety-facts">
         <dl class="ledger">
@@ -201,6 +209,7 @@
       </li>
     </ul>
     <div class="guard-foot">
+      <span class="rule rise" style="--anim:draw" aria-hidden="true"></span>
       <!-- The price and four words, as the Pro page closes: the hero has
            already said the whole sentence once. -->
       <p class="guard-price"><span class="price" data-price="pro">1 790 ₽</span> Один платёж, без продлений.</p>
@@ -244,21 +253,34 @@
 
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
-// The language menus (one beside the header's pill, one in the footer) are
-// <details>; close an open one on a click elsewhere or on Escape. On phones a
-// click on the dimmed page lands on the <details> itself (its ::before is the
-// dimming), so that counts as elsewhere too.
+// The language menus (one in the header, one in the footer) are <details>;
+// close an open one on a click elsewhere, on its own button, or on Escape.
+// On phones a click on the dimmed page lands on the <details> itself (its
+// ::before is the dimming), so that counts as elsewhere too. A menu leaves
+// as it came rather than vanishing: it's held open for the moment its way
+// out takes (.closing in styles.css), then closed. With Reduce Motion it
+// just closes.
 const langs = document.querySelectorAll('.lang');
+const still = matchMedia('(prefers-reduced-motion: reduce)');
+const shut = lang => {
+  if (!lang.open || lang.classList.contains('closing')) return;
+  if (still.matches) { lang.open = false; return; }
+  lang.classList.add('closing');
+  setTimeout(() => { lang.open = false; lang.classList.remove('closing'); }, 200);
+};
 document.addEventListener('click', e => langs.forEach(lang => {
-  if (lang.open && (e.target === lang || !lang.contains(e.target))) lang.open = false;
+  if (!lang.open) return;
+  const summary = e.target.closest ? e.target.closest('summary') : null;
+  if (summary && lang.contains(summary)) { e.preventDefault(); shut(lang); }
+  else if (e.target === lang || !lang.contains(e.target)) shut(lang);
 }));
 document.addEventListener('keydown', e => {
   if (e.key !== 'Escape') return;
-  langs.forEach(lang => { if (lang.open) { lang.open = false; lang.querySelector('summary').focus(); } });
+  langs.forEach(lang => { if (lang.open) { shut(lang); lang.querySelector('summary').focus(); } });
 });
 </script>
 
-<script src="/presentation.js?v=1d89a6982d" data-enlarge="Увеличить снимок экрана: {name}" data-close="Закрыть просмотр" data-previous="Предыдущий снимок экрана" data-next="Следующий снимок экрана" defer></script>
+<script src="/presentation.js?v=a1d449eb43" data-enlarge="Увеличить снимок экрана: {name}" data-close="Закрыть просмотр" data-previous="Предыдущий снимок экрана" data-next="Следующий снимок экрана" defer></script>
 <script>
 // Each entrance plays once it's on screen. Inline, like the line in <head>,
 // so a script that fails to load can never leave anything hidden.
@@ -266,37 +288,58 @@ document.addEventListener('keydown', e => {
   const items = [...document.querySelectorAll('.rise')];
   const show = el => el.classList.add('in-view');
   if (!('IntersectionObserver' in window)) return items.forEach(show);
-  // A headline line starts below its mask, clipped out of view, so it's the
-  // mask that's watched; the phones arrive together, when their row does.
+  // A headline line starts below its mask, clipped out of view, and a
+  // hairline starts with no length, so it's what holds them that's watched;
+  // the phones are dealt together, when their row is on screen.
   const owner = new Map();
   items.forEach(el => {
-    const target = el.parentElement.closest('.mask, .shots') || el;
+    const target = el.parentElement.closest('.mask, .shots, .buy, .guard-foot') || el;
     owner.set(target, [...(owner.get(target) || []), el]);
   });
-  const watch = new IntersectionObserver(entries => entries.forEach(entry => {
+  // The phones wait for their pictures, so it's phones that are dealt and
+  // not empty space; a slow connection holds them a second at most.
+  const ready = target => !target.matches('.shots') ? Promise.resolve() : Promise.race([
+    Promise.all([...target.querySelectorAll('img')].map(img => img.decode ? img.decode().catch(() => {}) : 0)),
+    new Promise(done => setTimeout(done, 1000))]);
+  // Words and lines start as they clear the bottom of the screen. What's
+  // there to be watched (the phones, a passcode being typed) waits until
+  // it's a sixth of the way up, where it's seen.
+  const watcher = margin => new IntersectionObserver((entries, watch) => entries.forEach(entry => {
     if (!entry.isIntersecting) return;
-    owner.get(entry.target).forEach(show);
     watch.unobserve(entry.target);
-  }), { rootMargin: '0px 0px -6% 0px' });
-  owner.forEach((_, target) => watch.observe(target));
+    ready(entry.target).then(() => owner.get(entry.target).forEach(show));
+  }), { rootMargin: '0px 0px -' + margin + '% 0px' });
+  const edge = watcher(6), stage = watcher(16);
+  owner.forEach((_, target) => (target.matches('.shots, .code') ? stage : edge).observe(target));
   // Keyboard focus and in-page links must never land on something hidden.
   document.addEventListener('focusin', e => e.target.closest('.rise')?.classList.add('in-view'));
 })();
 </script>
 <script>
-// Privaro, Private: once the name has arrived, its last two letters glitch
-// to "te" and back, once: two flicks, then long enough on "Private" to read
-// it. Once is a wink; repeated, the largest word on the page spent half of
-// a first visit not being the product's name. Never more than three flashes
-// in a second, never a loop, and not at all with Reduce Motion. The text
-// stays "Privaro" throughout (see .tail in styles.css).
+// Privaro, Private: once the name has arrived, its last two letters turn
+// over to "te", like the wheels of a combination lock, stay long enough to
+// read "Private", and turn back. Once: a wink; repeated, the largest word
+// on the page spent half of a first visit not being the product's name.
+// Nothing flashes (it used to flicker there and back), never a loop, and
+// not at all with Reduce Motion. The text stays "Privaro" throughout (see
+// .roll in styles.css).
 (() => {
   const tail = document.querySelector('.wordmark .tail');
   const reduce = matchMedia('(prefers-reduced-motion: reduce)');
   if (!tail || reduce.matches) return;
-  const glitch = [[900, true], [1050, false], [1200, true], [2300, false]];
-  const run = () => reduce.matches ||
-    glitch.forEach(([at, on]) => setTimeout(() => tail.classList.toggle('flip', on && !reduce.matches), at));
+  // The "e" comes up behind the "o", but belongs after a "t": how much
+  // nearer that is, in this font, as a share of the name's size.
+  const place = () => {
+    const probe = document.createElement('span');
+    probe.textContent = 't';
+    probe.style.cssText = 'position:absolute;visibility:hidden';
+    tail.append(probe);
+    const shift = probe.getBoundingClientRect().width - tail.firstElementChild.getBoundingClientRect().width;
+    tail.style.setProperty('--te', (shift / parseFloat(getComputedStyle(tail).fontSize)).toFixed(4) + 'em');
+    probe.remove();
+  };
+  const turn = on => { if (on && reduce.matches) return; if (on) place(); tail.classList.toggle('flip', on); };
+  const run = () => { setTimeout(turn, 900, true); setTimeout(turn, 2400, false); };
   // Arriving through a page crossfade, the name's entrance is cancelled
   // (it's simply there), and that's the cue as much as its finishing.
   const arrival = tail.closest('.rise').getAnimations()[0];

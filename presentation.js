@@ -8,11 +8,22 @@
 (() => {
   const script = document.currentScript;
   const reduce = matchMedia('(prefers-reduced-motion: reduce)');
-  const ease = 'cubic-bezier(.16, 1, .3, 1)';
+  // The stylesheet's durations and curves, read from it by name, so what
+  // moves here keeps the same time as what moves there (styles.css, :root).
+  const tokens = getComputedStyle(document.documentElement);
+  const token = (name, fallback) => tokens.getPropertyValue(name).trim() || fallback;
+  const time = { state: parseFloat(token('--dur-state', '240')), move: parseFloat(token('--dur-move', '460')),
+    reveal: parseFloat(token('--dur-reveal', '700')) };
+  const ease = token('--ease', 'cubic-bezier(.16, 1, .3, 1)');
+  const easeState = token('--ease-state', 'cubic-bezier(.4, 0, .2, 1)');
+  const spring = token('--ease-spring', ease);
   const active = new Set();
   function animate(el, frames, options = {}) {
     if (reduce.matches || !el.animate) return null;
-    const animation = el.animate(frames, { duration: 550, easing: ease, ...options });
+    let animation;
+    // A curve this browser can't read (the spring, in an old one) falls back to the arrival's.
+    try { animation = el.animate(frames, { duration: time.move, easing: ease, ...options }); }
+    catch { animation = el.animate(frames, { duration: time.move, ...options, easing: ease }); }
     active.add(animation);
     animation.finished.catch(() => {}).finally(() => active.delete(animation));
     return animation;
@@ -152,45 +163,81 @@
     // The image moves with its <picture>, so it keeps the WebP the browser chose.
     const shot = original.closest('picture') || original;
     shot.replaceWith(button);
-    button.append(shot);
-    return { original, caption, button, figure };
+    // The light on the glass (styles.css): one soft glow, moved, never redrawn.
+    const light = document.createElement('span');
+    light.className = 'shot-light';
+    light.setAttribute('aria-hidden', 'true');
+    const glow = light.appendChild(document.createElement('i'));
+    button.append(shot, light);
+    return { original, caption, button, figure, glow };
   });
   document.querySelector('.shots').classList.add('viewer-ready');
 
   // A phone leans a few degrees toward a mouse or trackpad pointer, and the
-  // light on its glass follows. Touch and Reduce Motion get no tilt. CSS
-  // reads --rx/--ry/--mx/--my; one frame at most per pointer move.
+  // light on its glass goes where the pointer does. It has weight: the lean
+  // is a spring that follows the pointer and comes to rest without
+  // overshooting, so it neither snaps to each new position nor lags a fixed
+  // time behind, and when the pointer leaves it swings back the same way.
+  // (It used to chase the pointer with a fresh 200ms transition on every
+  // move.) Only transforms are written, a frame at a time, and only while
+  // something is still moving. Touch and Reduce Motion get no lean.
   const fine = matchMedia('(hover: hover) and (pointer: fine)');
-  function untilt(button) {
-    button.classList.remove('tilting');
-    ['--rx', '--ry', '--mx', '--my'].forEach(name => button.style.removeProperty(name));
-  }
-  sources.forEach(({ button }) => {
-    let frame = 0, point;
+  // Where the light rests: high and to the left, like the page's.
+  const rest = [0, 0, .2, -.1];
+  const stiffness = 210, damping = 29;
+  sources.forEach(source => {
+    const { button, figure, glow } = source;
+    // The lean, across and down, from -.5 to .5; then the light's place on the glass.
+    const at = [...rest], speed = [0, 0, 0, 0];
+    let goal = rest, frame = 0, last = 0, width = 0, height = 0;
+    const draw = () => {
+      button.style.transform = `rotateY(${(at[0] * 8).toFixed(3)}deg) rotateX(${(at[1] * -6).toFixed(3)}deg)`;
+      glow.style.transform = `translate(${(at[2] * width).toFixed(1)}px, ${(at[3] * height).toFixed(1)}px)`;
+    };
+    const still = () => {
+      cancelAnimationFrame(frame);
+      frame = 0;
+      rest.forEach((value, i) => { at[i] = value; speed[i] = 0; });
+      goal = rest;
+      button.style.transform = glow.style.transform = '';
+    };
+    const tick = now => {
+      const dt = Math.min((now - last) / 1000, .032);
+      last = now;
+      let moving = false;
+      for (let i = 0; i < 4; i++) {
+        speed[i] += ((goal[i] - at[i]) * stiffness - speed[i] * damping) * dt;
+        at[i] += speed[i] * dt;
+        if (Math.abs(goal[i] - at[i]) > .0004 || Math.abs(speed[i]) > .004) moving = true;
+      }
+      if (!moving && goal === rest) return still();
+      draw();
+      frame = moving ? requestAnimationFrame(tick) : 0;
+    };
+    const wake = () => { if (!frame) { last = performance.now(); frame = requestAnimationFrame(tick); } };
     button.addEventListener('pointermove', event => {
       if (event.pointerType !== 'mouse' || !fine.matches || reduce.matches || dialog.open) return;
-      point = event;
-      if (frame) return;
-      frame = requestAnimationFrame(() => {
-        frame = 0;
-        const rect = button.getBoundingClientRect();
-        const x = Math.min(Math.max((point.clientX - rect.left) / rect.width, 0), 1);
-        const y = Math.min(Math.max((point.clientY - rect.top) / rect.height, 0), 1);
-        button.classList.add('tilting');
-        button.style.setProperty('--ry', ((x - .5) * 8).toFixed(2) + 'deg');
-        button.style.setProperty('--rx', ((.5 - y) * 6).toFixed(2) + 'deg');
-        button.style.setProperty('--mx', (x * 100).toFixed(1) + '%');
-        button.style.setProperty('--my', (y * 100).toFixed(1) + '%');
-      });
+      // Measured on the figure, which never leans, so the lean can't feed back into itself.
+      const box = figure.getBoundingClientRect();
+      width = button.offsetWidth;
+      height = button.offsetHeight;
+      const x = Math.min(Math.max((event.clientX - box.left) / width, 0), 1);
+      const y = Math.min(Math.max((event.clientY - box.top) / height, 0), 1);
+      goal = [x - .5, y - .5, x, y];
+      wake();
     });
-    button.addEventListener('pointerleave', () => { cancelAnimationFrame(frame); frame = 0; untilt(button); });
+    button.addEventListener('pointerleave', () => { if (goal !== rest) { goal = rest; wake(); } });
+    source.untilt = still;
   });
+  reduce.addEventListener('change', () => { if (reduce.matches) sources.forEach(source => source.untilt()); });
 
   let current = 0, closing = false, byKeyboard = false, flight, surfaceMotion;
   let chromeMotion = [];
   let overflow, padding;
   const rtl = document.documentElement.dir === 'rtl';
   const numbers = new Intl.NumberFormat(document.documentElement.lang);
+  const stage = dialog.querySelector('.viewer-stage');
+  const clamp = value => Math.max(0, Math.min(1, value));
   function fit() {
     const height = Math.max(100, Math.min(innerHeight - 168, (innerWidth - 48) * 1573 / 760, 1000));
     image.style.height = height + 'px';
@@ -215,12 +262,19 @@
     flight = animate(image, [{ transform: transform(from, base) }, { transform: transform(to, base) }], { duration });
     return flight;
   }
+  // Whatever a finger left on the image, the surface and the controls
+  // (see the drag below) is handed to the animation that follows it.
+  function release() {
+    const held = { dim: parseFloat(getComputedStyle(surface).opacity), chrome: parseFloat(getComputedStyle(chrome[0]).opacity) };
+    image.style.transform = image.style.transformOrigin = surface.style.opacity = '';
+    chrome.forEach(el => { el.style.opacity = ''; });
+    return held;
+  }
   // A phone mid-entrance, or leaning toward the pointer, is measured squared
   // up, as the viewer will show it: its entrance is finished, its tilt let go.
   function settle(source) {
-    source.figure.getAnimations().forEach(animation => animation.finish());
-    untilt(source.button);
-    source.button.classList.add('squared');
+    source.figure.getAnimations({ subtree: true }).forEach(animation => animation.finish());
+    source.untilt();
   }
   function open(index, keyboard) {
     if (dialog.open) return;
@@ -238,10 +292,10 @@
     // canvas darkens with the surface (styles.css).
     document.documentElement.classList.add('viewing');
     closing = false;
-    fly(from, image.getBoundingClientRect(), 620);
-    surfaceMotion = animate(surface, [{ opacity: 0 }, { opacity: 1 }], { duration: 420, easing: 'ease-out' });
+    fly(from, image.getBoundingClientRect(), time.reveal);
+    surfaceMotion = animate(surface, [{ opacity: 0 }, { opacity: 1 }], { easing: easeState });
     chromeMotion = chrome.map((el, i) => animate(el, [{ opacity: 0, transform: `translateY(${i ? 8 : -8}px)` }, { opacity: 1, transform: 'none' }],
-      { duration: 420, delay: 160, fill: 'backwards' }));
+      { delay: 160, fill: 'backwards' }));
     // Opened from the keyboard, focus goes to Close, ring and all. Opened by
     // a tap or click it goes to the viewer itself: Safari rings a button
     // focused from a script even after a tap, and Tab still reaches Close.
@@ -251,7 +305,9 @@
   async function close() {
     if (!dialog.open || closing) return;
     closing = true;
+    // From wherever it is: mid-flight, or pulled halfway down by a finger.
     const from = image.getBoundingClientRect();
+    const held = release();
     flight?.cancel();
     surfaceMotion?.cancel();
     chromeMotion.forEach(animation => animation?.cancel());
@@ -263,20 +319,18 @@
     source.button.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'instant' });
     scrollTo({ top, behavior: 'instant' });
     const to = source.original.getBoundingClientRect();
-    const returning = fly(from, to, 480);
+    const returning = fly(from, to, time.move);
     // The fades hold their end until the dialog is gone: a fade that ended
     // first would snap the dark surface and controls back for a frame or two.
     const fades = [
-      animate(surface, [{ opacity: 1 }, { opacity: 0 }], { duration: 480, easing: 'ease-in-out', fill: 'forwards' }),
-      ...chrome.map(el => animate(el, [{ opacity: 1 }, { opacity: 0 }], { duration: 160, fill: 'forwards' }))
+      animate(surface, [{ opacity: held.dim }, { opacity: 0 }], { easing: easeState, fill: 'forwards' }),
+      ...chrome.map(el => animate(el, [{ opacity: held.chrome }, { opacity: 0 }], { duration: time.state / 1.5, fill: 'forwards' }))
     ];
     document.documentElement.classList.remove('viewing');
     await finish(returning);
     source.original.style.visibility = '';
     dialog.close();
     fades.forEach(animation => animation?.cancel());
-    // Free to lean again, now that it's in its place.
-    requestAnimationFrame(() => sources.forEach(({ button }) => button.classList.remove('squared')));
     document.documentElement.style.overflow = overflow;
     document.body.style.paddingRight = padding;
     closing = false;
@@ -285,15 +339,39 @@
     // the screenshot.
     if (byKeyboard) source.button.focus({ preventScroll: true });
   }
-  // The next screen slides in from the side it comes from, out of a little
-  // depth; the name above it follows.
-  function step(delta) {
+  // To the next screen. The one on show leaves the way it was going, as a
+  // copy that fades as it goes, while the next comes in from the side it
+  // comes from; the name above follows. (The one on show used to vanish.)
+  // `dragged` is how far a finger had already taken it.
+  function step(delta, dragged = 0) {
     if (!dialog.open || closing) return;
     flight?.cancel();
+    release();
+    const way = delta * (rtl ? -1 : 1);
+    const ghost = image.cloneNode();
+    ghost.classList.add('viewer-ghost');
+    ghost.alt = '';
+    ghost.setAttribute('aria-hidden', 'true');
+    ghost.style.left = image.offsetLeft + 'px';
+    ghost.style.top = image.offsetTop + 'px';
+    image.after(ghost);
+    const leaving = animate(ghost, [{ opacity: 1, transform: `translateX(${dragged}px)` },
+      { opacity: 0, transform: `translateX(${dragged - way * 64}px) scale(.96)` }], { duration: time.state, easing: easeState, fill: 'forwards' });
+    (leaving ? finish(leaving) : Promise.resolve()).then(() => ghost.remove());
     setCurrent(current + delta);
-    const shift = delta * (rtl ? -1 : 1) * 56;
-    flight = animate(image, [{ opacity: 0, transform: `translateX(${shift}px) scale(.94)` }, { opacity: 1, transform: 'none' }], { duration: 520 });
-    animate(title, [{ opacity: 0 }, { opacity: 1 }], { duration: 360 });
+    flight = animate(image, [{ opacity: 0, transform: `translateX(${way * 64}px) scale(.96)`, transformOrigin: '50% 50%' },
+      { opacity: 1, transform: 'none', transformOrigin: '50% 50%' }]);
+    animate(title, [{ opacity: 0 }, { opacity: 1 }], { duration: time.state, easing: easeState });
+  }
+  // Let go short of anywhere: back to where it was, on the spring.
+  function back() {
+    const from = image.style.transform || 'none';
+    const held = release();
+    image.style.transformOrigin = '50% 50%';
+    flight = animate(image, [{ transform: from }, { transform: 'none' }], { easing: spring });
+    (flight ? finish(flight) : Promise.resolve()).then(() => { if (!drag) image.style.transformOrigin = ''; });
+    if (held.dim < 1) animate(surface, [{ opacity: held.dim }, { opacity: 1 }], { duration: time.state, easing: easeState });
+    if (held.chrome < 1) chrome.forEach(el => animate(el, [{ opacity: held.chrome }, { opacity: 1 }], { duration: time.state, easing: easeState }));
   }
   // A click from Enter or Space has no click count.
   sources.forEach((source, index) => source.button.addEventListener('click', event => open(index, event.detail === 0)));
@@ -302,7 +380,7 @@
   nextButton.addEventListener('click', () => step(1));
   dialog.addEventListener('cancel', event => { event.preventDefault(); close(); });
   dialog.addEventListener('click', event => {
-    if (event.target === dialog || event.target === surface || event.target.classList.contains('viewer-stage')) close();
+    if (event.target === dialog || event.target === surface || event.target === stage) close();
   });
   dialog.addEventListener('keydown', event => {
     if (event.key === 'Tab') {
@@ -319,17 +397,64 @@
   });
   // Safari on iPhone scrolls the page under the viewer whatever the page's
   // overflow and the viewer's touch-action say; only turning down the drag
-  // itself stops it. The swipe below only needs where a touch starts and ends.
+  // itself stops it.
   dialog.addEventListener('touchmove', event => event.preventDefault(), { passive: false });
-  let touch;
-  image.addEventListener('touchstart', event => { touch = event.touches[0]; }, { passive: true });
-  image.addEventListener('touchend', event => {
-    if (!touch) return;
-    const dx = event.changedTouches[0].clientX - touch.clientX;
-    const dy = event.changedTouches[0].clientY - touch.clientY;
-    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) step((dx < 0 ? 1 : -1) * (rtl ? -1 : 1));
-    touch = null;
-  }, { passive: true });
+  // Under a finger (or a pen) the screen is held, not just swiped at. It
+  // goes where the finger goes: sideways, to the next screen or the one
+  // before, if it's let go far enough across or moving fast enough; down,
+  // it comes away from the page, a little smaller, the page showing through
+  // behind it, and let go there it flies back to its place in the row.
+  // Let go short of either, it springs back. A mouse has the buttons, the
+  // arrow keys and a click beside the screen.
+  let drag;
+  stage.addEventListener('pointerdown', event => {
+    if (event.pointerType === 'mouse' || !event.isPrimary || closing || drag) return;
+    drag = { id: event.pointerId, x: event.clientX, y: event.clientY, axis: '', dx: 0, dy: 0, vx: 0, vy: 0,
+      lastX: event.clientX, lastY: event.clientY, lastT: event.timeStamp };
+  });
+  stage.addEventListener('pointermove', event => {
+    if (!drag || event.pointerId !== drag.id) return;
+    const dx = event.clientX - drag.x, dy = event.clientY - drag.y;
+    if (!drag.axis) {
+      if (Math.hypot(dx, dy) < 8) return;
+      drag.axis = Math.abs(dx) > Math.abs(dy) ? 'x' : 'y';
+      stage.setPointerCapture(drag.id);
+      // Whatever was still arriving is where it's going.
+      flight?.finish();
+      image.style.transformOrigin = '50% 50%';
+    }
+    // How fast it's moving, in pixels a millisecond, smoothed over the last few moves.
+    const dt = Math.max(1, event.timeStamp - drag.lastT);
+    drag.vx = .6 * (event.clientX - drag.lastX) / dt + .4 * drag.vx;
+    drag.vy = .6 * (event.clientY - drag.lastY) / dt + .4 * drag.vy;
+    Object.assign(drag, { dx, dy, lastX: event.clientX, lastY: event.clientY, lastT: event.timeStamp });
+    if (drag.axis === 'x') {
+      image.style.transform = `translateX(${dx}px)`;
+    } else {
+      // Upwards there's nowhere to go: it gives a little and no more.
+      const pull = dy > 0 ? dy : dy * .2;
+      const far = clamp(pull / (innerHeight * .6));
+      image.style.transform = `translate(${dx * .35}px, ${pull}px) scale(${1 - far * .18})`;
+      surface.style.opacity = 1 - far * .75;
+      chrome.forEach(el => { el.style.opacity = clamp(1 - pull / 90); });
+    }
+  });
+  const drop = event => {
+    if (!drag || event.pointerId !== drag.id) return;
+    const { axis, dx, dy, vx, vy } = drag;
+    drag = null;
+    if (!axis) return;
+    const released = event.type === 'pointerup';
+    if (axis === 'x' && released && Math.sign(vx || dx) === Math.sign(dx) && (Math.abs(dx) > Math.min(140, innerWidth * .22) || Math.abs(vx) > .45)) {
+      step((dx < 0 ? 1 : -1) * (rtl ? -1 : 1), dx);
+    } else if (axis === 'y' && released && dy > 0 && vy > -.1 && (dy > 120 || vy > .5)) {
+      close();
+    } else {
+      back();
+    }
+  };
+  stage.addEventListener('pointerup', drop);
+  stage.addEventListener('pointercancel', drop);
   window.addEventListener('resize', () => {
     if (!dialog.open || closing) return;
     flight?.cancel();

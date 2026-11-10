@@ -38,7 +38,7 @@
 <meta name="apple-itunes-app" content="app-id=6783131829" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=6e912f31cb" />
+<link rel="stylesheet" href="/styles.css?v=925f1f6cf6" />
 <link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
 <script>
 // Register before first reveal, including restored history entries.
@@ -231,20 +231,33 @@
 
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
-// The language menus (one beside the header's pill, one in the footer) are
-// <details>; close an open one on a click elsewhere or on Escape. On phones a
-// click on the dimmed page lands on the <details> itself (its ::before is the
-// dimming), so that counts as elsewhere too.
+// The language menus (one in the header, one in the footer) are <details>;
+// close an open one on a click elsewhere, on its own button, or on Escape.
+// On phones a click on the dimmed page lands on the <details> itself (its
+// ::before is the dimming), so that counts as elsewhere too. A menu leaves
+// as it came rather than vanishing: it's held open for the moment its way
+// out takes (.closing in styles.css), then closed. With Reduce Motion it
+// just closes.
 const langs = document.querySelectorAll('.lang');
+const still = matchMedia('(prefers-reduced-motion: reduce)');
+const shut = lang => {
+  if (!lang.open || lang.classList.contains('closing')) return;
+  if (still.matches) { lang.open = false; return; }
+  lang.classList.add('closing');
+  setTimeout(() => { lang.open = false; lang.classList.remove('closing'); }, 200);
+};
 document.addEventListener('click', e => langs.forEach(lang => {
-  if (lang.open && (e.target === lang || !lang.contains(e.target))) lang.open = false;
+  if (!lang.open) return;
+  const summary = e.target.closest ? e.target.closest('summary') : null;
+  if (summary && lang.contains(summary)) { e.preventDefault(); shut(lang); }
+  else if (e.target === lang || !lang.contains(e.target)) shut(lang);
 }));
 document.addEventListener('keydown', e => {
   if (e.key !== 'Escape') return;
-  langs.forEach(lang => { if (lang.open) { lang.open = false; lang.querySelector('summary').focus(); } });
+  langs.forEach(lang => { if (lang.open) { shut(lang); lang.querySelector('summary').focus(); } });
 });
 </script>
 
-<script src="/presentation.js?v=1d89a6982d" data-enlarge="Perbesar tangkapan layar: {name}" data-close="Tutup penampil" data-previous="Tangkapan layar sebelumnya" data-next="Tangkapan layar berikutnya" defer></script>
+<script src="/presentation.js?v=a1d449eb43" data-enlarge="Perbesar tangkapan layar: {name}" data-close="Tutup penampil" data-previous="Tangkapan layar sebelumnya" data-next="Tangkapan layar berikutnya" defer></script>
 </body>
 </html>
