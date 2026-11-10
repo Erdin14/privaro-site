@@ -1,4 +1,4 @@
-// The on-device encryption illustration: a scan line passes down the phone's
+// The on-device encryption illustration: a line passes down the phone's
 // screen, and the photo behind it becomes ciphertext.
 // Illustrative, never an authentication simulation. The markup is the
 // finished state; no script or Reduce Motion leaves it that way.
@@ -7,75 +7,127 @@
 // as the phone comes up the screen and ciphertext by the time it reaches
 // the top. One way only: scrolling back doesn't bring the photo back,
 // because that is the one thing the illustration is there to say. Once it's
-// written, nothing here listens to the page any more. Played once on its
-// own it was two seconds that were easy to miss, and then a dim phone.
+// written, nothing here listens to the page any more.
+//
+// How it's drawn. The ciphertext lies still under the photo and is never
+// touched. The photo is seen through a pane that slides down the screen
+// while the photo inside it slides up by as much, so the photo stays where
+// it is and only its top edge moves. The rows just written are a second,
+// bright copy of the ciphertext, seen the same way through a band that
+// follows the line and fades upward: written hot, they cool to the resting
+// grey as the line moves on. So every frame is five transforms and two
+// opacities and nothing is laid out or painted again. (It used to move the
+// line by its "top" and cut the photo and the text with clip-path, which is
+// a layout and two repaints of fourteen hundred characters per frame.)
 (() => {
   const figure = document.querySelector('.privacy-vignette');
   if (!figure) return;
   const reduce = matchMedia('(prefers-reduced-motion: reduce)');
   const screen = figure.querySelector('.vg-screen');
+  const pane = figure.querySelector('.vg-pane');
   const photo = figure.querySelector('.vg-photo');
   const cipher = figure.querySelector('.vg-cipher');
   const scan = figure.querySelector('.vg-scan');
-  const text = cipher.textContent;
-  const glyphs = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
-  const supported = typeof figure.animate === 'function';
-  let animations = [], observer, run = 0, played = false, scramble = 0;
-  const ease = 'cubic-bezier(.22, 1, .36, 1)';
+  if (!pane || typeof requestAnimationFrame !== 'function') return;
+  if (reduce.matches) { figure.dataset.state = 'complete'; return; }
+  const hot = document.createElement('div');
+  hot.className = 'vg-hot';
+  const hotText = hot.appendChild(cipher.cloneNode(true));
+  pane.before(hot);
+  const moved = [pane, photo, hot, hotText, scan];
+
+  let height = 0, drawn = -1, frame = 0, played = false, observer;
+  const clamp = value => Math.max(0, Math.min(1, value));
+  // p is how much is written, 0 to 1; reach is how far down the screen that
+  // takes the line. Whole device pixels, so nothing is drawn between two.
+  function render(p, reach) {
+    if (p === drawn) return;
+    drawn = p;
+    const ratio = devicePixelRatio || 1;
+    const cut = Math.round(p * reach * height * ratio) / ratio;
+    pane.style.transform = `translateY(${cut}px)`;
+    photo.style.transform = `translateY(${-cut}px)`;
+    hot.style.transform = `translateY(${cut - height}px)`;
+    hotText.style.transform = `translateY(${height - cut}px)`;
+    scan.style.transform = `translateY(${cut}px)`;
+    // The line fades in as it starts and out as it finishes; the rows above
+    // it cool with it.
+    scan.style.opacity = clamp(Math.min(p / .05, (1 - p) / .08)).toFixed(3);
+    hot.style.opacity = clamp((1 - p) / .14).toFixed(3);
+  }
   function settle() {
-    run++;
-    animations.forEach(animation => animation.cancel());
-    animations = [];
-    clearTimeout(scramble);
-    cipher.textContent = text;
+    cancelAnimationFrame(frame);
+    frame = 0;
+    drawn = -1;
+    moved.forEach(el => { el.style.transform = el.style.opacity = ''; });
     figure.dataset.state = 'complete';
   }
-  // Freshly written ciphertext churns for a moment before it settles.
-  function churned() {
-    let out = '';
-    for (let i = 0; i < text.length; i++) out += Math.random() < .18 ? glyphs[Math.random() * 64 | 0] : text[i];
-    return out;
-  }
-  function churn(token, until) {
-    if (token !== run) return;
-    if (performance.now() >= until) { cipher.textContent = text; return; }
-    cipher.textContent = churned();
-    scramble = setTimeout(() => churn(token, until), 70);
-  }
-  function play() {
-    if (!supported || reduce.matches || document.hidden) return;
-    settle();
-    played = true;
-    const token = run;
-    figure.dataset.state = 'playing';
-    const baseDelay = document.documentElement.classList.contains('page-crossfade') ? 180 : 0;
-    function animate(el, frames, duration, delay, easing = ease) {
-      const animation = el.animate(frames, { duration, delay: baseDelay + delay, easing, fill: 'backwards' });
-      animations.push(animation);
-      animation.finished.catch(() => {});
-      return animation;
+  reduce.addEventListener('change', () => { if (reduce.matches) { settle(); observer?.disconnect(); } });
+  window.addEventListener('pagehide', settle);
+
+  if (figure.closest('.safety')) {
+    // The phone's foot is below the edge of its column, so the line only
+    // has to cross the part of the screen that shows.
+    const reach = .74;
+    // How far the reader has scrolled it, and how far the line has got. The
+    // line follows a moment behind and eases up to where it should be, so
+    // a wheel's steps, a flick or a jump down the page all draw as one
+    // steady pass rather than as the steps they arrive in.
+    let goal = 0, at = 0, last = 0, listening = false;
+    const wake = () => { if (!frame && figure.dataset.state === 'scrub') { last = performance.now(); frame = requestAnimationFrame(tick); } };
+    const listen = on => {
+      if (on === listening) return;
+      listening = on;
+      (on ? addEventListener : removeEventListener)('scroll', wake, { passive: true });
+      (on ? addEventListener : removeEventListener)('resize', resize);
+    };
+    function resize() { height = screen.offsetHeight; drawn = -1; wake(); }
+    function tick(now) {
+      frame = 0;
+      if (reduce.matches || figure.dataset.state !== 'scrub') return listen(false);
+      // Whole until its top is just past halfway up the screen, so the photo
+      // has been seen; written by the time the top nears the header. Only
+      // ever further: the line never goes back up.
+      const top = figure.getBoundingClientRect().top;
+      goal = Math.max(goal, clamp((innerHeight * .56 - top) / (innerHeight * .44)));
+      at += (goal - at) * (1 - Math.exp(-Math.min(now - last, 64) / 90));
+      last = now;
+      if (goal - at < .002) at = goal;
+      render(at, reach);
+      if (at >= 1) { listen(false); return settle(); }
+      if (at < goal) frame = requestAnimationFrame(tick);
     }
-    const sweep = 1900, start = 450, curve = 'cubic-bezier(.45, .05, .3, 1)';
-    const height = screen.offsetHeight;
-    animate(photo, [{ clipPath: 'inset(0 0 0 0)' }, { clipPath: 'inset(100% 0 0 0)' }], sweep, start, curve);
-    animate(cipher, [{ clipPath: 'inset(0 0 100% 0)' }, { clipPath: 'inset(0 0 0% 0)' }], sweep, start, curve);
-    const last = animate(scan, [
-      { opacity: 0, transform: 'translateY(0)' },
-      { opacity: 1, transform: `translateY(${height * .06}px)`, offset: .06 },
-      { opacity: 1, transform: `translateY(${height * .7}px)`, offset: .7 },
-      { opacity: 0, transform: `translateY(${height}px)` }
-    ], sweep, start, curve);
-    scramble = setTimeout(() => churn(token, performance.now() + sweep + 300), baseDelay + start);
-    last.finished.catch(() => {}).then(() => {
-      if (token !== run) return;
-      figure.dataset.state = 'complete';
-      animations = [];
-    });
+    const begin = () => {
+      if (reduce.matches || at >= 1) return;
+      figure.dataset.state = 'scrub';
+      listen(true);
+      resize();
+    };
+    // Back from the page cache, where leaving had settled it: as far as it
+    // had got, and on from there.
+    addEventListener('pageshow', event => { if (event.persisted) begin(); });
+    begin();
+    return;
   }
-  function sync() {
-    if (reduce.matches) { settle(); observer?.disconnect(); }
+
+  // The Security page: once, by itself, when it's on screen.
+  function play() {
+    if (reduce.matches || document.hidden) return;
+    played = true;
+    height = screen.offsetHeight;
+    figure.dataset.state = 'playing';
+    const sweep = 1900;
+    const start = performance.now() + 450 + (document.documentElement.classList.contains('page-crossfade') ? 180 : 0);
+    const step = now => {
+      if (figure.dataset.state !== 'playing') return;
+      const t = clamp((now - start) / sweep);
+      // Slow to leave, slow to arrive.
+      render(t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2, 1);
+      if (t < 1) frame = requestAnimationFrame(step);
+      else settle();
+    };
+    frame = requestAnimationFrame(step);
   }
-  reduce.addEventListener('change', sync);
   document.addEventListener('visibilitychange', () => {
     if (document.hidden && figure.dataset.state === 'playing') settle();
     else if (!document.hidden && !played && figure.dataset.state === 'ready') {
@@ -84,50 +136,6 @@
       if (visible >= rect.height * .4) { observer?.disconnect(); play(); }
     }
   });
-  window.addEventListener('pagehide', settle);
-  sync();
-  if (!supported || reduce.matches) return;
-  if (figure.closest('.safety')) {
-    // The phone's foot is below the edge of its column, so the line only
-    // has to cross the part of the screen that shows.
-    const reach = .74;
-    let queued = false, furthest = 0, listening = false;
-    const queue = () => { if (!queued) { queued = true; requestAnimationFrame(draw); } };
-    const listen = on => {
-      if (on === listening) return;
-      listening = on;
-      (on ? addEventListener : removeEventListener)('scroll', queue, { passive: true });
-      (on ? addEventListener : removeEventListener)('resize', queue);
-    };
-    function draw() {
-      queued = false;
-      if (reduce.matches || figure.dataset.state !== 'scrub') return listen(false);
-      const top = figure.getBoundingClientRect().top;
-      // Whole until its top is just past halfway up the screen, so the photo
-      // has been seen; written by the time the top nears the header. Only
-      // ever further: the line never goes back up.
-      const p = Math.max(furthest, Math.min(1, (innerHeight * .56 - top) / (innerHeight * .44)));
-      if (p === furthest && p > 0) return;
-      furthest = p;
-      // The ciphertext itself holds still: only the line moves. (It churned
-      // as it was written, which under a finger read as the whole screen
-      // flickering.)
-      figure.style.setProperty('--cut', (p * reach * 100).toFixed(2) + '%');
-      figure.style.setProperty('--scan', Math.max(0, Math.min(1, p / .05, (1 - p) / .08)).toFixed(2));
-      if (p >= 1) { listen(false); figure.dataset.state = 'complete'; }
-    }
-    const begin = () => {
-      if (reduce.matches || furthest >= 1) return;
-      figure.dataset.state = 'scrub';
-      listen(true);
-      draw();
-    };
-    // Back from the page cache, where leaving had settled it: as far as it
-    // had got, and on from there.
-    addEventListener('pageshow', event => { if (event.persisted) begin(); });
-    begin();
-    return;
-  }
   if ('IntersectionObserver' in window) {
     figure.dataset.state = 'ready';
     observer = new IntersectionObserver(entries => {

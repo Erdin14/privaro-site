@@ -51,16 +51,20 @@
 <main id="main" class="home">
   <!-- The name, set large, beside what it is. Under both, where to get it and
        what it costs, in two plain sentences. The icon is in the header, just
-       above: the name doesn't need it twice. -->
+       above: the name doesn't need it twice.
+       The name is drawn letter by letter (its last two turn over, once: see
+       the script at the end), so the heading says it whole for screen
+       readers and the letters themselves are left out of what's read. -->
   <section class="hero wrap" aria-labelledby="hero-title">
     <div class="hero-mark">
-      <h1 id="hero-title" class="wordmark"><span class="mask"><span class="rise" style="--anim:mask-rise">P<span class="open">ri</span>va<span class="tail"><span class="open">r</span>o</span></span></span></h1>
+      <h1 id="hero-title" class="wordmark" aria-label="Privaro"><span class="mask" aria-hidden="true"><span class="rise" style="--anim:mask-rise">P<span class="open">ri</span>va<span class="tail"><span class="roll" data-to="t"><span class="open">r</span></span><span class="roll" data-to="e"><span>o</span></span></span></span></span></h1>
     </div>
-    <div class="hero-copy rise" style="--anim:fade;--d:.35s">
+    <div class="hero-copy rise" style="--anim:fade;--d:.3s">
       <p class="tagline">{{home_tagline}}</p>
       <p class="lead">{{hero_lead}}</p>
     </div>
     <div class="buy">
+      <span class="rule rise" style="--anim:draw;--d:.15s" aria-hidden="true"></span>
       <div class="buy-get">
         <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="{{badge_label}}">
           <img src="/appstore-badge-white.svg" width="150" height="50" alt="{{badge_label}}" />
@@ -76,13 +80,16 @@
   </section>
 
   <!-- The app itself: four screens in a row, each with what it's for. Each is
-       a button that opens the viewer (presentation.js). -->
+       a button that opens the viewer (presentation.js). The Lock Screen is
+       there from the start; the other three are dealt out from behind it.
+       It's the phone inside each figure that moves, never the figure: the
+       row snaps to the figures when it's swiped, and would follow one. -->
   <section class="gallery">
     <div class="shots wrap">
-      <figure class="rise" style="--anim:phone-in;--i:0"><picture><source srcset="{{SHOTS}}shot-lock.webp" type="image/webp" /><img src="{{SHOTS}}shot-lock.jpg" width="760" height="1573" alt="{{alt_lock}}" fetchpriority="high" /></picture><figcaption><strong>{{cap_lock}}</strong> <span>{{shot_lock_d}}</span></figcaption></figure>
-      <figure class="rise" style="--anim:phone-in;--i:1"><picture><source srcset="{{SHOTS}}shot-vault.webp" type="image/webp" /><img src="{{SHOTS}}shot-vault.jpg" width="760" height="1573" alt="{{alt_vault}}" /></picture><figcaption><strong>{{cap_vault}}</strong> <span>{{shot_vault_d}}</span></figcaption></figure>
-      <figure class="rise" style="--anim:phone-in;--i:2"><picture><source srcset="{{SHOTS}}shot-albums.webp" type="image/webp" /><img src="{{SHOTS}}shot-albums.jpg" width="760" height="1573" alt="{{alt_albums}}" decoding="async" /></picture><figcaption><strong>{{cap_albums}}</strong> <span>{{shot_albums_d}}</span></figcaption></figure>
-      <figure class="rise" style="--anim:phone-in;--i:3"><picture><source srcset="{{SHOTS}}shot-privacy.webp" type="image/webp" /><img src="{{SHOTS}}shot-privacy.jpg" width="760" height="1573" alt="{{alt_privacy}}" decoding="async" /></picture><figcaption><strong>{{cap_privacy}}</strong> <span>{{shot_privacy_d}}</span></figcaption></figure>
+      <figure style="--i:0"><div class="phone rise" style="--anim:none"><picture><source srcset="{{SHOTS}}shot-lock.webp" type="image/webp" /><img src="{{SHOTS}}shot-lock.jpg" width="760" height="1573" alt="{{alt_lock}}" fetchpriority="high" /></picture></div><figcaption><strong>{{cap_lock}}</strong> <span>{{shot_lock_d}}</span></figcaption></figure>
+      <figure style="--i:1"><div class="phone rise" style="--anim:deal"><picture><source srcset="{{SHOTS}}shot-vault.webp" type="image/webp" /><img src="{{SHOTS}}shot-vault.jpg" width="760" height="1573" alt="{{alt_vault}}" /></picture></div><figcaption><strong>{{cap_vault}}</strong> <span>{{shot_vault_d}}</span></figcaption></figure>
+      <figure style="--i:2"><div class="phone rise" style="--anim:deal"><picture><source srcset="{{SHOTS}}shot-albums.webp" type="image/webp" /><img src="{{SHOTS}}shot-albums.jpg" width="760" height="1573" alt="{{alt_albums}}" decoding="async" /></picture></div><figcaption><strong>{{cap_albums}}</strong> <span>{{shot_albums_d}}</span></figcaption></figure>
+      <figure style="--i:3"><div class="phone rise" style="--anim:deal"><picture><source srcset="{{SHOTS}}shot-privacy.webp" type="image/webp" /><img src="{{SHOTS}}shot-privacy.jpg" width="760" height="1573" alt="{{alt_privacy}}" decoding="async" /></picture></div><figcaption><strong>{{cap_privacy}}</strong> <span>{{shot_privacy_d}}</span></figcaption></figure>
     </div>
   </section>
 {{FILM}}
@@ -140,6 +147,7 @@
       </li>
     </ul>
     <div class="guard-foot">
+      <span class="rule rise" style="--anim:draw" aria-hidden="true"></span>
       <!-- The price and four words, as the Pro page closes: the hero has
            already said the whole sentence once. -->
       <p class="guard-price">{{PRICE}} {{pro_once}}</p>
@@ -174,37 +182,58 @@
   const items = [...document.querySelectorAll('.rise')];
   const show = el => el.classList.add('in-view');
   if (!('IntersectionObserver' in window)) return items.forEach(show);
-  // A headline line starts below its mask, clipped out of view, so it's the
-  // mask that's watched; the phones arrive together, when their row does.
+  // A headline line starts below its mask, clipped out of view, and a
+  // hairline starts with no length, so it's what holds them that's watched;
+  // the phones are dealt together, when their row is on screen.
   const owner = new Map();
   items.forEach(el => {
-    const target = el.parentElement.closest('.mask, .shots') || el;
+    const target = el.parentElement.closest('.mask, .shots, .buy, .guard-foot') || el;
     owner.set(target, [...(owner.get(target) || []), el]);
   });
-  const watch = new IntersectionObserver(entries => entries.forEach(entry => {
+  // The phones wait for their pictures, so it's phones that are dealt and
+  // not empty space; a slow connection holds them a second at most.
+  const ready = target => !target.matches('.shots') ? Promise.resolve() : Promise.race([
+    Promise.all([...target.querySelectorAll('img')].map(img => img.decode ? img.decode().catch(() => {}) : 0)),
+    new Promise(done => setTimeout(done, 1000))]);
+  // Words and lines start as they clear the bottom of the screen. What's
+  // there to be watched (the phones, a passcode being typed) waits until
+  // it's a sixth of the way up, where it's seen.
+  const watcher = margin => new IntersectionObserver((entries, watch) => entries.forEach(entry => {
     if (!entry.isIntersecting) return;
-    owner.get(entry.target).forEach(show);
     watch.unobserve(entry.target);
-  }), { rootMargin: '0px 0px -6% 0px' });
-  owner.forEach((_, target) => watch.observe(target));
+    ready(entry.target).then(() => owner.get(entry.target).forEach(show));
+  }), { rootMargin: '0px 0px -' + margin + '% 0px' });
+  const edge = watcher(6), stage = watcher(16);
+  owner.forEach((_, target) => (target.matches('.shots, .code') ? stage : edge).observe(target));
   // Keyboard focus and in-page links must never land on something hidden.
   document.addEventListener('focusin', e => e.target.closest('.rise')?.classList.add('in-view'));
 })();
 </script>
 <script>
-// Privaro, Private: once the name has arrived, its last two letters glitch
-// to "te" and back, once: two flicks, then long enough on "Private" to read
-// it. Once is a wink; repeated, the largest word on the page spent half of
-// a first visit not being the product's name. Never more than three flashes
-// in a second, never a loop, and not at all with Reduce Motion. The text
-// stays "Privaro" throughout (see .tail in styles.css).
+// Privaro, Private: once the name has arrived, its last two letters turn
+// over to "te", like the wheels of a combination lock, stay long enough to
+// read "Private", and turn back. Once: a wink; repeated, the largest word
+// on the page spent half of a first visit not being the product's name.
+// Nothing flashes (it used to flicker there and back), never a loop, and
+// not at all with Reduce Motion. The text stays "Privaro" throughout (see
+// .roll in styles.css).
 (() => {
   const tail = document.querySelector('.wordmark .tail');
   const reduce = matchMedia('(prefers-reduced-motion: reduce)');
   if (!tail || reduce.matches) return;
-  const glitch = [[900, true], [1050, false], [1200, true], [2300, false]];
-  const run = () => reduce.matches ||
-    glitch.forEach(([at, on]) => setTimeout(() => tail.classList.toggle('flip', on && !reduce.matches), at));
+  // The "e" comes up behind the "o", but belongs after a "t": how much
+  // nearer that is, in this font, as a share of the name's size.
+  const place = () => {
+    const probe = document.createElement('span');
+    probe.textContent = 't';
+    probe.style.cssText = 'position:absolute;visibility:hidden';
+    tail.append(probe);
+    const shift = probe.getBoundingClientRect().width - tail.firstElementChild.getBoundingClientRect().width;
+    tail.style.setProperty('--te', (shift / parseFloat(getComputedStyle(tail).fontSize)).toFixed(4) + 'em');
+    probe.remove();
+  };
+  const turn = on => { if (on && reduce.matches) return; if (on) place(); tail.classList.toggle('flip', on); };
+  const run = () => { setTimeout(turn, 900, true); setTimeout(turn, 2400, false); };
   // Arriving through a page crossfade, the name's entrance is cancelled
   // (it's simply there), and that's the cue as much as its finishing.
   const arrival = tail.closest('.rise').getAnimations()[0];

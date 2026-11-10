@@ -21,10 +21,14 @@
      and one gutter shared by the gallery and the section under it.
    - Shape: round controls (999px), soft surfaces (24px) for the film and the
      Security page's illustration, and nothing else.
-   - Motion: four durations and two curves, on the homepage only. Headlines
-     rise out of their own line; the phones arrive once; the photo in the
+   - Motion: five durations and three curves, named below, and nothing on
+     the site moves to any other (the scripts read the same names). Each
+     chapter of the homepage has one movement of its own and no more: the
+     name rises out of its line and the rule under it is drawn; the phones
+     are dealt out from behind the Lock Screen; the photo in the
      illustration is written over as the page is scrolled past it; three
-     passcodes are typed once. Everything else, and every word on the
+     passcodes are typed once. Only transform and opacity ever animate, so
+     the work is the compositor's. Everything else, and every word on the
      reading pages, is simply there. */
 :root {
   --bg: #ffffff;
@@ -67,13 +71,27 @@
   --radius-round: 999px;
   --radius-surface: 24px;
 
+  /* Under a finger; a change of state (colour, a hover); something small
+     going a short way (a menu, the viewer's next screen); something
+     arriving; a whole scene. */
   --dur-press: 90ms;
   --dur-state: 240ms;
+  --dur-move: 460ms;
   --dur-reveal: 700ms;
   --dur-scene: 1200ms;
-  /* Arrivals: quick to start, long to settle. State changes: even. */
+  /* Arrivals: quick to start, long to settle. State changes: even. Things
+     let go of (a pressed button, the switch's knob, a letter of the name):
+     a spring, which passes its mark by a fiftieth and comes back to it, the
+     give a detent has. Browsers without linear() get a curve that only
+     settles. */
   --ease: cubic-bezier(.16, 1, .3, 1);
   --ease-state: cubic-bezier(.4, 0, .2, 1);
+  --ease-spring: cubic-bezier(.22, 1.12, .36, 1);
+}
+@supports (transition-timing-function: linear(0, 1)) {
+  :root { --ease-spring: linear(0, .001 .5%, .008 1.5%, .027 2.8%, .063 4.4%, .118 6.4%, .19 8.5%, .278 10.9%, .377 13.5%,
+    .481 16.3%, .584 19.3%, .681 22.4%, .768 25.8%, .843 29.3%, .903 33%, .948 36.8%, .981 40.8%, 1.002 45%, 1.014 49.3%,
+    1.019 53.8%, 1.02 58.4%, 1.018 63.1%, 1.014 68%, 1.01 73%, 1.007 78.1%, 1.004 83.4%, 1.002 88.8%, 1.001 94.3%, 1); }
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -96,7 +114,7 @@ html { -webkit-text-size-adjust: 100%; }
    down (presentation.js adds .near-end), its dark foot. While a screenshot
    is open it takes the viewer's own dark (.viewing), fading with it, so the
    strips behind the status bar and Safari's address bar don't stay grey. */
-html.graphite-site { background: #1f2122; color-scheme: dark; transition: background-color .45s var(--ease-state); }
+html.graphite-site { background: #1f2122; color-scheme: dark; transition: background-color var(--dur-move) var(--ease-state); }
 html.graphite-site:where(:has(> body.home-scene)) { background: #222324; }
 html.graphite-site.near-end, html.graphite-site.viewing { background: #111213; }
 body { background: var(--bg); color: var(--ink); font-family: var(--font); font-size: 16px; line-height: 1.5;
@@ -119,7 +137,8 @@ h1, h2 { font-weight: 600; }
 /* For the keyboard: the first Tab on any page shows a way past the header,
    straight to the page's own words. Off screen until it has focus. */
 .skip { position: fixed; z-index: 40; top: 12px; inset-inline-start: 12px; padding: 10px 18px; border-radius: var(--radius-round);
-  background: #f5f5f7; color: #111213; font-size: 14px; font-weight: 600; translate: 0 -300%; }
+  background: #f5f5f7; color: #111213; font-size: 14px; font-weight: 600; translate: 0 -300%;
+  transition: translate var(--dur-move) var(--ease); }
 .skip:focus { translate: none; text-decoration: none; }
 /* Where it lands takes focus without a ring around the whole page. */
 main:focus { outline: none; }
@@ -127,15 +146,20 @@ main:focus { outline: none; }
 .wrap { width: min(1000px, 100% - 2 * var(--side)); margin-left: auto; margin-right: auto; }
 .appstore { display: inline-block; border-radius: 10px; }
 .appstore img { height: 44px; width: auto; }
-.appstore:hover { opacity: .86; }
 
 /* Pressed controls give a little under the finger, then spring back. */
 :is(.appstore, .head-get, .film-button, .lang summary, .shot-viewer button) {
-  transition: scale var(--dur-reveal) var(--ease), color var(--dur-state) var(--ease-state),
+  transition: scale var(--dur-move) var(--ease-spring), color var(--dur-state) var(--ease-state),
     background-color var(--dur-state) var(--ease-state), border-color var(--dur-state) var(--ease-state),
     opacity var(--dur-state) var(--ease-state); }
+/* The badge is the one thing on the page to press, so under a mouse it
+   comes up to meet it. (It used to dim, which is what a control that's
+   switched off does.) */
+@media (hover: hover) and (pointer: fine) {
+  .appstore:hover { scale: 1.03; }
+}
 :is(.appstore, .head-get, .film-button, .lang summary, .shot-viewer button):active {
-  scale: .97; transition-duration: var(--dur-press); }
+  scale: .97; transition-duration: var(--dur-press); transition-timing-function: var(--ease-state); }
 
 /* Header, on every page: the seam. One hairline across the top of the page,
    as wide as the page's content, with the name set into the middle of it
@@ -181,7 +205,7 @@ main:focus { outline: none; }
 .head-get { display: inline-flex; align-items: center; padding-block: var(--space-2); color: var(--ink); font-weight: 600;
   white-space: nowrap; text-decoration: underline; text-decoration-color: var(--dim); text-decoration-thickness: 1px;
   text-underline-offset: 5px;
-  transition: scale var(--dur-reveal) var(--ease), text-decoration-color var(--dur-state) var(--ease-state); }
+  transition: scale var(--dur-move) var(--ease-spring), text-decoration-color var(--dur-state) var(--ease-state); }
 .head-get:hover { text-decoration: underline; text-decoration-color: var(--ink); text-underline-offset: 5px; }
 /* The language menu, as plain words beside the download, opening downwards. */
 .site-head .lang { display: flex; }
@@ -192,6 +216,7 @@ main:focus { outline: none; }
 [dir="rtl"] .site-head .lang-menu { transform-origin: top left; }
 .site-head .lang[open] .lang-menu { animation-name: menu-down; }
 @keyframes menu-down { from { opacity: 0; transform: translateY(-8px) scale(.96); } }
+.site-head .lang.closing summary .chevron { transform: rotate(180deg); }
 /* Narrower screens: a little less air between the words, and the language
    menu as just the globe, so every language's words fit either side of the
    name. */
@@ -276,15 +301,27 @@ main:focus { outline: none; }
    the v, so those letters get a little more room after them. */
 .wordmark .open { letter-spacing: calc(var(--track-mark) + .03em); }
 /* "Privaro" briefly reads "Private" (the script at the end of index.html).
-   The letters underneath stay "ro", so screen readers and copying always
-   get the name; the "te" is only drawn over them. */
+   Its last two letters are the wheels of a combination lock: each turns
+   over, the "r" a moment before the "o", out through the top of the line
+   the name rose from while a "t" and an "e" come up from under it, and
+   after a moment they turn back. A wheel stops with the little give the
+   spring has. The letters in the page stay "ro" (the others are drawn, not
+   written), and the heading is named in full for screen readers, so
+   reading it out and copying it always get the name. */
 .wordmark .rise { direction: ltr; }
-.wordmark .tail { position: relative; }
-/* Normal line height, so its baseline sits where the letters' does (the
-   name's own line height is too tight for an overlay to inherit). */
-.wordmark .tail::after { content: "te"; position: absolute; top: 0; left: 0; line-height: normal; visibility: hidden; color: var(--ink); }
-.wordmark .tail.flip { color: transparent; }
-.wordmark .tail.flip::after { visibility: visible; }
+.wordmark .roll { position: relative; display: inline-block; }
+.wordmark .roll > span { display: inline-block; }
+.wordmark .roll::after { content: attr(data-to); position: absolute; top: 0; left: 0; visibility: hidden; translate: 0 160%; }
+/* The "e" stands where it would after a "t", not where the "o" does after
+   the "r" (the script measures the difference in this font). */
+.wordmark .roll + .roll::after { left: var(--te, 0em); }
+.wordmark .roll > span, .wordmark .roll::after {
+  transition: translate var(--dur-reveal) var(--ease-spring) var(--wheel, 0s),
+    visibility 0s linear calc(var(--dur-reveal) + var(--wheel, 0s)); }
+.wordmark .roll + .roll { --wheel: 70ms; }
+.wordmark .tail.flip .roll > span { translate: 0 -160%; }
+.wordmark .tail.flip .roll::after { visibility: visible; translate: none;
+  transition: translate var(--dur-reveal) var(--ease-spring) var(--wheel, 0s), visibility 0s linear var(--wheel, 0s); }
 .hero-copy { padding-bottom: .2em; }
 .tagline { font-family: var(--display); font-size: var(--size-title); font-weight: 600; line-height: 1.1;
   letter-spacing: var(--track-title); text-wrap: balance; }
@@ -292,7 +329,13 @@ main:focus { outline: none; }
 
 .buy { grid-column: 1 / -1; display: flex; align-items: center; justify-content: space-between; gap: var(--space-6) var(--space-7); }
 .buy-get { display: flex; align-items: center; gap: var(--space-6); }
-.hero .buy { margin-top: var(--space-8); padding-top: var(--space-6); border-top: 1px solid var(--rule); }
+.hero .buy { position: relative; margin-top: var(--space-8); padding-top: calc(var(--space-6) + 1px); }
+/* The hairline above the badge, and the one above the price further down.
+   An element rather than a border, so it can be drawn across the page from
+   the side the reading starts on (see Arrivals); the pixel it took as a
+   border is in the padding under it. */
+.rule { position: absolute; inset: 0 0 auto; height: 1px; background: var(--rule); transform-origin: 0 50%; }
+[dir="rtl"] .rule { transform-origin: 100% 50%; }
 /* From a computer to the phone: the App Store address as a code for the
    phone's camera, on a white tile like the badge's. Only where there's a
    mouse and a wide screen, which is to say where the badge alone would open
@@ -322,15 +365,22 @@ main:focus { outline: none; }
 
 /* The gallery: the four screens side by side, upright and aligned, each
    labelled with what it's for. A phone leans a little toward the pointer
-   (presentation.js) and the others step back. */
-.gallery { margin-top: var(--space-9); }
+   (presentation.js) and the others step back. The row is measured against
+   the section (cqw), so the phones know how far apart they stand (--step)
+   when they're dealt out. */
+.gallery { margin-top: var(--space-9); container-type: inline-size; }
 /* Four columns of the page itself, so the first phone starts on the page's
    left edge and the third on its centre line, where the facts, the
    passcodes' descriptions and the links under them start. Centred as a
    group, the row sat a few pixels to a few dozen inside both, depending on
    the window's height. */
-.shots { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); column-gap: var(--gutter); }
-.shots figure { min-width: 0; max-width: min(312px, 72vh * .4832); margin: 0; perspective: 1600px; }
+.shots { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); column-gap: var(--gutter);
+  --step: calc((min(1400px, 100cqw - 2 * var(--side)) - 3 * var(--gutter)) / 4 + var(--gutter)); --toward: -1; }
+[dir="rtl"] .shots { --toward: 1; }
+/* The Lock Screen is the first and stands in front: the others start behind
+   it (see Arrivals). */
+.shots figure { position: relative; z-index: calc(4 - var(--i, 0)); min-width: 0; max-width: min(312px, 72vh * .4832); margin: 0; }
+.phone { perspective: 1600px; }
 /* Each screenshot is the phone in its frame, cut to the phone's outline
    (body and side buttons) by a mask drawn from the same measurements. It's
    WebP, a quarter of the JPEG's size, with the JPEG for browsers without it;
@@ -349,27 +399,53 @@ main:focus { outline: none; }
 .shots figcaption strong { display: block; font-size: var(--size-lead); font-weight: 600; line-height: 1.35; letter-spacing: -.012em; color: var(--ink); }
 .shots figcaption > span { display: block; margin-top: var(--space-1); color: var(--muted); }
 
+/* The lean itself is a spring in presentation.js, written to the button's
+   transform a frame at a time: nothing here transitions it, so the two
+   can't pull against each other. */
 .shot-open { position: relative; display: block; width: 100%; padding: 0; border: 0; background: none; color: inherit;
   cursor: zoom-in; border-radius: 12%; -webkit-tap-highlight-color: transparent;
-  transform: rotateY(var(--ry, 0deg)) rotateX(var(--rx, 0deg));
-  transition: transform var(--dur-scene) var(--ease), opacity var(--dur-reveal) var(--ease-state),
-    filter var(--dur-reveal) var(--ease-state), scale var(--dur-reveal) var(--ease); }
-.shot-open.squared { transition: none; }
-.shot-open.tilting { transition: transform 200ms ease-out, opacity var(--dur-reveal) var(--ease-state),
-  filter var(--dur-reveal) var(--ease-state), scale var(--dur-reveal) var(--ease); }
+  transition: opacity var(--dur-reveal) var(--ease-state); }
 .shot-open:focus-visible { outline-offset: 8px; }
-/* The shadow it casts, and the light on its glass, from the same high left. */
+/* The shadow it casts, and the light on its glass, from the same high left:
+   a sheen across the corner that never moves, and a soft glow that goes
+   where the pointer does. The glow is a picture of its own that is only
+   ever moved (presentation.js), never redrawn: as a gradient repositioned
+   on every pointer move it was painted, through the phone's outline, some
+   sixty times a second. */
 .shot-open::before { content: ""; position: absolute; z-index: -1; inset: auto 6% -3.5%; height: 7%;
   background: radial-gradient(closest-side, rgb(0 0 0 / .7), transparent); pointer-events: none; }
-.shot-open::after { content: ""; position: absolute; inset: 0; pointer-events: none;
+.shot-open::after, .shot-light { position: absolute; inset: 0; pointer-events: none;
   -webkit-mask: url(/shots/framed-18-pro-max/phone-mask.svg) center / 100% 100% no-repeat;
   mask: url(/shots/framed-18-pro-max/phone-mask.svg) center / 100% 100% no-repeat;
-  background: radial-gradient(70% 45% at var(--mx, 20%) var(--my, -10%), rgb(255 255 255 / .14), transparent 70%),
-    linear-gradient(118deg, rgb(255 255 255 / .06), transparent 32%);
   opacity: .5; transition: opacity var(--dur-reveal) var(--ease-state); }
-.shot-open:is(:hover, :focus-visible)::after { opacity: 1; }
-@media (hover: hover) and (min-width: 1181px) {
-  .shots:has(.shot-open:hover) .shot-open:not(:hover) { opacity: .55; scale: .98; }
+.shot-open::after { content: ""; background: linear-gradient(118deg, rgb(255 255 255 / .06), transparent 32%); }
+.shot-light { overflow: hidden; }
+/* Centred on the phone's top left corner, then moved: at rest, to where the
+   page's light falls. */
+.shot-light i { position: absolute; left: -70%; top: -45%; width: 140%; height: 90%;
+  background: radial-gradient(closest-side, rgb(255 255 255 / .14), transparent 70%); transform: translate(14.3%, -11.1%); }
+.shot-open:is(:hover, :focus-visible)::after, .shot-open:is(:hover, :focus-visible) .shot-light { opacity: 1; }
+@media (hover: hover) and (pointer: fine) and (min-width: 1181px) {
+  .shot-open:hover .shot-light i { will-change: transform; }
+  /* The others step back, by a shade: at half their brightness the row went
+     grey every time the pointer crossed it. */
+  .shots:has(.shot-open:hover) .shot-open:not(:hover) { opacity: .74; }
+}
+
+/* Where the row is swiped (tablets and phones, further down), the phone in
+   the middle of the screen is the one being looked at: the ones coming in
+   from the edge or leaving by it are a little smaller and dimmer, and grow
+   into place as they're brought to the middle. Tied to the swipe itself,
+   position for position, by the browser (a view timeline), so there's no
+   script and nothing for a slow phone to keep up with; browsers without
+   view timelines show the row as it always was. So do Arabic and Urdu:
+   in a row that runs right to left Chromium (153) measures each phone a
+   place out, and dims the one in the middle. */
+@keyframes shot-focus { 0%, 100% { opacity: .6; scale: .94; } 25%, 75% { opacity: 1; scale: 1; } }
+@supports (animation-timeline: view()) {
+  @media (max-width: 1180px) and (prefers-reduced-motion: no-preference) {
+    html:not([dir="rtl"]) .shots .shot-open { animation: shot-focus linear both; animation-timeline: view(inline); }
+  }
 }
 
 /* Film: the app in motion, in one card like the security illustration's,
@@ -478,8 +554,8 @@ main:focus { outline: none; }
    six empty rings. */
 .code-wipe .dots i { scale: .3; }
 .code-wrong .dots i { background: transparent; }
-.guard-foot { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: var(--gutter); align-items: center;
-  margin-top: var(--space-8); padding-top: var(--space-6); border-top: 1px solid var(--rule); }
+.guard-foot { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: var(--gutter); align-items: center;
+  margin-top: var(--space-8); padding-top: calc(var(--space-6) + 1px); }
 .guard-foot .more { justify-self: start; margin-top: 0; font-size: var(--size-lead); }
 .guard-price { font-size: var(--size-lead); line-height: 1.5; letter-spacing: var(--track-text); color: var(--muted); }
 .guard-price .price { margin-inline-end: .35em; color: var(--ink); font-weight: 600; }
@@ -498,12 +574,22 @@ main:focus { outline: none; }
 
 /* Arrivals. Only with the "motion" class from <head> (so never with Reduce
    Motion or without JavaScript), each .rise waits, paused on its first
-   frame, until the script at the end of the page sees it on screen. Three
-   kinds, and only these: a headline rising out of its line, the phones
-   arriving, and the hero's words fading in after the name. */
+   frame, until the script at the end of the page sees it on screen. Four
+   kinds, and only these: a headline rising out of its line; a hairline
+   drawn across the page; the hero's words fading in as the line passes
+   under them; and the phones dealt out.
+   The deal: the four phones start as one, the Lock Screen in front and the
+   other three behind it, a little smaller, and slide out along the row to
+   their places, each caption appearing once its phone has all but stopped.
+   What's in the vault was behind the lock. (They used to float up one after
+   another, as anything on any page does.) Sideways, so under a finger
+   scrolling the page it never looks dragged along; and on a phone, where
+   the row runs off the screen, the ones sliding out past its edge say
+   there's more that way. */
 @keyframes fade { from { opacity: 0; } }
 @keyframes mask-rise { from { transform: translateY(108%); } }
-@keyframes phone-in { from { opacity: 0; transform: perspective(1400px) translateY(96px) rotateX(16deg) scale(.94); } }
+@keyframes draw { from { transform: scaleX(0); } }
+@keyframes deal { from { transform: translateX(calc(var(--i) * var(--step) * var(--toward))) scale(.92); } }
 @keyframes phone-settle { from { opacity: 0; transform: scale(.97); } }
 @keyframes phone-up { from { transform: translateY(24%); } }
 /* The passcodes. A dot is empty until it's typed; a wiped one shrinks to a
@@ -523,27 +609,37 @@ main:focus { outline: none; }
   .motion .code-wipe { --row: .25s; }
   .motion .code-wrong { --row: .5s; }
   .motion .dots i { --key: calc(var(--row) + .3s + var(--n) * .11s); }
-  .motion .code-decoy .dots i { animation: dot-type 1ms linear var(--key) both; }
-  .motion .code-wipe .dots i { animation: dot-type 1ms linear var(--key) both,
+  /* Until its row is on screen a passcode is six empty rings, set here as
+     plain values. The animations are only given once it's there to be
+     watched: given from the start and held paused, twenty-five of them, on
+     a colour, had the browser paint the page's whole display list again on
+     every frame of anything else that moved, the lean of a phone or the
+     writing of the photo included, for as long as nobody had scrolled this
+     far. */
+  .motion .code:not(.in-view) .dots i { background-color: transparent; scale: none; }
+  .motion .code-decoy.in-view .dots i { animation: dot-type 1ms linear var(--key) both; }
+  .motion .code-wipe.in-view .dots i { animation: dot-type 1ms linear var(--key) both,
     dot-gone var(--dur-reveal) var(--ease) calc(var(--row) + 1.4s + var(--n) * .05s) both; }
-  .motion .code-wrong .dots i { animation: dot-try calc(1.35s - var(--n) * .11s) linear var(--key) both; }
-  .motion .code-wrong .dots { animation: dots-shake .45s var(--ease-state) calc(var(--row) + 1.2s) both; }
-  .motion .code:not(.in-view) :is(.dots, .dots i) { animation-play-state: paused; }
-  .motion .shots .rise { --d: calc(.25s + var(--i) * .1s); animation-duration: 1400ms; }
-  /* Under a finger the phones arrive where they are, fading up and growing a
-     touch, rather than rising into place: rising while the finger scrolls the
-     page the same way, they outran it, as if dragged up. Before the rule
-     below, so a crossfade arrival still has them simply there. */
-  @media (pointer: coarse) {
+  .motion .code-wrong.in-view .dots i { animation: dot-try calc(1.35s - var(--n) * .11s) linear var(--key) both; }
+  .motion .code-wrong.in-view .dots { animation: dots-shake var(--dur-move) var(--ease-state) calc(var(--row) + 1.2s) both; }
+  .motion .shots figure { --d: calc(.2s + var(--i) * .04s); }
+  .motion .shots .rise { animation-duration: 1300ms; }
+  .motion .shots figure + figure figcaption { animation: fade var(--dur-reveal) var(--ease-state) calc(var(--d) + .45s) both paused; }
+  .motion .shots .in-view + figcaption { animation-play-state: running; }
+  /* Browsers that can't measure the row (no container units) can't deal it:
+     there the phones fade up where they stand. Before the rule below, so a
+     crossfade arrival still has them simply there. */
+  @supports not (width: 1cqw) {
     .motion .shots .rise { animation-name: phone-settle; }
+    .motion .shots figure + figure figcaption { animation: none; }
   }
   /* Arriving through a page crossfade, the top of the page is simply there. */
-  .soft-arrival :is(.hero, .gallery) .rise { animation: none; }
+  .soft-arrival :is(.hero, .gallery) .rise, .soft-arrival .shots figure + figure figcaption { animation: none; }
 }
 /* On paper nothing waits to be scrolled to: what hasn't arrived yet would
    print as its first frame, blank or faded. */
 @media print {
-  .motion .rise { animation: none; }
+  .motion .rise, .motion .shots figure + figure figcaption { animation: none; }
   /* Paper is white and printers leave backgrounds out, so the graphite's
      light words would print as nearly nothing: on paper the site is dark
      ink on white, and the header and controls that only work on a screen
@@ -588,7 +684,9 @@ main:focus { outline: none; }
 .viewer-image { display: block; flex: none; max-width: none; transform-origin: top left; object-fit: contain;
   -webkit-mask: url(/shots/framed-18-pro-max/phone-mask.svg) center / 100% 100% no-repeat;
   mask: url(/shots/framed-18-pro-max/phone-mask.svg) center / 100% 100% no-repeat;
-  user-select: none; -webkit-user-select: none; touch-action: pan-y; }
+  user-select: none; -webkit-user-select: none; touch-action: none; }
+/* The screen that's leaving, as a copy, while the next takes its place. */
+.viewer-ghost { position: absolute; pointer-events: none; transform-origin: 50% 50%; }
 .viewer-navigation { position: absolute; inset: auto var(--space-5) max(20px, env(safe-area-inset-bottom));
   display: flex; justify-content: center; align-items: center; gap: var(--space-5); }
 .viewer-count { min-width: 48px; text-align: center; font-size: var(--size-small); color: #a5a6a8; font-variant-numeric: tabular-nums; direction: ltr; }
@@ -611,9 +709,13 @@ main:focus { outline: none; }
 .vg-screen { position: relative; height: 100%; overflow: hidden; border-radius: 15.8cqw; background: #0d1012; }
 .vg-island { position: absolute; top: 4.95cqw; left: 50%; width: 27.7cqw; height: 8.25cqw; translate: -50% 0;
   border-radius: 30cqw; background: #000; }
-/* The finished state: the photo written over, the ciphertext in its place. */
+/* The finished state: the photo written over, the ciphertext in its place.
+   The photo is seen through a pane over the ciphertext: hidden here, whole
+   while it waits, and slid down the screen as it's written
+   (privacy-vignette.js). */
+.vg-pane, .vg-hot { position: absolute; inset: 0; overflow: hidden; visibility: hidden; }
 .vg-photo { position: absolute; inset: 0; display: block; width: 100%; height: 100%; max-width: none;
-  object-fit: cover; object-position: 50% 0; clip-path: inset(100% 0 0 0); }
+  object-fit: cover; object-position: 50% 0; }
 .vg-cipher { position: absolute; inset: 0; margin: 0; padding: 24.75cqw 7.9cqw 0; overflow: hidden; word-break: break-all;
   font: 500 4.95cqw/1.62 var(--font); letter-spacing: .08em;
   color: rgb(205 216 228 / .4); user-select: none; -webkit-user-select: none; }
@@ -621,10 +723,19 @@ main:focus { outline: none; }
   .vg-cipher { color: transparent; background: linear-gradient(180deg, rgb(228 235 242 / .74), rgb(150 166 182 / .28) 75%);
     -webkit-background-clip: text; background-clip: text; }
 }
-/* The line that writes it: a hairline of light with a faint wake above. */
-.vg-scan { position: absolute; top: 0; left: -2%; right: -2%; height: 1.06cqw; margin-top: -.53cqw; opacity: 0; pointer-events: none;
+/* The rows just written: the same ciphertext again, bright, seen only
+   through a band that ends on the line and fades upward. */
+.vg-hot { -webkit-mask-image: linear-gradient(to top, #000, rgb(0 0 0 / .3) 7%, transparent 17%);
+  mask-image: linear-gradient(to top, #000, rgb(0 0 0 / .3) 7%, transparent 17%); }
+.vg-hot .vg-cipher { color: #f6f9ff; background: none; text-shadow: 0 0 3cqw rgb(150 185 255 / .7); }
+/* The line that writes it: a hairline of light with a faint wake above, and
+   under it the shadow it casts on the photo, so it shows against a bright
+   sky too. The line rides the top of a sheet the size of the screen, and
+   the sheet is what's moved. */
+.vg-scan { position: absolute; inset: 0; opacity: 0; pointer-events: none; }
+.vg-scan::after { content: ""; position: absolute; top: 0; left: -2%; right: -2%; height: 1.06cqw; margin-top: -.53cqw;
   background: linear-gradient(90deg, transparent, rgb(255 255 255 / .85) 18%, #fff 50%, rgb(255 255 255 / .85) 82%, transparent);
-  box-shadow: 0 0 5.3cqw 1cqw rgb(150 185 255 / .5); }
+  box-shadow: 0 0 5.3cqw 1cqw rgb(150 185 255 / .5), 0 5cqw 9cqw 2cqw rgb(0 0 0 / .4); }
 .vg-scan::before { content: ""; position: absolute; left: 0; right: 0; bottom: 100%; height: 29.7cqw;
   background: linear-gradient(to top, rgb(150 185 255 / .14), transparent); }
 .privacy-vignette figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
@@ -640,17 +751,18 @@ main:focus { outline: none; }
 }
 @media (prefers-reduced-motion: no-preference) {
   /* Waiting to play (privacy-vignette.js): the photo, untouched. */
-  .privacy-vignette[data-state="ready"] .vg-photo { clip-path: inset(0 0 0 0); }
-  .privacy-vignette[data-state="ready"] .vg-cipher { clip-path: inset(0 0 100% 0); }
-  /* Written by scrolling (the homepage): the script says how far down the
-     screen the line has come (--cut) and how bright it is (--scan). */
-  .privacy-vignette[data-state="scrub"] .vg-photo { clip-path: inset(var(--cut, 100%) 0 0 0); }
-  .privacy-vignette[data-state="scrub"] .vg-cipher { clip-path: inset(0 0 calc(100% - var(--cut, 100%)) 0); }
-  .privacy-vignette[data-state="scrub"] .vg-scan { top: var(--cut, 100%); opacity: var(--scan, 0); }
+  .privacy-vignette[data-state="ready"] .vg-pane { visibility: visible; }
+  /* Being written, by scrolling (the homepage) or by itself (the Security
+     page): the script moves the pane, the band and the line, and each is a
+     layer of its own while it does. */
+  .privacy-vignette:is([data-state="scrub"], [data-state="playing"]) :is(.vg-pane, .vg-hot) { visibility: visible; }
+  .privacy-vignette:is([data-state="scrub"], [data-state="playing"]) :is(.vg-pane, .vg-photo, .vg-hot, .vg-hot .vg-cipher, .vg-scan) {
+    will-change: transform; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .shot-open, .shot-open.tilting { transition: opacity .2s, filter .2s; }
-  :is(.appstore, .head-get, .film-button, .lang summary, .shot-viewer button):active { scale: none; }
+  .shot-open { transition-duration: var(--dur-state); }
+  :is(.appstore, .head-get, .film-button, .lang summary, .shot-viewer button):active, .appstore:hover { scale: none; }
+  .skip { transition: none; }
 }
 
 /* A matte graphite surface. A broad, static tonal shift gives the canvas
@@ -725,7 +837,7 @@ main:focus { outline: none; }
 .plan input:focus-visible + label { outline: 2px solid var(--blue); outline-offset: 3px; }
 .plan .knob { position: absolute; inset-block: 5px; inset-inline-start: 5px; width: calc(50% - 5px); border-radius: var(--radius-round);
   background: linear-gradient(#fafafa, #dcdcde); box-shadow: 0 6px 16px -4px rgb(0 0 0 / .7), inset 0 -1px 0 rgb(0 0 0 / .15);
-  transition: translate var(--dur-reveal) var(--ease); }
+  transition: translate var(--dur-move) var(--ease-spring); }
 #plan-pro:checked ~ .knob { translate: 100% 0; }
 [dir="rtl"] #plan-pro:checked ~ .knob { translate: -100% 0; }
 .plan-hint { margin-top: var(--space-3); font-size: var(--size-small); line-height: 1.4; color: var(--faint); }
@@ -958,16 +1070,20 @@ main:focus { outline: none; }
    and the language's name, plain words like the links beside it, with a
    chevron that turns over while it's open; the menu is a frosted panel that
    rises into place, seventeen languages in two columns, the current one
-   ticked. It opens slowly: the panel grows out of the button's corner over
-   half a second, easing to a stop, and the languages fade in just behind it. */
+   ticked. It opens out of the button's corner, quick to start and easing to
+   a stop, the languages fading in just behind it; and it leaves the way it
+   came, in half the time (the footer's script holds it open that long: a
+   closed <details> has nothing left to animate, so it used to vanish). */
 .lang { position: relative; }
 .lang summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;
   min-height: 30px; padding-block: 4px; border-radius: var(--radius-round); color: var(--muted); }
 .lang summary::-webkit-details-marker { display: none; }
 .lang summary:hover, .lang[open] summary { color: var(--ink); }
 .lang summary svg { width: 13px; height: 13px; flex: none; }
-.lang summary .chevron { width: 10px; height: 10px; transition: transform .45s cubic-bezier(.22, 1, .36, 1); }
+.lang summary .chevron { width: 10px; height: 10px; transition: transform var(--dur-move) var(--ease); }
 .lang[open] summary .chevron { transform: rotate(180deg); }
+.lang.closing summary .chevron { transform: none; }
+.lang.closing summary { color: var(--muted); }
 .lang-menu { position: absolute; inset-inline-end: 0; bottom: calc(100% + 14px); z-index: 20; width: 360px; padding: 8px;
   background: var(--bg); background: color-mix(in srgb, var(--bg) 92%, transparent);
   -webkit-backdrop-filter: blur(24px) saturate(1.6); backdrop-filter: blur(24px) saturate(1.6);
@@ -978,14 +1094,18 @@ main:focus { outline: none; }
    styling it, so the animations ran on the first open alone. Taking it out of
    the page while closed resets them, so they play on every open. */
 .lang:not([open])::details-content { display: none; }
-.lang[open] .lang-menu { animation: menu-in .5s cubic-bezier(.22, 1, .36, 1); }
+.lang[open] .lang-menu { animation: menu-in var(--dur-move) var(--ease); }
 @keyframes menu-in { from { opacity: 0; transform: translateY(10px) scale(.96); } }
-.lang[open] :is(.lang-head, .lang-list) { animation: menu-content-in .45s .08s cubic-bezier(.22, 1, .36, 1) both; }
+.lang[open] :is(.lang-head, .lang-list) { animation: menu-content-in var(--dur-move) 60ms var(--ease) both; }
 @keyframes menu-content-in { from { opacity: 0; transform: translateY(4px); } }
+/* Leaving: a short way back toward the button, fading. After the rules
+   above, and for the header's menu too, whichever way that one opened. */
+.lang.closing .lang-menu, .site-head .lang.closing .lang-menu { animation: menu-out var(--dur-state) var(--ease-state) forwards; }
+@keyframes menu-out { to { opacity: 0; transform: scale(.97); } }
 .lang-head { padding: 4px 10px 8px; font-size: 12px; font-weight: 600; color: var(--muted); }
 .lang-list { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
 .lang-list a { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 10px;
-  border-radius: 10px; color: var(--ink); transition: background-color .12s; }
+  border-radius: 10px; color: var(--ink); transition: background-color var(--dur-press) var(--ease-state); }
 .lang-list a:hover { background: var(--rule); background: color-mix(in srgb, var(--ink) 8%, transparent); text-decoration: none; }
 .lang-list a.active { font-weight: 600; background: var(--rule); background: color-mix(in srgb, var(--blue) 14%, transparent); }
 .lang-list a svg { width: 14px; height: 14px; flex: none; color: var(--blue); }
@@ -996,9 +1116,14 @@ main:focus { outline: none; }
   .lang-menu { position: fixed; inset: auto 12px 12px; width: auto; max-height: 75vh; overflow-y: auto; }
   .lang-menu, [dir="rtl"] .lang-menu { transform-origin: bottom; }
   .lang[open]::before { content: ""; position: fixed; inset: 0; z-index: 19; background: rgb(0 0 0 / .32);
-    animation: dim-in .5s ease-out; }
+    animation: dim-in var(--dur-move) var(--ease-state); }
+  .lang.closing::before { animation: dim-out var(--dur-state) var(--ease-state) forwards; }
+  /* The sheet goes back down the way it came up. */
+  .lang.closing .lang-menu, .site-head .lang.closing .lang-menu { animation-name: sheet-out; }
 }
 @keyframes dim-in { from { opacity: 0; } }
+@keyframes dim-out { to { opacity: 0; } }
+@keyframes sheet-out { to { opacity: 0; transform: translateY(10px) scale(.97); } }
 @media (prefers-reduced-motion: reduce) {
   .lang[open] :is(.lang-menu, .lang-head, .lang-list), .lang[open]::before { animation: none; }
   .lang summary .chevron { transition: none; }
@@ -1033,7 +1158,8 @@ main:focus { outline: none; }
   .gallery { margin-top: var(--space-8); }
   /* The room at the bottom is for the row's scrollbar: Safari takes its height
      out of the row rather than adding it, which cut off the captions. */
-  .shots.wrap { display: flex; width: auto; margin-inline: 0; justify-content: flex-start; gap: var(--space-4);
+  .shots.wrap { --step: calc(min(56vw, 300px) + var(--space-4));
+    display: flex; width: auto; margin-inline: 0; justify-content: flex-start; gap: var(--space-4);
     padding: var(--space-2) var(--side) var(--space-5); overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: var(--side);
     scrollbar-width: thin; scrollbar-color: rgb(255 255 255 / .18) transparent; }
   .shots figure { flex: none; width: min(56vw, 300px); max-width: none; scroll-snap-align: center; }
@@ -1065,6 +1191,7 @@ main:focus { outline: none; }
   .wordmark { font-size: min(29vw, 140px); font-size: min(29.5cqi, 140px); }
   .tagline { font-size: clamp(26px, 7.4vw, 34px); }
   .buy-get { flex-direction: column; align-items: flex-start; gap: var(--space-4); }
+  .shots.wrap { --step: calc(min(64vw, 280px) + var(--space-4)); }
   .shots figure { width: min(64vw, 280px); }
   .display { font-size: clamp(36px, 10.4vw, 56px); }
   /* One above the other: the phone, the facts under it. */
