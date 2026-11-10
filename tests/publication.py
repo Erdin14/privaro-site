@@ -150,8 +150,37 @@ for location in locations + re.findall(r'<xhtml:link rel="alternate" hreflang="[
 css = (dist / "styles.css").read_text(encoding="utf-8")
 assert "/*" not in css and css.count("{") == css.count("}")
 assert css.count("{") == build.strip_css((ROOT / "styles.css").read_text(encoding="utf-8")).count("{")
-for name in ("presentation.js", "film.js", "privacy-vignette.js", "price.js"):
+for name in ("presentation.js", "film.js", "privacy-vignette.js", "price.js", "encryption-demo.js"):
     assert not re.search(r"^\s*//", (dist / name).read_text(encoding="utf-8"), re.M), name
+
+# The working demo ("Inside the encryption") tells its reader that nothing is
+# sent or kept, that the site's policy lets no script call out, that it is a
+# simplified demo, and how the photo is cut up. Each is checked here, so the
+# page can't go on saying it after a change has made it untrue.
+demo = (dist / "encryption-demo.js").read_text(encoding="utf-8")
+for api in ("fetch(", "XMLHttpRequest", "WebSocket", "EventSource", "sendBeacon", "RTCPeerConnection",
+            "localStorage", "sessionStorage", "indexedDB", "document.cookie", "caches.", "postMessage",
+            "serviceWorker", "import(", "new Image", ".src =", "location.", "window.open", "createObjectURL",
+            "toDataURL", "toBlob", "http"):
+    assert api not in demo, f"encryption-demo.js must not send or keep anything: {api}"
+assert "default-src 'none'" in policy and "connect-src" not in policy, "the demo says scripts here can't call out"
+home = (dist / "index.html").read_text(encoding="utf-8")
+assert 'id="inside"' in home and "/encryption-demo.js?v=" in home
+# Its words are English only, so only the English homepage has it.
+for code, folder, _, _ in build.LANGS:
+    if folder:
+        assert "lab-stage" not in (dist / folder / "index.html").read_text(encoding="utf-8"), code
+words = {key: values["en"] for key, values in build.load_strings().items() if key.startswith("in_")}
+assert "simplified" in words["in_lead"] and "simplified" in words["in_note_lead"]
+# The numbers in its words are the ones the script and the stylesheet use.
+width, height = map(int, re.search(r'class="lab-plain" width="(\d+)" height="(\d+)"', home).groups())
+pieces = int(re.search(r"PIECES = (\d+)", demo)[1])
+assert height % pieces == 0
+rows = height // pieces
+assert f"{pieces} pieces of {rows * width * 3:,} bytes: {rows} rows" in words["in_tech_pieces_d"]
+assert f"into {pieces} small" in words["in_note_2"] and f"all {pieces} pieces" in words["in_tech_time_d"]
+assert f"All {pieces} tags verified, all {pieces} pieces" in words["in_tech_last_ok"]
+assert f"100% / {pieces}" in css
 
 # In the header the other pages are listed once for each layout, in the
 # order that layout shows them: before the name on wide screens, after the

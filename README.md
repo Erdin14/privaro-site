@@ -60,6 +60,38 @@ Apps keep a link's preview for days, so one shared before a change may show
 the old picture for a while. The new address (`og.jpg?v=…`) is what a fresh
 share fetches.
 
+## The working demo: "Inside the encryption"
+
+The English homepage has a section, after the security one, where the
+visitor's own browser encrypts a photo: AES-256-GCM through the Web Crypto
+API, with a key for the file derived by HKDF-SHA256 from a random 256-bit
+vault key, in twelve pieces, each under its own random nonce and each
+authenticating the file's header and its own position. What appears in the
+photo's place is the ciphertext itself, drawn as pixels. A wrong key and a
+changed bit are really tried, and really fail. It can run on a photo the
+visitor picks, which never leaves the tab.
+
+- `templates/partials/inside.html` is the markup, `encryption-demo.js` the
+  script, `i18n/strings-inside.json` every word of it, and the "Inside" part
+  of `styles.css` how it looks. The notes at the top of each say how it
+  works and why.
+- It is a small model of what the Security overview describes, not the
+  app's code or its file format, and the section says so twice: in its
+  opening paragraph, and under "A simplified demo", where "What's simplified"
+  lists each difference. Keep that true when the demo or the app changes.
+- It makes claims, and `tests/publication.py` holds it to them: the script
+  uses nothing that could send or keep data; the Content Security Policy
+  still has no `connect-src`; the piece counts and sizes in the words are
+  the ones the script and stylesheet use; and only the English homepage has
+  it.
+- English only for now. Its words make security claims, so they should be
+  translated by someone who can check them, not in bulk. To bring it to
+  the other languages: give every `in_*` string all seventeen (the test
+  accepts a string in English alone or in every language, nothing between),
+  and let `inside_block()` in `build.py` return the partial for them.
+- It needs a secure context (HTTPS, or `localhost`) for Web Crypto. Without
+  it, or without JavaScript, the section is the photo and the five steps.
+
 ## What is published, and what stays in the source
 
 The templates, `styles.css` and the scripts are written with long notes.

@@ -1,0 +1,269 @@
+{
+  "in_title": {
+    "en": "Inside the encryption."
+  },
+  "in_sub": {
+    "en": "Try it yourself, right here."
+  },
+  "in_lead": {
+    "en": "The phone above is a drawing. This one works: your browser encrypts the photo below with AES-256-GCM, the cipher Privaro uses, and nothing leaves this page. It’s a simplified demo of the principle, not the app’s whole storage system."
+  },
+  "in_alt_photo": {
+    "en": "Sample photo: a snow-capped mountain reflected in a lake."
+  },
+  "in_alt_own": {
+    "en": "The photo you chose."
+  },
+  "in_alt_cipher": {
+    "en": "The same photo, encrypted: it shows as random coloured noise."
+  },
+  "in_file_plain": {
+    "en": "The photo"
+  },
+  "in_file_vault": {
+    "en": "In the vault"
+  },
+  "in_key_label": {
+    "en": "The key"
+  },
+  "in_key_none": {
+    "en": "Not made yet."
+  },
+  "in_key_shown": {
+    "en": "256 random bits, made in this tab."
+  },
+  "in_key_away": {
+    "en": "Put away. On your iPhone it’s in the Keychain."
+  },
+  "in_key_wrong": {
+    "en": "A different key."
+  },
+  "in_go_encrypt": {
+    "en": "Encrypt this photo"
+  },
+  "in_go_unlock": {
+    "en": "Unlock"
+  },
+  "in_go_again": {
+    "en": "Encrypt again"
+  },
+  "in_alt_wrong": {
+    "en": "Try a wrong key"
+  },
+  "in_alt_flip": {
+    "en": "Change one bit"
+  },
+  "in_alt_undo": {
+    "en": "Undo the change"
+  },
+  "in_alt_pick": {
+    "en": "Use your own photo"
+  },
+  "in_alt_sample": {
+    "en": "Back to the sample"
+  },
+  "in_msg_idle": {
+    "en": "Readable. Any app that can reach this file can show it."
+  },
+  "in_msg_own": {
+    "en": "Your photo, readable. It stays in this tab: it isn’t uploaded or saved."
+  },
+  "in_msg_keying": {
+    "en": "Making a key: 256 random bits."
+  },
+  "in_msg_sealing": {
+    "en": "Encrypting, piece by piece."
+  },
+  "in_msg_locked": {
+    "en": "Encrypted in {time}. This is all that’s stored now. Without the key, it’s only noise."
+  },
+  "in_msg_denied": {
+    "en": "A different key doesn’t open it. Nothing comes back, not even part of the photo."
+  },
+  "in_msg_tampered": {
+    "en": "One bit of the encrypted file is changed, where the ring is. Now try to unlock it."
+  },
+  "in_msg_broken": {
+    "en": "Piece {n} no longer matches its seal, so nothing is opened. You never get a quietly damaged photo."
+  },
+  "in_msg_mended": {
+    "en": "The bit is back as it was. The file is exactly as it was encrypted."
+  },
+  "in_msg_opening": {
+    "en": "Unlocking with the key."
+  },
+  "in_msg_open": {
+    "en": "Unlocked. It matches the original, bit for bit."
+  },
+  "in_msg_unsupported": {
+    "en": "This browser doesn’t offer Web Crypto on this page, so the live demo can’t run here."
+  },
+  "in_msg_blocked": {
+    "en": "Your browser hides picture data from web pages, a privacy protection, so the demo can’t read the photo. If it asks, allow this page to use canvas data and try again."
+  },
+  "in_msg_badfile": {
+    "en": "That file couldn’t be opened as a picture here. A JPEG or PNG will work."
+  },
+  "in_time_ms": {
+    "en": "{ms} ms"
+  },
+  "in_time_fast": {
+    "en": "under 1 ms"
+  },
+  "in_piece_n": {
+    "en": "Piece {n}"
+  },
+  "in_view_legend": {
+    "en": "How to explain it"
+  },
+  "in_view_visual": {
+    "en": "Visual explanation"
+  },
+  "in_view_tech": {
+    "en": "Technical view"
+  },
+  "in_step1_t": {
+    "en": "A photo anyone can read"
+  },
+  "in_step1_d": {
+    "en": "It starts as an ordinary picture. Any app that gets to the file can show it."
+  },
+  "in_step2_t": {
+    "en": "A key, made on the device"
+  },
+  "in_step2_d": {
+    "en": "256 random bits. Privaro makes its key once, on your iPhone, and the key stays on it."
+  },
+  "in_step3_t": {
+    "en": "Encrypted, piece by piece"
+  },
+  "in_step3_d": {
+    "en": "Each piece of the photo is locked with the key, using AES-256. What comes out looks like random noise."
+  },
+  "in_step4_t": {
+    "en": "Stored in the vault"
+  },
+  "in_step4_d": {
+    "en": "Only the encrypted file is kept. The key is kept apart from it, in the iPhone’s Keychain, and Privaro uses it only after Face ID or your passcode."
+  },
+  "in_step5_t": {
+    "en": "Opened again, exactly"
+  },
+  "in_step5_d": {
+    "en": "With the right key every piece is checked, then unlocked. A wrong key or a changed file opens nothing."
+  },
+  "in_tech_where_t": {
+    "en": "Where it runs"
+  },
+  "in_tech_where_d": {
+    "en": "In this tab, with your browser’s Web Crypto API. No request is made: watch your browser’s network inspector, or go offline and run it again. This site’s Content Security Policy has no <code>connect-src</code>, so the browser refuses any fetch, XHR or WebSocket call from its scripts."
+  },
+  "in_tech_vault_t": {
+    "en": "Vault key"
+  },
+  "in_tech_vault_d": {
+    "en": "256 bits from <code>crypto.getRandomValues()</code>. Shown only because it’s a throwaway: a real key is never displayed."
+  },
+  "in_tech_id_t": {
+    "en": "File ID"
+  },
+  "in_tech_id_d": {
+    "en": "128 random bits, new for every file."
+  },
+  "in_tech_key_t": {
+    "en": "File key"
+  },
+  "in_tech_key_d": {
+    "en": "HKDF-SHA256 of the vault key and the file ID, held as an AES-256-GCM key this page can use but not read back."
+  },
+  "in_tech_pieces_t": {
+    "en": "Pieces"
+  },
+  "in_tech_pieces_d": {
+    "en": "12 pieces of 48,600 bytes: 45 rows of pixels each. Every piece is sealed with AES-256-GCM under a fresh random 96-bit nonce. Its 128-bit tag also covers the file’s header and the piece’s position, so a piece can’t be changed, dropped or moved unnoticed."
+  },
+  "in_tech_col_piece": {
+    "en": "Piece"
+  },
+  "in_tech_col_nonce": {
+    "en": "Nonce"
+  },
+  "in_tech_col_tag": {
+    "en": "Tag"
+  },
+  "in_tech_stored_t": {
+    "en": "What’s stored"
+  },
+  "in_tech_stored_d": {
+    "en": "A 32-byte header, then each piece’s nonce, ciphertext and tag. The ciphertext is exactly as long as the pixels it came from, and every pixel of the noise is three of its bytes, drawn as red, green and blue. Once it’s encrypted, the page wipes its own copy of the pixels: the photo you get back comes out of the ciphertext."
+  },
+  "in_tech_stored_none": {
+    "en": "Nothing yet."
+  },
+  "in_tech_stored_v": {
+    "en": "{pixels} bytes of pixels in, {stored} bytes stored."
+  },
+  "in_tech_time_t": {
+    "en": "Time"
+  },
+  "in_tech_time_d": {
+    "en": "To derive the file key and encrypt all 12 pieces, on this device. The animation is slowed down so you can watch."
+  },
+  "in_tech_check_t": {
+    "en": "Check"
+  },
+  "in_tech_check_d": {
+    "en": "SHA-256 of the pixels before encrypting, compared with what comes out when it’s unlocked."
+  },
+  "in_tech_check_wait": {
+    "en": "Compared when you unlock."
+  },
+  "in_tech_check_ok": {
+    "en": "Identical."
+  },
+  "in_tech_last_t": {
+    "en": "Last attempt"
+  },
+  "in_tech_last_none": {
+    "en": "None yet."
+  },
+  "in_tech_last_ok": {
+    "en": "All 12 tags verified, all 12 pieces decrypted."
+  },
+  "in_tech_last_wrong": {
+    "en": "Wrong key: piece 1 failed AES-GCM authentication. Nothing was decrypted."
+  },
+  "in_tech_last_bad": {
+    "en": "Piece {n} failed AES-GCM authentication after one bit was changed. Nothing was shown."
+  },
+  "in_note_lead": {
+    "en": "<strong>A simplified demo.</strong> It runs entirely in your browser, on a sample photo or one of your own, to show the principle. It is not a copy of Privaro’s storage system."
+  },
+  "in_note_summary": {
+    "en": "What’s simplified"
+  },
+  "in_note_1": {
+    "en": "<strong>Same cipher, different engine.</strong> The app uses Apple’s CryptoKit; this page uses your browser’s Web Crypto. Both do AES-256-GCM, with a key for each file derived by HKDF-SHA256."
+  },
+  "in_note_2": {
+    "en": "<strong>Smaller pieces.</strong> The app encrypts a file in pieces of 1 MB. Here the photo is cut into 12 small ones, so you can watch them."
+  },
+  "in_note_3": {
+    "en": "<strong>Pixels, not a file.</strong> The demo encrypts the picture’s pixels, so the result can be drawn where the photo was. The app encrypts the photo or video file itself, and its thumbnail, name and caption separately."
+  },
+  "in_note_4": {
+    "en": "<strong>The key isn’t protected here.</strong> It sits in this page’s memory, is shown on screen, and is gone when you leave. In the app it’s kept in the iOS Keychain and never shown."
+  },
+  "in_note_5": {
+    "en": "<strong>Unlock is only a button.</strong> In the app it’s Face ID, Touch ID or your Privaro passcode."
+  },
+  "in_note_6": {
+    "en": "<strong>Its own file layout.</strong> A file made here can’t be opened by Privaro, or the other way round."
+  },
+  "in_note_more": {
+    "en": "How the app does it, and what it can’t protect against"
+  },
+  "in_noscript": {
+    "en": "The live demo needs JavaScript. The five steps beside it are what it shows."
+  }
+}

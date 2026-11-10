@@ -8,7 +8,9 @@ committed for the existing Vercel setup. Each build also packages only the
 intended public files into dist/, the Cloudflare Pages build output directory.
 
 Shared pieces live in templates/partials/ and are pulled in with {{HEADER}},
-{{FOOTER}} and the like. The build also writes 404.html, sitemap.xml and
+{{FOOTER}} and the like. Two of the homepage's sections are in English only
+and so on the English homepage only: the film ({{FILM}}) and the working
+encryption demo ({{INSIDE}}). The build also writes 404.html, sitemap.xml and
 robots.txt, and the security headers for both hosts: _headers for Cloudflare
 Pages (privaroapp.nl) and the "headers" in vercel.json, from SECURITY_HEADERS
 below. Pages in ENGLISH_ONLY (the security overview) are written in English
@@ -217,7 +219,8 @@ def price_tokens(pricing, code):
 def load_strings():
     strings = {}
     for fname in ("i18n/strings.json", "i18n/strings-pro.json", "i18n/strings-faq.json",
-                  "i18n/strings-privacy.json", "i18n/strings-terms.json", "i18n/strings-security.json"):
+                  "i18n/strings-privacy.json", "i18n/strings-terms.json", "i18n/strings-security.json",
+                  "i18n/strings-inside.json"):
         with open(os.path.join(ROOT, fname), encoding="utf-8") as f:
             strings.update(json.load(f))
     return strings
@@ -461,11 +464,26 @@ def film_block(code):
         return "\n" + f.read().rstrip("\n").replace("{{FILM_VERSION}}", film_version()) + "\n"
 
 
+def inside_block(code):
+    """The homepage's working encryption demo ("Inside the encryption"). Its
+    words (i18n/strings-inside.json) are written in English only so far, and
+    they make claims about security that shouldn't reach a reader through a
+    translation nobody has checked, so only the English homepage has it;
+    every other language's page goes without, as with the film. To bring it
+    to a language, give every in_* string that language and return the
+    partial for it here."""
+    if code != "en":
+        return ""
+    with open(os.path.join(ROOT, "templates", "partials", "inside.html"), encoding="utf-8") as f:
+        return "\n" + f.read().rstrip("\n") + "\n"
+
+
 def render(html, page, code, htmllang, head, strings, pricing, here=None):
     """Fill in a template for one language. `page` decides where the language
     links go; `here` is the page's own address, whose links in the header and
     footer are marked as the current page."""
     html = html.replace("{{FILM}}", film_block(code))
+    html = html.replace("{{INSIDE}}", inside_block(code))
     html = html.replace("{{LANG}}", htmllang)
     html = html.replace("{{DIR}}", "rtl" if code in RTL else "ltr")
     html = html.replace("{{SHOTS}}", SHOTS + (FOLDER[code] + "/" if FOLDER[code] else ""))
@@ -617,7 +635,7 @@ def package_public_site():
     files = public_pages() + [
         "_headers", "_redirects", "robots.txt", "sitemap.xml",
         ".well-known/apple-app-site-association", ".well-known/security.txt",
-        "styles.css", "film.js", "presentation.js", "price.js", "privacy-vignette.js",
+        "styles.css", "film.js", "presentation.js", "price.js", "privacy-vignette.js", "encryption-demo.js",
         "appstore-badge.svg", "appstore-badge-white.svg", "qr-appstore.svg", "logo.png", "favicon.png", "og.jpg",
     ]
     # Only media belongs in these asset trees; hidden/build/config files do not.
