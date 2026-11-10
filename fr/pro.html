@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Fonctions Pro · Privaro</title>
-<meta name="description" content="Précisément ce que fait chaque fonction Privaro Pro : stockage illimité, coffre-fort leurre, effacement sous contrainte, protection contre les captures, sauvegarde chiffrée et plus encore." />
+<meta name="description" content="Précisément ce que fait chaque fonction Privaro Pro : stockage illimité, coffre-fort leurre, effacement sous contrainte, protection contre les captures, sauvegarde chiffrée et plus encore." />
 <meta name="apple-itunes-app" content="app-id=6783131829" />
 <meta name="color-scheme" content="dark" />
 <link rel="canonical" href="https://privaroapp.nl/fr/pro" />
@@ -29,39 +29,37 @@
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Privaro" />
 <meta property="og:title" content="Fonctions Pro · Privaro" />
-<meta property="og:description" content="Précisément ce que fait chaque fonction Privaro Pro : stockage illimité, coffre-fort leurre, effacement sous contrainte, protection contre les captures, sauvegarde chiffrée et plus encore." />
+<meta property="og:description" content="Précisément ce que fait chaque fonction Privaro Pro : stockage illimité, coffre-fort leurre, effacement sous contrainte, protection contre les captures, sauvegarde chiffrée et plus encore." />
 <meta property="og:url" content="https://privaroapp.nl/fr/pro" />
 <meta property="og:image" content="https://privaroapp.nl/og.jpg?v=82627ffc6c" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Privaro. Your space. Your privacy. Available on the App Store. Three iPhones show the vault, Privacy Mode and the lock screen." />
 <meta property="og:locale" content="fr_FR" />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=925f1f6cf6" />
-<link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
+<link rel="stylesheet" href="/styles.css?v=9be721741f" />
 <script>
-// Register before first reveal, including restored history entries.
 (() => {
-  let transition;
-  window.addEventListener("pagereveal", event => {
-    transition = event.viewTransition;
-    if (!transition) {
-      document.documentElement.classList.remove("page-crossfade");
-      return;
-    }
-    const current = transition;
-    document.documentElement.classList.add("page-crossfade");
-    current.finished.catch(() => {}).finally(() => {
-      if (transition !== current) return;
-      transition = null;
-      document.documentElement.classList.remove("page-crossfade");
-    });
-  });
-  // Intent takes priority over decoration; never consume the user's event.
-  const interrupt = () => transition?.skipTransition();
-  window.addEventListener("pointerdown", interrupt, { capture: true, passive: true });
-  window.addEventListener("keydown", interrupt, { capture: true });
+let transition;
+window.addEventListener("pagereveal", event => {
+transition = event.viewTransition;
+if (!transition) {
+document.documentElement.classList.remove("page-crossfade");
+return;
+}
+const current = transition;
+document.documentElement.classList.add("page-crossfade");
+current.finished.catch(() => {}).finally(() => {
+if (transition !== current) return;
+transition = null;
+document.documentElement.classList.remove("page-crossfade");
+});
+});
+const interrupt = () => transition?.skipTransition();
+window.addEventListener("pointerdown", interrupt, { capture: true, passive: true });
+window.addEventListener("keydown", interrupt, { capture: true });
 })();
 </script>
 </head>
@@ -70,25 +68,26 @@
 <a class="skip" href="#main">Aller au contenu</a>
 <header class="site-head">
   <div class="head-bar">
-    <nav class="head-links" aria-label="Privaro">
+    <nav class="head-links head-links-wide" aria-label="Privaro">
       <a href="/fr/pro" aria-current="page">Fonctions Pro</a>
-      <a href="/security">Sécurité</a>
+      <a href="/fr/security">Sécurité</a>
       <a href="/fr/faq">Questions</a>
     </nav>
-    <a class="brand" href="/fr"><img src="/logo.png" width="28" height="28" alt="" />Privaro</a>
+    <a class="brand" href="/fr/"><img src="/logo.png" width="28" height="28" alt="" />Privaro</a>
     <div class="head-end">
       <details class="lang"><summary aria-label="Langue: Français"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>Français</span><svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg></summary><div class="lang-menu"><p class="lang-head">Langue</p><div class="lang-list"><a href="/pro" lang="en" hreflang="en"><span>English</span></a><a href="/es/pro" lang="es" hreflang="es"><span>Español</span></a><a href="/fr/pro" lang="fr" hreflang="fr" class="active" aria-current="true"><span>Français</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></a><a href="/de/pro" lang="de" hreflang="de"><span>Deutsch</span></a><a href="/it/pro" lang="it" hreflang="it"><span>Italiano</span></a><a href="/pt-br/pro" lang="pt-BR" hreflang="pt-BR"><span>Português</span></a><a href="/zh/pro" lang="zh-Hans" hreflang="zh-Hans"><span>简体中文</span></a><a href="/ko/pro" lang="ko" hreflang="ko"><span>한국어</span></a><a href="/nl/pro" lang="nl" hreflang="nl"><span>Nederlands</span></a><a href="/ja/pro" lang="ja" hreflang="ja"><span>日本語</span></a><a href="/zh-hant/pro" lang="zh-Hant" hreflang="zh-Hant"><span>繁體中文</span></a><a href="/ru/pro" lang="ru" hreflang="ru"><span>Русский</span></a><a href="/tr/pro" lang="tr" hreflang="tr"><span>Türkçe</span></a><a href="/id/pro" lang="id" hreflang="id"><span>Bahasa Indonesia</span></a><a href="/hi/pro" lang="hi" hreflang="hi"><span>हिन्दी</span></a><a href="/ar/pro" lang="ar" hreflang="ar"><span>العربية</span></a><a href="/ur/pro" lang="ur" hreflang="ur"><span>اردو</span></a></div></div></details>
       <a class="head-get" href="https://apps.apple.com/app/id6783131829" aria-label="Télécharger Privaro sur l’App Store">Télécharger</a>
     </div>
+    <nav class="head-links head-links-phone" aria-label="Privaro">
+      <a href="/fr/pro" aria-current="page">Fonctions Pro</a>
+      <a href="/fr/security">Sécurité</a>
+      <a href="/fr/faq">Questions</a>
+    </nav>
   </div>
 </header>
 
 <main id="main" class="page wrap pro">
 
-  <!-- What Pro is, and one switch: Free or Pro. It's two radio buttons drawn
-       as one control, so it needs no script, and the page answers to it
-       (styles.css): the limits under it change, and the features dim to
-       dashes on Free and checks on Pro. It starts on Pro. -->
   <section class="pro-hero" aria-labelledby="pro-title">
     <h1 id="pro-title">Tout ce que Pro débloque.</h1>
     <p class="intro">Pro est un achat unique de <span class="price" data-price="pro">9,99 €</span>. Il lève les limites de la version gratuite et ajoute tout ce qui suit, sur chaque appareil connecté à votre compte Apple. Rien ne se renouvelle et il n’y a rien à résilier.</p>
@@ -101,39 +100,35 @@
     <p class="plan-hint">Basculez pour comparer.</p>
   </section>
 
-  <!-- The three limits, as they are on the side the switch is on. -->
   <dl class="limits">
       <div><dt>Stockage</dt><dd class="limit swap"><span class="when-free">2,5 Go</span><span class="when-pro">Sans plafond</span></dd><dd class="limit-note swap"><span class="when-free">Au-delà, plus de place.</span><span class="when-pro">La seule limite est l’espace libre de votre iPhone.</span></dd></div>
       <div><dt>Albums</dt><dd class="limit swap"><span class="when-free">5</span><span class="when-pro">Illimités</span></dd><dd class="limit-note swap"><span class="when-free">Pas de dossiers dans des dossiers.</span><span class="when-pro">Et des dossiers dans des dossiers.</span></dd></div>
       <div><dt>Codes</dt><dd class="limit swap"><span class="when-free">1</span><span class="when-pro">3</span></dd><dd class="limit-note swap"><span class="when-free">Le vôtre.</span><span class="when-pro">Le vôtre, un leurre, et un qui efface tout.</span></dd></div>
   </dl>
 
-  <!-- The twelve features, one to a row. -->
   <section class="pro-list" aria-labelledby="pro-list-title">
     <h2 id="pro-list-title" class="swap"><span class="when-free">Absent de la version gratuite</span><span class="when-pro">Inclus dans Pro</span></h2>
     <ul>
-      <li class="mark-yes"><h3>Stockage illimité</h3><p>La version gratuite contient jusqu’à 2,5 Go. Pro n’a pas de plafond : la seule limite est l’espace libre de votre iPhone.</p></li>
+      <li class="mark-yes"><h3>Stockage illimité</h3><p>La version gratuite contient jusqu’à 2,5 Go. Pro n’a pas de plafond : la seule limite est l’espace libre de votre iPhone.</p></li>
       <li class="mark-yes"><h3>Albums et dossiers illimités</h3><p>La version gratuite inclut jusqu’à 5 albums. Avec Pro, vous en créez autant que vous voulez et pouvez ranger des dossiers dans d’autres dossiers.</p></li>
       <li class="mark-yes"><h3>Mots de passe par album</h3><p>Donnez à un album son propre mot de passe. Il reste verrouillé même quand le reste du coffre-fort est ouvert.</p></li>
       <li class="mark-yes"><h3>Verrouillage par lieu</h3><p>Autorisez le déverrouillage du coffre-fort uniquement dans des lieux de confiance, comme votre domicile. Ailleurs, il reste verrouillé même avec le bon code.</p></li>
-      <li class="mark-yes"><h3>Coffre-fort leurre</h3><p>Définissez un second code qui ouvre un coffre-fort distinct, rempli de photos anodines. Si l’on vous force un jour à déverrouiller Privaro, saisissez celui-là : votre vrai coffre-fort reste invisible.</p></li>
+      <li class="mark-yes"><h3>Coffre-fort leurre</h3><p>Définissez un second code qui ouvre un coffre-fort distinct, rempli de photos anodines. Si l’on vous force un jour à déverrouiller Privaro, saisissez celui-là : votre vrai coffre-fort reste invisible.</p></li>
       <li class="mark-yes"><h3>Effacement sous contrainte</h3><p>Définissez un code qui efface tout le coffre-fort, leurre compris, dès qu’il est saisi. C’est prévu pour le pire des cas, et c’est irréversible.</p></li>
-      <li class="mark-yes"><h3>Capture d'intrusion</h3><p>Si quelqu'un saisit un mauvais code, Privaro peut prendre discrètement une photo avec la caméra frontale et consigner la tentative avec un horodatage, pour que vous sachiez si quelqu'un a essayé d'accéder à votre coffre-fort.</p></li>
-      <li class="mark-yes"><h3>Protection contre les captures et l'enregistrement</h3><p>Empêche la capture de votre coffre-fort par captures d'écran, enregistrement d'écran ou AirPlay lorsque l'app est ouverte, afin que rien ne fuite par accident vers votre pellicule ou un écran miroir.</p></li>
-      <li class="mark-yes"><h3>Icône d'app déguisée</h3><p>Masquez Privaro derrière une icône et un nom du quotidien, comme Calculatrice ou Notes, pour qu'il ne se remarque pas sur votre écran d'accueil. Les variantes de couleur de l'icône sont gratuites ; les déguisements sont réservés à Pro.</p></li>
-      <li class="mark-yes"><h3>Sauvegarde iCloud chiffrée et export</h3><p>Sauvegardez votre coffre-fort sur votre propre iCloud, ou exportez-le sous la forme d'un seul fichier chiffré. Les deux sont chiffrés sur votre appareil avant de partir, donc personne (nous y compris) ne peut les lire. Restaurer une sauvegarde est toujours gratuit, même sans Pro.</p></li>
-      <li class="mark-yes"><h3>Transfert Wi-Fi</h3><p>Envoyez des fichiers dans le coffre-fort depuis le navigateur de n'importe quel ordinateur via votre réseau local. Sans câble, sans cloud et sans app supplémentaire à installer sur votre ordinateur.</p></li>
+      <li class="mark-yes"><h3>Capture d’intrusion</h3><p>Si quelqu’un saisit un mauvais code, Privaro peut prendre discrètement une photo avec la caméra frontale et consigner la tentative avec un horodatage, pour que vous sachiez si quelqu’un a essayé d’accéder à votre coffre-fort.</p></li>
+      <li class="mark-yes"><h3>Protection contre les captures et l’enregistrement</h3><p>Empêche la capture de votre coffre-fort par captures d’écran, enregistrement d’écran ou AirPlay lorsque l’app est ouverte, afin que rien ne fuite par accident vers votre pellicule ou un écran miroir.</p></li>
+      <li class="mark-yes"><h3>Icône d’app déguisée</h3><p>Masquez Privaro derrière une icône et un nom du quotidien, comme Calculatrice ou Notes, pour qu’il ne se remarque pas sur votre écran d’accueil. Les variantes de couleur de l’icône sont gratuites ; les déguisements sont réservés à Pro.</p></li>
+      <li class="mark-yes"><h3>Sauvegarde iCloud chiffrée et export</h3><p>Sauvegardez votre coffre-fort sur votre propre iCloud, ou exportez-le sous la forme d’un seul fichier chiffré. Les deux sont chiffrés sur votre appareil avant de partir, donc personne (nous y compris) ne peut les lire. Restaurer une sauvegarde est toujours gratuit, même sans Pro.</p></li>
+      <li class="mark-yes"><h3>Transfert Wi-Fi</h3><p>Envoyez des fichiers dans le coffre-fort depuis le navigateur de n’importe quel ordinateur via votre réseau local. Sans câble, sans cloud et sans app supplémentaire à installer sur votre ordinateur.</p></li>
       <li class="mark-yes"><h3>Partage sécurisé</h3><p>Envoyez des photos ou des vidéos à un autre utilisateur de Privaro sous forme de fichier chiffré, qui ne s’ouvre qu’avec la phrase secrète de votre choix. Rien ne passe par nous.</p></li>
     </ul>
   </section>
 
-  <!-- What's the same either way. -->
   <section class="basics">
-    <h2>Gratuit ou Pro, l'essentiel ne change pas :</h2>
+    <h2>Gratuit ou Pro, l’essentiel ne change pas :</h2>
     <ul><li>AES-256</li><li>Sans compte</li><li>Face ID ou code</li><li>Fonctionne hors ligne</li></ul>
   </section>
 
-  <!-- The price once more, set large, and where to pay it. -->
   <section class="pro-price">
     <div class="pro-figure"><p><span class="price" data-price="pro">9,99 €</span></p></div>
     <div class="pro-pay">
@@ -144,15 +139,13 @@
 
 </main>
 
-<!-- A row of plain links and the page's controls, like the header's, and
-     one quiet line under it. -->
 <footer class="site-foot wrap">
   <nav class="foot-links">
     <a href="/fr/pro" aria-current="page">Fonctions Pro</a>
     <a href="/fr/faq">Questions</a>
-    <a href="/security">Sécurité</a>
+    <a href="/fr/security">Sécurité</a>
     <a href="/fr/privacy">Politique de confidentialité</a>
-    <a href="/fr/terms">Conditions d'utilisation</a>
+    <a href="/fr/terms">Conditions d’utilisation</a>
     <a href="mailto:erdincdubu@icloud.com">Contact</a>
     <details class="lang"><summary aria-label="Langue: Français"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>Français</span><svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg></summary><div class="lang-menu"><p class="lang-head">Langue</p><div class="lang-list"><a href="/pro" lang="en" hreflang="en"><span>English</span></a><a href="/es/pro" lang="es" hreflang="es"><span>Español</span></a><a href="/fr/pro" lang="fr" hreflang="fr" class="active" aria-current="true"><span>Français</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></a><a href="/de/pro" lang="de" hreflang="de"><span>Deutsch</span></a><a href="/it/pro" lang="it" hreflang="it"><span>Italiano</span></a><a href="/pt-br/pro" lang="pt-BR" hreflang="pt-BR"><span>Português</span></a><a href="/zh/pro" lang="zh-Hans" hreflang="zh-Hans"><span>简体中文</span></a><a href="/ko/pro" lang="ko" hreflang="ko"><span>한국어</span></a><a href="/nl/pro" lang="nl" hreflang="nl"><span>Nederlands</span></a><a href="/ja/pro" lang="ja" hreflang="ja"><span>日本語</span></a><a href="/zh-hant/pro" lang="zh-Hant" hreflang="zh-Hant"><span>繁體中文</span></a><a href="/ru/pro" lang="ru" hreflang="ru"><span>Русский</span></a><a href="/tr/pro" lang="tr" hreflang="tr"><span>Türkçe</span></a><a href="/id/pro" lang="id" hreflang="id"><span>Bahasa Indonesia</span></a><a href="/hi/pro" lang="hi" hreflang="hi"><span>हिन्दी</span></a><a href="/ar/pro" lang="ar" hreflang="ar"><span>العربية</span></a><a href="/ur/pro" lang="ur" hreflang="ur"><span>اردو</span></a></div></div></details>
   </nav>
@@ -161,34 +154,27 @@
 
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
-// The language menus (one in the header, one in the footer) are <details>;
-// close an open one on a click elsewhere, on its own button, or on Escape.
-// On phones a click on the dimmed page lands on the <details> itself (its
-// ::before is the dimming), so that counts as elsewhere too. A menu leaves
-// as it came rather than vanishing: it's held open for the moment its way
-// out takes (.closing in styles.css), then closed. With Reduce Motion it
-// just closes.
 const langs = document.querySelectorAll('.lang');
 const still = matchMedia('(prefers-reduced-motion: reduce)');
 const shut = lang => {
-  if (!lang.open || lang.classList.contains('closing')) return;
-  if (still.matches) { lang.open = false; return; }
-  lang.classList.add('closing');
-  setTimeout(() => { lang.open = false; lang.classList.remove('closing'); }, 200);
+if (!lang.open || lang.classList.contains('closing')) return;
+if (still.matches) { lang.open = false; return; }
+lang.classList.add('closing');
+setTimeout(() => { lang.open = false; lang.classList.remove('closing'); }, 200);
 };
 document.addEventListener('click', e => langs.forEach(lang => {
-  if (!lang.open) return;
-  const summary = e.target.closest ? e.target.closest('summary') : null;
-  if (summary && lang.contains(summary)) { e.preventDefault(); shut(lang); }
-  else if (e.target === lang || !lang.contains(e.target)) shut(lang);
+if (!lang.open) return;
+const summary = e.target.closest ? e.target.closest('summary') : null;
+if (summary && lang.contains(summary)) { e.preventDefault(); shut(lang); }
+else if (e.target === lang || !lang.contains(e.target)) shut(lang);
 }));
 document.addEventListener('keydown', e => {
-  if (e.key !== 'Escape') return;
-  langs.forEach(lang => { if (lang.open) { shut(lang); lang.querySelector('summary').focus(); } });
+if (e.key !== 'Escape') return;
+langs.forEach(lang => { if (lang.open) { shut(lang); lang.querySelector('summary').focus(); } });
 });
 </script>
 
-<script src="/presentation.js?v=a1d449eb43" data-enlarge="Agrandir la capture : {name}" data-close="Fermer la visionneuse" data-previous="Capture précédente" data-next="Capture suivante" defer></script>
-<script src="/price.js?v=5174912724" defer></script>
+<script src="/presentation.js?v=5192425b53" data-enlarge="Agrandir la capture : {name}" data-close="Fermer la visionneuse" data-previous="Capture précédente" data-next="Capture suivante" defer></script>
+<script src="/price.js?v=75cbf9b3af" defer></script>
 </body>
 </html>

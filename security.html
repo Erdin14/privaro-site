@@ -4,46 +4,44 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Security Overview · Privaro</title>
-<meta name="description" content="How Privaro encrypts your photos, what leaves your device, and what it can't protect against." />
+<meta name="description" content="How Privaro encrypts your photos, what leaves your device, and what it can’t protect against." />
 <link rel="canonical" href="https://privaroapp.nl/security" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Privaro" />
 <meta property="og:title" content="Security Overview · Privaro" />
-<meta property="og:description" content="How Privaro encrypts your photos, what leaves your device, and what it can't protect against." />
+<meta property="og:description" content="How Privaro encrypts your photos, what leaves your device, and what it can’t protect against." />
 <meta property="og:url" content="https://privaroapp.nl/security" />
 <meta property="og:image" content="https://privaroapp.nl/og.jpg?v=82627ffc6c" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Privaro. Your space. Your privacy. Available on the App Store. Three iPhones show the vault, Privacy Mode and the lock screen." />
 <meta property="og:locale" content="en_US" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="color-scheme" content="dark" />
 <meta name="apple-itunes-app" content="app-id=6783131829" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=925f1f6cf6" />
-<link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
+<link rel="stylesheet" href="/styles.css?v=9be721741f" />
 <script>
-// Register before first reveal, including restored history entries.
 (() => {
-  let transition;
-  window.addEventListener("pagereveal", event => {
-    transition = event.viewTransition;
-    if (!transition) {
-      document.documentElement.classList.remove("page-crossfade");
-      return;
-    }
-    const current = transition;
-    document.documentElement.classList.add("page-crossfade");
-    current.finished.catch(() => {}).finally(() => {
-      if (transition !== current) return;
-      transition = null;
-      document.documentElement.classList.remove("page-crossfade");
-    });
-  });
-  // Intent takes priority over decoration; never consume the user's event.
-  const interrupt = () => transition?.skipTransition();
-  window.addEventListener("pointerdown", interrupt, { capture: true, passive: true });
-  window.addEventListener("keydown", interrupt, { capture: true });
+let transition;
+window.addEventListener("pagereveal", event => {
+transition = event.viewTransition;
+if (!transition) {
+document.documentElement.classList.remove("page-crossfade");
+return;
+}
+const current = transition;
+document.documentElement.classList.add("page-crossfade");
+current.finished.catch(() => {}).finally(() => {
+if (transition !== current) return;
+transition = null;
+document.documentElement.classList.remove("page-crossfade");
+});
+});
+const interrupt = () => transition?.skipTransition();
+window.addEventListener("pointerdown", interrupt, { capture: true, passive: true });
+window.addEventListener("keydown", interrupt, { capture: true });
 })();
 </script>
 </head>
@@ -52,16 +50,21 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-head">
   <div class="head-bar">
-    <nav class="head-links" aria-label="Privaro">
+    <nav class="head-links head-links-wide" aria-label="Privaro">
       <a href="/pro">Pro features</a>
       <a href="/security" aria-current="page">Security</a>
       <a href="/faq">Questions</a>
     </nav>
     <a class="brand" href="/"><img src="/logo.png" width="28" height="28" alt="" />Privaro</a>
     <div class="head-end">
-      <details class="lang"><summary aria-label="Language: English"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>English</span><svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg></summary><div class="lang-menu"><p class="lang-head">Language</p><div class="lang-list"><a href="/" lang="en" hreflang="en" class="active" aria-current="true"><span>English</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></a><a href="/es" lang="es" hreflang="es"><span>Español</span></a><a href="/fr" lang="fr" hreflang="fr"><span>Français</span></a><a href="/de" lang="de" hreflang="de"><span>Deutsch</span></a><a href="/it" lang="it" hreflang="it"><span>Italiano</span></a><a href="/pt-br" lang="pt-BR" hreflang="pt-BR"><span>Português</span></a><a href="/zh" lang="zh-Hans" hreflang="zh-Hans"><span>简体中文</span></a><a href="/ko" lang="ko" hreflang="ko"><span>한국어</span></a><a href="/nl" lang="nl" hreflang="nl"><span>Nederlands</span></a><a href="/ja" lang="ja" hreflang="ja"><span>日本語</span></a><a href="/zh-hant" lang="zh-Hant" hreflang="zh-Hant"><span>繁體中文</span></a><a href="/ru" lang="ru" hreflang="ru"><span>Русский</span></a><a href="/tr" lang="tr" hreflang="tr"><span>Türkçe</span></a><a href="/id" lang="id" hreflang="id"><span>Bahasa Indonesia</span></a><a href="/hi" lang="hi" hreflang="hi"><span>हिन्दी</span></a><a href="/ar" lang="ar" hreflang="ar"><span>العربية</span></a><a href="/ur" lang="ur" hreflang="ur"><span>اردو</span></a></div></div></details>
+      <details class="lang"><summary aria-label="Language: English"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>English</span><svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg></summary><div class="lang-menu"><p class="lang-head">Language</p><div class="lang-list"><a href="/security" lang="en" hreflang="en" class="active" aria-current="true"><span>English</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></a><a href="/es/security" lang="es" hreflang="es"><span>Español</span></a><a href="/fr/security" lang="fr" hreflang="fr"><span>Français</span></a><a href="/de/security" lang="de" hreflang="de"><span>Deutsch</span></a><a href="/it/security" lang="it" hreflang="it"><span>Italiano</span></a><a href="/pt-br/security" lang="pt-BR" hreflang="pt-BR"><span>Português</span></a><a href="/zh/security" lang="zh-Hans" hreflang="zh-Hans"><span>简体中文</span></a><a href="/ko/security" lang="ko" hreflang="ko"><span>한국어</span></a><a href="/nl/security" lang="nl" hreflang="nl"><span>Nederlands</span></a><a href="/ja/security" lang="ja" hreflang="ja"><span>日本語</span></a><a href="/zh-hant/security" lang="zh-Hant" hreflang="zh-Hant"><span>繁體中文</span></a><a href="/ru/security" lang="ru" hreflang="ru"><span>Русский</span></a><a href="/tr/security" lang="tr" hreflang="tr"><span>Türkçe</span></a><a href="/id/security" lang="id" hreflang="id"><span>Bahasa Indonesia</span></a><a href="/hi/security" lang="hi" hreflang="hi"><span>हिन्दी</span></a><a href="/ar/security" lang="ar" hreflang="ar"><span>العربية</span></a><a href="/ur/security" lang="ur" hreflang="ur"><span>اردو</span></a></div></div></details>
       <a class="head-get" href="https://apps.apple.com/app/id6783131829" aria-label="Download Privaro on the App Store">Download</a>
     </div>
+    <nav class="head-links head-links-phone" aria-label="Privaro">
+      <a href="/pro">Pro features</a>
+      <a href="/security" aria-current="page">Security</a>
+      <a href="/faq">Questions</a>
+    </nav>
   </div>
 </header>
 
@@ -76,17 +79,12 @@
   </div>
   <div class="sec-hero-art">
 <figure class="privacy-vignette">
-  <!-- A photo on the phone is written over, line by line, as ciphertext.
-       Illustrative only, never a live security check.
-       Without JavaScript, or with Reduce Motion, it shows the finished state:
-       the ciphertext, with the photo's pane (over it) left hidden. -->
   <div class="privacy-art" role="img" aria-labelledby="privacy-art-title" aria-describedby="privacy-art-desc">
     <span id="privacy-art-title" class="visually-hidden">On-device protection</span>
     <span id="privacy-art-desc" class="visually-hidden">A photo on an iPhone turns into encrypted data, illustrating on-device encryption. This is not a live security check.</span>
     <div class="vg-phone" aria-hidden="true">
       <div class="vg-screen">
         <p class="vg-cipher">45Na99UPIE/JOGMzTIdfGUsJBQn7ZDJnqRjY0ZtJiaVW3ZlmtFuRABIufL5w+IGEWTzn2A9Wnlqr3FrHKwMuoROQWW1lLez8aaMqpoMqjCUe2dBq/NFs3+2X2XdKRV5USrKaw2F/DmGnuQrn2QmnLjPKadln1qVXuJsJYjBmqzql9Hhp0e7ZhKHpXCywzar04F9se0LC96xNC+mUPW22wPkxHit6rbzADwDtgcmRHrIrfaOLiDZAla1FOXfhLjPUvGsSBu/PReuynAWz2w6Jg+ZJWMk7I39DDZw/Af7cqJUMLM6kRm+fkA42L2E3gq22OhZuQlbYrQejQjignU6QzrYP1ApaTPm+kKs38HsIjHQEr/ABUpEgXJ2WcypjcFEYwKWl3HqqyzIzFwJhnEH0SGEDhdDLyjCn/iMjbkTaDq2nZydi6wsClOpI95udr3L+yuS34ps9+W+M6f41TnD9Y6ltBRH93kbdRpvF6g0U/EqhfrqWFUULadPm20QVt4K81YKOiNuwCGeM2oxhGIDf5Y795mRAC2Wh1qKThDL4A8ZwRl56Qa4H+ll1LnWQoulCtQDNHyk0ALn3CHAonbxLWRuGltW0S3DbLCObMN5mI9R+z/mXToZUt1MN7aVyAZbw1u59370F94e0SFTxa5w2fIMTKCbOiKhTFkzV4mUzhh8ZaMOTVEsvQp1A1GYmKBnBzbFFMSHkNE6zdp1Agn8OQ2BfTbw6PJhM4FYtGjvI3mIkEJVcgakB9qsa5Pvanka69BC4k6oPrzOWT8QasUfy2aCBTEqbCfKlNwUjumOeOr9gqzqCzgohOAelrTr6F34k5HzYddMkjQmyZrwDB3XWm4hRChzt1kQc/4o6YcwaM7OkFzJ43cujssjsc8JdK6soKp5xKeZWMLr2K2K4g4MjjkOSs1VKJhWNw3ILruceHXZ8RlYlWGxHWUfnbgdcnvjlNrrpi8Gsr3uV8pX5JoTjuWKnN/OHxjgM1UC8qb+aHPigVSBh0D/GufaKITO20bh8lKrLQahzI8db2dFP2OmhyYlE4/cDT2so2Wu/7rHZ+ra6g1d6pTHoMGujYS1lSzezSZpsphFANvTJ</p>
-        <!-- "Snow-capped mountain reflected in a calm lake" by Timo Wielink, Unsplash License. -->
         <div class="vg-pane"><img class="vg-photo" src="/art/vignette-lake.jpg" width="600" height="900" alt="" loading="lazy" decoding="async" /></div>
         <span class="vg-scan"></span>
         <span class="vg-island"></span>
@@ -95,7 +93,7 @@
   </div>
   <figcaption><span>Encrypted on your iPhone.</span></figcaption>
 </figure>
-<script src="/privacy-vignette.js?v=7796fe20f2" defer></script>
+<script src="/privacy-vignette.js?v=2ce353044f" defer></script>
   </div>
 </header>
 
@@ -310,10 +308,20 @@
   </section>
 </div>
 
+<section class="get" aria-label="Download Privaro on the App Store">
+  <div class="buy">
+    <div class="buy-get">
+      <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="Download Privaro on the App Store">
+        <img src="/appstore-badge-white.svg" width="150" height="50" alt="Download Privaro on the App Store" loading="lazy" />
+      </a>
+      <p class="buy-note"><span>Free to download. Needs iOS 17.6 or later.</span></p>
+    </div>
+    <p class="handoff" aria-hidden="true"><img src="/qr-appstore.svg" width="72" height="72" alt="" loading="lazy" /><span>Scan with your iPhone</span></p>
+  </div>
+</section>
+
 </main>
 
-<!-- A row of plain links and the page's controls, like the header's, and
-     one quiet line under it. -->
 <footer class="site-foot wrap">
   <nav class="foot-links">
     <a href="/pro">Pro features</a>
@@ -322,40 +330,33 @@
     <a href="/privacy">Privacy Policy</a>
     <a href="/terms">Terms of Use</a>
     <a href="mailto:erdincdubu@icloud.com">Contact</a>
-    <details class="lang"><summary aria-label="Language: English"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>English</span><svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg></summary><div class="lang-menu"><p class="lang-head">Language</p><div class="lang-list"><a href="/" lang="en" hreflang="en" class="active" aria-current="true"><span>English</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></a><a href="/es" lang="es" hreflang="es"><span>Español</span></a><a href="/fr" lang="fr" hreflang="fr"><span>Français</span></a><a href="/de" lang="de" hreflang="de"><span>Deutsch</span></a><a href="/it" lang="it" hreflang="it"><span>Italiano</span></a><a href="/pt-br" lang="pt-BR" hreflang="pt-BR"><span>Português</span></a><a href="/zh" lang="zh-Hans" hreflang="zh-Hans"><span>简体中文</span></a><a href="/ko" lang="ko" hreflang="ko"><span>한국어</span></a><a href="/nl" lang="nl" hreflang="nl"><span>Nederlands</span></a><a href="/ja" lang="ja" hreflang="ja"><span>日本語</span></a><a href="/zh-hant" lang="zh-Hant" hreflang="zh-Hant"><span>繁體中文</span></a><a href="/ru" lang="ru" hreflang="ru"><span>Русский</span></a><a href="/tr" lang="tr" hreflang="tr"><span>Türkçe</span></a><a href="/id" lang="id" hreflang="id"><span>Bahasa Indonesia</span></a><a href="/hi" lang="hi" hreflang="hi"><span>हिन्दी</span></a><a href="/ar" lang="ar" hreflang="ar"><span>العربية</span></a><a href="/ur" lang="ur" hreflang="ur"><span>اردو</span></a></div></div></details>
+    <details class="lang"><summary aria-label="Language: English"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>English</span><svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg></summary><div class="lang-menu"><p class="lang-head">Language</p><div class="lang-list"><a href="/security" lang="en" hreflang="en" class="active" aria-current="true"><span>English</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></a><a href="/es/security" lang="es" hreflang="es"><span>Español</span></a><a href="/fr/security" lang="fr" hreflang="fr"><span>Français</span></a><a href="/de/security" lang="de" hreflang="de"><span>Deutsch</span></a><a href="/it/security" lang="it" hreflang="it"><span>Italiano</span></a><a href="/pt-br/security" lang="pt-BR" hreflang="pt-BR"><span>Português</span></a><a href="/zh/security" lang="zh-Hans" hreflang="zh-Hans"><span>简体中文</span></a><a href="/ko/security" lang="ko" hreflang="ko"><span>한국어</span></a><a href="/nl/security" lang="nl" hreflang="nl"><span>Nederlands</span></a><a href="/ja/security" lang="ja" hreflang="ja"><span>日本語</span></a><a href="/zh-hant/security" lang="zh-Hant" hreflang="zh-Hant"><span>繁體中文</span></a><a href="/ru/security" lang="ru" hreflang="ru"><span>Русский</span></a><a href="/tr/security" lang="tr" hreflang="tr"><span>Türkçe</span></a><a href="/id/security" lang="id" hreflang="id"><span>Bahasa Indonesia</span></a><a href="/hi/security" lang="hi" hreflang="hi"><span>हिन्दी</span></a><a href="/ar/security" lang="ar" hreflang="ar"><span>العربية</span></a><a href="/ur/security" lang="ur" hreflang="ur"><span>اردو</span></a></div></div></details>
   </nav>
   <p class="foot-note">© <span id="year">2026</span> Privaro. Made in the Netherlands. This site sets no cookies and has no trackers.</p>
 </footer>
 
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
-// The language menus (one in the header, one in the footer) are <details>;
-// close an open one on a click elsewhere, on its own button, or on Escape.
-// On phones a click on the dimmed page lands on the <details> itself (its
-// ::before is the dimming), so that counts as elsewhere too. A menu leaves
-// as it came rather than vanishing: it's held open for the moment its way
-// out takes (.closing in styles.css), then closed. With Reduce Motion it
-// just closes.
 const langs = document.querySelectorAll('.lang');
 const still = matchMedia('(prefers-reduced-motion: reduce)');
 const shut = lang => {
-  if (!lang.open || lang.classList.contains('closing')) return;
-  if (still.matches) { lang.open = false; return; }
-  lang.classList.add('closing');
-  setTimeout(() => { lang.open = false; lang.classList.remove('closing'); }, 200);
+if (!lang.open || lang.classList.contains('closing')) return;
+if (still.matches) { lang.open = false; return; }
+lang.classList.add('closing');
+setTimeout(() => { lang.open = false; lang.classList.remove('closing'); }, 200);
 };
 document.addEventListener('click', e => langs.forEach(lang => {
-  if (!lang.open) return;
-  const summary = e.target.closest ? e.target.closest('summary') : null;
-  if (summary && lang.contains(summary)) { e.preventDefault(); shut(lang); }
-  else if (e.target === lang || !lang.contains(e.target)) shut(lang);
+if (!lang.open) return;
+const summary = e.target.closest ? e.target.closest('summary') : null;
+if (summary && lang.contains(summary)) { e.preventDefault(); shut(lang); }
+else if (e.target === lang || !lang.contains(e.target)) shut(lang);
 }));
 document.addEventListener('keydown', e => {
-  if (e.key !== 'Escape') return;
-  langs.forEach(lang => { if (lang.open) { shut(lang); lang.querySelector('summary').focus(); } });
+if (e.key !== 'Escape') return;
+langs.forEach(lang => { if (lang.open) { shut(lang); lang.querySelector('summary').focus(); } });
 });
 </script>
 
-<script src="/presentation.js?v=a1d449eb43" data-enlarge="Enlarge screenshot: {name}" data-close="Close viewer" data-previous="Previous screenshot" data-next="Next screenshot" defer></script>
+<script src="/presentation.js?v=5192425b53" data-enlarge="Enlarge screenshot: {name}" data-close="Close viewer" data-previous="Previous screenshot" data-next="Next screenshot" defer></script>
 </body>
 </html>

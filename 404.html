@@ -7,30 +7,27 @@
 <meta name="color-scheme" content="dark" />
 <meta name="robots" content="noindex" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
-<link rel="stylesheet" href="/styles.css?v=925f1f6cf6" />
-<link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
+<link rel="stylesheet" href="/styles.css?v=9be721741f" />
 <script>
-// Register before first reveal, including restored history entries.
 (() => {
-  let transition;
-  window.addEventListener("pagereveal", event => {
-    transition = event.viewTransition;
-    if (!transition) {
-      document.documentElement.classList.remove("page-crossfade");
-      return;
-    }
-    const current = transition;
-    document.documentElement.classList.add("page-crossfade");
-    current.finished.catch(() => {}).finally(() => {
-      if (transition !== current) return;
-      transition = null;
-      document.documentElement.classList.remove("page-crossfade");
-    });
-  });
-  // Intent takes priority over decoration; never consume the user's event.
-  const interrupt = () => transition?.skipTransition();
-  window.addEventListener("pointerdown", interrupt, { capture: true, passive: true });
-  window.addEventListener("keydown", interrupt, { capture: true });
+let transition;
+window.addEventListener("pagereveal", event => {
+transition = event.viewTransition;
+if (!transition) {
+document.documentElement.classList.remove("page-crossfade");
+return;
+}
+const current = transition;
+document.documentElement.classList.add("page-crossfade");
+current.finished.catch(() => {}).finally(() => {
+if (transition !== current) return;
+transition = null;
+document.documentElement.classList.remove("page-crossfade");
+});
+});
+const interrupt = () => transition?.skipTransition();
+window.addEventListener("pointerdown", interrupt, { capture: true, passive: true });
+window.addEventListener("keydown", interrupt, { capture: true });
 })();
 </script>
 </head>
@@ -39,43 +36,38 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-head">
   <div class="head-bar">
-    <nav class="head-links" aria-label="Privaro">
+    <nav class="head-links head-links-wide" aria-label="Privaro">
       <a href="/pro">Pro features</a>
       <a href="/security">Security</a>
       <a href="/faq">Questions</a>
     </nav>
     <a class="brand" href="/"><img src="/logo.png" width="28" height="28" alt="" />Privaro</a>
     <div class="head-end">
-      <details class="lang"><summary aria-label="Language: English"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>English</span><svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg></summary><div class="lang-menu"><p class="lang-head">Language</p><div class="lang-list"><a href="/" lang="en" hreflang="en" class="active" aria-current="true"><span>English</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></a><a href="/es" lang="es" hreflang="es"><span>Español</span></a><a href="/fr" lang="fr" hreflang="fr"><span>Français</span></a><a href="/de" lang="de" hreflang="de"><span>Deutsch</span></a><a href="/it" lang="it" hreflang="it"><span>Italiano</span></a><a href="/pt-br" lang="pt-BR" hreflang="pt-BR"><span>Português</span></a><a href="/zh" lang="zh-Hans" hreflang="zh-Hans"><span>简体中文</span></a><a href="/ko" lang="ko" hreflang="ko"><span>한국어</span></a><a href="/nl" lang="nl" hreflang="nl"><span>Nederlands</span></a><a href="/ja" lang="ja" hreflang="ja"><span>日本語</span></a><a href="/zh-hant" lang="zh-Hant" hreflang="zh-Hant"><span>繁體中文</span></a><a href="/ru" lang="ru" hreflang="ru"><span>Русский</span></a><a href="/tr" lang="tr" hreflang="tr"><span>Türkçe</span></a><a href="/id" lang="id" hreflang="id"><span>Bahasa Indonesia</span></a><a href="/hi" lang="hi" hreflang="hi"><span>हिन्दी</span></a><a href="/ar" lang="ar" hreflang="ar"><span>العربية</span></a><a href="/ur" lang="ur" hreflang="ur"><span>اردو</span></a></div></div></details>
+      <details class="lang"><summary aria-label="Language: English"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>English</span><svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg></summary><div class="lang-menu"><p class="lang-head">Language</p><div class="lang-list"><a href="/" lang="en" hreflang="en" class="active" aria-current="true"><span>English</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></a><a href="/es/" lang="es" hreflang="es"><span>Español</span></a><a href="/fr/" lang="fr" hreflang="fr"><span>Français</span></a><a href="/de/" lang="de" hreflang="de"><span>Deutsch</span></a><a href="/it/" lang="it" hreflang="it"><span>Italiano</span></a><a href="/pt-br/" lang="pt-BR" hreflang="pt-BR"><span>Português</span></a><a href="/zh/" lang="zh-Hans" hreflang="zh-Hans"><span>简体中文</span></a><a href="/ko/" lang="ko" hreflang="ko"><span>한국어</span></a><a href="/nl/" lang="nl" hreflang="nl"><span>Nederlands</span></a><a href="/ja/" lang="ja" hreflang="ja"><span>日本語</span></a><a href="/zh-hant/" lang="zh-Hant" hreflang="zh-Hant"><span>繁體中文</span></a><a href="/ru/" lang="ru" hreflang="ru"><span>Русский</span></a><a href="/tr/" lang="tr" hreflang="tr"><span>Türkçe</span></a><a href="/id/" lang="id" hreflang="id"><span>Bahasa Indonesia</span></a><a href="/hi/" lang="hi" hreflang="hi"><span>हिन्दी</span></a><a href="/ar/" lang="ar" hreflang="ar"><span>العربية</span></a><a href="/ur/" lang="ur" hreflang="ur"><span>اردو</span></a></div></div></details>
       <a class="head-get" href="https://apps.apple.com/app/id6783131829" aria-label="Download Privaro on the App Store">Download</a>
     </div>
+    <nav class="head-links head-links-phone" aria-label="Privaro">
+      <a href="/pro">Pro features</a>
+      <a href="/security">Security</a>
+      <a href="/faq">Questions</a>
+    </nav>
   </div>
 </header>
 
 <main id="main" class="page wrap missing">
 
-  <!-- Nothing at this address: what happened and where to go instead, and
-       beside it the Lock Screen, its foot fading into the page, as at the
-       end of the homepage. -->
   <section class="missing-body" aria-labelledby="missing-title">
     <div class="missing-copy">
       <p class="missing-code">Error 404</p>
       <h1 id="missing-title">This page doesn’t exist</h1>
       <p class="intro">The link may be old, or there’s a typo in it.</p>
       <a class="more missing-home" href="/">Go to the homepage</a>
-      <nav class="missing-others" aria-label="Other pages">
-        <a href="/pro">Pro features</a>
-        <a href="/security">Security</a>
-        <a href="/faq">Questions</a>
-      </nav>
     </div>
     <div class="closing-shot"><picture><source srcset="/shots/framed-18-pro-max/shot-lock.webp" type="image/webp" /><img src="/shots/framed-18-pro-max/shot-lock.jpg" width="760" height="1573" alt="" decoding="async" /></picture></div>
   </section>
 
 </main>
 
-<!-- A row of plain links and the page's controls, like the header's, and
-     one quiet line under it. -->
 <footer class="site-foot wrap">
   <nav class="foot-links">
     <a href="/pro">Pro features</a>
@@ -84,40 +76,33 @@
     <a href="/privacy">Privacy Policy</a>
     <a href="/terms">Terms of Use</a>
     <a href="mailto:erdincdubu@icloud.com">Contact</a>
-    <details class="lang"><summary aria-label="Language: English"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>English</span><svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg></summary><div class="lang-menu"><p class="lang-head">Language</p><div class="lang-list"><a href="/" lang="en" hreflang="en" class="active" aria-current="true"><span>English</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></a><a href="/es" lang="es" hreflang="es"><span>Español</span></a><a href="/fr" lang="fr" hreflang="fr"><span>Français</span></a><a href="/de" lang="de" hreflang="de"><span>Deutsch</span></a><a href="/it" lang="it" hreflang="it"><span>Italiano</span></a><a href="/pt-br" lang="pt-BR" hreflang="pt-BR"><span>Português</span></a><a href="/zh" lang="zh-Hans" hreflang="zh-Hans"><span>简体中文</span></a><a href="/ko" lang="ko" hreflang="ko"><span>한국어</span></a><a href="/nl" lang="nl" hreflang="nl"><span>Nederlands</span></a><a href="/ja" lang="ja" hreflang="ja"><span>日本語</span></a><a href="/zh-hant" lang="zh-Hant" hreflang="zh-Hant"><span>繁體中文</span></a><a href="/ru" lang="ru" hreflang="ru"><span>Русский</span></a><a href="/tr" lang="tr" hreflang="tr"><span>Türkçe</span></a><a href="/id" lang="id" hreflang="id"><span>Bahasa Indonesia</span></a><a href="/hi" lang="hi" hreflang="hi"><span>हिन्दी</span></a><a href="/ar" lang="ar" hreflang="ar"><span>العربية</span></a><a href="/ur" lang="ur" hreflang="ur"><span>اردو</span></a></div></div></details>
+    <details class="lang"><summary aria-label="Language: English"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>English</span><svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg></summary><div class="lang-menu"><p class="lang-head">Language</p><div class="lang-list"><a href="/" lang="en" hreflang="en" class="active" aria-current="true"><span>English</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></a><a href="/es/" lang="es" hreflang="es"><span>Español</span></a><a href="/fr/" lang="fr" hreflang="fr"><span>Français</span></a><a href="/de/" lang="de" hreflang="de"><span>Deutsch</span></a><a href="/it/" lang="it" hreflang="it"><span>Italiano</span></a><a href="/pt-br/" lang="pt-BR" hreflang="pt-BR"><span>Português</span></a><a href="/zh/" lang="zh-Hans" hreflang="zh-Hans"><span>简体中文</span></a><a href="/ko/" lang="ko" hreflang="ko"><span>한국어</span></a><a href="/nl/" lang="nl" hreflang="nl"><span>Nederlands</span></a><a href="/ja/" lang="ja" hreflang="ja"><span>日本語</span></a><a href="/zh-hant/" lang="zh-Hant" hreflang="zh-Hant"><span>繁體中文</span></a><a href="/ru/" lang="ru" hreflang="ru"><span>Русский</span></a><a href="/tr/" lang="tr" hreflang="tr"><span>Türkçe</span></a><a href="/id/" lang="id" hreflang="id"><span>Bahasa Indonesia</span></a><a href="/hi/" lang="hi" hreflang="hi"><span>हिन्दी</span></a><a href="/ar/" lang="ar" hreflang="ar"><span>العربية</span></a><a href="/ur/" lang="ur" hreflang="ur"><span>اردو</span></a></div></div></details>
   </nav>
   <p class="foot-note">© <span id="year">2026</span> Privaro. Made in the Netherlands. This site sets no cookies and has no trackers.</p>
 </footer>
 
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
-// The language menus (one in the header, one in the footer) are <details>;
-// close an open one on a click elsewhere, on its own button, or on Escape.
-// On phones a click on the dimmed page lands on the <details> itself (its
-// ::before is the dimming), so that counts as elsewhere too. A menu leaves
-// as it came rather than vanishing: it's held open for the moment its way
-// out takes (.closing in styles.css), then closed. With Reduce Motion it
-// just closes.
 const langs = document.querySelectorAll('.lang');
 const still = matchMedia('(prefers-reduced-motion: reduce)');
 const shut = lang => {
-  if (!lang.open || lang.classList.contains('closing')) return;
-  if (still.matches) { lang.open = false; return; }
-  lang.classList.add('closing');
-  setTimeout(() => { lang.open = false; lang.classList.remove('closing'); }, 200);
+if (!lang.open || lang.classList.contains('closing')) return;
+if (still.matches) { lang.open = false; return; }
+lang.classList.add('closing');
+setTimeout(() => { lang.open = false; lang.classList.remove('closing'); }, 200);
 };
 document.addEventListener('click', e => langs.forEach(lang => {
-  if (!lang.open) return;
-  const summary = e.target.closest ? e.target.closest('summary') : null;
-  if (summary && lang.contains(summary)) { e.preventDefault(); shut(lang); }
-  else if (e.target === lang || !lang.contains(e.target)) shut(lang);
+if (!lang.open) return;
+const summary = e.target.closest ? e.target.closest('summary') : null;
+if (summary && lang.contains(summary)) { e.preventDefault(); shut(lang); }
+else if (e.target === lang || !lang.contains(e.target)) shut(lang);
 }));
 document.addEventListener('keydown', e => {
-  if (e.key !== 'Escape') return;
-  langs.forEach(lang => { if (lang.open) { shut(lang); lang.querySelector('summary').focus(); } });
+if (e.key !== 'Escape') return;
+langs.forEach(lang => { if (lang.open) { shut(lang); lang.querySelector('summary').focus(); } });
 });
 </script>
 
-<script src="/presentation.js?v=a1d449eb43" data-enlarge="Enlarge screenshot: {name}" data-close="Close viewer" data-previous="Previous screenshot" data-next="Next screenshot" defer></script>
+<script src="/presentation.js?v=5192425b53" data-enlarge="Enlarge screenshot: {name}" data-close="Close viewer" data-previous="Previous screenshot" data-next="Next screenshot" defer></script>
 </body>
 </html>

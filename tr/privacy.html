@@ -32,36 +32,34 @@
 <meta property="og:image" content="https://privaroapp.nl/og.jpg?v=82627ffc6c" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Privaro. Your space. Your privacy. Available on the App Store. Three iPhones show the vault, Privacy Mode and the lock screen." />
 <meta property="og:locale" content="tr_TR" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="color-scheme" content="dark" />
 <meta name="apple-itunes-app" content="app-id=6783131829" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=925f1f6cf6" />
-<link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
+<link rel="stylesheet" href="/styles.css?v=9be721741f" />
 <script>
-// Register before first reveal, including restored history entries.
 (() => {
-  let transition;
-  window.addEventListener("pagereveal", event => {
-    transition = event.viewTransition;
-    if (!transition) {
-      document.documentElement.classList.remove("page-crossfade");
-      return;
-    }
-    const current = transition;
-    document.documentElement.classList.add("page-crossfade");
-    current.finished.catch(() => {}).finally(() => {
-      if (transition !== current) return;
-      transition = null;
-      document.documentElement.classList.remove("page-crossfade");
-    });
-  });
-  // Intent takes priority over decoration; never consume the user's event.
-  const interrupt = () => transition?.skipTransition();
-  window.addEventListener("pointerdown", interrupt, { capture: true, passive: true });
-  window.addEventListener("keydown", interrupt, { capture: true });
+let transition;
+window.addEventListener("pagereveal", event => {
+transition = event.viewTransition;
+if (!transition) {
+document.documentElement.classList.remove("page-crossfade");
+return;
+}
+const current = transition;
+document.documentElement.classList.add("page-crossfade");
+current.finished.catch(() => {}).finally(() => {
+if (transition !== current) return;
+transition = null;
+document.documentElement.classList.remove("page-crossfade");
+});
+});
+const interrupt = () => transition?.skipTransition();
+window.addEventListener("pointerdown", interrupt, { capture: true, passive: true });
+window.addEventListener("keydown", interrupt, { capture: true });
 })();
 </script>
 </head>
@@ -70,36 +68,37 @@
 <a class="skip" href="#main">İçeriğe geç</a>
 <header class="site-head">
   <div class="head-bar">
-    <nav class="head-links" aria-label="Privaro">
+    <nav class="head-links head-links-wide" aria-label="Privaro">
       <a href="/tr/pro">Pro özellikleri</a>
-      <a href="/security">Güvenlik</a>
+      <a href="/tr/security">Güvenlik</a>
       <a href="/tr/faq">Sorular</a>
     </nav>
-    <a class="brand" href="/tr"><img src="/logo.png" width="28" height="28" alt="" />Privaro</a>
+    <a class="brand" href="/tr/"><img src="/logo.png" width="28" height="28" alt="" />Privaro</a>
     <div class="head-end">
       <details class="lang"><summary aria-label="Dil: Türkçe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>Türkçe</span><svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg></summary><div class="lang-menu"><p class="lang-head">Dil</p><div class="lang-list"><a href="/privacy" lang="en" hreflang="en"><span>English</span></a><a href="/es/privacy" lang="es" hreflang="es"><span>Español</span></a><a href="/fr/privacy" lang="fr" hreflang="fr"><span>Français</span></a><a href="/de/privacy" lang="de" hreflang="de"><span>Deutsch</span></a><a href="/it/privacy" lang="it" hreflang="it"><span>Italiano</span></a><a href="/pt-br/privacy" lang="pt-BR" hreflang="pt-BR"><span>Português</span></a><a href="/zh/privacy" lang="zh-Hans" hreflang="zh-Hans"><span>简体中文</span></a><a href="/ko/privacy" lang="ko" hreflang="ko"><span>한국어</span></a><a href="/nl/privacy" lang="nl" hreflang="nl"><span>Nederlands</span></a><a href="/ja/privacy" lang="ja" hreflang="ja"><span>日本語</span></a><a href="/zh-hant/privacy" lang="zh-Hant" hreflang="zh-Hant"><span>繁體中文</span></a><a href="/ru/privacy" lang="ru" hreflang="ru"><span>Русский</span></a><a href="/tr/privacy" lang="tr" hreflang="tr" class="active" aria-current="true"><span>Türkçe</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></a><a href="/id/privacy" lang="id" hreflang="id"><span>Bahasa Indonesia</span></a><a href="/hi/privacy" lang="hi" hreflang="hi"><span>हिन्दी</span></a><a href="/ar/privacy" lang="ar" hreflang="ar"><span>العربية</span></a><a href="/ur/privacy" lang="ur" hreflang="ur"><span>اردو</span></a></div></div></details>
-      <a class="head-get" href="https://apps.apple.com/app/id6783131829" aria-label="Privaro'yu App Store'dan indirin">İndir</a>
+      <a class="head-get" href="https://apps.apple.com/app/id6783131829" aria-label="Privaro’yu App Store’dan indirin">İndir</a>
     </div>
+    <nav class="head-links head-links-phone" aria-label="Privaro">
+      <a href="/tr/pro">Pro özellikleri</a>
+      <a href="/tr/security">Güvenlik</a>
+      <a href="/tr/faq">Sorular</a>
+    </nav>
   </div>
 </header>
 
 <main id="main" class="page wrap legal-page privacy">
 
-  <!-- The title, when it was written, and who it's from. -->
   <header class="legal-hero">
     <h1>Gizlilik Politikası</h1>
     <p class="updated">Yürürlük tarihi: 28 Haziran 2026 · Son güncelleme: 8 Kasım 2026</p>
-    <p class="intro">Privaro (“Privaro”, “uygulama”, “biz”, “bize” veya “bizim”), Hollanda'da Erdinc Zarbo tarafından sunulan, iOS için gizli ve şifreli bir fotoğraf ve video kasasıdır. Bu Gizlilik Politikası, Privaro'nun bilgilerinizi nasıl işlediğini açıklar.</p>
+    <p class="intro">Privaro (“Privaro”, “uygulama”, “biz”, “bize” veya “bizim”), Hollanda’da Erdinc Zarbo tarafından sunulan, iOS için gizli ve şifreli bir fotoğraf ve video kasasıdır. Bu Gizlilik Politikası, Privaro’nun bilgilerinizi nasıl işlediğini açıklar.</p>
   </header>
 
-  <!-- The short version, for anyone who reads nothing else: set large,
-       between two lines. -->
   <aside class="legal-callout" aria-label="Kısacası:">
     <p class="legal-callout-label">Kısacası:</p>
-    <p class="legal-callout-body">Privaro, tasarımı gereği gizli olacak şekilde geliştirilmiştir. <strong>Fotoğraflarınız, videolarınız, albümleriniz, başlıklarınız ve etiketleriniz aygıtınızda şifrelenir ve bize asla gönderilmez.</strong> Bir hesap sistemimiz yoktur, içeriğinizi depolayan sunucular işletmeyiz ve kasanızda ne olduğunu göremeyiz. Reklam ve izleme yoktur. Aygıtınızdan çıkan tek veri, Apple'ın bir satın alımı işlemek için ihtiyaç duyduğu veridir.</p>
+    <p class="legal-callout-body">Privaro, tasarımı gereği gizli olacak şekilde geliştirilmiştir. <strong>Fotoğraflarınız, videolarınız, albümleriniz, başlıklarınız ve etiketleriniz aygıtınızda şifrelenir ve bize asla gönderilmez.</strong> Bir hesap sistemimiz yoktur, içeriğinizi depolayan sunucular işletmeyiz ve kasanızda ne olduğunu göremeyiz. Reklam ve izleme yoktur. Aygıtınızdan çıkan tek veri, Apple’ın bir satın alımı işlemek için ihtiyaç duyduğu veridir.</p>
   </aside>
 
-  <!-- The sections, numbered as they are below, each a link to it. -->
   <nav class="legal-index" aria-labelledby="legal-index-h">
     <p id="legal-index-h" class="legal-index-label">Bu sayfada</p>
     <ol>
@@ -117,8 +116,6 @@
     </ol>
   </nav>
 
-  <!-- Each section an article: its number and title on the left, the text
-       on the right, in a reading measure. -->
   <div class="articles">
   <section class="article" id="not-collected" aria-labelledby="not-collected-h">
     <h2 id="not-collected-h">Toplamadığımız bilgiler</h2>
@@ -127,7 +124,7 @@
         <li>Fotoğraflarınızı, videolarınızı veya herhangi bir kasa içeriğini <strong>toplamayız</strong>, görmeyiz ve depolamayız.</li>
         <li>Kullanıcı hesaplarımız <strong>yoktur</strong> ve uygulamayı kullanmanız için adınızı, e-posta adresinizi veya telefon numaranızı <strong>istemeyiz</strong>.</li>
         <li>Kasa verilerinizi alan bir sunucu <strong>işletmeyiz</strong>.</li>
-        <li>Analiz, çökme raporlama veya izleme SDK'ları <strong>kullanmayız</strong>.</li>
+        <li>Analiz, çökme raporlama veya izleme SDK’ları <strong>kullanmayız</strong>.</li>
         <li>Kişisel bilgilerinizi hiç kimseye <strong>satmayız</strong> veya kiralamayız.</li>
         <li>Sizi diğer uygulamalarda veya web sitelerinde <strong>izlemeyiz</strong>.</li>
       </ul>
@@ -136,7 +133,7 @@
   <section class="article" id="on-device" aria-labelledby="on-device-h">
     <h2 id="on-device-h">İçeriğiniz aygıtınızda kalır (ve şifrelenir)</h2>
     <div class="article-body">
-      <p>Privaro'ya eklediğiniz her şey (fotoğraflar, videolar, küçük resimler, albümler, başlıklar, etiketler ve dosya adları), sektör standardı AES-256-GCM şifrelemesiyle aygıtınızda şifrelenir. Şifreleme anahtarı aygıtınızda oluşturulur ve iOS Anahtar Zinciri'nde saklanır; aygıt parolanızla korunur ve yalnızca bu aygıtta kullanılabilir. Privaro parolanız ve biyometrik verileriniz, kasayı uygulamada kimin açabileceğini belirler. Şifreli dosyalar, tam dosya korumasıyla uygulamanın özel depolama alanında saklanır ve şifrelenmemiş aygıt yedeklemelerine dahil edilmez.</p>
+      <p>Privaro’ya eklediğiniz her şey (fotoğraflar, videolar, küçük resimler, albümler, başlıklar, etiketler ve dosya adları), sektör standardı AES-256-GCM şifrelemesiyle aygıtınızda şifrelenir. Şifreleme anahtarı aygıtınızda oluşturulur ve iOS Anahtar Zinciri’nde saklanır; aygıt parolanızla korunur ve yalnızca bu aygıtta kullanılabilir. Privaro parolanız ve biyometrik verileriniz, kasayı uygulamada kimin açabileceğini belirler. Şifreli dosyalar, tam dosya korumasıyla uygulamanın özel depolama alanında saklanır ve şifrelenmemiş aygıt yedeklemelerine dahil edilmez.</p>
       <p>Şifreleme aygıtınızda gerçekleştiği ve anahtar aygıtınızdan hiç çıkmadığı için kasa içeriğinize erişme, şifresini çözme veya onu kurtarma imkânımız yoktur. Parolanızı ve kurtarma anahtarınızı unutursanız verileriniz ne bizim ne de başka birinin tarafından kurtarılabilir.</p>
     </div>
   </section>
@@ -145,8 +142,8 @@
     <div class="article-body">
       <p>Bu özellikler varsayılan olarak kapalıdır ve yalnızca siz kullanmayı seçtiğinizde çalışır:</p>
       <ul>
-        <li><strong>Şifreli iCloud Yedeklemesi (isteğe bağlı, Pro).</strong> Bunu açarsanız Privaro, kasanızın şifreli bir kopyasını kendi iCloud hesabınızda saklar. Veriler yüklenmeden önce aygıtınızda şifrelenir; anahtar, kurtarma anahtarınızdan türetilen bir anahtarla (PBKDF2-HMAC-SHA256) sarmalanır. Yedeğinizi veya anahtarınızı asla almayız. iCloud, Apple tarafından işletilir ve <a href="https://www.apple.com/legal/privacy/">Apple'ın Gizlilik Politikası</a>'na tabidir.</li>
-        <li><strong>Paylaşma / Dışa Aktarma.</strong> Bir öğeyi paylaştığınızda veya dışa aktardığınızda (şifreli <code>.privaroshare</code> dosyaları veya “Fotoğraflar'a Kaydet” dahil), bu içerik sizin yönlendirdiğiniz şekilde kasadan çıkar. Nereye gittiği ve nasıl korunduğu, bundan sonra seçtiğiniz hedefe bağlıdır.</li>
+        <li><strong>Şifreli iCloud Yedeklemesi (isteğe bağlı, Pro).</strong> Bunu açarsanız Privaro, kasanızın şifreli bir kopyasını kendi iCloud hesabınızda saklar. Veriler yüklenmeden önce aygıtınızda şifrelenir; anahtar, kurtarma anahtarınızdan türetilen bir anahtarla (PBKDF2-HMAC-SHA256) sarmalanır. Yedeğinizi veya anahtarınızı asla almayız. iCloud, Apple tarafından işletilir ve <a href="https://www.apple.com/legal/privacy/">Apple’ın Gizlilik Politikası</a>’na tabidir.</li>
+        <li><strong>Paylaşma / Dışa Aktarma.</strong> Bir öğeyi paylaştığınızda veya dışa aktardığınızda (şifreli <code>.privaroshare</code> dosyaları veya “Fotoğraflar’a Kaydet” dahil), bu içerik sizin yönlendirdiğiniz şekilde kasadan çıkar. Nereye gittiği ve nasıl korunduğu, bundan sonra seçtiğiniz hedefe bağlıdır.</li>
         <li><strong>Wi-Fi Aktarımı (isteğe bağlı).</strong> Aygıtınız ile aynı yerel ağdaki bir tarayıcı arasında dosya aktarmanızı sağlar. Bu bağlantı yereldir ve aktarım sırasında şifrelenmez; bu yüzden yalnızca güvendiğiniz bir ağda kullanın. Dosyalar kasaya içe aktarılır aktarılmaz şifrelenir. Aktarım sırasında bize veya internet üzerinden hiçbir veri gönderilmez.</li>
       </ul>
     </div>
@@ -168,13 +165,13 @@
   <section class="article" id="purchases" aria-labelledby="purchases-h">
     <h2 id="purchases-h">Satın alımlar (Apple)</h2>
     <div class="article-body">
-      <p>Privaro Pro, Apple'ın StoreKit / App Store'u aracılığıyla tek seferlik bir satın alım olarak satılır. İşlemi ve ödemenizi Apple gerçekleştirir; ödeme bilgilerinizi almayız. Satın alma durumu Apple Hesabınız üzerinden yönetilir. Bkz. <a href="https://www.apple.com/legal/privacy/">Apple'ın Gizlilik Politikası</a>.</p>
+      <p>Privaro Pro, Apple’ın StoreKit / App Store’u aracılığıyla tek seferlik bir satın alım olarak satılır. İşlemi ve ödemenizi Apple gerçekleştirir; ödeme bilgilerinizi almayız. Satın alma durumu Apple Hesabınız üzerinden yönetilir. Bkz. <a href="https://www.apple.com/legal/privacy/">Apple’ın Gizlilik Politikası</a>.</p>
     </div>
   </section>
   <section class="article" id="retention" aria-labelledby="retention-h">
     <h2 id="retention-h">Verilerin saklanması ve silinmesi</h2>
     <div class="article-body">
-      <p>İçeriğiniz siz silene kadar aygıtınızda kalır. Silinen öğeler “Son Silinenler”e taşınır ve 30 gün sonra (veya siz seçerseniz hemen) kalıcı olarak kaldırılır. Uygulamayı silmek uygulama verilerini kaldırır; iCloud Yedeklemesi'ni açtıysanız onu uygulama içinden veya iCloud depolama ayarlarınızdan kaldırabilirsiniz. Verilerinizi tutmadığımız için bizim tarafımızda silinecek bir şey yoktur.</p>
+      <p>İçeriğiniz siz silene kadar aygıtınızda kalır. Silinen öğeler “Son Silinenler”e taşınır ve 30 gün sonra (veya siz seçerseniz hemen) kalıcı olarak kaldırılır. Uygulamayı silmek uygulama verilerini kaldırır; iCloud Yedeklemesi’ni açtıysanız onu uygulama içinden veya iCloud depolama ayarlarınızdan kaldırabilirsiniz. Verilerinizi tutmadığımız için bizim tarafımızda silinecek bir şey yoktur.</p>
     </div>
   </section>
   <section class="article" id="children" aria-labelledby="children-h">
@@ -186,7 +183,7 @@
   <section class="article" id="your-rights" aria-labelledby="your-rights-h">
     <h2 id="your-rights-h">Haklarınız</h2>
     <div class="article-body">
-      <p>Yaşadığınız yere bağlı olarak (örneğin AB/Birleşik Krallık GDPR'si veya Kaliforniya CCPA/CPRA kapsamında), kişisel bilgilerinize erişme, bunları düzeltme, silme veya işlenmesini kısıtlama haklarınız olabilir. Privaro içeriğinizi yalnızca aygıtınızda sakladığı ve sunucularımızda sizinle ilgili kişisel veri tutmadığımız için bu hakların çoğunu uygulamada verileri yöneterek veya silerek doğrudan kullanabilirsiniz. Her türlü soru veya talep için aşağıdaki iletişim bilgilerinden bize ulaşın.</p>
+      <p>Yaşadığınız yere bağlı olarak (örneğin AB/Birleşik Krallık GDPR’si veya Kaliforniya CCPA/CPRA kapsamında), kişisel bilgilerinize erişme, bunları düzeltme, silme veya işlenmesini kısıtlama haklarınız olabilir. Privaro içeriğinizi yalnızca aygıtınızda sakladığı ve sunucularımızda sizinle ilgili kişisel veri tutmadığımız için bu hakların çoğunu uygulamada verileri yöneterek veya silerek doğrudan kullanabilirsiniz. Her türlü soru veya talep için aşağıdaki iletişim bilgilerinden bize ulaşın.</p>
     </div>
   </section>
   <section class="article" id="security" aria-labelledby="security-h">
@@ -198,7 +195,7 @@
   <section class="article" id="changes" aria-labelledby="changes-h">
     <h2 id="changes-h">Bu politikadaki değişiklikler</h2>
     <div class="article-body">
-      <p>Bu Gizlilik Politikası'nı zaman zaman güncelleyebiliriz. Yukarıdaki “Son güncelleme” tarihini değiştiririz ve önemli değişiklikleri uygulamada veya web sitemizde belirtiriz.</p>
+      <p>Bu Gizlilik Politikası’nı zaman zaman güncelleyebiliriz. Yukarıdaki “Son güncelleme” tarihini değiştiririz ve önemli değişiklikleri uygulamada veya web sitemizde belirtiriz.</p>
     </div>
   </section>
   <section class="article" id="contact" aria-labelledby="contact-h">
@@ -214,50 +211,41 @@
 
 </main>
 
-<!-- A row of plain links and the page's controls, like the header's, and
-     one quiet line under it. -->
 <footer class="site-foot wrap">
   <nav class="foot-links">
     <a href="/tr/pro">Pro özellikleri</a>
     <a href="/tr/faq">Sorular</a>
-    <a href="/security">Güvenlik</a>
+    <a href="/tr/security">Güvenlik</a>
     <a href="/tr/privacy" aria-current="page">Gizlilik Politikası</a>
     <a href="/tr/terms">Kullanım Koşulları</a>
     <a href="mailto:erdincdubu@icloud.com">İletişim</a>
     <details class="lang"><summary aria-label="Dil: Türkçe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>Türkçe</span><svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg></summary><div class="lang-menu"><p class="lang-head">Dil</p><div class="lang-list"><a href="/privacy" lang="en" hreflang="en"><span>English</span></a><a href="/es/privacy" lang="es" hreflang="es"><span>Español</span></a><a href="/fr/privacy" lang="fr" hreflang="fr"><span>Français</span></a><a href="/de/privacy" lang="de" hreflang="de"><span>Deutsch</span></a><a href="/it/privacy" lang="it" hreflang="it"><span>Italiano</span></a><a href="/pt-br/privacy" lang="pt-BR" hreflang="pt-BR"><span>Português</span></a><a href="/zh/privacy" lang="zh-Hans" hreflang="zh-Hans"><span>简体中文</span></a><a href="/ko/privacy" lang="ko" hreflang="ko"><span>한국어</span></a><a href="/nl/privacy" lang="nl" hreflang="nl"><span>Nederlands</span></a><a href="/ja/privacy" lang="ja" hreflang="ja"><span>日本語</span></a><a href="/zh-hant/privacy" lang="zh-Hant" hreflang="zh-Hant"><span>繁體中文</span></a><a href="/ru/privacy" lang="ru" hreflang="ru"><span>Русский</span></a><a href="/tr/privacy" lang="tr" hreflang="tr" class="active" aria-current="true"><span>Türkçe</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></a><a href="/id/privacy" lang="id" hreflang="id"><span>Bahasa Indonesia</span></a><a href="/hi/privacy" lang="hi" hreflang="hi"><span>हिन्दी</span></a><a href="/ar/privacy" lang="ar" hreflang="ar"><span>العربية</span></a><a href="/ur/privacy" lang="ur" hreflang="ur"><span>اردو</span></a></div></div></details>
   </nav>
-  <p class="foot-note">© <span id="year">2026</span> Privaro. Hollanda'da yapıldı. Bu site çerez kullanmaz ve izleyici içermez.</p>
+  <p class="foot-note">© <span id="year">2026</span> Privaro. Hollanda’da yapıldı. Bu site çerez kullanmaz ve izleyici içermez.</p>
 </footer>
 
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
-// The language menus (one in the header, one in the footer) are <details>;
-// close an open one on a click elsewhere, on its own button, or on Escape.
-// On phones a click on the dimmed page lands on the <details> itself (its
-// ::before is the dimming), so that counts as elsewhere too. A menu leaves
-// as it came rather than vanishing: it's held open for the moment its way
-// out takes (.closing in styles.css), then closed. With Reduce Motion it
-// just closes.
 const langs = document.querySelectorAll('.lang');
 const still = matchMedia('(prefers-reduced-motion: reduce)');
 const shut = lang => {
-  if (!lang.open || lang.classList.contains('closing')) return;
-  if (still.matches) { lang.open = false; return; }
-  lang.classList.add('closing');
-  setTimeout(() => { lang.open = false; lang.classList.remove('closing'); }, 200);
+if (!lang.open || lang.classList.contains('closing')) return;
+if (still.matches) { lang.open = false; return; }
+lang.classList.add('closing');
+setTimeout(() => { lang.open = false; lang.classList.remove('closing'); }, 200);
 };
 document.addEventListener('click', e => langs.forEach(lang => {
-  if (!lang.open) return;
-  const summary = e.target.closest ? e.target.closest('summary') : null;
-  if (summary && lang.contains(summary)) { e.preventDefault(); shut(lang); }
-  else if (e.target === lang || !lang.contains(e.target)) shut(lang);
+if (!lang.open) return;
+const summary = e.target.closest ? e.target.closest('summary') : null;
+if (summary && lang.contains(summary)) { e.preventDefault(); shut(lang); }
+else if (e.target === lang || !lang.contains(e.target)) shut(lang);
 }));
 document.addEventListener('keydown', e => {
-  if (e.key !== 'Escape') return;
-  langs.forEach(lang => { if (lang.open) { shut(lang); lang.querySelector('summary').focus(); } });
+if (e.key !== 'Escape') return;
+langs.forEach(lang => { if (lang.open) { shut(lang); lang.querySelector('summary').focus(); } });
 });
 </script>
 
-<script src="/presentation.js?v=a1d449eb43" data-enlarge="Ekran görüntüsünü büyüt: {name}" data-close="Görüntüleyiciyi kapat" data-previous="Önceki ekran görüntüsü" data-next="Sonraki ekran görüntüsü" defer></script>
+<script src="/presentation.js?v=5192425b53" data-enlarge="Ekran görüntüsünü büyüt: {name}" data-close="Görüntüleyiciyi kapat" data-previous="Önceki ekran görüntüsü" data-next="Sonraki ekran görüntüsü" defer></script>
 </body>
 </html>

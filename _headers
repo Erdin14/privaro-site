@@ -2,12 +2,12 @@
 # gets the same. Cloudflare Pages (privaroapp.nl) reads this file.
 /*
   ! Access-Control-Allow-Origin
-  Content-Security-Policy: default-src 'none'; script-src 'self' 'sha256-8QA3Q3/K6rh8jBK+sSidsANJTy7SMTUk89PmJ+uFfMA=' 'sha256-Nk3V3eu84J2aX2x8ej3JRWNEA/C5wWumEsFut7g7pfA=' 'sha256-SOQ856XumM2LRxrneO7EVVApXE+AvvAxZuCyz6ijfJs=' 'sha256-dOEuuloiVaQI7Tn7HkBHjxjg4/GqWx8RMO0WfLSQhnY=' 'sha256-fy6TNyRf5tS21DucCWA6MqDS8Bs6B4jvpQ+EenREVts=' 'sha256-gwaX9SRmkq2/7nolyjZlQUDz1GfHc8JL6pC4U2bANpU='; style-src 'self' 'unsafe-inline'; img-src 'self'; media-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+  Content-Security-Policy: default-src 'none'; script-src 'self' 'sha256-0+mp1YumkWISK42lTa8+VYMOc1CyRB7hssp5zJupPiM=' 'sha256-AdasNhrqAyzYg4TRf6M8gmdZ/z99hz8fIz20wFRM3qo=' 'sha256-Jx5gTgRFcUxiU15anIAqLz+cTkBcLMdQeNXgkJf+cSE=' 'sha256-LgVZrb4vvxDGemDYkrE8MK1yfVuCmsjJIVjf4EL1sXw=' 'sha256-rzpw08bv0wF30Ghr1ZvBAYo6CdrYhY2Ku5G7xgjNjxM=' 'sha256-w8cwdjXiRK3IImi79m3GMYL+B1jdPhvoiOBdPagzpQk='; style-src 'self' 'unsafe-inline'; img-src 'self'; media-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
   Strict-Transport-Security: max-age=31536000; includeSubDomains
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
   Referrer-Policy: strict-origin-when-cross-origin
-  Permissions-Policy: accelerometer=(), bluetooth=(), browsing-topics=(), camera=(), display-capture=(), geolocation=(), gyroscope=(), hid=(), magnetometer=(), microphone=(), midi=(), payment=(), serial=(), usb=()
+  Permissions-Policy: accelerometer=(), browsing-topics=(), camera=(), display-capture=(), geolocation=(), gyroscope=(), hid=(), magnetometer=(), microphone=(), midi=(), payment=(), serial=(), usb=()
   Cross-Origin-Opener-Policy: same-origin
   Cross-Origin-Resource-Policy: same-origin
   X-Permitted-Cross-Domain-Policies: none
@@ -28,9 +28,6 @@
   Cache-Control: public, max-age=31536000, immutable
 
 /styles.css
-  Cache-Control: public, max-age=31536000, immutable
-
-/transitions.css
   Cache-Control: public, max-age=31536000, immutable
 
 /film/*

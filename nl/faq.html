@@ -7,6 +7,7 @@
 <meta name="description" content="Kan iemand anders mijn foto’s zien? Wat als ik mijn code vergeet? Wat gebeurt er als ik mijn telefoon kwijtraak?" />
 <meta name="apple-itunes-app" content="app-id=6783131829" />
 <meta name="color-scheme" content="dark" />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"nl","mainEntity":[{"@type":"Question","name":"Kan iemand anders mijn foto’s zien?","acceptedAnswer":{"@type":"Answer","text":"Nee. Ze worden op je iPhone versleuteld met een sleutel die daar blijft. Er is geen Privaro-account en geen server met je foto’s, dus er valt voor niemand iets te zien, ook niet voor ons."}},{"@type":"Question","name":"Wat als ik mijn code vergeet?","acceptedAnswer":{"@type":"Answer","text":"Bij het instellen van Privaro krijg je een herstelsleutel. Bewaar die goed: daarmee stel je een nieuwe code in. Zonder code of herstelsleutel kan de kluis niet open, ook niet door ons."}},{"@type":"Question","name":"Wat gebeurt er als ik mijn telefoon kwijtraak?","acceptedAnswer":{"@type":"Answer","text":"Had je de versleutelde iCloud-back-up (Pro) aan, dan zet je de kluis met je herstelsleutel terug op je nieuwe iPhone. Terugzetten is gratis. Zonder back-up blijven de foto’s op de oude telefoon op slot."}},{"@type":"Question","name":"Is er een limiet voor de grootte van video’s?","acceptedAnswer":{"@type":"Answer","text":"Niet per bestand. Elke grootte werkt zolang je iPhone ruimte heeft. De gratis versie bewaart tot 2,5 GB in totaal, Pro heeft geen limiet."}},{"@type":"Question","name":"Heb je een internetverbinding nodig?","acceptedAnswer":{"@type":"Answer","text":"Nee. Je kluis werkt volledig offline, en je foto’s gaan nooit online tenzij je de iCloud-back-up aanzet."}},{"@type":"Question","name":"Is Pro een abonnement?","acceptedAnswer":{"@type":"Answer","text":"Nee. Pro is een eenmalige betaling van € 9,99. Er wordt niets verlengd en er valt niets op te zeggen."}}]}</script>
 <link rel="canonical" href="https://privaroapp.nl/nl/faq" />
 <link rel="alternate" hreflang="en" href="https://privaroapp.nl/faq" />
 <link rel="alternate" hreflang="es" href="https://privaroapp.nl/es/faq" />
@@ -34,34 +35,32 @@
 <meta property="og:image" content="https://privaroapp.nl/og.jpg?v=82627ffc6c" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Privaro. Your space. Your privacy. Available on the App Store. Three iPhones show the vault, Privacy Mode and the lock screen." />
 <meta property="og:locale" content="nl_NL" />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=925f1f6cf6" />
-<link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
+<link rel="stylesheet" href="/styles.css?v=9be721741f" />
 <script>
-// Register before first reveal, including restored history entries.
 (() => {
-  let transition;
-  window.addEventListener("pagereveal", event => {
-    transition = event.viewTransition;
-    if (!transition) {
-      document.documentElement.classList.remove("page-crossfade");
-      return;
-    }
-    const current = transition;
-    document.documentElement.classList.add("page-crossfade");
-    current.finished.catch(() => {}).finally(() => {
-      if (transition !== current) return;
-      transition = null;
-      document.documentElement.classList.remove("page-crossfade");
-    });
-  });
-  // Intent takes priority over decoration; never consume the user's event.
-  const interrupt = () => transition?.skipTransition();
-  window.addEventListener("pointerdown", interrupt, { capture: true, passive: true });
-  window.addEventListener("keydown", interrupt, { capture: true });
+let transition;
+window.addEventListener("pagereveal", event => {
+transition = event.viewTransition;
+if (!transition) {
+document.documentElement.classList.remove("page-crossfade");
+return;
+}
+const current = transition;
+document.documentElement.classList.add("page-crossfade");
+current.finished.catch(() => {}).finally(() => {
+if (transition !== current) return;
+transition = null;
+document.documentElement.classList.remove("page-crossfade");
+});
+});
+const interrupt = () => transition?.skipTransition();
+window.addEventListener("pointerdown", interrupt, { capture: true, passive: true });
+window.addEventListener("keydown", interrupt, { capture: true });
 })();
 </script>
 </head>
@@ -70,16 +69,21 @@
 <a class="skip" href="#main">Naar de inhoud</a>
 <header class="site-head">
   <div class="head-bar">
-    <nav class="head-links" aria-label="Privaro">
+    <nav class="head-links head-links-wide" aria-label="Privaro">
       <a href="/nl/pro">Pro-functies</a>
-      <a href="/security">Beveiliging</a>
+      <a href="/nl/security">Beveiliging</a>
       <a href="/nl/faq" aria-current="page">Vragen</a>
     </nav>
-    <a class="brand" href="/nl"><img src="/logo.png" width="28" height="28" alt="" />Privaro</a>
+    <a class="brand" href="/nl/"><img src="/logo.png" width="28" height="28" alt="" />Privaro</a>
     <div class="head-end">
       <details class="lang"><summary aria-label="Taal: Nederlands"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>Nederlands</span><svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg></summary><div class="lang-menu"><p class="lang-head">Taal</p><div class="lang-list"><a href="/faq" lang="en" hreflang="en"><span>English</span></a><a href="/es/faq" lang="es" hreflang="es"><span>Español</span></a><a href="/fr/faq" lang="fr" hreflang="fr"><span>Français</span></a><a href="/de/faq" lang="de" hreflang="de"><span>Deutsch</span></a><a href="/it/faq" lang="it" hreflang="it"><span>Italiano</span></a><a href="/pt-br/faq" lang="pt-BR" hreflang="pt-BR"><span>Português</span></a><a href="/zh/faq" lang="zh-Hans" hreflang="zh-Hans"><span>简体中文</span></a><a href="/ko/faq" lang="ko" hreflang="ko"><span>한국어</span></a><a href="/nl/faq" lang="nl" hreflang="nl" class="active" aria-current="true"><span>Nederlands</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></a><a href="/ja/faq" lang="ja" hreflang="ja"><span>日本語</span></a><a href="/zh-hant/faq" lang="zh-Hant" hreflang="zh-Hant"><span>繁體中文</span></a><a href="/ru/faq" lang="ru" hreflang="ru"><span>Русский</span></a><a href="/tr/faq" lang="tr" hreflang="tr"><span>Türkçe</span></a><a href="/id/faq" lang="id" hreflang="id"><span>Bahasa Indonesia</span></a><a href="/hi/faq" lang="hi" hreflang="hi"><span>हिन्दी</span></a><a href="/ar/faq" lang="ar" hreflang="ar"><span>العربية</span></a><a href="/ur/faq" lang="ur" hreflang="ur"><span>اردو</span></a></div></div></details>
       <a class="head-get" href="https://apps.apple.com/app/id6783131829" aria-label="Download Privaro in de App Store">Download</a>
     </div>
+    <nav class="head-links head-links-phone" aria-label="Privaro">
+      <a href="/nl/pro">Pro-functies</a>
+      <a href="/nl/security">Beveiliging</a>
+      <a href="/nl/faq" aria-current="page">Vragen</a>
+    </nav>
   </div>
 </header>
 
@@ -87,9 +91,6 @@
 
   <h1>Vragen</h1>
 
-  <!-- Each question large on the left, its answer beside it, starting on the
-       same line. The answer's first sentence is the short answer, in full
-       ink; the rest explains, in grey. No lines between them. -->
   <div class="qa">
     <div id="who-can-see"><h2>Kan iemand anders mijn foto’s zien?</h2><p><strong>Nee.</strong> Ze worden op je iPhone versleuteld met een sleutel die daar blijft. Er is geen Privaro-account en geen server met je foto’s, dus er valt voor niemand iets te zien, ook niet voor ons.</p></div>
     <div id="forgot-passcode"><h2>Wat als ik mijn code vergeet?</h2><p><strong>Bij het instellen van Privaro krijg je een herstelsleutel.</strong> Bewaar die goed: daarmee stel je een nieuwe code in. Zonder code of herstelsleutel kan de kluis niet open, ook niet door ons.</p></div>
@@ -99,21 +100,30 @@
     <div id="subscription"><h2>Is Pro een abonnement?</h2><p><strong>Nee.</strong> Pro is een eenmalige betaling van <span class="price" data-price="pro">€ 9,99</span>. Er wordt niets verlengd en er valt niets op te zeggen.</p></div>
   </div>
 
-  <!-- Where to go for what isn't here. -->
   <section class="faq-more" aria-labelledby="faq-more-title">
     <h2 id="faq-more-title">Nog iets?</h2>
-    <p><a class="more" href="mailto:erdincdubu@icloud.com">Mail ons</a><a class="more" href="/security">Lees het beveiligingsoverzicht</a></p>
+    <p><a class="more" href="mailto:erdincdubu@icloud.com">Mail ons</a><a class="more" href="/nl/security">Lees het beveiligingsoverzicht</a></p>
   </section>
+
+<section class="get" aria-label="Download Privaro in de App Store">
+  <div class="buy">
+    <div class="buy-get">
+      <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="Download Privaro in de App Store">
+        <img src="/appstore-badge-white.svg" width="150" height="50" alt="Download Privaro in de App Store" loading="lazy" />
+      </a>
+      <p class="buy-note"><span>Gratis te downloaden. Vereist iOS 17.6 of nieuwer.</span></p>
+    </div>
+    <p class="handoff" aria-hidden="true"><img src="/qr-appstore.svg" width="72" height="72" alt="" loading="lazy" /><span>Scan met je iPhone</span></p>
+  </div>
+</section>
 
 </main>
 
-<!-- A row of plain links and the page's controls, like the header's, and
-     one quiet line under it. -->
 <footer class="site-foot wrap">
   <nav class="foot-links">
     <a href="/nl/pro">Pro-functies</a>
     <a href="/nl/faq" aria-current="page">Vragen</a>
-    <a href="/security">Beveiliging</a>
+    <a href="/nl/security">Beveiliging</a>
     <a href="/nl/privacy">Privacybeleid</a>
     <a href="/nl/terms">Gebruiksvoorwaarden</a>
     <a href="mailto:erdincdubu@icloud.com">Contact</a>
@@ -124,34 +134,27 @@
 
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
-// The language menus (one in the header, one in the footer) are <details>;
-// close an open one on a click elsewhere, on its own button, or on Escape.
-// On phones a click on the dimmed page lands on the <details> itself (its
-// ::before is the dimming), so that counts as elsewhere too. A menu leaves
-// as it came rather than vanishing: it's held open for the moment its way
-// out takes (.closing in styles.css), then closed. With Reduce Motion it
-// just closes.
 const langs = document.querySelectorAll('.lang');
 const still = matchMedia('(prefers-reduced-motion: reduce)');
 const shut = lang => {
-  if (!lang.open || lang.classList.contains('closing')) return;
-  if (still.matches) { lang.open = false; return; }
-  lang.classList.add('closing');
-  setTimeout(() => { lang.open = false; lang.classList.remove('closing'); }, 200);
+if (!lang.open || lang.classList.contains('closing')) return;
+if (still.matches) { lang.open = false; return; }
+lang.classList.add('closing');
+setTimeout(() => { lang.open = false; lang.classList.remove('closing'); }, 200);
 };
 document.addEventListener('click', e => langs.forEach(lang => {
-  if (!lang.open) return;
-  const summary = e.target.closest ? e.target.closest('summary') : null;
-  if (summary && lang.contains(summary)) { e.preventDefault(); shut(lang); }
-  else if (e.target === lang || !lang.contains(e.target)) shut(lang);
+if (!lang.open) return;
+const summary = e.target.closest ? e.target.closest('summary') : null;
+if (summary && lang.contains(summary)) { e.preventDefault(); shut(lang); }
+else if (e.target === lang || !lang.contains(e.target)) shut(lang);
 }));
 document.addEventListener('keydown', e => {
-  if (e.key !== 'Escape') return;
-  langs.forEach(lang => { if (lang.open) { shut(lang); lang.querySelector('summary').focus(); } });
+if (e.key !== 'Escape') return;
+langs.forEach(lang => { if (lang.open) { shut(lang); lang.querySelector('summary').focus(); } });
 });
 </script>
 
-<script src="/presentation.js?v=a1d449eb43" data-enlarge="Schermafbeelding vergroten: {name}" data-close="Weergave sluiten" data-previous="Vorige schermafbeelding" data-next="Volgende schermafbeelding" defer></script>
-<script src="/price.js?v=5174912724" defer></script>
+<script src="/presentation.js?v=5192425b53" data-enlarge="Schermafbeelding vergroten: {name}" data-close="Weergave sluiten" data-previous="Vorige schermafbeelding" data-next="Volgende schermafbeelding" defer></script>
+<script src="/price.js?v=75cbf9b3af" defer></script>
 </body>
 </html>

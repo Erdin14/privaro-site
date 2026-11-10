@@ -7,6 +7,7 @@
 <meta name="description" content="Qualcun altro può vedere le mie foto? E se dimentico il codice? Cosa succede se perdo il telefono?" />
 <meta name="apple-itunes-app" content="app-id=6783131829" />
 <meta name="color-scheme" content="dark" />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"it","mainEntity":[{"@type":"Question","name":"Qualcun altro può vedere le mie foto?","acceptedAnswer":{"@type":"Answer","text":"No. Sono cifrate sul tuo iPhone con una chiave che non lo lascia mai. Non c’è un account Privaro né un server con le tue foto: nessuno ha niente da vedere, nemmeno noi."}},{"@type":"Question","name":"E se dimentico il codice?","acceptedAnswer":{"@type":"Answer","text":"Quando configuri Privaro ricevi una chiave di recupero. Conservala al sicuro: ti permette di impostare un nuovo codice. Senza codice né chiave, la cassaforte non si può aprire, neanche da noi."}},{"@type":"Question","name":"Cosa succede se perdo il telefono?","acceptedAnswer":{"@type":"Answer","text":"Se hai attivato il backup iCloud cifrato (Pro), puoi ripristinare la cassaforte sul nuovo iPhone con la tua chiave di recupero. Il ripristino è gratuito. Senza backup, le foto restano bloccate sul vecchio telefono."}},{"@type":"Question","name":"C’è un limite di dimensione per i video?","acceptedAnswer":{"@type":"Answer","text":"Non per singolo file. Va bene qualsiasi dimensione, purché l’iPhone abbia spazio. La versione gratuita contiene fino a 2,5 GB in totale, Pro non ha limiti."}},{"@type":"Question","name":"Serve una connessione a internet?","acceptedAnswer":{"@type":"Answer","text":"No. La cassaforte funziona completamente offline e le tue foto non vanno mai online, a meno che tu non attivi il backup iCloud."}},{"@type":"Question","name":"Pro è un abbonamento?","acceptedAnswer":{"@type":"Answer","text":"No. Pro è un pagamento unico di 9,99 €. Non si rinnova nulla e non c’è niente da disdire."}}]}</script>
 <link rel="canonical" href="https://privaroapp.nl/it/faq" />
 <link rel="alternate" hreflang="en" href="https://privaroapp.nl/faq" />
 <link rel="alternate" hreflang="es" href="https://privaroapp.nl/es/faq" />
@@ -34,34 +35,32 @@
 <meta property="og:image" content="https://privaroapp.nl/og.jpg?v=82627ffc6c" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Privaro. Your space. Your privacy. Available on the App Store. Three iPhones show the vault, Privacy Mode and the lock screen." />
 <meta property="og:locale" content="it_IT" />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=925f1f6cf6" />
-<link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
+<link rel="stylesheet" href="/styles.css?v=9be721741f" />
 <script>
-// Register before first reveal, including restored history entries.
 (() => {
-  let transition;
-  window.addEventListener("pagereveal", event => {
-    transition = event.viewTransition;
-    if (!transition) {
-      document.documentElement.classList.remove("page-crossfade");
-      return;
-    }
-    const current = transition;
-    document.documentElement.classList.add("page-crossfade");
-    current.finished.catch(() => {}).finally(() => {
-      if (transition !== current) return;
-      transition = null;
-      document.documentElement.classList.remove("page-crossfade");
-    });
-  });
-  // Intent takes priority over decoration; never consume the user's event.
-  const interrupt = () => transition?.skipTransition();
-  window.addEventListener("pointerdown", interrupt, { capture: true, passive: true });
-  window.addEventListener("keydown", interrupt, { capture: true });
+let transition;
+window.addEventListener("pagereveal", event => {
+transition = event.viewTransition;
+if (!transition) {
+document.documentElement.classList.remove("page-crossfade");
+return;
+}
+const current = transition;
+document.documentElement.classList.add("page-crossfade");
+current.finished.catch(() => {}).finally(() => {
+if (transition !== current) return;
+transition = null;
+document.documentElement.classList.remove("page-crossfade");
+});
+});
+const interrupt = () => transition?.skipTransition();
+window.addEventListener("pointerdown", interrupt, { capture: true, passive: true });
+window.addEventListener("keydown", interrupt, { capture: true });
 })();
 </script>
 </head>
@@ -70,16 +69,21 @@
 <a class="skip" href="#main">Vai al contenuto</a>
 <header class="site-head">
   <div class="head-bar">
-    <nav class="head-links" aria-label="Privaro">
+    <nav class="head-links head-links-wide" aria-label="Privaro">
       <a href="/it/pro">Funzioni Pro</a>
-      <a href="/security">Sicurezza</a>
+      <a href="/it/security">Sicurezza</a>
       <a href="/it/faq" aria-current="page">Domande</a>
     </nav>
-    <a class="brand" href="/it"><img src="/logo.png" width="28" height="28" alt="" />Privaro</a>
+    <a class="brand" href="/it/"><img src="/logo.png" width="28" height="28" alt="" />Privaro</a>
     <div class="head-end">
       <details class="lang"><summary aria-label="Lingua: Italiano"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>Italiano</span><svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg></summary><div class="lang-menu"><p class="lang-head">Lingua</p><div class="lang-list"><a href="/faq" lang="en" hreflang="en"><span>English</span></a><a href="/es/faq" lang="es" hreflang="es"><span>Español</span></a><a href="/fr/faq" lang="fr" hreflang="fr"><span>Français</span></a><a href="/de/faq" lang="de" hreflang="de"><span>Deutsch</span></a><a href="/it/faq" lang="it" hreflang="it" class="active" aria-current="true"><span>Italiano</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></a><a href="/pt-br/faq" lang="pt-BR" hreflang="pt-BR"><span>Português</span></a><a href="/zh/faq" lang="zh-Hans" hreflang="zh-Hans"><span>简体中文</span></a><a href="/ko/faq" lang="ko" hreflang="ko"><span>한국어</span></a><a href="/nl/faq" lang="nl" hreflang="nl"><span>Nederlands</span></a><a href="/ja/faq" lang="ja" hreflang="ja"><span>日本語</span></a><a href="/zh-hant/faq" lang="zh-Hant" hreflang="zh-Hant"><span>繁體中文</span></a><a href="/ru/faq" lang="ru" hreflang="ru"><span>Русский</span></a><a href="/tr/faq" lang="tr" hreflang="tr"><span>Türkçe</span></a><a href="/id/faq" lang="id" hreflang="id"><span>Bahasa Indonesia</span></a><a href="/hi/faq" lang="hi" hreflang="hi"><span>हिन्दी</span></a><a href="/ar/faq" lang="ar" hreflang="ar"><span>العربية</span></a><a href="/ur/faq" lang="ur" hreflang="ur"><span>اردو</span></a></div></div></details>
       <a class="head-get" href="https://apps.apple.com/app/id6783131829" aria-label="Scarica Privaro dall’App Store">Scarica</a>
     </div>
+    <nav class="head-links head-links-phone" aria-label="Privaro">
+      <a href="/it/pro">Funzioni Pro</a>
+      <a href="/it/security">Sicurezza</a>
+      <a href="/it/faq" aria-current="page">Domande</a>
+    </nav>
   </div>
 </header>
 
@@ -87,9 +91,6 @@
 
   <h1>Domande</h1>
 
-  <!-- Each question large on the left, its answer beside it, starting on the
-       same line. The answer's first sentence is the short answer, in full
-       ink; the rest explains, in grey. No lines between them. -->
   <div class="qa">
     <div id="who-can-see"><h2>Qualcun altro può vedere le mie foto?</h2><p><strong>No.</strong> Sono cifrate sul tuo iPhone con una chiave che non lo lascia mai. Non c’è un account Privaro né un server con le tue foto: nessuno ha niente da vedere, nemmeno noi.</p></div>
     <div id="forgot-passcode"><h2>E se dimentico il codice?</h2><p><strong>Quando configuri Privaro ricevi una chiave di recupero.</strong> Conservala al sicuro: ti permette di impostare un nuovo codice. Senza codice né chiave, la cassaforte non si può aprire, neanche da noi.</p></div>
@@ -99,21 +100,30 @@
     <div id="subscription"><h2>Pro è un abbonamento?</h2><p><strong>No.</strong> Pro è un pagamento unico di <span class="price" data-price="pro">9,99 €</span>. Non si rinnova nulla e non c’è niente da disdire.</p></div>
   </div>
 
-  <!-- Where to go for what isn't here. -->
   <section class="faq-more" aria-labelledby="faq-more-title">
     <h2 id="faq-more-title">Qualcos’altro?</h2>
-    <p><a class="more" href="mailto:erdincdubu@icloud.com">Scrivici</a><a class="more" href="/security">Leggi la panoramica sulla sicurezza</a></p>
+    <p><a class="more" href="mailto:erdincdubu@icloud.com">Scrivici</a><a class="more" href="/it/security">Leggi la panoramica sulla sicurezza</a></p>
   </section>
+
+<section class="get" aria-label="Scarica Privaro dall’App Store">
+  <div class="buy">
+    <div class="buy-get">
+      <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="Scarica Privaro dall’App Store">
+        <img src="/appstore-badge-white.svg" width="150" height="50" alt="Scarica Privaro dall’App Store" loading="lazy" />
+      </a>
+      <p class="buy-note"><span>Download gratuito. Richiede iOS 17.6 o versioni successive.</span></p>
+    </div>
+    <p class="handoff" aria-hidden="true"><img src="/qr-appstore.svg" width="72" height="72" alt="" loading="lazy" /><span>Scansiona con il tuo iPhone</span></p>
+  </div>
+</section>
 
 </main>
 
-<!-- A row of plain links and the page's controls, like the header's, and
-     one quiet line under it. -->
 <footer class="site-foot wrap">
   <nav class="foot-links">
     <a href="/it/pro">Funzioni Pro</a>
     <a href="/it/faq" aria-current="page">Domande</a>
-    <a href="/security">Sicurezza</a>
+    <a href="/it/security">Sicurezza</a>
     <a href="/it/privacy">Informativa sulla privacy</a>
     <a href="/it/terms">Termini di utilizzo</a>
     <a href="mailto:erdincdubu@icloud.com">Contatti</a>
@@ -124,34 +134,27 @@
 
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
-// The language menus (one in the header, one in the footer) are <details>;
-// close an open one on a click elsewhere, on its own button, or on Escape.
-// On phones a click on the dimmed page lands on the <details> itself (its
-// ::before is the dimming), so that counts as elsewhere too. A menu leaves
-// as it came rather than vanishing: it's held open for the moment its way
-// out takes (.closing in styles.css), then closed. With Reduce Motion it
-// just closes.
 const langs = document.querySelectorAll('.lang');
 const still = matchMedia('(prefers-reduced-motion: reduce)');
 const shut = lang => {
-  if (!lang.open || lang.classList.contains('closing')) return;
-  if (still.matches) { lang.open = false; return; }
-  lang.classList.add('closing');
-  setTimeout(() => { lang.open = false; lang.classList.remove('closing'); }, 200);
+if (!lang.open || lang.classList.contains('closing')) return;
+if (still.matches) { lang.open = false; return; }
+lang.classList.add('closing');
+setTimeout(() => { lang.open = false; lang.classList.remove('closing'); }, 200);
 };
 document.addEventListener('click', e => langs.forEach(lang => {
-  if (!lang.open) return;
-  const summary = e.target.closest ? e.target.closest('summary') : null;
-  if (summary && lang.contains(summary)) { e.preventDefault(); shut(lang); }
-  else if (e.target === lang || !lang.contains(e.target)) shut(lang);
+if (!lang.open) return;
+const summary = e.target.closest ? e.target.closest('summary') : null;
+if (summary && lang.contains(summary)) { e.preventDefault(); shut(lang); }
+else if (e.target === lang || !lang.contains(e.target)) shut(lang);
 }));
 document.addEventListener('keydown', e => {
-  if (e.key !== 'Escape') return;
-  langs.forEach(lang => { if (lang.open) { shut(lang); lang.querySelector('summary').focus(); } });
+if (e.key !== 'Escape') return;
+langs.forEach(lang => { if (lang.open) { shut(lang); lang.querySelector('summary').focus(); } });
 });
 </script>
 
-<script src="/presentation.js?v=a1d449eb43" data-enlarge="Ingrandisci schermata: {name}" data-close="Chiudi visualizzatore" data-previous="Schermata precedente" data-next="Schermata successiva" defer></script>
-<script src="/price.js?v=5174912724" defer></script>
+<script src="/presentation.js?v=5192425b53" data-enlarge="Ingrandisci schermata: {name}" data-close="Chiudi visualizzatore" data-previous="Schermata precedente" data-next="Schermata successiva" defer></script>
+<script src="/price.js?v=75cbf9b3af" defer></script>
 </body>
 </html>
