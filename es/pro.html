@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Funciones Pro · Privaro</title>
-<meta name="description" content="Exactamente qué hace cada función de Privaro Pro: almacenamiento ilimitado, caja fuerte señuelo, borrado de emergencia, protección contra capturas, copia cifrada y más." />
+<meta name="description" content="Exactamente qué hace cada función de Privaro Pro: almacenamiento ilimitado, bóveda señuelo, borrado de emergencia, protección contra capturas, copia cifrada y más." />
 <meta name="apple-itunes-app" content="app-id=6783131829" />
 <meta name="color-scheme" content="dark" />
 <link rel="canonical" href="https://privaroapp.nl/es/pro" />
@@ -29,39 +29,37 @@
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Privaro" />
 <meta property="og:title" content="Funciones Pro · Privaro" />
-<meta property="og:description" content="Exactamente qué hace cada función de Privaro Pro: almacenamiento ilimitado, caja fuerte señuelo, borrado de emergencia, protección contra capturas, copia cifrada y más." />
+<meta property="og:description" content="Exactamente qué hace cada función de Privaro Pro: almacenamiento ilimitado, bóveda señuelo, borrado de emergencia, protección contra capturas, copia cifrada y más." />
 <meta property="og:url" content="https://privaroapp.nl/es/pro" />
 <meta property="og:image" content="https://privaroapp.nl/og.jpg?v=82627ffc6c" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Privaro. Your space. Your privacy. Available on the App Store. Three iPhones show the vault, Privacy Mode and the lock screen." />
 <meta property="og:locale" content="es_ES" />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=925f1f6cf6" />
-<link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
+<link rel="stylesheet" href="/styles.css?v=9be721741f" />
 <script>
-// Register before first reveal, including restored history entries.
 (() => {
-  let transition;
-  window.addEventListener("pagereveal", event => {
-    transition = event.viewTransition;
-    if (!transition) {
-      document.documentElement.classList.remove("page-crossfade");
-      return;
-    }
-    const current = transition;
-    document.documentElement.classList.add("page-crossfade");
-    current.finished.catch(() => {}).finally(() => {
-      if (transition !== current) return;
-      transition = null;
-      document.documentElement.classList.remove("page-crossfade");
-    });
-  });
-  // Intent takes priority over decoration; never consume the user's event.
-  const interrupt = () => transition?.skipTransition();
-  window.addEventListener("pointerdown", interrupt, { capture: true, passive: true });
-  window.addEventListener("keydown", interrupt, { capture: true });
+let transition;
+window.addEventListener("pagereveal", event => {
+transition = event.viewTransition;
+if (!transition) {
+document.documentElement.classList.remove("page-crossfade");
+return;
+}
+const current = transition;
+document.documentElement.classList.add("page-crossfade");
+current.finished.catch(() => {}).finally(() => {
+if (transition !== current) return;
+transition = null;
+document.documentElement.classList.remove("page-crossfade");
+});
+});
+const interrupt = () => transition?.skipTransition();
+window.addEventListener("pointerdown", interrupt, { capture: true, passive: true });
+window.addEventListener("keydown", interrupt, { capture: true });
 })();
 </script>
 </head>
@@ -70,25 +68,26 @@
 <a class="skip" href="#main">Saltar al contenido</a>
 <header class="site-head">
   <div class="head-bar">
-    <nav class="head-links" aria-label="Privaro">
+    <nav class="head-links head-links-wide" aria-label="Privaro">
       <a href="/es/pro" aria-current="page">Funciones Pro</a>
-      <a href="/security">Seguridad</a>
+      <a href="/es/security">Seguridad</a>
       <a href="/es/faq">Preguntas</a>
     </nav>
-    <a class="brand" href="/es"><img src="/logo.png" width="28" height="28" alt="" />Privaro</a>
+    <a class="brand" href="/es/"><img src="/logo.png" width="28" height="28" alt="" />Privaro</a>
     <div class="head-end">
       <details class="lang"><summary aria-label="Idioma: Español"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>Español</span><svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg></summary><div class="lang-menu"><p class="lang-head">Idioma</p><div class="lang-list"><a href="/pro" lang="en" hreflang="en"><span>English</span></a><a href="/es/pro" lang="es" hreflang="es" class="active" aria-current="true"><span>Español</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></a><a href="/fr/pro" lang="fr" hreflang="fr"><span>Français</span></a><a href="/de/pro" lang="de" hreflang="de"><span>Deutsch</span></a><a href="/it/pro" lang="it" hreflang="it"><span>Italiano</span></a><a href="/pt-br/pro" lang="pt-BR" hreflang="pt-BR"><span>Português</span></a><a href="/zh/pro" lang="zh-Hans" hreflang="zh-Hans"><span>简体中文</span></a><a href="/ko/pro" lang="ko" hreflang="ko"><span>한국어</span></a><a href="/nl/pro" lang="nl" hreflang="nl"><span>Nederlands</span></a><a href="/ja/pro" lang="ja" hreflang="ja"><span>日本語</span></a><a href="/zh-hant/pro" lang="zh-Hant" hreflang="zh-Hant"><span>繁體中文</span></a><a href="/ru/pro" lang="ru" hreflang="ru"><span>Русский</span></a><a href="/tr/pro" lang="tr" hreflang="tr"><span>Türkçe</span></a><a href="/id/pro" lang="id" hreflang="id"><span>Bahasa Indonesia</span></a><a href="/hi/pro" lang="hi" hreflang="hi"><span>हिन्दी</span></a><a href="/ar/pro" lang="ar" hreflang="ar"><span>العربية</span></a><a href="/ur/pro" lang="ur" hreflang="ur"><span>اردو</span></a></div></div></details>
       <a class="head-get" href="https://apps.apple.com/app/id6783131829" aria-label="Descarga Privaro en el App Store">Descargar</a>
     </div>
+    <nav class="head-links head-links-phone" aria-label="Privaro">
+      <a href="/es/pro" aria-current="page">Funciones Pro</a>
+      <a href="/es/security">Seguridad</a>
+      <a href="/es/faq">Preguntas</a>
+    </nav>
   </div>
 </header>
 
 <main id="main" class="page wrap pro">
 
-  <!-- What Pro is, and one switch: Free or Pro. It's two radio buttons drawn
-       as one control, so it needs no script, and the page answers to it
-       (styles.css): the limits under it change, and the features dim to
-       dashes on Free and checks on Pro. It starts on Pro. -->
   <section class="pro-hero" aria-labelledby="pro-title">
     <h1 id="pro-title">Todo lo que desbloquea Pro.</h1>
     <p class="intro">Pro es una compra única de <span class="price" data-price="pro">9,99 €</span>. Quita los límites de la versión gratuita y añade todo lo que ves abajo, en cada dispositivo con tu Apple Account. Nada se renueva y no hay nada que cancelar.</p>
@@ -101,39 +100,35 @@
     <p class="plan-hint">Cámbialo y compara.</p>
   </section>
 
-  <!-- The three limits, as they are on the side the switch is on. -->
   <dl class="limits">
       <div><dt>Almacenamiento</dt><dd class="limit swap"><span class="when-free">2,5 GB</span><span class="when-pro">Sin límite</span></dd><dd class="limit-note swap"><span class="when-free">Después, no cabe más.</span><span class="when-pro">Solo cuenta el espacio libre de tu iPhone.</span></dd></div>
       <div><dt>Álbumes</dt><dd class="limit swap"><span class="when-free">5</span><span class="when-pro">Ilimitados</span></dd><dd class="limit-note swap"><span class="when-free">Sin carpetas dentro de carpetas.</span><span class="when-pro">Y carpetas dentro de carpetas.</span></dd></div>
       <div><dt>Códigos</dt><dd class="limit swap"><span class="when-free">1</span><span class="when-pro">3</span></dd><dd class="limit-note swap"><span class="when-free">El tuyo.</span><span class="when-pro">El tuyo, uno señuelo y uno que lo borra todo.</span></dd></div>
   </dl>
 
-  <!-- The twelve features, one to a row. -->
   <section class="pro-list" aria-labelledby="pro-list-title">
     <h2 id="pro-list-title" class="swap"><span class="when-free">No incluido en Gratis</span><span class="when-pro">Incluido en Pro</span></h2>
     <ul>
       <li class="mark-yes"><h3>Almacenamiento ilimitado</h3><p>La versión gratuita admite hasta 2,5 GB. Pro no tiene límite: solo cuenta el espacio libre de tu iPhone.</p></li>
       <li class="mark-yes"><h3>Álbumes y carpetas ilimitados</h3><p>La versión gratuita incluye hasta 5 álbumes. Con Pro puedes crear todos los que quieras y meter carpetas dentro de carpetas.</p></li>
-      <li class="mark-yes"><h3>Contraseñas por álbum</h3><p>Ponle a un álbum su propia contraseña. Seguirá bloqueado aunque el resto de la caja fuerte esté abierta.</p></li>
-      <li class="mark-yes"><h3>Bloqueo por ubicación</h3><p>Permite que la caja fuerte se desbloquee solo en lugares de confianza, como tu casa. En cualquier otro sitio permanece bloqueada, incluso con el código correcto.</p></li>
-      <li class="mark-yes"><h3>Caja fuerte señuelo</h3><p>Configura un segundo código que abre una caja fuerte aparte con fotos inofensivas. Si alguna vez te obligan a desbloquear Privaro, introduce ese y tu caja fuerte real no aparece.</p></li>
-      <li class="mark-yes"><h3>Borrado de emergencia</h3><p>Configura un código que borra toda la caja fuerte, señuelo incluido, en cuanto se introduce. Está pensado para el peor de los casos y no se puede deshacer.</p></li>
-      <li class="mark-yes"><h3>Captura de intrusos</h3><p>Si alguien introduce un código incorrecto, Privaro puede tomar en silencio una foto con la cámara frontal y registrar el intento con fecha y hora, para que sepas si alguien ha intentado entrar en tu caja fuerte.</p></li>
-      <li class="mark-yes"><h3>Protección contra capturas y grabación</h3><p>Evita que tu caja fuerte se capture mediante capturas, grabación de pantalla o AirPlay mientras la app está abierta, para que nada se filtre por accidente a tu carrete ni a una pantalla espejada.</p></li>
+      <li class="mark-yes"><h3>Contraseñas por álbum</h3><p>Ponle a un álbum su propia contraseña. Seguirá bloqueado aunque el resto de la bóveda esté abierta.</p></li>
+      <li class="mark-yes"><h3>Bloqueo por ubicación</h3><p>Permite que la bóveda se desbloquee solo en lugares de confianza, como tu casa. En cualquier otro sitio permanece bloqueada, incluso con el código correcto.</p></li>
+      <li class="mark-yes"><h3>Bóveda señuelo</h3><p>Configura un segundo código que abre una bóveda aparte con fotos inofensivas. Si alguna vez te obligan a desbloquear Privaro, introduce ese y tu bóveda real no aparece.</p></li>
+      <li class="mark-yes"><h3>Borrado de emergencia</h3><p>Configura un código que borra toda la bóveda, señuelo incluido, en cuanto se introduce. Está pensado para el peor de los casos y no se puede deshacer.</p></li>
+      <li class="mark-yes"><h3>Captura de intrusos</h3><p>Si alguien introduce un código incorrecto, Privaro puede tomar en silencio una foto con la cámara frontal y registrar el intento con fecha y hora, para que sepas si alguien ha intentado entrar en tu bóveda.</p></li>
+      <li class="mark-yes"><h3>Protección contra capturas y grabación</h3><p>Evita que tu bóveda se capture mediante capturas, grabación de pantalla o AirPlay mientras la app está abierta, para que nada se filtre por accidente a tu carrete ni a una pantalla espejada.</p></li>
       <li class="mark-yes"><h3>Icono de app camuflado</h3><p>Oculta Privaro tras un icono y un nombre cotidianos, como Calculadora o Notas, para que no llame la atención en tu pantalla de inicio. Las variantes de color del icono son gratis; los disfraces son Pro.</p></li>
-      <li class="mark-yes"><h3>Copia cifrada en iCloud y exportación</h3><p>Haz copia de tu caja fuerte en tu propio iCloud o expórtala como un único archivo cifrado. Ambas opciones se cifran en tu dispositivo antes de salir, así nadie (ni siquiera nosotros) puede leerlas. Restaurar una copia siempre es gratis, incluso sin Pro.</p></li>
-      <li class="mark-yes"><h3>Transferencia por Wi-Fi</h3><p>Envía archivos a la caja fuerte desde el navegador de cualquier ordenador a través de tu red local. Sin cables, sin nube y sin instalar otra app en el ordenador.</p></li>
+      <li class="mark-yes"><h3>Copia cifrada en iCloud y exportación</h3><p>Haz copia de tu bóveda en tu propio iCloud o expórtala como un único archivo cifrado. Ambas opciones se cifran en tu dispositivo antes de salir, así nadie (ni siquiera nosotros) puede leerlas. Restaurar una copia siempre es gratis, incluso sin Pro.</p></li>
+      <li class="mark-yes"><h3>Transferencia por Wi-Fi</h3><p>Envía archivos a la bóveda desde el navegador de cualquier ordenador a través de tu red local. Sin cables, sin nube y sin instalar otra app en el ordenador.</p></li>
       <li class="mark-yes"><h3>Compartir seguro</h3><p>Envía fotos o vídeos a otra persona que use Privaro como un archivo cifrado que solo se abre con la frase de contraseña que elijas. Nada pasa por nosotros.</p></li>
     </ul>
   </section>
 
-  <!-- What's the same either way. -->
   <section class="basics">
     <h2>Gratis o Pro, lo esencial no cambia:</h2>
     <ul><li>AES-256</li><li>Sin cuenta</li><li>Face ID o código</li><li>Funciona sin conexión</li></ul>
   </section>
 
-  <!-- The price once more, set large, and where to pay it. -->
   <section class="pro-price">
     <div class="pro-figure"><p><span class="price" data-price="pro">9,99 €</span></p></div>
     <div class="pro-pay">
@@ -144,13 +139,11 @@
 
 </main>
 
-<!-- A row of plain links and the page's controls, like the header's, and
-     one quiet line under it. -->
 <footer class="site-foot wrap">
   <nav class="foot-links">
     <a href="/es/pro" aria-current="page">Funciones Pro</a>
     <a href="/es/faq">Preguntas</a>
-    <a href="/security">Seguridad</a>
+    <a href="/es/security">Seguridad</a>
     <a href="/es/privacy">Política de privacidad</a>
     <a href="/es/terms">Términos de uso</a>
     <a href="mailto:erdincdubu@icloud.com">Contacto</a>
@@ -161,34 +154,27 @@
 
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
-// The language menus (one in the header, one in the footer) are <details>;
-// close an open one on a click elsewhere, on its own button, or on Escape.
-// On phones a click on the dimmed page lands on the <details> itself (its
-// ::before is the dimming), so that counts as elsewhere too. A menu leaves
-// as it came rather than vanishing: it's held open for the moment its way
-// out takes (.closing in styles.css), then closed. With Reduce Motion it
-// just closes.
 const langs = document.querySelectorAll('.lang');
 const still = matchMedia('(prefers-reduced-motion: reduce)');
 const shut = lang => {
-  if (!lang.open || lang.classList.contains('closing')) return;
-  if (still.matches) { lang.open = false; return; }
-  lang.classList.add('closing');
-  setTimeout(() => { lang.open = false; lang.classList.remove('closing'); }, 200);
+if (!lang.open || lang.classList.contains('closing')) return;
+if (still.matches) { lang.open = false; return; }
+lang.classList.add('closing');
+setTimeout(() => { lang.open = false; lang.classList.remove('closing'); }, 200);
 };
 document.addEventListener('click', e => langs.forEach(lang => {
-  if (!lang.open) return;
-  const summary = e.target.closest ? e.target.closest('summary') : null;
-  if (summary && lang.contains(summary)) { e.preventDefault(); shut(lang); }
-  else if (e.target === lang || !lang.contains(e.target)) shut(lang);
+if (!lang.open) return;
+const summary = e.target.closest ? e.target.closest('summary') : null;
+if (summary && lang.contains(summary)) { e.preventDefault(); shut(lang); }
+else if (e.target === lang || !lang.contains(e.target)) shut(lang);
 }));
 document.addEventListener('keydown', e => {
-  if (e.key !== 'Escape') return;
-  langs.forEach(lang => { if (lang.open) { shut(lang); lang.querySelector('summary').focus(); } });
+if (e.key !== 'Escape') return;
+langs.forEach(lang => { if (lang.open) { shut(lang); lang.querySelector('summary').focus(); } });
 });
 </script>
 
-<script src="/presentation.js?v=a1d449eb43" data-enlarge="Ampliar captura: {name}" data-close="Cerrar visor" data-previous="Captura anterior" data-next="Captura siguiente" defer></script>
-<script src="/price.js?v=5174912724" defer></script>
+<script src="/presentation.js?v=5192425b53" data-enlarge="Ampliar captura: {name}" data-close="Cerrar visor" data-previous="Captura anterior" data-next="Captura siguiente" defer></script>
+<script src="/price.js?v=75cbf9b3af" defer></script>
 </body>
 </html>

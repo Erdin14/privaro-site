@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Politique de confidentialité · Privaro</title>
-<meta name="description" content="Comment Privaro traite vos informations. En bref : votre contenu est chiffré sur votre appareil et ne nous est jamais transmis." />
+<meta name="description" content="Comment Privaro traite vos informations. En bref : votre contenu est chiffré sur votre appareil et ne nous est jamais transmis." />
 <link rel="canonical" href="https://privaroapp.nl/fr/privacy" />
 <link rel="alternate" hreflang="en" href="https://privaroapp.nl/privacy" />
 <link rel="alternate" hreflang="es" href="https://privaroapp.nl/es/privacy" />
@@ -27,41 +27,39 @@
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Privaro" />
 <meta property="og:title" content="Politique de confidentialité · Privaro" />
-<meta property="og:description" content="Comment Privaro traite vos informations. En bref : votre contenu est chiffré sur votre appareil et ne nous est jamais transmis." />
+<meta property="og:description" content="Comment Privaro traite vos informations. En bref : votre contenu est chiffré sur votre appareil et ne nous est jamais transmis." />
 <meta property="og:url" content="https://privaroapp.nl/fr/privacy" />
 <meta property="og:image" content="https://privaroapp.nl/og.jpg?v=82627ffc6c" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Privaro. Your space. Your privacy. Available on the App Store. Three iPhones show the vault, Privacy Mode and the lock screen." />
 <meta property="og:locale" content="fr_FR" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="color-scheme" content="dark" />
 <meta name="apple-itunes-app" content="app-id=6783131829" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=925f1f6cf6" />
-<link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
+<link rel="stylesheet" href="/styles.css?v=9be721741f" />
 <script>
-// Register before first reveal, including restored history entries.
 (() => {
-  let transition;
-  window.addEventListener("pagereveal", event => {
-    transition = event.viewTransition;
-    if (!transition) {
-      document.documentElement.classList.remove("page-crossfade");
-      return;
-    }
-    const current = transition;
-    document.documentElement.classList.add("page-crossfade");
-    current.finished.catch(() => {}).finally(() => {
-      if (transition !== current) return;
-      transition = null;
-      document.documentElement.classList.remove("page-crossfade");
-    });
-  });
-  // Intent takes priority over decoration; never consume the user's event.
-  const interrupt = () => transition?.skipTransition();
-  window.addEventListener("pointerdown", interrupt, { capture: true, passive: true });
-  window.addEventListener("keydown", interrupt, { capture: true });
+let transition;
+window.addEventListener("pagereveal", event => {
+transition = event.viewTransition;
+if (!transition) {
+document.documentElement.classList.remove("page-crossfade");
+return;
+}
+const current = transition;
+document.documentElement.classList.add("page-crossfade");
+current.finished.catch(() => {}).finally(() => {
+if (transition !== current) return;
+transition = null;
+document.documentElement.classList.remove("page-crossfade");
+});
+});
+const interrupt = () => transition?.skipTransition();
+window.addEventListener("pointerdown", interrupt, { capture: true, passive: true });
+window.addEventListener("keydown", interrupt, { capture: true });
 })();
 </script>
 </head>
@@ -70,38 +68,39 @@
 <a class="skip" href="#main">Aller au contenu</a>
 <header class="site-head">
   <div class="head-bar">
-    <nav class="head-links" aria-label="Privaro">
+    <nav class="head-links head-links-wide" aria-label="Privaro">
       <a href="/fr/pro">Fonctions Pro</a>
-      <a href="/security">Sécurité</a>
+      <a href="/fr/security">Sécurité</a>
       <a href="/fr/faq">Questions</a>
     </nav>
-    <a class="brand" href="/fr"><img src="/logo.png" width="28" height="28" alt="" />Privaro</a>
+    <a class="brand" href="/fr/"><img src="/logo.png" width="28" height="28" alt="" />Privaro</a>
     <div class="head-end">
       <details class="lang"><summary aria-label="Langue: Français"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>Français</span><svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg></summary><div class="lang-menu"><p class="lang-head">Langue</p><div class="lang-list"><a href="/privacy" lang="en" hreflang="en"><span>English</span></a><a href="/es/privacy" lang="es" hreflang="es"><span>Español</span></a><a href="/fr/privacy" lang="fr" hreflang="fr" class="active" aria-current="true"><span>Français</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></a><a href="/de/privacy" lang="de" hreflang="de"><span>Deutsch</span></a><a href="/it/privacy" lang="it" hreflang="it"><span>Italiano</span></a><a href="/pt-br/privacy" lang="pt-BR" hreflang="pt-BR"><span>Português</span></a><a href="/zh/privacy" lang="zh-Hans" hreflang="zh-Hans"><span>简体中文</span></a><a href="/ko/privacy" lang="ko" hreflang="ko"><span>한국어</span></a><a href="/nl/privacy" lang="nl" hreflang="nl"><span>Nederlands</span></a><a href="/ja/privacy" lang="ja" hreflang="ja"><span>日本語</span></a><a href="/zh-hant/privacy" lang="zh-Hant" hreflang="zh-Hant"><span>繁體中文</span></a><a href="/ru/privacy" lang="ru" hreflang="ru"><span>Русский</span></a><a href="/tr/privacy" lang="tr" hreflang="tr"><span>Türkçe</span></a><a href="/id/privacy" lang="id" hreflang="id"><span>Bahasa Indonesia</span></a><a href="/hi/privacy" lang="hi" hreflang="hi"><span>हिन्दी</span></a><a href="/ar/privacy" lang="ar" hreflang="ar"><span>العربية</span></a><a href="/ur/privacy" lang="ur" hreflang="ur"><span>اردو</span></a></div></div></details>
       <a class="head-get" href="https://apps.apple.com/app/id6783131829" aria-label="Télécharger Privaro sur l’App Store">Télécharger</a>
     </div>
+    <nav class="head-links head-links-phone" aria-label="Privaro">
+      <a href="/fr/pro">Fonctions Pro</a>
+      <a href="/fr/security">Sécurité</a>
+      <a href="/fr/faq">Questions</a>
+    </nav>
   </div>
 </header>
 
 <main id="main" class="page wrap legal-page privacy">
 
-  <!-- The title, when it was written, and who it's from. -->
   <header class="legal-hero">
     <h1>Politique de confidentialité</h1>
-    <p class="updated">Date d’entrée en vigueur : 28 juin 2026 · Dernière mise à jour : 8 novembre 2026</p>
-    <p class="intro">Privaro (« Privaro », « l’app », « nous » ou « notre ») est un coffre privé et chiffré pour photos et vidéos sur iOS, fourni par Erdinc Zarbo, Pays-Bas. Cette politique de confidentialité explique comment Privaro traite vos informations.</p>
+    <p class="updated">Date d’entrée en vigueur : 28 juin 2026 · Dernière mise à jour : 8 novembre 2026</p>
+    <p class="intro">Privaro (« Privaro », « l’app », « nous » ou « notre ») est un coffre privé et chiffré pour photos et vidéos sur iOS, fourni par Erdinc Zarbo, Pays-Bas. Cette politique de confidentialité explique comment Privaro traite vos informations.</p>
   </header>
 
-  <!-- The short version, for anyone who reads nothing else: set large,
-       between two lines. -->
-  <aside class="legal-callout" aria-label="En bref :">
-    <p class="legal-callout-label">En bref :</p>
+  <aside class="legal-callout" aria-label="En bref :">
+    <p class="legal-callout-label">En bref :</p>
     <p class="legal-callout-body">Privaro est conçu pour être privé par nature. <strong>Vos photos, vidéos, albums, légendes et tags sont chiffrés sur votre appareil et ne nous sont jamais transmis.</strong> Il n’y a pas de système de comptes, nous n’exploitons aucun serveur stockant votre contenu et nous ne pouvons pas voir ce que contient votre coffre. Il n’y a ni publicité ni suivi. Les seules données qui quittent votre appareil sont celles dont Apple a besoin pour traiter un achat.</p>
   </aside>
 
-  <!-- The sections, numbered as they are below, each a link to it. -->
   <nav class="legal-index" aria-labelledby="legal-index-h">
-    <p id="legal-index-h" class="legal-index-label">In questa pagina</p>
+    <p id="legal-index-h" class="legal-index-label">Sur cette page</p>
     <ol>
       <li><a href="#not-collected">Informations que nous ne collectons pas</a></li>
       <li><a href="#on-device">Votre contenu reste sur votre appareil (et il est chiffré)</a></li>
@@ -117,8 +116,6 @@
     </ol>
   </nav>
 
-  <!-- Each section an article: its number and title on the left, the text
-       on the right, in a reading measure. -->
   <div class="articles">
   <section class="article" id="not-collected" aria-labelledby="not-collected-h">
     <h2 id="not-collected-h">Informations que nous ne collectons pas</h2>
@@ -136,45 +133,45 @@
   <section class="article" id="on-device" aria-labelledby="on-device-h">
     <h2 id="on-device-h">Votre contenu reste sur votre appareil (et il est chiffré)</h2>
     <div class="article-body">
-      <p>Tout ce que vous ajoutez à Privaro (photos, vidéos, miniatures, albums, légendes, tags et noms de fichiers) est chiffré sur votre appareil avec le chiffrement AES-256-GCM, standard du secteur. La clé est générée sur votre appareil et conservée dans le trousseau iOS ; elle est protégée par le code de votre appareil et n’est disponible que sur cet appareil. Votre code Privaro et la biométrie déterminent qui peut ouvrir le coffre dans l’app. Les fichiers chiffrés sont stockés dans l’espace privé de l’app avec une protection de fichier complète et sont exclus des sauvegardes non chiffrées.</p>
+      <p>Tout ce que vous ajoutez à Privaro (photos, vidéos, miniatures, albums, légendes, tags et noms de fichiers) est chiffré sur votre appareil avec le chiffrement AES-256-GCM, standard du secteur. La clé est générée sur votre appareil et conservée dans le trousseau iOS ; elle est protégée par le code de votre appareil et n’est disponible que sur cet appareil. Votre code Privaro et la biométrie déterminent qui peut ouvrir le coffre dans l’app. Les fichiers chiffrés sont stockés dans l’espace privé de l’app avec une protection de fichier complète et sont exclus des sauvegardes non chiffrées.</p>
       <p>Comme le chiffrement a lieu sur votre appareil et que la clé ne le quitte jamais, nous n’avons aucun moyen d’accéder à votre contenu, de le déchiffrer ou de le récupérer. Si vous oubliez votre code et votre clé de récupération, vos données ne pourront être récupérées ni par nous ni par quiconque.</p>
     </div>
   </section>
   <section class="article" id="optional-features" aria-labelledby="optional-features-h">
     <h2 id="optional-features-h">Fonctionnalités optionnelles impliquant une sortie de données</h2>
     <div class="article-body">
-      <p>Ces fonctionnalités sont désactivées par défaut et ne fonctionnent que si vous choisissez de les utiliser :</p>
+      <p>Ces fonctionnalités sont désactivées par défaut et ne fonctionnent que si vous choisissez de les utiliser :</p>
       <ul>
-        <li><strong>Sauvegarde iCloud chiffrée (optionnelle, Pro).</strong> Si vous l’activez, Privaro enregistre une copie chiffrée de votre coffre dans votre propre compte iCloud. Les données sont chiffrées sur votre appareil avant l’envoi ; la clé est encapsulée à l’aide d’une clé dérivée de votre clé de récupération (PBKDF2-HMAC-SHA256). Nous ne recevons jamais votre sauvegarde ni votre clé. iCloud est exploité par Apple et régi par la <a href="https://www.apple.com/legal/privacy/">politique de confidentialité d’Apple</a>.</li>
-        <li><strong>Partage / export.</strong> Lorsque vous partagez ou exportez un élément (y compris les fichiers chiffrés <code>.privaroshare</code> ou « Enregistrer dans Photos »), ce contenu quitte le coffre selon vos instructions. Sa destination et sa protection dépendent alors du service que vous choisissez.</li>
-        <li><strong>Transfert Wi-Fi (optionnel).</strong> Permet de transférer des fichiers entre votre appareil et un navigateur sur le même réseau local. Cette connexion est locale et n’est pas chiffrée pendant le transit : ne l’utilisez que sur un réseau de confiance. Les fichiers sont chiffrés dès leur importation dans le coffre. Aucune donnée ne nous est envoyée ni ne transite par internet pendant un transfert.</li>
+        <li><strong>Sauvegarde iCloud chiffrée (optionnelle, Pro).</strong> Si vous l’activez, Privaro enregistre une copie chiffrée de votre coffre dans votre propre compte iCloud. Les données sont chiffrées sur votre appareil avant l’envoi ; la clé est encapsulée à l’aide d’une clé dérivée de votre clé de récupération (PBKDF2-HMAC-SHA256). Nous ne recevons jamais votre sauvegarde ni votre clé. iCloud est exploité par Apple et régi par la <a href="https://www.apple.com/legal/privacy/">politique de confidentialité d’Apple</a>.</li>
+        <li><strong>Partage / export.</strong> Lorsque vous partagez ou exportez un élément (y compris les fichiers chiffrés <code>.privaroshare</code> ou « Enregistrer dans Photos »), ce contenu quitte le coffre selon vos instructions. Sa destination et sa protection dépendent alors du service que vous choisissez.</li>
+        <li><strong>Transfert Wi-Fi (optionnel).</strong> Permet de transférer des fichiers entre votre appareil et un navigateur sur le même réseau local. Cette connexion est locale et n’est pas chiffrée pendant le transit : ne l’utilisez que sur un réseau de confiance. Les fichiers sont chiffrés dès leur importation dans le coffre. Aucune donnée ne nous est envoyée ni ne transite par internet pendant un transfert.</li>
       </ul>
     </div>
   </section>
   <section class="article" id="permissions" aria-labelledby="permissions-h">
     <h2 id="permissions-h">Autorisations de l’appareil et raisons</h2>
     <div class="article-body">
-      <p>Privaro ne les demande qu’en cas de besoin, et les données sont utilisées sur votre appareil pour l’usage indiqué :</p>
+      <p>Privaro ne les demande qu’en cas de besoin, et les données sont utilisées sur votre appareil pour l’usage indiqué :</p>
       <ul>
-        <li><strong>Photos</strong> : pour importer dans votre coffre les photos et vidéos que vous sélectionnez, et pour les réenregistrer à l’extérieur si vous le souhaitez.</li>
-        <li><strong>Appareil photo</strong> : pour capturer des photos et vidéos directement dans le coffre, pour l’appareil photo intégré et, si vous l’activez, pour prendre une photo lors d’une tentative de déverrouillage échouée (« capture d’intrus »). Ces photos sont chiffrées et conservées uniquement sur votre appareil ; vous pouvez les consulter et les supprimer à tout moment.</li>
-        <li><strong>Micro</strong> : pour enregistrer le son des vidéos que vous capturez dans l’app.</li>
-        <li><strong>Face ID / Touch ID (biométrie)</strong> : pour déverrouiller votre coffre. L’authentification biométrique est entièrement gérée par iOS ; Privaro ne reçoit ni ne stocke jamais vos données biométriques.</li>
-        <li><strong>Localisation (optionnelle, « Verrouillage par lieu »)</strong> : si vous l’activez, la position de votre appareil est vérifiée sur l’appareil lui-même pour décider d’autoriser le déverrouillage dans les lieux que vous avez marqués comme fiables. Votre position n’est ni collectée, ni journalisée, ni transmise.</li>
-        <li><strong>Réseau local</strong> : pour la fonction optionnelle de transfert Wi-Fi décrite ci-dessus.</li>
+        <li><strong>Photos</strong> : pour importer dans votre coffre les photos et vidéos que vous sélectionnez, et pour les réenregistrer à l’extérieur si vous le souhaitez.</li>
+        <li><strong>Appareil photo</strong> : pour capturer des photos et vidéos directement dans le coffre, pour l’appareil photo intégré et, si vous l’activez, pour prendre une photo lors d’une tentative de déverrouillage échouée (« capture d’intrus »). Ces photos sont chiffrées et conservées uniquement sur votre appareil ; vous pouvez les consulter et les supprimer à tout moment.</li>
+        <li><strong>Micro</strong> : pour enregistrer le son des vidéos que vous capturez dans l’app.</li>
+        <li><strong>Face ID / Touch ID (biométrie)</strong> : pour déverrouiller votre coffre. L’authentification biométrique est entièrement gérée par iOS ; Privaro ne reçoit ni ne stocke jamais vos données biométriques.</li>
+        <li><strong>Localisation (optionnelle, « Verrouillage par lieu »)</strong> : si vous l’activez, la position de votre appareil est vérifiée sur l’appareil lui-même pour décider d’autoriser le déverrouillage dans les lieux que vous avez marqués comme fiables. Votre position n’est ni collectée, ni journalisée, ni transmise.</li>
+        <li><strong>Réseau local</strong> : pour la fonction optionnelle de transfert Wi-Fi décrite ci-dessus.</li>
       </ul>
     </div>
   </section>
   <section class="article" id="purchases" aria-labelledby="purchases-h">
     <h2 id="purchases-h">Achats (Apple)</h2>
     <div class="article-body">
-      <p>Privaro Pro est vendu sous forme d’achat unique via StoreKit / l’App Store d’Apple. Apple traite la transaction et votre paiement ; nous ne recevons pas vos informations de paiement. Le statut de l’achat est géré par votre compte Apple. Consultez la <a href="https://www.apple.com/legal/privacy/">politique de confidentialité d’Apple</a>.</p>
+      <p>Privaro Pro est vendu sous forme d’achat unique via StoreKit / l’App Store d’Apple. Apple traite la transaction et votre paiement ; nous ne recevons pas vos informations de paiement. Le statut de l’achat est géré par votre compte Apple. Consultez la <a href="https://www.apple.com/legal/privacy/">politique de confidentialité d’Apple</a>.</p>
     </div>
   </section>
   <section class="article" id="retention" aria-labelledby="retention-h">
     <h2 id="retention-h">Conservation et suppression des données</h2>
     <div class="article-body">
-      <p>Votre contenu reste sur votre appareil jusqu’à ce que vous le supprimiez. Les éléments supprimés passent dans « Supprimés récemment » et sont effacés définitivement au bout de 30 jours (ou immédiatement, si vous le choisissez). Supprimer l’app efface ses données ; si vous avez activé la sauvegarde iCloud, vous pouvez la supprimer depuis l’app ou depuis les réglages de stockage iCloud. Comme nous ne détenons pas vos données, il n’y a rien à supprimer de notre côté.</p>
+      <p>Votre contenu reste sur votre appareil jusqu’à ce que vous le supprimiez. Les éléments supprimés passent dans « Supprimés récemment » et sont effacés définitivement au bout de 30 jours (ou immédiatement, si vous le choisissez). Supprimer l’app efface ses données ; si vous avez activé la sauvegarde iCloud, vous pouvez la supprimer depuis l’app ou depuis les réglages de stockage iCloud. Comme nous ne détenons pas vos données, il n’y a rien à supprimer de notre côté.</p>
     </div>
   </section>
   <section class="article" id="children" aria-labelledby="children-h">
@@ -198,13 +195,13 @@
   <section class="article" id="changes" aria-labelledby="changes-h">
     <h2 id="changes-h">Modifications de cette politique</h2>
     <div class="article-body">
-      <p>Nous pouvons mettre à jour cette politique de confidentialité de temps à autre. Nous modifierons la date de « Dernière mise à jour » ci-dessus, et les changements importants seront signalés dans l’app ou sur notre site web.</p>
+      <p>Nous pouvons mettre à jour cette politique de confidentialité de temps à autre. Nous modifierons la date de « Dernière mise à jour » ci-dessus, et les changements importants seront signalés dans l’app ou sur notre site web.</p>
     </div>
   </section>
   <section class="article" id="contact" aria-labelledby="contact-h">
     <h2 id="contact-h">Nous contacter</h2>
     <div class="article-body">
-      <p>Pour toute question sur cette politique de confidentialité ou sur votre vie privée, contactez-nous à :<br />
+      <p>Pour toute question sur cette politique de confidentialité ou sur votre vie privée, contactez-nous à :<br />
       <a href="mailto:erdincdubu@icloud.com">erdincdubu@icloud.com</a></p>
     </div>
   </section>
@@ -214,15 +211,13 @@
 
 </main>
 
-<!-- A row of plain links and the page's controls, like the header's, and
-     one quiet line under it. -->
 <footer class="site-foot wrap">
   <nav class="foot-links">
     <a href="/fr/pro">Fonctions Pro</a>
     <a href="/fr/faq">Questions</a>
-    <a href="/security">Sécurité</a>
+    <a href="/fr/security">Sécurité</a>
     <a href="/fr/privacy" aria-current="page">Politique de confidentialité</a>
-    <a href="/fr/terms">Conditions d'utilisation</a>
+    <a href="/fr/terms">Conditions d’utilisation</a>
     <a href="mailto:erdincdubu@icloud.com">Contact</a>
     <details class="lang"><summary aria-label="Langue: Français"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>Français</span><svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg></summary><div class="lang-menu"><p class="lang-head">Langue</p><div class="lang-list"><a href="/privacy" lang="en" hreflang="en"><span>English</span></a><a href="/es/privacy" lang="es" hreflang="es"><span>Español</span></a><a href="/fr/privacy" lang="fr" hreflang="fr" class="active" aria-current="true"><span>Français</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></a><a href="/de/privacy" lang="de" hreflang="de"><span>Deutsch</span></a><a href="/it/privacy" lang="it" hreflang="it"><span>Italiano</span></a><a href="/pt-br/privacy" lang="pt-BR" hreflang="pt-BR"><span>Português</span></a><a href="/zh/privacy" lang="zh-Hans" hreflang="zh-Hans"><span>简体中文</span></a><a href="/ko/privacy" lang="ko" hreflang="ko"><span>한국어</span></a><a href="/nl/privacy" lang="nl" hreflang="nl"><span>Nederlands</span></a><a href="/ja/privacy" lang="ja" hreflang="ja"><span>日本語</span></a><a href="/zh-hant/privacy" lang="zh-Hant" hreflang="zh-Hant"><span>繁體中文</span></a><a href="/ru/privacy" lang="ru" hreflang="ru"><span>Русский</span></a><a href="/tr/privacy" lang="tr" hreflang="tr"><span>Türkçe</span></a><a href="/id/privacy" lang="id" hreflang="id"><span>Bahasa Indonesia</span></a><a href="/hi/privacy" lang="hi" hreflang="hi"><span>हिन्दी</span></a><a href="/ar/privacy" lang="ar" hreflang="ar"><span>العربية</span></a><a href="/ur/privacy" lang="ur" hreflang="ur"><span>اردو</span></a></div></div></details>
   </nav>
@@ -231,33 +226,26 @@
 
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
-// The language menus (one in the header, one in the footer) are <details>;
-// close an open one on a click elsewhere, on its own button, or on Escape.
-// On phones a click on the dimmed page lands on the <details> itself (its
-// ::before is the dimming), so that counts as elsewhere too. A menu leaves
-// as it came rather than vanishing: it's held open for the moment its way
-// out takes (.closing in styles.css), then closed. With Reduce Motion it
-// just closes.
 const langs = document.querySelectorAll('.lang');
 const still = matchMedia('(prefers-reduced-motion: reduce)');
 const shut = lang => {
-  if (!lang.open || lang.classList.contains('closing')) return;
-  if (still.matches) { lang.open = false; return; }
-  lang.classList.add('closing');
-  setTimeout(() => { lang.open = false; lang.classList.remove('closing'); }, 200);
+if (!lang.open || lang.classList.contains('closing')) return;
+if (still.matches) { lang.open = false; return; }
+lang.classList.add('closing');
+setTimeout(() => { lang.open = false; lang.classList.remove('closing'); }, 200);
 };
 document.addEventListener('click', e => langs.forEach(lang => {
-  if (!lang.open) return;
-  const summary = e.target.closest ? e.target.closest('summary') : null;
-  if (summary && lang.contains(summary)) { e.preventDefault(); shut(lang); }
-  else if (e.target === lang || !lang.contains(e.target)) shut(lang);
+if (!lang.open) return;
+const summary = e.target.closest ? e.target.closest('summary') : null;
+if (summary && lang.contains(summary)) { e.preventDefault(); shut(lang); }
+else if (e.target === lang || !lang.contains(e.target)) shut(lang);
 }));
 document.addEventListener('keydown', e => {
-  if (e.key !== 'Escape') return;
-  langs.forEach(lang => { if (lang.open) { shut(lang); lang.querySelector('summary').focus(); } });
+if (e.key !== 'Escape') return;
+langs.forEach(lang => { if (lang.open) { shut(lang); lang.querySelector('summary').focus(); } });
 });
 </script>
 
-<script src="/presentation.js?v=a1d449eb43" data-enlarge="Agrandir la capture : {name}" data-close="Fermer la visionneuse" data-previous="Capture précédente" data-next="Capture suivante" defer></script>
+<script src="/presentation.js?v=5192425b53" data-enlarge="Agrandir la capture : {name}" data-close="Fermer la visionneuse" data-previous="Capture précédente" data-next="Capture suivante" defer></script>
 </body>
 </html>

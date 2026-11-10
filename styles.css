@@ -105,6 +105,25 @@
   }
 }
 
+/* From one page to the next: a short crossfade, the browser's own, for
+   same-origin navigation and history traversals. Unsupported browsers
+   simply navigate; no click is intercepted and nothing waits to load.
+   (These rules were a second stylesheet, transitions.css: one more request
+   holding up every page's first paint.) */
+@view-transition { navigation: auto; }
+::view-transition { pointer-events: none; }
+::view-transition-group(*), ::view-transition-image-pair(*),
+::view-transition-old(*), ::view-transition-new(*) { pointer-events: none; }
+::view-transition-group(root) { animation-duration: 180ms; }
+::view-transition-old(root) { animation: quiet-page-out 180ms cubic-bezier(.2, 0, .2, 1) both; mix-blend-mode: normal; }
+::view-transition-new(root) { animation: quiet-page-in 180ms cubic-bezier(.2, 0, .2, 1) both; mix-blend-mode: normal; }
+@keyframes quiet-page-out { to { opacity: 0; } }
+@keyframes quiet-page-in { from { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  @view-transition { navigation: none; }
+  ::view-transition-group(root), ::view-transition-old(root), ::view-transition-new(root) { animation: none; }
+}
+
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { -webkit-text-size-adjust: 100%; }
 /* The canvas shows past the ends of the page: behind a phone's status bar at
@@ -186,6 +205,12 @@ main:focus { outline: none; }
   width: min(1000px, 100%); margin-inline: auto; font-size: 14px; }
 .home-scene .head-bar { width: min(1400px, 100%); }
 .head-links, .head-end { display: flex; align-items: center; gap: 28px; }
+/* The other pages are in the header twice (templates/partials/header.html):
+   before the name, for wide screens, and after the download, for phones,
+   where they're a row of their own under both. Only one is ever there, so
+   what a screen reader reads out and the Tab key steps through is the order
+   on screen at either size. */
+.head-links-phone { display: none; }
 :is(.head-links a, .brand, .site-head .lang, .head-get) { pointer-events: auto; }
 /* The line: one length either side of the name, taking whatever room the
    words leave. */
@@ -246,13 +271,14 @@ main:focus { outline: none; }
   .head-bar { grid-template-columns: auto minmax(0, 1fr); }
   .brand { grid-area: 1 / 1; }
   .head-end { grid-area: 1 / 2; }
+  .head-links-wide { display: none; }
   /* The gap gives a little on the narrowest phones, where Russian and
      Japanese would otherwise take a second line. */
-  .head-links { grid-area: 2 / 1 / auto / -1; flex-wrap: wrap; gap: 0 clamp(10px, 4.4vw, var(--space-5)); font-size: 14px; }
-  .head-links::after { content: none; }
+  .head-links-phone { display: flex; grid-area: 2 / 1 / auto / -1; flex-wrap: wrap; gap: 0 clamp(10px, 4.4vw, var(--space-5)); font-size: 14px; }
+  .head-links-phone::after { content: none; }
   /* Tall enough for a finger. */
   .head-links a { padding-block: 12px; }
-  .brand { padding-inline: 0 var(--space-4); font-size: 16px; }
+  .brand { padding-block: 9px; padding-inline: 0 var(--space-4); font-size: 16px; }
   .head-end { gap: 20px; }
   .head-get { padding-block: 11px; font-size: 15px; }
   /* The globe alone, with room around it for a finger. */
@@ -352,9 +378,10 @@ main:focus { outline: none; }
   @supports (grid-template-columns: subgrid) {
     .hero .buy { display: grid; grid-template-columns: subgrid; column-gap: normal; }
   }
-  /* In the closing it follows the badge, behind a hairline. */
-  .closing .buy { justify-content: flex-start; }
-  .closing .handoff { padding-inline-start: var(--space-7); border-inline-start: 1px solid var(--rule); }
+  /* In the closing, and where a reading page ends (.get), it follows the
+     badge, behind a hairline. */
+  :is(.closing, .get) .buy { justify-content: flex-start; }
+  :is(.closing, .get) .handoff { padding-inline-start: var(--space-7); border-inline-start: 1px solid var(--rule); }
 }
 /* The badge keeps its size however long the words beside it are. */
 .buy .appstore { flex: none; }
@@ -918,11 +945,6 @@ main:focus { outline: none; }
 .missing h1 { max-width: 9em; margin-top: var(--space-3); font-size: clamp(44px, 6.4vw, 96px); line-height: 1; letter-spacing: var(--track-display); }
 .missing .intro { max-width: 30em; }
 .missing-home { margin-top: var(--space-7); font-size: var(--size-lead); }
-/* The other pages, for phones, where the header doesn't list them; wider
-   screens have them in the header just above. */
-.missing-others { display: none; flex-wrap: wrap; gap: var(--space-2) var(--space-5); margin-top: var(--space-4); font-size: 15px; }
-.missing-others a { color: var(--muted); transition: color var(--dur-state) var(--ease-state); }
-.missing-others a:hover { color: var(--ink); text-decoration: none; }
 /* The legal pages, Terms of Use and Privacy Policy. The title, when it was
    written and what it covers; then the one thing to read if nothing else
    (the Terms' warning, the Policy's short version), set large between two
@@ -1057,6 +1079,16 @@ main:focus { outline: none; }
   line-height: 1.05; letter-spacing: var(--track-display); }
 .doc .report p { margin: 0; font-size: var(--size-lead); line-height: 1.55; color: var(--muted); }
 
+/* Where a reading page ends (Questions, Security): the badge and what the
+   app needs, set as the homepage's closing is. Someone who came to check a
+   claim, and is now satisfied, shouldn't have to go looking for the way to
+   the App Store; on a phone the header's has scrolled away long before. */
+.get { margin-top: var(--space-8); }
+/* The security overview under another language's header (build.py): one
+   quiet line above the title saying it's in English. Set from the left,
+   like the title it stands over, whichever way its own language runs. */
+.only-english { margin-bottom: var(--space-4); font-size: var(--size-small); line-height: 1.5; color: var(--muted); text-align: left; }
+
 /* Footer: the links and the language menu in one centred row of plain words,
    as the header's are, and a single quiet line beneath it. */
 .site-foot { display: flex; flex-direction: column; align-items: center; gap: 14px;
@@ -1187,7 +1219,14 @@ main:focus { outline: none; }
 }
 @media (max-width: 760px) {
   :root { --side: 20px; --size-lead: 16px; }
-  .hero { padding-top: var(--space-7); }
+  /* A little less air above the name and around the hairline, so the badge
+     is on the first screen with room to spare. With the spacing the wider
+     layouts have, its foot sat within a few pixels of the fold on an iPhone
+     15, and under it on a 13 mini in seven of the seventeen languages: the
+     one thing to press, found only by scrolling. */
+  .hero { padding-top: var(--space-6); }
+  .hero-copy { margin-top: var(--space-5); }
+  .hero .buy { margin-top: var(--space-6); padding-top: calc(var(--space-5) + 1px); }
   .wordmark { font-size: min(29vw, 140px); font-size: min(29.5cqi, 140px); }
   .tagline { font-size: clamp(26px, 7.4vw, 34px); }
   .buy-get { flex-direction: column; align-items: flex-start; gap: var(--space-4); }
@@ -1208,7 +1247,6 @@ main:focus { outline: none; }
   .closing-copy { padding-bottom: var(--space-7); }
   .closing-shot { width: min(62vw, 260px); justify-self: center; }
   .missing-body { grid-template-columns: minmax(0, 1fr); }
-  .missing-others { display: flex; }
   .missing-copy { padding-bottom: var(--space-7); }
   .page { padding: 40px 0 64px; }
   .page .intro { font-size: 17px; }
@@ -1248,4 +1286,26 @@ main:focus { outline: none; }
   .doc td[data-label]::before { content: attr(data-label) ": "; color: var(--muted); }
   /* Too many links for one row on a phone: a tight cluster instead. */
   .foot-links { gap: var(--space-1) 18px; }
+}
+
+
+/* Under a finger. Wherever the pointer is a fingertip, everything that can
+   be tapped answers over at least 44px, Apple's own measure, without the
+   words moving: a link in a sentence stays a link in a sentence, but a link
+   standing alone (the footer's, "Read the security overview", a section in
+   a list of sections) was a line of text 23 to 32px tall. Links standing
+   alone get the room around them; links in a list get a taller row each, so
+   no two answer for the same spot. */
+@media (pointer: coarse) {
+  .more { position: relative; }
+  .more::after { content: ""; position: absolute; inset: 50% 0 auto; height: 44px; translate: 0 -50%; }
+  .faq-more p { row-gap: var(--space-5); }
+  .foot-links { row-gap: 0; }
+  .foot-links a { padding-block: 12px; }
+  .site-foot .lang summary { min-height: 44px; }
+  .toc li, .long-read > .toc li { margin-bottom: 0; }
+  .toc a { display: block; padding-block: 11px; }
+  .legal-index li { align-items: baseline; padding-block: 0; }
+  .legal-index a { padding-block: 11px; }
+  .film-progress { height: 24px; }
 }

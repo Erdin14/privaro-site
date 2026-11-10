@@ -18,11 +18,31 @@ Requires Python 3; no packages need installing:
 python3 tests/publication.py
 ```
 
-The publication check verifies 87 pages, local links/assets and their versions,
-CSP hashes, required special files, excluded paths, stale-output cleanup and
-repeatable builds. (The reading pages no longer hide anything until it is
-scrolled to, so there is no longer a fragment check: an anchor can't land on
-hidden text.)
+The publication check verifies 103 pages (six in each of 17 languages, and the
+404), local links/assets and their versions, CSP hashes, required special
+files, excluded paths, stale-output cleanup and repeatable builds. It also
+checks what a search engine reads: every canonical, `hreflang`, `og:url` and
+sitemap address is one Cloudflare serves directly, never one it redirects
+(`/nl/`, not `/nl`); language alternates are reciprocal; structured data is
+valid JSON and claims no rating. And it checks the translations: every string
+exists in every language, in that language's own script, with typographic
+apostrophes and, in French, no-break spaces before `? ! ; :`. (The reading
+pages no longer hide anything until it is scrolled to, so there is no longer a
+fragment check: an anchor can't land on hidden text.)
+
+## What is published, and what stays in the source
+
+The templates, `styles.css` and the scripts are written with long notes.
+`build.py` publishes them without: pages lose their HTML comments and the
+comment lines of their inline scripts, and `dist/` gets the stylesheet and
+scripts with comments, indentation and blank lines removed (nothing is
+renamed or rewritten, so the published files are the same rules and the same
+programs). The `?v=` on each asset's address is a hash of the published file.
+Keep writing notes: they cost visitors nothing.
+
+Two limits of the stripping, both checked by the build or the test:
+a `//` note must be on a line of its own to be removed (one after code stays),
+and a template literal that spans lines is published exactly as written.
 
 ## Cloudflare publication settings — apply only during an approved release
 
@@ -42,6 +62,85 @@ After an approved deployment, recheck root and localized pages, gallery, film,
 Review any existing custom cache rules for these paths and purge specifically
 cached obsolete URLs if necessary. Keep old public previews/aliases in the
 account review; a new production artifact does not remove old deployments.
+
+## Cloudflare features that rewrite the pages — manual dashboard steps
+
+Two zone features change the HTML this repository builds after it leaves the
+build. Neither can be switched off from the repository; both are dashboard
+settings. Checked against the live site on 10 November 2026:
+
+```sh
+curl -s https://privaroapp.nl/ | grep -c cloudflareinsights   # 1 today, should be 0
+curl -s https://privaroapp.nl/ | grep -c email-decode         # 1 today
+```
+
+### 1. Web Analytics beacon (conflicts with the site's promise and its policy)
+
+Cloudflare adds this before `</body>` on every page:
+
+```html
+<!-- Cloudflare Pages Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "…"}'></script>
+```
+
+The site's Content Security Policy (`script-src 'self'` plus pinned hashes, no
+`connect-src`) refuses it, so **it does not run and collects nothing**: the
+footer's "no cookies and no trackers" is true today. What it costs is a
+refused request and a red Content-Security-Policy error in the console on
+every page view, which is exactly what a careful visitor to a privacy product
+opens the console to look for, and a dashboard that shows no visits.
+
+The two ways out, and the recommendation:
+
+- **Recommended: switch it off.** The promise stays literally true and the
+  console is clean.
+  1. Cloudflare dashboard → **Workers & Pages** → the Pages project →
+     **Metrics**. This is where Web Analytics was enabled ("Enable" under Web
+     Analytics); switch it off there if the card offers it.
+  2. Account home → **Web Analytics** → find `privaroapp.nl` → **Manage
+     site** → choose **Disable** ("The JS Snippet will not be injected and has
+     been disabled"), or delete the site from the list.
+  3. Trigger a new deployment: Pages adds or removes the snippet when it
+     deploys, not before.
+  4. Run the first `curl` above: it should print `0`.
+
+  Cloudflare documents the enabling step and the "Disable" option
+  ([Pages](https://developers.cloudflare.com/pages/how-to/web-analytics/),
+  [Web Analytics](https://developers.cloudflare.com/web-analytics/get-started/)),
+  but not a turn-off step for Pages specifically, and the labels could not be
+  checked from here: if a control is named differently, the goal is that the
+  site no longer appears with automatic setup on the Web Analytics page.
+- **Not recommended: let it run.** That needs `https://static.cloudflareinsights.com/beacon.min.js`
+  in `script-src` and `connect-src 'self'` in `content_security_policy()`, and
+  then the footer note, the Privacy Policy and the comment at the top of
+  `styles.css` ("a site that promises no trackers") would all have to change
+  in 17 languages, because a third party's script measuring visits is what
+  those words rule out, however little it collects.
+
+Visits can still be counted without anything in the page: the zone's own
+traffic analytics (**Analytics & Logs**) are measured at Cloudflare's edge,
+from the requests themselves, and App Store Connect → **Analytics** →
+**Sources** shows `privaroapp.nl` as a web referrer for product page views and
+downloads (the site's `Referrer-Policy` sends the origin for exactly this).
+
+### 2. Email Address Obfuscation (optional; a trade-off)
+
+Cloudflare rewrites every `mailto:` link to `/cdn-cgi/l/email-protection#…`
+and adds a script (`/cdn-cgi/scripts/…/email-decode.min.js`) to every page to
+turn it back. It works (the script is same-origin, so the policy allows it),
+but: it is one more blocking request on every page, including the ones with
+no address on them but the footer's; without JavaScript, "Contact" opens a
+Cloudflare page instead of a mail draft; and the same address is published in
+plain text in `/.well-known/security.txt`, which Cloudflare does not rewrite,
+so little is hidden.
+
+To switch it off: zone `privaroapp.nl` → **Security** → **Settings** → filter
+by **Client-side abuse** → **Email Address Obfuscation** → **Off**
+([documentation](https://developers.cloudflare.com/waf/tools/scrape-shield/email-address-obfuscation/)).
+The cost is that address harvesters can read the address in the pages. If that
+matters, the better fix is an address on the domain (Cloudflare **Email** →
+**Email Routing**, free, forwarding to the current inbox) used on the site in
+place of the personal one: it can be changed or dropped if it attracts spam,
+and it reads better on a security product.
 
 ## Secure www redirect — manual Cloudflare steps
 

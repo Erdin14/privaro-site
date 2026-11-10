@@ -7,6 +7,7 @@
 <meta name="description" content="别人能看到我的照片吗？忘记密码怎么办？如果手机丢了怎么办？" />
 <meta name="apple-itunes-app" content="app-id=6783131829" />
 <meta name="color-scheme" content="dark" />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"zh-Hans","mainEntity":[{"@type":"Question","name":"别人能看到我的照片吗？","acceptedAnswer":{"@type":"Answer","text":"不能。照片在你的 iPhone 上用一把从不离开手机的密钥加密。没有 Privaro 账户，也没有存放照片的服务器，所以任何人都看不到，包括我们。"}},{"@type":"Question","name":"忘记密码怎么办？","acceptedAnswer":{"@type":"Answer","text":"设置 Privaro 时，你会得到一个恢复密钥。请妥善保管：它可以让你设置新密码。没有密码或恢复密钥，保险库就无法打开，我们也不行。"}},{"@type":"Question","name":"如果手机丢了怎么办？","acceptedAnswer":{"@type":"Answer","text":"如果你开启了加密的 iCloud 备份（Pro），就能用恢复密钥在新 iPhone 上恢复保险库，恢复是免费的。没有备份的话，照片会一直锁在旧手机上。"}},{"@type":"Question","name":"视频有大小限制吗？","acceptedAnswer":{"@type":"Answer","text":"单个文件没有限制，只要 iPhone 有空间，多大都可以。免费版总共可存 2.5 GB，Pro 没有上限。"}},{"@type":"Question","name":"需要联网吗？","acceptedAnswer":{"@type":"Answer","text":"不需要。保险库可完全离线使用，除非你开启 iCloud 备份，否则照片永远不会上网。"}},{"@type":"Question","name":"Pro 是订阅吗？","acceptedAnswer":{"@type":"Answer","text":"不是。Pro 是一次性付款 ¥148，不会续费，也无需取消。"}}]}</script>
 <link rel="canonical" href="https://privaroapp.nl/zh/faq" />
 <link rel="alternate" hreflang="en" href="https://privaroapp.nl/faq" />
 <link rel="alternate" hreflang="es" href="https://privaroapp.nl/es/faq" />
@@ -34,34 +35,32 @@
 <meta property="og:image" content="https://privaroapp.nl/og.jpg?v=82627ffc6c" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Privaro. Your space. Your privacy. Available on the App Store. Three iPhones show the vault, Privacy Mode and the lock screen." />
 <meta property="og:locale" content="zh_CN" />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=925f1f6cf6" />
-<link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
+<link rel="stylesheet" href="/styles.css?v=9be721741f" />
 <script>
-// Register before first reveal, including restored history entries.
 (() => {
-  let transition;
-  window.addEventListener("pagereveal", event => {
-    transition = event.viewTransition;
-    if (!transition) {
-      document.documentElement.classList.remove("page-crossfade");
-      return;
-    }
-    const current = transition;
-    document.documentElement.classList.add("page-crossfade");
-    current.finished.catch(() => {}).finally(() => {
-      if (transition !== current) return;
-      transition = null;
-      document.documentElement.classList.remove("page-crossfade");
-    });
-  });
-  // Intent takes priority over decoration; never consume the user's event.
-  const interrupt = () => transition?.skipTransition();
-  window.addEventListener("pointerdown", interrupt, { capture: true, passive: true });
-  window.addEventListener("keydown", interrupt, { capture: true });
+let transition;
+window.addEventListener("pagereveal", event => {
+transition = event.viewTransition;
+if (!transition) {
+document.documentElement.classList.remove("page-crossfade");
+return;
+}
+const current = transition;
+document.documentElement.classList.add("page-crossfade");
+current.finished.catch(() => {}).finally(() => {
+if (transition !== current) return;
+transition = null;
+document.documentElement.classList.remove("page-crossfade");
+});
+});
+const interrupt = () => transition?.skipTransition();
+window.addEventListener("pointerdown", interrupt, { capture: true, passive: true });
+window.addEventListener("keydown", interrupt, { capture: true });
 })();
 </script>
 </head>
@@ -70,16 +69,21 @@
 <a class="skip" href="#main">跳到主要内容</a>
 <header class="site-head">
   <div class="head-bar">
-    <nav class="head-links" aria-label="Privaro">
+    <nav class="head-links head-links-wide" aria-label="Privaro">
       <a href="/zh/pro">Pro 功能</a>
-      <a href="/security">安全</a>
+      <a href="/zh/security">安全</a>
       <a href="/zh/faq" aria-current="page">常见问题</a>
     </nav>
-    <a class="brand" href="/zh"><img src="/logo.png" width="28" height="28" alt="" />Privaro</a>
+    <a class="brand" href="/zh/"><img src="/logo.png" width="28" height="28" alt="" />Privaro</a>
     <div class="head-end">
       <details class="lang"><summary aria-label="语言: 简体中文"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>简体中文</span><svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg></summary><div class="lang-menu"><p class="lang-head">语言</p><div class="lang-list"><a href="/faq" lang="en" hreflang="en"><span>English</span></a><a href="/es/faq" lang="es" hreflang="es"><span>Español</span></a><a href="/fr/faq" lang="fr" hreflang="fr"><span>Français</span></a><a href="/de/faq" lang="de" hreflang="de"><span>Deutsch</span></a><a href="/it/faq" lang="it" hreflang="it"><span>Italiano</span></a><a href="/pt-br/faq" lang="pt-BR" hreflang="pt-BR"><span>Português</span></a><a href="/zh/faq" lang="zh-Hans" hreflang="zh-Hans" class="active" aria-current="true"><span>简体中文</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></a><a href="/ko/faq" lang="ko" hreflang="ko"><span>한국어</span></a><a href="/nl/faq" lang="nl" hreflang="nl"><span>Nederlands</span></a><a href="/ja/faq" lang="ja" hreflang="ja"><span>日本語</span></a><a href="/zh-hant/faq" lang="zh-Hant" hreflang="zh-Hant"><span>繁體中文</span></a><a href="/ru/faq" lang="ru" hreflang="ru"><span>Русский</span></a><a href="/tr/faq" lang="tr" hreflang="tr"><span>Türkçe</span></a><a href="/id/faq" lang="id" hreflang="id"><span>Bahasa Indonesia</span></a><a href="/hi/faq" lang="hi" hreflang="hi"><span>हिन्दी</span></a><a href="/ar/faq" lang="ar" hreflang="ar"><span>العربية</span></a><a href="/ur/faq" lang="ur" hreflang="ur"><span>اردو</span></a></div></div></details>
       <a class="head-get" href="https://apps.apple.com/app/id6783131829" aria-label="在 App Store 下载 Privaro">下载</a>
     </div>
+    <nav class="head-links head-links-phone" aria-label="Privaro">
+      <a href="/zh/pro">Pro 功能</a>
+      <a href="/zh/security">安全</a>
+      <a href="/zh/faq" aria-current="page">常见问题</a>
+    </nav>
   </div>
 </header>
 
@@ -87,9 +91,6 @@
 
   <h1>常见问题</h1>
 
-  <!-- Each question large on the left, its answer beside it, starting on the
-       same line. The answer's first sentence is the short answer, in full
-       ink; the rest explains, in grey. No lines between them. -->
   <div class="qa">
     <div id="who-can-see"><h2>别人能看到<wbr>我的照片吗？</h2><p><strong>不能。</strong>照片在你的 iPhone 上用一把从不离开手机的密钥加密。没有 Privaro 账户，也没有存放照片的服务器，所以任何人都看不到，包括我们。</p></div>
     <div id="forgot-passcode"><h2>忘记密码<wbr>怎么办？</h2><p><strong>设置 Privaro 时，你会得到一个恢复密钥。</strong>请妥善保管：它可以让你设置新密码。没有密码或恢复密钥，保险库就无法打开，我们也不行。</p></div>
@@ -99,24 +100,33 @@
     <div id="subscription"><h2>Pro 是订阅吗？</h2><p><strong>不是。</strong>Pro 是一次性付款 <span class="price" data-price="pro">¥148</span>，不会续费，也无需取消。</p></div>
   </div>
 
-  <!-- Where to go for what isn't here. -->
   <section class="faq-more" aria-labelledby="faq-more-title">
     <h2 id="faq-more-title">还有<wbr>其他问题？</h2>
-    <p><a class="more" href="mailto:erdincdubu@icloud.com">给我们写信</a><a class="more" href="/security">阅读安全概览</a></p>
+    <p><a class="more" href="mailto:erdincdubu@icloud.com">给我们写信</a><a class="more" href="/zh/security">阅读安全概览</a></p>
   </section>
+
+<section class="get" aria-label="在 App Store 下载 Privaro">
+  <div class="buy">
+    <div class="buy-get">
+      <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="在 App Store 下载 Privaro">
+        <img src="/appstore-badge-white.svg" width="150" height="50" alt="在 App Store 下载 Privaro" loading="lazy" />
+      </a>
+      <p class="buy-note"><span>免费下载。需要 iOS 17.6 或更高版本。</span></p>
+    </div>
+    <p class="handoff" aria-hidden="true"><img src="/qr-appstore.svg" width="72" height="72" alt="" loading="lazy" /><span>用 iPhone 扫码</span></p>
+  </div>
+</section>
 
 </main>
 
-<!-- A row of plain links and the page's controls, like the header's, and
-     one quiet line under it. -->
 <footer class="site-foot wrap">
   <nav class="foot-links">
     <a href="/zh/pro">Pro 功能</a>
     <a href="/zh/faq" aria-current="page">常见问题</a>
-    <a href="/security">安全</a>
+    <a href="/zh/security">安全</a>
     <a href="/zh/privacy">隐私政策</a>
     <a href="/zh/terms">使用条款</a>
-    <a href="mailto:erdincdubu@icloud.com">联系</a>
+    <a href="mailto:erdincdubu@icloud.com">联系我们</a>
     <details class="lang"><summary aria-label="语言: 简体中文"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>简体中文</span><svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg></summary><div class="lang-menu"><p class="lang-head">语言</p><div class="lang-list"><a href="/faq" lang="en" hreflang="en"><span>English</span></a><a href="/es/faq" lang="es" hreflang="es"><span>Español</span></a><a href="/fr/faq" lang="fr" hreflang="fr"><span>Français</span></a><a href="/de/faq" lang="de" hreflang="de"><span>Deutsch</span></a><a href="/it/faq" lang="it" hreflang="it"><span>Italiano</span></a><a href="/pt-br/faq" lang="pt-BR" hreflang="pt-BR"><span>Português</span></a><a href="/zh/faq" lang="zh-Hans" hreflang="zh-Hans" class="active" aria-current="true"><span>简体中文</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></a><a href="/ko/faq" lang="ko" hreflang="ko"><span>한국어</span></a><a href="/nl/faq" lang="nl" hreflang="nl"><span>Nederlands</span></a><a href="/ja/faq" lang="ja" hreflang="ja"><span>日本語</span></a><a href="/zh-hant/faq" lang="zh-Hant" hreflang="zh-Hant"><span>繁體中文</span></a><a href="/ru/faq" lang="ru" hreflang="ru"><span>Русский</span></a><a href="/tr/faq" lang="tr" hreflang="tr"><span>Türkçe</span></a><a href="/id/faq" lang="id" hreflang="id"><span>Bahasa Indonesia</span></a><a href="/hi/faq" lang="hi" hreflang="hi"><span>हिन्दी</span></a><a href="/ar/faq" lang="ar" hreflang="ar"><span>العربية</span></a><a href="/ur/faq" lang="ur" hreflang="ur"><span>اردو</span></a></div></div></details>
   </nav>
   <p class="foot-note">© <span id="year">2026</span> Privaro. 在荷兰制作。本网站不设置 Cookie，也没有任何追踪器。</p>
@@ -124,34 +134,27 @@
 
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
-// The language menus (one in the header, one in the footer) are <details>;
-// close an open one on a click elsewhere, on its own button, or on Escape.
-// On phones a click on the dimmed page lands on the <details> itself (its
-// ::before is the dimming), so that counts as elsewhere too. A menu leaves
-// as it came rather than vanishing: it's held open for the moment its way
-// out takes (.closing in styles.css), then closed. With Reduce Motion it
-// just closes.
 const langs = document.querySelectorAll('.lang');
 const still = matchMedia('(prefers-reduced-motion: reduce)');
 const shut = lang => {
-  if (!lang.open || lang.classList.contains('closing')) return;
-  if (still.matches) { lang.open = false; return; }
-  lang.classList.add('closing');
-  setTimeout(() => { lang.open = false; lang.classList.remove('closing'); }, 200);
+if (!lang.open || lang.classList.contains('closing')) return;
+if (still.matches) { lang.open = false; return; }
+lang.classList.add('closing');
+setTimeout(() => { lang.open = false; lang.classList.remove('closing'); }, 200);
 };
 document.addEventListener('click', e => langs.forEach(lang => {
-  if (!lang.open) return;
-  const summary = e.target.closest ? e.target.closest('summary') : null;
-  if (summary && lang.contains(summary)) { e.preventDefault(); shut(lang); }
-  else if (e.target === lang || !lang.contains(e.target)) shut(lang);
+if (!lang.open) return;
+const summary = e.target.closest ? e.target.closest('summary') : null;
+if (summary && lang.contains(summary)) { e.preventDefault(); shut(lang); }
+else if (e.target === lang || !lang.contains(e.target)) shut(lang);
 }));
 document.addEventListener('keydown', e => {
-  if (e.key !== 'Escape') return;
-  langs.forEach(lang => { if (lang.open) { shut(lang); lang.querySelector('summary').focus(); } });
+if (e.key !== 'Escape') return;
+langs.forEach(lang => { if (lang.open) { shut(lang); lang.querySelector('summary').focus(); } });
 });
 </script>
 
-<script src="/presentation.js?v=a1d449eb43" data-enlarge="放大截图：{name}" data-close="关闭查看器" data-previous="上一张截图" data-next="下一张截图" defer></script>
-<script src="/price.js?v=5174912724" defer></script>
+<script src="/presentation.js?v=5192425b53" data-enlarge="放大截图：{name}" data-close="关闭查看器" data-previous="上一张截图" data-next="下一张截图" defer></script>
+<script src="/price.js?v=75cbf9b3af" defer></script>
 </body>
 </html>

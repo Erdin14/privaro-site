@@ -8,67 +8,62 @@
 <meta name="apple-itunes-app" content="app-id=6783131829" />
 <meta name="color-scheme" content="dark" />
 <meta name="theme-color" content="#222324" />
-<link rel="canonical" href="https://privaroapp.nl/nl" />
+<link rel="canonical" href="https://privaroapp.nl/nl/" />
 <link rel="alternate" hreflang="en" href="https://privaroapp.nl/" />
-<link rel="alternate" hreflang="es" href="https://privaroapp.nl/es" />
-<link rel="alternate" hreflang="fr" href="https://privaroapp.nl/fr" />
-<link rel="alternate" hreflang="de" href="https://privaroapp.nl/de" />
-<link rel="alternate" hreflang="it" href="https://privaroapp.nl/it" />
-<link rel="alternate" hreflang="pt-BR" href="https://privaroapp.nl/pt-br" />
-<link rel="alternate" hreflang="zh-Hans" href="https://privaroapp.nl/zh" />
-<link rel="alternate" hreflang="ko" href="https://privaroapp.nl/ko" />
-<link rel="alternate" hreflang="nl" href="https://privaroapp.nl/nl" />
-<link rel="alternate" hreflang="ja" href="https://privaroapp.nl/ja" />
-<link rel="alternate" hreflang="zh-Hant" href="https://privaroapp.nl/zh-hant" />
-<link rel="alternate" hreflang="ru" href="https://privaroapp.nl/ru" />
-<link rel="alternate" hreflang="tr" href="https://privaroapp.nl/tr" />
-<link rel="alternate" hreflang="id" href="https://privaroapp.nl/id" />
-<link rel="alternate" hreflang="hi" href="https://privaroapp.nl/hi" />
-<link rel="alternate" hreflang="ar" href="https://privaroapp.nl/ar" />
-<link rel="alternate" hreflang="ur" href="https://privaroapp.nl/ur" />
+<link rel="alternate" hreflang="es" href="https://privaroapp.nl/es/" />
+<link rel="alternate" hreflang="fr" href="https://privaroapp.nl/fr/" />
+<link rel="alternate" hreflang="de" href="https://privaroapp.nl/de/" />
+<link rel="alternate" hreflang="it" href="https://privaroapp.nl/it/" />
+<link rel="alternate" hreflang="pt-BR" href="https://privaroapp.nl/pt-br/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://privaroapp.nl/zh/" />
+<link rel="alternate" hreflang="ko" href="https://privaroapp.nl/ko/" />
+<link rel="alternate" hreflang="nl" href="https://privaroapp.nl/nl/" />
+<link rel="alternate" hreflang="ja" href="https://privaroapp.nl/ja/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://privaroapp.nl/zh-hant/" />
+<link rel="alternate" hreflang="ru" href="https://privaroapp.nl/ru/" />
+<link rel="alternate" hreflang="tr" href="https://privaroapp.nl/tr/" />
+<link rel="alternate" hreflang="id" href="https://privaroapp.nl/id/" />
+<link rel="alternate" hreflang="hi" href="https://privaroapp.nl/hi/" />
+<link rel="alternate" hreflang="ar" href="https://privaroapp.nl/ar/" />
+<link rel="alternate" hreflang="ur" href="https://privaroapp.nl/ur/" />
 <link rel="alternate" hreflang="x-default" href="https://privaroapp.nl/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Privaro" />
 <meta property="og:title" content="Privaro: een privékluis voor je foto’s en video’s op de iPhone" />
 <meta property="og:description" content="Privaro bewaart je privéfoto’s en -video’s versleuteld op je iPhone, achter Face ID en een eigen toegangscode. Geen account, niets wordt geüpload." />
-<meta property="og:url" content="https://privaroapp.nl/nl" />
+<meta property="og:url" content="https://privaroapp.nl/nl/" />
 <meta property="og:image" content="https://privaroapp.nl/og.jpg?v=82627ffc6c" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Privaro. Your space. Your privacy. Available on the App Store. Three iPhones show the vault, Privacy Mode and the lock screen." />
 <meta property="og:locale" content="nl_NL" />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=925f1f6cf6" />
-<link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
+<link rel="stylesheet" href="/styles.css?v=9be721741f" />
 <script>
-// Before anything is drawn. "motion" lets the few entrances in styles.css
-// wait for the script at the end of the page; without it, or with Reduce
-// Motion, everything is simply there.
 (() => {
-  const root = document.documentElement;
-  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) root.classList.add('motion');
-  let transition;
-  window.addEventListener("pagereveal", event => {
-    transition = event.viewTransition;
-    if (!transition) {
-      root.classList.remove("page-crossfade");
-      return;
-    }
-    // A native page crossfade is already an entrance: the hero skips its own.
-    root.classList.add("soft-arrival");
-    const current = transition;
-    root.classList.add("page-crossfade");
-    current.finished.catch(() => {}).finally(() => {
-      if (transition !== current) return;
-      transition = null;
-      root.classList.remove("page-crossfade");
-    });
-  });
-  // Intent takes priority over decoration; never consume the user's event.
-  const interrupt = () => transition?.skipTransition();
-  window.addEventListener("pointerdown", interrupt, { capture: true, passive: true });
-  window.addEventListener("keydown", interrupt, { capture: true });
+const root = document.documentElement;
+if (!matchMedia('(prefers-reduced-motion: reduce)').matches) root.classList.add('motion');
+let transition;
+window.addEventListener("pagereveal", event => {
+transition = event.viewTransition;
+if (!transition) {
+root.classList.remove("page-crossfade");
+return;
+}
+root.classList.add("soft-arrival");
+const current = transition;
+root.classList.add("page-crossfade");
+current.finished.catch(() => {}).finally(() => {
+if (transition !== current) return;
+transition = null;
+root.classList.remove("page-crossfade");
+});
+});
+const interrupt = () => transition?.skipTransition();
+window.addEventListener("pointerdown", interrupt, { capture: true, passive: true });
+window.addEventListener("keydown", interrupt, { capture: true });
 })();
 </script>
 </head>
@@ -77,33 +72,32 @@
 <a class="skip" href="#main">Naar de inhoud</a>
 <header class="site-head">
   <div class="head-bar">
-    <nav class="head-links" aria-label="Privaro">
+    <nav class="head-links head-links-wide" aria-label="Privaro">
       <a href="/nl/pro">Pro-functies</a>
-      <a href="/security">Beveiliging</a>
+      <a href="/nl/security">Beveiliging</a>
       <a href="/nl/faq">Vragen</a>
     </nav>
-    <a class="brand" href="/nl"><img src="/logo.png" width="28" height="28" alt="" />Privaro</a>
+    <a class="brand" href="/nl/"><img src="/logo.png" width="28" height="28" alt="" />Privaro</a>
     <div class="head-end">
-      <details class="lang"><summary aria-label="Taal: Nederlands"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>Nederlands</span><svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg></summary><div class="lang-menu"><p class="lang-head">Taal</p><div class="lang-list"><a href="/" lang="en" hreflang="en"><span>English</span></a><a href="/es" lang="es" hreflang="es"><span>Español</span></a><a href="/fr" lang="fr" hreflang="fr"><span>Français</span></a><a href="/de" lang="de" hreflang="de"><span>Deutsch</span></a><a href="/it" lang="it" hreflang="it"><span>Italiano</span></a><a href="/pt-br" lang="pt-BR" hreflang="pt-BR"><span>Português</span></a><a href="/zh" lang="zh-Hans" hreflang="zh-Hans"><span>简体中文</span></a><a href="/ko" lang="ko" hreflang="ko"><span>한국어</span></a><a href="/nl" lang="nl" hreflang="nl" class="active" aria-current="true"><span>Nederlands</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></a><a href="/ja" lang="ja" hreflang="ja"><span>日本語</span></a><a href="/zh-hant" lang="zh-Hant" hreflang="zh-Hant"><span>繁體中文</span></a><a href="/ru" lang="ru" hreflang="ru"><span>Русский</span></a><a href="/tr" lang="tr" hreflang="tr"><span>Türkçe</span></a><a href="/id" lang="id" hreflang="id"><span>Bahasa Indonesia</span></a><a href="/hi" lang="hi" hreflang="hi"><span>हिन्दी</span></a><a href="/ar" lang="ar" hreflang="ar"><span>العربية</span></a><a href="/ur" lang="ur" hreflang="ur"><span>اردو</span></a></div></div></details>
+      <details class="lang"><summary aria-label="Taal: Nederlands"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>Nederlands</span><svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg></summary><div class="lang-menu"><p class="lang-head">Taal</p><div class="lang-list"><a href="/" lang="en" hreflang="en"><span>English</span></a><a href="/es/" lang="es" hreflang="es"><span>Español</span></a><a href="/fr/" lang="fr" hreflang="fr"><span>Français</span></a><a href="/de/" lang="de" hreflang="de"><span>Deutsch</span></a><a href="/it/" lang="it" hreflang="it"><span>Italiano</span></a><a href="/pt-br/" lang="pt-BR" hreflang="pt-BR"><span>Português</span></a><a href="/zh/" lang="zh-Hans" hreflang="zh-Hans"><span>简体中文</span></a><a href="/ko/" lang="ko" hreflang="ko"><span>한국어</span></a><a href="/nl/" lang="nl" hreflang="nl" class="active" aria-current="true"><span>Nederlands</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></a><a href="/ja/" lang="ja" hreflang="ja"><span>日本語</span></a><a href="/zh-hant/" lang="zh-Hant" hreflang="zh-Hant"><span>繁體中文</span></a><a href="/ru/" lang="ru" hreflang="ru"><span>Русский</span></a><a href="/tr/" lang="tr" hreflang="tr"><span>Türkçe</span></a><a href="/id/" lang="id" hreflang="id"><span>Bahasa Indonesia</span></a><a href="/hi/" lang="hi" hreflang="hi"><span>हिन्दी</span></a><a href="/ar/" lang="ar" hreflang="ar"><span>العربية</span></a><a href="/ur/" lang="ur" hreflang="ur"><span>اردو</span></a></div></div></details>
       <a class="head-get" href="https://apps.apple.com/app/id6783131829" aria-label="Download Privaro in de App Store">Download</a>
     </div>
+    <nav class="head-links head-links-phone" aria-label="Privaro">
+      <a href="/nl/pro">Pro-functies</a>
+      <a href="/nl/security">Beveiliging</a>
+      <a href="/nl/faq">Vragen</a>
+    </nav>
   </div>
 </header>
 
 <main id="main" class="home">
-  <!-- The name, set large, beside what it is. Under both, where to get it and
-       what it costs, in two plain sentences. The icon is in the header, just
-       above: the name doesn't need it twice.
-       The name is drawn letter by letter (its last two turn over, once: see
-       the script at the end), so the heading says it whole for screen
-       readers and the letters themselves are left out of what's read. -->
   <section class="hero wrap" aria-labelledby="hero-title">
     <div class="hero-mark">
       <h1 id="hero-title" class="wordmark" aria-label="Privaro"><span class="mask" aria-hidden="true"><span class="rise" style="--anim:mask-rise">P<span class="open">ri</span>va<span class="tail"><span class="roll" data-to="t"><span class="open">r</span></span><span class="roll" data-to="e"><span>o</span></span></span></span></span></h1>
     </div>
     <div class="hero-copy rise" style="--anim:fade;--d:.3s">
       <p class="tagline">Een kluis die alleen jij kunt openen.</p>
-      <p class="lead">Privaro is een kluis voor je iPhone. Wat je erin zet, wordt op de telefoon zelf versleuteld en gaat alleen open met Face ID of de eigen code van Privaro. Geen account, en er wordt niets geüpload.</p>
+      <p class="lead">Privaro is een kluis voor de foto’s en video’s op je iPhone. Wat je erin zet, wordt op de telefoon zelf versleuteld en gaat alleen open met Face ID of de eigen code van Privaro. Geen account, en er wordt niets geüpload.</p>
     </div>
     <div class="buy">
       <span class="rule rise" style="--anim:draw;--d:.15s" aria-hidden="true"></span>
@@ -113,19 +107,10 @@
         </a>
         <p class="buy-note"><span>Gratis te downloaden. Vereist iOS 17.6 of nieuwer.</span> <span>Pro is optioneel: één betaling van <span class="price" data-price="pro">€ 9,99</span>, niets dat verlengt.</span></p>
       </div>
-      <!-- On a computer the badge opens the App Store on the wrong device: the
-           same address as a code the phone's camera reads. Only shown where
-           there's a mouse and room (styles.css); it says nothing the badge
-           doesn't, so screen readers skip it. -->
       <p class="handoff" aria-hidden="true"><img src="/qr-appstore.svg" width="72" height="72" alt="" /><span>Scan met je iPhone</span></p>
     </div>
   </section>
 
-  <!-- The app itself: four screens in a row, each with what it's for. Each is
-       a button that opens the viewer (presentation.js). The Lock Screen is
-       there from the start; the other three are dealt out from behind it.
-       It's the phone inside each figure that moves, never the figure: the
-       row snaps to the figures when it's swiped, and would follow one. -->
   <section class="gallery">
     <div class="shots wrap">
       <figure style="--i:0"><div class="phone rise" style="--anim:none"><picture><source srcset="/shots/framed-18-pro-max/nl/shot-lock.webp" type="image/webp" /><img src="/shots/framed-18-pro-max/nl/shot-lock.jpg" width="760" height="1573" alt="Het vergrendelscherm van Privaro, klaar voor Face ID" fetchpriority="high" /></picture></div><figcaption><strong>Vergrendelscherm</strong> <span>Gaat open met Face ID of een eigen code.</span></figcaption></figure>
@@ -135,9 +120,6 @@
     </div>
   </section>
 
-  <!-- How it's kept private: one statement, then the illustration's phone
-       and beside it the facts behind the statement, in claims the Security Overview backs up, with
-       the way to that overview under them. -->
   <section class="safety wrap" aria-labelledby="safety-title">
     <h2 id="safety-title" class="display">
       <span class="mask"><span class="rise" style="--anim:mask-rise">Versleuteld op je iPhone.</span></span>
@@ -146,17 +128,12 @@
     <div class="safety-body">
       <div class="safety-art">
 <figure class="privacy-vignette">
-  <!-- A photo on the phone is written over, line by line, as ciphertext.
-       Illustrative only, never a live security check.
-       Without JavaScript, or with Reduce Motion, it shows the finished state:
-       the ciphertext, with the photo's pane (over it) left hidden. -->
   <div class="privacy-art" role="img" aria-labelledby="privacy-art-title" aria-describedby="privacy-art-desc">
     <span id="privacy-art-title" class="visually-hidden">Bescherming op je apparaat</span>
     <span id="privacy-art-desc" class="visually-hidden">Een foto op een iPhone verandert in versleutelde gegevens, als illustratie van versleuteling op het apparaat. Dit is geen live beveiligingscontrole.</span>
     <div class="vg-phone" aria-hidden="true">
       <div class="vg-screen">
         <p class="vg-cipher">45Na99UPIE/JOGMzTIdfGUsJBQn7ZDJnqRjY0ZtJiaVW3ZlmtFuRABIufL5w+IGEWTzn2A9Wnlqr3FrHKwMuoROQWW1lLez8aaMqpoMqjCUe2dBq/NFs3+2X2XdKRV5USrKaw2F/DmGnuQrn2QmnLjPKadln1qVXuJsJYjBmqzql9Hhp0e7ZhKHpXCywzar04F9se0LC96xNC+mUPW22wPkxHit6rbzADwDtgcmRHrIrfaOLiDZAla1FOXfhLjPUvGsSBu/PReuynAWz2w6Jg+ZJWMk7I39DDZw/Af7cqJUMLM6kRm+fkA42L2E3gq22OhZuQlbYrQejQjignU6QzrYP1ApaTPm+kKs38HsIjHQEr/ABUpEgXJ2WcypjcFEYwKWl3HqqyzIzFwJhnEH0SGEDhdDLyjCn/iMjbkTaDq2nZydi6wsClOpI95udr3L+yuS34ps9+W+M6f41TnD9Y6ltBRH93kbdRpvF6g0U/EqhfrqWFUULadPm20QVt4K81YKOiNuwCGeM2oxhGIDf5Y795mRAC2Wh1qKThDL4A8ZwRl56Qa4H+ll1LnWQoulCtQDNHyk0ALn3CHAonbxLWRuGltW0S3DbLCObMN5mI9R+z/mXToZUt1MN7aVyAZbw1u59370F94e0SFTxa5w2fIMTKCbOiKhTFkzV4mUzhh8ZaMOTVEsvQp1A1GYmKBnBzbFFMSHkNE6zdp1Agn8OQ2BfTbw6PJhM4FYtGjvI3mIkEJVcgakB9qsa5Pvanka69BC4k6oPrzOWT8QasUfy2aCBTEqbCfKlNwUjumOeOr9gqzqCzgohOAelrTr6F34k5HzYddMkjQmyZrwDB3XWm4hRChzt1kQc/4o6YcwaM7OkFzJ43cujssjsc8JdK6soKp5xKeZWMLr2K2K4g4MjjkOSs1VKJhWNw3ILruceHXZ8RlYlWGxHWUfnbgdcnvjlNrrpi8Gsr3uV8pX5JoTjuWKnN/OHxjgM1UC8qb+aHPigVSBh0D/GufaKITO20bh8lKrLQahzI8db2dFP2OmhyYlE4/cDT2so2Wu/7rHZ+ra6g1d6pTHoMGujYS1lSzezSZpsphFANvTJ</p>
-        <!-- "Snow-capped mountain reflected in a calm lake" by Timo Wielink, Unsplash License. -->
         <div class="vg-pane"><img class="vg-photo" src="/art/vignette-lake.jpg" width="600" height="900" alt="" loading="lazy" decoding="async" /></div>
         <span class="vg-scan"></span>
         <span class="vg-island"></span>
@@ -165,7 +142,7 @@
   </div>
   <figcaption><span>Versleuteld op je iPhone.</span></figcaption>
 </figure>
-<script src="/privacy-vignette.js?v=7796fe20f2" defer></script>
+<script src="/privacy-vignette.js?v=2ce353044f" defer></script>
       </div>
       <div class="safety-facts">
         <dl class="ledger">
@@ -174,22 +151,13 @@
           <div><dt>Face ID of code</dt><dd>De kluis gaat alleen open met Face ID of de eigen code van Privaro.</dd></div>
           <div><dt>Werkt offline</dt><dd>Je foto’s gaan alleen online als je de versleutelde iCloud-back-up aanzet.</dd></div>
         </dl>
-        <a class="more" href="/security">Lees het beveiligingsoverzicht</a>
+        <a class="more" href="/nl/security">Lees het beveiligingsoverzicht</a>
       </div>
     </div>
   </section>
 
-  <!-- When it isn't you at the lock: the three things Pro does with a
-       passcode, each drawn with the six dots of Privaro's own passcode
-       screen (thin rings that fill as a digit is typed, as in the film). The
-       decoy's are typed and stay; the wipe's are typed and gone; the wrong
-       one's are typed, shaken off and left empty. The words are the
-       Pro page's own, so the two can't disagree. Without JavaScript, or with
-       Reduce Motion, the dots simply show how each one ends. -->
   <section class="guard wrap" aria-labelledby="guard-title">
     <h2 id="guard-title" class="display"><span class="mask"><span class="rise" style="--anim:mask-rise">Wat als iemand anders erin wil?</span></span></h2>
-    <!-- Said before the three, not after: none of them is in the free app.
-         What Pro costs comes after them. -->
     <p class="guard-note">Inbegrepen bij Pro</p>
     <ul class="codes">
       <li class="code code-decoy rise" style="--anim:none">
@@ -210,15 +178,11 @@
     </ul>
     <div class="guard-foot">
       <span class="rule rise" style="--anim:draw" aria-hidden="true"></span>
-      <!-- The price and four words, as the Pro page closes: the hero has
-           already said the whole sentence once. -->
       <p class="guard-price"><span class="price" data-price="pro">€ 9,99</span> Eén betaling, niets dat verlengt.</p>
       <a class="more" href="/nl/pro">Pro-functies</a>
     </div>
   </section>
 
-  <!-- The last word, and the Lock Screen, its foot fading into the page,
-       the way the phone does in the illustration above. -->
   <section class="closing wrap" aria-labelledby="closing-title">
     <div class="closing-copy">
       <h2 id="closing-title" class="display"><span class="mask"><span class="rise" style="--anim:mask-rise">Voor paspoorten, bonnetjes en verrassingen.</span></span></h2>
@@ -236,116 +200,85 @@
   </section>
 </main>
 
-<!-- A row of plain links and the page's controls, like the header's, and
-     one quiet line under it. -->
 <footer class="site-foot wrap">
   <nav class="foot-links">
     <a href="/nl/pro">Pro-functies</a>
     <a href="/nl/faq">Vragen</a>
-    <a href="/security">Beveiliging</a>
+    <a href="/nl/security">Beveiliging</a>
     <a href="/nl/privacy">Privacybeleid</a>
     <a href="/nl/terms">Gebruiksvoorwaarden</a>
     <a href="mailto:erdincdubu@icloud.com">Contact</a>
-    <details class="lang"><summary aria-label="Taal: Nederlands"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>Nederlands</span><svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg></summary><div class="lang-menu"><p class="lang-head">Taal</p><div class="lang-list"><a href="/" lang="en" hreflang="en"><span>English</span></a><a href="/es" lang="es" hreflang="es"><span>Español</span></a><a href="/fr" lang="fr" hreflang="fr"><span>Français</span></a><a href="/de" lang="de" hreflang="de"><span>Deutsch</span></a><a href="/it" lang="it" hreflang="it"><span>Italiano</span></a><a href="/pt-br" lang="pt-BR" hreflang="pt-BR"><span>Português</span></a><a href="/zh" lang="zh-Hans" hreflang="zh-Hans"><span>简体中文</span></a><a href="/ko" lang="ko" hreflang="ko"><span>한국어</span></a><a href="/nl" lang="nl" hreflang="nl" class="active" aria-current="true"><span>Nederlands</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></a><a href="/ja" lang="ja" hreflang="ja"><span>日本語</span></a><a href="/zh-hant" lang="zh-Hant" hreflang="zh-Hant"><span>繁體中文</span></a><a href="/ru" lang="ru" hreflang="ru"><span>Русский</span></a><a href="/tr" lang="tr" hreflang="tr"><span>Türkçe</span></a><a href="/id" lang="id" hreflang="id"><span>Bahasa Indonesia</span></a><a href="/hi" lang="hi" hreflang="hi"><span>हिन्दी</span></a><a href="/ar" lang="ar" hreflang="ar"><span>العربية</span></a><a href="/ur" lang="ur" hreflang="ur"><span>اردو</span></a></div></div></details>
+    <details class="lang"><summary aria-label="Taal: Nederlands"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>Nederlands</span><svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg></summary><div class="lang-menu"><p class="lang-head">Taal</p><div class="lang-list"><a href="/" lang="en" hreflang="en"><span>English</span></a><a href="/es/" lang="es" hreflang="es"><span>Español</span></a><a href="/fr/" lang="fr" hreflang="fr"><span>Français</span></a><a href="/de/" lang="de" hreflang="de"><span>Deutsch</span></a><a href="/it/" lang="it" hreflang="it"><span>Italiano</span></a><a href="/pt-br/" lang="pt-BR" hreflang="pt-BR"><span>Português</span></a><a href="/zh/" lang="zh-Hans" hreflang="zh-Hans"><span>简体中文</span></a><a href="/ko/" lang="ko" hreflang="ko"><span>한국어</span></a><a href="/nl/" lang="nl" hreflang="nl" class="active" aria-current="true"><span>Nederlands</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></a><a href="/ja/" lang="ja" hreflang="ja"><span>日本語</span></a><a href="/zh-hant/" lang="zh-Hant" hreflang="zh-Hant"><span>繁體中文</span></a><a href="/ru/" lang="ru" hreflang="ru"><span>Русский</span></a><a href="/tr/" lang="tr" hreflang="tr"><span>Türkçe</span></a><a href="/id/" lang="id" hreflang="id"><span>Bahasa Indonesia</span></a><a href="/hi/" lang="hi" hreflang="hi"><span>हिन्दी</span></a><a href="/ar/" lang="ar" hreflang="ar"><span>العربية</span></a><a href="/ur/" lang="ur" hreflang="ur"><span>اردو</span></a></div></div></details>
   </nav>
   <p class="foot-note">© <span id="year">2026</span> Privaro. Gemaakt in Nederland. Deze site plaatst geen cookies en heeft geen trackers.</p>
 </footer>
 
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
-// The language menus (one in the header, one in the footer) are <details>;
-// close an open one on a click elsewhere, on its own button, or on Escape.
-// On phones a click on the dimmed page lands on the <details> itself (its
-// ::before is the dimming), so that counts as elsewhere too. A menu leaves
-// as it came rather than vanishing: it's held open for the moment its way
-// out takes (.closing in styles.css), then closed. With Reduce Motion it
-// just closes.
 const langs = document.querySelectorAll('.lang');
 const still = matchMedia('(prefers-reduced-motion: reduce)');
 const shut = lang => {
-  if (!lang.open || lang.classList.contains('closing')) return;
-  if (still.matches) { lang.open = false; return; }
-  lang.classList.add('closing');
-  setTimeout(() => { lang.open = false; lang.classList.remove('closing'); }, 200);
+if (!lang.open || lang.classList.contains('closing')) return;
+if (still.matches) { lang.open = false; return; }
+lang.classList.add('closing');
+setTimeout(() => { lang.open = false; lang.classList.remove('closing'); }, 200);
 };
 document.addEventListener('click', e => langs.forEach(lang => {
-  if (!lang.open) return;
-  const summary = e.target.closest ? e.target.closest('summary') : null;
-  if (summary && lang.contains(summary)) { e.preventDefault(); shut(lang); }
-  else if (e.target === lang || !lang.contains(e.target)) shut(lang);
+if (!lang.open) return;
+const summary = e.target.closest ? e.target.closest('summary') : null;
+if (summary && lang.contains(summary)) { e.preventDefault(); shut(lang); }
+else if (e.target === lang || !lang.contains(e.target)) shut(lang);
 }));
 document.addEventListener('keydown', e => {
-  if (e.key !== 'Escape') return;
-  langs.forEach(lang => { if (lang.open) { shut(lang); lang.querySelector('summary').focus(); } });
+if (e.key !== 'Escape') return;
+langs.forEach(lang => { if (lang.open) { shut(lang); lang.querySelector('summary').focus(); } });
 });
 </script>
 
-<script src="/presentation.js?v=a1d449eb43" data-enlarge="Schermafbeelding vergroten: {name}" data-close="Weergave sluiten" data-previous="Vorige schermafbeelding" data-next="Volgende schermafbeelding" defer></script>
+<script src="/presentation.js?v=5192425b53" data-enlarge="Schermafbeelding vergroten: {name}" data-close="Weergave sluiten" data-previous="Vorige schermafbeelding" data-next="Volgende schermafbeelding" defer></script>
 <script>
-// Each entrance plays once it's on screen. Inline, like the line in <head>,
-// so a script that fails to load can never leave anything hidden.
 (() => {
-  const items = [...document.querySelectorAll('.rise')];
-  const show = el => el.classList.add('in-view');
-  if (!('IntersectionObserver' in window)) return items.forEach(show);
-  // A headline line starts below its mask, clipped out of view, and a
-  // hairline starts with no length, so it's what holds them that's watched;
-  // the phones are dealt together, when their row is on screen.
-  const owner = new Map();
-  items.forEach(el => {
-    const target = el.parentElement.closest('.mask, .shots, .buy, .guard-foot') || el;
-    owner.set(target, [...(owner.get(target) || []), el]);
-  });
-  // The phones wait for their pictures, so it's phones that are dealt and
-  // not empty space; a slow connection holds them a second at most.
-  const ready = target => !target.matches('.shots') ? Promise.resolve() : Promise.race([
-    Promise.all([...target.querySelectorAll('img')].map(img => img.decode ? img.decode().catch(() => {}) : 0)),
-    new Promise(done => setTimeout(done, 1000))]);
-  // Words and lines start as they clear the bottom of the screen. What's
-  // there to be watched (the phones, a passcode being typed) waits until
-  // it's a sixth of the way up, where it's seen.
-  const watcher = margin => new IntersectionObserver((entries, watch) => entries.forEach(entry => {
-    if (!entry.isIntersecting) return;
-    watch.unobserve(entry.target);
-    ready(entry.target).then(() => owner.get(entry.target).forEach(show));
-  }), { rootMargin: '0px 0px -' + margin + '% 0px' });
-  const edge = watcher(6), stage = watcher(16);
-  owner.forEach((_, target) => (target.matches('.shots, .code') ? stage : edge).observe(target));
-  // Keyboard focus and in-page links must never land on something hidden.
-  document.addEventListener('focusin', e => e.target.closest('.rise')?.classList.add('in-view'));
+const items = [...document.querySelectorAll('.rise')];
+const show = el => el.classList.add('in-view');
+if (!('IntersectionObserver' in window)) return items.forEach(show);
+const owner = new Map();
+items.forEach(el => {
+const target = el.parentElement.closest('.mask, .shots, .buy, .guard-foot') || el;
+owner.set(target, [...(owner.get(target) || []), el]);
+});
+const ready = target => !target.matches('.shots') ? Promise.resolve() : Promise.race([
+Promise.all([...target.querySelectorAll('img')].map(img => img.decode ? img.decode().catch(() => {}) : 0)),
+new Promise(done => setTimeout(done, 1000))]);
+const watcher = margin => new IntersectionObserver((entries, watch) => entries.forEach(entry => {
+if (!entry.isIntersecting) return;
+watch.unobserve(entry.target);
+ready(entry.target).then(() => owner.get(entry.target).forEach(show));
+}), { rootMargin: '0px 0px -' + margin + '% 0px' });
+const edge = watcher(6), stage = watcher(16);
+owner.forEach((_, target) => (target.matches('.shots, .code') ? stage : edge).observe(target));
+document.addEventListener('focusin', e => e.target.closest('.rise')?.classList.add('in-view'));
 })();
 </script>
 <script>
-// Privaro, Private: once the name has arrived, its last two letters turn
-// over to "te", like the wheels of a combination lock, stay long enough to
-// read "Private", and turn back. Once: a wink; repeated, the largest word
-// on the page spent half of a first visit not being the product's name.
-// Nothing flashes (it used to flicker there and back), never a loop, and
-// not at all with Reduce Motion. The text stays "Privaro" throughout (see
-// .roll in styles.css).
 (() => {
-  const tail = document.querySelector('.wordmark .tail');
-  const reduce = matchMedia('(prefers-reduced-motion: reduce)');
-  if (!tail || reduce.matches) return;
-  // The "e" comes up behind the "o", but belongs after a "t": how much
-  // nearer that is, in this font, as a share of the name's size.
-  const place = () => {
-    const probe = document.createElement('span');
-    probe.textContent = 't';
-    probe.style.cssText = 'position:absolute;visibility:hidden';
-    tail.append(probe);
-    const shift = probe.getBoundingClientRect().width - tail.firstElementChild.getBoundingClientRect().width;
-    tail.style.setProperty('--te', (shift / parseFloat(getComputedStyle(tail).fontSize)).toFixed(4) + 'em');
-    probe.remove();
-  };
-  const turn = on => { if (on && reduce.matches) return; if (on) place(); tail.classList.toggle('flip', on); };
-  const run = () => { setTimeout(turn, 900, true); setTimeout(turn, 2400, false); };
-  // Arriving through a page crossfade, the name's entrance is cancelled
-  // (it's simply there), and that's the cue as much as its finishing.
-  const arrival = tail.closest('.rise').getAnimations()[0];
-  (arrival ? arrival.finished : Promise.resolve()).then(run, run);
+const tail = document.querySelector('.wordmark .tail');
+const reduce = matchMedia('(prefers-reduced-motion: reduce)');
+if (!tail || reduce.matches) return;
+const place = () => {
+const probe = document.createElement('span');
+probe.textContent = 't';
+probe.style.cssText = 'position:absolute;visibility:hidden';
+tail.append(probe);
+const shift = probe.getBoundingClientRect().width - tail.firstElementChild.getBoundingClientRect().width;
+tail.style.setProperty('--te', (shift / parseFloat(getComputedStyle(tail).fontSize)).toFixed(4) + 'em');
+probe.remove();
+};
+const turn = on => { if (on && reduce.matches) return; if (on) place(); tail.classList.toggle('flip', on); };
+const run = () => { setTimeout(turn, 900, true); setTimeout(turn, 2400, false); };
+const arrival = tail.closest('.rise').getAnimations()[0];
+(arrival ? arrival.finished : Promise.resolve()).then(run, run);
 })();
 </script>
-<script src="/price.js?v=5174912724" defer></script>
+<script src="/price.js?v=75cbf9b3af" defer></script>
 </body>
 </html>

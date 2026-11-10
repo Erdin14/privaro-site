@@ -32,36 +32,34 @@
 <meta property="og:image" content="https://privaroapp.nl/og.jpg?v=82627ffc6c" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Privaro. Your space. Your privacy. Available on the App Store. Three iPhones show the vault, Privacy Mode and the lock screen." />
 <meta property="og:locale" content="fr_FR" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="color-scheme" content="dark" />
 <meta name="apple-itunes-app" content="app-id=6783131829" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=925f1f6cf6" />
-<link rel="stylesheet" href="/transitions.css?v=fc438a54cc" />
+<link rel="stylesheet" href="/styles.css?v=9be721741f" />
 <script>
-// Register before first reveal, including restored history entries.
 (() => {
-  let transition;
-  window.addEventListener("pagereveal", event => {
-    transition = event.viewTransition;
-    if (!transition) {
-      document.documentElement.classList.remove("page-crossfade");
-      return;
-    }
-    const current = transition;
-    document.documentElement.classList.add("page-crossfade");
-    current.finished.catch(() => {}).finally(() => {
-      if (transition !== current) return;
-      transition = null;
-      document.documentElement.classList.remove("page-crossfade");
-    });
-  });
-  // Intent takes priority over decoration; never consume the user's event.
-  const interrupt = () => transition?.skipTransition();
-  window.addEventListener("pointerdown", interrupt, { capture: true, passive: true });
-  window.addEventListener("keydown", interrupt, { capture: true });
+let transition;
+window.addEventListener("pagereveal", event => {
+transition = event.viewTransition;
+if (!transition) {
+document.documentElement.classList.remove("page-crossfade");
+return;
+}
+const current = transition;
+document.documentElement.classList.add("page-crossfade");
+current.finished.catch(() => {}).finally(() => {
+if (transition !== current) return;
+transition = null;
+document.documentElement.classList.remove("page-crossfade");
+});
+});
+const interrupt = () => transition?.skipTransition();
+window.addEventListener("pointerdown", interrupt, { capture: true, passive: true });
+window.addEventListener("keydown", interrupt, { capture: true });
 })();
 </script>
 </head>
@@ -70,37 +68,39 @@
 <a class="skip" href="#main">Aller au contenu</a>
 <header class="site-head">
   <div class="head-bar">
-    <nav class="head-links" aria-label="Privaro">
+    <nav class="head-links head-links-wide" aria-label="Privaro">
       <a href="/fr/pro">Fonctions Pro</a>
-      <a href="/security">Sécurité</a>
+      <a href="/fr/security">Sécurité</a>
       <a href="/fr/faq">Questions</a>
     </nav>
-    <a class="brand" href="/fr"><img src="/logo.png" width="28" height="28" alt="" />Privaro</a>
+    <a class="brand" href="/fr/"><img src="/logo.png" width="28" height="28" alt="" />Privaro</a>
     <div class="head-end">
       <details class="lang"><summary aria-label="Langue: Français"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>Français</span><svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg></summary><div class="lang-menu"><p class="lang-head">Langue</p><div class="lang-list"><a href="/terms" lang="en" hreflang="en"><span>English</span></a><a href="/es/terms" lang="es" hreflang="es"><span>Español</span></a><a href="/fr/terms" lang="fr" hreflang="fr" class="active" aria-current="true"><span>Français</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></a><a href="/de/terms" lang="de" hreflang="de"><span>Deutsch</span></a><a href="/it/terms" lang="it" hreflang="it"><span>Italiano</span></a><a href="/pt-br/terms" lang="pt-BR" hreflang="pt-BR"><span>Português</span></a><a href="/zh/terms" lang="zh-Hans" hreflang="zh-Hans"><span>简体中文</span></a><a href="/ko/terms" lang="ko" hreflang="ko"><span>한국어</span></a><a href="/nl/terms" lang="nl" hreflang="nl"><span>Nederlands</span></a><a href="/ja/terms" lang="ja" hreflang="ja"><span>日本語</span></a><a href="/zh-hant/terms" lang="zh-Hant" hreflang="zh-Hant"><span>繁體中文</span></a><a href="/ru/terms" lang="ru" hreflang="ru"><span>Русский</span></a><a href="/tr/terms" lang="tr" hreflang="tr"><span>Türkçe</span></a><a href="/id/terms" lang="id" hreflang="id"><span>Bahasa Indonesia</span></a><a href="/hi/terms" lang="hi" hreflang="hi"><span>हिन्दी</span></a><a href="/ar/terms" lang="ar" hreflang="ar"><span>العربية</span></a><a href="/ur/terms" lang="ur" hreflang="ur"><span>اردو</span></a></div></div></details>
       <a class="head-get" href="https://apps.apple.com/app/id6783131829" aria-label="Télécharger Privaro sur l’App Store">Télécharger</a>
     </div>
+    <nav class="head-links head-links-phone" aria-label="Privaro">
+      <a href="/fr/pro">Fonctions Pro</a>
+      <a href="/fr/security">Sécurité</a>
+      <a href="/fr/faq">Questions</a>
+    </nav>
   </div>
 </header>
 
 <main id="main" class="page wrap legal-page terms">
 
-  <!-- The title, when it was written, and what it covers. -->
   <header class="legal-hero">
     <h1>Conditions d’utilisation</h1>
-    <p class="updated">Date d’entrée en vigueur : 28 juin 2026 · Dernière mise à jour : 28 juin 2026</p>
-    <p class="intro">Les présentes conditions d’utilisation (« Conditions ») régissent votre utilisation de l’application Privaro (« Privaro », « l’app ») fournie par Erdinc Zarbo (« nous », « notre »). En téléchargeant ou en utilisant Privaro, vous acceptez ces Conditions. Si vous ne les acceptez pas, n’utilisez pas l’app.</p>
+    <p class="updated">Date d’entrée en vigueur : 28 juin 2026 · Dernière mise à jour : 28 juin 2026</p>
+    <p class="intro">Les présentes conditions d’utilisation (« Conditions ») régissent votre utilisation de l’application Privaro (« Privaro », « l’app ») fournie par Erdinc Zarbo (« nous », « notre »). En téléchargeant ou en utilisant Privaro, vous acceptez ces Conditions. Si vous ne les acceptez pas, n’utilisez pas l’app.</p>
   </header>
 
-  <!-- The one thing to read if nothing else: set large, between two lines. -->
   <aside class="legal-callout" aria-label="À lire attentivement.">
     <p class="legal-callout-label">À lire attentivement.</p>
     <p class="legal-callout-body">Privaro chiffre votre contenu sur votre appareil avec une clé que vous seul contrôlez. Autrement dit, si vous perdez votre code et votre clé de récupération, <strong>personne, pas même nous, ne peut récupérer vos données.</strong> Privaro comporte aussi des fonctions qui effacent des données de façon permanente, volontairement. Il vous appartient de conserver votre code et votre clé de récupération en lieu sûr, de choisir la configuration de l’app et de maintenir vos propres sauvegardes.</p>
   </aside>
 
-  <!-- The sections, numbered as they are below, each a link to it. -->
   <nav class="legal-index" aria-labelledby="legal-index-h">
-    <p id="legal-index-h" class="legal-index-label">In questa pagina</p>
+    <p id="legal-index-h" class="legal-index-label">Sur cette page</p>
     <ol>
       <li><a href="#license">Licence</a></li>
       <li><a href="#responsibilities">Vos responsabilités</a></li>
@@ -118,8 +118,6 @@
     </ol>
   </nav>
 
-  <!-- Each section an article: its number and title on the left, the text
-       on the right, in a reading measure. Space, not lines, between them. -->
   <div class="articles">
   <section class="article" id="license" aria-labelledby="license-h">
     <h2 id="license-h">Licence</h2>
@@ -142,26 +140,26 @@
   <section class="article" id="data-loss" aria-labelledby="data-loss-h">
     <h2 id="data-loss-h">Perte de données et sauvegardes</h2>
     <div class="article-body">
-      <p>En raison du chiffrement à divulgation nulle réalisé sur l’appareil, nous ne pouvons ni réinitialiser votre code, ni récupérer votre clé de chiffrement, ni restaurer votre contenu à votre place. Chacune des situations suivantes peut entraîner une perte définitive et irrécupérable de votre contenu : perte ou oubli de votre code et de votre clé de récupération ; perte, vol, dommage, réparation, réinitialisation ou remplacement de votre appareil ; suppression de l’app ou de ses données ; défaillance du système d’exploitation ou du matériel ; ou absence de sauvegarde à jour et fonctionnelle. Vous êtes seul responsable de vos propres sauvegardes. Vous utilisez les fonctions facultatives de sauvegarde, de restauration et de transfert à votre discrétion et à vos risques, et nous n’en garantissons ni la disponibilité, ni l’exhaustivité, ni le succès.</p>
+      <p>En raison du chiffrement à divulgation nulle réalisé sur l’appareil, nous ne pouvons ni réinitialiser votre code, ni récupérer votre clé de chiffrement, ni restaurer votre contenu à votre place. Chacune des situations suivantes peut entraîner une perte définitive et irrécupérable de votre contenu : perte ou oubli de votre code et de votre clé de récupération ; perte, vol, dommage, réparation, réinitialisation ou remplacement de votre appareil ; suppression de l’app ou de ses données ; défaillance du système d’exploitation ou du matériel ; ou absence de sauvegarde à jour et fonctionnelle. Vous êtes seul responsable de vos propres sauvegardes. Vous utilisez les fonctions facultatives de sauvegarde, de restauration et de transfert à votre discrétion et à vos risques, et nous n’en garantissons ni la disponibilité, ni l’exhaustivité, ni le succès.</p>
     </div>
   </section>
   <section class="article" id="erasing-features" aria-labelledby="erasing-features-h">
     <h2 id="erasing-features-h">Fonctions de sécurité et d’effacement</h2>
     <div class="article-body">
       <p>Privaro comporte des fonctions facultatives conçues, volontairement, pour supprimer vos données ou modifier les conditions d’accès à celles-ci, notamment l’Effacement sous contrainte, le Coffre leurre, le Verrouillage panique et des outils similaires. Ces fonctions se comportent exactement comme décrit et peuvent provoquer une perte de données intentionnelle et définitive.</p>
-      <p>En particulier, si vous activez l’<strong>Effacement sous contrainte</strong>, la saisie du code sous contrainte (par exemple sur l’écran de verrouillage) effacera immédiatement, définitivement et irréversiblement votre coffre réel et tout ce qu’il contient, par conception, sans confirmation, sans annulation et sans récupération possible, y compris dans des circonstances que vous n’aviez pas anticipées. Vous décidez d’activer ou non ces fonctions et de leur configuration ; vous êtes seul responsable de ce choix et de toute perte de données ou impossibilité d’y accéder qui en découlerait ; et vous acceptez que nous ne soyons pas responsables des données effacées, masquées ou rendues inaccessibles par votre usage de ces fonctions. N’activez ces fonctions que si vous comprenez et acceptez pleinement leur comportement.</p>
+      <p>En particulier, si vous activez l’<strong>Effacement sous contrainte</strong>, la saisie du code sous contrainte (par exemple sur l’écran de verrouillage) effacera immédiatement, définitivement et irréversiblement votre coffre réel et tout ce qu’il contient, par conception, sans confirmation, sans annulation et sans récupération possible, y compris dans des circonstances que vous n’aviez pas anticipées. Vous décidez d’activer ou non ces fonctions et de leur configuration ; vous êtes seul responsable de ce choix et de toute perte de données ou impossibilité d’y accéder qui en découlerait ; et vous acceptez que nous ne soyons pas responsables des données effacées, masquées ou rendues inaccessibles par votre usage de ces fonctions. N’activez ces fonctions que si vous comprenez et acceptez pleinement leur comportement.</p>
     </div>
   </section>
   <section class="article" id="purchases" aria-labelledby="purchases-h">
     <h2 id="purchases-h">Achats</h2>
     <div class="article-body">
-      <p>Privaro propose une amélioration payante facultative (« Privaro Pro ») sous forme d’achat unique, vendue via l’App Store d’Apple. Il n’y a pas d’abonnement et rien ne se renouvelle. Le paiement est débité de votre compte Apple à la confirmation de l’achat, et l’amélioration s’applique à tous les appareils connectés à ce compte Apple. Les prix peuvent varier selon les régions et sont affichés au moment de l’achat. Sauf lorsque la loi ou les règles d’Apple l’exigent, les paiements ne sont pas remboursables ; les demandes de remboursement sont traitées par Apple.</p>
+      <p>Privaro propose une amélioration payante facultative (« Privaro Pro ») sous forme d’achat unique, vendue via l’App Store d’Apple. Il n’y a pas d’abonnement et rien ne se renouvelle. Le paiement est débité de votre compte Apple à la confirmation de l’achat, et l’amélioration s’applique à tous les appareils connectés à ce compte Apple. Les prix peuvent varier selon les régions et sont affichés au moment de l’achat. Sauf lorsque la loi ou les règles d’Apple l’exigent, les paiements ne sont pas remboursables ; les demandes de remboursement sont traitées par Apple.</p>
     </div>
   </section>
   <section class="article" id="disclaimers" aria-labelledby="disclaimers-h">
     <h2 id="disclaimers-h">Exclusions de garantie</h2>
     <div class="article-body">
-      <p>Privaro est fourni « en l’état » et « selon disponibilité », sans garantie d’aucune sorte, expresse ou implicite, y compris les garanties implicites de qualité marchande, d’adéquation à un usage particulier et d’absence de contrefaçon. Bien que nous utilisions un chiffrement robuste et standard, nous ne garantissons pas que l’app fonctionnera sans interruption ni erreur, ni qu’elle répondra à vos besoins, et aucune mesure de sécurité n’est garantie inviolable. Vous utilisez des fonctions telles que le transfert Wi-Fi, non chiffré pendant le transit, à vos propres risques et uniquement sur des réseaux de confiance.</p>
+      <p>Privaro est fourni « en l’état » et « selon disponibilité », sans garantie d’aucune sorte, expresse ou implicite, y compris les garanties implicites de qualité marchande, d’adéquation à un usage particulier et d’absence de contrefaçon. Bien que nous utilisions un chiffrement robuste et standard, nous ne garantissons pas que l’app fonctionnera sans interruption ni erreur, ni qu’elle répondra à vos besoins, et aucune mesure de sécurité n’est garantie inviolable. Vous utilisez des fonctions telles que le transfert Wi-Fi, non chiffré pendant le transit, à vos propres risques et uniquement sur des réseaux de confiance.</p>
       <p>Privaro est un logiciel grand public, pas une garantie de sécurité. Nous ne garantissons pas qu’il protégera votre contenu contre toutes les menaces, y compris des attaquants déterminés, l’analyse forensique d’un appareil, des logiciels malveillants, des vulnérabilités du système d’exploitation ou de composants tiers, ou une contrainte légale ou physique. Il vous appartient d’évaluer si l’app convient à vos besoins et à votre modèle de menace.</p>
     </div>
   </section>
@@ -169,13 +167,13 @@
     <h2 id="liability-h">Limitation de responsabilité</h2>
     <div class="article-body">
       <p>Dans toute la mesure permise par la loi, nous ne serons en aucun cas responsables de dommages indirects, accessoires, spéciaux, consécutifs ou punitifs, ni de la perte de données, de bénéfices ou de contenu, découlant de votre utilisation (ou de l’impossibilité d’utiliser) Privaro, même si la possibilité de tels dommages a été signalée. Notre responsabilité totale pour toute réclamation liée à l’app n’excédera pas le montant que vous nous avez versé pour l’app au cours des douze mois précédant la réclamation ou, si aucun montant n’a été versé, une somme symbolique.</p>
-      <p>Certaines juridictions n’autorisent pas l’exclusion des garanties implicites ni la limitation de certains dommages ; une partie de ce qui précède peut donc ne pas s’appliquer à vous. Dans ce cas, notre responsabilité est limitée au maximum permis par la loi applicable, et rien dans les présentes Conditions ne limite ni n’exclut les droits auxquels vous ne pouvez renoncer en vertu du droit impératif de votre pays de résidence.</p>
+      <p>Certaines juridictions n’autorisent pas l’exclusion des garanties implicites ni la limitation de certains dommages ; une partie de ce qui précède peut donc ne pas s’appliquer à vous. Dans ce cas, notre responsabilité est limitée au maximum permis par la loi applicable, et rien dans les présentes Conditions ne limite ni n’exclut les droits auxquels vous ne pouvez renoncer en vertu du droit impératif de votre pays de résidence.</p>
     </div>
   </section>
   <section class="article" id="indemnification" aria-labelledby="indemnification-h">
     <h2 id="indemnification-h">Indemnisation</h2>
     <div class="article-body">
-      <p>Dans toute la mesure permise par la loi, vous acceptez d’indemniser et de garantir Erdinc Zarbo contre toute réclamation, tout dommage, perte, responsabilité et frais (y compris des frais juridiques raisonnables) découlant de ou liés à : le contenu que vous stockez ou partagez ; votre utilisation ou votre usage abusif de l’app ; votre violation des présentes Conditions ; ou votre violation d’une loi ou des droits d’un tiers.</p>
+      <p>Dans toute la mesure permise par la loi, vous acceptez d’indemniser et de garantir Erdinc Zarbo contre toute réclamation, tout dommage, perte, responsabilité et frais (y compris des frais juridiques raisonnables) découlant de ou liés à : le contenu que vous stockez ou partagez ; votre utilisation ou votre usage abusif de l’app ; votre violation des présentes Conditions ; ou votre violation d’une loi ou des droits d’un tiers.</p>
     </div>
   </section>
   <section class="article" id="apple" aria-labelledby="apple-h">
@@ -187,7 +185,7 @@
   <section class="article" id="changes" aria-labelledby="changes-h">
     <h2 id="changes-h">Modifications des Conditions</h2>
     <div class="article-body">
-      <p>Nous pouvons mettre à jour ces Conditions de temps à autre. Nous modifierons la date de « Dernière mise à jour » ci-dessus, et les changements importants seront signalés dans l’app ou sur notre site web. Le fait de continuer à utiliser l’app après l’entrée en vigueur des modifications vaut acceptation des Conditions mises à jour.</p>
+      <p>Nous pouvons mettre à jour ces Conditions de temps à autre. Nous modifierons la date de « Dernière mise à jour » ci-dessus, et les changements importants seront signalés dans l’app ou sur notre site web. Le fait de continuer à utiliser l’app après l’entrée en vigueur des modifications vaut acceptation des Conditions mises à jour.</p>
     </div>
   </section>
   <section class="article" id="governing-law" aria-labelledby="governing-law-h">
@@ -205,7 +203,7 @@
   <section class="article" id="contact" aria-labelledby="contact-h">
     <h2 id="contact-h">Contact</h2>
     <div class="article-body">
-      <p>Des questions sur ces Conditions ? Écrivez-nous à <a href="mailto:erdincdubu@icloud.com">erdincdubu@icloud.com</a></p>
+      <p>Des questions sur ces Conditions ? Écrivez-nous à <a href="mailto:erdincdubu@icloud.com">erdincdubu@icloud.com</a></p>
     </div>
   </section>
   </div>
@@ -214,15 +212,13 @@
 
 </main>
 
-<!-- A row of plain links and the page's controls, like the header's, and
-     one quiet line under it. -->
 <footer class="site-foot wrap">
   <nav class="foot-links">
     <a href="/fr/pro">Fonctions Pro</a>
     <a href="/fr/faq">Questions</a>
-    <a href="/security">Sécurité</a>
+    <a href="/fr/security">Sécurité</a>
     <a href="/fr/privacy">Politique de confidentialité</a>
-    <a href="/fr/terms" aria-current="page">Conditions d'utilisation</a>
+    <a href="/fr/terms" aria-current="page">Conditions d’utilisation</a>
     <a href="mailto:erdincdubu@icloud.com">Contact</a>
     <details class="lang"><summary aria-label="Langue: Français"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>Français</span><svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg></summary><div class="lang-menu"><p class="lang-head">Langue</p><div class="lang-list"><a href="/terms" lang="en" hreflang="en"><span>English</span></a><a href="/es/terms" lang="es" hreflang="es"><span>Español</span></a><a href="/fr/terms" lang="fr" hreflang="fr" class="active" aria-current="true"><span>Français</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></a><a href="/de/terms" lang="de" hreflang="de"><span>Deutsch</span></a><a href="/it/terms" lang="it" hreflang="it"><span>Italiano</span></a><a href="/pt-br/terms" lang="pt-BR" hreflang="pt-BR"><span>Português</span></a><a href="/zh/terms" lang="zh-Hans" hreflang="zh-Hans"><span>简体中文</span></a><a href="/ko/terms" lang="ko" hreflang="ko"><span>한국어</span></a><a href="/nl/terms" lang="nl" hreflang="nl"><span>Nederlands</span></a><a href="/ja/terms" lang="ja" hreflang="ja"><span>日本語</span></a><a href="/zh-hant/terms" lang="zh-Hant" hreflang="zh-Hant"><span>繁體中文</span></a><a href="/ru/terms" lang="ru" hreflang="ru"><span>Русский</span></a><a href="/tr/terms" lang="tr" hreflang="tr"><span>Türkçe</span></a><a href="/id/terms" lang="id" hreflang="id"><span>Bahasa Indonesia</span></a><a href="/hi/terms" lang="hi" hreflang="hi"><span>हिन्दी</span></a><a href="/ar/terms" lang="ar" hreflang="ar"><span>العربية</span></a><a href="/ur/terms" lang="ur" hreflang="ur"><span>اردو</span></a></div></div></details>
   </nav>
@@ -231,33 +227,26 @@
 
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
-// The language menus (one in the header, one in the footer) are <details>;
-// close an open one on a click elsewhere, on its own button, or on Escape.
-// On phones a click on the dimmed page lands on the <details> itself (its
-// ::before is the dimming), so that counts as elsewhere too. A menu leaves
-// as it came rather than vanishing: it's held open for the moment its way
-// out takes (.closing in styles.css), then closed. With Reduce Motion it
-// just closes.
 const langs = document.querySelectorAll('.lang');
 const still = matchMedia('(prefers-reduced-motion: reduce)');
 const shut = lang => {
-  if (!lang.open || lang.classList.contains('closing')) return;
-  if (still.matches) { lang.open = false; return; }
-  lang.classList.add('closing');
-  setTimeout(() => { lang.open = false; lang.classList.remove('closing'); }, 200);
+if (!lang.open || lang.classList.contains('closing')) return;
+if (still.matches) { lang.open = false; return; }
+lang.classList.add('closing');
+setTimeout(() => { lang.open = false; lang.classList.remove('closing'); }, 200);
 };
 document.addEventListener('click', e => langs.forEach(lang => {
-  if (!lang.open) return;
-  const summary = e.target.closest ? e.target.closest('summary') : null;
-  if (summary && lang.contains(summary)) { e.preventDefault(); shut(lang); }
-  else if (e.target === lang || !lang.contains(e.target)) shut(lang);
+if (!lang.open) return;
+const summary = e.target.closest ? e.target.closest('summary') : null;
+if (summary && lang.contains(summary)) { e.preventDefault(); shut(lang); }
+else if (e.target === lang || !lang.contains(e.target)) shut(lang);
 }));
 document.addEventListener('keydown', e => {
-  if (e.key !== 'Escape') return;
-  langs.forEach(lang => { if (lang.open) { shut(lang); lang.querySelector('summary').focus(); } });
+if (e.key !== 'Escape') return;
+langs.forEach(lang => { if (lang.open) { shut(lang); lang.querySelector('summary').focus(); } });
 });
 </script>
 
-<script src="/presentation.js?v=a1d449eb43" data-enlarge="Agrandir la capture : {name}" data-close="Fermer la visionneuse" data-previous="Capture précédente" data-next="Capture suivante" defer></script>
+<script src="/presentation.js?v=5192425b53" data-enlarge="Agrandir la capture : {name}" data-close="Fermer la visionneuse" data-previous="Capture précédente" data-next="Capture suivante" defer></script>
 </body>
 </html>

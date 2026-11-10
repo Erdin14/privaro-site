@@ -63,8 +63,18 @@
   }
 
   function start() {
-    // A browser may still refuse (Low Power Mode, say); Play is there for that.
-    video.play().catch(() => { held = true; sync(); });
+    // A browser may still refuse (an iPhone in Low Power Mode does); Play is
+    // there for that. The film opens on black, so its first frame as a
+    // poster then looks like a film that failed to load, a tall empty box:
+    // it gets the end card instead, as with Reduce Motion. Only a refusal
+    // counts: being scrolled away mid-start also ends the attempt, and
+    // that used to be taken for one, so coming back never played it.
+    video.play().catch(error => {
+      if (error.name !== 'NotAllowedError') return;
+      held = true;
+      if (!video.played.length) video.poster = video.poster.replace('-start.', '-end.');
+      sync();
+    });
   }
   function toggle() {
     if (video.paused) {

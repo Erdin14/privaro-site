@@ -1,0 +1,15 @@
+<!-- Where a reading page ends: the way to the App Store, as the homepage
+     closes, for whoever came to check something first and is now satisfied.
+     The Questions and Security pages used to end without one; on a phone,
+     where the header scrolls away, that left the footer and nothing else. -->
+<section class="get"{{LOCAL}} aria-label="{{badge_label}}">
+  <div class="buy">
+    <div class="buy-get">
+      <a class="appstore" href="{{APP_STORE}}" aria-label="{{badge_label}}">
+        <img src="/appstore-badge-white.svg" width="150" height="50" alt="{{badge_label}}" loading="lazy" />
+      </a>
+      <p class="buy-note"><span>{{buy_free}}</span></p>
+    </div>
+    <p class="handoff" aria-hidden="true"><img src="/qr-appstore.svg" width="72" height="72" alt="" loading="lazy" /><span>{{home_scan}}</span></p>
+  </div>
+</section>

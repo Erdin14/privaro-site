@@ -7,11 +7,17 @@ language gets its own folder (/es/index.html, /es/pro.html, ...). Output is
 committed for the existing Vercel setup. Each build also packages only the
 intended public files into dist/, the Cloudflare Pages build output directory.
 
-Shared pieces live in templates/partials/ and are pulled in with {{HEADER}}
-and {{FOOTER}}. The build also writes 404.html, sitemap.xml and robots.txt,
-and the security headers for both hosts: _headers for Cloudflare Pages
-(privaroapp.nl) and the "headers" in vercel.json, from SECURITY_HEADERS below.
-Pages in ENGLISH_ONLY (the security overview) are written once, to the root.
+Shared pieces live in templates/partials/ and are pulled in with {{HEADER}},
+{{FOOTER}} and the like. The build also writes 404.html, sitemap.xml and
+robots.txt, and the security headers for both hosts: _headers for Cloudflare
+Pages (privaroapp.nl) and the "headers" in vercel.json, from SECURITY_HEADERS
+below. Pages in ENGLISH_ONLY (the security overview) are written in English
+for every language: the words are the same, the header, footer and language
+menu around them are the reader's own.
+
+What's published is what's needed and no more: the pages go out without the
+notes written into the templates, and dist/ gets the stylesheet and scripts
+without theirs (published_bytes below). The notes stay in the source.
 
 Prices: Pro's App Store price per country comes from the CSV files in
 i18n/prices/ (our own price list, or App Store Connect's exports);
@@ -24,15 +30,18 @@ changes.
 """
 import base64
 import csv
+import functools
 import glob
 import hashlib
 import json
 import os
 import re
 import shutil
+from html import unescape
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 BASE_URL = "https://privaroapp.nl"
+APP_STORE = "https://apps.apple.com/app/id6783131829"
 PUBLIC_DIR = os.path.join(ROOT, "dist")
 
 # Security headers for every response, on both hosts. Nothing on the site needs
@@ -48,15 +57,19 @@ SECURITY_HEADERS = [
     # Cross-site, only the origin is sent: App Store Connect still sees visits
     # came from privaroapp.nl, never which page.
     ("Referrer-Policy", "strict-origin-when-cross-origin"),
+    # Only names browsers know: Chrome writes a warning to every page's console
+    # for one it doesn't ("bluetooth" was here, and did nothing anywhere).
     ("Permissions-Policy", ", ".join(f"{feature}=()" for feature in (
-        "accelerometer", "bluetooth", "browsing-topics", "camera", "display-capture", "geolocation",
+        "accelerometer", "browsing-topics", "camera", "display-capture", "geolocation",
         "gyroscope", "hid", "magnetometer", "microphone", "midi", "payment", "serial", "usb"))),
     # No other window gets a handle on ours, and no other site can embed our files.
     ("Cross-Origin-Opener-Policy", "same-origin"),
     ("Cross-Origin-Resource-Policy", "same-origin"),
     ("X-Permitted-Cross-Domain-Policies", "none"),
 ]
-INLINE_SCRIPT = re.compile(r"<script(?![^>]*\bsrc=)[^>]*>(.*?)</script>", re.S)
+# Inline scripts that run. Structured data (application/ld+json) is only read,
+# by search engines, never run, so the policy has nothing to allow there.
+INLINE_SCRIPT = re.compile(r'<script(?![^>]*\bsrc=)(?![^>]*type="application/ld\+json")[^>]*>(.*?)</script>', re.S)
 # Our own stylesheets and scripts, as the pages link them.
 LOCAL_ASSET = re.compile(r'((?:href|src)=")(/[\w./-]+\.(?:css|js))(")')
 VERSIONED_ASSET = re.compile(r'(?:href|src)="(/[\w./-]+\.(?:css|js))\?v=[0-9a-f]+"')
@@ -94,7 +107,10 @@ AUTONYM = {code: name for code, _, _, name in LANGS}
 RTL = {"ar", "ur"}
 
 PAGES = {"index": "index.html", "pro": "pro.html", "faq": "faq.html", "privacy": "privacy.html", "terms": "terms.html"}
-# Written in English only, at the root; every language's footer links to them.
+# Written in English only. Each language still gets its own copy, the English
+# words inside that language's header, footer and language menu, with a line
+# saying so: following "Security" from the Dutch pages used to land on a page
+# whose every link led on into the English site. Only the root one is indexed.
 ENGLISH_ONLY = {"security": "security.html"}
 # Which meta_title_* / meta_desc_* strings each page uses.
 META = {"index": "home", "pro": "pro", "faq": "faq", "privacy": "privacy", "terms": "terms", "security": "security"}
@@ -208,16 +224,24 @@ def load_strings():
 
 
 def page_url(page, code):
+    """A page's address as privaroapp.nl serves it, so no link, canonical or
+    sitemap entry points at a redirect. A language's homepage is its folder,
+    with the slash: Cloudflare Pages serves /nl/ and sends /nl there (308).
+    Written without it, every language's canonical, its hreflang links and its
+    sitemap entry named an address that redirects, which search engines may
+    set aside, and every tap on the name or a language cost a round trip.
+    (Vercel, with "trailingSlash": false, does the opposite and sends /nl/ to
+    /nl; its copy isn't the canonical one.)"""
     folder = FOLDER[code]
     if page == "index":
-        return "/" if folder == "" else "/" + folder
+        return "/" if folder == "" else "/" + folder + "/"
     prefix = "/" if folder == "" else "/" + folder + "/"
     return prefix + page
 
 
 def out_path(page, code):
     folder = FOLDER[code]
-    name = PAGES[page]
+    name = {**PAGES, **ENGLISH_ONLY}[page]
     return name if folder == "" else os.path.join(folder, name)
 
 
@@ -229,11 +253,62 @@ def hreflang_block(page):
     return "\n".join(lines)
 
 
-def seo_block(page, code, alternates=True):
-    """Canonical URL, language alternates, and the tags that make link previews work."""
-    url = BASE_URL + page_url(page, code)
+def json_ld(data):
+    """Structured data, as a block search engines read. "<" is written as an
+    escape, so nothing in a string can end the block early."""
+    body = json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("<", "\\u003c")
+    return f'<script type="application/ld+json">{body}</script>'
+
+
+def plain_text(html):
+    """A string from the i18n files as plain words: no tags, no entities."""
+    return re.sub(r"\s+", " ", unescape(re.sub(r"<[^>]+>", "", html))).strip()
+
+
+def structured_data(page, code, strings, pricing):
+    """What a page can say about itself in schema.org terms, and only what it
+    also says in words.
+    - The homepage at the root names the site and who publishes it: Google
+      takes a site's name in results from this, and a logo.
+    - The Questions page lists its questions and answers.
+    There is no SoftwareApplication entry on purpose: Google only accepts one
+    with a rating or a review, the app has none yet, and one isn't made up."""
+    if page == "index" and code == "en":
+        site, org = BASE_URL + "/#website", BASE_URL + "/#organization"
+        return json_ld({"@context": "https://schema.org", "@graph": [
+            {"@type": "WebSite", "@id": site, "url": BASE_URL + "/", "name": "Privaro",
+             "description": plain_text(strings["meta_desc_home"]["en"]),
+             "inLanguage": [htmllang for _, _, htmllang, _ in LANGS], "publisher": {"@id": org}},
+            {"@type": "Organization", "@id": org, "name": "Privaro", "url": BASE_URL + "/",
+             "logo": BASE_URL + "/logo.png", "sameAs": [APP_STORE]},
+        ]})
+    if page == "faq":
+        # The questions the page shows, in its order. An answer that names
+        # Pro's price names the one written into the page (its language's
+        # country's; price.js may show a visitor their own).
+        with open(os.path.join(ROOT, "templates", PAGES["faq"]), encoding="utf-8") as f:
+            shown = re.findall(r"\{\{(faq\d+)_q\}\}", f.read())
+        cc = pricing["lang"].get(code)
+        currency, amount = pricing["prices"][cc if cc in pricing["prices"] else pricing["base"]]
+        price = format_price(amount, currency, code)
+        text = lambda key: plain_text(strings[key].get(code, strings[key]["en"]).replace("{{PRICE}}", price))
+        return json_ld({"@context": "https://schema.org", "@type": "FAQPage",
+                        "inLanguage": next(htmllang for c, _, htmllang, _ in LANGS if c == code),
+                        "mainEntity": [{"@type": "Question", "name": text(q + "_q"),
+                                        "acceptedAnswer": {"@type": "Answer", "text": text(q + "_a")}} for q in shown]})
+    return ""
+
+
+def seo_block(page, code, strings, pricing, alternates=True, canonical=None):
+    """Canonical URL, language alternates, the tags that make link previews
+    work, and the page's structured data. `canonical` is for a page that is
+    another's words in a different frame (the security overview under a
+    language's header): it names the one to index."""
+    url = BASE_URL + page_url(page, canonical or code)
     meta = META[page]
+    data = structured_data(page, code, strings, pricing)
     return "\n".join([
+        *([data] if data else []),
         f'<link rel="canonical" href="{url}" />',
         *([hreflang_block(page)] if alternates else []),
         '<meta property="og:type" content="website" />',
@@ -244,7 +319,11 @@ def seo_block(page, code, alternates=True):
         f'<meta property="og:image" content="{BASE_URL}/og.jpg?v={fingerprint("og.jpg")}" />',
         '<meta property="og:image:width" content="1200" />',
         '<meta property="og:image:height" content="630" />',
-        f'<meta property="og:locale" content="{OG_LOCALE[code]}" />',
+        # What the preview picture shows, for whoever can't see it. In English
+        # on every page: the words in the picture are.
+        '<meta property="og:image:alt" content="Privaro. Your space. Your privacy. Available on the App Store. '
+        'Three iPhones show the vault, Privacy Mode and the lock screen." />',
+        f'<meta property="og:locale" content="{OG_LOCALE[canonical or code]}" />',
         '<meta name="twitter:card" content="summary_large_image" />',
     ])
 
@@ -269,7 +348,7 @@ def switcher_block(page, cur, label):
 def read_template(name):
     with open(os.path.join(ROOT, "templates", name), encoding="utf-8") as f:
         html = f.read()
-    for part in ("header", "footer", "vignette"):
+    for part in ("header", "footer", "vignette", "get"):
         with open(os.path.join(ROOT, "templates", "partials", part + ".html"), encoding="utf-8") as f:
             html = html.replace("{{" + part.upper() + "}}", f.read().rstrip("\n"))
     return html
@@ -277,8 +356,8 @@ def read_template(name):
 
 def public_pages():
     """Only generated visitor-facing pages; never templates, legacy or dist/."""
-    return ([out_path(page, code) for page in PAGES for code, _, _, _ in LANGS]
-            + list(ENGLISH_ONLY.values()) + ["404.html"])
+    return ([out_path(page, code) for page in {**PAGES, **ENGLISH_ONLY} for code, _, _, _ in LANGS]
+            + ["404.html"])
 
 
 def inline_script_hashes():
@@ -391,6 +470,15 @@ def render(html, page, code, htmllang, head, strings, pricing, here=None):
     html = html.replace("{{DIR}}", "rtl" if code in RTL else "ltr")
     html = html.replace("{{SHOTS}}", SHOTS + (FOLDER[code] + "/" if FOLDER[code] else ""))
     html = html.replace("{{SEO}}", head)
+    html = html.replace("{{APP_STORE}}", APP_STORE)
+    # An English-only page under another language's header: its own words are
+    # marked as English, left to right, and what is in the reader's language
+    # inside it (the line saying so, the way to the App Store) is marked back.
+    framed = page in ENGLISH_ONLY and code != "en"
+    html = html.replace("{{ENGLISH}}", ' lang="en" dir="ltr"' if framed else "")
+    html = html.replace("{{LOCAL}}", f' lang="{htmllang}" dir="{"rtl" if code in RTL else "ltr"}"' if framed else "")
+    html = html.replace("{{ONLY_ENGLISH}}", f'<p class="only-english" lang="{htmllang}" dir="{"rtl" if code in RTL else "ltr"}">'
+                        f'{strings["only_english"][code]}</p>\n' if framed else "")
     label = strings["lang_label"].get(code, strings["lang_label"]["en"])
     html = html.replace("{{SWITCHER}}", switcher_block(page, code, label))
     html = html.replace("{{HOME_URL}}", page_url("index", code))
@@ -398,7 +486,7 @@ def render(html, page, code, htmllang, head, strings, pricing, here=None):
     html = html.replace("{{FAQ_URL}}", page_url("faq", code))
     html = html.replace("{{PRIVACY_URL}}", page_url("privacy", code))
     html = html.replace("{{TERMS_URL}}", page_url("terms", code))
-    html = html.replace("{{SECURITY_URL}}", page_url("security", "en"))
+    html = html.replace("{{SECURITY_URL}}", page_url("security", code))
     for key, vals in strings.items():
         html = html.replace("{{" + key + "}}", vals.get(code, vals["en"]))
     for token, value in price_tokens(pricing, code).items():
@@ -411,10 +499,79 @@ def render(html, page, code, htmllang, head, strings, pricing, here=None):
     return html
 
 
-def fingerprint(rel):
-    """A short hash of one of our files, for its URL."""
+HTML_COMMENT = re.compile(r"[ \t]*<!--.*?-->[ \t]*\n?", re.S)
+INLINE_BODY = re.compile(r"(<script(?![^>]*\bsrc=)[^>]*>)(.*?)(</script>)", re.S)
+
+
+def strip_css(text):
+    """A stylesheet without its notes, indentation or blank lines. Nothing is
+    rewritten: every rule goes out as it was written, so there's nothing for
+    this to get wrong. The notes are about half of what a browser downloads
+    of styles.css, which holds up the first paint of every page."""
+    out, i, n = [], 0, len(text)
+    while i < n:
+        if text.startswith("/*", i):
+            end = text.find("*/", i + 2)
+            i = n if end < 0 else end + 2
+        elif text[i] in "\"'":
+            # A string goes out whole, whatever it holds.
+            j = i + 1
+            while j < n and text[j] != text[i]:
+                j += 2 if text[j] == "\\" else 1
+            out.append(text[i:j + 1])
+            i = j + 1
+        else:
+            out.append(text[i])
+            i += 1
+    lines = (line.strip() for line in "".join(out).split("\n"))
+    return "\n".join(line for line in lines if line) + "\n"
+
+
+def strip_js(text):
+    """A script without the lines that are only a note, its indentation or
+    its blank lines. Line breaks between statements stay, so it reads to a
+    browser exactly as before. Inside a template literal (between backticks)
+    every line is kept as it is."""
+    out, inside = [], False
+    for line in text.split("\n"):
+        bare = line.strip()
+        if inside:
+            out.append(line)
+        elif bare and not bare.startswith("//"):
+            out.append(bare)
+        else:
+            continue
+        if len(re.findall(r"(?<!\\)`", line)) % 2:
+            inside = not inside
+    return "\n".join(out) + "\n"
+
+
+def strip_html(html):
+    """A page without the notes written into its template, in the markup or
+    in its inline scripts. Structured data is left exactly as written."""
+    def script(match):
+        if "application/ld+json" in match.group(1):
+            return match.group(0)
+        return match.group(1) + "\n" + strip_js(match.group(2)) + match.group(3)
+    return re.sub(r"\n{3,}", "\n\n", INLINE_BODY.sub(script, HTML_COMMENT.sub("", html)))
+
+
+@functools.lru_cache(maxsize=None)
+def published_bytes(rel):
+    """One of our files as it's published: stylesheets and scripts without
+    their notes, everything else as it is."""
     with open(os.path.join(ROOT, rel.lstrip("/")), "rb") as f:
-        return hashlib.sha256(f.read()).hexdigest()[:10]
+        data = f.read()
+    if rel.endswith(".css"):
+        return strip_css(data.decode("utf-8")).encode("utf-8")
+    if rel.endswith(".js"):
+        return strip_js(data.decode("utf-8")).encode("utf-8")
+    return data
+
+
+def fingerprint(rel):
+    """A short hash of one of our files as it's published, for its URL."""
+    return hashlib.sha256(published_bytes(rel)).hexdigest()[:10]
 
 
 def version_assets(html):
@@ -427,7 +584,7 @@ def version_assets(html):
 
 def write(rel, text):
     if rel.endswith(".html"):
-        text = version_assets(text)
+        text = version_assets(strip_html(text))
     dest = os.path.join(ROOT, rel)
     os.makedirs(os.path.dirname(dest) or ".", exist_ok=True)
     with open(dest, "w", encoding="utf-8", newline="\n") as f:
@@ -447,6 +604,8 @@ def sitemap():
             out.append(f"    <loc>{BASE_URL}{page_url(page, code)}</loc>")
             out.extend(alternates)
             out.append("  </url>")
+    # Only the root copy: every other language's is the same words, and says so
+    # with its canonical link.
     for page in ENGLISH_ONLY:
         out.extend(["  <url>", f"    <loc>{BASE_URL}{page_url(page, 'en')}</loc>", "  </url>"])
     out.append("</urlset>")
@@ -458,8 +617,7 @@ def package_public_site():
     files = public_pages() + [
         "_headers", "_redirects", "robots.txt", "sitemap.xml",
         ".well-known/apple-app-site-association", ".well-known/security.txt",
-        "styles.css", "transitions.css", "decrypt.js", "film.js",
-        "presentation.js", "price.js", "privacy-vignette.js",
+        "styles.css", "film.js", "presentation.js", "price.js", "privacy-vignette.js",
         "appstore-badge.svg", "appstore-badge-white.svg", "qr-appstore.svg", "logo.png", "favicon.png", "og.jpg",
     ]
     # Only media belongs in these asset trees; hidden/build/config files do not.
@@ -489,7 +647,8 @@ def package_public_site():
             raise SystemExit(f"Refusing redirected public source: {rel}")
         dest = os.path.join(PUBLIC_DIR, rel)
         os.makedirs(os.path.dirname(dest), exist_ok=True)
-        shutil.copyfile(source, dest)
+        with open(dest, "wb") as f:
+            f.write(published_bytes(rel))
     print(f"packaged {len(files)} public files into dist/")
 
 
@@ -505,16 +664,18 @@ def main():
     for page, _ in PAGES.items():
         template = read_template(PAGES[page])
         for code, _, htmllang, _ in LANGS:
-            html = render(template, page, code, htmllang, seo_block(page, code), strings, pricing,
+            html = render(template, page, code, htmllang, seo_block(page, code, strings, pricing), strings, pricing,
                           here=page_url(page, code))
             write(out_path(page, code), html)
 
-    # English only, with no language alternates; like the 404's, the language
-    # menu leads to each homepage.
+    # English only, in every language's frame. No language alternates: there is
+    # one text, and each copy's canonical link names the root one.
     for page, name in ENGLISH_ONLY.items():
-        html = render(read_template(name), "index", "en", "en", seo_block(page, "en", alternates=False),
-                      strings, pricing, here=page_url(page, "en"))
-        write(name, html)
+        template = read_template(name)
+        for code, _, htmllang, _ in LANGS:
+            head = seo_block(page, code, strings, pricing, alternates=False, canonical="en")
+            html = render(template, page, code, htmllang, head, strings, pricing, here=page_url(page, code))
+            write(out_path(page, code), html)
 
     # One English 404 for every path; its language menu leads to each homepage.
     html = render(read_template("404.html"), "index", "en", "en",
