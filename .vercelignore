@@ -8,5 +8,6 @@ _redirects
 screenshots.html
 dist
 tests
+og/
 README.md
 .gitattributes
