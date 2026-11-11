@@ -41,7 +41,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=9b78707d62" />
+<link rel="stylesheet" href="/styles.css?v=5cc09b8606" />
 <script>
 (() => {
 const root = document.documentElement;
@@ -176,146 +176,13 @@ document.currentScript.previousElementSibling.poster = '/film/privaro-' +
           <div><dt>Works offline</dt><dd>Your photos go online only if you turn on encrypted iCloud backup.</dd></div>
         </dl>
         <a class="more" href="/security">Read the security overview</a>
+        <a class="inside-door" href="/encryption">
+          <span class="inside-door-words"><strong>See it happen</strong> <span>Encrypt a photo in your own browser, one step at a time.</span></span>
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5" /></svg>
+        </a>
       </div>
     </div>
   </section>
-
-  <section class="inside wrap" id="inside" aria-labelledby="inside-title">
-    <h2 id="inside-title" class="display">
-      <span class="mask"><span class="rise" style="--anim:mask-rise">Inside the encryption.</span></span>
-      <span class="mask answer"><span class="rise" style="--anim:mask-rise;--d:.1s">Try it yourself, right here.</span></span>
-    </h2>
-    <p class="inside-lead">The phone above is a drawing. This one works: your browser encrypts the photo below with AES-256-GCM, the cipher Privaro uses, and nothing leaves this page. It’s a simplified demo of the principle, not the app’s whole storage system.</p>
-
-    <div class="lab" data-state="idle" data-view="visual">
-      <div class="lab-stage">
-        <figure class="lab-file">
-          <figcaption class="lab-label lab-file-label">The photo</figcaption>
-          <div class="lab-frame" role="img" aria-label="Sample photo: a snow-capped mountain reflected in a lake.">
-            <canvas class="lab-cipher" width="360" height="540"></canvas>
-            <div class="lab-pane"><canvas class="lab-plain" width="360" height="540"></canvas></div>
-            <img class="lab-photo" src="/art/vignette-lake.jpg" width="600" height="900" alt="" loading="lazy" decoding="async" />
-            <span class="lab-pieces"></span>
-            <span class="lab-band"><span class="lab-band-name"></span></span>
-            <span class="lab-mark"></span>
-            <span class="lab-scan"></span>
-          </div>
-        </figure>
-        <div class="lab-seam" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path class="lab-shackle" pathLength="100" d="M8 11V7.5a4 4 0 0 1 8 0V11" /><rect x="5" y="11" width="14" height="10" rx="2.5" /></svg>
-        </div>
-        <div class="lab-keyside">
-          <p class="lab-label">The key</p>
-          <div class="lab-key" data-key="none" aria-hidden="true"></div>
-          <p class="lab-keynote">Not made yet.</p>
-        </div>
-        <p class="lab-status" role="status">Readable. Any app that can reach this file can show it.</p>
-        <div class="lab-actions" hidden>
-          <button class="lab-go" type="button">Encrypt this photo</button>
-          <div class="lab-alts">
-            <button class="lab-alt" type="button" data-act="wrong" hidden>Try a wrong key</button>
-            <button class="lab-alt" type="button" data-act="flip" hidden>Change one bit</button>
-            <button class="lab-alt" type="button" data-act="undo" hidden>Undo the change</button>
-            <button class="lab-alt" type="button" data-act="pick" hidden>Use your own photo</button>
-            <button class="lab-alt" type="button" data-act="sample" hidden>Back to the sample</button>
-          </div>
-          <input class="lab-picker" type="file" accept="image/*" tabindex="-1" aria-label="Use your own photo" hidden />
-        </div>
-        <noscript><p class="lab-noscript">The live demo needs JavaScript. The five steps beside it are what it shows.</p></noscript>
-      </div>
-
-      <div class="lab-explain">
-        <fieldset class="lab-view" hidden>
-          <legend class="visually-hidden">How to explain it</legend>
-          <input type="radio" name="lab-view" id="lab-view-visual" value="visual" checked /><label for="lab-view-visual">Visual explanation</label>
-          <input type="radio" name="lab-view" id="lab-view-tech" value="tech" /><label for="lab-view-tech">Technical view</label>
-          <span class="knob" aria-hidden="true"></span>
-        </fieldset>
-
-        <ol class="lab-steps">
-          <li><h3>A photo anyone can read</h3><p>It starts as an ordinary picture. Any app that gets to the file can show it.</p></li>
-          <li><h3>A key, made on the device</h3><p>256 random bits. Privaro makes its key once, on your iPhone, and the key stays on it.</p></li>
-          <li><h3>Encrypted, piece by piece</h3><p>Each piece of the photo is locked with the key, using AES-256. What comes out looks like random noise.</p></li>
-          <li><h3>Stored in the vault</h3><p>Only the encrypted file is kept. The key is kept apart from it, in the iPhone’s Keychain, and Privaro uses it only after Face ID or your passcode.</p></li>
-          <li><h3>Opened again, exactly</h3><p>With the right key every piece is checked, then unlocked. A wrong key or a changed file opens nothing.</p></li>
-        </ol>
-
-        <dl class="lab-tech" hidden>
-          <div><dt>Where it runs</dt><dd>In this tab, with your browser’s Web Crypto API. No request is made: watch your browser’s network inspector, or go offline and run it again. This site’s Content Security Policy has no <code>connect-src</code>, so the browser refuses any fetch, XHR or WebSocket call from its scripts.</dd></div>
-          <div><dt>Vault key</dt><dd>256 bits from <code>crypto.getRandomValues()</code>. Shown only because it’s a throwaway: a real key is never displayed.<span class="lab-hex" data-value="vault"></span></dd></div>
-          <div><dt>File ID</dt><dd>128 random bits, new for every file.<span class="lab-hex" data-value="id"></span></dd></div>
-          <div><dt>File key</dt><dd>HKDF-SHA256 of the vault key and the file ID, held as an AES-256-GCM key this page can use but not read back.</dd></div>
-          <div><dt>Pieces</dt><dd>12 pieces of 48,600 bytes: 45 rows of pixels each. Every piece is sealed with AES-256-GCM under a fresh random 96-bit nonce. Its 128-bit tag also covers the file’s header and the piece’s position, so a piece can’t be changed, dropped or moved unnoticed.
-            <table class="lab-table">
-              <thead><tr><th scope="col">Piece</th><th scope="col">Nonce</th><th scope="col" class="lab-col-tag">Tag</th></tr></thead>
-              <tbody></tbody>
-            </table>
-          </dd></div>
-          <div><dt>What’s stored</dt><dd>A 32-byte header, then each piece’s nonce, ciphertext and tag. The ciphertext is exactly as long as the pixels it came from, and every pixel of the noise is three of its bytes, drawn as red, green and blue. Once it’s encrypted, the page wipes its own copy of the pixels: the photo you get back comes out of the ciphertext.<span class="lab-value" data-value="stored">Nothing yet.</span></dd></div>
-          <div><dt>Time</dt><dd>To derive the file key and encrypt all 12 pieces, on this device. The animation is slowed down so you can watch.<span class="lab-value" data-value="time">—</span></dd></div>
-          <div><dt>Check</dt><dd>SHA-256 of the pixels before encrypting, compared with what comes out when it’s unlocked.<span class="lab-value" data-value="check">Compared when you unlock.</span><span class="lab-hex" data-value="hash"></span></dd></div>
-          <div><dt>Last attempt</dt><dd><span class="lab-value" data-value="last">None yet.</span></dd></div>
-        </dl>
-
-        <div class="lab-note">
-          <p><strong>A simplified demo.</strong> It runs entirely in your browser, on a sample photo or one of your own, to show the principle. It is not a copy of Privaro’s storage system.</p>
-          <details>
-            <summary>What’s simplified</summary>
-            <ul>
-              <li><strong>Same cipher, different engine.</strong> The app uses Apple’s CryptoKit; this page uses your browser’s Web Crypto. Both do AES-256-GCM, with a key for each file derived by HKDF-SHA256.</li>
-              <li><strong>Smaller pieces.</strong> The app encrypts a file in pieces of 1 MB. Here the photo is cut into 12 small ones, so you can watch them.</li>
-              <li><strong>Pixels, not a file.</strong> The demo encrypts the picture’s pixels, so the result can be drawn where the photo was. The app encrypts the photo or video file itself, and its thumbnail, name and caption separately.</li>
-              <li><strong>The key isn’t protected here.</strong> It sits in this page’s memory, is shown on screen, and is gone when you leave. In the app it’s kept in the iOS Keychain and never shown.</li>
-              <li><strong>Unlock is only a button.</strong> In the app it’s Face ID, Touch ID or your Privaro passcode.</li>
-              <li><strong>Its own file layout.</strong> A file made here can’t be opened by Privaro, or the other way round.</li>
-            </ul>
-          </details>
-          <a class="more" href="/security">How the app does it, and what it can’t protect against</a>
-        </div>
-      </div>
-
-      <div class="lab-words" hidden>
-        <span data-w="alt_photo">Sample photo: a snow-capped mountain reflected in a lake.</span>
-        <span data-w="alt_own">The photo you chose.</span>
-        <span data-w="alt_cipher">The same photo, encrypted: it shows as random coloured noise.</span>
-        <span data-w="file_plain">The photo</span>
-        <span data-w="file_vault">In the vault</span>
-        <span data-w="key_none">Not made yet.</span>
-        <span data-w="key_shown">256 random bits, made in this tab.</span>
-        <span data-w="key_away">Put away. On your iPhone it’s in the Keychain.</span>
-        <span data-w="key_wrong">A different key.</span>
-        <span data-w="go_encrypt">Encrypt this photo</span>
-        <span data-w="go_unlock">Unlock</span>
-        <span data-w="go_again">Encrypt again</span>
-        <span data-w="idle">Readable. Any app that can reach this file can show it.</span>
-        <span data-w="own">Your photo, readable. It stays in this tab: it isn’t uploaded or saved.</span>
-        <span data-w="keying">Making a key: 256 random bits.</span>
-        <span data-w="sealing">Encrypting, piece by piece.</span>
-        <span data-w="locked">Encrypted in {time}. This is all that’s stored now. Without the key, it’s only noise.</span>
-        <span data-w="denied">A different key doesn’t open it. Nothing comes back, not even part of the photo.</span>
-        <span data-w="tampered">One bit of the encrypted file is changed, where the ring is. Now try to unlock it.</span>
-        <span data-w="broken">Piece {n} no longer matches its seal, so nothing is opened. You never get a quietly damaged photo.</span>
-        <span data-w="mended">The bit is back as it was. The file is exactly as it was encrypted.</span>
-        <span data-w="opening">Unlocking with the key.</span>
-        <span data-w="open">Unlocked. It matches the original, bit for bit.</span>
-        <span data-w="unsupported">This browser doesn’t offer Web Crypto on this page, so the live demo can’t run here.</span>
-        <span data-w="blocked">Your browser hides picture data from web pages, a privacy protection, so the demo can’t read the photo. If it asks, allow this page to use canvas data and try again.</span>
-        <span data-w="badfile">That file couldn’t be opened as a picture here. A JPEG or PNG will work.</span>
-        <span data-w="time_ms">{ms} ms</span>
-        <span data-w="time_fast">under 1 ms</span>
-        <span data-w="piece_n">Piece {n}</span>
-        <span data-w="stored_none">Nothing yet.</span>
-        <span data-w="stored_v">{pixels} bytes of pixels in, {stored} bytes stored.</span>
-        <span data-w="check_wait">Compared when you unlock.</span>
-        <span data-w="check_ok">Identical.</span>
-        <span data-w="last_none">None yet.</span>
-        <span data-w="last_ok">All 12 tags verified, all 12 pieces decrypted.</span>
-        <span data-w="last_wrong">Wrong key: piece 1 failed AES-GCM authentication. Nothing was decrypted.</span>
-        <span data-w="last_bad">Piece {n} failed AES-GCM authentication after one bit was changed. Nothing was shown.</span>
-      </div>
-    </div>
-  </section>
-  <script src="/encryption-demo.js?v=abb9d1c900" defer></script>
 
   <section class="guard wrap" aria-labelledby="guard-title">
     <h2 id="guard-title" class="display"><span class="mask"><span class="rise" style="--anim:mask-rise">What if someone else wants in?</span></span></h2>

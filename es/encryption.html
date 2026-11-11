@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr" class="graphite-site">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Inside the encryption · Privaro</title>
+<meta name="description" content="Step through what Privaro’s encryption does to a photo, at your own pace. A working demo that runs in your browser: a key, AES-256-GCM, a vault, and what a wrong key gets." />
+<link rel="canonical" href="https://privaroapp.nl/encryption" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Privaro" />
+<meta property="og:title" content="Inside the encryption · Privaro" />
+<meta property="og:description" content="Step through what Privaro’s encryption does to a photo, at your own pace. A working demo that runs in your browser: a key, AES-256-GCM, a vault, and what a wrong key gets." />
+<meta property="og:url" content="https://privaroapp.nl/encryption" />
+<meta property="og:image" content="https://privaroapp.nl/og.jpg?v=0ab53eaf83" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Privaro. A vault only you can open. Download on the App Store. Two iPhones: the lock screen in front, and behind it the vault with its photos." />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="color-scheme" content="dark" />
+<meta name="apple-itunes-app" content="app-id=6783131829" />
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
+<link rel="apple-touch-icon" href="/logo.png" />
+<link rel="stylesheet" href="/styles.css?v=5cc09b8606" />
+<script>
+(() => {
+let transition;
+window.addEventListener("pagereveal", event => {
+transition = event.viewTransition;
+if (!transition) {
+document.documentElement.classList.remove("page-crossfade");
+return;
+}
+const current = transition;
+document.documentElement.classList.add("page-crossfade");
+current.finished.catch(() => {}).finally(() => {
+if (transition !== current) return;
+transition = null;
+document.documentElement.classList.remove("page-crossfade");
+});
+});
+const interrupt = () => transition?.skipTransition();
+window.addEventListener("pointerdown", interrupt, { capture: true, passive: true });
+window.addEventListener("keydown", interrupt, { capture: true });
+})();
+</script>
+</head>
+<body class="lock-scene exhibit-scene">
+
+<a class="skip" href="#main">Saltar al contenido</a>
+<header class="site-head">
+  <div class="head-bar">
+    <nav class="head-links head-links-wide" aria-label="Privaro">
+      <a href="/es/pro">Funciones Pro</a>
+      <a href="/es/security">Seguridad</a>
+      <a href="/es/faq">Preguntas</a>
+    </nav>
+    <a class="brand" href="/es/"><img src="/logo.png" width="28" height="28" alt="" />Privaro</a>
+    <div class="head-end">
+      <details class="lang"><summary aria-label="Idioma: Español"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>Español</span><svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg></summary><div class="lang-menu"><p class="lang-head">Idioma</p><div class="lang-list"><a href="/encryption" lang="en" hreflang="en"><span>English</span></a><a href="/es/encryption" lang="es" hreflang="es" class="active" aria-current="true"><span>Español</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></a><a href="/fr/encryption" lang="fr" hreflang="fr"><span>Français</span></a><a href="/de/encryption" lang="de" hreflang="de"><span>Deutsch</span></a><a href="/it/encryption" lang="it" hreflang="it"><span>Italiano</span></a><a href="/pt-br/encryption" lang="pt-BR" hreflang="pt-BR"><span>Português</span></a><a href="/zh/encryption" lang="zh-Hans" hreflang="zh-Hans"><span>简体中文</span></a><a href="/ko/encryption" lang="ko" hreflang="ko"><span>한국어</span></a><a href="/nl/encryption" lang="nl" hreflang="nl"><span>Nederlands</span></a><a href="/ja/encryption" lang="ja" hreflang="ja"><span>日本語</span></a><a href="/zh-hant/encryption" lang="zh-Hant" hreflang="zh-Hant"><span>繁體中文</span></a><a href="/ru/encryption" lang="ru" hreflang="ru"><span>Русский</span></a><a href="/tr/encryption" lang="tr" hreflang="tr"><span>Türkçe</span></a><a href="/id/encryption" lang="id" hreflang="id"><span>Bahasa Indonesia</span></a><a href="/hi/encryption" lang="hi" hreflang="hi"><span>हिन्दी</span></a><a href="/ar/encryption" lang="ar" hreflang="ar"><span>العربية</span></a><a href="/ur/encryption" lang="ur" hreflang="ur"><span>اردو</span></a></div></div></details>
+      <a class="head-get" href="https://apps.apple.com/app/id6783131829" aria-label="Descarga Privaro en el App Store">Descargar</a>
+    </div>
+    <nav class="head-links head-links-phone" aria-label="Privaro">
+      <a href="/es/pro">Funciones Pro</a>
+      <a href="/es/security">Seguridad</a>
+      <a href="/es/faq">Preguntas</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap exhibit-page" lang="en" dir="ltr">
+<p class="only-english" lang="es" dir="ltr">Esta página solo está disponible en inglés.</p>
+
+<section class="exhibit" aria-labelledby="exhibit-title" data-view="visual">
+  <header class="exhibit-bar">
+    <h1 id="exhibit-title">Inside the encryption</h1>
+    <button class="exhibit-reset" type="button" hidden>Start over</button>
+  </header>
+
+  <ol class="rail" aria-label="Steps" hidden>
+    <li><button type="button" data-goto="photo"><span>The photo</span></button></li>
+    <li><button type="button" data-goto="key"><span>The key</span></button></li>
+    <li><button type="button" data-goto="cut"><span>Encryption</span></button></li>
+    <li><button type="button" data-goto="cipher"><span>Ciphertext</span></button></li>
+    <li><button type="button" data-goto="vault"><span>The vault</span></button></li>
+    <li><button type="button" data-goto="wrong"><span>A wrong key</span></button></li>
+    <li><button type="button" data-goto="bit"><span>A changed bit</span></button></li>
+    <li><button type="button" data-goto="unlock"><span>Unlocking</span></button></li>
+  </ol>
+
+  <div class="exhibit-body">
+    <figure class="scene" data-pose="photo" data-door="open" data-key="none">
+      <div class="scene-view" role="img" aria-label="The sample photo: a snow-capped mountain reflected in a lake.">
+        <div class="rig">
+          <div class="sheet">
+            <div class="sheet-shadow"></div>
+            <div class="sheet-frame"></div>
+            <div class="slabs"></div>
+            <img class="sheet-photo" src="/art/vignette-lake.jpg" width="600" height="900" alt="" decoding="async" />
+            <span class="sheet-ring"></span>
+            <div class="door"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 11V7.5a4 4 0 0 1 8 0V11" /><rect x="5" y="11" width="14" height="10" rx="2.5" /></svg></div>
+          </div>
+          <div class="keyplate"><div class="key"></div></div>
+        </div>
+      </div>
+      <figcaption class="legend" hidden>
+        <span class="legend-file"><b></b> <span></span></span>
+        <span class="legend-key"><b>The key</b> <span></span></span>
+      </figcaption>
+    </figure>
+
+    <div class="story">
+      <div class="chapters">
+        <section class="chapter" data-chapter="intro">
+          <p class="chapter-kicker">An interactive demo</p>
+          <h2>See what encrypted really means.</h2>
+          <div class="beat" data-beat="a" data-go="Begin" data-alts="pick">
+            <p>Step through it at your own pace. Your browser does the real thing to the photo you see here: AES-256-GCM, the cipher Privaro uses. Nothing leaves this page.</p>
+            <p class="chapter-small">A simplified demo of the principle. It isn’t the app’s code or its file format. <a href="#simplified">What’s simplified</a></p>
+          </div>
+        </section>
+
+        <section class="chapter" data-chapter="photo">
+          <p class="chapter-kicker">Step 1 of 8</p>
+          <h2>It starts out readable.</h2>
+          <div class="beat" data-beat="a" data-go="Continue" data-alts="pick">
+            <p>A photo is a file like any other. Any app that can reach it can open it, and so can anyone who picks up your phone while it’s unlocked.</p>
+          </div>
+        </section>
+
+        <section class="chapter" data-chapter="key">
+          <p class="chapter-kicker">Step 2 of 8</p>
+          <h2>First, a key.</h2>
+          <div class="beat" data-beat="a" data-go="Make a key"><p>A key is 256 bits: ones and zeros, picked at random by the device. Privaro makes its key once, on your iPhone, and it stays there.</p></div>
+          <div class="beat" data-beat="b" data-go="Continue"><p>That’s the whole key. Each dot is one bit: filled for a one, empty for a zero. There are 2²⁵⁶ possible keys, a number 78 digits long.</p></div>
+          <p class="chapter-figure" hidden><strong></strong> <span></span></p>
+        </section>
+
+        <section class="chapter" data-chapter="cut">
+          <p class="chapter-kicker">Step 3 of 8</p>
+          <h2>Then the photo, piece by piece.</h2>
+          <div class="beat" data-beat="a" data-go="Encrypt"><p>The photo is cut into pieces. Each one is locked with the key, using AES-256-GCM, and each gets a seal of its own.</p></div>
+          <div class="beat" data-beat="b" data-go="Continue"><p>Twelve pieces, each locked and sealed on its own. What was a photo is now ciphertext.</p></div>
+          <p class="chapter-figure" hidden><strong></strong> <span></span></p>
+        </section>
+
+        <section class="chapter" data-chapter="cipher">
+          <p class="chapter-kicker">Step 4 of 8</p>
+          <h2>This is ciphertext.</h2>
+          <div class="beat" data-beat="a" data-go="Continue"><p>It’s the same photo, encrypted. Nothing is blurred or covered up: every pixel has been replaced by the cipher’s output, which looks like random noise. Without the key, there is nothing in it to recognise.</p></div>
+          <p class="chapter-figure" hidden><strong></strong> <span></span></p>
+        </section>
+
+        <section class="chapter" data-chapter="vault">
+          <p class="chapter-kicker">Step 5 of 8</p>
+          <h2>Only this is stored.</h2>
+          <div class="beat" data-beat="a" data-go="Continue"><p>The encrypted file is all that goes into the vault. The key is kept apart from it, in the iPhone’s Keychain, and Privaro uses it only after Face ID or your passcode.</p></div>
+        </section>
+
+        <section class="chapter" data-chapter="wrong">
+          <p class="chapter-kicker">Step 6 of 8</p>
+          <h2>Another key opens nothing.</h2>
+          <div class="beat" data-beat="a" data-go="Try a different key"><p>Suppose someone tries a different key. It’s every bit as random as the real one. It just isn’t the one this photo was locked with.</p></div>
+          <div class="beat" data-beat="b" data-go="Continue"><p>Rejected. The cipher’s own check fails on the very first piece, and nothing comes back. Not a blurry version, not a corner of the photo.</p></div>
+          <p class="chapter-figure" hidden><strong></strong> <span></span></p>
+        </section>
+
+        <section class="chapter" data-chapter="bit">
+          <p class="chapter-kicker">Step 7 of 8</p>
+          <h2>Change one bit, and it shows.</h2>
+          <div class="beat" data-beat="a" data-go="Change one bit"><p>Now suppose someone gets at the stored file and alters it. Not by much: a single bit, out of more than four million.</p></div>
+          <div class="beat" data-beat="b" data-go="Try to unlock it"><p>Done. The ring marks the spot. To the eye, nothing looks different.</p></div>
+          <div class="beat" data-beat="c" data-go="Continue"><p>Refused. The piece with the changed bit no longer matches its seal, so nothing is opened. You never get a quietly damaged photo. The demo puts the bit back when you continue.</p></div>
+          <p class="chapter-figure" hidden><strong></strong> <span></span></p>
+        </section>
+
+        <section class="chapter" data-chapter="unlock">
+          <p class="chapter-kicker">Step 8 of 8</p>
+          <h2>With the right key, it comes back. Exactly.</h2>
+          <div class="beat" data-beat="a" data-go="Unlock"><p>The real key checks every piece’s seal and unlocks it. All twelve have to pass before the photo is shown.</p></div>
+          <div class="beat" data-beat="b" data-go="Finish"><p>Identical to the original, bit for bit. The demo checked: a SHA-256 fingerprint taken before encrypting matches the photo it has now.</p></div>
+          <p class="chapter-figure" hidden><strong></strong> <span></span></p>
+        </section>
+
+        <section class="chapter" data-chapter="end">
+          <p class="chapter-kicker">In short</p>
+          <h2>That’s the principle.</h2>
+          <div class="beat" data-beat="a" data-go="Run it again" data-alts="pick">
+            <p>On your iPhone, Privaro does this to every photo and video you put in the vault, with more around it: the Keychain, Face ID, and iOS’s own file protection.</p>
+            <p><a class="more" href="/es/security">Read the security overview</a></p>
+          </div>
+        </section>
+      </div>
+
+      <p class="story-note" role="status"></p>
+      <noscript><p class="story-noscript">The live demo needs JavaScript. What follows is what it shows, step by step.</p></noscript>
+
+      <div class="story-controls" hidden>
+        <div class="story-buttons">
+          <button class="story-back" type="button">Back</button>
+          <button class="story-go" type="button">Begin</button>
+        </div>
+        <div class="story-alts">
+          <button class="story-alt" type="button" data-act="pick" hidden>Use your own photo</button>
+          <button class="story-alt" type="button" data-act="sample" hidden>Back to the sample photo</button>
+        </div>
+        <fieldset class="story-view">
+          <legend class="visually-hidden">How it’s explained</legend>
+          <input type="radio" name="story-view" id="story-view-visual" value="visual" checked /><label for="story-view-visual">Visual explanation</label>
+          <input type="radio" name="story-view" id="story-view-tech" value="tech" /><label for="story-view-tech">Technical view</label>
+          <span class="knob" aria-hidden="true"></span>
+        </fieldset>
+        <input class="story-picker" type="file" accept="image/*" tabindex="-1" aria-label="Use your own photo" hidden />
+      </div>
+
+      <div class="story-tech">
+        <div class="tech-panel" data-chapter="photo">
+          <p>The demo works on the photo’s pixels: 360 by 540 of them, three bytes each. That is 583,200 bytes of plaintext.</p>
+        </div>
+        <div class="tech-panel" data-chapter="key">
+          <p>32 bytes from <code>crypto.getRandomValues()</code>. It’s shown only because it’s a throwaway: a real key is never displayed.</p><span class="hex" data-value="vault"></span>
+        </div>
+        <div class="tech-panel" data-chapter="cut">
+          <p><strong>File ID.</strong> 128 random bits, new for every file.</p><span class="hex" data-value="id"></span>
+          <p><strong>File key.</strong> HKDF-SHA256 of the vault key and the file ID, held as an AES-256-GCM key this page can use but not read back.</p>
+          <p><strong>Pieces.</strong> 12 pieces of 48,600 bytes: 45 rows of pixels each. Every piece is sealed under a fresh random 96-bit nonce. Its 128-bit tag also covers the file’s header and the piece’s position, so a piece can’t be changed, dropped or moved unnoticed.</p>
+          <table class="pieces">
+            <thead><tr><th scope="col">Piece</th><th scope="col">Nonce</th><th scope="col" class="pieces-tag">Tag</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div class="tech-panel" data-chapter="cipher">
+          <p data-fill="size"><strong>Size.</strong> {pixels} bytes of pixels in, {pixels} bytes of ciphertext out, plus a 12-byte nonce and a 16-byte tag for each piece. Every pixel of the noise is three bytes of ciphertext, drawn as red, green and blue.</p>
+          <p><strong>Where it ran.</strong> In this tab, with your browser’s Web Crypto API. No request is made: watch the network inspector, or go offline and run it again. This site’s Content Security Policy has no <code>connect-src</code>, so the browser refuses any fetch, XHR or WebSocket call from its scripts.</p>
+        </div>
+        <div class="tech-panel" data-chapter="vault">
+          <p data-fill="stored"><strong>What’s stored.</strong> A 32-byte header, then each piece’s nonce, ciphertext and tag: {stored} bytes in all.</p>
+          <p><strong>The demo’s own copy.</strong> From here the demo no longer uses its copy of the photo: what you see when it’s unlocked is the output of decryption. That is not secure erasure. A web page can’t promise what the browser still holds in memory.</p>
+        </div>
+        <div class="tech-panel" data-chapter="wrong" data-after>
+          <p><strong>The other key.</strong> 32 more random bytes, tried for real.</p><span class="hex" data-value="other"></span>
+          <p>Piece 1: AES-GCM authentication failed. The browser reports an OperationError and returns no plaintext.</p>
+        </div>
+        <div class="tech-panel" data-chapter="bit" data-after>
+          <p data-fill="change"><strong>The change.</strong> Byte {at} of the stored file: {from} became {to}.</p>
+          <p data-fill="failed" hidden>Piece {n}: AES-GCM authentication failed. The demo shows nothing unless every piece passes.</p>
+        </div>
+        <div class="tech-panel" data-chapter="unlock">
+          <p><strong>The check.</strong> SHA-256 of the pixels before encrypting, compared with what decryption returns. <span data-value="check">Compared when you unlock.</span></p>
+          <span class="hex" data-value="hash"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="visually-hidden exhibit-live" role="status"></p>
+
+  <div class="exhibit-words" hidden>
+    <span data-w="continue">Continue</span>
+    <span data-w="time_ms">{ms} ms</span>
+    <span data-w="time_fast">Under 1 ms</span>
+    <span data-w="piece_n">Piece {n}</span>
+    <span data-w="key_fig">256</span>
+    <span data-w="key_fig_d">random bits, made in this tab just now</span>
+    <span data-w="cut_fig">{n} of 12</span>
+    <span data-w="cut_fig_d">pieces encrypted</span>
+    <span data-w="cipher_fig_d">to encrypt, on this device. It was slowed down so you could watch.</span>
+    <span data-w="wrong_fig">0 of 12</span>
+    <span data-w="wrong_fig_d">pieces opened</span>
+    <span data-w="bit_fig">1 bit</span>
+    <span data-w="bit_fig_d">of {bits} in the stored file, changed</span>
+    <span data-w="unlock_fig">{n} of 12</span>
+    <span data-w="unlock_fig_d">seals verified</span>
+    <span data-w="check_wait">Compared when you unlock.</span>
+    <span data-w="check_ok">Identical.</span>
+    <span data-w="note_own">Your photo is in this tab only. It isn’t uploaded or saved.</span>
+    <span data-w="note_unsupported">This browser doesn’t offer Web Crypto on this page, so the live demo can’t run here. The steps below are what it shows.</span>
+    <span data-w="note_blocked">Your browser hides picture data from web pages, a privacy protection, so the demo can’t read the photo. If it asks, allow this page to use canvas data and try again.</span>
+    <span data-w="note_badfile">That file couldn’t be opened as a picture here. A JPEG or PNG will work.</span>
+    <span data-w="note_error">Something went wrong in the browser’s crypto, so the demo went back to the start.</span>
+    <span data-w="file_name">The photo</span>
+    <span data-w="file_name_stored">The file</span>
+    <span data-w="file_readable">Readable</span>
+    <span data-w="file_sealing">Being encrypted</span>
+    <span data-w="file_cipher">Encrypted</span>
+    <span data-w="file_vault">In the vault</span>
+    <span data-w="file_changed">One bit changed</span>
+    <span data-w="file_back">Readable again</span>
+    <span data-w="key_none">Not made yet</span>
+    <span data-w="key_shown">256 random bits</span>
+    <span data-w="key_use">In use</span>
+    <span data-w="key_away">Put away</span>
+    <span data-w="key_wrong">A different key</span>
+    <span data-w="alt_photo">The sample photo: a snow-capped mountain reflected in a lake.</span>
+    <span data-w="alt_own">The photo you chose.</span>
+    <span data-w="alt_key">The photo, and in front of it the key: a plate of 256 dots, one for each bit.</span>
+    <span data-w="alt_cut">The photo, cut into twelve strips that float apart.</span>
+    <span data-w="alt_cut_done">Twelve strips of random coloured noise: the photo, encrypted piece by piece.</span>
+    <span data-w="alt_cipher">The encrypted photo: a sheet of random coloured noise.</span>
+    <span data-w="alt_vault">The encrypted file behind a closed vault door. The key is put away beside it.</span>
+    <span data-w="alt_bit">The encrypted file, out of the vault. A ring marks where one bit was changed.</span>
+    <span data-w="alt_open">The photo, readable again, with its key beside it.</span>
+  </div>
+</section>
+
+<section class="about" id="simplified" aria-labelledby="about-title">
+  <div class="about-head">
+    <h2 id="about-title">A simplified demo.</h2>
+    <p>It runs entirely in your browser, on a sample photo or one of your own, to show the principle. It is not a copy of Privaro’s storage system, and none of it is the app’s own code.</p>
+  </div>
+  <ul class="about-list">
+    <li><strong>Same cipher, different engine.</strong> The app uses Apple’s CryptoKit; this page uses your browser’s Web Crypto. Both do AES-256-GCM, with a key for each file derived by HKDF-SHA256.</li>
+    <li><strong>Smaller pieces.</strong> The app encrypts a file in pieces of 1 MB. Here the photo is cut into 12 small ones, so you can watch them.</li>
+    <li><strong>Pixels, not a file.</strong> The demo encrypts the picture’s pixels, so the result can be drawn where the photo was. The app encrypts the photo or video file itself, and its thumbnail, name and caption separately.</li>
+    <li><strong>The key isn’t protected here.</strong> It sits in this page’s memory and is shown on screen. In the app it’s kept in the iOS Keychain and never shown.</li>
+    <li><strong>Unlock is only a button.</strong> In the app it’s Face ID, Touch ID or your Privaro passcode.</li>
+    <li><strong>Its own file layout.</strong> A file made here can’t be opened by Privaro, or the other way round.</li>
+    <li><strong>No promises about memory.</strong> When the demo is done with the photo or a key, it stops using them. That is not secure erasure: a web page can’t guarantee what a browser keeps in memory.</li>
+  </ul>
+  <a class="more" href="/es/security">How the app does it, and what it can’t protect against</a>
+</section>
+
+<section class="get" lang="es" dir="ltr" aria-label="Descarga Privaro en el App Store">
+  <div class="buy">
+    <div class="buy-get">
+      <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="Descarga Privaro en el App Store">
+        <img src="/appstore-badge-white.svg" width="150" height="50" alt="Descarga Privaro en el App Store" loading="lazy" />
+      </a>
+      <p class="buy-note"><span>Descarga gratuita. Requiere iOS 17.6 o posterior.</span></p>
+    </div>
+    <p class="handoff" aria-hidden="true"><img src="/qr-appstore.svg" width="72" height="72" alt="" loading="lazy" /><span>Escanea con tu iPhone</span></p>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot wrap">
+  <nav class="foot-links">
+    <a href="/es/pro">Funciones Pro</a>
+    <a href="/es/faq">Preguntas</a>
+    <a href="/es/security">Seguridad</a>
+    <a href="/es/privacy">Política de privacidad</a>
+    <a href="/es/terms">Términos de uso</a>
+    <a href="mailto:erdincdubu@icloud.com">Contacto</a>
+    <details class="lang"><summary aria-label="Idioma: Español"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>Español</span><svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg></summary><div class="lang-menu"><p class="lang-head">Idioma</p><div class="lang-list"><a href="/encryption" lang="en" hreflang="en"><span>English</span></a><a href="/es/encryption" lang="es" hreflang="es" class="active" aria-current="true"><span>Español</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></a><a href="/fr/encryption" lang="fr" hreflang="fr"><span>Français</span></a><a href="/de/encryption" lang="de" hreflang="de"><span>Deutsch</span></a><a href="/it/encryption" lang="it" hreflang="it"><span>Italiano</span></a><a href="/pt-br/encryption" lang="pt-BR" hreflang="pt-BR"><span>Português</span></a><a href="/zh/encryption" lang="zh-Hans" hreflang="zh-Hans"><span>简体中文</span></a><a href="/ko/encryption" lang="ko" hreflang="ko"><span>한국어</span></a><a href="/nl/encryption" lang="nl" hreflang="nl"><span>Nederlands</span></a><a href="/ja/encryption" lang="ja" hreflang="ja"><span>日本語</span></a><a href="/zh-hant/encryption" lang="zh-Hant" hreflang="zh-Hant"><span>繁體中文</span></a><a href="/ru/encryption" lang="ru" hreflang="ru"><span>Русский</span></a><a href="/tr/encryption" lang="tr" hreflang="tr"><span>Türkçe</span></a><a href="/id/encryption" lang="id" hreflang="id"><span>Bahasa Indonesia</span></a><a href="/hi/encryption" lang="hi" hreflang="hi"><span>हिन्दी</span></a><a href="/ar/encryption" lang="ar" hreflang="ar"><span>العربية</span></a><a href="/ur/encryption" lang="ur" hreflang="ur"><span>اردو</span></a></div></div></details>
+  </nav>
+  <p class="foot-note">© <span id="year">2026</span> Privaro. Hecho en los Países Bajos. Este sitio no usa cookies ni rastreadores.</p>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+const langs = document.querySelectorAll('.lang');
+const still = matchMedia('(prefers-reduced-motion: reduce)');
+const shut = lang => {
+if (!lang.open || lang.classList.contains('closing')) return;
+if (still.matches) { lang.open = false; return; }
+lang.classList.add('closing');
+setTimeout(() => { lang.open = false; lang.classList.remove('closing'); }, 200);
+};
+document.addEventListener('click', e => langs.forEach(lang => {
+if (!lang.open) return;
+const summary = e.target.closest ? e.target.closest('summary') : null;
+if (summary && lang.contains(summary)) { e.preventDefault(); shut(lang); }
+else if (e.target === lang || !lang.contains(e.target)) shut(lang);
+}));
+document.addEventListener('keydown', e => {
+if (e.key !== 'Escape') return;
+langs.forEach(lang => { if (lang.open) { shut(lang); lang.querySelector('summary').focus(); } });
+});
+</script>
+
+<script src="/presentation.js?v=5192425b53" data-enlarge="Ampliar captura: {name}" data-close="Cerrar visor" data-previous="Captura anterior" data-next="Captura siguiente" defer></script>
+<script src="/encryption-demo.js?v=60d555af72" defer></script>
+</body>
+</html>

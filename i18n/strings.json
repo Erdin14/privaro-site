@@ -948,5 +948,43 @@
     "hi": "यह पेज सिर्फ़ अंग्रेज़ी में उपलब्ध है।",
     "ar": "هذه الصفحة متاحة باللغة الإنجليزية فقط.",
     "ur": "یہ صفحہ صرف انگریزی میں دستیاب ہے۔"
+  },
+  "home_inside_t": {
+    "en": "See it happen",
+    "es": "Míralo en acción",
+    "fr": "Voyez-le en action",
+    "de": "Sieh es dir an",
+    "it": "Guardalo in azione",
+    "pt-BR": "Veja acontecer",
+    "zh-Hans": "亲眼看看",
+    "ko": "직접 확인해 보세요",
+    "nl": "Zie het gebeuren",
+    "ja": "実際に見てみる",
+    "zh-Hant": "親眼看看",
+    "ru": "Посмотрите сами",
+    "tr": "Kendiniz görün",
+    "id": "Lihat sendiri",
+    "hi": "ख़ुद देखें",
+    "ar": "شاهد ذلك بنفسك",
+    "ur": "خود دیکھیں"
+  },
+  "home_inside_d": {
+    "en": "Encrypt a photo in your own browser, one step at a time.",
+    "es": "Cifra una foto en tu propio navegador, paso a paso.",
+    "fr": "Chiffrez une photo dans votre propre navigateur, étape par étape.",
+    "de": "Verschlüssle ein Foto in deinem eigenen Browser, Schritt für Schritt.",
+    "it": "Cifra una foto nel tuo browser, un passo alla volta.",
+    "pt-BR": "Criptografe uma foto no seu próprio navegador, um passo de cada vez.",
+    "zh-Hans": "在你自己的浏览器里一步一步加密一张照片。",
+    "ko": "내 브라우저에서 사진 한 장을 한 단계씩 암호화해 보세요.",
+    "nl": "Versleutel een foto in je eigen browser, stap voor stap.",
+    "ja": "お使いのブラウザで、写真が暗号化される様子を一歩ずつたどれます。",
+    "zh-Hant": "在你自己的瀏覽器裡一步一步加密一張照片。",
+    "ru": "Зашифруйте фотографию в своём браузере, шаг за шагом.",
+    "tr": "Kendi tarayıcınızda bir fotoğrafı adım adım şifreleyin.",
+    "id": "Enkripsi sebuah foto di browser Anda sendiri, langkah demi langkah.",
+    "hi": "अपने ही ब्राउज़र में एक फ़ोटो को एक-एक क़दम करके एन्क्रिप्ट करें।",
+    "ar": "شفّر صورة داخل متصفحك، خطوة بخطوة.",
+    "ur": "اپنے ہی براؤزر میں ایک تصویر کو قدم بہ قدم انکرپٹ کریں۔"
   }
 }

@@ -112,10 +112,18 @@
           <div><dt>{{fact4_t}}</dt><dd>{{fact4_d}}</dd></div>
         </dl>
         <a class="more" href="{{SECURITY_URL}}">{{home_sec_link}}</a>
+        <!-- The way in to "Inside the encryption", where the claim above is
+             run for real: the visitor's own browser encrypts a photo, a
+             step at a time. That page is in English only, as the overview
+             is; the way to it is in every language. -->
+        <a class="inside-door" href="{{ENCRYPTION_URL}}">
+          <span class="inside-door-words"><strong>{{home_inside_t}}</strong> <span>{{home_inside_d}}</span></span>
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5" /></svg>
+        </a>
       </div>
     </div>
   </section>
-{{INSIDE}}
+
   <!-- When it isn't you at the lock: the three things Pro does with a
        passcode, each drawn with the six dots of Privaro's own passcode
        screen (thin rings that fill as a digit is typed, as in the film). The
