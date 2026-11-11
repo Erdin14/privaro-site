@@ -11,7 +11,8 @@ Shared pieces live in templates/partials/ and are pulled in with {{HEADER}},
 {{FOOTER}} and the like. The build also writes 404.html, sitemap.xml and
 robots.txt, and the security headers for both hosts: _headers for Cloudflare
 Pages (privaroapp.nl) and the "headers" in vercel.json, from SECURITY_HEADERS
-below. Pages in ENGLISH_ONLY (the security overview) are written in English
+below. Pages in ENGLISH_ONLY (the security overview, and the working demo
+"Inside the encryption") are written in English
 for every language: the words are the same, the header, footer and language
 menu around them are the reader's own.
 
@@ -111,9 +112,10 @@ PAGES = {"index": "index.html", "pro": "pro.html", "faq": "faq.html", "privacy":
 # words inside that language's header, footer and language menu, with a line
 # saying so: following "Security" from the Dutch pages used to land on a page
 # whose every link led on into the English site. Only the root one is indexed.
-ENGLISH_ONLY = {"security": "security.html"}
+ENGLISH_ONLY = {"security": "security.html", "encryption": "encryption.html"}
 # Which meta_title_* / meta_desc_* strings each page uses.
-META = {"index": "home", "pro": "pro", "faq": "faq", "privacy": "privacy", "terms": "terms", "security": "security"}
+META = {"index": "home", "pro": "pro", "faq": "faq", "privacy": "privacy", "terms": "terms", "security": "security",
+        "encryption": "encryption"}
 
 GLOBE = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
          'stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/>'
@@ -217,7 +219,8 @@ def price_tokens(pricing, code):
 def load_strings():
     strings = {}
     for fname in ("i18n/strings.json", "i18n/strings-pro.json", "i18n/strings-faq.json",
-                  "i18n/strings-privacy.json", "i18n/strings-terms.json", "i18n/strings-security.json"):
+                  "i18n/strings-privacy.json", "i18n/strings-terms.json", "i18n/strings-security.json",
+                  "i18n/strings-encryption.json"):
         with open(os.path.join(ROOT, fname), encoding="utf-8") as f:
             strings.update(json.load(f))
     return strings
@@ -487,6 +490,7 @@ def render(html, page, code, htmllang, head, strings, pricing, here=None):
     html = html.replace("{{PRIVACY_URL}}", page_url("privacy", code))
     html = html.replace("{{TERMS_URL}}", page_url("terms", code))
     html = html.replace("{{SECURITY_URL}}", page_url("security", code))
+    html = html.replace("{{ENCRYPTION_URL}}", page_url("encryption", code))
     for key, vals in strings.items():
         html = html.replace("{{" + key + "}}", vals.get(code, vals["en"]))
     for token, value in price_tokens(pricing, code).items():
@@ -617,7 +621,7 @@ def package_public_site():
     files = public_pages() + [
         "_headers", "_redirects", "robots.txt", "sitemap.xml",
         ".well-known/apple-app-site-association", ".well-known/security.txt",
-        "styles.css", "film.js", "presentation.js", "price.js", "privacy-vignette.js",
+        "styles.css", "film.js", "presentation.js", "price.js", "privacy-vignette.js", "encryption-demo.js",
         "appstore-badge.svg", "appstore-badge-white.svg", "qr-appstore.svg", "logo.png", "favicon.png", "og.jpg",
     ]
     # Only media belongs in these asset trees; hidden/build/config files do not.

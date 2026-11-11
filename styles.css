@@ -1288,6 +1288,408 @@ main:focus { outline: none; }
   .foot-links { gap: var(--space-1) 18px; }
 }
 
+/* ---------------------------------------------------------------- Inside */
+
+/* The homepage's way in to "Inside the encryption", under the security
+   section's facts: one quiet row, a soft surface like the film's, with what
+   it is in a few words and an arrow. The whole row is the link. */
+.inside-door { display: flex; align-items: center; justify-content: space-between; gap: var(--space-5); max-width: 36em;
+  margin-top: var(--space-6); padding: 18px var(--space-5); border: 1px solid var(--rule); border-radius: var(--radius-surface);
+  background: rgb(255 255 255 / .025); color: var(--ink);
+  transition: border-color var(--dur-state) var(--ease-state), background-color var(--dur-state) var(--ease-state); }
+.inside-door:hover { text-decoration: none; border-color: rgb(255 255 255 / .24); background: rgb(255 255 255 / .045); }
+.inside-door strong { display: block; font-size: var(--size-lead); font-weight: 600; line-height: 1.35; letter-spacing: -.012em; }
+.inside-door-words > span { display: block; margin-top: 2px; font-size: var(--size-text); line-height: 1.5; letter-spacing: var(--track-text);
+  color: var(--muted); }
+.inside-door svg { flex: none; width: 20px; height: 20px; color: var(--muted);
+  transition: translate var(--dur-move) var(--ease), color var(--dur-state) var(--ease-state); }
+.inside-door:hover svg { translate: 4px 0; color: var(--ink); }
+[dir="rtl"] .inside-door svg { scale: -1 1; }
+[dir="rtl"] .inside-door:hover svg { translate: -4px 0; }
+:is(:lang(ar), :lang(ur), :lang(hi)) .inside-door :is(strong, span) { letter-spacing: 0; }
+
+/* Inside the encryption (/encryption): a small exhibit. One scene and
+   eight steps, taken at the visitor's own pace: nothing moves on until
+   they press. encryption-demo.js does the encrypting and its notes say
+   how; this is how it looks.
+
+   The scene has a little depth, and two objects in it. The file is a sheet
+   of twelve strips, the pieces it's encrypted in: they lie together as one
+   photo, float apart when it's cut, turn to ciphertext one at a time (the
+   noise is the real bytes, drawn as pixels), and close up again. The key
+   is a plate of 256 dots, one for each bit, filled for a one and a ring
+   for a zero, as the homepage's passcodes are drawn. Whichever the step is
+   about comes forward and the other stands back. When the file is stored a
+   door swings shut over it.
+
+   Each step sets a pose (data-pose on the scene), and a pose is only a
+   handful of numbers: where the sheet and the plate stand and how they're
+   turned. The same transform is written once for each object and the
+   numbers are what change, so every move between two poses is one smooth
+   carry. Only transform and opacity animate; with Reduce Motion each pose
+   is simply the next one.
+
+   Beside the scene, one step at a time: a large line, a short paragraph,
+   sometimes a figure measured there and then, and under them the button.
+   The button stays where it is from step to step. Without the script, or
+   where there's no Web Crypto, the steps are all there to read, one under
+   another, beside the photo. */
+.exhibit-scene .wrap { width: min(1200px, 100% - 2 * var(--side)); }
+.exhibit-scene .head-bar { width: min(1200px, 100%); }
+.exhibit-page { padding: var(--space-6) 0 88px; }
+/* What it's called, kept small: each step's own line is the large one. */
+.exhibit-bar { display: flex; align-items: center; justify-content: space-between; gap: var(--space-5); min-height: 44px; }
+.exhibit-bar h1 { font-size: var(--size-text); font-weight: 600; line-height: 1.4; letter-spacing: -.01em; }
+.exhibit-reset, .story-alt { padding: 6px 0; border: 0; background: none; color: var(--muted); font: inherit; font-size: 14px; line-height: 1.5;
+  cursor: pointer; text-decoration: underline; text-decoration-color: var(--dim); text-decoration-thickness: 1px; text-underline-offset: 4px;
+  -webkit-tap-highlight-color: transparent;
+  transition: color var(--dur-state) var(--ease-state), text-decoration-color var(--dur-state) var(--ease-state); }
+:is(.exhibit-reset, .story-alt):hover { color: var(--ink); text-decoration-color: var(--ink); }
+:is(.exhibit-reset, .story-alt, .story-back, .story-go)[aria-disabled="true"] { cursor: default; }
+:is(.exhibit-reset, .story-alt)[aria-disabled="true"] { color: var(--dim); text-decoration-color: transparent; }
+:is(.exhibit-reset, .story-alt, .rail, .story-controls, .legend, .story-back, .chapter-figure, [data-fill])[hidden] { display: none; }
+
+/* The steps, as eight short lines: the one being read in ink, the ones
+   behind it a shade lighter than the ones to come. Each is a button to
+   that step, named under its line where there's room. */
+.rail { list-style: none; display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: var(--space-2); margin-top: var(--space-2); }
+.rail button { position: relative; display: block; width: 100%; padding: 14px 0 6px; border: 0; background: none; color: var(--faint);
+  font: inherit; font-size: var(--size-small); line-height: 1.4; text-align: start; cursor: pointer; -webkit-tap-highlight-color: transparent;
+  transition: color var(--dur-state) var(--ease-state); }
+.rail button::before { content: ""; position: absolute; inset: 0 0 auto; height: 2px; border-radius: 1px; background: var(--rule);
+  transition: background-color var(--dur-state) var(--ease-state); }
+.rail span { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.rail .is-done button::before { background: var(--dim); }
+.rail button:hover, .rail button[aria-current] { color: var(--ink); }
+.rail button[aria-current]::before { background: var(--ink); }
+.rail button[aria-disabled="true"] { cursor: default; }
+
+.exhibit-body { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); column-gap: var(--space-7); align-items: start;
+  margin-top: var(--space-4); }
+
+/* The scene. Its size hangs on one length, a strip's height (--slab): the
+   sheet is eight of them wide and twelve tall, a whole number of pixels
+   each way, so the strips meet exactly. */
+.scene { --slab: 34px; --carry: var(--dur-scene); position: relative; height: clamp(480px, 100vh - 290px, 600px); margin: 0; direction: ltr; }
+.scene::before { content: ""; position: absolute; inset: 2% 2% 12%; pointer-events: none;
+  background: radial-gradient(closest-side, rgb(255 255 255 / .05), transparent); }
+/* The view takes all of the scene but a line at its foot, where the two
+   objects are named. */
+.scene-view { position: absolute; inset: 0 0 28px; overflow: hidden; perspective: 1500px; perspective-origin: 50% 44%; }
+.rig { position: absolute; inset: 0; transform-style: preserve-3d; }
+.sheet, .keyplate { position: absolute; left: 50%; top: 50%; transform-style: preserve-3d;
+  transition: transform var(--carry) var(--ease-state), opacity var(--carry) var(--ease-state); }
+.sheet { --w: calc(8 * var(--slab)); --h: calc(12 * var(--slab)); width: var(--w); height: var(--h); margin: calc(var(--h) / -2) 0 0 calc(var(--w) / -2);
+  transform: translate3d(var(--sx, 0px), var(--sy, 0px), var(--sz, 0px)) rotateX(var(--srx, 0deg)) rotateY(var(--sry, 0deg)) rotateZ(var(--srz, 0deg)); }
+/* The shadow the whole sheet casts, on a plane just behind it; cut into
+   strips, each casts its own. */
+.sheet-shadow { position: absolute; inset: 0; border-radius: 14px; transform: translateZ(-2px);
+  box-shadow: 0 50px 90px -30px rgb(0 0 0 / .85), 0 18px 36px -18px rgb(0 0 0 / .6); transition: opacity var(--dur-reveal) var(--ease-state); }
+.scene[data-pose="cut"] .sheet-shadow { opacity: 0; }
+.slabs { position: absolute; inset: 0; transform-style: preserve-3d; }
+/* Until the script has drawn the photo's pixels, and without it, the
+   picture file shows. */
+.sheet-photo { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; border-radius: 14px; }
+.exhibit[data-live] .sheet-photo { display: none; }
+/* One strip. Lying together, each is stretched a pixel over its
+   neighbours (--fit), because edges that only meet show a hairline of the
+   page between them once the sheet is turned; floated apart, each is its
+   true size. A strip a hair nearer than the one above it, so the overlap
+   is always drawn the same way. */
+.slab { position: absolute; left: 0; top: calc(var(--i) * var(--slab)); width: 100%; height: var(--slab); transform-style: preserve-3d;
+  transform: translate3d(0, calc((var(--i) - 5.5) * var(--gap, 0px)), calc(var(--lift, 0px) + var(--i) * .02px)) scaleY(var(--fit, 1.035));
+  transition: transform var(--carry) var(--ease-state); }
+.slab-face { position: absolute; inset: 0; overflow: hidden; background: #0d1012; }
+.slab[data-edge="top"] .slab-face { border-radius: 14px 14px 0 0; }
+.slab[data-edge="bottom"] .slab-face { border-radius: 0 0 14px 14px; }
+.scene[data-pose="cut"] .slab-face { box-shadow: 0 14px 22px -12px rgb(0 0 0 / .8); }
+.slab canvas { position: absolute; inset: 0; display: block; width: 100%; height: 100%; max-width: none; }
+/* The ciphertext keeps each of its pixels whole however it's scaled, so
+   the noise stays noise instead of blurring to grey. */
+.slab-cipher { image-rendering: pixelated; }
+/* The photo's strip lies over its ciphertext, in a pane that slides off
+   sideways while the photo in it slides back by as much: the photo stays
+   where it is and only its edge moves, with a line of light on the edge. */
+.slab-pane { position: absolute; inset: 0; overflow: hidden; }
+.slab-pane, .slab-plain, .slab-bar { transition: transform var(--wipe, var(--dur-move)) var(--ease-state); }
+.slab.is-cipher .slab-pane { transform: translateX(100%); }
+.slab.is-cipher .slab-plain { transform: translateX(-100%); }
+.slab-bar { position: absolute; top: 0; bottom: 0; left: -2px; width: 2px; background: #fff; box-shadow: 0 0 12px 3px rgb(150 185 255 / .55);
+  opacity: 0; transition: transform var(--wipe, var(--dur-move)) var(--ease-state), opacity var(--dur-press) linear; }
+.slab.is-working .slab-bar { opacity: 1; }
+.slab.is-cipher .slab-bar { transform: translateX(calc(8 * var(--slab) + 2px)); }
+/* The strip being worked on comes up off the sheet. */
+.slab.is-up { --lift: 26px; transition-duration: var(--dur-state); }
+/* Its seal: a ring at the strip's end, filled once the strip is sealed.
+   Only there while the strips are apart. */
+.slab-seal { position: absolute; left: calc(100% + 12px); top: 50%; width: 7px; height: 7px; margin-top: -3.5px; border: 1px solid var(--dim);
+  border-radius: 50%; opacity: 0;
+  transition: opacity var(--dur-reveal) var(--ease-state), background-color var(--dur-state) var(--ease-state), border-color var(--dur-state) var(--ease-state); }
+.scene[data-pose="cut"] .slab-seal { opacity: 1; }
+.slab.is-cipher .slab-seal { background: var(--ink); border-color: var(--ink); }
+/* The strip that failed its check: lifted, outlined and named. */
+.slab-face::after { content: ""; position: absolute; inset: 0; border-radius: inherit; box-shadow: inset 0 0 0 1.5px #fff; opacity: 0;
+  transition: opacity var(--dur-state) var(--ease-state); }
+.slab-name { position: absolute; top: 50%; right: 8px; translate: 0 -50%; padding: 1px 8px; border-radius: var(--radius-round);
+  background: rgb(17 18 19 / .88); color: #f5f5f7; font-size: 11px; font-weight: 600; line-height: 1.5; white-space: nowrap; opacity: 0;
+  transition: opacity var(--dur-state) var(--ease-state); }
+.slab.is-bad { --lift: 22px; }
+.slab.is-bad .slab-face::after, .slab.is-bad .slab-name { opacity: 1; }
+.slab.is-bad[data-side="start"] .slab-name { right: auto; left: 8px; }
+/* Where one bit was changed: a ring around the pixel, since one bit in
+   half a million bytes of noise can't be seen. */
+.sheet-ring { position: absolute; width: 22px; height: 22px; margin: -11px 0 0 -11px; border: 1.5px solid #fff; border-radius: 50%;
+  box-shadow: 0 0 0 1.5px rgb(0 0 0 / .65), inset 0 0 0 1.5px rgb(0 0 0 / .65); transform: translateZ(24px); opacity: 0;
+  transition: opacity var(--dur-state) var(--ease-state); }
+.scene[data-ring] .sheet-ring { opacity: 1; }
+/* The vault's door, hinged on the sheet's left edge. Open, it's swung
+   out of the way and not there to be seen; shut, it stands just in front
+   of the file, with the lock on it. */
+.door, .sheet-frame { position: absolute; inset: -12px; border-radius: 22px; }
+.sheet-frame { border: 1px solid var(--rule); transform: translateZ(28px); opacity: 0; transition: opacity var(--dur-reveal) var(--ease-state); }
+.door { display: grid; place-items: center; transform-origin: 0 50%; transform: translateZ(30px) rotateY(-104deg); opacity: 0; color: var(--ink);
+  background: linear-gradient(140deg, rgb(58 61 64 / .94), rgb(27 29 30 / .96) 55%, rgb(20 22 23 / .97));
+  border: 1px solid rgb(255 255 255 / .16); box-shadow: inset 0 1px 0 rgb(255 255 255 / .1), 0 30px 60px -30px #000;
+  transition: transform 1500ms var(--ease-state), opacity var(--dur-reveal) var(--ease-state); }
+.door svg { width: 34px; height: 34px; }
+.scene[data-door="shut"] .door { transform: translateZ(30px) rotateY(0deg); opacity: 1; }
+.scene[data-door="shut"] .sheet-frame { opacity: 1; }
+/* The key. Whole pixels throughout, so every ring is as sharp as the
+   next. Made, it's typed in from the first bit to the last; put away, the
+   rings are empty again, because a key that's been put away can't be read. */
+.keyplate { --kw: 212px; width: var(--kw); height: var(--kw); margin: calc(var(--kw) / -2) 0 0 calc(var(--kw) / -2); padding: 20px; border-radius: 26px;
+  background: linear-gradient(145deg, #34373a, #1d1f20 60%, #17191a); border: 1px solid rgb(255 255 255 / .12);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / .12), 0 40px 70px -30px rgb(0 0 0 / .9);
+  transform: translate3d(var(--kx, 0px), var(--ky, 0px), var(--kz, 0px)) rotateX(var(--krx, 0deg)) rotateY(var(--kry, 0deg)) scale(var(--ks, 1));
+  opacity: var(--ko, 1); }
+.key { display: grid; grid-template-columns: repeat(16, 7px); gap: 4px; }
+.key i { width: 7px; height: 7px; border: 1px solid var(--dim); border-radius: 50%;
+  transition: background-color var(--dur-state) var(--ease-state), border-color var(--dur-state) var(--ease-state); }
+.scene:is([data-key="shown"], [data-key="wrong"]) .key i.on { background-color: var(--ink); border-color: var(--ink); }
+.scene[data-key="shown"] .key i { transition-delay: calc(var(--n) * 6ms); }
+/* A key that doesn't fit is shaken off, as a wrong passcode is, and the
+   lock on the door with it. */
+.scene.is-refused :is(.keyplate, .door svg) { animation: dots-shake var(--dur-move) var(--ease-state) both; }
+
+/* The poses. Anything a pose doesn't say stands at rest: facing forward,
+   in the middle, at full size. */
+.scene[data-pose="photo"] { --srx: 5deg; --sry: -16deg; --kx: 200px; --kz: -200px; --kry: 20deg; --ko: 0; }
+.scene[data-pose="key"] { --sx: -130px; --sz: -220px; --srx: 5deg; --sry: -24deg; --kx: 96px; --ky: 8px; --kz: 90px; --krx: 6deg; --kry: 14deg; }
+.scene[data-pose="cut"] { --sx: -24px; --sy: 6px; --sz: -150px; --srx: 52deg; --srz: -30deg; --gap: 12px; --fit: 1;
+  --kx: 226px; --ky: -186px; --kz: -160px; --kry: 18deg; --ks: .62; }
+.scene[data-pose="cipher"] { --sx: -20px; --sz: 30px; --srx: 3deg; --sry: -10deg; --kx: 272px; --ky: -150px; --kz: -240px; --kry: 20deg; --ks: .6; --ko: .6; }
+.scene[data-pose="vault"] { --sx: -100px; --sz: -160px; --srx: 4deg; --sry: -22deg; --kx: 150px; --ky: 40px; --kz: -60px; --krx: 6deg; --kry: 18deg;
+  --ks: .8; --ko: .75; }
+.scene[data-pose="wrong"] { --sx: -100px; --sz: -160px; --srx: 4deg; --sry: -22deg; --kx: 56px; --ky: 24px; --kz: 70px; --krx: 6deg; --kry: 8deg; --ks: .9; }
+.scene[data-pose="inspect"] { --sx: -50px; --sz: 20px; --srx: 4deg; --sry: -12deg; --kx: 212px; --ky: 60px; --kz: -160px; --kry: 20deg; --ks: .7; --ko: .7; }
+.scene[data-pose="check"] { --sx: -70px; --sz: -20px; --srx: 4deg; --sry: -14deg; --kx: 170px; --ky: 50px; --kz: 40px; --krx: 6deg; --kry: 14deg; --ks: .82; }
+.scene[data-pose="open"] { --sx: -50px; --srx: 5deg; --sry: -14deg; --kx: 196px; --ky: 76px; --kz: -80px; --krx: 6deg; --kry: 18deg; --ks: .7; }
+/* Taller windows: a larger sheet. */
+@media (min-width: 1001px) and (min-height: 790px) {
+  .scene { --slab: 36px; }
+}
+@media (min-width: 1001px) and (min-height: 900px) {
+  .scene { --slab: 40px; }
+}
+/* Beside the story, the scene stays in view while a long technical note
+   is read. */
+@media (min-width: 1001px) and (min-height: 700px) {
+  .scene { position: sticky; top: 88px; }
+}
+/* A step taken without being watched (stepping back, or straight to a
+   later step) changes the strips at once. */
+.scene.is-instant :is(.slab-pane, .slab-plain, .slab-bar, .key i) { transition: none; }
+
+/* What each object is and how it stands, under the scene. */
+.legend { position: absolute; inset: auto 0 0; display: flex; flex-wrap: wrap; gap: 2px var(--space-6); font-size: var(--size-small); line-height: 1.5;
+  color: var(--muted); }
+.legend b { font-weight: 500; color: var(--faint); }
+.legend b::after { content: " ·"; }
+.legend-key { transition: opacity var(--dur-reveal) var(--ease-state); }
+.scene[data-pose="photo"] .legend-key { opacity: 0; }
+
+/* The story: one step at a time. Its place on the page is kept (the
+   tallest step's worth), so the button under it never moves. */
+.story { min-width: 0; padding-top: var(--space-7); }
+.chapters { min-height: 348px; }
+.chapter-kicker { font-size: var(--size-small); font-weight: 500; line-height: 1.4; color: var(--faint); font-variant-numeric: tabular-nums; }
+.chapter h2 { margin-top: var(--space-3); font-family: var(--display); font-size: clamp(34px, 3.5vw, 48px); font-weight: 700; line-height: 1.05;
+  letter-spacing: -.035em; text-wrap: balance; }
+.beat p { max-width: 30em; margin-top: var(--space-4); font-size: 19px; line-height: 1.5; letter-spacing: var(--track-text); color: var(--muted); }
+.beat .chapter-small { margin-top: var(--space-3); font-size: var(--size-text); color: var(--faint); }
+.beat a:not(.more) { color: var(--ink); text-decoration: underline; text-decoration-color: var(--dim); text-decoration-thickness: 1px;
+  text-underline-offset: 4px; }
+.beat a:not(.more):hover { text-decoration-color: var(--ink); }
+.beat .more { margin-top: 0; font-size: var(--size-lead); }
+/* A figure from the step just taken: the number large, what it counts
+   beside it. */
+.chapter-figure { display: flex; align-items: baseline; gap: var(--space-3); margin-top: var(--space-5); }
+.chapter-figure strong { flex: none; font-family: var(--display); font-size: clamp(34px, 3.2vw, 44px); font-weight: 700; line-height: 1;
+  letter-spacing: -.03em; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.chapter-figure span { max-width: 17em; font-size: var(--size-text); line-height: 1.4; letter-spacing: var(--track-text); color: var(--muted); }
+/* With the script, only the step being read is there; it arrives quietly. */
+.exhibit[data-live] :is(.chapter, .beat):not(.is-current) { display: none; }
+@keyframes step-in { from { opacity: 0; transform: translateY(10px); } }
+/* Without it they're all there, one under another. */
+.exhibit:not([data-live]) .chapter + .chapter { margin-top: var(--space-8); }
+.exhibit:not([data-live]) .chapters { min-height: 0; }
+
+.story-note { max-width: 30em; font-size: var(--size-text); line-height: 1.5; color: var(--ink); }
+.story-note:not(:empty) { margin-top: var(--space-4); }
+.story-noscript { max-width: 30em; margin-top: var(--space-6); font-size: var(--size-text); line-height: 1.5; color: var(--muted); }
+/* The button that takes the step, and the one that goes back. Then the
+   smaller things to try, and the switch between the two ways of telling
+   it, drawn as the Pro page's switch is. */
+.story-controls { display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "buttons buttons" "alts view";
+  align-items: center; gap: var(--space-4) var(--space-5); margin-top: var(--space-5); }
+.story-buttons { grid-area: buttons; display: flex; gap: var(--space-3); }
+.story-go, .story-back { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; border: 0; white-space: nowrap;
+  border-radius: var(--radius-round); font: inherit; font-size: var(--size-lead); font-weight: 600; cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: scale var(--dur-move) var(--ease-spring), opacity var(--dur-state) var(--ease-state),
+    background-color var(--dur-state) var(--ease-state), box-shadow var(--dur-state) var(--ease-state); }
+.story-go { min-width: 172px; padding: 0 var(--space-6); background: #f5f5f7; color: #111213; }
+.story-go:hover { background: #fff; }
+.story-back { padding: 0 var(--space-5); background: none; color: var(--ink); font-weight: 500; box-shadow: inset 0 0 0 1px var(--rule); }
+.story-back:hover { box-shadow: inset 0 0 0 1px var(--dim); }
+:is(.story-go, .story-back):active { scale: .97; transition-duration: var(--dur-press); transition-timing-function: var(--ease-state); }
+/* Busy, not switched off: it keeps the keyboard's focus while it works. */
+:is(.story-go, .story-back)[aria-disabled="true"] { opacity: .45; scale: none; }
+.story-alts { grid-area: alts; display: flex; flex-wrap: wrap; gap: 0 var(--space-4); min-height: 33px; }
+.story-view { grid-area: view; position: relative; display: grid; grid-template-columns: 1fr 1fr; min-inline-size: 0; margin: 0; padding: 3px; border: 0;
+  border-radius: var(--radius-round); background: #0c0d0e; box-shadow: inset 0 1px 3px rgb(0 0 0 / .8), 0 1px 0 rgb(255 255 255 / .07); }
+.story-view input { position: absolute; opacity: 0; pointer-events: none; }
+.story-view label { position: relative; z-index: 1; display: flex; align-items: center; justify-content: center; min-height: 38px;
+  padding-inline: 14px; border-radius: var(--radius-round); color: var(--muted); font-size: var(--size-small); font-weight: 600; line-height: 1.2;
+  text-align: center; white-space: nowrap; cursor: pointer; transition: color var(--dur-state) var(--ease-state); }
+.story-view label:hover { color: var(--ink); }
+.story-view input:checked + label { color: #111; cursor: default; }
+.story-view input:focus-visible + label { outline: 2px solid var(--blue); outline-offset: 3px; }
+.story-view .knob { position: absolute; inset-block: 3px; inset-inline-start: 3px; width: calc(50% - 3px); border-radius: var(--radius-round);
+  background: linear-gradient(#fafafa, #dcdcde); box-shadow: 0 6px 16px -4px rgb(0 0 0 / .7), inset 0 -1px 0 rgb(0 0 0 / .15);
+  transition: translate var(--dur-move) var(--ease-spring); }
+#story-view-tech:checked ~ .knob { translate: 100% 0; }
+[dir="rtl"] #story-view-tech:checked ~ .knob { translate: -100% 0; }
+
+/* The technical view: under the buttons, the values behind the step being
+   read. Bytes are set one to a cell, sixteen to a row, so they line up
+   without a monospace face. */
+.story-tech { display: none; margin-top: var(--space-6); padding-top: var(--space-5); border-top: 1px solid var(--rule); font-size: var(--size-text);
+  line-height: 1.55; letter-spacing: var(--track-text); color: var(--muted); }
+.exhibit[data-view="tech"] .story-tech:has(.tech-panel.is-current) { display: block; }
+.tech-panel:not(.is-current), .tech-panel[data-after]:not(.is-ready) > * { display: none; }
+.tech-panel p + p, .tech-panel .hex + p, .tech-panel table + p { margin-top: var(--space-4); }
+.tech-panel strong { color: var(--ink); font-weight: 600; }
+.tech-panel [data-value]:not(.hex) { color: var(--ink); }
+.hex { display: grid; grid-template-columns: repeat(var(--cols, 16), 1.62em); justify-content: start; margin-top: var(--space-2); font-size: 13px;
+  line-height: 1.7; letter-spacing: 0; color: var(--ink); font-variant-numeric: tabular-nums; direction: ltr; }
+.hex:empty { display: none; }
+.hex span { text-align: center; }
+.pieces { width: 100%; margin-top: var(--space-3); border-collapse: collapse; }
+.pieces th { padding: 0 0 var(--space-1); text-align: start; font-size: var(--size-small); font-weight: 500; color: var(--faint); }
+.pieces td { padding: 2px 0; vertical-align: baseline; }
+.pieces td:first-child { width: 4em; font-size: 13px; color: var(--faint); font-variant-numeric: tabular-nums; }
+.pieces .hex { margin-top: 0; }
+/* A piece's nonce and tag appear as it's sealed. */
+.pieces tbody tr:not(.is-set) .hex { visibility: hidden; }
+
+/* What this is and isn't, always on the page: said in a line, then each
+   difference from the app, between hairlines. */
+.about { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); column-gap: var(--space-7); margin-top: var(--space-9);
+  padding-top: var(--space-7); border-top: 1px solid var(--rule); scroll-margin-top: 88px; }
+.about h2 { font-family: var(--display); font-size: var(--size-title); font-weight: 600; line-height: 1.15; letter-spacing: var(--track-title); }
+.about-head p { max-width: 26em; margin-top: var(--space-3); font-size: var(--size-lead); line-height: 1.55; letter-spacing: var(--track-text);
+  color: var(--muted); }
+.about-list { list-style: none; display: grid; row-gap: var(--space-4); font-size: var(--size-text); line-height: 1.55; letter-spacing: var(--track-text);
+  color: var(--muted); }
+.about-list li { position: relative; padding-inline-start: 26px; }
+.about-list li::before { content: ""; position: absolute; inset-inline-start: 2px; top: .78em; width: 12px; height: 1px; background: var(--dim); }
+.about-list strong { color: var(--ink); font-weight: 600; }
+.about .more { grid-column: 2; justify-self: start; margin-top: var(--space-6); }
+.exhibit-page .get { margin-top: var(--space-9); }
+
+@media (prefers-reduced-motion: no-preference) {
+  .exhibit[data-live] .chapter.is-current { animation: step-in var(--dur-reveal) var(--ease) both; }
+  .exhibit[data-live] :is(.beat.is-current, .chapter-figure) { animation: step-in var(--dur-reveal) var(--ease) both; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .scene *, .story-view .knob, .inside-door svg { transition: none !important; animation: none !important; }
+  :is(.story-go, .story-back):active { scale: none; }
+}
+/* Tablets and narrower windows: the scene, then the story under it. */
+@media (max-width: 1000px) {
+  .exhibit-body { grid-template-columns: minmax(0, 1fr); }
+  .scene { --slab: 32px; height: clamp(400px, 52vh, 480px); }
+  .scene[data-pose="cut"] { --ky: -150px; }
+  .story { padding-top: var(--space-5); }
+  .chapters { min-height: 292px; }
+  .about { grid-template-columns: minmax(0, 1fr); row-gap: var(--space-6); }
+  .about .more { grid-column: auto; }
+}
+/* Phones. The steps are lines alone; the scene is as tall as leaves the
+   step's words and the button on the same screen; the two buttons share
+   the width, and the switch has a row of its own. */
+@media (max-width: 760px) {
+  .inside-door { max-width: none; padding: var(--space-4) var(--space-5); }
+  .exhibit-page { padding-top: var(--space-4); }
+  /* The scene first, then the lines for the steps, then the story: with
+     the scene at the top of the screen, where the steps' button brings it,
+     the lines are still there under it. */
+  .exhibit { display: flex; flex-direction: column; }
+  .exhibit-body { display: contents; }
+  .scene { order: 1; }
+  .rail { order: 2; }
+  .story { order: 3; }
+  .rail { gap: 5px; margin-top: 0; }
+  .rail button { height: 28px; padding: 0; }
+  .rail button::before { top: 13px; }
+  .rail span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .exhibit-body { margin-top: var(--space-1); }
+  .scene { --slab: 22px; height: clamp(316px, 44vh, 372px); }
+  .scene-view { bottom: 24px; }
+  .scene-view { perspective: 1000px; }
+  .keyplate { --kw: 152px; padding: 14px; border-radius: 20px; }
+  .key { grid-template-columns: repeat(16, 5px); gap: 3px; }
+  .key i { width: 5px; height: 5px; }
+  .slab.is-up { --lift: 18px; }
+  .scene[data-pose="photo"] { --sy: 0px; }
+  .scene[data-pose="key"] { --sx: -76px; --sy: -4px; --sz: -200px; --kx: 62px; --ky: 12px; --kz: 60px; }
+  .scene[data-pose="cut"] { --sx: -16px; --sy: 2px; --sz: -120px; --gap: 8px; --kx: 126px; --ky: -112px; --kz: -160px; --ks: .5; }
+  .scene[data-pose="cipher"] { --sx: -8px; --sy: 0px; --sz: 20px; --kx: 132px; --ky: -92px; --ks: .5; }
+  .scene[data-pose="vault"] { --sx: -62px; --sy: -2px; --sz: -130px; --kx: 86px; --ky: 30px; --kz: -40px; --ks: .78; }
+  .scene[data-pose="wrong"] { --sx: -62px; --sy: -2px; --sz: -130px; --kx: 34px; --ky: 14px; --kz: 50px; --ks: .86; }
+  .scene[data-pose="inspect"] { --sx: -30px; --sy: 0px; --sz: -20px; --kx: 120px; --ky: 54px; --ks: .6; }
+  .scene[data-pose="check"] { --sx: -44px; --sy: -2px; --sz: -30px; --kx: 96px; --ky: 40px; --kz: 30px; --ks: .74; }
+  .scene[data-pose="open"] { --sx: -34px; --sy: 0px; --kx: 112px; --ky: 62px; --kz: -60px; --ks: .62; }
+  .legend { gap: 0 var(--space-4); font-size: 12px; }
+  .story { padding-top: var(--space-4); }
+  .chapters { min-height: 244px; }
+  .chapter h2 { margin-top: var(--space-2); font-size: clamp(28px, 8.2vw, 34px); }
+  .beat p { margin-top: var(--space-3); font-size: 16px; }
+  .beat .chapter-small { font-size: 14px; }
+  .chapter-figure { margin-top: var(--space-4); }
+  .chapter-figure strong { font-size: 30px; }
+  .chapter-figure span { font-size: 14px; }
+  .story-controls { grid-template-columns: minmax(0, 1fr); grid-template-areas: "buttons" "alts" "view"; row-gap: var(--space-2);
+    margin-top: var(--space-4); }
+  .story-go { flex: 1; min-width: 0; }
+  .story-view label { min-height: 40px; }
+  .pieces .pieces-tag, .pieces td:nth-child(3) { display: none; }
+  .hex { grid-template-columns: repeat(var(--cols, 16), 1.5em); }
+  .about { margin-top: var(--space-8); padding-top: var(--space-6); }
+}
+@media (pointer: coarse) {
+  .rail button { padding-bottom: 12px; }
+  .story-alts { gap: 0 var(--space-5); min-height: 44px; }
+  .story-alt, .exhibit-reset { padding-block: 11px; }
+}
+@media (pointer: coarse) and (max-width: 760px) {
+  .rail button { height: 36px; padding: 0; }
+  .rail button::before { top: 17px; }
+}
+@media print {
+  .story-controls, .rail, .exhibit-reset { display: none; }
+}
 
 /* Under a finger. Wherever the pointer is a fingertip, everything that can
    be tapped answers over at least 44px, Apple's own measure, without the

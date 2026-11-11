@@ -21,7 +21,7 @@
 <meta name="apple-itunes-app" content="app-id=6783131829" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=9be721741f" />
+<link rel="stylesheet" href="/styles.css?v=5cc09b8606" />
 <script>
 (() => {
 let transition;
@@ -173,6 +173,7 @@ window.addEventListener("keydown", interrupt, { capture: true });
     <li>Each piece is sealed with AES-256-GCM using a fresh random 96-bit nonce.</li>
     <li>Each piece also authenticates the file&rsquo;s header and its own position in the file. A piece that is changed, removed, repeated, moved or taken from another file makes decryption fail instead of producing altered data.</li>
   </ul>
+  <p>You can watch these steps run on a sample photo, in your own browser, in <a href="/es/encryption">Inside the encryption</a>. It is a simplified demo, not the app&rsquo;s own code.</p>
   <p>Because files are encrypted in pieces, Privaro never needs the whole file decrypted at once. Videos play straight from the encrypted file: only the pieces being watched are decrypted, in memory, and no decrypted copy is written to disk. (Videos imported with much older versions of Privaro use an earlier format and are decrypted to a temporary file to play.)</p>
   <p>Thumbnails are encrypted separately with AES-256-GCM.</p>
   <p>All vault files and the database have iOS&rsquo;s strongest file protection (&ldquo;complete&rdquo;), so they can&rsquo;t be read at all while your iPhone is locked. They are also excluded from iPhone backups, both to iCloud and to a computer.</p>

@@ -18,7 +18,7 @@ Requires Python 3; no packages need installing:
 python3 tests/publication.py
 ```
 
-The publication check verifies 103 pages (six in each of 17 languages, and the
+The publication check verifies 120 pages (seven in each of 17 languages, and the
 404), local links/assets and their versions, CSP hashes, required special
 files, excluded paths, stale-output cleanup and repeatable builds. It also
 checks what a search engine reads: every canonical, `hreflang`, `og:url` and
@@ -59,6 +59,46 @@ the pages changes only when the picture is rendered again.
 Apps keep a link's preview for days, so one shared before a change may show
 the old picture for a while. The new address (`og.jpg?v=…`) is what a fresh
 share fetches.
+
+## The working demo: "Inside the encryption"
+
+`/encryption` is a page of its own: a small exhibit in eight steps, taken at
+the visitor's pace (nothing moves on until they press). Their own browser
+makes a 256-bit key, encrypts a photo with AES-256-GCM through the Web
+Crypto API (a key for the file derived by HKDF-SHA256; twelve pieces, each
+under its own random nonce and each authenticating the file's header and
+its own position), stores the result, really tries a wrong key and a
+changed bit, and decrypts it again, checked against a SHA-256 of the
+original. The noise on screen is the ciphertext itself, drawn as pixels. It
+can run on a photo the visitor picks, which never leaves the tab.
+
+- `templates/encryption.html` is the page, `encryption-demo.js` the script,
+  `i18n/strings-encryption.json` every word of it, and the "Inside" part of
+  `styles.css` how it looks. The notes at the top of each say how it works
+  and why.
+- Ways in: a row under the homepage's security facts, in every language
+  (`home_inside_t`, `home_inside_d`), and a sentence in the Security
+  overview's "Photos and videos".
+- English only, like the Security overview, and framed the same way: every
+  language has a copy under its own header and footer, with a line saying
+  it's in English, and only the root one is indexed (`ENGLISH_ONLY` in
+  `build.py`). Its words make security claims, so they should be translated
+  by someone who can check them, not in bulk.
+- It is a small model of what the Security overview describes, not the
+  app's code or its file format, and the page says so twice: in its
+  opening, and in "A simplified demo" under the exhibit, which lists each
+  difference. Keep that true when the demo or the app changes.
+- It claims nothing about erasing memory. The script stops using its copy
+  of the photo once it's encrypted, and tidies up after itself, but a web
+  page can't promise what a browser keeps, and the words say "stops using",
+  never "wipes" or "erases".
+- `tests/publication.py` holds it to its claims: the script uses nothing
+  that could send or keep data; the Content Security Policy still has no
+  `connect-src`; the numbers in the words are the ones the script and
+  stylesheet use; no string promises erasure; every homepage links to its
+  own language's copy and carries none of the demo itself.
+- It needs a secure context (HTTPS, or `localhost`) for Web Crypto. Without
+  it, or without JavaScript, the page is the photo and the steps to read.
 
 ## What is published, and what stays in the source
 

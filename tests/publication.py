@@ -29,7 +29,7 @@ for forbidden in ("build.py", "templates", "i18n", "index.legacy.html", "screens
                   "vercel.json", ".git", ".env", "tests", "og", "README.md", "transitions.css", "decrypt.js"):
     assert not (dist / forbidden).exists(), forbidden
 pages = list(dist.rglob("*.html"))
-assert len(pages) == 103, "six pages in each of 17 languages, and the 404, must remain"
+assert len(pages) == 120, "seven pages in each of 17 languages, and the 404, must remain"
 assert {str(p.relative_to(dist)).replace('\\', '/') for p in pages} == {
     p.replace('\\', '/') for p in build.public_pages()
 }
@@ -124,10 +124,10 @@ for page in pages:
     # A page is its own canonical, except an English-only page in another
     # language's frame, which names the English one.
     own = target == page
-    assert own or rel.endswith("/security.html"), (rel, canonical[0])
+    assert own or rel.split("/")[-1] in build.ENGLISH_ONLY.values(), (rel, canonical[0])
     assert re.findall(r'<meta property="og:url" content="([^"]+)"', html) == canonical, rel
     alternates = dict(re.findall(r'<link rel="alternate" hreflang="([^"]+)" href="([^"]+)"', html))
-    if not own or rel == "security.html":
+    if not own or rel in build.ENGLISH_ONLY.values():
         assert not alternates, f"{rel}: one text, so no language alternates"
         continue
     assert len(alternates) == 18 and alternates["x-default"] == alternates["en"], rel
@@ -140,7 +140,7 @@ for page in pages:
 
 sitemap = (dist / "sitemap.xml").read_text(encoding="utf-8")
 locations = re.findall(r"<loc>([^<]+)</loc>", sitemap)
-assert len(locations) == len(set(locations)) == 86, "five pages in 17 languages and the security overview"
+assert len(locations) == len(set(locations)) == 87, "five pages in 17 languages, the security overview and the demo"
 for location in locations + re.findall(r'<xhtml:link rel="alternate" hreflang="[^"]+" href="([^"]+)"', sitemap):
     target = served(location[len(origin):])
     assert target is not None, f"sitemap: {location} is not served directly"
@@ -150,8 +150,49 @@ for location in locations + re.findall(r'<xhtml:link rel="alternate" hreflang="[
 css = (dist / "styles.css").read_text(encoding="utf-8")
 assert "/*" not in css and css.count("{") == css.count("}")
 assert css.count("{") == build.strip_css((ROOT / "styles.css").read_text(encoding="utf-8")).count("{")
-for name in ("presentation.js", "film.js", "privacy-vignette.js", "price.js"):
+for name in ("presentation.js", "film.js", "privacy-vignette.js", "price.js", "encryption-demo.js"):
     assert not re.search(r"^\s*//", (dist / name).read_text(encoding="utf-8"), re.M), name
+
+# The working demo ("Inside the encryption", /encryption) tells its visitor
+# that nothing is sent or kept, that the site's policy lets no script call
+# out, that it is a simplified demo, and how the photo is cut up. Each is
+# checked here, so the page can't go on saying it after a change has made it
+# untrue.
+demo = (dist / "encryption-demo.js").read_text(encoding="utf-8")
+for api in ("fetch(", "XMLHttpRequest", "WebSocket", "EventSource", "sendBeacon", "RTCPeerConnection",
+            "localStorage", "sessionStorage", "indexedDB", "document.cookie", "caches.", "postMessage",
+            "serviceWorker", "import(", "new Image", ".src =", "location.", "window.open", "createObjectURL",
+            "toDataURL", "toBlob", "http"):
+    assert api not in demo, f"encryption-demo.js must not send or keep anything: {api}"
+assert "default-src 'none'" in policy and "connect-src" not in policy, "the demo says scripts here can't call out"
+exhibit = (dist / "encryption.html").read_text(encoding="utf-8")
+assert 'class="exhibit"' in exhibit and "/encryption-demo.js?v=" in exhibit and 'id="simplified"' in exhibit
+# The whole demo is on its own page. Every homepage has the way in to its
+# own language's copy, and nothing of the demo itself; the Security overview
+# links to it too.
+for code, folder, _, _ in build.LANGS:
+    home = (dist / folder / "index.html").read_text(encoding="utf-8")
+    assert f'class="inside-door" href="{build.page_url("encryption", code)}"' in home, code
+    assert "encryption-demo.js" not in home and 'class="exhibit"' not in home, code
+    assert f'href="{build.page_url("encryption", code)}"' in (dist / folder / "security.html").read_text(encoding="utf-8"), code
+words = {key: values["en"] for key, values in build.load_strings().items() if key.startswith("ex_")}
+assert "simplified" in words["ex_intro_small"] and "simplified" in words["ex_about_h"].lower()
+# It promises nothing about memory: a web page can't erase securely, and
+# the one place the words appear is where it says so.
+for key, text in words.items():
+    assert not re.search(r"\bwip(e|es|ed|ing)\b|\beras(e|es|ed|ing)\b|\bshred", text, re.I), f"{key} overclaims: {text!r}"
+assert "not secure erasure" in words["ex_about_7"] and "not secure erasure" in words["ex_vault_tech_copy"]
+# The numbers in its words are the ones the script and the stylesheet use.
+width, height, pieces = map(int, re.search(r"const W = (\d+), H = (\d+), PIECES = (\d+);", demo).groups())
+assert height % pieces == 0
+rows = height // pieces
+assert f"{width} by {height}" in words["ex_photo_tech"] and f"{width * height * 3:,} bytes" in words["ex_photo_tech"]
+assert f"{pieces} pieces of {rows * width * 3:,} bytes: {rows} rows" in words["ex_cut_tech_pieces"]
+assert f"into {pieces} small" in words["ex_about_2"]
+for key in ("ex_cut_fig", "ex_unlock_fig", "ex_wrong_fig"):
+    assert words[key].endswith(f"of {pieces}"), key
+assert words["ex_photo_k"].endswith("of 8") and exhibit.count("data-goto=") == 8
+assert f"calc({pieces} * var(--slab))" in css
 
 # In the header the other pages are listed once for each layout, in the
 # order that layout shows them: before the name on wide screens, after the
