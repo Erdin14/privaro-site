@@ -558,7 +558,7 @@
   // The ring shows where; it's kept clear of the sheet's edge so it shows
   // whole.
   function changeBit() {
-    const x = 14 + pick(W - 28), y = 14 + pick(H - 28), piece = Math.floor(y / ROWS);
+    const x = 36 + pick(W - 72), y = 36 + pick(H - 72), piece = Math.floor(y / ROWS);
     const offset = HEAD + piece * SLOT + NONCE + ((y - piece * ROWS) * W + x) * 3 + pick(3), before = stored[offset];
     changed = { offset, bit: 1 << pick(8), piece };
     stored[offset] ^= changed.bit;

@@ -1437,11 +1437,21 @@ main:focus { outline: none; }
 .slab.is-bad .slab-face::after, .slab.is-bad .slab-name { opacity: 1; }
 .slab.is-bad[data-side="start"] .slab-name { right: auto; left: 8px; }
 /* Where one bit was changed: a ring around the pixel, since one bit in
-   half a million bytes of noise can't be seen. */
-.sheet-ring { position: absolute; width: 22px; height: 22px; margin: -11px 0 0 -11px; border: 1.5px solid #fff; border-radius: 50%;
-  box-shadow: 0 0 0 1.5px rgb(0 0 0 / .65), inset 0 0 0 1.5px rgb(0 0 0 / .65); transform: translateZ(24px); opacity: 0;
-  transition: opacity var(--dur-state) var(--ease-state); }
+   half a million bytes of noise can't be seen. It has to be found at a
+   glance on a sheet of coloured noise, so it's a heavy white ring with a
+   dark edge either side and a soft dark surround, large enough to read as
+   a mark and not as part of the noise. (It was a thin 22px ring, and had
+   to be looked for.) It arrives by closing in on the spot from wider out,
+   then sends out three slow ripples and rests: enough to bring the eye
+   there while the step is read, and never a loop. With Reduce Motion it
+   is simply there. */
+.sheet-ring { position: absolute; width: 36px; height: 36px; margin: -18px 0 0 -18px; border: 2.5px solid #fff; border-radius: 50%;
+  box-shadow: 0 0 0 2px rgb(0 0 0 / .8), inset 0 0 0 2px rgb(0 0 0 / .8), 0 0 16px 6px rgb(0 0 0 / .55); transform: translateZ(24px);
+  opacity: 0; pointer-events: none; transition: opacity var(--dur-state) var(--ease-state); }
+.sheet-ring::after { content: ""; position: absolute; inset: -2.5px; border: 2px solid #fff; border-radius: 50%; opacity: 0; }
 .scene[data-ring] .sheet-ring { opacity: 1; }
+@keyframes ring-land { from { opacity: 0; transform: translateZ(24px) scale(2.8); } }
+@keyframes ring-ripple { from { opacity: .8; transform: scale(1); } to { opacity: 0; transform: scale(2.6); } }
 /* The vault's door, hinged on the sheet's left edge. Open, it's swung
    out of the way and not there to be seen; shut, it stands just in front
    of the file, with the lock on it. */
@@ -1611,6 +1621,8 @@ main:focus { outline: none; }
 @media (prefers-reduced-motion: no-preference) {
   .exhibit[data-live] .chapter.is-current { animation: step-in var(--dur-reveal) var(--ease) both; }
   .exhibit[data-live] :is(.beat.is-current, .chapter-figure) { animation: step-in var(--dur-reveal) var(--ease) both; }
+  .scene[data-ring] .sheet-ring { animation: ring-land var(--dur-reveal) var(--ease) both; }
+  .scene[data-ring] .sheet-ring::after { animation: ring-ripple var(--dur-scene) var(--ease-state) var(--dur-reveal) 3 both; }
 }
 @media (prefers-reduced-motion: reduce) {
   .scene *, .story-view .knob, .inside-door svg { transition: none !important; animation: none !important; }
@@ -1652,6 +1664,7 @@ main:focus { outline: none; }
   .key { grid-template-columns: repeat(16, 5px); gap: 3px; }
   .key i { width: 5px; height: 5px; }
   .slab.is-up { --lift: 18px; }
+  .sheet-ring { width: 30px; height: 30px; margin: -15px 0 0 -15px; }
   .scene[data-pose="photo"] { --sy: 0px; }
   .scene[data-pose="key"] { --sx: -76px; --sy: -4px; --sz: -200px; --kx: 62px; --ky: 12px; --kz: 60px; }
   .scene[data-pose="cut"] { --sx: -16px; --sy: 2px; --sz: -120px; --gap: 8px; --kx: 126px; --ky: -112px; --kz: -160px; --ks: .5; }
