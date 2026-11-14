@@ -13,7 +13,13 @@
      said, regular where it informs or answers.
    - Colour: graphite, three greys of ink, one hairline, and the logo's blue
      for links inside the text; navigation is muted words. The screenshots
-     supply the colour.
+     supply the colour, and a little of their light: the Lock Screen's
+     indigo falls on the graphite behind it, as a lit screen's would on a
+     dark desk. Static, painted once.
+   - Light: one, high and to the left. It falls across the graphite, along
+     the top edge of anything glass, across the phones' glass, and down the
+     large headlines, which are a shade brighter at the top than at the
+     foot.
    - Line: the hairline is the site's one ornament. The header is a seam with
      the name set into it, lists are rows between hairlines, and the phones
      rise out of a line rather than sit in boxes.
@@ -21,15 +27,21 @@
      and one gutter shared by the gallery and the section under it.
    - Shape: round controls (999px), soft surfaces (24px) for the film and the
      Security page's illustration, and nothing else.
+   - Material: glass, for the few things that float over the page rather
+     than sit on it (the film's buttons, the viewer's, the language menu,
+     the door to the working demo): a faint fill lit from above, an edge
+     that catches the light along its top, and a soft shadow under it.
    - Motion: five durations and three curves, named below, and nothing on
      the site moves to any other (the scripts read the same names). Each
      chapter of the homepage has one movement of its own and no more: the
      name rises out of its line and the rule under it is drawn; the phones
      are dealt out from behind the Lock Screen; the photo in the
-     illustration is written over as the page is scrolled past it; three
-     passcodes are typed once. Only transform and opacity ever animate, so
-     the work is the compositor's. Everything else, and every word on the
-     reading pages, is simply there. */
+     illustration is written over as the page is scrolled past it, and the
+     phone locks when it's done; three passcodes are typed once, and again
+     only when one is pointed at. Only transform and opacity ever animate,
+     so the work is the compositor's. Everything else, and every word on the
+     reading pages, is simply there; what answers the pointer (a phone's
+     lean, the light on glass) answers it and nothing else. */
 :root {
   --bg: #ffffff;
   --ink: #111111;
@@ -70,6 +82,17 @@
 
   --radius-round: 999px;
   --radius-surface: 24px;
+
+  /* Glass (see Material, above). The fill is an image so the colour under
+     it is free to change on hover, and that change can be animated. */
+  --glass: linear-gradient(rgb(255 255 255 / .085), rgb(255 255 255 / .03));
+  --glass-edge: inset 0 1px 0 rgb(255 255 255 / .13), inset 0 0 0 1px rgb(255 255 255 / .075);
+  --glass-lift: 0 12px 32px -16px rgb(0 0 0 / .8);
+  /* What the Lock Screen gives off. */
+  --screen-glow: 96 84 228;
+  /* The headlines' light: full white where it falls, a soft silver at the
+     foot. Never below 9:1 on the graphite. */
+  --lit: linear-gradient(172deg, #fff 30%, #c9cad0);
 
   /* Under a finger; a change of state (colour, a hover); something small
      going a short way (a menu, the viewer's next screen); something
@@ -119,6 +142,21 @@
 ::view-transition-new(root) { animation: quiet-page-in 180ms cubic-bezier(.2, 0, .2, 1) both; mix-blend-mode: normal; }
 @keyframes quiet-page-out { to { opacity: 0; } }
 @keyframes quiet-page-in { from { opacity: 0; } }
+/* The header's words stay put from page to page, as an app's bar does,
+   while the page under them crossfades: as part of the page they faded out
+   and back in with it, and two halves of a crossfade don't add up to
+   whole, so the name and links dimmed for a moment on every click. As a
+   picture of their own, what's the same on both pages is simply there, and
+   only what changes (the page you're on, or the bar's width to and from
+   the homepage) crossfades, each picture at its own size, about the middle.
+   Named only while a transition runs: a named element's frosted children
+   (the language menu) would otherwise frost nothing. Not on phones, where
+   the header scrolls away with the page. */
+@media (min-width: 761px) {
+  :active-view-transition .head-bar { view-transition-name: site-bar; }
+}
+::view-transition-group(site-bar) { animation-duration: 180ms; }
+::view-transition-old(site-bar), ::view-transition-new(site-bar) { inline-size: auto; block-size: auto; left: 50%; translate: -50% 0; }
 @media (prefers-reduced-motion: reduce) {
   @view-transition { navigation: none; }
   ::view-transition-group(root), ::view-transition-old(root), ::view-transition-new(root) { animation: none; }
@@ -144,6 +182,30 @@ a { color: var(--blue); text-decoration: none; }
 a:hover { text-decoration: underline; text-underline-offset: 3px; }
 img { max-width: 100%; display: block; }
 :focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+/* Selected words, in the logo's blue, as a selection is on iPhone. */
+::selection { background: rgb(110 162 255 / .34); }
+/* The display headlines and page titles, lit from above (see Light). The
+   colour is a picture clipped to the letters; where that can't be done,
+   on paper, in forced colours and under a selection, they're plain ink. */
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  :is(.display .rise, .page h1, .faq-more h2, .pro-figure p, .chapter h2) {
+    background-image: var(--lit); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  :is(.display .rise, .page h1, .faq-more h2, .pro-figure p, .chapter h2)::selection,
+  :is(.display .rise, .page h1, .faq-more h2, .pro-figure p, .chapter h2) *::selection { -webkit-text-fill-color: var(--ink); }
+}
+/* The name is lit the same way, but by a light laid over it rather than
+   clipped to it: its last two letters turn over (see .roll), and letters
+   moving inside a clipped picture are drawn in the wrong place. "Darken"
+   keeps whichever is darker, so over the graphite the light changes
+   nothing and over the letters it shades them; the letters turn through a
+   light that stays where it is, as they would under a lamp. */
+.wordmark { position: relative; }
+.wordmark::after { content: ""; position: absolute; inset: -.12em 0 0; pointer-events: none;
+  background: var(--lit); mix-blend-mode: darken; }
+@media (forced-colors: active), print {
+  :is(.display .rise, .page h1, .faq-more h2, .pro-figure p, .chapter h2) { background-image: none; -webkit-text-fill-color: currentColor; }
+  .wordmark::after { content: none; }
+}
 /* Browsers set code in their own monospace; here it's the text like the rest. */
 :is(code, kbd, samp, pre) { font-family: inherit; font-size: inherit; }
 /* No paragraph, caption or list item ends on a line of one word. */
@@ -395,7 +457,16 @@ main:focus { outline: none; }
    (presentation.js) and the others step back. The row is measured against
    the section (cqw), so the phones know how far apart they stand (--step)
    when they're dealt out. */
-.gallery { margin-top: var(--space-9); container-type: inline-size; }
+.gallery { position: relative; isolation: isolate; margin-top: var(--space-9); container-type: inline-size; }
+/* The light the screens give off, on the graphite behind them: the Lock
+   Screen's indigo around the first, and the others' white, far fainter,
+   along the row. It comes up with the phones as they're dealt (Arrivals),
+   so it's never a light with nothing there to give it. Mirrored with the
+   row in Arabic and Urdu. */
+.gallery::before { content: ""; position: absolute; z-index: -1; inset: -12% 0 4%; pointer-events: none;
+  background: radial-gradient(21% 60% at 12% 42%, rgb(var(--screen-glow) / .34), rgb(var(--screen-glow) / .1) 62%, transparent),
+    radial-gradient(46% 54% at 62% 42%, rgb(226 232 255 / .07), transparent); }
+[dir="rtl"] .gallery::before { scale: -1 1; }
 /* Four columns of the page itself, so the first phone starts on the page's
    left edge and the third on its centre line, where the facts, the
    passcodes' descriptions and the links under them start. Centred as a
@@ -429,6 +500,8 @@ main:focus { outline: none; }
 /* The lean itself is a spring in presentation.js, written to the button's
    transform a frame at a time: nothing here transitions it, so the two
    can't pull against each other. */
+/* Dots under the row, only where it's swiped (see the tablet layout). */
+.shots-dots { display: none; }
 .shot-open { position: relative; display: block; width: 100%; padding: 0; border: 0; background: none; color: inherit;
   cursor: zoom-in; border-radius: 12%; -webkit-tap-highlight-color: transparent;
   transition: opacity var(--dur-reveal) var(--ease-state); }
@@ -469,6 +542,8 @@ main:focus { outline: none; }
    in a row that runs right to left Chromium (153) measures each phone a
    place out, and dims the one in the middle. */
 @keyframes shot-focus { 0%, 100% { opacity: .6; scale: .94; } 25%, 75% { opacity: 1; scale: 1; } }
+/* The Lock Screen's light, carried off with it, one phone's width. */
+@keyframes glow-follow { to { translate: calc(-1 * (var(--lead) + var(--space-4))) 0; } }
 @supports (animation-timeline: view()) {
   @media (max-width: 1180px) and (prefers-reduced-motion: no-preference) {
     html:not([dir="rtl"]) .shots .shot-open { animation: shot-focus linear both; animation-timeline: view(inline); }
@@ -501,8 +576,9 @@ main:focus { outline: none; }
 .film-progress:focus-visible .film-progress-fill { background: var(--blue); }
 .film-controls { display: flex; justify-content: flex-end; gap: var(--space-2); margin-top: var(--space-3); }
 .film-controls .film-button { min-height: 40px; padding: 8px 14px 8px 12px; border-radius: var(--radius-round); color: var(--ink);
-  font-size: var(--size-small); font-weight: 500; box-shadow: inset 0 0 0 1px var(--rule); }
-.film-controls .film-button:hover { background: color-mix(in srgb, var(--ink) 8%, transparent); }
+  font-size: var(--size-small); font-weight: 500;
+  background: var(--glass) rgb(255 255 255 / 0); box-shadow: var(--glass-edge), var(--glass-lift); }
+.film-controls .film-button:hover { background-color: rgb(255 255 255 / .06); }
 /* One icon per state: play, pause or play again; sound on or off. */
 .film-play :is(.film-icon-pause, .film-icon-again),
 .film-card[data-state="pause"] .film-play :is(.film-icon-play, .film-icon-again),
@@ -594,7 +670,18 @@ main:focus { outline: none; }
 .closing-copy { padding-bottom: var(--space-9); }
 .closing .display { max-width: 9em; }
 .closing .buy { margin-top: var(--space-7); }
-.closing-shot { width: clamp(220px, 23vw, 330px); aspect-ratio: 760 / 960; overflow: hidden; -webkit-mask-image: linear-gradient(#000 55%, transparent); mask-image: linear-gradient(#000 55%, transparent); }
+:is(.closing, .missing-body) { --shot-w: clamp(220px, 23vw, 330px); isolation: isolate; }
+.closing-shot { width: var(--shot-w); aspect-ratio: 760 / 960; overflow: hidden; -webkit-mask-image: linear-gradient(#000 55%, transparent); mask-image: linear-gradient(#000 55%, transparent); }
+/* Behind this Lock Screen too, the light it gives off, as in the gallery:
+   an ellipse the size of its screen, in the phone's own cell, blurred out
+   past it. (A blur reaches past the page's edge without widening the page;
+   a larger shape would have given phones a sideways scroll.) Everything in
+   the grid is placed, so the light can share the phone's cell. */
+:is(.closing-copy, .missing-copy) { grid-area: 1 / 1; }
+:is(.closing, .missing-body) > .closing-shot { grid-area: 1 / 2; }
+:is(.closing, .missing-body)::before { content: ""; grid-area: 1 / 2; align-self: end; justify-self: center; z-index: -1;
+  width: calc(var(--shot-w) * .92); height: calc(var(--shot-w) * .96); margin-bottom: calc(var(--shot-w) * .18);
+  border-radius: 50%; background: rgb(var(--screen-glow) / .5); filter: blur(calc(var(--shot-w) * .24)); pointer-events: none; }
 .closing-shot img { width: 100%; height: auto;
   -webkit-mask: url(/shots/framed-18-pro-max/phone-mask.svg) center / 100% 100% no-repeat;
   mask: url(/shots/framed-18-pro-max/phone-mask.svg) center / 100% 100% no-repeat; }
@@ -649,6 +736,9 @@ main:focus { outline: none; }
     dot-gone var(--dur-reveal) var(--ease) calc(var(--row) + 1.4s + var(--n) * .05s) both; }
   .motion .code-wrong.in-view .dots i { animation: dot-try calc(1.35s - var(--n) * .11s) linear var(--key) both; }
   .motion .code-wrong.in-view .dots { animation: dots-shake var(--dur-move) var(--ease-state) calc(var(--row) + 1.2s) both; }
+  /* Typed again, when pointed at or tapped (presentation.js): straight
+     away, without waiting a beat for the one above. */
+  .motion .code.again { --row: 0s; }
   .motion .shots figure { --d: calc(.2s + var(--i) * .04s); }
   .motion .shots .rise { animation-duration: 1300ms; }
   .motion .shots figure + figure figcaption { animation: fade var(--dur-reveal) var(--ease-state) calc(var(--d) + .45s) both paused; }
@@ -662,6 +752,15 @@ main:focus { outline: none; }
   }
   /* Arriving through a page crossfade, the top of the page is simply there. */
   .soft-arrival :is(.hero, .gallery) .rise, .soft-arrival .shots figure + figure figcaption { animation: none; }
+  /* The screens' light comes up as they're dealt, and is simply there
+     whenever they are. */
+  .motion .gallery::before { opacity: 0; transition: opacity var(--dur-scene) var(--ease-state) .35s; }
+  .motion .gallery:has(.in-view)::before, .soft-arrival .gallery::before { opacity: 1; }
+  .soft-arrival .gallery::before { transition: none; }
+  .motion .shots-dots { transition: opacity var(--dur-reveal) var(--ease-state) .9s; }
+  .motion .gallery:not(:has(.in-view)) .shots-dots { opacity: 0; }
+  .motion .closing::before { opacity: 0; transition: opacity var(--dur-scene) var(--ease-state) .2s; }
+  .motion .closing:has(.closing-shot .in-view)::before { opacity: 1; }
 }
 /* On paper nothing waits to be scrolled to: what hasn't arrived yet would
    print as its first frame, blank or faded. */
@@ -676,7 +775,8 @@ main:focus { outline: none; }
   html .lock-scene { --bg: #fff; --ink: #111; --muted: #4a4a4f; --faint: #5c5c61; --dim: #6e6e73; --rule: #d2d2d7;
     --blue: #1d4fc0; color-scheme: light; }
   .site-head { position: static; }
-  .site-head::before, .lang, .film-controls, .film-progress, .skip, .handoff { display: none; }
+  .site-head::before, .lang, .film-controls, .film-progress, .skip, .handoff,
+  :is(.gallery, .closing, .missing-body)::before, .shots-dots, .door-light { display: none; }
   .motion :is(.dots, .dots i) { animation: none; }
   .long-read > .toc { position: static; }
 }
@@ -703,9 +803,10 @@ main:focus { outline: none; }
   display: flex; align-items: center; justify-content: space-between; gap: 20px; z-index: 2; }
 .viewer-toolbar h2 { font-size: 17px; font-weight: 600; line-height: 1.4; letter-spacing: -.01em; }
 .shot-viewer button { display: inline-flex; align-items: center; justify-content: center; flex: none;
-  width: 44px; height: 44px; padding: 10px; border: 1px solid rgb(255 255 255 / .16);
-  border-radius: 50%; background: rgb(255 255 255 / .05); color: #f2f2f3; cursor: pointer; }
-.shot-viewer button:hover { background: rgb(255 255 255 / .12); border-color: rgb(255 255 255 / .3); }
+  width: 44px; height: 44px; padding: 10px; border: 0;
+  border-radius: 50%; background: var(--glass) rgb(255 255 255 / .02); box-shadow: var(--glass-edge), var(--glass-lift);
+  color: #f2f2f3; cursor: pointer; }
+.shot-viewer button:hover { background-color: rgb(255 255 255 / .09); }
 .shot-viewer button svg { width: 22px; height: 22px; }
 .viewer-stage { position: absolute; inset: 80px var(--space-5) 88px; display: flex; align-items: center; justify-content: center; }
 .viewer-image { display: block; flex: none; max-width: none; transform-origin: top left; object-fit: contain;
@@ -736,6 +837,30 @@ main:focus { outline: none; }
 .vg-screen { position: relative; height: 100%; overflow: hidden; border-radius: 15.8cqw; background: #0d1012; }
 .vg-island { position: absolute; top: 4.95cqw; left: 50%; width: 27.7cqw; height: 8.25cqw; translate: -50% 0;
   border-radius: 30cqw; background: #000; }
+/* The island locking (privacy-vignette.js, once the photo is written
+   over). It widens by sliding two more black pills of its own shape out
+   from under it, one each way, so its ends stay round and only transforms
+   move; a padlock comes up at its leading end, open, and its shackle drops
+   shut. Then it all goes back. Nothing of it is there at rest, without the
+   script, or with Reduce Motion. */
+.vg-island::before, .vg-island::after { content: ""; position: absolute; inset: 0; border-radius: inherit; background: inherit; }
+.vg-lock { position: absolute; z-index: 1; left: -2.9cqw; top: 50%; width: 3.1cqw; height: 4cqw; margin-top: -2.15cqw; opacity: 0; }
+.vg-lock::after { content: ""; position: absolute; inset: auto 0 0; height: 2.45cqw; border-radius: .7cqw; background: #f5f5f7; }
+.vg-lock i { position: absolute; left: 50%; bottom: 1.7cqw; width: 2.05cqw; height: 2.35cqw; margin-left: -1.025cqw;
+  border: .5cqw solid #f5f5f7; border-bottom: 0; border-radius: 1.1cqw 1.1cqw 0 0; translate: 0 -.8cqw; }
+@keyframes island-lead { 0%, 100% { translate: 0; animation-timing-function: cubic-bezier(.3, 1.4, .5, 1); }
+  18%, 78% { translate: -21% 0; animation-timing-function: cubic-bezier(.4, 0, .2, 1); } }
+@keyframes island-trail { 0%, 100% { translate: 0; animation-timing-function: cubic-bezier(.3, 1.4, .5, 1); }
+  18%, 78% { translate: 21% 0; animation-timing-function: cubic-bezier(.4, 0, .2, 1); } }
+@keyframes island-padlock { 0% { opacity: 0; scale: .5; } 9% { opacity: 0; scale: .5; animation-timing-function: cubic-bezier(.3, 1.4, .5, 1); }
+  22%, 70% { opacity: 1; scale: 1; } 80%, 100% { opacity: 0; scale: .8; } }
+@keyframes island-shackle { 0%, 30% { translate: 0 -.8cqw; animation-timing-function: cubic-bezier(.5, 0, .2, 1.5); } 40%, 100% { translate: 0 0; } }
+@media (prefers-reduced-motion: no-preference) {
+  .is-locking .vg-island::before { animation: island-lead 2200ms both; }
+  .is-locking .vg-island::after { animation: island-trail 2200ms both; }
+  .is-locking .vg-lock { animation: island-padlock 2200ms both; }
+  .is-locking .vg-lock i { animation: island-shackle 2200ms both; }
+}
 /* The finished state: the photo written over, the ciphertext in its place.
    The photo is seen through a pane over the ciphertext: hidden here, whole
    while it waits, and slid down the screen as it's written
@@ -873,9 +998,11 @@ main:focus { outline: none; }
 .swap { display: grid; }
 .swap > * { grid-area: 1 / 1; }
 .pro .when-free, .pro:has(#plan-free:checked) .when-pro { opacity: 0; visibility: hidden; translate: 0 .3em;
-  transition: opacity var(--dur-state) var(--ease-state), translate var(--dur-reveal) var(--ease), visibility 0s var(--dur-state); }
+  transition: opacity var(--dur-state) var(--ease-state) var(--lag, 0s), translate var(--dur-reveal) var(--ease) var(--lag, 0s),
+    visibility 0s calc(var(--dur-state) + var(--lag, 0s)); }
 .pro .when-pro, .pro:has(#plan-free:checked) .when-free { opacity: 1; visibility: visible; translate: none;
-  transition: opacity var(--dur-state) var(--ease-state), translate var(--dur-reveal) var(--ease), visibility 0s; }
+  transition: opacity var(--dur-state) var(--ease-state) var(--lag, 0s), translate var(--dur-reveal) var(--ease) var(--lag, 0s),
+    visibility 0s var(--lag, 0s); }
 /* The three limits, between hairlines. Each figure is as large as its
    column lets it be, in any language. */
 .limits { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: var(--space-8); border-block: 1px solid var(--rule); }
@@ -916,6 +1043,13 @@ main:focus { outline: none; }
 .pro:has(#plan-free:checked) .pro-list h3 { color: var(--faint); }
 /* The dimmest grey that still reads at 4.5:1 on the graphite behind the list. */
 .pro:has(#plan-free:checked) .pro-list li p { color: #85868b; }
+/* A flip of the switch travels down the page, as a row of switches set one
+   after another would: each limit a beat after the one before, then each
+   feature (--n, in pro.html; the words that swap take it from there too).
+   The whole list has turned in under half a second. */
+.limits > div { --lag: calc(var(--n, 0) * 70ms); }
+.pro-list li { --lag: calc(90ms + var(--n, 0) * 26ms); }
+.limit, .pro-list li::before, .pro-list h3, .pro-list li p { transition-delay: var(--lag, 0s); }
 @media (prefers-reduced-motion: reduce) {
   .pro *, .pro .pro-list li::before, .mark-yes::before, .mark-no::before { transition: none !important; }
 }
@@ -1119,7 +1253,8 @@ main:focus { outline: none; }
 .lang-menu { position: absolute; inset-inline-end: 0; bottom: calc(100% + 14px); z-index: 20; width: 360px; padding: 8px;
   background: var(--bg); background: color-mix(in srgb, var(--bg) 92%, transparent);
   -webkit-backdrop-filter: blur(24px) saturate(1.6); backdrop-filter: blur(24px) saturate(1.6);
-  border: 1px solid var(--rule); border-radius: 16px; box-shadow: 0 24px 60px rgb(0 0 0 / .18), 0 2px 8px rgb(0 0 0 / .06);
+  border: 1px solid var(--rule); border-radius: 16px;
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / .07), 0 24px 60px rgb(0 0 0 / .42), 0 2px 8px rgb(0 0 0 / .2);
   font-size: 14px; transform-origin: bottom right; }
 [dir="rtl"] .lang-menu { transform-origin: bottom left; }
 /* Chrome only hides a closed <details>' content (content-visibility) and skips
@@ -1196,6 +1331,29 @@ main:focus { outline: none; }
     scrollbar-width: thin; scrollbar-color: rgb(255 255 255 / .18) transparent; }
   .shots figure { flex: none; width: min(56vw, 300px); max-width: none; scroll-snap-align: center; }
   .shots figure:first-child { scroll-snap-align: start; }
+  /* The Lock Screen's light, behind it where it starts the row (--lead is
+     its width). Swiped on, the light goes with it, tied to the row's own
+     scrolling by the browser (where it can be: not in a row that runs
+     right to left, as above); elsewhere it stays where the row starts. */
+  /* A dot for each screen, the one in the middle lit (presentation.js). The
+     dot is small; what answers a finger is the whole button around it. */
+  .shots-dots { display: flex; justify-content: center; margin-top: calc(-1 * var(--space-2)); }
+  .shots-dots button { position: relative; width: 22px; height: 32px; padding: 0; border: 0; background: none; cursor: pointer;
+    -webkit-tap-highlight-color: transparent; }
+  .shots-dots button::before { content: ""; position: absolute; left: 50%; top: 50%; width: 7px; height: 7px; margin: -3.5px;
+    border-radius: 50%; background: var(--ink); opacity: .24; transition: opacity var(--dur-state) var(--ease-state); }
+  .shots-dots button:hover::before { opacity: .45; }
+  .shots-dots .is-current::before, .shots-dots .is-current:hover::before { opacity: 1; }
+  .gallery { --lead: min(56vw, 300px); timeline-scope: --row; }
+  .shots.wrap { scroll-timeline: --row inline; }
+  .gallery::before { inset: -6% 0 8%;
+    background: radial-gradient(calc(var(--lead) * .8) 58% at calc(var(--side) + var(--lead) / 2) 40%,
+      rgb(var(--screen-glow) / .36), rgb(var(--screen-glow) / .1) 62%, transparent); }
+  @supports (animation-timeline: scroll()) {
+    @media (prefers-reduced-motion: no-preference) {
+      html:not([dir="rtl"]) .gallery::before { animation: glow-follow linear both; animation-timeline: --row; animation-range: 0% 34%; }
+    }
+  }
   .safety-body, .code, .guard-foot { grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); }
   .safety-facts { align-self: end; padding-bottom: var(--space-6); }
   .safety-art { min-height: 0; }
@@ -1232,6 +1390,7 @@ main:focus { outline: none; }
   .buy-get { flex-direction: column; align-items: flex-start; gap: var(--space-4); }
   .shots.wrap { --step: calc(min(64vw, 280px) + var(--space-4)); }
   .shots figure { width: min(64vw, 280px); }
+  .gallery { --lead: min(64vw, 280px); }
   .display { font-size: clamp(36px, 10.4vw, 56px); }
   /* One above the other: the phone, the facts under it. */
   .safety-body { grid-template-columns: minmax(0, 1fr); border-bottom: 0; }
@@ -1245,7 +1404,9 @@ main:focus { outline: none; }
   .guard-foot { grid-template-columns: minmax(0, 1fr); row-gap: var(--space-4); margin-top: var(--space-7); }
   .closing { grid-template-columns: minmax(0, 1fr); }
   .closing-copy { padding-bottom: var(--space-7); }
-  .closing-shot { width: min(62vw, 260px); justify-self: center; }
+  :is(.closing, .missing-body) { --shot-w: min(62vw, 260px); }
+  .closing-shot { justify-self: center; }
+  :is(.closing, .missing-body) > .closing-shot, :is(.closing, .missing-body)::before { grid-area: 2 / 1; }
   .missing-body { grid-template-columns: minmax(0, 1fr); }
   .missing-copy { padding-bottom: var(--space-7); }
   .page { padding: 40px 0 64px; }
@@ -1293,11 +1454,28 @@ main:focus { outline: none; }
 /* The homepage's way in to "Inside the encryption", under the security
    section's facts: one quiet row, a soft surface like the film's, with what
    it is in a few words and an arrow. The whole row is the link. */
-.inside-door { display: flex; align-items: center; justify-content: space-between; gap: var(--space-5); max-width: 36em;
-  margin-top: var(--space-6); padding: 18px var(--space-5); border: 1px solid var(--rule); border-radius: var(--radius-surface);
-  background: rgb(255 255 255 / .025); color: var(--ink);
-  transition: border-color var(--dur-state) var(--ease-state), background-color var(--dur-state) var(--ease-state); }
-.inside-door:hover { text-decoration: none; border-color: rgb(255 255 255 / .24); background: rgb(255 255 255 / .045); }
+.inside-door { position: relative; isolation: isolate; overflow: hidden; display: flex; align-items: center; justify-content: space-between;
+  gap: var(--space-5); max-width: 36em; margin-top: var(--space-6); padding: 19px 25px; border-radius: var(--radius-surface);
+  background: var(--glass) rgb(255 255 255 / 0); box-shadow: var(--glass-edge), var(--glass-lift); color: var(--ink);
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color var(--dur-state) var(--ease-state), scale var(--dur-move) var(--ease-spring); }
+.inside-door:hover { text-decoration: none; background-color: rgb(255 255 255 / .03); }
+.inside-door:active { scale: .985; transition-duration: var(--dur-state), var(--dur-press); }
+/* Under a mouse, a soft light on the glass that goes where the pointer
+   does, brighter along the edge it's nearest, as a lit surface catches a
+   lamp moved over it (presentation.js). One glow, made once and moved,
+   seen twice: faintly through the whole card, and brightly through a
+   1px ring cut out of it. */
+.door-light { position: absolute; inset: 0; z-index: -1; border-radius: inherit; pointer-events: none; opacity: 0;
+  transition: opacity var(--dur-reveal) var(--ease-state); }
+.door-light > span { position: absolute; inset: 0; overflow: hidden; border-radius: inherit; }
+.door-light > span + span { padding: 1px;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); mask-composite: exclude; }
+.door-light i { position: absolute; left: -160px; top: -160px; width: 320px; height: 320px;
+  background: radial-gradient(closest-side, rgb(255 255 255 / .09), transparent); }
+.door-light > span + span i { background: radial-gradient(closest-side, rgb(255 255 255 / .5), transparent); }
+.inside-door:hover .door-light { opacity: 1; }
 .inside-door strong { display: block; font-size: var(--size-lead); font-weight: 600; line-height: 1.35; letter-spacing: -.012em; }
 .inside-door-words > span { display: block; margin-top: 2px; font-size: var(--size-text); line-height: 1.5; letter-spacing: var(--track-text);
   color: var(--muted); }
@@ -1574,8 +1752,9 @@ main:focus { outline: none; }
     background-color var(--dur-state) var(--ease-state), box-shadow var(--dur-state) var(--ease-state); }
 .story-go { min-width: 172px; padding: 0 var(--space-6); background: #f5f5f7; color: #111213; }
 .story-go:hover { background: #fff; }
-.story-back { padding: 0 var(--space-5); background: none; color: var(--ink); font-weight: 500; box-shadow: inset 0 0 0 1px var(--rule); }
-.story-back:hover { box-shadow: inset 0 0 0 1px var(--dim); }
+.story-back { padding: 0 var(--space-5); background: var(--glass) rgb(255 255 255 / 0); color: var(--ink); font-weight: 500;
+  box-shadow: var(--glass-edge), var(--glass-lift); }
+.story-back:hover { background-color: rgb(255 255 255 / .06); }
 :is(.story-go, .story-back):active { scale: .97; transition-duration: var(--dur-press); transition-timing-function: var(--ease-state); }
 /* Busy, not switched off: it keeps the keyboard's focus while it works. */
 :is(.story-go, .story-back)[aria-disabled="true"] { opacity: .45; scale: none; }
@@ -1740,4 +1919,6 @@ main:focus { outline: none; }
   .legal-index li { align-items: baseline; padding-block: 0; }
   .legal-index a { padding-block: 11px; }
   .film-progress { height: 24px; }
+  .shots-dots { margin-top: calc(-1 * var(--space-4)); }
+  .shots-dots button { width: 28px; height: 44px; }
 }

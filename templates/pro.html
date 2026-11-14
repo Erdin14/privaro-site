@@ -60,27 +60,28 @@
 
   <!-- The three limits, as they are on the side the switch is on. -->
   <dl class="limits">
-      <div><dt>{{pro_s1}}</dt><dd class="limit swap"><span class="when-free">{{pro_s1_free}}</span><span class="when-pro">{{pro_s1_pro}}</span></dd><dd class="limit-note swap"><span class="when-free">{{pro_s1_free_d}}</span><span class="when-pro">{{pro_s1_pro_d}}</span></dd></div>
-      <div><dt>{{pro_s2}}</dt><dd class="limit swap"><span class="when-free">5</span><span class="when-pro">{{pro_s2_pro}}</span></dd><dd class="limit-note swap"><span class="when-free">{{pro_s2_free_d}}</span><span class="when-pro">{{pro_s2_pro_d}}</span></dd></div>
-      <div><dt>{{pro_s3}}</dt><dd class="limit swap"><span class="when-free">1</span><span class="when-pro">3</span></dd><dd class="limit-note swap"><span class="when-free">{{pro_s3_free_d}}</span><span class="when-pro">{{pro_s3_pro_d}}</span></dd></div>
+      <div style="--n:0"><dt>{{pro_s1}}</dt><dd class="limit swap"><span class="when-free">{{pro_s1_free}}</span><span class="when-pro">{{pro_s1_pro}}</span></dd><dd class="limit-note swap"><span class="when-free">{{pro_s1_free_d}}</span><span class="when-pro">{{pro_s1_pro_d}}</span></dd></div>
+      <div style="--n:1"><dt>{{pro_s2}}</dt><dd class="limit swap"><span class="when-free">5</span><span class="when-pro">{{pro_s2_pro}}</span></dd><dd class="limit-note swap"><span class="when-free">{{pro_s2_free_d}}</span><span class="when-pro">{{pro_s2_pro_d}}</span></dd></div>
+      <div style="--n:2"><dt>{{pro_s3}}</dt><dd class="limit swap"><span class="when-free">1</span><span class="when-pro">3</span></dd><dd class="limit-note swap"><span class="when-free">{{pro_s3_free_d}}</span><span class="when-pro">{{pro_s3_pro_d}}</span></dd></div>
   </dl>
 
-  <!-- The twelve features, one to a row. -->
+  <!-- The twelve features, one to a row. Each is numbered (--n), as the
+       limits above are, so a flip of the switch travels down them. -->
   <section class="pro-list" aria-labelledby="pro-list-title">
     <h2 id="pro-list-title" class="swap"><span class="when-free">{{pro_list_free}}</span><span class="when-pro">{{pro_list_pro}}</span></h2>
     <ul>
-      <li class="mark-yes"><h3>{{prof2_t}}</h3><p>{{prof2_d}}</p></li>
-      <li class="mark-yes"><h3>{{prof3_t}}</h3><p>{{prof3_d}}</p></li>
-      <li class="mark-yes"><h3>{{prof7_t}}</h3><p>{{prof7_d}}</p></li>
-      <li class="mark-yes"><h3>{{prof11_t}}</h3><p>{{prof11_d}}</p></li>
-      <li class="mark-yes"><h3>{{prof8_t}}</h3><p>{{prof8_d}}</p></li>
-      <li class="mark-yes"><h3>{{prof9_t}}</h3><p>{{prof9_d}}</p></li>
-      <li class="mark-yes"><h3>{{prof5_t}}</h3><p>{{prof5_d}}</p></li>
-      <li class="mark-yes"><h3>{{prof4_t}}</h3><p>{{prof4_d}}</p></li>
-      <li class="mark-yes"><h3>{{prof12_t}}</h3><p>{{prof12_d}}</p></li>
-      <li class="mark-yes"><h3>{{prof6_t}}</h3><p>{{prof6_d}}</p></li>
-      <li class="mark-yes"><h3>{{prof10_t}}</h3><p>{{prof10_d}}</p></li>
-      <li class="mark-yes"><h3>{{prof13_t}}</h3><p>{{prof13_d}}</p></li>
+      <li class="mark-yes" style="--n:0"><h3>{{prof2_t}}</h3><p>{{prof2_d}}</p></li>
+      <li class="mark-yes" style="--n:1"><h3>{{prof3_t}}</h3><p>{{prof3_d}}</p></li>
+      <li class="mark-yes" style="--n:2"><h3>{{prof7_t}}</h3><p>{{prof7_d}}</p></li>
+      <li class="mark-yes" style="--n:3"><h3>{{prof11_t}}</h3><p>{{prof11_d}}</p></li>
+      <li class="mark-yes" style="--n:4"><h3>{{prof8_t}}</h3><p>{{prof8_d}}</p></li>
+      <li class="mark-yes" style="--n:5"><h3>{{prof9_t}}</h3><p>{{prof9_d}}</p></li>
+      <li class="mark-yes" style="--n:6"><h3>{{prof5_t}}</h3><p>{{prof5_d}}</p></li>
+      <li class="mark-yes" style="--n:7"><h3>{{prof4_t}}</h3><p>{{prof4_d}}</p></li>
+      <li class="mark-yes" style="--n:8"><h3>{{prof12_t}}</h3><p>{{prof12_d}}</p></li>
+      <li class="mark-yes" style="--n:9"><h3>{{prof6_t}}</h3><p>{{prof6_d}}</p></li>
+      <li class="mark-yes" style="--n:10"><h3>{{prof10_t}}</h3><p>{{prof10_d}}</p></li>
+      <li class="mark-yes" style="--n:11"><h3>{{prof13_t}}</h3><p>{{prof13_d}}</p></li>
     </ul>
   </section>
 

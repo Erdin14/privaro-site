@@ -7,7 +7,8 @@
 // as the phone comes up the screen and ciphertext by the time it reaches
 // the top. One way only: scrolling back doesn't bring the photo back,
 // because that is the one thing the illustration is there to say. Once it's
-// written, nothing here listens to the page any more.
+// written, nothing here listens to the page any more, and on either page
+// the phone then locks, once, in its Dynamic Island (lock(), below).
 //
 // How it's drawn. The ciphertext lies still under the photo and is never
 // touched. The photo is seen through a pane that slides down the screen
@@ -62,6 +63,14 @@
     moved.forEach(el => { el.style.transform = el.style.opacity = ''; });
     figure.dataset.state = 'complete';
   }
+  // Written over, the phone locks, as an iPhone does when its side button
+  // is pressed: the Dynamic Island widens for a moment and a padlock closes
+  // in it (styles.css, .is-locking). Once, and only when the writing has
+  // run to its end: not when leaving the page cuts it short.
+  function lock() {
+    settle();
+    if (!reduce.matches) figure.classList.add('is-locking');
+  }
   reduce.addEventListener('change', () => { if (reduce.matches) { settle(); observer?.disconnect(); } });
   window.addEventListener('pagehide', settle);
 
@@ -94,7 +103,7 @@
       last = now;
       if (goal - at < .002) at = goal;
       render(at, reach);
-      if (at >= 1) { listen(false); return settle(); }
+      if (at >= 1) { listen(false); return lock(); }
       if (at < goal) frame = requestAnimationFrame(tick);
     }
     const begin = () => {
@@ -124,7 +133,7 @@
       // Slow to leave, slow to arrive.
       render(t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2, 1);
       if (t < 1) frame = requestAnimationFrame(step);
-      else settle();
+      else lock();
     };
     frame = requestAnimationFrame(step);
   }

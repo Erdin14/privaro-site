@@ -1,8 +1,10 @@
 // Product motion is progressive enhancement. The page is readable and the
 // gallery is visible before this script runs, or if animations are unavailable.
 // The homepage's entrances are CSS (.rise in styles.css); this adds what needs
-// a script: the header's softened band, the phones leaning toward the
-// pointer, and the screenshot viewer. The reading pages have no entrances at
+// a script: the header's softened band, the light on the demo's door, a
+// passcode typed again when it's pointed at, the phones leaning toward the
+// pointer, the dots under the row where it's swiped, and the screenshot
+// viewer. The reading pages have no entrances at
 // all: their words are simply there, and nothing on them can be hidden from
 // a link or a search.
 (() => {
@@ -123,6 +125,46 @@
     mark();
   }
 
+  const fine = matchMedia('(hover: hover) and (pointer: fine)');
+
+  // The door to the working demo: under a mouse, a light on its glass that
+  // goes where the pointer does (styles.css, .door-light). One glow, drawn
+  // once and only ever moved, seen twice: faintly through the card, and
+  // brightly through its edge. Not under a finger, nor with Reduce Motion.
+  document.querySelectorAll('.inside-door').forEach(door => {
+    const light = document.createElement('span');
+    light.className = 'door-light';
+    light.setAttribute('aria-hidden', 'true');
+    light.innerHTML = '<span><i></i></span><span><i></i></span>';
+    door.prepend(light);
+    const glows = [...light.querySelectorAll('i')];
+    const follow = event => {
+      if (event.pointerType !== 'mouse' || !fine.matches || reduce.matches) return;
+      const box = door.getBoundingClientRect();
+      const at = `translate(${(event.clientX - box.left).toFixed(1)}px, ${(event.clientY - box.top).toFixed(1)}px)`;
+      glows.forEach(glow => { glow.style.transform = at; });
+    };
+    door.addEventListener('pointerenter', follow);
+    door.addEventListener('pointermove', follow);
+  });
+
+  // The homepage's three passcodes each type themselves once, as they come
+  // on screen (styles.css). Pointing at one, or tapping it, types it again,
+  // at once (.again takes out the beat each waits after the one above it):
+  // by the time the third had been read, it had usually long since played.
+  // Only once it has finished, and not with Reduce Motion.
+  document.querySelectorAll('.motion .code').forEach(code => {
+    const again = event => {
+      if (event.type === 'pointerenter' && event.pointerType !== 'mouse') return;
+      if (reduce.matches || !code.classList.contains('in-view')) return;
+      if (code.getAnimations({ subtree: true }).some(animation => animation.playState === 'running')) return;
+      code.classList.add('again');
+      code.getAnimations({ subtree: true }).forEach(animation => { animation.cancel(); animation.play(); });
+    };
+    code.addEventListener('pointerenter', again);
+    code.addEventListener('click', again);
+  });
+
   const figures = [...document.querySelectorAll('.shots figure')];
   if (!figures.length || typeof HTMLDialogElement === 'undefined') return;
 
@@ -171,7 +213,44 @@
     button.append(shot, light);
     return { original, caption, button, figure, glow };
   });
-  document.querySelector('.shots').classList.add('viewer-ready');
+  const row = document.querySelector('.shots');
+  row.classList.add('viewer-ready');
+
+  // Where the row is swiped (styles.css: tablets and phones), a dot for each
+  // screen under it, the one in the middle of the row lit, as under a row of
+  // Home Screen pages; a tap on a dot brings its screen to the middle. For a
+  // finger or a mouse only: the screens themselves come one after another
+  // for the keyboard and screen readers, and each is brought into view as
+  // it's reached, so the dots are left out of both rather than said twice.
+  const dots = document.createElement('div');
+  dots.className = 'shots-dots';
+  dots.setAttribute('aria-hidden', 'true');
+  const middle = el => { const box = el.getBoundingClientRect(); return box.left + box.width / 2; };
+  figures.forEach(figure => {
+    const dot = dots.appendChild(document.createElement('button'));
+    dot.type = 'button';
+    dot.tabIndex = -1;
+    dot.addEventListener('click', () => row.scrollBy({ left: middle(figure) - middle(row), behavior: reduce.matches ? 'instant' : 'smooth' }));
+  });
+  row.after(dots);
+  let lit = -1, litQueued = false;
+  const light = () => {
+    litQueued = false;
+    let best = 0;
+    figures.forEach((figure, i) => {
+      if (Math.abs(middle(figure) - middle(row)) < Math.abs(middle(figures[best]) - middle(row))) best = i;
+    });
+    // At either end of the row its end screen, though it can't reach the middle.
+    const at = Math.abs(row.scrollLeft), end = row.scrollWidth - row.clientWidth;
+    if (end > 0 && at < 2) best = 0;
+    else if (end > 0 && at > end - 2) best = figures.length - 1;
+    if (best === lit) return;
+    dots.children[lit]?.classList.remove('is-current');
+    dots.children[lit = best].classList.add('is-current');
+  };
+  row.addEventListener('scroll', () => { if (!litQueued) { litQueued = true; requestAnimationFrame(light); } }, { passive: true });
+  addEventListener('resize', light);
+  light();
 
   // A phone leans a few degrees toward a mouse or trackpad pointer, and the
   // light on its glass goes where the pointer does. It has weight: the lean
@@ -181,7 +260,6 @@
   // (It used to chase the pointer with a fresh 200ms transition on every
   // move.) Only transforms are written, a frame at a time, and only while
   // something is still moving. Touch and Reduce Motion get no lean.
-  const fine = matchMedia('(hover: hover) and (pointer: fine)');
   // Where the light rests: high and to the left, like the page's.
   const rest = [0, 0, .2, -.1];
   const stiffness = 210, damping = 29;
