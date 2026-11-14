@@ -156,7 +156,10 @@
     "en": "It’s the same photo, encrypted. Nothing is blurred or covered up: every pixel has been replaced by the cipher’s output, which looks like random noise. Without the key, there is nothing in it to recognise."
   },
   "ex_cipher_fig_d": {
-    "en": "to encrypt, on this device. It was slowed down so you could watch."
+    "en": "to encrypt, on this device."
+  },
+  "ex_cipher_fig_watched": {
+    "en": "to encrypt, on this device. Played slowly so you could watch."
   },
   "ex_cipher_tech_size": {
     "en": "<strong>Size.</strong> {pixels} bytes of pixels in, {pixels} bytes of ciphertext out, plus a 12-byte nonce and a 16-byte tag for each piece. Every pixel of the noise is three bytes of ciphertext, drawn as red, green and blue."
@@ -194,6 +197,12 @@
   "ex_wrong_b": {
     "en": "Rejected. The cipher’s own check fails on the very first piece, and nothing comes back. Not a blurry version, not a corner of the photo."
   },
+  "ex_wrong_go2": {
+    "en": "Try a key one bit off"
+  },
+  "ex_wrong_c": {
+    "en": "Rejected again. This key differs from the real one by a single bit, and it got no further than a random one. There’s no such thing as nearly right."
+  },
   "ex_wrong_fig": {
     "en": "0 of 12"
   },
@@ -206,11 +215,17 @@
   "ex_wrong_tech_result": {
     "en": "Piece 1: AES-GCM authentication failed. The browser reports an OperationError and returns no plaintext."
   },
+  "ex_wrong_tech_near": {
+    "en": "<strong>One bit off.</strong> The real key with bit {n} of 256 flipped, tried the same way. The byte that differs is marked."
+  },
+  "ex_wrong_tech_near_result": {
+    "en": "Piece {piece}: AES-GCM authentication failed again. HKDF turns a one-bit difference in the vault key into an entirely different file key."
+  },
   "ex_bit_k": {
     "en": "Step 7 of 8"
   },
   "ex_bit_h": {
-    "en": "Change one bit, and it shows."
+    "en": "Change one bit, and it’s caught."
   },
   "ex_bit_a": {
     "en": "Now suppose someone gets at the stored file and alters it. Not by much: a single bit, out of more than four million."
@@ -234,7 +249,7 @@
     "en": "of {bits} in the stored file, changed"
   },
   "ex_bit_tech": {
-    "en": "<strong>The change.</strong> Byte {at} of the stored file: {from} became {to}."
+    "en": "<strong>The change.</strong> Byte {at} of the stored file, one bit flipped: {from} became {to}."
   },
   "ex_bit_tech_result": {
     "en": "Piece {n}: AES-GCM authentication failed. The demo shows nothing unless every piece passes."
@@ -315,13 +330,10 @@
     "en": "{ms} ms"
   },
   "ex_time_fast": {
-    "en": "Under 1 ms"
+    "en": "<1 ms"
   },
   "ex_piece_n": {
     "en": "Piece {n}"
-  },
-  "ex_step_n": {
-    "en": "Step {n}: {name}"
   },
   "ex_file_name": {
     "en": "The photo"
@@ -365,6 +377,9 @@
   "ex_key_wrong": {
     "en": "A different key"
   },
+  "ex_key_near": {
+    "en": "One bit off"
+  },
   "ex_alt_photo": {
     "en": "The sample photo: a snow-capped mountain reflected in a lake."
   },
@@ -385,6 +400,9 @@
   },
   "ex_alt_vault": {
     "en": "The encrypted file behind a closed vault door. The key is put away beside it."
+  },
+  "ex_alt_near": {
+    "en": "The encrypted file behind a closed vault door. In front of it, a key that differs from the real one in a single bit, ringed."
   },
   "ex_alt_bit": {
     "en": "The encrypted file, out of the vault. A ring marks where one bit was changed."

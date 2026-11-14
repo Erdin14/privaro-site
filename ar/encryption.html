@@ -21,7 +21,7 @@
 <meta name="apple-itunes-app" content="app-id=6783131829" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=5cc09b8606" />
+<link rel="stylesheet" href="/styles.css?v=21238823e9" />
 <script>
 (() => {
 let transition;
@@ -161,13 +161,14 @@ window.addEventListener("keydown", interrupt, { capture: true });
           <p class="chapter-kicker">Step 6 of 8</p>
           <h2>Another key opens nothing.</h2>
           <div class="beat" data-beat="a" data-go="Try a different key"><p>Suppose someone tries a different key. It’s every bit as random as the real one. It just isn’t the one this photo was locked with.</p></div>
-          <div class="beat" data-beat="b" data-go="Continue"><p>Rejected. The cipher’s own check fails on the very first piece, and nothing comes back. Not a blurry version, not a corner of the photo.</p></div>
+          <div class="beat" data-beat="b" data-go="Try a key one bit off"><p>Rejected. The cipher’s own check fails on the very first piece, and nothing comes back. Not a blurry version, not a corner of the photo.</p></div>
+          <div class="beat" data-beat="c" data-go="Continue"><p>Rejected again. This key differs from the real one by a single bit, and it got no further than a random one. There’s no such thing as nearly right.</p></div>
           <p class="chapter-figure" hidden><strong></strong> <span></span></p>
         </section>
 
         <section class="chapter" data-chapter="bit">
           <p class="chapter-kicker">Step 7 of 8</p>
-          <h2>Change one bit, and it shows.</h2>
+          <h2>Change one bit, and it’s caught.</h2>
           <div class="beat" data-beat="a" data-go="Change one bit"><p>Now suppose someone gets at the stored file and alters it. Not by much: a single bit, out of more than four million.</p></div>
           <div class="beat" data-beat="b" data-go="Try to unlock it"><p>Done. The ring marks the spot. To the eye, nothing looks different.</p></div>
           <div class="beat" data-beat="c" data-go="Continue"><p>Refused. The piece with the changed bit no longer matches its seal, so nothing is opened. You never get a quietly damaged photo. The demo puts the bit back when you continue.</p></div>
@@ -195,11 +196,11 @@ window.addEventListener("keydown", interrupt, { capture: true });
       <p class="story-note" role="status"></p>
       <noscript><p class="story-noscript">The live demo needs JavaScript. What follows is what it shows, step by step.</p></noscript>
 
+      <div class="story-buttons" hidden>
+        <button class="story-back" type="button">Back</button>
+        <button class="story-go" type="button">Begin</button>
+      </div>
       <div class="story-controls" hidden>
-        <div class="story-buttons">
-          <button class="story-back" type="button">Back</button>
-          <button class="story-go" type="button">Begin</button>
-        </div>
         <div class="story-alts">
           <button class="story-alt" type="button" data-act="pick" hidden>Use your own photo</button>
           <button class="story-alt" type="button" data-act="sample" hidden>Back to the sample photo</button>
@@ -240,9 +241,11 @@ window.addEventListener("keydown", interrupt, { capture: true });
         <div class="tech-panel" data-chapter="wrong" data-after>
           <p><strong>The other key.</strong> 32 more random bytes, tried for real.</p><span class="hex" data-value="other"></span>
           <p>Piece 1: AES-GCM authentication failed. The browser reports an OperationError and returns no plaintext.</p>
+          <p data-fill="near"><strong>One bit off.</strong> The real key with bit {n} of 256 flipped, tried the same way. The byte that differs is marked.</p><span class="hex" data-value="near"></span>
+          <p data-fill="near_failed">Piece {piece}: AES-GCM authentication failed again. HKDF turns a one-bit difference in the vault key into an entirely different file key.</p>
         </div>
         <div class="tech-panel" data-chapter="bit" data-after>
-          <p data-fill="change"><strong>The change.</strong> Byte {at} of the stored file: {from} became {to}.</p>
+          <p data-fill="change"><strong>The change.</strong> Byte {at} of the stored file, one bit flipped: {from} became {to}.</p>
           <p data-fill="failed" hidden>Piece {n}: AES-GCM authentication failed. The demo shows nothing unless every piece passes.</p>
         </div>
         <div class="tech-panel" data-chapter="unlock">
@@ -258,13 +261,14 @@ window.addEventListener("keydown", interrupt, { capture: true });
   <div class="exhibit-words" hidden>
     <span data-w="continue">Continue</span>
     <span data-w="time_ms">{ms} ms</span>
-    <span data-w="time_fast">Under 1 ms</span>
+    <span data-w="time_fast"><1 ms</span>
     <span data-w="piece_n">Piece {n}</span>
     <span data-w="key_fig">256</span>
     <span data-w="key_fig_d">random bits, made in this tab just now</span>
     <span data-w="cut_fig">{n} of 12</span>
     <span data-w="cut_fig_d">pieces encrypted</span>
-    <span data-w="cipher_fig_d">to encrypt, on this device. It was slowed down so you could watch.</span>
+    <span data-w="cipher_fig_d">to encrypt, on this device.</span>
+    <span data-w="cipher_fig_watched">to encrypt, on this device. Played slowly so you could watch.</span>
     <span data-w="wrong_fig">0 of 12</span>
     <span data-w="wrong_fig_d">pieces opened</span>
     <span data-w="bit_fig">1 bit</span>
@@ -291,6 +295,7 @@ window.addEventListener("keydown", interrupt, { capture: true });
     <span data-w="key_use">In use</span>
     <span data-w="key_away">Put away</span>
     <span data-w="key_wrong">A different key</span>
+    <span data-w="key_near">One bit off</span>
     <span data-w="alt_photo">The sample photo: a snow-capped mountain reflected in a lake.</span>
     <span data-w="alt_own">The photo you chose.</span>
     <span data-w="alt_key">The photo, and in front of it the key: a plate of 256 dots, one for each bit.</span>
@@ -298,6 +303,7 @@ window.addEventListener("keydown", interrupt, { capture: true });
     <span data-w="alt_cut_done">Twelve strips of random coloured noise: the photo, encrypted piece by piece.</span>
     <span data-w="alt_cipher">The encrypted photo: a sheet of random coloured noise.</span>
     <span data-w="alt_vault">The encrypted file behind a closed vault door. The key is put away beside it.</span>
+    <span data-w="alt_near">The encrypted file behind a closed vault door. In front of it, a key that differs from the real one in a single bit, ringed.</span>
     <span data-w="alt_bit">The encrypted file, out of the vault. A ring marks where one bit was changed.</span>
     <span data-w="alt_open">The photo, readable again, with its key beside it.</span>
   </div>
@@ -370,6 +376,6 @@ langs.forEach(lang => { if (lang.open) { shut(lang); lang.querySelector('summary
 </script>
 
 <script src="/presentation.js?v=5192425b53" data-enlarge="تكبير لقطة الشاشة: {name}" data-close="إغلاق العارض" data-previous="لقطة الشاشة السابقة" data-next="لقطة الشاشة التالية" defer></script>
-<script src="/encryption-demo.js?v=60d555af72" defer></script>
+<script src="/encryption-demo.js?v=ae0b6ddbc9" defer></script>
 </body>
 </html>

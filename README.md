@@ -67,9 +67,9 @@ the visitor's pace (nothing moves on until they press). Their own browser
 makes a 256-bit key, encrypts a photo with AES-256-GCM through the Web
 Crypto API (a key for the file derived by HKDF-SHA256; twelve pieces, each
 under its own random nonce and each authenticating the file's header and
-its own position), stores the result, really tries a wrong key and a
-changed bit, and decrypts it again, checked against a SHA-256 of the
-original. The noise on screen is the ciphertext itself, drawn as pixels. It
+its own position), stores the result, really tries a wrong key, the right
+key with one bit flipped, and a changed bit in the file, and decrypts it
+again, checked against a SHA-256 of the original. The noise on screen is the ciphertext itself, drawn as pixels. It
 can run on a photo the visitor picks, which never leaves the tab.
 
 - `templates/encryption.html` is the page, `encryption-demo.js` the script,
@@ -99,6 +99,11 @@ can run on a photo the visitor picks, which never leaves the tab.
   own language's copy and carries none of the demo itself.
 - It needs a secure context (HTTPS, or `localhost`) for Web Crypto. Without
   it, or without JavaScript, the page is the photo and the steps to read.
+- The scene's poses are set in pixels, per layout, in `styles.css`; next to
+  them, `--reach-x` and `--reach-y` say how far from the middle of the view
+  they go. Where the view is smaller (a short window, a narrow column, a
+  small phone) the script draws the whole scene smaller to fit, so nothing
+  is cut off. Change a pose, and measure and change its reach with it.
 
 ## What is published, and what stays in the source
 

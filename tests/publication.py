@@ -182,6 +182,9 @@ assert "simplified" in words["ex_intro_small"] and "simplified" in words["ex_abo
 for key, text in words.items():
     assert not re.search(r"\bwip(e|es|ed|ing)\b|\beras(e|es|ed|ing)\b|\bshred", text, re.I), f"{key} overclaims: {text!r}"
 assert "not secure erasure" in words["ex_about_7"] and "not secure erasure" in words["ex_vault_tech_copy"]
+# The time it took is shown whether or not the encryption was watched; only
+# the version for when it was says it was slowed down.
+assert "slow" not in words["ex_cipher_fig_d"].lower() and "slow" in words["ex_cipher_fig_watched"].lower()
 # The numbers in its words are the ones the script and the stylesheet use.
 width, height, pieces = map(int, re.search(r"const W = (\d+), H = (\d+), PIECES = (\d+);", demo).groups())
 assert height % pieces == 0
