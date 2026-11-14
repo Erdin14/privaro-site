@@ -142,16 +142,21 @@ account review; a new production artifact does not remove old deployments.
 
 Two zone features change the HTML this repository builds after it leaves the
 build. Neither can be switched off from the repository; both are dashboard
-settings. Checked against the live site on 10 November 2026:
+settings. Checked against the live site on 14 November 2026:
 
 ```sh
-curl -s https://privaroapp.nl/ | grep -c cloudflareinsights   # 1 today, should be 0
-curl -s https://privaroapp.nl/ | grep -c email-decode         # 1 today
+curl -s -H 'Accept: text/html' https://privaroapp.nl/ | grep -c cloudflareinsights   # 1 today, should be 0
+curl -s -H 'Accept: text/html' https://privaroapp.nl/ | grep -c email-decode         # 1 today
 ```
+
+Keep the `Accept: text/html` header. Cloudflare adds the analytics beacon
+only to responses for requests that ask for a web page, as a browser's do;
+plain `curl` asks for `*/*`, gets the page without it, and prints `0` whether
+the beacon is switched off or not.
 
 ### 1. Web Analytics beacon (conflicts with the site's promise and its policy)
 
-Cloudflare adds this before `</body>` on every page:
+Cloudflare adds this before `</body>` on every page a browser asks for:
 
 ```html
 <!-- Cloudflare Pages Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "…"}'></script>
@@ -176,7 +181,9 @@ The two ways out, and the recommendation:
      been disabled"), or delete the site from the list.
   3. Trigger a new deployment: Pages adds or removes the snippet when it
      deploys, not before.
-  4. Run the first `curl` above: it should print `0`.
+  4. Run the first `curl` above, with its `Accept` header: it should print
+     `0`. Then open any page in a browser with the console showing: there
+     should be no Content-Security-Policy error.
 
   Cloudflare documents the enabling step and the "Disable" option
   ([Pages](https://developers.cloudflare.com/pages/how-to/web-analytics/),
