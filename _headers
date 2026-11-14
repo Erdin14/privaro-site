@@ -1,5 +1,5 @@
-# Written by build.py from SECURITY_HEADERS: edit it there, and vercel.json
-# gets the same. Cloudflare Pages (privaroapp.nl) reads this file.
+# Written by build.py from SECURITY_HEADERS: edit it there.
+# Cloudflare Pages (privaroapp.nl) reads this file.
 /*
   ! Access-Control-Allow-Origin
   Content-Security-Policy: default-src 'none'; script-src 'self' 'sha256-0+mp1YumkWISK42lTa8+VYMOc1CyRB7hssp5zJupPiM=' 'sha256-AdasNhrqAyzYg4TRf6M8gmdZ/z99hz8fIz20wFRM3qo=' 'sha256-Jx5gTgRFcUxiU15anIAqLz+cTkBcLMdQeNXgkJf+cSE=' 'sha256-LgVZrb4vvxDGemDYkrE8MK1yfVuCmsjJIVjf4EL1sXw=' 'sha256-rzpw08bv0wF30Ghr1ZvBAYo6CdrYhY2Ku5G7xgjNjxM=' 'sha256-w8cwdjXiRK3IImi79m3GMYL+B1jdPhvoiOBdPagzpQk='; style-src 'self' 'unsafe-inline'; img-src 'self'; media-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests

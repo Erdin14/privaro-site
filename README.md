@@ -5,10 +5,9 @@ and creates a fresh `dist/` containing only public pages, assets, `.well-known`
 files, `_headers` and `_redirects`. Build inputs, legacy/concept pages and host
 configuration are excluded. Only published pages contribute CSP script hashes.
 
-The original Vercel setup still uses committed generated files and its existing
-configuration. `.vercelignore` additionally excludes the concept page and new
-development-only files. Cloudflare must publish **dist/**, not this repository
-root. `.vercelignore` does not configure Cloudflare publication.
+Cloudflare Pages publishes the site, from **dist/**, not this repository root.
+Vercel is being retired: `vercel.json` now only forwards the old
+`privaro-site.vercel.app` address to `privaroapp.nl` (see "Retiring Vercel").
 
 ## Validate locally
 
@@ -250,20 +249,54 @@ address, email, and any KvK number and btw-id, and Apple publishes a trader's
 address (or P.O. box), phone and email on the App Store. Those are questions
 for the publisher and a lawyer, not for this file.
 
-The Vercel copy (`privaro-site.vercel.app`): Vercel's terms allow a Hobby
-(free) plan only for personal or non-commercial use, and Vercel's DPA covers
-only Pro and Enterprise plans. Retire it, or move it to a paid plan, once the
-App Store links point at `privaroapp.nl` (see below).
+## Retiring Vercel
 
-## Where the App Store links to (manual App Store Connect step)
+`privaro-site.vercel.app` used to serve a full copy of the site. Vercel's
+terms allow a Hobby (free) plan only for personal or non-commercial use, and
+Vercel's DPA covers only Pro and Enterprise plans, so the copy is being
+retired, in two steps, because three things still point at that address:
 
-As of 14 November 2026 the App Store description links the Privacy Policy and
-Terms at `privaro-site.vercel.app`, the Vercel copy, not `privaroapp.nl`. Both
-copies are built from this repository and say the same, and the Privacy Policy
-names both hosts. Pointing App Store Connect's Privacy Policy URL and the
-description's links at `https://privaroapp.nl/privacy` and `/terms` would let
-the Vercel copy be retired later (the app still lists it as an associated
-domain for older In-App Event links, so keep it until those are gone).
+- the App Store listing's Privacy Policy and Terms links (as of 14 November
+  2026), which Apple only changes with the next app version;
+- older In-App Events' Open links (`/open`);
+- the app's associated domains (`Privaro.entitlements`), until an app update
+  without it is out.
+
+**Step 1 (this repository, now):** `vercel.json` makes every request to the
+old address a permanent (308) redirect to the same path on `privaroapp.nl`,
+so `/privacy` lands on `https://privaroapp.nl/privacy`. Only
+`/.well-known/` is left out, so the Apple app-site association is still
+served and `/open` links keep opening the app. Nothing else of the site is
+served from Vercel. `build.py` no longer writes `vercel.json`, and
+`tests/publication.py` fails if it does anything but forward. The routing was
+checked with Vercel's own compiler, `@vercel/routing-utils`:
+`getTransformedRoutes()` on this file gives one route,
+`^(?:/((?!\.well-known/).*))$` → `https://privaroapp.nl/$1`, status 308.
+
+After the merge deploys, check:
+
+```sh
+curl -sI https://privaro-site.vercel.app/privacy | grep -i -E '^(HTTP|location)'
+curl -sI https://privaro-site.vercel.app/.well-known/apple-app-site-association | head -1
+```
+
+The first should show `308` and `location: https://privaroapp.nl/privacy`;
+the second `200`.
+
+**Step 2 (dashboards, then this repository):**
+
+1. In the next app version, set App Store Connect's Privacy Policy URL, and any
+   Support or Marketing URL, to `privaroapp.nl` addresses, and change the
+   description's links to `https://privaroapp.nl/privacy` and `/terms`.
+2. Point every In-App Event's link at `https://privaroapp.nl/open`.
+3. Ship the app update that drops `applinks:privaro-site.vercel.app`.
+4. Once that version is live, delete the Vercel project (Settings →
+   Advanced → Delete Project). A deleted project's `vercel.app` name can be
+   released and taken by someone else, which is why it goes last, after
+   nothing points at it any more.
+5. Then remove `vercel.json` and `.vercelignore`, the `vercel.json` checks in
+   `tests/publication.py`, and the Vercel sentence and link in
+   `priv_web_p1` (`i18n/strings-privacy.json`, every language).
 
 ## Secure www redirect — manual Cloudflare steps
 

@@ -4,14 +4,16 @@
 Run from the repo root:  python3 build.py
 English is written to the repo root (/index.html, /pro.html); every other
 language gets its own folder (/es/index.html, /es/pro.html, ...). Output is
-committed for the existing Vercel setup. Each build also packages only the
-intended public files into dist/, the Cloudflare Pages build output directory.
+committed alongside the source. Each build also packages only the intended
+public files into dist/, the Cloudflare Pages build output directory, which
+is the only copy of the site that is published.
 
 Shared pieces live in templates/partials/ and are pulled in with {{HEADER}},
 {{FOOTER}} and the like. The build also writes 404.html, sitemap.xml and
-robots.txt, and the security headers for both hosts: _headers for Cloudflare
-Pages (privaroapp.nl) and the "headers" in vercel.json, from SECURITY_HEADERS
-below. Pages in ENGLISH_ONLY (the security overview, and the working demo
+robots.txt, and the security headers: _headers for Cloudflare Pages
+(privaroapp.nl), from SECURITY_HEADERS below. vercel.json is not built: it
+only forwards the old privaro-site.vercel.app to privaroapp.nl (README).
+Pages in ENGLISH_ONLY (the security overview, and the working demo
 "Inside the encryption") are written in English
 for every language: the words are the same, the header, footer and language
 menu around them are the reader's own.
@@ -232,9 +234,7 @@ def page_url(page, code):
     with the slash: Cloudflare Pages serves /nl/ and sends /nl there (308).
     Written without it, every language's canonical, its hreflang links and its
     sitemap entry named an address that redirects, which search engines may
-    set aside, and every tap on the name or a language cost a round trip.
-    (Vercel, with "trailingSlash": false, does the opposite and sends /nl/ to
-    /nl; its copy isn't the canonical one.)"""
+    set aside, and every tap on the name or a language cost a round trip."""
     folder = FOLDER[code]
     if page == "index":
         return "/" if folder == "" else "/" + folder + "/"
@@ -414,32 +414,18 @@ def fingerprinted_paths():
 
 
 def write_security_headers():
-    """_headers for Cloudflare Pages and the headers in vercel.json, the same
-    on both. Cloudflare Pages also adds Access-Control-Allow-Origin: * to every
-    response by default; the "!" line takes it off."""
+    """_headers for Cloudflare Pages. Cloudflare Pages also adds
+    Access-Control-Allow-Origin: * to every response by default; the "!" line
+    takes it off."""
     headers = [("Content-Security-Policy", content_security_policy())] + SECURITY_HEADERS
-    lines = ["# Written by build.py from SECURITY_HEADERS: edit it there, and vercel.json",
-             "# gets the same. Cloudflare Pages (privaroapp.nl) reads this file.",
+    lines = ["# Written by build.py from SECURITY_HEADERS: edit it there.",
+             "# Cloudflare Pages (privaroapp.nl) reads this file.",
              "/*", "  ! Access-Control-Allow-Origin"]
     lines += [f"  {name}: {value}" for name, value in headers]
     lines += ["", "/.well-known/apple-app-site-association", "  Content-Type: application/json"]
     for path in fingerprinted_paths():
         lines += ["", path, f"  Cache-Control: {CACHE_FOREVER}"]
     write("_headers", "\n".join(lines) + "\n")
-
-    path = os.path.join(ROOT, "vercel.json")
-    with open(path, encoding="utf-8") as f:
-        config = json.load(f)
-    # vercel.app sends its own HSTS (and is preloaded), so it's left to Vercel there.
-    config["headers"] = [
-        {"source": "/(.*)", "headers": [{"key": name, "value": value} for name, value in headers
-                                        if name != "Strict-Transport-Security"]},
-        {"source": "/.well-known/apple-app-site-association",
-         "headers": [{"key": "Content-Type", "value": "application/json"}]},
-        *({"source": path.replace("*", "(.*)"), "headers": [{"key": "Cache-Control", "value": CACHE_FOREVER}]}
-          for path in fingerprinted_paths()),
-    ]
-    write("vercel.json", json.dumps(config, indent=2, ensure_ascii=False) + "\n")
 
 
 def film_version():

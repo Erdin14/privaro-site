@@ -235,7 +235,8 @@ for key, values in build.load_strings().items():
 # Every outside service the app or this site uses is named where visitors are
 # told what leaves their device: in the Privacy Policy, in every language, and
 # in the Security overview. RevenueCat is the app's one third-party SDK
-# (Package.resolved); Cloudflare and Vercel host the two copies of this site.
+# (Package.resolved); Cloudflare hosts the site, and Vercel still answers the
+# old privaro-site.vercel.app address until it is shut down.
 for code, folder, _, _ in build.LANGS:
     policy_page = (dist / folder / "privacy.html").read_text(encoding="utf-8")
     for service in ("RevenueCat", "Cloudflare", "Vercel"):
@@ -248,6 +249,16 @@ for key, values in build.load_strings().items():
     assert not re.search(r"nothing is uploaded\.|nothing uploaded\.|No folders inside folders|exactly as described",
                          values["en"]), f"{key}: {values['en']!r}"
 
+
+# The Vercel project only forwards the old address to privaroapp.nl: every
+# path keeps its place, except the Apple app-site association, which stays so
+# links to it still open the app. It serves no copy of the site. (The routing
+# was checked with Vercel's own @vercel/routing-utils; README.)
+vercel = json.loads((ROOT / "vercel.json").read_text(encoding="utf-8"))
+assert set(vercel) <= {"$schema", "redirects", "headers"}, "vercel.json may only forward"
+assert vercel["redirects"] == [{"source": "/:path((?!\\.well-known/).*)",
+                                "destination": "https://privaroapp.nl/:path", "permanent": True}], vercel["redirects"]
+assert [h["source"] for h in vercel.get("headers", [])] == ["/.well-known/apple-app-site-association"]
 
 def snapshot():
     return {str(p.relative_to(dist)): hashlib.sha256(p.read_bytes()).hexdigest()
