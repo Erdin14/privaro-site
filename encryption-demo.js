@@ -1,10 +1,10 @@
 // Inside the encryption (/encryption): a small exhibit in eight steps. The
 // visitor's own browser makes a key, encrypts a photo with AES-256-GCM,
-// puts the result away, tries a wrong key and a changed bit, and decrypts
-// it again. Nothing here is pretended: every byte drawn or listed is one
-// the Web Crypto API produced a moment before, and a wrong key or a changed
-// bit fails because the cipher says so, not because the script decides it
-// should.
+// puts the result away, tries a wrong key, then the right key with one bit
+// flipped, then a changed bit in the file, and decrypts it again. Nothing
+// here is pretended: every byte drawn or listed is one the Web Crypto API
+// produced a moment before, and a wrong key or a changed bit fails because
+// the cipher says so, not because the script decides it should.
 //
 // It is a small model of what the Security overview describes, not the
 // app's code, and the page says so (templates/encryption.html):
@@ -61,7 +61,8 @@
   const photo = find('.sheet-photo'), ring = find('.sheet-ring'), keyGrid = find('.key');
   const legend = find('.legend'), fileName = find('.legend-file b'), fileState = find('.legend-file span'), keyState = find('.legend-key span');
   const rail = find('.rail'), stops = all('.rail button'), note = find('.story-note'), live = find('.exhibit-live');
-  const controls = find('.story-controls'), go = find('.story-go'), back = find('.story-back'), alts = all('.story-alt');
+  const storyBox = find('.story'), buttonRow = find('.story-buttons'), go = find('.story-go'), back = find('.story-back');
+  const controls = find('.story-controls'), alts = all('.story-alt');
   const picker = find('.story-picker'), viewSwitch = find('.story-view'), reset = find('.exhibit-reset');
   const value = name => find('[data-value="' + name + '"]');
   const reduce = matchMedia('(prefers-reduced-motion: reduce)');
@@ -239,14 +240,25 @@
     dot.style.setProperty('--n', n);
     dots.push(dot);
   }
-  const showBits = key => dots.forEach((dot, n) => dot.classList.toggle('on', Boolean(key && key[n >> 3] & (128 >> (n & 7)))));
-  // Bytes, one to a cell.
+  // A key onto the plate. Whatever was marked on the one before isn't.
+  const showBits = key => dots.forEach((dot, n) => {
+    dot.classList.toggle('on', Boolean(key && key[n >> 3] & (128 >> (n & 7))));
+    dot.classList.remove('is-diff');
+  });
+  // Bytes, one to a cell, and one of them marked if asked.
   const hex = byte => byte.toString(16).padStart(2, '0');
-  function writeBytes(el, bytes, more) {
+  function writeBytes(el, bytes, more, marked = -1) {
     el.textContent = '';
-    bytes.forEach(byte => { el.appendChild(document.createElement('span')).textContent = hex(byte); });
+    bytes.forEach((byte, i) => {
+      const cell = el.appendChild(document.createElement('span'));
+      cell.textContent = hex(byte);
+      if (i === marked) cell.className = 'is-diff';
+    });
     if (more) el.appendChild(document.createElement('span')).textContent = '…';
   }
+  // A byte as its eight bits, the one that changed marked.
+  const bits = (byte, bit) => '<span class="bits">' + [...byte.toString(2).padStart(8, '0')]
+    .map((digit, i) => 128 >> i === bit ? '<b>' + digit + '</b>' : digit).join('') + '</span>';
   // The technical view's twelve rows: a piece's number, its nonce, and the
   // start of its tag.
   const rows = [];
@@ -265,7 +277,8 @@
     blank.el.innerHTML = fill(blank.text, vars);
     blank.el.hidden = false;
   }
-  // The figure beside a step: a number, and what it counts.
+  // The figure beside a step: a number, and what it counts. Taken away,
+  // it's only hidden, and keeps the room it took.
   function figure(id, number, text) {
     const el = find('.chapter[data-chapter="' + id + '"] .chapter-figure');
     if (!el) return;
@@ -275,6 +288,17 @@
       el.lastElementChild.textContent = text;
     }
   }
+  // Each step keeps room for its figure before it has one (the stylesheet
+  // lays every step in the same place, so the story is always the tallest
+  // one's height), so each is written in first, out of sight, at the
+  // longest it can be. The figures that are shown are always made new.
+  [['key', words.key_fig, words.key_fig_d], ['cut', fill(words.cut_fig, { n: PIECES }), words.cut_fig_d],
+    ['cipher', words.time_fast, words.cipher_fig_watched], ['wrong', words.wrong_fig, words.wrong_fig_d],
+    ['bit', words.bit_fig, fill(words.bit_fig_d, { bits: count.format(TOTAL * 8) })],
+    ['unlock', fill(words.unlock_fig, { n: PIECES }), words.unlock_fig_d]].forEach(([id, number, text]) => {
+    figure(id, number, text);
+    figure(id);
+  });
 
   // A beat is a wait for something to be watched: none with Reduce Motion.
   // A pause is a wait for something to be read, and is kept. Leaving the
@@ -315,8 +339,11 @@
   // What there is. While the photo is readable: its pixels. While it's
   // encrypted: the stored file, and nothing else of the photo. The vault
   // key outlives both, as the app's does.
+  // How long the encryption took, and whether it was played slowly enough
+  // to watch (not when it was reached some other way, or with Reduce
+  // Motion), so the figure says only what happened.
   const BLOCKED = {};
-  let held = 'plain', own = false, took = 0;
+  let held = 'plain', own = false, took = 0, watched = false;
   let pixels = null, stored = null, vault = null, original = null, changed = null;
   function needKey() {
     if (vault) return;
@@ -338,6 +365,7 @@
     const result = await seal(pixels, vault);
     stored = result.file;
     took = result.took;
+    watched = false;
     slabs.forEach((slab, i) => paintPiece(stored, i));
     rows.forEach((row, i) => {
       const start = HEAD + i * SLOT, cells = row.querySelectorAll('.hex');
@@ -443,12 +471,13 @@
       if (on) current = el;
     });
     go.textContent = current.dataset.go;
-    back.hidden = id === 'intro';
+    // At the opening there's nothing to go back to or start over from.
+    back.hidden = reset.hidden = id === 'intro';
     const offered = current.dataset.alts && typeof createImageBitmap === 'function' ? (own ? 'sample' : 'pick') : '';
     alts.forEach(button => { button.hidden = button.dataset.act !== offered; });
     // The keyboard's place moves with the button it was on: a button that
     // is taken away would otherwise drop it at the top of the page.
-    if (focused && focused.hidden && controls.contains(focused)) go.focus();
+    if (focused && focused.hidden && exhibit.contains(focused)) go.focus();
     stops.forEach((button, i) => {
       button.parentElement.classList.toggle('is-done', i < step);
       if (i === step) button.setAttribute('aria-current', 'step');
@@ -480,8 +509,11 @@
     showKey(chapter.key());
     label(...chapter.says());
     if (id === 'key' && vault) figure('key', words.key_fig, words.key_fig_d);
-    if (id === 'cipher') figure('cipher', took < 1 ? words.time_fast : fill(words.time_ms, { ms: Math.round(took) }), words.cipher_fig_d);
+    if (id === 'cipher') figure('cipher', took < 1 ? words.time_fast : fill(words.time_ms, { ms: Math.round(took) }),
+      watched ? words.cipher_fig_watched : words.cipher_fig_d);
     [panels.wrong, panels.bit].forEach(panel => panel.classList.remove('is-ready'));
+    ['near', 'near_failed'].forEach(name => { blanks.get(name).el.hidden = true; });
+    writeBytes(value('near'), []);
     show(id, chapter.beat ? chapter.beat() : 'a');
     working(false);
   }
@@ -523,36 +555,63 @@
     }
     await beat(700);
     scene.style.removeProperty('--wipe');
+    watched = !reduce.matches;
     letGo();
     label('file_cipher', 'key_use', 'alt_cut_done');
     show('cut', 'b');
     working(false);
   }
-  // Step 6. Another key, as random as the first. It's really tried: the
-  // first piece's tag doesn't verify, and that's the end of it.
-  async function tryAnotherKey() {
-    working(true);
-    const other = random(32), result = await unseal(stored, other);
+  // Step 6. A key that isn't the one is brought to the vault door and
+  // really tried: the first piece's tag doesn't verify, and that's the end
+  // of it. Answers with the piece that refused it.
+  async function present(key, keyWord, alt, marked = -1) {
+    const result = await unseal(stored, key);
     if (!result.failed) throw new Error('opened');
-    showBits(other);
+    showBits(key);
+    if (marked >= 0) dots[marked].classList.add('is-diff');
     showKey('wrong');
     pose('wrong');
-    label('file_vault', 'key_wrong', 'alt_vault');
-    writeBytes(value('other'), other);
+    label('file_vault', keyWord, alt);
     await beat(1700);
     scene.classList.add('is-refused');
     await pause(900);
     scene.classList.remove('is-refused');
-    panels.wrong.classList.add('is-ready');
-    figure('wrong', words.wrong_fig, words.wrong_fig_d);
-    show('wrong', 'b');
+    return result.failed;
+  }
+  // Then it's put away, and the plate holds the real key again.
+  async function putAway(key) {
     await beat(1200);
     showKey('away');
     showBits(vault);
     pose('vault');
     label('file_vault', 'key_away', 'alt_vault');
-    other.fill(0);
+    key.fill(0);
     working(false);
+  }
+  // First another key, as random as the real one.
+  async function tryAnotherKey() {
+    working(true);
+    const other = random(32);
+    writeBytes(value('other'), other);
+    await present(other, 'key_wrong', 'alt_vault');
+    panels.wrong.classList.add('is-ready');
+    figure('wrong', words.wrong_fig, words.wrong_fig_d);
+    show('wrong', 'b');
+    await putAway(other);
+  }
+  // Then the real key with one of its 256 bits turned over, that bit's dot
+  // ringed on the plate. It gets no further than the random one did: the
+  // file's key is derived from it by HKDF, and comes out entirely different.
+  async function tryNearKey() {
+    working(true);
+    const near = vault.slice(), n = pick(256);
+    near[n >> 3] ^= 128 >> (n & 7);
+    const failed = await present(near, 'key_near', 'alt_near', n);
+    write('near', { n: n + 1 });
+    writeBytes(value('near'), near, false, n >> 3);
+    write('near_failed', { piece: failed });
+    show('wrong', 'c');
+    await putAway(near);
   }
   // Step 7. One bit of one byte of one piece's ciphertext, turned over.
   // The ring shows where; it's kept clear of the sheet's edge so it shows
@@ -569,7 +628,7 @@
     scene.dataset.ring = '';
     label('file_changed', 'key_away', 'alt_bit');
     figure('bit', words.bit_fig, fill(words.bit_fig_d, { bits: count.format(TOTAL * 8) }));
-    write('change', { at: count.format(offset + 1), from: hex(before), to: hex(stored[offset]) });
+    write('change', { at: count.format(offset + 1), from: bits(before, changed.bit), to: bits(stored[offset], changed.bit) });
     blanks.get('failed').el.hidden = true;
     panels.bit.classList.add('is-ready');
     show('bit', 'b');
@@ -631,7 +690,7 @@
     if (vault) vault.fill(0);
     vault = stored = original = null;
     showBits(null);
-    [value('vault'), value('id'), value('hash'), value('other')].forEach(el => writeBytes(el, []));
+    [value('vault'), value('id'), value('hash'), value('other'), value('near')].forEach(el => writeBytes(el, []));
     rows.forEach(row => row.classList.remove('is-set'));
   }
   async function startOver(to) {
@@ -670,10 +729,19 @@
     const file = picker.files[0];
     picker.value = '';
     if (!file || busy) return;
+    // Busy while it's read: a press in the meantime would start a step on
+    // the photo that's about to be replaced.
+    working(true);
     let chosen;
-    try { chosen = await createImageBitmap(file); } catch { return say('note_badfile'); }
+    try {
+      chosen = await createImageBitmap(file);
+    } catch {
+      working(false);
+      return say('note_badfile');
+    }
     load(chosen, chosen.width, chosen.height, true);
     if (chosen.close) chosen.close();
+    working(false);
     await open('photo');
     say('note_own');
   });
@@ -681,7 +749,8 @@
   // What the button does, in each part and paragraph of it; anywhere else
   // it goes on to the next part.
   const does = {
-    'key.a': makeKey, 'cut.a': encryptWatched, 'wrong.a': tryAnotherKey, 'bit.a': changeBit, 'bit.b': tryChangedFile,
+    'key.a': makeKey, 'cut.a': encryptWatched, 'wrong.a': tryAnotherKey, 'wrong.b': tryNearKey,
+    'bit.a': changeBit, 'bit.b': tryChangedFile,
     'unlock.a': unlockWatched, 'end.a': () => startOver('photo')
   };
   async function run(act) {
@@ -695,15 +764,19 @@
     }
   }
   // What the button does happens in the scene, so a press brings the scene
-  // on screen if it's mostly off it, or if the button itself runs off the
-  // bottom: on a phone the scene to the top of the screen, with the step's
-  // words and the button under it; on a wider screen the whole exhibit,
-  // clear of the header.
+  // on screen if it's mostly off it, or if the buttons are waiting at the
+  // foot of the screen over the step's words, or are off it: on a phone
+  // the scene to the top of the screen, with the step's words and the
+  // buttons under it; on a wider screen the whole exhibit, clear of the
+  // header. Never so far, though, that the buttons are left below the
+  // screen, as they would be in a window too short for both (a phone on
+  // its side): then as much of the scene as leaves them in sight.
   function bringIn() {
     const box = scene.getBoundingClientRect(), seen = Math.min(box.bottom, innerHeight) - Math.max(box.top, 0);
-    if (seen >= box.height * .8 && go.getBoundingClientRect().bottom <= innerHeight) return;
+    if (seen >= box.height * .8 && !buttonRow.classList.contains('is-stuck') && go.getBoundingClientRect().bottom <= innerHeight) return;
     const top = matchMedia('(max-width: 760px)').matches ? box.top - 8 : exhibit.getBoundingClientRect().top - 76;
-    scrollBy({ top, behavior: reduce.matches ? 'auto' : 'smooth' });
+    const lowest = storyBox.getBoundingClientRect().top + 48 + buttonRow.offsetHeight - innerHeight;
+    scrollBy({ top: Math.max(top, lowest), behavior: reduce.matches ? 'auto' : 'smooth' });
   }
   go.addEventListener('click', () => {
     if (busy) return;
@@ -748,13 +821,31 @@
     picture.addEventListener('pointerleave', () => toward(0, 0));
   }
 
+  // The poses are set out for a view of a certain size: the stylesheet
+  // says how far from its middle they reach, across (--reach-x) and up or
+  // down (--reach-y). In a smaller view, a short window's or a narrow
+  // column's, the whole scene is drawn smaller, so nothing is cut off at
+  // its edge.
+  function fit() {
+    const style = getComputedStyle(scene), reach = name => parseFloat(style.getPropertyValue(name));
+    const zoom = Math.min(1, picture.clientWidth / 2 / reach('--reach-x'), picture.clientHeight / 2 / reach('--reach-y'));
+    rig.style.scale = zoom < 1 ? zoom.toFixed(3) : '';
+  }
+  if (typeof ResizeObserver === 'function') new ResizeObserver(fit).observe(picture);
+
   // Begin once the sample is there to draw; until then, and without this
   // script, the picture file shows in its place and the steps are all
   // there to read.
   function begin() {
     draw(photo, photo.naturalWidth, photo.naturalHeight);
     exhibit.dataset.live = '';
-    controls.hidden = rail.hidden = legend.hidden = reset.hidden = false;
+    buttonRow.hidden = controls.hidden = rail.hidden = legend.hidden = false;
+    // When a step runs past the foot of the screen, the buttons wait there
+    // (the stylesheet holds them), over a band like the header's: they're
+    // held exactly while what comes after them is out of sight below.
+    new IntersectionObserver(([entry]) => {
+      buttonRow.classList.toggle('is-stuck', !entry.isIntersecting && entry.boundingClientRect.top > innerHeight);
+    }).observe(controls);
     tell();
     open('intro');
   }

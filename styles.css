@@ -1347,7 +1347,8 @@ main:focus { outline: none; }
 :is(.exhibit-reset, .story-alt):hover { color: var(--ink); text-decoration-color: var(--ink); }
 :is(.exhibit-reset, .story-alt, .story-back, .story-go)[aria-disabled="true"] { cursor: default; }
 :is(.exhibit-reset, .story-alt)[aria-disabled="true"] { color: var(--dim); text-decoration-color: transparent; }
-:is(.exhibit-reset, .story-alt, .rail, .story-controls, .legend, .story-back, .chapter-figure, [data-fill])[hidden] { display: none; }
+:is(.exhibit-reset, .story-alt, .rail, .story-buttons, .story-controls, .legend, .story-back, .chapter-figure, [data-fill])[hidden] {
+  display: none; }
 
 /* The steps, as eight short lines: the one being read in ink, the ones
    behind it a shade lighter than the ones to come. Each is a button to
@@ -1369,8 +1370,13 @@ main:focus { outline: none; }
 
 /* The scene. Its size hangs on one length, a strip's height (--slab): the
    sheet is eight of them wide and twelve tall, a whole number of pixels
-   each way, so the strips meet exactly. */
-.scene { --slab: 34px; --carry: var(--dur-scene); position: relative; height: clamp(480px, 100vh - 290px, 600px); margin: 0; direction: ltr; }
+   each way, so the strips meet exactly. --reach-x and --reach-y are how far
+   from the middle of the view the poses go, across and up or down, with a
+   little room to spare: in a view smaller than that (a short window, a
+   narrow column) the script draws the whole scene smaller to fit. Measured
+   from the poses; change them with the poses. */
+.scene { --slab: 34px; --reach-x: 288px; --reach-y: 226px; --carry: var(--dur-scene); position: relative;
+  height: clamp(480px, 100vh - 290px, 600px); margin: 0; direction: ltr; }
 .scene::before { content: ""; position: absolute; inset: 2% 2% 12%; pointer-events: none;
   background: radial-gradient(closest-side, rgb(255 255 255 / .05), transparent); }
 /* The view takes all of the scene but a line at its foot, where the two
@@ -1467,6 +1473,8 @@ main:focus { outline: none; }
   transition: background-color var(--dur-state) var(--ease-state), border-color var(--dur-state) var(--ease-state); }
 .scene:is([data-key="shown"], [data-key="wrong"]) .key i.on { background-color: var(--ink); border-color: var(--ink); }
 .scene[data-key="shown"] .key i { transition-delay: calc(var(--n) * 6ms); }
+/* On a key one bit off the real one, the bit that differs, ringed. */
+.key i.is-diff { outline: 1.5px solid var(--ink); outline-offset: 2px; }
 /* A key that doesn't fit is shaken off, as a wrong passcode is, and the
    lock on the door with it. */
 .scene.is-refused :is(.keyplate, .door svg) { animation: dots-shake var(--dur-move) var(--ease-state) both; }
@@ -1476,7 +1484,7 @@ main:focus { outline: none; }
 .scene[data-pose="photo"] { --srx: 5deg; --sry: -16deg; --kx: 200px; --kz: -200px; --kry: 20deg; --ko: 0; }
 .scene[data-pose="key"] { --sx: -130px; --sz: -220px; --srx: 5deg; --sry: -24deg; --kx: 96px; --ky: 8px; --kz: 90px; --krx: 6deg; --kry: 14deg; }
 .scene[data-pose="cut"] { --sx: -24px; --sy: 6px; --sz: -150px; --srx: 52deg; --srz: -30deg; --gap: 12px; --fit: 1;
-  --kx: 226px; --ky: -186px; --kz: -160px; --kry: 18deg; --ks: .62; }
+  --kx: 226px; --ky: -172px; --kz: -160px; --kry: 18deg; --ks: .62; }
 .scene[data-pose="cipher"] { --sx: -20px; --sz: 30px; --srx: 3deg; --sry: -10deg; --kx: 272px; --ky: -150px; --kz: -240px; --kry: 20deg; --ks: .6; --ko: .6; }
 .scene[data-pose="vault"] { --sx: -100px; --sz: -160px; --srx: 4deg; --sry: -22deg; --kx: 150px; --ky: 40px; --kz: -60px; --krx: 6deg; --kry: 18deg;
   --ks: .8; --ko: .75; }
@@ -1486,10 +1494,10 @@ main:focus { outline: none; }
 .scene[data-pose="open"] { --sx: -50px; --srx: 5deg; --sry: -14deg; --kx: 196px; --ky: 76px; --kz: -80px; --krx: 6deg; --kry: 18deg; --ks: .7; }
 /* Taller windows: a larger sheet. */
 @media (min-width: 1001px) and (min-height: 790px) {
-  .scene { --slab: 36px; }
+  .scene { --slab: 36px; --reach-y: 232px; }
 }
 @media (min-width: 1001px) and (min-height: 900px) {
-  .scene { --slab: 40px; }
+  .scene { --slab: 40px; --reach-y: 258px; }
 }
 /* Beside the story, the scene stays in view while a long technical note
    is read. */
@@ -1508,10 +1516,8 @@ main:focus { outline: none; }
 .legend-key { transition: opacity var(--dur-reveal) var(--ease-state); }
 .scene[data-pose="photo"] .legend-key { opacity: 0; }
 
-/* The story: one step at a time. Its place on the page is kept (the
-   tallest step's worth), so the button under it never moves. */
+/* The story: one step at a time. */
 .story { min-width: 0; padding-top: var(--space-7); }
-.chapters { min-height: 348px; }
 .chapter-kicker { font-size: var(--size-small); font-weight: 500; line-height: 1.4; color: var(--faint); font-variant-numeric: tabular-nums; }
 .chapter h2 { margin-top: var(--space-3); font-family: var(--display); font-size: clamp(34px, 3.5vw, 48px); font-weight: 700; line-height: 1.05;
   letter-spacing: -.035em; text-wrap: balance; }
@@ -1527,22 +1533,40 @@ main:focus { outline: none; }
 .chapter-figure strong { flex: none; font-family: var(--display); font-size: clamp(34px, 3.2vw, 44px); font-weight: 700; line-height: 1;
   letter-spacing: -.03em; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .chapter-figure span { max-width: 17em; font-size: var(--size-text); line-height: 1.4; letter-spacing: var(--track-text); color: var(--muted); }
-/* With the script, only the step being read is there; it arrives quietly. */
-.exhibit[data-live] :is(.chapter, .beat):not(.is-current) { display: none; }
+/* With the script, only the step being read is seen; it arrives quietly.
+   The others are all laid in the same place, out of sight, and each
+   step's paragraphs in the same place within it, so the story is always
+   as tall as its tallest step, at any width, and the buttons under it
+   never move. A figure's room is kept before it has a number in it. */
+.exhibit[data-live] .chapters { display: grid; }
+.exhibit[data-live] .chapter { grid-area: 1 / 1; display: grid; grid-template-rows: auto auto auto 1fr; }
+.exhibit[data-live] .beat { grid-area: 3 / 1; }
+.exhibit[data-live] .chapter-figure { grid-row: 4; align-self: start; }
+.exhibit[data-live] .chapter-figure[hidden] { display: flex; }
+.exhibit[data-live] :is(.chapter, .beat):not(.is-current), .exhibit[data-live] .chapter-figure[hidden] { visibility: hidden; }
 @keyframes step-in { from { opacity: 0; transform: translateY(10px); } }
 /* Without it they're all there, one under another. */
 .exhibit:not([data-live]) .chapter + .chapter { margin-top: var(--space-8); }
-.exhibit:not([data-live]) .chapters { min-height: 0; }
 
 .story-note { max-width: 30em; font-size: var(--size-text); line-height: 1.5; color: var(--ink); }
 .story-note:not(:empty) { margin-top: var(--space-4); }
 .story-noscript { max-width: 30em; margin-top: var(--space-6); font-size: var(--size-text); line-height: 1.5; color: var(--muted); }
-/* The button that takes the step, and the one that goes back. Then the
-   smaller things to try, and the switch between the two ways of telling
-   it, drawn as the Pro page's switch is. */
-.story-controls { display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "buttons buttons" "alts view";
-  align-items: center; gap: var(--space-4) var(--space-5); margin-top: var(--space-5); }
-.story-buttons { grid-area: buttons; display: flex; gap: var(--space-3); }
+/* The button that takes the step, and the one that goes back. They stay
+   in reach: when the step runs past the foot of the screen (a phone's, or
+   a short window's), they wait there, over a band like the header's that
+   the words pass under (the script adds .is-stuck while they wait). */
+.story-buttons { position: sticky; bottom: 0; z-index: 1; display: flex; gap: var(--space-3); margin-top: var(--space-5);
+  padding-bottom: var(--space-2); }
+.story-buttons::before { content: ""; position: absolute; inset: -32px calc(-1 * var(--side)) 0; z-index: -1; pointer-events: none;
+  background: linear-gradient(transparent, color-mix(in srgb, var(--bg) 96%, transparent) 45%);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  -webkit-mask-image: linear-gradient(transparent, #000 45%); mask-image: linear-gradient(transparent, #000 45%);
+  opacity: 0; transition: opacity var(--dur-state) var(--ease-state); }
+.story-buttons.is-stuck::before { opacity: 1; }
+/* Then the smaller things to try, and the switch between the two ways of
+   telling it, drawn as the Pro page's switch is. */
+.story-controls { display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "alts view";
+  align-items: center; gap: var(--space-4) var(--space-5); margin-top: var(--space-2); }
 .story-go, .story-back { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; border: 0; white-space: nowrap;
   border-radius: var(--radius-round); font: inherit; font-size: var(--size-lead); font-weight: 600; cursor: pointer;
   -webkit-tap-highlight-color: transparent;
@@ -1592,6 +1616,10 @@ main:focus { outline: none; }
 .pieces .hex { margin-top: 0; }
 /* A piece's nonce and tag appear as it's sealed. */
 .pieces tbody tr:not(.is-set) .hex { visibility: hidden; }
+/* The one byte, or the one bit, that differs. */
+.hex .is-diff, .bits b { border-radius: 4px; background: rgb(255 255 255 / .16); }
+.bits { color: var(--ink); font-variant-numeric: tabular-nums; letter-spacing: .06em; white-space: nowrap; }
+.bits b { padding-inline: 1px; font-weight: 600; }
 
 /* What this is and isn't, always on the page: said in a line, then each
    difference from the app, between hairlines. */
@@ -1610,25 +1638,27 @@ main:focus { outline: none; }
 
 @media (prefers-reduced-motion: no-preference) {
   .exhibit[data-live] .chapter.is-current { animation: step-in var(--dur-reveal) var(--ease) both; }
-  .exhibit[data-live] :is(.beat.is-current, .chapter-figure) { animation: step-in var(--dur-reveal) var(--ease) both; }
+  .exhibit[data-live] :is(.beat.is-current, .chapter-figure:not([hidden])) { animation: step-in var(--dur-reveal) var(--ease) both; }
 }
 @media (prefers-reduced-motion: reduce) {
   .scene *, .story-view .knob, .inside-door svg { transition: none !important; animation: none !important; }
   :is(.story-go, .story-back):active { scale: none; }
 }
-/* Tablets and narrower windows: the scene, then the story under it. */
+/* Tablets and narrower windows: the scene, then the story under it, the
+   scene as tall as leaves the step's words and the buttons on the same
+   screen (100svh: the screen with its browser's bars showing). */
 @media (max-width: 1000px) {
   .exhibit-body { grid-template-columns: minmax(0, 1fr); }
-  .scene { --slab: 32px; height: clamp(400px, 52vh, 480px); }
+  .scene { --slab: 32px; --reach-y: 207px; height: clamp(400px, 52vh, 480px); height: clamp(280px, 100svh - 430px, 480px); }
   .scene[data-pose="cut"] { --ky: -150px; }
   .story { padding-top: var(--space-5); }
-  .chapters { min-height: 292px; }
   .about { grid-template-columns: minmax(0, 1fr); row-gap: var(--space-6); }
   .about .more { grid-column: auto; }
 }
 /* Phones. The steps are lines alone; the scene is as tall as leaves the
-   step's words and the button on the same screen; the two buttons share
-   the width, and the switch has a row of its own. */
+   step's words and the buttons on the same screen, where there's room, and
+   drawn smaller to fit where there isn't; the two buttons share the width,
+   and the switch has a row of its own. */
 @media (max-width: 760px) {
   .inside-door { max-width: none; padding: var(--space-4) var(--space-5); }
   .exhibit-page { padding-top: var(--space-4); }
@@ -1645,7 +1675,8 @@ main:focus { outline: none; }
   .rail button::before { top: 13px; }
   .rail span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
   .exhibit-body { margin-top: var(--space-1); }
-  .scene { --slab: 22px; height: clamp(316px, 44vh, 372px); }
+  .scene { --slab: 22px; --reach-x: 161px; --reach-y: 144px; height: clamp(316px, 44vh, 372px);
+    height: clamp(240px, 100svh - 408px, 372px); }
   .scene-view { bottom: 24px; }
   .scene-view { perspective: 1000px; }
   .keyplate { --kw: 152px; padding: 14px; border-radius: 20px; }
@@ -1663,15 +1694,14 @@ main:focus { outline: none; }
   .scene[data-pose="open"] { --sx: -34px; --sy: 0px; --kx: 112px; --ky: 62px; --kz: -60px; --ks: .62; }
   .legend { gap: 0 var(--space-4); font-size: 12px; }
   .story { padding-top: var(--space-4); }
-  .chapters { min-height: 244px; }
   .chapter h2 { margin-top: var(--space-2); font-size: clamp(28px, 8.2vw, 34px); }
   .beat p { margin-top: var(--space-3); font-size: 16px; }
   .beat .chapter-small { font-size: 14px; }
   .chapter-figure { margin-top: var(--space-4); }
   .chapter-figure strong { font-size: 30px; }
   .chapter-figure span { font-size: 14px; }
-  .story-controls { grid-template-columns: minmax(0, 1fr); grid-template-areas: "buttons" "alts" "view"; row-gap: var(--space-2);
-    margin-top: var(--space-4); }
+  .story-buttons { margin-top: var(--space-4); }
+  .story-controls { grid-template-columns: minmax(0, 1fr); grid-template-areas: "alts" "view"; row-gap: var(--space-2); margin-top: 0; }
   .story-go { flex: 1; min-width: 0; }
   .story-view label { min-height: 40px; }
   .pieces .pieces-tag, .pieces td:nth-child(3) { display: none; }
@@ -1688,7 +1718,7 @@ main:focus { outline: none; }
   .rail button::before { top: 17px; }
 }
 @media print {
-  .story-controls, .rail, .exhibit-reset { display: none; }
+  .story-buttons, .story-controls, .rail, .exhibit-reset { display: none; }
 }
 
 /* Under a finger. Wherever the pointer is a fingertip, everything that can
