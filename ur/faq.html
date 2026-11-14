@@ -40,7 +40,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=055392460f" />
+<link rel="stylesheet" href="/styles.css?v=b4eddef047" />
 <script>
 (() => {
 let transition;
@@ -137,10 +137,10 @@ document.getElementById('year').textContent = new Date().getFullYear();
 const langs = document.querySelectorAll('.lang');
 const still = matchMedia('(prefers-reduced-motion: reduce)');
 const shut = lang => {
-if (!lang.open || lang.classList.contains('closing')) return;
+if (!lang.open || lang.classList.contains('leaving')) return;
 if (still.matches) { lang.open = false; return; }
-lang.classList.add('closing');
-setTimeout(() => { lang.open = false; lang.classList.remove('closing'); }, 200);
+lang.classList.add('leaving');
+setTimeout(() => { lang.open = false; lang.classList.remove('leaving'); }, 200);
 };
 document.addEventListener('click', e => langs.forEach(lang => {
 if (!lang.open) return;
