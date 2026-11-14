@@ -90,7 +90,7 @@
     "en": "First, a key."
   },
   "ex_key_a": {
-    "en": "A key is 256 bits: ones and zeros, picked at random by the device. Privaro makes its key once, on your iPhone, and it stays there."
+    "en": "A key is 256 bits: ones and zeros, picked at random by the device. Privaro makes its key once, on your iPhone, and keeps it there. An iCloud backup, if you turn one on, holds only a copy locked with your recovery key."
   },
   "ex_key_go": {
     "en": "Make a key"

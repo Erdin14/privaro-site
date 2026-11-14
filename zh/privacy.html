@@ -90,13 +90,13 @@ window.addEventListener("keydown", interrupt, { capture: true });
 
   <header class="legal-hero">
     <h1>隐私政策</h1>
-    <p class="updated">生效日期：2026 年 6 月 28 日 · 最后更新：2026 年 11 月 8 日</p>
+    <p class="updated">生效日期：2026 年 6 月 28 日 · 最后更新：2026 年 11 月 14 日</p>
     <p class="intro">Privaro（“Privaro”“本应用”“我们”）是一款面向 iOS 的私密加密照片与视频保险库，由荷兰的 Erdinc Zarbo 提供。本隐私政策说明 Privaro 如何处理你的信息。</p>
   </header>
 
   <aside class="legal-callout" aria-label="简而言之：">
     <p class="legal-callout-label">简而言之：</p>
-    <p class="legal-callout-body">Privaro 从设计之初就以隐私为前提。<strong>你的照片、视频、相簿、说明和标签均在设备上加密，绝不会发送给我们。</strong>我们没有账户系统，不运营存储你内容的服务器，也无法看到保险库中的内容。没有广告，也没有跟踪。唯一离开设备的数据，只有 Apple 处理购买所需的信息。</p>
+    <p class="legal-callout-body">Privaro 从设计之初就以隐私为前提。<strong>你的照片、视频、相簿、说明和标签均在设备上加密，绝不会发送给我们。</strong>我们没有账户系统，不运营存储你内容的服务器，也无法看到保险库中的内容。没有广告，也没有跟踪。除了你自己选择备份或分享的内容，离开设备的数据只有销售和确认 Pro 购买所需的信息，由 Apple 和 RevenueCat 处理。</p>
   </aside>
 
   <nav class="legal-index" aria-labelledby="legal-index-h">
@@ -106,7 +106,8 @@ window.addEventListener("keydown", interrupt, { capture: true });
       <li><a href="#on-device">你的内容留在设备上（并且已加密）</a></li>
       <li><a href="#optional-features">会让数据离开设备的可选功能</a></li>
       <li><a href="#permissions">设备权限及申请原因</a></li>
-      <li><a href="#purchases">购买（Apple）</a></li>
+      <li><a href="#purchases">购买（Apple 和 RevenueCat）</a></li>
+      <li><a href="#website">本网站</a></li>
       <li><a href="#retention">数据保留与删除</a></li>
       <li><a href="#children">儿童隐私</a></li>
       <li><a href="#your-rights">你的权利</a></li>
@@ -124,7 +125,7 @@ window.addEventListener("keydown", interrupt, { capture: true });
         <li>我们<strong>不会</strong>收集、查看或存储你的照片、视频或任何保险库内容。</li>
         <li>我们<strong>没有</strong>账户系统，也<strong>不会</strong>为使用本应用而索取你的姓名、电子邮件或电话号码。</li>
         <li>我们<strong>不会</strong>运营任何接收你保险库数据的服务器。</li>
-        <li>我们<strong>不会</strong>使用分析、崩溃报告或跟踪类 SDK。</li>
+        <li>我们<strong>不会</strong>使用广告、分析、崩溃报告或跟踪类 SDK。应用中唯一的第三方 SDK 是用于 Pro 购买的 RevenueCat（见“购买”）。如果你在设备设置中选择与应用开发者共享分析数据，Apple 可能会向我们提供崩溃报告和汇总统计；这些来自 iOS 而非 Privaro，不含保险库中的任何内容。</li>
         <li>我们<strong>不会</strong>向任何人出售或出租你的个人信息。</li>
         <li>我们<strong>不会</strong>跨其他应用或网站跟踪你。</li>
       </ul>
@@ -133,8 +134,8 @@ window.addEventListener("keydown", interrupt, { capture: true });
   <section class="article" id="on-device" aria-labelledby="on-device-h">
     <h2 id="on-device-h">你的内容留在设备上（并且已加密）</h2>
     <div class="article-body">
-      <p>你添加到 Privaro 的一切（照片、视频、缩略图、相簿、说明、标签和文件名）都会在你的设备上使用业界标准的 AES-256-GCM 加密。密钥在设备上生成并保存在 iOS 钥匙串中，受设备密码保护，且只能在这台设备上使用。你的 Privaro 密码和生物识别决定谁能在应用中打开保险库。加密文件存放在应用的私有存储空间中并启用完整文件保护，且不会包含在未加密的设备备份内。</p>
-      <p>由于加密在你的设备上完成且密钥从不离开设备，我们无法访问、解密或恢复你的保险库内容。如果你同时忘记密码和恢复密钥，我们以及任何人都无法恢复你的数据。</p>
+      <p>你添加到 Privaro 的一切（照片、视频、缩略图、相簿、说明、标签和文件名）都会在你的设备上使用业界标准的 AES-256-GCM 加密。密钥在设备上生成并保存在 iOS 钥匙串中，受设备密码保护，从不同步到 iCloud 钥匙串，也从不包含在设备备份中。你的 Privaro 密码和生物识别决定谁能在应用中打开保险库。加密文件存放在应用的私有存储空间中并启用完整文件保护，且不会包含在设备的 iCloud 或电脑备份内。</p>
+      <p>由于加密在你的设备上完成，且密钥从不离开设备（唯一的例外是可选 iCloud 备份中一份用你的恢复密钥锁定的副本），我们无法访问、解密或恢复你的保险库内容。如果你忘记密码且丢失了恢复密钥，我们无法替你恢复数据。</p>
     </div>
   </section>
   <section class="article" id="optional-features" aria-labelledby="optional-features-h">
@@ -144,7 +145,7 @@ window.addEventListener("keydown", interrupt, { capture: true });
       <ul>
         <li><strong>加密 iCloud 备份（可选，Pro）。</strong>启用后，Privaro 会在你自己的 iCloud 账户中保存保险库的加密副本。数据在上传前已在设备上加密；密钥使用由你的恢复密钥派生的密钥封装（PBKDF2-HMAC-SHA256）。我们绝不会收到你的备份或密钥。iCloud 由 Apple 运营，适用 <a href="https://www.apple.com/legal/privacy/">Apple 隐私政策</a>。</li>
         <li><strong>共享 / 导出。</strong>当你共享或导出某个项目时（包括加密的 <code>.privaroshare</code> 文件或“存储到照片”），该内容会按你的指示离开保险库。此后它去往何处、如何受到保护，取决于你选择的目的地。</li>
-        <li><strong>Wi-Fi 传输（可选）。</strong>可在你的设备与同一局域网中的浏览器之间传输文件。该连接为本地连接，传输过程中未加密，因此请仅在你信任的网络中使用。文件一旦导入保险库即被加密。传输过程中不会向我们或通过互联网发送任何数据。</li>
+        <li><strong>Wi-Fi 传输（可选）。</strong>可从同一局域网中的浏览器将文件上传到你的设备；无法通过这种方式从保险库下载任何内容。该连接为本地连接，传输过程中未加密，因此请仅在你信任的网络中使用。文件一旦导入保险库即被加密。传输过程中不会向我们或通过互联网发送任何数据。</li>
       </ul>
     </div>
   </section>
@@ -153,25 +154,32 @@ window.addEventListener("keydown", interrupt, { capture: true });
     <div class="article-body">
       <p>Privaro 仅在需要时申请这些权限，数据仅在你的设备上用于所述目的：</p>
       <ul>
-        <li><strong>照片</strong>：将你选择的照片/视频导入保险库，并在你需要时将项目重新保存出去。</li>
+        <li><strong>照片</strong>：将你选择的照片/视频导入保险库，并在你需要时将项目重新保存出去。如果所选项目只存储在 iCloud 照片中，iOS 会先从你的 iCloud 账户下载它。</li>
         <li><strong>相机</strong>：直接将照片/视频拍摄到保险库、用于应用内相机，以及在你启用后于解锁失败时拍照（“闯入拍照”）。这些照片会被加密并仅存储在你的设备上，你可以随时查看和删除。</li>
         <li><strong>麦克风</strong>：为你在应用内拍摄的视频录制声音。</li>
         <li><strong>面容 ID / 触控 ID（生物识别）</strong>：用于解锁保险库。生物识别验证完全由 iOS 处理，Privaro 绝不会接收或存储你的生物识别数据。</li>
-        <li><strong>位置（可选，“基于位置的锁定”）</strong>：启用后，设备位置会在设备本地进行检查，以判断是否允许在你标记为受信任的地点解锁。你的位置不会被收集、记录或传输给我们。</li>
+        <li><strong>位置（可选，“基于位置的锁定”）</strong>：启用后，设备位置会在设备本地进行检查，以判断是否允许在你标记为受信任的地点解锁。你的位置不会被收集、记录或传输给我们。在地图上选择受信任地点时，地图来自 Apple 地图，由 Apple 依据其自身的隐私政策提供。</li>
         <li><strong>本地网络</strong>：用于上文所述的可选 Wi-Fi 传输功能。</li>
       </ul>
     </div>
   </section>
   <section class="article" id="purchases" aria-labelledby="purchases-h">
-    <h2 id="purchases-h">购买（Apple）</h2>
+    <h2 id="purchases-h">购买（Apple 和 RevenueCat）</h2>
     <div class="article-body">
       <p>Privaro Pro 通过 Apple 的 StoreKit / App Store 以一次性购买的方式出售。交易与付款由 Apple 处理，我们不会收到你的付款信息。购买状态通过你的 Apple 账户管理。请参阅 <a href="https://www.apple.com/legal/privacy/">Apple 隐私政策</a>。</p>
+      <p>在检查你是否拥有 Pro，以及你购买或恢复 Pro 时，应用会使用 RevenueCat（RevenueCat, Inc.，美国）——一项确认 App Store 购买的服务。RevenueCat 会收到它为你的安装生成的随机 ID（不是你的姓名或 Apple 账户）、你的 App Store 购买信息、Pro 页面被显示时的一条记录，以及每次请求附带的技术信息，例如你的 IP 地址、设备和系统信息以及应用版本。它从不接收保险库中的任何内容。我们以此为你提供已付费的 Pro 功能、防止欺诈并查看购买统计。法律依据是履行我们与你之间的合同，以及我们在运营应用方面的正当利益。请参阅 <a href="https://www.revenuecat.com/privacy">RevenueCat 隐私政策</a>。</p>
+    </div>
+  </section>
+  <section class="article" id="website" aria-labelledby="website-h">
+    <h2 id="website-h">本网站</h2>
+    <div class="article-body">
+      <p>本网站不设置 Cookie，不在你的浏览器中存储任何内容，也不运行分析或跟踪脚本。privaroapp.nl 由 Cloudflare, Inc. 托管，privaro-site.vercel.app 上的副本由 Vercel Inc. 托管，两家公司都位于美国。和任何网站托管商一样，它们会处理你的浏览器随每次请求发送的技术信息，例如 IP 地址、浏览器类型和所请求的页面，以便提供页面并保护网站免遭滥用；Cloudflare 还可能请求你的浏览器向其报告连接错误。法律依据是我们在提供一个正常运行且安全的网站方面的正当利益。请参阅 <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare</a> 和 <a href="https://vercel.com/legal/privacy-notice">Vercel</a> 的隐私政策。</p>
     </div>
   </section>
   <section class="article" id="retention" aria-labelledby="retention-h">
     <h2 id="retention-h">数据保留与删除</h2>
     <div class="article-body">
-      <p>你的内容会一直保留在设备上，直到你删除它。删除的项目会移入“最近删除”，并在 30 天后永久移除（如果你选择，也可立即移除）。删除应用会清除其应用数据；若你启用了 iCloud 备份，可在应用内或通过 iCloud 存储设置将其移除。由于我们不持有你的数据，我们这边没有任何内容需要删除。</p>
+      <p>你的内容会一直保留在设备上，直到你删除它。删除的项目会移入“最近删除”，并在 30 天后永久移除（如果你选择，也可立即移除）。删除应用会清除保险库的文件；iOS 可能会在设备上保留应用的部分钥匙串条目，但没有这些文件，它们什么也打不开。若你启用了 iCloud 备份，可在应用内或通过 iCloud 存储设置将其移除。导出的备份和分享的文件会留在你保存或发送到的地方。由于我们不持有你的保险库数据，我们这边没有任何内容需要删除。</p>
     </div>
   </section>
   <section class="article" id="children" aria-labelledby="children-h">
@@ -184,6 +192,7 @@ window.addEventListener("keydown", interrupt, { capture: true });
     <h2 id="your-rights-h">你的权利</h2>
     <div class="article-body">
       <p>根据你的居住地（例如欧盟/英国 GDPR 或加州 CCPA/CPRA），你可能有权访问、更正、删除或限制处理你的个人信息。由于 Privaro 仅将内容存储在你的设备上，且我们的服务器不保存关于你的个人数据，你可以直接在应用中管理或删除数据来行使其中大部分权利。如有任何疑问或请求，请通过下方联系方式与我们联系。</p>
+      <p>本政策所述个人数据的控制者是 Erdinc Zarbo。在适用 GDPR 的情况下，你还可以反对基于我们正当利益的处理，并有权向数据保护监管机构投诉：在荷兰是 <a href="https://www.autoriteitpersoonsgegevens.nl/">Autoriteit Persoonsgegevens</a>，或你居住国的监管机构。</p>
     </div>
   </section>
   <section class="article" id="security" aria-labelledby="security-h">
@@ -203,6 +212,7 @@ window.addEventListener("keydown", interrupt, { capture: true });
     <div class="article-body">
       <p>如果你对本隐私政策或你的隐私有任何疑问，请通过以下方式联系我们：<br />
       <a href="mailto:erdincdubu@icloud.com">erdincdubu@icloud.com</a></p>
+      <p>如果你给我们发邮件，我们只会用你的邮箱地址和邮件内容来回复你，保存时间不会超过回复所需。</p>
     </div>
   </section>
   </div>

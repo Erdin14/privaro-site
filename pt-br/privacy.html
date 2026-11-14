@@ -90,13 +90,13 @@ window.addEventListener("keydown", interrupt, { capture: true });
 
   <header class="legal-hero">
     <h1>Política de Privacidade</h1>
-    <p class="updated">Data de vigência: 28 de junho de 2026 · Última atualização: 8 de novembro de 2026</p>
+    <p class="updated">Data de vigência: 28 de junho de 2026 · Última atualização: 14 de novembro de 2026</p>
     <p class="intro">O Privaro (“Privaro”, “o app”, “nós” ou “nosso”) é um cofre privado e criptografado de fotos e vídeos para iOS, fornecido por Erdinc Zarbo, Países Baixos. Esta Política de Privacidade explica como o Privaro trata suas informações.</p>
   </header>
 
   <aside class="legal-callout" aria-label="Resumindo:">
     <p class="legal-callout-label">Resumindo:</p>
-    <p class="legal-callout-body">O Privaro foi feito para ser privado por padrão. <strong>Suas fotos, vídeos, álbuns, legendas e tags são criptografados no seu aparelho e nunca são enviados para nós.</strong> Não há sistema de contas, não operamos servidores que armazenem seu conteúdo e não conseguimos ver o que há no seu cofre. Não há anúncios nem rastreamento. Os únicos dados que saem do seu aparelho são os que a Apple precisa para processar uma compra.</p>
+    <p class="legal-callout-body">O Privaro foi feito para ser privado por padrão. <strong>Suas fotos, vídeos, álbuns, legendas e tags são criptografados no seu aparelho e nunca são enviados para nós.</strong> Não há sistema de contas, não operamos servidores que armazenem seu conteúdo e não conseguimos ver o que há no seu cofre. Não há anúncios nem rastreamento. Fora o que você decide guardar em backup ou compartilhar, os únicos dados que saem do seu aparelho são os necessários para vender e confirmar a compra do Pro, o que a Apple e a RevenueCat fazem.</p>
   </aside>
 
   <nav class="legal-index" aria-labelledby="legal-index-h">
@@ -106,7 +106,8 @@ window.addEventListener("keydown", interrupt, { capture: true });
       <li><a href="#on-device">Seu conteúdo fica no seu aparelho (e é criptografado)</a></li>
       <li><a href="#optional-features">Recursos opcionais em que dados saem do aparelho</a></li>
       <li><a href="#permissions">Permissões do aparelho e por que pedimos</a></li>
-      <li><a href="#purchases">Compras (Apple)</a></li>
+      <li><a href="#purchases">Compras (Apple e RevenueCat)</a></li>
+      <li><a href="#website">Este site</a></li>
       <li><a href="#retention">Retenção e exclusão de dados</a></li>
       <li><a href="#children">Privacidade de crianças</a></li>
       <li><a href="#your-rights">Seus direitos</a></li>
@@ -124,7 +125,7 @@ window.addEventListener("keydown", interrupt, { capture: true });
         <li><strong>Não</strong> coletamos, vemos nem armazenamos suas fotos, vídeos ou qualquer conteúdo do cofre.</li>
         <li><strong>Não</strong> temos contas de usuário e <strong>não</strong> pedimos seu nome, e-mail ou telefone para usar o app.</li>
         <li><strong>Não</strong> operamos servidor algum que receba os dados do seu cofre.</li>
-        <li><strong>Não</strong> usamos SDKs de análise, relatório de falhas ou rastreamento.</li>
+        <li><strong>Não</strong> usamos SDKs de publicidade, análise, relatório de falhas ou rastreamento. O único SDK de terceiros no app é a RevenueCat, para a compra do Pro (veja “Compras”). Se você escolheu, nos ajustes do aparelho, compartilhar análises com desenvolvedores de apps, a Apple pode nos fornecer relatórios de falhas e estatísticas agregadas; eles vêm do iOS, não do Privaro, e não contêm nada do seu cofre.</li>
         <li><strong>Não</strong> vendemos nem alugamos suas informações pessoais a ninguém.</li>
         <li><strong>Não</strong> rastreamos você em outros apps ou sites.</li>
       </ul>
@@ -133,8 +134,8 @@ window.addEventListener("keydown", interrupt, { capture: true });
   <section class="article" id="on-device" aria-labelledby="on-device-h">
     <h2 id="on-device-h">Seu conteúdo fica no seu aparelho (e é criptografado)</h2>
     <div class="article-body">
-      <p>Tudo o que você adiciona ao Privaro (fotos, vídeos, miniaturas, álbuns, legendas, tags e nomes de arquivo) é criptografado no seu aparelho com criptografia AES-256-GCM, padrão do setor. A chave é gerada no seu aparelho e guardada nas Chaves do iOS; ela é protegida pela senha do aparelho e fica disponível apenas neste aparelho. A sua senha do Privaro e a biometria controlam quem pode abrir o cofre no app. Os arquivos criptografados ficam no armazenamento privado do app com proteção de arquivo completa e são excluídos de backups não criptografados.</p>
-      <p>Como a criptografia acontece no seu aparelho e a chave nunca sai dele, não temos como acessar, descriptografar ou recuperar o conteúdo do seu cofre. Se você esquecer sua senha e sua chave de recuperação, seus dados não poderão ser recuperados por nós nem por ninguém.</p>
+      <p>Tudo o que você adiciona ao Privaro (fotos, vídeos, miniaturas, álbuns, legendas, tags e nomes de arquivo) é criptografado no seu aparelho com criptografia AES-256-GCM, padrão do setor. A chave é gerada no seu aparelho e guardada nas Chaves do iOS; ela é protegida pela senha do aparelho, nunca é sincronizada com as Chaves do iCloud e nunca entra nos backups do aparelho. A sua senha do Privaro e a biometria controlam quem pode abrir o cofre no app. Os arquivos criptografados ficam no armazenamento privado do app com proteção de arquivo completa e ficam de fora dos backups do aparelho no iCloud ou em um computador.</p>
+      <p>Como a criptografia acontece no seu aparelho e a chave nunca sai dele (a não ser como uma cópia trancada com a sua chave de recuperação dentro de um backup opcional no iCloud), não temos como acessar, descriptografar ou recuperar o conteúdo do seu cofre. Se você esquecer sua senha e perder sua chave de recuperação, não conseguimos recuperar seus dados por você.</p>
     </div>
   </section>
   <section class="article" id="optional-features" aria-labelledby="optional-features-h">
@@ -144,7 +145,7 @@ window.addEventListener("keydown", interrupt, { capture: true });
       <ul>
         <li><strong>Backup criptografado no iCloud (opcional, Pro).</strong> Se você ativar, o Privaro guarda uma cópia criptografada do cofre na sua própria conta do iCloud. Os dados são criptografados no aparelho antes do envio; a chave é encapsulada com uma chave derivada da sua chave de recuperação (PBKDF2-HMAC-SHA256). Nunca recebemos seu backup nem sua chave. O iCloud é operado pela Apple e regido pela <a href="https://www.apple.com/legal/privacy/">Política de Privacidade da Apple</a>.</li>
         <li><strong>Compartilhar / exportar.</strong> Quando você compartilha ou exporta um item (incluindo arquivos criptografados <code>.privaroshare</code> ou “Salvar em Fotos”), esse conteúdo sai do cofre conforme você determinar. Para onde vai e como fica protegido passa a depender do destino escolhido.</li>
-        <li><strong>Transferência por Wi-Fi (opcional).</strong> Permite transferir arquivos entre seu aparelho e um navegador na mesma rede local. Essa conexão é local e não é criptografada em trânsito, então use apenas em uma rede confiável. Os arquivos são criptografados assim que entram no cofre. Durante uma transferência, nenhum dado é enviado para nós nem pela internet.</li>
+        <li><strong>Transferência por Wi-Fi (opcional).</strong> Permite enviar arquivos de um navegador na mesma rede local para o seu aparelho; nada do cofre pode ser baixado por esse caminho. Essa conexão é local e não é criptografada em trânsito, então use apenas em uma rede confiável. Os arquivos são criptografados assim que entram no cofre. Durante uma transferência, nenhum dado é enviado para nós nem pela internet.</li>
       </ul>
     </div>
   </section>
@@ -153,25 +154,32 @@ window.addEventListener("keydown", interrupt, { capture: true });
     <div class="article-body">
       <p>O Privaro pede essas permissões apenas quando necessário, e os dados são usados no seu aparelho para a finalidade indicada:</p>
       <ul>
-        <li><strong>Fotos</strong>: para importar ao cofre as fotos e os vídeos que você selecionar e, se quiser, salvá-los de volta.</li>
+        <li><strong>Fotos</strong>: para importar ao cofre as fotos e os vídeos que você selecionar e, se quiser, salvá-los de volta. Se um item escolhido estiver apenas nas Fotos do iCloud, o iOS primeiro o baixa da sua conta do iCloud.</li>
         <li><strong>Câmera</strong>: para capturar fotos e vídeos direto no cofre, para a câmera do app e, se você ativar, para tirar uma foto em uma tentativa de desbloqueio malsucedida (“captura de invasores”). Essas fotos são criptografadas e ficam somente no seu aparelho; você pode vê-las e apagá-las quando quiser.</li>
         <li><strong>Microfone</strong>: para gravar áudio nos vídeos capturados no app.</li>
         <li><strong>Face ID / Touch ID (biometria)</strong>: para desbloquear o cofre. A autenticação biométrica é feita inteiramente pelo iOS; o Privaro nunca recebe nem armazena seus dados biométricos.</li>
-        <li><strong>Localização (opcional, “Bloqueio por localização”)</strong>: se você ativar, a localização do aparelho é verificada no próprio aparelho para decidir se o desbloqueio é permitido nos lugares que você marcou como confiáveis. Sua localização não é coletada, registrada nem transmitida para nós.</li>
+        <li><strong>Localização (opcional, “Bloqueio por localização”)</strong>: se você ativar, a localização do aparelho é verificada no próprio aparelho para decidir se o desbloqueio é permitido nos lugares que você marcou como confiáveis. Sua localização não é coletada, registrada nem transmitida para nós. Quando você escolhe um local confiável no mapa, o mapa vem do Apple Mapas, que a Apple oferece sob a própria política de privacidade.</li>
         <li><strong>Rede local</strong>: para o recurso opcional de transferência por Wi-Fi descrito acima.</li>
       </ul>
     </div>
   </section>
   <section class="article" id="purchases" aria-labelledby="purchases-h">
-    <h2 id="purchases-h">Compras (Apple)</h2>
+    <h2 id="purchases-h">Compras (Apple e RevenueCat)</h2>
     <div class="article-body">
       <p>O Privaro Pro é vendido como compra única pela StoreKit / App Store da Apple. A Apple processa a transação e o pagamento; não recebemos seus dados de pagamento. O status da compra é gerenciado pela sua Apple Account. Consulte a <a href="https://www.apple.com/legal/privacy/">Política de Privacidade da Apple</a>.</p>
+      <p>Para verificar se você tem o Pro, e quando você o compra ou restaura, o app usa a RevenueCat (RevenueCat, Inc., Estados Unidos), um serviço que confirma compras na App Store. A RevenueCat recebe um ID aleatório que ela cria para a sua instalação (não o seu nome nem a sua Conta Apple), as informações da sua compra na App Store, um aviso quando a tela do Pro é exibida e as informações técnicas que acompanham cada solicitação, como seu endereço IP, dados do aparelho e do sistema e a versão do app. Ela nunca recebe nada do seu cofre. Usamos isso para liberar os recursos do Pro que você pagou, evitar fraudes e ver estatísticas de compras. A base legal é a execução do nosso contrato com você e o nosso legítimo interesse em manter o app funcionando. Veja a <a href="https://www.revenuecat.com/privacy">Política de Privacidade da RevenueCat</a>.</p>
+    </div>
+  </section>
+  <section class="article" id="website" aria-labelledby="website-h">
+    <h2 id="website-h">Este site</h2>
+    <div class="article-body">
+      <p>Este site não define cookies, não guarda nada no seu navegador e não executa scripts de análise ou rastreamento. O privaroapp.nl é hospedado pela Cloudflare, Inc., e uma cópia em privaro-site.vercel.app pela Vercel Inc., ambas nos Estados Unidos. Como qualquer serviço de hospedagem, elas processam as informações técnicas que o seu navegador envia em cada solicitação, como o seu endereço IP, o tipo de navegador e a página solicitada, para entregar as páginas e proteger o site contra abusos; a Cloudflare também pode pedir ao seu navegador que informe erros de conexão a ela. A base legal é o nosso legítimo interesse em oferecer um site que funcione e seja seguro. Veja as políticas de privacidade da <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare</a> e da <a href="https://vercel.com/legal/privacy-notice">Vercel</a>.</p>
     </div>
   </section>
   <section class="article" id="retention" aria-labelledby="retention-h">
     <h2 id="retention-h">Retenção e exclusão de dados</h2>
     <div class="article-body">
-      <p>Seu conteúdo fica no seu aparelho até você excluí-lo. Itens excluídos vão para “Apagados recentemente” e são removidos definitivamente após 30 dias (ou na hora, se você preferir). Excluir o app remove os dados dele; se você ativou o backup no iCloud, pode removê-lo pelo app ou nos ajustes de armazenamento do iCloud. Como não guardamos seus dados, não há nada para excluirmos do nosso lado.</p>
+      <p>Seu conteúdo fica no seu aparelho até você excluí-lo. Itens excluídos vão para “Apagados recentemente” e são removidos definitivamente após 30 dias (ou na hora, se você preferir). Excluir o app remove os arquivos do cofre; o iOS pode manter no aparelho alguns itens das Chaves do app, mas sem os arquivos eles não abrem nada. Se você ativou o backup no iCloud, pode removê-lo pelo app ou nos ajustes de armazenamento do iCloud. Backups exportados e arquivos compartilhados ficam onde você os salvou ou enviou. Como não guardamos os dados do seu cofre, não há nada para excluirmos do nosso lado.</p>
     </div>
   </section>
   <section class="article" id="children" aria-labelledby="children-h">
@@ -184,6 +192,7 @@ window.addEventListener("keydown", interrupt, { capture: true });
     <h2 id="your-rights-h">Seus direitos</h2>
     <div class="article-body">
       <p>Dependendo de onde você mora (por exemplo, sob o GDPR da UE/Reino Unido ou a CCPA/CPRA da Califórnia), você pode ter direito a acessar, corrigir, excluir ou restringir o tratamento das suas informações pessoais. Como o Privaro armazena seu conteúdo apenas no seu aparelho e não mantemos dados pessoais sobre você em nossos servidores, você pode exercer a maioria desses direitos diretamente, gerenciando ou excluindo dados no app. Em caso de dúvidas ou solicitações, fale conosco pelos contatos abaixo.</p>
+      <p>O controlador dos dados pessoais descritos nesta política é Erdinc Zarbo. Onde o GDPR se aplica, você também pode se opor ao tratamento baseado em nossos legítimos interesses e tem o direito de apresentar uma reclamação a uma autoridade de proteção de dados: nos Países Baixos, a <a href="https://www.autoriteitpersoonsgegevens.nl/">Autoriteit Persoonsgegevens</a>, ou a autoridade do país onde você mora.</p>
     </div>
   </section>
   <section class="article" id="security" aria-labelledby="security-h">
@@ -203,6 +212,7 @@ window.addEventListener("keydown", interrupt, { capture: true });
     <div class="article-body">
       <p>Se tiver dúvidas sobre esta Política de Privacidade ou sobre sua privacidade, fale conosco pelo:<br />
       <a href="mailto:erdincdubu@icloud.com">erdincdubu@icloud.com</a></p>
+      <p>Se você nos escrever, usamos seu endereço de e-mail e sua mensagem apenas para responder, e não os guardamos por mais tempo do que o necessário para isso.</p>
     </div>
   </section>
   </div>

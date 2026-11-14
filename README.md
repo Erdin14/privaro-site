@@ -224,6 +224,29 @@ matters, the better fix is an address on the domain (Cloudflare **Email** →
 place of the personal one: it can be changed or dropped if it attracts spam,
 and it reads better on a security product.
 
+### 3. Network Error Logging (recommended: off)
+
+Every response carries `Report-To` and `NEL` headers that Cloudflare adds: they
+ask the visitor's browser to report failed connections to
+`a.nel.cloudflare.com`. It is on by default for Free and Pro zones. The Privacy
+Policy says so ("Cloudflare may also ask your browser to report connection
+errors to it"); switching it off makes the site send nothing it doesn't need.
+Turn it off in the zone's settings (Cloudflare documents it under
+[Understanding Network Error Logging](https://developers.cloudflare.com/support/network/understanding-network-error-logging/),
+or the API's `PATCH /zones/{zone_id}/settings/nel`), then check that
+`curl -sI https://privaroapp.nl/ | grep -ci '^nel:'` prints `0`. Once it does,
+the sentence can come out of `priv_web_p1` in `i18n/strings-privacy.json`.
+
+## Where the App Store links to (manual App Store Connect step)
+
+As of 14 November 2026 the App Store description links the Privacy Policy and
+Terms at `privaro-site.vercel.app`, the Vercel copy, not `privaroapp.nl`. Both
+copies are built from this repository and say the same, and the Privacy Policy
+names both hosts. Pointing App Store Connect's Privacy Policy URL and the
+description's links at `https://privaroapp.nl/privacy` and `/terms` would let
+the Vercel copy be retired later (the app still lists it as an associated
+domain for older In-App Event links, so keep it until those are gone).
+
 ## Secure www redirect — manual Cloudflare steps
 
 This uses an edge-only redirect: `www` does not need a Pages application route.

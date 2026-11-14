@@ -90,13 +90,13 @@ window.addEventListener("keydown", interrupt, { capture: true });
 
   <header class="legal-hero">
     <h1>Datenschutzerklärung</h1>
-    <p class="updated">Gültig ab: 28. Juni 2026 · Zuletzt aktualisiert: 8. November 2026</p>
+    <p class="updated">Gültig ab: 28. Juni 2026 · Zuletzt aktualisiert: 14. November 2026</p>
     <p class="intro">Privaro („Privaro“, „die App“, „wir“, „uns“ oder „unser“) ist ein privater, verschlüsselter Foto- und Video-Tresor für iOS, bereitgestellt von Erdinc Zarbo, Niederlande. Diese Datenschutzerklärung erklärt, wie Privaro mit deinen Daten umgeht.</p>
   </header>
 
   <aside class="legal-callout" aria-label="Kurz gesagt:">
     <p class="legal-callout-label">Kurz gesagt:</p>
-    <p class="legal-callout-body">Privaro ist von Grund auf auf Privatsphäre ausgelegt. <strong>Deine Fotos, Videos, Alben, Bildunterschriften und Tags werden auf deinem Gerät verschlüsselt und nie an uns gesendet.</strong> Es gibt kein Kontosystem, wir betreiben keine Server, die deine Inhalte speichern, und wir können nicht sehen, was in deinem Tresor liegt. Es gibt keine Werbung und kein Tracking. Die einzigen Daten, die dein Gerät jemals verlassen, sind die, die Apple zur Abwicklung eines Kaufs benötigt.</p>
+    <p class="legal-callout-body">Privaro ist von Grund auf auf Privatsphäre ausgelegt. <strong>Deine Fotos, Videos, Alben, Bildunterschriften und Tags werden auf deinem Gerät verschlüsselt und nie an uns gesendet.</strong> Es gibt kein Kontosystem, wir betreiben keine Server, die deine Inhalte speichern, und wir können nicht sehen, was in deinem Tresor liegt. Es gibt keine Werbung und kein Tracking. Abgesehen von dem, was du selbst sicherst oder teilst, verlassen dein Gerät nur die Daten, die für den Verkauf und die Bestätigung des Pro-Kaufs nötig sind; darum kümmern sich Apple und RevenueCat.</p>
   </aside>
 
   <nav class="legal-index" aria-labelledby="legal-index-h">
@@ -106,7 +106,8 @@ window.addEventListener("keydown", interrupt, { capture: true });
       <li><a href="#on-device">Deine Inhalte bleiben auf deinem Gerät (und sind verschlüsselt)</a></li>
       <li><a href="#optional-features">Optionale Funktionen, bei denen Daten dein Gerät verlassen</a></li>
       <li><a href="#permissions">Geräteberechtigungen und warum wir sie brauchen</a></li>
-      <li><a href="#purchases">Käufe (Apple)</a></li>
+      <li><a href="#purchases">Käufe (Apple und RevenueCat)</a></li>
+      <li><a href="#website">Diese Website</a></li>
       <li><a href="#retention">Aufbewahrung und Löschung von Daten</a></li>
       <li><a href="#children">Datenschutz für Kinder</a></li>
       <li><a href="#your-rights">Deine Rechte</a></li>
@@ -124,7 +125,7 @@ window.addEventListener("keydown", interrupt, { capture: true });
         <li>Wir erheben, sehen oder speichern <strong>keine</strong> Fotos, Videos oder sonstigen Tresorinhalte.</li>
         <li>Wir haben <strong>keine</strong> Benutzerkonten und fragen <strong>nicht</strong> nach Name, E-Mail oder Telefonnummer, um die App zu nutzen.</li>
         <li>Wir betreiben <strong>keinen</strong> Server, der deine Tresordaten empfängt.</li>
-        <li>Wir verwenden <strong>keine</strong> Analyse-, Absturzberichts- oder Tracking-SDKs.</li>
+        <li>Wir verwenden <strong>keine</strong> Werbe-, Analyse-, Absturzberichts- oder Tracking-SDKs. Das einzige Drittanbieter-SDK in der App ist RevenueCat, für den Pro-Kauf (siehe „Käufe“). Wenn du in den Einstellungen deines Geräts zugestimmt hast, Analysedaten mit App-Entwicklern zu teilen, kann Apple uns Absturzberichte und zusammengefasste Statistiken geben; sie stammen von iOS, nicht von Privaro, und enthalten nichts aus deinem Tresor.</li>
         <li>Wir verkaufen oder vermieten deine personenbezogenen Daten <strong>nicht</strong>.</li>
         <li>Wir verfolgen dich <strong>nicht</strong> über andere Apps oder Websites hinweg.</li>
       </ul>
@@ -133,8 +134,8 @@ window.addEventListener("keydown", interrupt, { capture: true });
   <section class="article" id="on-device" aria-labelledby="on-device-h">
     <h2 id="on-device-h">Deine Inhalte bleiben auf deinem Gerät (und sind verschlüsselt)</h2>
     <div class="article-body">
-      <p>Alles, was du zu Privaro hinzufügst (Fotos, Videos, Miniaturen, Alben, Bildunterschriften, Tags und Dateinamen), wird auf deinem Gerät mit branchenüblicher AES-256-GCM-Verschlüsselung verschlüsselt. Der Schlüssel wird auf deinem Gerät erzeugt und im iOS-Schlüsselbund gespeichert; er ist durch deinen Gerätecode geschützt und nur auf diesem Gerät verfügbar. Dein Privaro-Code und deine Biometrie bestimmen, wer den Tresor in der App öffnen kann. Verschlüsselte Dateien liegen im privaten Speicher der App mit vollem Dateischutz und werden aus unverschlüsselten Gerätebackups ausgeschlossen.</p>
-      <p>Da die Verschlüsselung auf deinem Gerät erfolgt und der Schlüssel es nie verlässt, können wir auf deine Tresorinhalte weder zugreifen noch sie entschlüsseln oder wiederherstellen. Wenn du deinen Code und deinen Wiederherstellungsschlüssel vergisst, können deine Daten weder von uns noch von jemand anderem wiederhergestellt werden.</p>
+      <p>Alles, was du zu Privaro hinzufügst (Fotos, Videos, Miniaturen, Alben, Bildunterschriften, Tags und Dateinamen), wird auf deinem Gerät mit branchenüblicher AES-256-GCM-Verschlüsselung verschlüsselt. Der Schlüssel wird auf deinem Gerät erzeugt und im iOS-Schlüsselbund gespeichert; er ist durch deinen Gerätecode geschützt, wird nie mit dem iCloud-Schlüsselbund synchronisiert und ist nie in Gerätebackups enthalten. Dein Privaro-Code und deine Biometrie bestimmen, wer den Tresor in der App öffnen kann. Verschlüsselte Dateien liegen im privaten Speicher der App mit vollem Dateischutz und sind von Backups des Geräts in iCloud oder auf einem Computer ausgeschlossen.</p>
+      <p>Da die Verschlüsselung auf deinem Gerät erfolgt und der Schlüssel es nie verlässt (außer als mit deinem Wiederherstellungsschlüssel gesperrte Kopie in einem optionalen iCloud-Backup), können wir auf deine Tresorinhalte weder zugreifen noch sie entschlüsseln oder wiederherstellen. Wenn du deinen Code vergisst und deinen Wiederherstellungsschlüssel verlierst, können wir deine Daten nicht für dich wiederherstellen.</p>
     </div>
   </section>
   <section class="article" id="optional-features" aria-labelledby="optional-features-h">
@@ -144,7 +145,7 @@ window.addEventListener("keydown", interrupt, { capture: true });
       <ul>
         <li><strong>Verschlüsseltes iCloud-Backup (optional, Pro).</strong> Wenn du es aktivierst, speichert Privaro eine verschlüsselte Kopie deines Tresors in deinem eigenen iCloud-Konto. Die Daten werden vor dem Hochladen auf deinem Gerät verschlüsselt; der Schlüssel wird mit einem aus deinem Wiederherstellungsschlüssel abgeleiteten Schlüssel umschlossen (PBKDF2-HMAC-SHA256). Wir erhalten weder dein Backup noch deinen Schlüssel. iCloud wird von Apple betrieben und unterliegt <a href="https://www.apple.com/legal/privacy/">Apples Datenschutzrichtlinie</a>.</li>
         <li><strong>Teilen / Export.</strong> Wenn du ein Objekt teilst oder exportierst (einschließlich verschlüsselter <code>.privaroshare</code>-Dateien oder „In Fotos sichern“), verlässt dieser Inhalt den Tresor so, wie du es bestimmst. Wohin er geht und wie er dort geschützt ist, richtet sich dann nach dem von dir gewählten Ziel.</li>
-        <li><strong>WLAN-Übertragung (optional).</strong> Ermöglicht die Übertragung von Dateien zwischen deinem Gerät und einem Browser im selben lokalen Netzwerk. Diese Verbindung ist lokal und während der Übertragung nicht verschlüsselt; nutze sie daher nur in einem Netzwerk, dem du vertraust. Dateien werden verschlüsselt, sobald sie in den Tresor importiert werden. Während einer Übertragung werden keine Daten an uns oder über das Internet gesendet.</li>
+        <li><strong>WLAN-Übertragung (optional).</strong> Ermöglicht das Hochladen von Dateien aus einem Browser im selben lokalen Netzwerk auf dein Gerät; aus dem Tresor lässt sich auf diesem Weg nichts herunterladen. Diese Verbindung ist lokal und während der Übertragung nicht verschlüsselt; nutze sie daher nur in einem Netzwerk, dem du vertraust. Dateien werden verschlüsselt, sobald sie in den Tresor importiert werden. Während einer Übertragung werden keine Daten an uns oder über das Internet gesendet.</li>
       </ul>
     </div>
   </section>
@@ -153,25 +154,32 @@ window.addEventListener("keydown", interrupt, { capture: true });
     <div class="article-body">
       <p>Privaro fragt diese nur bei Bedarf an; die Daten werden auf deinem Gerät für den genannten Zweck verwendet:</p>
       <ul>
-        <li><strong>Fotos</strong>: um die von dir ausgewählten Fotos/Videos in den Tresor zu importieren und Objekte auf Wunsch wieder zu sichern.</li>
+        <li><strong>Fotos</strong>: um die von dir ausgewählten Fotos/Videos in den Tresor zu importieren und Objekte auf Wunsch wieder zu sichern. Liegt ein ausgewähltes Objekt nur in iCloud-Fotos, lädt iOS es zuerst aus deinem iCloud-Account herunter.</li>
         <li><strong>Kamera</strong>: um Fotos/Videos direkt in den Tresor aufzunehmen, für die integrierte Kamera und – falls aktiviert – um bei einem fehlgeschlagenen Entsperrversuch ein Foto aufzunehmen („Einbruchsaufnahme“). Einbruchsfotos werden verschlüsselt und nur auf deinem Gerät gespeichert; du kannst sie jederzeit ansehen und löschen.</li>
         <li><strong>Mikrofon</strong>: um bei in der App aufgenommenen Videos Ton aufzuzeichnen.</li>
         <li><strong>Face ID / Touch ID (Biometrie)</strong>: um deinen Tresor zu entsperren. Die biometrische Authentifizierung erfolgt vollständig durch iOS; Privaro erhält oder speichert deine biometrischen Daten nie.</li>
-        <li><strong>Standort (optional, „Standortbasierte Sperre“)</strong>: Wenn du sie aktivierst, wird der Standort deines Geräts auf dem Gerät geprüft, um zu entscheiden, ob das Entsperren an von dir als vertrauenswürdig markierten Orten erlaubt wird. Dein Standort wird nicht erhoben, protokolliert oder an uns übermittelt.</li>
+        <li><strong>Standort (optional, „Standortbasierte Sperre“)</strong>: Wenn du sie aktivierst, wird der Standort deines Geräts auf dem Gerät geprüft, um zu entscheiden, ob das Entsperren an von dir als vertrauenswürdig markierten Orten erlaubt wird. Dein Standort wird nicht erhoben, protokolliert oder an uns übermittelt. Wenn du einen vertrauenswürdigen Ort auf der Karte auswählst, stammt die Karte von Apple Karten, das Apple nach seiner eigenen Datenschutzrichtlinie bereitstellt.</li>
         <li><strong>Lokales Netzwerk</strong>: für die oben beschriebene optionale WLAN-Übertragung.</li>
       </ul>
     </div>
   </section>
   <section class="article" id="purchases" aria-labelledby="purchases-h">
-    <h2 id="purchases-h">Käufe (Apple)</h2>
+    <h2 id="purchases-h">Käufe (Apple und RevenueCat)</h2>
     <div class="article-body">
       <p>Privaro Pro wird als einmaliger Kauf über Apples StoreKit / den App Store verkauft. Apple wickelt die Transaktion und deine Zahlung ab; wir erhalten deine Zahlungsdaten nicht. Der Kaufstatus wird über deinen Apple Account verwaltet. Siehe <a href="https://www.apple.com/legal/privacy/">Apples Datenschutzrichtlinie</a>.</p>
+      <p>Um zu prüfen, ob du Pro hast, und wenn du es kaufst oder wiederherstellst, nutzt die App RevenueCat (RevenueCat, Inc., USA), einen Dienst, der App-Store-Käufe bestätigt. RevenueCat erhält eine zufällige ID, die es für deine Installation erzeugt (nicht deinen Namen oder deinen Apple Account), deine App-Store-Kaufinformationen, einen Hinweis, wenn der Pro-Bildschirm angezeigt wird, und die technischen Angaben, die jede Anfrage mit sich bringt, etwa deine IP-Adresse, Geräte- und Systemangaben und die App-Version. Inhalte aus deinem Tresor erhält es nie. Wir nutzen dies, um dir die bezahlten Pro-Funktionen bereitzustellen, Betrug zu verhindern und Statistiken über Käufe einzusehen. Rechtsgrundlage sind die Erfüllung unseres Vertrags mit dir und unser berechtigtes Interesse am Betrieb der App. Siehe die <a href="https://www.revenuecat.com/privacy">Datenschutzerklärung von RevenueCat</a>.</p>
+    </div>
+  </section>
+  <section class="article" id="website" aria-labelledby="website-h">
+    <h2 id="website-h">Diese Website</h2>
+    <div class="article-body">
+      <p>Diese Website setzt keine Cookies, speichert nichts in deinem Browser und führt keine Analyse- oder Tracking-Skripte aus. privaroapp.nl wird von Cloudflare, Inc. gehostet und eine Kopie unter privaro-site.vercel.app von Vercel Inc., beide in den USA. Wie jeder Webhoster verarbeiten sie die technischen Angaben, die dein Browser mit jeder Anfrage sendet, etwa deine IP-Adresse, den Browsertyp und die angefragte Seite, um die Seiten auszuliefern und die Website vor Missbrauch zu schützen; Cloudflare kann deinen Browser außerdem bitten, ihm Verbindungsfehler zu melden. Rechtsgrundlage ist unser berechtigtes Interesse an einer funktionierenden, sicheren Website. Siehe die Datenschutzerklärungen von <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare</a> und <a href="https://vercel.com/legal/privacy-notice">Vercel</a>.</p>
     </div>
   </section>
   <section class="article" id="retention" aria-labelledby="retention-h">
     <h2 id="retention-h">Aufbewahrung und Löschung von Daten</h2>
     <div class="article-body">
-      <p>Deine Inhalte bleiben auf deinem Gerät, bis du sie löschst. Gelöschte Objekte wandern in „Zuletzt gelöscht“ und werden nach 30 Tagen endgültig entfernt (oder sofort, wenn du das wählst). Beim Löschen der App werden ihre Daten entfernt; falls du das iCloud-Backup aktiviert hast, kannst du dieses in der App oder über deine iCloud-Speichereinstellungen entfernen. Da wir deine Daten nicht vorhalten, gibt es auf unserer Seite nichts zu löschen.</p>
+      <p>Deine Inhalte bleiben auf deinem Gerät, bis du sie löschst. Gelöschte Objekte wandern in „Zuletzt gelöscht“ und werden nach 30 Tagen endgültig entfernt (oder sofort, wenn du das wählst). Beim Löschen der App werden die Dateien des Tresors entfernt; iOS kann einige Schlüsselbund-Einträge der App auf dem Gerät behalten, aber ohne die Dateien öffnen sie nichts. Falls du das iCloud-Backup aktiviert hast, kannst du es in der App oder über deine iCloud-Speichereinstellungen entfernen. Exportierte Backups und geteilte Dateien bleiben dort, wo du sie gespeichert oder hingeschickt hast. Da wir deine Tresordaten nicht vorhalten, gibt es auf unserer Seite nichts zu löschen.</p>
     </div>
   </section>
   <section class="article" id="children" aria-labelledby="children-h">
@@ -184,6 +192,7 @@ window.addEventListener("keydown", interrupt, { capture: true });
     <h2 id="your-rights-h">Deine Rechte</h2>
     <div class="article-body">
       <p>Je nachdem, wo du lebst (etwa nach der EU-/UK-DSGVO oder dem kalifornischen CCPA/CPRA), hast du möglicherweise das Recht, auf deine personenbezogenen Daten zuzugreifen, sie zu berichtigen, zu löschen oder deren Verarbeitung einzuschränken. Da Privaro deine Inhalte ausschließlich auf deinem Gerät speichert und wir keine personenbezogenen Daten über dich auf unseren Servern vorhalten, kannst du die meisten dieser Rechte direkt ausüben, indem du Daten in der App verwaltest oder löschst. Bei Fragen oder Anliegen kontaktiere uns über die unten stehenden Angaben.</p>
+      <p>Verantwortlicher für die in dieser Richtlinie beschriebenen personenbezogenen Daten ist Erdinc Zarbo. Wo die DSGVO gilt, kannst du außerdem einer Verarbeitung widersprechen, die auf unseren berechtigten Interessen beruht, und du hast das Recht, dich bei einer Datenschutzaufsichtsbehörde zu beschweren: in den Niederlanden bei der <a href="https://www.autoriteitpersoonsgegevens.nl/">Autoriteit Persoonsgegevens</a> oder bei der Behörde in deinem Wohnsitzland.</p>
     </div>
   </section>
   <section class="article" id="security" aria-labelledby="security-h">
@@ -203,6 +212,7 @@ window.addEventListener("keydown", interrupt, { capture: true });
     <div class="article-body">
       <p>Wenn du Fragen zu dieser Datenschutzerklärung oder zu deiner Privatsphäre hast, erreichst du uns unter:<br />
       <a href="mailto:erdincdubu@icloud.com">erdincdubu@icloud.com</a></p>
+      <p>Wenn du uns schreibst, nutzen wir deine E-Mail-Adresse und deine Nachricht nur, um dir zu antworten, und bewahren sie nicht länger auf, als dafür nötig ist.</p>
     </div>
   </section>
   </div>

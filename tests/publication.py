@@ -232,6 +232,23 @@ for key, values in build.load_strings().items():
         if code == "fr":
             assert not re.search(r"\S [?!;:»]|« ", words), f"{key} [fr]: an ordinary space where French sets a no-break one"
 
+# Every outside service the app or this site uses is named where visitors are
+# told what leaves their device: in the Privacy Policy, in every language, and
+# in the Security overview. RevenueCat is the app's one third-party SDK
+# (Package.resolved); Cloudflare and Vercel host the two copies of this site.
+for code, folder, _, _ in build.LANGS:
+    policy_page = (dist / folder / "privacy.html").read_text(encoding="utf-8")
+    for service in ("RevenueCat", "Cloudflare", "Vercel"):
+        assert service in policy_page, f"{code} privacy policy must name {service}"
+assert "RevenueCat" in (dist / "security.html").read_text(encoding="utf-8")
+# Claims the app's code contradicts, taken out in the November 2026 audit:
+# iCloud backup does upload (encrypted), free vaults can nest folders, and no
+# feature can be promised to work "exactly as described".
+for key, values in build.load_strings().items():
+    assert not re.search(r"nothing is uploaded\.|nothing uploaded\.|No folders inside folders|exactly as described",
+                         values["en"]), f"{key}: {values['en']!r}"
+
+
 def snapshot():
     return {str(p.relative_to(dist)): hashlib.sha256(p.read_bytes()).hexdigest()
             for p in dist.rglob("*") if p.is_file()}

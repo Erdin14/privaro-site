@@ -102,7 +102,7 @@ window.addEventListener("keydown", interrupt, { capture: true });
 
   <dl class="limits">
       <div style="--n:0"><dt>儲存空間</dt><dd class="limit swap"><span class="when-free">2.5 GB</span><span class="when-pro">無上限</span></dd><dd class="limit-note swap"><span class="when-free">存滿即止。</span><span class="when-pro">唯一的限制是你 iPhone 上的可用空間。</span></dd></div>
-      <div style="--n:1"><dt>相簿</dt><dd class="limit swap"><span class="when-free">5</span><span class="when-pro">無限</span></dd><dd class="limit-note swap"><span class="when-free">檔案夾不能再放進檔案夾。</span><span class="when-pro">檔案夾裡還能再放檔案夾。</span></dd></div>
+      <div style="--n:1"><dt>相簿</dt><dd class="limit swap"><span class="when-free">5</span><span class="when-pro">無限</span></dd><dd class="limit-note swap"><span class="when-free">相簿和檔案夾合計。</span><span class="when-pro">相簿和檔案夾，想建多少就建多少。</span></dd></div>
       <div style="--n:2"><dt>密碼</dt><dd class="limit swap"><span class="when-free">1</span><span class="when-pro">3</span></dd><dd class="limit-note swap"><span class="when-free">你自己的。</span><span class="when-pro">你自己的、一組誘餌密碼，以及一組清除一切的密碼。</span></dd></div>
   </dl>
 
@@ -110,15 +110,15 @@ window.addEventListener("keydown", interrupt, { capture: true });
     <h2 id="pro-list-title" class="swap"><span class="when-free">免費版不含</span><span class="when-pro">Pro 包含</span></h2>
     <ul>
       <li class="mark-yes" style="--n:0"><h3>無限儲存空間</h3><p>免費版保險庫最多可存放 2.5 GB。Pro 沒有上限：唯一的限制是你 iPhone 上的可用空間。</p></li>
-      <li class="mark-yes" style="--n:1"><h3>無限相簿和檔案夾</h3><p>免費版最多可建立 5 本相簿。使用 Pro，你可以建立任意數量的相簿，還能把檔案夾放進檔案夾裡。</p></li>
+      <li class="mark-yes" style="--n:1"><h3>無限相簿和檔案夾</h3><p>免費版最多可建立 5 本相簿和檔案夾（合計）。使用 Pro，數量不受限制。</p></li>
       <li class="mark-yes" style="--n:2"><h3>個別相簿密碼</h3><p>為相簿設定專屬密碼。即使保險庫的其他部分已打開，它仍會保持鎖定。</p></li>
       <li class="mark-yes" style="--n:3"><h3>依位置鎖定</h3><p>只允許在你信任的地方解鎖保險庫，例如你家。在其他任何地方，即使密碼正確，保險庫也會保持鎖定。</p></li>
       <li class="mark-yes" style="--n:4"><h3>誘餌保險庫</h3><p>設定第二組密碼，打開另一個裝有無害照片的獨立保險庫。如果你被迫解鎖 Privaro，就輸入這組密碼，你真正的保險庫會一直隱藏起來。</p></li>
       <li class="mark-yes" style="--n:5"><h3>脅迫清除</h3><p>設定一組密碼，一輸入就會清除整個保險庫，包括誘餌保險庫。這是為最壞的情況準備的，而且無法復原。</p></li>
       <li class="mark-yes" style="--n:6"><h3>闖入拍照</h3><p>如果有人輸入錯誤的密碼，Privaro 可以用前置相機悄悄拍照，並記錄嘗試的時間，讓你知道是否有人試圖進入你的保險庫。</p></li>
-      <li class="mark-yes" style="--n:7"><h3>截圖和錄影保護</h3><p>在 App 開啟時，防止保險庫被截圖、螢幕錄影或 AirPlay 擷取，不會意外流入你的相機膠卷或鏡像輸出的螢幕。</p></li>
+      <li class="mark-yes" style="--n:7"><h3>截圖和錄影保護</h3><p>在 App 開啟時，防止保險庫被截圖、螢幕錄影或 AirPlay 擷取，不會意外流入你的相機膠卷或鏡像輸出的螢幕。此功能仰賴 Apple 未公開說明的 iOS 行為；若失效，截圖時會改為鎖定保險庫。</p></li>
       <li class="mark-yes" style="--n:8"><h3>偽裝 App 圖像</h3><p>把 Privaro 藏在計算機或備忘錄等日常圖像和名稱後面，讓它在主畫面上不顯眼。彩色圖像款式免費，偽裝圖像則屬於 Pro。</p></li>
-      <li class="mark-yes" style="--n:9"><h3>加密 iCloud 備份和匯出</h3><p>將保險庫備份到你自己的 iCloud，或匯出成單一加密檔案。兩者都會在離開裝置前加密，所以沒有人（包括我們）能讀取。即使沒有 Pro，還原備份也永遠免費。</p></li>
+      <li class="mark-yes" style="--n:9"><h3>加密 iCloud 備份和匯出</h3><p>將保險庫備份到你自己的 iCloud，或匯出成單一加密檔案。兩者都會在離開裝置前加密，沒有你的復原密鑰或檔案密碼，任何人都無法讀取，包括我們。即使沒有 Pro，還原備份也永遠免費。</p></li>
       <li class="mark-yes" style="--n:10"><h3>Wi-Fi 傳輸</h3><p>透過區域網路，從任何電腦的網頁瀏覽器將檔案傳進保險庫。不用線材、不用雲端，也不必在電腦上安裝額外的 App。</p></li>
       <li class="mark-yes" style="--n:11"><h3>安全分享</h3><p>將照片或影片以加密檔案傳送給其他 Privaro 使用者，只有用你選擇的通關密語才能打開。傳送過程中不會經過我們。</p></li>
     </ul>

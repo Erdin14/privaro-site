@@ -90,13 +90,13 @@ window.addEventListener("keydown", interrupt, { capture: true });
 
   <header class="legal-hero">
     <h1>개인정보 처리방침</h1>
-    <p class="updated">시행일: 2026년 6월 28일 · 최종 업데이트: 2026년 11월 8일</p>
+    <p class="updated">시행일: 2026년 6월 28일 · 최종 업데이트: 2026년 11월 14일</p>
     <p class="intro">Privaro(이하 ‘Privaro’, ‘본 앱’, ‘당사’)는 네덜란드의 Erdinc Zarbo가 제공하는 iOS용 개인 암호화 사진·동영상 보관함입니다. 본 방침은 Privaro가 사용자의 정보를 어떻게 다루는지 설명합니다.</p>
   </header>
 
   <aside class="legal-callout" aria-label="요약:">
     <p class="legal-callout-label">요약:</p>
-    <p class="legal-callout-body">Privaro는 설계 단계부터 프라이버시를 전제로 만들어졌습니다. <strong>사진, 동영상, 앨범, 설명, 태그는 기기에서 암호화되며 당사로 전송되지 않습니다.</strong> 계정 시스템이 없고, 콘텐츠를 저장하는 서버를 운영하지 않으며, 보관함 안에 무엇이 있는지 확인할 수 없습니다. 광고도, 추적도 없습니다. 기기를 벗어나는 데이터는 Apple이 결제를 처리하는 데 필요한 정보뿐입니다.</p>
+    <p class="legal-callout-body">Privaro는 설계 단계부터 프라이버시를 전제로 만들어졌습니다. <strong>사진, 동영상, 앨범, 설명, 태그는 기기에서 암호화되며 당사로 전송되지 않습니다.</strong> 계정 시스템이 없고, 콘텐츠를 저장하는 서버를 운영하지 않으며, 보관함 안에 무엇이 있는지 확인할 수 없습니다. 광고도, 추적도 없습니다. 사용자가 직접 백업하거나 공유하는 것을 제외하면, 기기를 벗어나는 데이터는 Pro 구매를 판매하고 확인하는 데 필요한 정보뿐이며, 이는 Apple과 RevenueCat이 처리합니다.</p>
   </aside>
 
   <nav class="legal-index" aria-labelledby="legal-index-h">
@@ -106,7 +106,8 @@ window.addEventListener("keydown", interrupt, { capture: true });
       <li><a href="#on-device">콘텐츠는 기기에 남으며 암호화됩니다</a></li>
       <li><a href="#optional-features">데이터가 기기를 벗어나는 선택 기능</a></li>
       <li><a href="#permissions">기기 권한과 요청 이유</a></li>
-      <li><a href="#purchases">구매(Apple)</a></li>
+      <li><a href="#purchases">구매(Apple 및 RevenueCat)</a></li>
+      <li><a href="#website">이 웹사이트</a></li>
       <li><a href="#retention">데이터 보존 및 삭제</a></li>
       <li><a href="#children">아동의 개인정보</a></li>
       <li><a href="#your-rights">사용자의 권리</a></li>
@@ -124,7 +125,7 @@ window.addEventListener("keydown", interrupt, { capture: true });
         <li>사진, 동영상, 보관함의 어떤 콘텐츠도 수집하거나 열람하거나 저장하지 <strong>않습니다</strong>.</li>
         <li>사용자 계정이 <strong>없으며</strong>, 앱 사용을 위해 이름·이메일·전화번호를 요구하지 <strong>않습니다</strong>.</li>
         <li>보관함 데이터를 수신하는 서버를 운영하지 <strong>않습니다</strong>.</li>
-        <li>분석, 크래시 리포트, 트래킹 SDK를 사용하지 <strong>않습니다</strong>.</li>
+        <li>광고, 분석, 크래시 리포트, 트래킹 SDK를 사용하지 <strong>않습니다</strong>. 앱에 포함된 유일한 제3자 SDK는 Pro 구매를 위한 RevenueCat입니다(‘구매’ 참조). 기기 설정에서 앱 개발자와 분석 정보를 공유하도록 선택한 경우, Apple이 크래시 리포트와 집계 통계를 당사에 제공할 수 있습니다. 이 정보는 Privaro가 아닌 iOS에서 오며 보관함의 내용은 전혀 포함하지 않습니다.</li>
         <li>개인정보를 누구에게도 판매하거나 대여하지 <strong>않습니다</strong>.</li>
         <li>다른 앱이나 웹사이트에서 사용자를 추적하지 <strong>않습니다</strong>.</li>
       </ul>
@@ -133,8 +134,8 @@ window.addEventListener("keydown", interrupt, { capture: true });
   <section class="article" id="on-device" aria-labelledby="on-device-h">
     <h2 id="on-device-h">콘텐츠는 기기에 남으며 암호화됩니다</h2>
     <div class="article-body">
-      <p>Privaro에 추가하는 모든 항목(사진, 동영상, 미리보기 이미지, 앨범, 설명, 태그, 파일 이름)은 업계 표준인 AES-256-GCM 방식으로 기기에서 암호화됩니다. 암호화 키는 기기에서 생성되어 iOS 키체인에 저장되며, 기기 암호로 보호되며 이 기기에서만 사용할 수 있습니다. Privaro 암호와 생체 인증은 앱에서 보관함을 열 수 있는 사람을 결정합니다. 암호화된 파일은 앱의 비공개 저장 영역에 완전한 파일 보호와 함께 보관되며, 암호화되지 않은 기기 백업에서는 제외됩니다.</p>
-      <p>암호화가 기기에서 이루어지고 키가 기기를 벗어나지 않기 때문에, 당사는 보관함 콘텐츠에 접근하거나 복호화하거나 복구할 수 없습니다. 암호와 복구 키를 모두 잊어버리면 당사를 포함해 누구도 데이터를 복구할 수 없습니다.</p>
+      <p>Privaro에 추가하는 모든 항목(사진, 동영상, 미리보기 이미지, 앨범, 설명, 태그, 파일 이름)은 업계 표준인 AES-256-GCM 방식으로 기기에서 암호화됩니다. 암호화 키는 기기에서 생성되어 iOS 키체인에 저장되며, 기기 암호로 보호되며, iCloud 키체인과 동기화되지 않고 기기 백업에도 포함되지 않습니다. Privaro 암호와 생체 인증은 앱에서 보관함을 열 수 있는 사람을 결정합니다. 암호화된 파일은 앱의 비공개 저장 영역에 완전한 파일 보호와 함께 보관되며, iCloud나 컴퓨터로 하는 기기 백업에서 제외됩니다.</p>
+      <p>암호화가 기기에서 이루어지고 키가 기기를 벗어나지 않기 때문에(선택 사항인 iCloud 백업 안에 복구 키로 잠긴 사본으로 들어가는 경우는 예외), 당사는 보관함 콘텐츠에 접근하거나 복호화하거나 복구할 수 없습니다. 암호를 잊어버리고 복구 키도 잃어버리면 당사가 대신 데이터를 복구해 드릴 수 없습니다.</p>
     </div>
   </section>
   <section class="article" id="optional-features" aria-labelledby="optional-features-h">
@@ -144,7 +145,7 @@ window.addEventListener("keydown", interrupt, { capture: true });
       <ul>
         <li><strong>암호화된 iCloud 백업(선택, Pro).</strong> 활성화하면 Privaro가 보관함의 암호화된 사본을 사용자 본인의 iCloud 계정에 저장합니다. 데이터는 업로드 전에 기기에서 암호화되며, 키는 사용자의 복구 키에서 파생된 키로 감싸집니다(PBKDF2-HMAC-SHA256). 당사는 백업이나 키를 받지 않습니다. iCloud는 Apple이 운영하며 <a href="https://www.apple.com/legal/privacy/">Apple 개인정보 처리방침</a>의 적용을 받습니다.</li>
         <li><strong>공유 / 내보내기.</strong> 항목을 공유하거나 내보내면(암호화된 <code>.privaroshare</code> 파일이나 ‘사진에 저장’ 포함) 해당 콘텐츠는 사용자의 지시에 따라 보관함을 벗어납니다. 이후의 저장 위치와 보호 수준은 사용자가 선택한 대상에 따릅니다.</li>
-        <li><strong>Wi-Fi 전송(선택).</strong> 같은 로컬 네트워크상의 브라우저와 기기 사이에서 파일을 주고받을 수 있습니다. 이 연결은 로컬이며 전송 중 암호화되지 않으므로 신뢰할 수 있는 네트워크에서만 사용하세요. 파일은 보관함에 들어오는 즉시 암호화됩니다. 전송 중 당사나 인터넷으로 전송되는 데이터는 없습니다.</li>
+        <li><strong>Wi-Fi 전송(선택).</strong> 같은 로컬 네트워크상의 브라우저에서 기기로 파일을 업로드할 수 있으며, 이 방법으로 보관함의 항목을 내려받을 수는 없습니다. 이 연결은 로컬이며 전송 중 암호화되지 않으므로 신뢰할 수 있는 네트워크에서만 사용하세요. 파일은 보관함에 들어오는 즉시 암호화됩니다. 전송 중 당사나 인터넷으로 전송되는 데이터는 없습니다.</li>
       </ul>
     </div>
   </section>
@@ -153,25 +154,32 @@ window.addEventListener("keydown", interrupt, { capture: true });
     <div class="article-body">
       <p>Privaro는 필요할 때만 권한을 요청하며, 데이터는 명시된 목적을 위해 기기에서만 사용됩니다.</p>
       <ul>
-        <li><strong>사진</strong>: 선택한 사진·동영상을 보관함으로 가져오고, 원할 경우 다시 내보내기 위해 사용합니다.</li>
+        <li><strong>사진</strong>: 선택한 사진·동영상을 보관함으로 가져오고, 원할 경우 다시 내보내기 위해 사용합니다. 선택한 항목이 iCloud 사진에만 있는 경우, iOS가 먼저 iCloud 계정에서 내려받습니다.</li>
         <li><strong>카메라</strong>: 보관함으로 사진·동영상을 바로 촬영하고, 앱 내 카메라를 사용하며, 활성화한 경우 잠금 해제 실패 시 사진을 촬영(‘침입자 촬영’)하기 위해 사용합니다. 해당 사진은 암호화되어 기기에만 저장되며 언제든 확인하고 삭제할 수 있습니다.</li>
         <li><strong>마이크</strong>: 앱에서 촬영하는 동영상의 오디오를 녹음하기 위해 사용합니다.</li>
         <li><strong>Face ID / Touch ID(생체 인증)</strong>: 보관함을 잠금 해제하기 위해 사용합니다. 생체 인증은 전적으로 iOS가 처리하며, Privaro는 생체 데이터를 수신하거나 저장하지 않습니다.</li>
-        <li><strong>위치(선택, ‘위치 기반 잠금’)</strong>: 활성화하면 신뢰할 수 있는 장소로 표시한 곳에서만 잠금 해제를 허용할지 판단하기 위해 기기 내에서 위치를 확인합니다. 위치는 수집·기록되거나 당사로 전송되지 않습니다.</li>
+        <li><strong>위치(선택, ‘위치 기반 잠금’)</strong>: 활성화하면 신뢰할 수 있는 장소로 표시한 곳에서만 잠금 해제를 허용할지 판단하기 위해 기기 내에서 위치를 확인합니다. 위치는 수집·기록되거나 당사로 전송되지 않습니다. 지도에서 신뢰할 수 있는 장소를 고를 때 표시되는 지도는 Apple 지도에서 제공되며, Apple의 자체 개인정보 처리방침이 적용됩니다.</li>
         <li><strong>로컬 네트워크</strong>: 위에서 설명한 선택 기능인 Wi-Fi 전송을 위해 사용합니다.</li>
       </ul>
     </div>
   </section>
   <section class="article" id="purchases" aria-labelledby="purchases-h">
-    <h2 id="purchases-h">구매(Apple)</h2>
+    <h2 id="purchases-h">구매(Apple 및 RevenueCat)</h2>
     <div class="article-body">
       <p>Privaro Pro는 Apple의 StoreKit / App Store를 통해 일회성 구매로 판매됩니다. 거래와 결제는 Apple이 처리하며, 당사는 결제 정보를 받지 않습니다. 구매 상태는 Apple 계정을 통해 관리됩니다. <a href="https://www.apple.com/legal/privacy/">Apple 개인정보 처리방침</a>을 참고하세요.</p>
+      <p>Pro 보유 여부를 확인할 때, 그리고 Pro를 구매하거나 복원할 때 앱은 App Store 구매를 확인해 주는 서비스인 RevenueCat(RevenueCat, Inc., 미국)을 사용합니다. RevenueCat은 사용자의 설치에 대해 자체 생성한 임의의 ID(이름이나 Apple 계정이 아님), App Store 구매 정보, Pro 화면이 표시되었다는 알림, 그리고 IP 주소, 기기 및 시스템 정보, 앱 버전 등 각 요청에 함께 전송되는 기술 정보를 받습니다. 보관함의 내용은 절대 받지 않습니다. 당사는 이를 통해 결제하신 Pro 기능을 제공하고, 부정 사용을 막고, 구매 통계를 확인합니다. 법적 근거는 사용자와의 계약 이행 및 앱 운영에 대한 당사의 정당한 이익입니다. <a href="https://www.revenuecat.com/privacy">RevenueCat 개인정보 처리방침</a>을 참고하세요.</p>
+    </div>
+  </section>
+  <section class="article" id="website" aria-labelledby="website-h">
+    <h2 id="website-h">이 웹사이트</h2>
+    <div class="article-body">
+      <p>이 웹사이트는 쿠키를 설정하지 않고, 브라우저에 아무것도 저장하지 않으며, 분석이나 트래킹 스크립트를 실행하지 않습니다. privaroapp.nl은 Cloudflare, Inc.가, privaro-site.vercel.app의 사본은 Vercel Inc.가 호스팅하며, 두 회사 모두 미국에 있습니다. 여느 웹 호스팅 업체처럼 이들은 페이지를 전달하고 사이트를 악용으로부터 보호하기 위해 IP 주소, 브라우저 종류, 요청한 페이지 등 브라우저가 요청마다 보내는 기술 정보를 처리합니다. Cloudflare는 브라우저에 연결 오류를 보고하도록 요청할 수도 있습니다. 법적 근거는 제대로 작동하는 안전한 웹사이트를 제공하려는 당사의 정당한 이익입니다. <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare</a> 및 <a href="https://vercel.com/legal/privacy-notice">Vercel</a>의 개인정보 처리방침을 참고하세요.</p>
     </div>
   </section>
   <section class="article" id="retention" aria-labelledby="retention-h">
     <h2 id="retention-h">데이터 보존 및 삭제</h2>
     <div class="article-body">
-      <p>콘텐츠는 사용자가 삭제할 때까지 기기에 남아 있습니다. 삭제한 항목은 ‘최근 삭제된 항목’으로 이동하며 30일 후(또는 사용자가 원하면 즉시) 영구 삭제됩니다. 앱을 삭제하면 앱 데이터도 삭제되며, iCloud 백업을 사용 중이라면 앱 내에서 또는 iCloud 저장 공간 설정에서 제거할 수 있습니다. 당사는 데이터를 보유하지 않으므로 당사 측에서 삭제할 것은 없습니다.</p>
+      <p>콘텐츠는 사용자가 삭제할 때까지 기기에 남아 있습니다. 삭제한 항목은 ‘최근 삭제된 항목’으로 이동하며 30일 후(또는 사용자가 원하면 즉시) 영구 삭제됩니다. 앱을 삭제하면 보관함 파일이 삭제됩니다. iOS가 앱의 일부 키체인 항목을 기기에 남겨 둘 수 있지만, 파일이 없으면 아무것도 열 수 없습니다. iCloud 백업을 사용 중이라면 앱 내에서 또는 iCloud 저장 공간 설정에서 제거할 수 있습니다. 내보낸 백업과 공유한 파일은 저장하거나 보낸 곳에 그대로 남습니다. 당사는 보관함 데이터를 보유하지 않으므로 당사 측에서 삭제할 것은 없습니다.</p>
     </div>
   </section>
   <section class="article" id="children" aria-labelledby="children-h">
@@ -184,6 +192,7 @@ window.addEventListener("keydown", interrupt, { capture: true });
     <h2 id="your-rights-h">사용자의 권리</h2>
     <div class="article-body">
       <p>거주 지역에 따라(예: EU/영국 GDPR, 캘리포니아 CCPA/CPRA) 개인정보에 대한 열람, 정정, 삭제, 처리 제한을 요구할 권리가 있을 수 있습니다. Privaro는 콘텐츠를 기기에만 저장하고 당사 서버에 사용자의 개인정보를 보유하지 않으므로, 대부분의 권리는 앱에서 데이터를 직접 관리하거나 삭제하여 행사할 수 있습니다. 문의나 요청은 아래 연락처로 보내주세요.</p>
+      <p>이 방침에 설명된 개인정보의 관리자는 Erdinc Zarbo입니다. GDPR이 적용되는 경우, 당사의 정당한 이익에 근거한 처리에 이의를 제기할 수 있으며, 개인정보 보호 감독기관에 불만을 제기할 권리가 있습니다. 네덜란드에서는 <a href="https://www.autoriteitpersoonsgegevens.nl/">Autoriteit Persoonsgegevens</a>, 또는 거주 국가의 감독기관입니다.</p>
     </div>
   </section>
   <section class="article" id="security" aria-labelledby="security-h">
@@ -203,6 +212,7 @@ window.addEventListener("keydown", interrupt, { capture: true });
     <div class="article-body">
       <p>본 방침이나 개인정보에 대한 문의는 아래로 연락해 주세요.<br />
       <a href="mailto:erdincdubu@icloud.com">erdincdubu@icloud.com</a></p>
+      <p>이메일을 보내 주시면 이메일 주소와 내용은 답장하는 데에만 사용하며, 그에 필요한 기간보다 오래 보관하지 않습니다.</p>
     </div>
   </section>
   </div>

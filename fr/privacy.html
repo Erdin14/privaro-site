@@ -90,13 +90,13 @@ window.addEventListener("keydown", interrupt, { capture: true });
 
   <header class="legal-hero">
     <h1>Politique de confidentialité</h1>
-    <p class="updated">Date d’entrée en vigueur : 28 juin 2026 · Dernière mise à jour : 8 novembre 2026</p>
+    <p class="updated">Date d’entrée en vigueur : 28 juin 2026 · Dernière mise à jour : 14 novembre 2026</p>
     <p class="intro">Privaro (« Privaro », « l’app », « nous » ou « notre ») est un coffre privé et chiffré pour photos et vidéos sur iOS, fourni par Erdinc Zarbo, Pays-Bas. Cette politique de confidentialité explique comment Privaro traite vos informations.</p>
   </header>
 
   <aside class="legal-callout" aria-label="En bref :">
     <p class="legal-callout-label">En bref :</p>
-    <p class="legal-callout-body">Privaro est conçu pour être privé par nature. <strong>Vos photos, vidéos, albums, légendes et tags sont chiffrés sur votre appareil et ne nous sont jamais transmis.</strong> Il n’y a pas de système de comptes, nous n’exploitons aucun serveur stockant votre contenu et nous ne pouvons pas voir ce que contient votre coffre. Il n’y a ni publicité ni suivi. Les seules données qui quittent votre appareil sont celles dont Apple a besoin pour traiter un achat.</p>
+    <p class="legal-callout-body">Privaro est conçu pour être privé par nature. <strong>Vos photos, vidéos, albums, légendes et tags sont chiffrés sur votre appareil et ne nous sont jamais transmis.</strong> Il n’y a pas de système de comptes, nous n’exploitons aucun serveur stockant votre contenu et nous ne pouvons pas voir ce que contient votre coffre. Il n’y a ni publicité ni suivi. En dehors de ce que vous choisissez de sauvegarder ou de partager, les seules données qui quittent votre appareil sont celles nécessaires pour vendre et confirmer l’achat de Pro, dont s’occupent Apple et RevenueCat.</p>
   </aside>
 
   <nav class="legal-index" aria-labelledby="legal-index-h">
@@ -106,7 +106,8 @@ window.addEventListener("keydown", interrupt, { capture: true });
       <li><a href="#on-device">Votre contenu reste sur votre appareil (et il est chiffré)</a></li>
       <li><a href="#optional-features">Fonctionnalités optionnelles impliquant une sortie de données</a></li>
       <li><a href="#permissions">Autorisations de l’appareil et raisons</a></li>
-      <li><a href="#purchases">Achats (Apple)</a></li>
+      <li><a href="#purchases">Achats (Apple et RevenueCat)</a></li>
+      <li><a href="#website">Ce site web</a></li>
       <li><a href="#retention">Conservation et suppression des données</a></li>
       <li><a href="#children">Confidentialité des enfants</a></li>
       <li><a href="#your-rights">Vos droits</a></li>
@@ -124,7 +125,7 @@ window.addEventListener("keydown", interrupt, { capture: true });
         <li>Nous ne collectons, ne voyons et ne stockons <strong>pas</strong> vos photos, vidéos ni aucun contenu du coffre.</li>
         <li>Nous n’avons <strong>pas</strong> de comptes utilisateur et ne demandons <strong>pas</strong> votre nom, votre e-mail ni votre numéro de téléphone pour utiliser l’app.</li>
         <li>Nous n’exploitons <strong>aucun</strong> serveur recevant les données de votre coffre.</li>
-        <li>Nous n’utilisons <strong>aucun</strong> SDK d’analyse, de rapport de plantage ou de suivi.</li>
+        <li>Nous n’utilisons <strong>aucun</strong> SDK de publicité, d’analyse, de rapport de plantage ou de suivi. Le seul SDK tiers de l’app est RevenueCat, pour l’achat de Pro (voir « Achats »). Si vous avez choisi, dans les réglages de votre appareil, de partager des analyses avec les développeurs d’apps, Apple peut nous transmettre des rapports de plantage et des statistiques agrégées ; ils proviennent d’iOS, pas de Privaro, et ne contiennent rien de votre coffre.</li>
         <li>Nous ne vendons ni ne louons vos informations personnelles à <strong>personne</strong>.</li>
         <li>Nous ne vous suivons <strong>pas</strong> à travers d’autres apps ou sites web.</li>
       </ul>
@@ -133,8 +134,8 @@ window.addEventListener("keydown", interrupt, { capture: true });
   <section class="article" id="on-device" aria-labelledby="on-device-h">
     <h2 id="on-device-h">Votre contenu reste sur votre appareil (et il est chiffré)</h2>
     <div class="article-body">
-      <p>Tout ce que vous ajoutez à Privaro (photos, vidéos, miniatures, albums, légendes, tags et noms de fichiers) est chiffré sur votre appareil avec le chiffrement AES-256-GCM, standard du secteur. La clé est générée sur votre appareil et conservée dans le trousseau iOS ; elle est protégée par le code de votre appareil et n’est disponible que sur cet appareil. Votre code Privaro et la biométrie déterminent qui peut ouvrir le coffre dans l’app. Les fichiers chiffrés sont stockés dans l’espace privé de l’app avec une protection de fichier complète et sont exclus des sauvegardes non chiffrées.</p>
-      <p>Comme le chiffrement a lieu sur votre appareil et que la clé ne le quitte jamais, nous n’avons aucun moyen d’accéder à votre contenu, de le déchiffrer ou de le récupérer. Si vous oubliez votre code et votre clé de récupération, vos données ne pourront être récupérées ni par nous ni par quiconque.</p>
+      <p>Tout ce que vous ajoutez à Privaro (photos, vidéos, miniatures, albums, légendes, tags et noms de fichiers) est chiffré sur votre appareil avec le chiffrement AES-256-GCM, standard du secteur. La clé est générée sur votre appareil et conservée dans le trousseau iOS ; elle est protégée par le code de votre appareil, n’est jamais synchronisée avec le trousseau iCloud et n’est jamais incluse dans les sauvegardes de l’appareil. Votre code Privaro et la biométrie déterminent qui peut ouvrir le coffre dans l’app. Les fichiers chiffrés sont stockés dans l’espace privé de l’app avec une protection de fichier complète et sont exclus des sauvegardes de l’appareil sur iCloud ou sur un ordinateur.</p>
+      <p>Comme le chiffrement a lieu sur votre appareil et que la clé ne le quitte jamais (sauf sous la forme d’une copie verrouillée par votre clé de récupération dans une sauvegarde iCloud facultative), nous n’avons aucun moyen d’accéder à votre contenu, de le déchiffrer ou de le récupérer. Si vous oubliez votre code et perdez votre clé de récupération, nous ne pouvons pas récupérer vos données pour vous.</p>
     </div>
   </section>
   <section class="article" id="optional-features" aria-labelledby="optional-features-h">
@@ -144,7 +145,7 @@ window.addEventListener("keydown", interrupt, { capture: true });
       <ul>
         <li><strong>Sauvegarde iCloud chiffrée (optionnelle, Pro).</strong> Si vous l’activez, Privaro enregistre une copie chiffrée de votre coffre dans votre propre compte iCloud. Les données sont chiffrées sur votre appareil avant l’envoi ; la clé est encapsulée à l’aide d’une clé dérivée de votre clé de récupération (PBKDF2-HMAC-SHA256). Nous ne recevons jamais votre sauvegarde ni votre clé. iCloud est exploité par Apple et régi par la <a href="https://www.apple.com/legal/privacy/">politique de confidentialité d’Apple</a>.</li>
         <li><strong>Partage / export.</strong> Lorsque vous partagez ou exportez un élément (y compris les fichiers chiffrés <code>.privaroshare</code> ou « Enregistrer dans Photos »), ce contenu quitte le coffre selon vos instructions. Sa destination et sa protection dépendent alors du service que vous choisissez.</li>
-        <li><strong>Transfert Wi-Fi (optionnel).</strong> Permet de transférer des fichiers entre votre appareil et un navigateur sur le même réseau local. Cette connexion est locale et n’est pas chiffrée pendant le transit : ne l’utilisez que sur un réseau de confiance. Les fichiers sont chiffrés dès leur importation dans le coffre. Aucune donnée ne nous est envoyée ni ne transite par internet pendant un transfert.</li>
+        <li><strong>Transfert Wi-Fi (optionnel).</strong> Permet d’envoyer des fichiers depuis un navigateur du même réseau local vers votre appareil ; rien ne peut être téléchargé depuis le coffre par ce biais. Cette connexion est locale et n’est pas chiffrée pendant le transit : ne l’utilisez que sur un réseau de confiance. Les fichiers sont chiffrés dès leur importation dans le coffre. Aucune donnée ne nous est envoyée ni ne transite par internet pendant un transfert.</li>
       </ul>
     </div>
   </section>
@@ -153,25 +154,32 @@ window.addEventListener("keydown", interrupt, { capture: true });
     <div class="article-body">
       <p>Privaro ne les demande qu’en cas de besoin, et les données sont utilisées sur votre appareil pour l’usage indiqué :</p>
       <ul>
-        <li><strong>Photos</strong> : pour importer dans votre coffre les photos et vidéos que vous sélectionnez, et pour les réenregistrer à l’extérieur si vous le souhaitez.</li>
+        <li><strong>Photos</strong> : pour importer dans votre coffre les photos et vidéos que vous sélectionnez, et pour les réenregistrer à l’extérieur si vous le souhaitez. Si un élément choisi n’est stocké que dans Photos iCloud, iOS le télécharge d’abord depuis votre compte iCloud.</li>
         <li><strong>Appareil photo</strong> : pour capturer des photos et vidéos directement dans le coffre, pour l’appareil photo intégré et, si vous l’activez, pour prendre une photo lors d’une tentative de déverrouillage échouée (« capture d’intrus »). Ces photos sont chiffrées et conservées uniquement sur votre appareil ; vous pouvez les consulter et les supprimer à tout moment.</li>
         <li><strong>Micro</strong> : pour enregistrer le son des vidéos que vous capturez dans l’app.</li>
         <li><strong>Face ID / Touch ID (biométrie)</strong> : pour déverrouiller votre coffre. L’authentification biométrique est entièrement gérée par iOS ; Privaro ne reçoit ni ne stocke jamais vos données biométriques.</li>
-        <li><strong>Localisation (optionnelle, « Verrouillage par lieu »)</strong> : si vous l’activez, la position de votre appareil est vérifiée sur l’appareil lui-même pour décider d’autoriser le déverrouillage dans les lieux que vous avez marqués comme fiables. Votre position n’est ni collectée, ni journalisée, ni transmise.</li>
+        <li><strong>Localisation (optionnelle, « Verrouillage par lieu »)</strong> : si vous l’activez, la position de votre appareil est vérifiée sur l’appareil lui-même pour décider d’autoriser le déverrouillage dans les lieux que vous avez marqués comme fiables. Votre position n’est ni collectée, ni journalisée, ni transmise. Lorsque vous choisissez un lieu de confiance sur la carte, celle-ci provient d’Apple Plans, fourni par Apple selon sa propre politique de confidentialité.</li>
         <li><strong>Réseau local</strong> : pour la fonction optionnelle de transfert Wi-Fi décrite ci-dessus.</li>
       </ul>
     </div>
   </section>
   <section class="article" id="purchases" aria-labelledby="purchases-h">
-    <h2 id="purchases-h">Achats (Apple)</h2>
+    <h2 id="purchases-h">Achats (Apple et RevenueCat)</h2>
     <div class="article-body">
       <p>Privaro Pro est vendu sous forme d’achat unique via StoreKit / l’App Store d’Apple. Apple traite la transaction et votre paiement ; nous ne recevons pas vos informations de paiement. Le statut de l’achat est géré par votre compte Apple. Consultez la <a href="https://www.apple.com/legal/privacy/">politique de confidentialité d’Apple</a>.</p>
+      <p>Pour vérifier si vous avez Pro, et lorsque vous l’achetez ou le restaurez, l’app utilise RevenueCat (RevenueCat, Inc., États-Unis), un service qui confirme les achats sur l’App Store. RevenueCat reçoit un identifiant aléatoire qu’il crée pour votre installation (ni votre nom ni votre compte Apple), les informations de votre achat sur l’App Store, une indication lorsque l’écran Pro s’affiche, ainsi que les informations techniques qui accompagnent chaque requête, comme votre adresse IP, des détails sur l’appareil et le système, et la version de l’app. Il ne reçoit jamais rien de votre coffre. Nous utilisons ces informations pour vous fournir les fonctions Pro que vous avez payées, prévenir la fraude et consulter des statistiques sur les achats. La base juridique est l’exécution de notre contrat avec vous et notre intérêt légitime à faire fonctionner l’app. Voir la <a href="https://www.revenuecat.com/privacy">politique de confidentialité de RevenueCat</a>.</p>
+    </div>
+  </section>
+  <section class="article" id="website" aria-labelledby="website-h">
+    <h2 id="website-h">Ce site web</h2>
+    <div class="article-body">
+      <p>Ce site ne dépose aucun cookie, ne stocke rien dans votre navigateur et n’exécute aucun script d’analyse ou de suivi. privaroapp.nl est hébergé par Cloudflare, Inc., et une copie sur privaro-site.vercel.app par Vercel Inc., tous deux aux États-Unis. Comme tout hébergeur, ils traitent les informations techniques que votre navigateur envoie à chaque requête, comme votre adresse IP, le type de navigateur et la page demandée, pour diffuser les pages et protéger le site contre les abus ; Cloudflare peut aussi demander à votre navigateur de lui signaler les erreurs de connexion. La base juridique est notre intérêt légitime à proposer un site web fonctionnel et sûr. Voir les politiques de confidentialité de <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare</a> et de <a href="https://vercel.com/legal/privacy-notice">Vercel</a>.</p>
     </div>
   </section>
   <section class="article" id="retention" aria-labelledby="retention-h">
     <h2 id="retention-h">Conservation et suppression des données</h2>
     <div class="article-body">
-      <p>Votre contenu reste sur votre appareil jusqu’à ce que vous le supprimiez. Les éléments supprimés passent dans « Supprimés récemment » et sont effacés définitivement au bout de 30 jours (ou immédiatement, si vous le choisissez). Supprimer l’app efface ses données ; si vous avez activé la sauvegarde iCloud, vous pouvez la supprimer depuis l’app ou depuis les réglages de stockage iCloud. Comme nous ne détenons pas vos données, il n’y a rien à supprimer de notre côté.</p>
+      <p>Votre contenu reste sur votre appareil jusqu’à ce que vous le supprimiez. Les éléments supprimés passent dans « Supprimés récemment » et sont effacés définitivement au bout de 30 jours (ou immédiatement, si vous le choisissez). Supprimer l’app efface les fichiers du coffre ; iOS peut conserver sur l’appareil certaines entrées du trousseau de l’app, mais sans les fichiers elles n’ouvrent rien. Si vous avez activé la sauvegarde iCloud, vous pouvez la supprimer depuis l’app ou depuis les réglages de stockage iCloud. Les sauvegardes exportées et les fichiers partagés restent là où vous les avez enregistrés ou envoyés. Comme nous ne détenons pas les données de votre coffre, il n’y a rien à supprimer de notre côté.</p>
     </div>
   </section>
   <section class="article" id="children" aria-labelledby="children-h">
@@ -184,6 +192,7 @@ window.addEventListener("keydown", interrupt, { capture: true });
     <h2 id="your-rights-h">Vos droits</h2>
     <div class="article-body">
       <p>Selon votre lieu de résidence (par exemple sous le RGPD de l’UE/du Royaume-Uni ou la CCPA/CPRA californienne), vous pouvez disposer de droits d’accès, de rectification, de suppression ou de limitation du traitement de vos informations personnelles. Comme Privaro conserve votre contenu uniquement sur votre appareil et que nous ne détenons aucune donnée personnelle vous concernant sur nos serveurs, vous pouvez exercer la plupart de ces droits directement en gérant ou en supprimant des données dans l’app. Pour toute question ou demande, contactez-nous via les coordonnées ci-dessous.</p>
+      <p>Le responsable du traitement des données personnelles décrites dans cette politique est Erdinc Zarbo. Lorsque le RGPD s’applique, vous pouvez aussi vous opposer aux traitements fondés sur nos intérêts légitimes, et vous avez le droit d’introduire une réclamation auprès d’une autorité de protection des données : aux Pays-Bas, l’<a href="https://www.autoriteitpersoonsgegevens.nl/">Autoriteit Persoonsgegevens</a>, ou l’autorité du pays où vous vivez.</p>
     </div>
   </section>
   <section class="article" id="security" aria-labelledby="security-h">
@@ -203,6 +212,7 @@ window.addEventListener("keydown", interrupt, { capture: true });
     <div class="article-body">
       <p>Pour toute question sur cette politique de confidentialité ou sur votre vie privée, contactez-nous à :<br />
       <a href="mailto:erdincdubu@icloud.com">erdincdubu@icloud.com</a></p>
+      <p>Si vous nous écrivez, nous utilisons votre adresse e-mail et votre message uniquement pour vous répondre, et ne les conservons pas plus longtemps que nécessaire.</p>
     </div>
   </section>
   </div>

@@ -90,13 +90,13 @@ window.addEventListener("keydown", interrupt, { capture: true });
 
   <header class="legal-hero">
     <h1>プライバシーポリシー</h1>
-    <p class="updated">施行日：2026年6月28日 · 最終更新日：2026年11月8日</p>
+    <p class="updated">施行日：2026年6月28日 · 最終更新日：2026年11月14日</p>
     <p class="intro">Privaro（以下「Privaro」「本アプリ」「当方」）は、オランダの Erdinc Zarbo が提供する、iOS 向けの暗号化されたプライベートな写真・ビデオ保管庫です。本プライバシーポリシーでは、Privaro があなたの情報をどのように扱うかを説明します。</p>
   </header>
 
   <aside class="legal-callout" aria-label="要点：">
     <p class="legal-callout-label">要点：</p>
-    <p class="legal-callout-body">Privaro は設計の段階からプライバシーを守るよう作られています。<strong>写真、ビデオ、アルバム、キャプション、タグはデバイス上で暗号化され、当方に送られることはありません。</strong>アカウントの仕組みはなく、コンテンツを保存するサーバーも運用しておらず、保管庫の中身を当方が見ることはできません。広告もトラッキングもありません。デバイスの外に出るデータは、Apple が購入を処理するために必要なものだけです。</p>
+    <p class="legal-callout-body">Privaro は設計の段階からプライバシーを守るよう作られています。<strong>写真、ビデオ、アルバム、キャプション、タグはデバイス上で暗号化され、当方に送られることはありません。</strong>アカウントの仕組みはなく、コンテンツを保存するサーバーも運用しておらず、保管庫の中身を当方が見ることはできません。広告もトラッキングもありません。ご自身でバックアップや共有を選んだものを除けば、デバイスの外に出るデータは、Pro の購入の販売と確認に必要なものだけで、Apple と RevenueCat が扱います。</p>
   </aside>
 
   <nav class="legal-index" aria-labelledby="legal-index-h">
@@ -106,7 +106,8 @@ window.addEventListener("keydown", interrupt, { capture: true });
       <li><a href="#on-device">コンテンツはデバイス上に（暗号化されて）保管されます</a></li>
       <li><a href="#optional-features">データがデバイスの外に出るオプション機能</a></li>
       <li><a href="#permissions">デバイスのアクセス許可とその理由</a></li>
-      <li><a href="#purchases">購入（Apple）</a></li>
+      <li><a href="#purchases">購入（Apple と RevenueCat）</a></li>
+      <li><a href="#website">このウェブサイト</a></li>
       <li><a href="#retention">データの保持と削除</a></li>
       <li><a href="#children">子どものプライバシー</a></li>
       <li><a href="#your-rights">あなたの権利</a></li>
@@ -124,7 +125,7 @@ window.addEventListener("keydown", interrupt, { capture: true });
         <li>当方は、あなたの写真、ビデオ、その他の保管庫のコンテンツを収集、閲覧、保存<strong>しません</strong>。</li>
         <li>ユーザーアカウントは<strong>ありません</strong>。アプリを使うために、名前、メールアドレス、電話番号を求めることも<strong>ありません</strong>。</li>
         <li>保管庫のデータを受け取るサーバーは運用して<strong>いません</strong>。</li>
-        <li>分析、クラッシュレポート、トラッキングのための SDK は使用<strong>しません</strong>。</li>
+        <li>広告、分析、クラッシュレポート、トラッキングのための SDK は使用<strong>しません</strong>。アプリに含まれる唯一の第三者 SDK は、Pro の購入のための RevenueCat です（「購入」を参照）。デバイスの設定で App デベロッパと解析データを共有することを選んでいる場合、Apple からクラッシュレポートや集計された統計が当方に提供されることがあります。これらは Privaro ではなく iOS から送られるもので、保管庫の内容は一切含まれません。</li>
         <li>あなたの個人情報を誰かに販売したり貸し出したりすることは<strong>ありません</strong>。</li>
         <li>ほかのアプリや Web サイトをまたいであなたを追跡することは<strong>ありません</strong>。</li>
       </ul>
@@ -133,8 +134,8 @@ window.addEventListener("keydown", interrupt, { capture: true });
   <section class="article" id="on-device" aria-labelledby="on-device-h">
     <h2 id="on-device-h">コンテンツはデバイス上に（暗号化されて）保管されます</h2>
     <div class="article-body">
-      <p>Privaro に追加したもの（写真、ビデオ、サムネール、アルバム、キャプション、タグ、ファイル名）はすべて、業界標準の AES-256-GCM 暗号化によりデバイス上で暗号化されます。暗号鍵はデバイス上で生成されて iOS のキーチェーンに保存され、デバイスのパスコードによって保護され、このデバイス上でのみ利用できます。Privaro のパスコードと生体認証は、アプリで保管庫を開けられる人を制御します。暗号化されたファイルは完全なファイル保護が適用されたアプリ専用の領域に保存され、暗号化されていないデバイスのバックアップには含まれません。</p>
-      <p>暗号化はデバイス上で行われ、鍵がデバイスから出ることはないため、当方が保管庫のコンテンツにアクセスしたり、復号したり、復旧したりすることはできません。パスコードと復旧キーの両方を忘れた場合、当方を含め誰もデータを復旧できません。</p>
+      <p>Privaro に追加したもの（写真、ビデオ、サムネール、アルバム、キャプション、タグ、ファイル名）はすべて、業界標準の AES-256-GCM 暗号化によりデバイス上で暗号化されます。暗号鍵はデバイス上で生成されて iOS のキーチェーンに保存され、デバイスのパスコードによって保護され、iCloud キーチェーンと同期されることも、デバイスのバックアップに含まれることもありません。Privaro のパスコードと生体認証は、アプリで保管庫を開けられる人を制御します。暗号化されたファイルは完全なファイル保護が適用されたアプリ専用の領域に保存され、iCloud やコンピュータへのデバイスのバックアップには含まれません。</p>
+      <p>暗号化はデバイス上で行われ、鍵がデバイスから出ることはない（オプションの iCloud バックアップに、復旧キーでロックされたコピーとして含まれる場合を除く）ため、当方が保管庫のコンテンツにアクセスしたり、復号したり、復旧したりすることはできません。パスコードを忘れ、復旧キーも失くした場合、当方がデータを復旧することはできません。</p>
     </div>
   </section>
   <section class="article" id="optional-features" aria-labelledby="optional-features-h">
@@ -144,7 +145,7 @@ window.addEventListener("keydown", interrupt, { capture: true });
       <ul>
         <li><strong>暗号化された iCloud バックアップ（オプション、Pro）。</strong>オンにすると、Privaro は保管庫の暗号化されたコピーをあなた自身の iCloud アカウントに保存します。データはアップロード前にデバイス上で暗号化され、鍵は復旧キーから導出した鍵（PBKDF2-HMAC-SHA256）でラップされます。当方がバックアップや鍵を受け取ることはありません。iCloud は Apple が運営しており、<a href="https://www.apple.com/legal/privacy/">Apple のプライバシーポリシー</a>が適用されます。</li>
         <li><strong>共有／書き出し。</strong>項目を共有または書き出すと（暗号化された <code>.privaroshare</code> ファイルや「写真に保存」を含む）、そのコンテンツはあなたの指示どおりに保管庫の外に出ます。その後の行き先や保護のされ方は、あなたが選んだ送り先によって決まります。</li>
-        <li><strong>Wi-Fi 転送（オプション）。</strong>同じローカルネットワーク上のブラウザとデバイスの間でファイルを転送できます。この接続はローカルで、通信中は暗号化されないため、信頼できるネットワークでのみ使用してください。ファイルは保管庫に読み込まれた時点で暗号化されます。転送中、当方やインターネットにデータが送られることはありません。</li>
+        <li><strong>Wi-Fi 転送（オプション）。</strong>同じローカルネットワーク上のブラウザからデバイスへファイルをアップロードできます。この方法で保管庫から何かをダウンロードすることはできません。この接続はローカルで、通信中は暗号化されないため、信頼できるネットワークでのみ使用してください。ファイルは保管庫に読み込まれた時点で暗号化されます。転送中、当方やインターネットにデータが送られることはありません。</li>
       </ul>
     </div>
   </section>
@@ -153,25 +154,32 @@ window.addEventListener("keydown", interrupt, { capture: true });
     <div class="article-body">
       <p>Privaro は必要なときにだけ以下を求め、データは記載された目的のためにデバイス上で使われます。</p>
       <ul>
-        <li><strong>写真</strong>：選んだ写真やビデオを保管庫に読み込むため、また必要に応じて項目を保管庫の外に保存するため。</li>
+        <li><strong>写真</strong>：選んだ写真やビデオを保管庫に読み込むため、また必要に応じて項目を保管庫の外に保存するため。選んだ項目が iCloud 写真にしかない場合は、iOS がまずあなたの iCloud アカウントからダウンロードします。</li>
         <li><strong>カメラ</strong>：写真やビデオを保管庫に直接撮影するため（アプリ内カメラ）、またオンにした場合は、ロック解除に失敗したときに写真を撮影するため（「侵入捕獲」）。侵入時の写真は暗号化され、デバイス上にのみ保存されます。いつでも表示・削除できます。</li>
         <li><strong>マイク</strong>：アプリで撮影するビデオに音声を録音するため。</li>
         <li><strong>Face ID／Touch ID（生体認証）</strong>：保管庫のロックを解除するため。生体認証はすべて iOS が処理し、Privaro が生体データを受け取ったり保存したりすることはありません。</li>
-        <li><strong>位置情報（オプション、「位置ベースのロック」）</strong>：オンにすると、信頼できる場所として登録した場所でロック解除を許可するかどうかを判断するため、デバイスの位置情報がデバイス上で確認されます。位置情報が収集、記録されたり、当方に送信されたりすることはありません。</li>
+        <li><strong>位置情報（オプション、「位置ベースのロック」）</strong>：オンにすると、信頼できる場所として登録した場所でロック解除を許可するかどうかを判断するため、デバイスの位置情報がデバイス上で確認されます。位置情報が収集、記録されたり、当方に送信されたりすることはありません。地図で信頼できる場所を選ぶときは、Apple が独自のプライバシーポリシーのもとで提供する Apple マップから地図が読み込まれます。</li>
         <li><strong>ローカルネットワーク</strong>：上記のオプションの Wi-Fi 転送機能のため。</li>
       </ul>
     </div>
   </section>
   <section class="article" id="purchases" aria-labelledby="purchases-h">
-    <h2 id="purchases-h">購入（Apple）</h2>
+    <h2 id="purchases-h">購入（Apple と RevenueCat）</h2>
     <div class="article-body">
       <p>Privaro Pro は、Apple の StoreKit／App Store を通じて買い切りで販売されます。取引と支払いは Apple が処理し、当方が支払い情報を受け取ることはありません。購入状況は Apple アカウントを通じて管理されます。<a href="https://www.apple.com/legal/privacy/">Apple のプライバシーポリシー</a>をご覧ください。</p>
+      <p>Pro を持っているかの確認時、および Pro の購入や復元の際、アプリは App Store での購入を確認するサービスである RevenueCat（RevenueCat, Inc.、米国）を使用します。RevenueCat が受け取るのは、あなたのインストールごとに RevenueCat が作成するランダムな ID（氏名や Apple アカウントではありません）、App Store の購入情報、Pro の画面が表示されたことの記録、そして IP アドレス、デバイスやシステムの情報、アプリのバージョンなど、各リクエストに伴う技術情報です。保管庫の内容を受け取ることは一切ありません。当方はこれらを、お支払いいただいた Pro の機能を提供し、不正を防ぎ、購入に関する統計を確認するために使用します。法的根拠は、あなたとの契約の履行と、アプリを運営するうえでの当方の正当な利益です。<a href="https://www.revenuecat.com/privacy">RevenueCat のプライバシーポリシー</a>をご覧ください。</p>
+    </div>
+  </section>
+  <section class="article" id="website" aria-labelledby="website-h">
+    <h2 id="website-h">このウェブサイト</h2>
+    <div class="article-body">
+      <p>このウェブサイトは Cookie を設定せず、ブラウザに何も保存せず、分析やトラッキングのスクリプトも実行しません。privaroapp.nl は Cloudflare, Inc. が、privaro-site.vercel.app のコピーは Vercel Inc. がホストしており、どちらも米国の企業です。一般的なウェブホストと同様に、ページを配信しサイトを不正利用から守るため、IP アドレス、ブラウザの種類、要求されたページなど、ブラウザがリクエストごとに送る技術情報を処理します。また Cloudflare は、接続エラーを報告するようブラウザに求めることがあります。法的根拠は、正常に動作する安全なウェブサイトを提供するという当方の正当な利益です。<a href="https://www.cloudflare.com/privacypolicy/">Cloudflare</a> と <a href="https://vercel.com/legal/privacy-notice">Vercel</a> のプライバシーポリシーをご覧ください。</p>
     </div>
   </section>
   <section class="article" id="retention" aria-labelledby="retention-h">
     <h2 id="retention-h">データの保持と削除</h2>
     <div class="article-body">
-      <p>コンテンツは、あなたが削除するまでデバイス上に残ります。項目を削除すると「最近削除されたもの」に移動し、30日後に（または選択すれば直ちに）完全に削除されます。アプリを削除するとアプリのデータも削除されます。iCloud バックアップをオンにしていた場合は、アプリ内または iCloud ストレージの設定から削除できます。当方はあなたのデータを保有していないため、当方側で削除するものはありません。</p>
+      <p>コンテンツは、あなたが削除するまでデバイス上に残ります。項目を削除すると「最近削除されたもの」に移動し、30日後に（または選択すれば直ちに）完全に削除されます。アプリを削除すると保管庫のファイルも削除されます。iOS がアプリのキーチェーン項目の一部をデバイスに残すことがありますが、ファイルがなければそれで開けるものはありません。iCloud バックアップをオンにしていた場合は、アプリ内または iCloud ストレージの設定から削除できます。書き出したバックアップや共有したファイルは、保存先や送信先に残ります。当方は保管庫のデータを保有していないため、当方側で削除するものはありません。</p>
     </div>
   </section>
   <section class="article" id="children" aria-labelledby="children-h">
@@ -184,6 +192,7 @@ window.addEventListener("keydown", interrupt, { capture: true });
     <h2 id="your-rights-h">あなたの権利</h2>
     <div class="article-body">
       <p>お住まいの地域によっては（たとえば EU／英国の GDPR やカリフォルニア州の CCPA／CPRA のもとで）、個人情報へのアクセス、訂正、削除、処理の制限を求める権利がある場合があります。Privaro はコンテンツをデバイス上にのみ保存し、当方がサーバー上であなたの個人データを保持することはないため、これらの権利のほとんどは、アプリ内でデータを管理または削除することで直接行使できます。ご質問やご要望は、以下の連絡先までお問い合わせください。</p>
+      <p>本ポリシーに記載された個人データの管理者は Erdinc Zarbo です。GDPR が適用される場合、当方の正当な利益に基づく処理に異議を唱えることができ、データ保護監督機関に苦情を申し立てる権利があります。オランダでは <a href="https://www.autoriteitpersoonsgegevens.nl/">Autoriteit Persoonsgegevens</a>、またはお住まいの国の監督機関です。</p>
     </div>
   </section>
   <section class="article" id="security" aria-labelledby="security-h">
@@ -203,6 +212,7 @@ window.addEventListener("keydown", interrupt, { capture: true });
     <div class="article-body">
       <p>本プライバシーポリシーやあなたのプライバシーについてご質問がある場合は、こちらまでご連絡ください：<br />
       <a href="mailto:erdincdubu@icloud.com">erdincdubu@icloud.com</a></p>
+      <p>メールをいただいた場合、メールアドレスと内容は返信のためだけに使用し、そのために必要な期間を超えて保管しません。</p>
     </div>
   </section>
   </div>
