@@ -239,20 +239,21 @@ the sentence can come out of `priv_web_p1` in `i18n/strings-privacy.json`.
 
 ## Who publishes Privaro (keep the pages to the facts)
 
-Privaro is published by Erdinc Zarbo as an individual in the Netherlands, with
-no KvK registration and no btw-id (as of 14 November 2026). The Privacy Policy
-and Terms say "an individual developer in the Netherlands" and give an email
-address; they deliberately show no postal address, KvK number or btw-id, and
-none should be added unless one exists and has been decided on.
+The Privacy Policy and Terms describe the publisher as "an individual developer
+in the Netherlands" and give an email address. They show no postal address,
+KvK number or btw-id: add one only when the publisher has one and has decided
+it belongs there. Never fill these in with placeholders.
 
-That may have to change. If the publisher registers with KvK or is a trader
-under EU law, BW 3:15d asks a site that is an information society service to
-show identity, establishment address, email, KvK number and btw-id, and Apple
-publishes a trader's address (or P.O. box), phone and email on the App Store.
-A sole trader can shield the home address in the Handelsregister but must then
-register a public postal address that isn't the home address. Whether a
-postal address satisfies 3:15d's "adres van vestiging", and whether the
-publisher is a trader at all, are questions for a lawyer, not for this file.
+What a site like this must show can depend on the publisher's legal status:
+BW 3:15d asks an information society service for identity, establishment
+address, email, and any KvK number and btw-id, and Apple publishes a trader's
+address (or P.O. box), phone and email on the App Store. Those are questions
+for the publisher and a lawyer, not for this file.
+
+The Vercel copy (`privaro-site.vercel.app`): Vercel's terms allow a Hobby
+(free) plan only for personal or non-commercial use, and Vercel's DPA covers
+only Pro and Enterprise plans. Retire it, or move it to a paid plan, once the
+App Store links point at `privaroapp.nl` (see below).
 
 ## Where the App Store links to (manual App Store Connect step)
 
