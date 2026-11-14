@@ -13,9 +13,8 @@
      said, regular where it informs or answers.
    - Colour: graphite, three greys of ink, one hairline, and the logo's blue
      for links inside the text; navigation is muted words. The screenshots
-     supply the colour, and a little of their light: the Lock Screen's
-     indigo falls on the graphite behind it, as a lit screen's would on a
-     dark desk. Static, painted once.
+     supply the colour, and none of it spills onto the graphite: the
+     phones stand on a dark, clean page.
    - Light: one, high and to the left. It falls across the graphite, along
      the top edge of anything glass, across the phones' glass, and down the
      large headlines, which are a shade brighter at the top than at the
@@ -88,8 +87,6 @@
   --glass: linear-gradient(rgb(255 255 255 / .085), rgb(255 255 255 / .03));
   --glass-edge: inset 0 1px 0 rgb(255 255 255 / .13), inset 0 0 0 1px rgb(255 255 255 / .075);
   --glass-lift: 0 12px 32px -16px rgb(0 0 0 / .8);
-  /* What the Lock Screen gives off. */
-  --screen-glow: 96 84 228;
   /* The headlines' light: full white where it falls, a soft silver at the
      foot. Never below 9:1 on the graphite. */
   --lit: linear-gradient(172deg, #fff 30%, #c9cad0);
@@ -457,16 +454,7 @@ main:focus { outline: none; }
    (presentation.js) and the others step back. The row is measured against
    the section (cqw), so the phones know how far apart they stand (--step)
    when they're dealt out. */
-.gallery { position: relative; isolation: isolate; margin-top: var(--space-9); container-type: inline-size; }
-/* The light the screens give off, on the graphite behind them: the Lock
-   Screen's indigo around the first, and the others' white, far fainter,
-   along the row. It comes up with the phones as they're dealt (Arrivals),
-   so it's never a light with nothing there to give it. Mirrored with the
-   row in Arabic and Urdu. */
-.gallery::before { content: ""; position: absolute; z-index: -1; inset: -12% 0 4%; pointer-events: none;
-  background: radial-gradient(21% 60% at 12% 42%, rgb(var(--screen-glow) / .34), rgb(var(--screen-glow) / .1) 62%, transparent),
-    radial-gradient(46% 54% at 62% 42%, rgb(226 232 255 / .07), transparent); }
-[dir="rtl"] .gallery::before { scale: -1 1; }
+.gallery { margin-top: var(--space-9); container-type: inline-size; }
 /* Four columns of the page itself, so the first phone starts on the page's
    left edge and the third on its centre line, where the facts, the
    passcodes' descriptions and the links under them start. Centred as a
@@ -542,8 +530,6 @@ main:focus { outline: none; }
    in a row that runs right to left Chromium (153) measures each phone a
    place out, and dims the one in the middle. */
 @keyframes shot-focus { 0%, 100% { opacity: .6; scale: .94; } 25%, 75% { opacity: 1; scale: 1; } }
-/* The Lock Screen's light, carried off with it, one phone's width. */
-@keyframes glow-follow { to { translate: calc(-1 * (var(--lead) + var(--space-4))) 0; } }
 @supports (animation-timeline: view()) {
   @media (max-width: 1180px) and (prefers-reduced-motion: no-preference) {
     html:not([dir="rtl"]) .shots .shot-open { animation: shot-focus linear both; animation-timeline: view(inline); }
@@ -670,18 +656,7 @@ main:focus { outline: none; }
 .closing-copy { padding-bottom: var(--space-9); }
 .closing .display { max-width: 9em; }
 .closing .buy { margin-top: var(--space-7); }
-:is(.closing, .missing-body) { --shot-w: clamp(220px, 23vw, 330px); isolation: isolate; }
-.closing-shot { width: var(--shot-w); aspect-ratio: 760 / 960; overflow: hidden; -webkit-mask-image: linear-gradient(#000 55%, transparent); mask-image: linear-gradient(#000 55%, transparent); }
-/* Behind this Lock Screen too, the light it gives off, as in the gallery:
-   an ellipse the size of its screen, in the phone's own cell, blurred out
-   past it. (A blur reaches past the page's edge without widening the page;
-   a larger shape would have given phones a sideways scroll.) Everything in
-   the grid is placed, so the light can share the phone's cell. */
-:is(.closing-copy, .missing-copy) { grid-area: 1 / 1; }
-:is(.closing, .missing-body) > .closing-shot { grid-area: 1 / 2; }
-:is(.closing, .missing-body)::before { content: ""; grid-area: 1 / 2; align-self: end; justify-self: center; z-index: -1;
-  width: calc(var(--shot-w) * .92); height: calc(var(--shot-w) * .96); margin-bottom: calc(var(--shot-w) * .18);
-  border-radius: 50%; background: rgb(var(--screen-glow) / .5); filter: blur(calc(var(--shot-w) * .24)); pointer-events: none; }
+.closing-shot { width: clamp(220px, 23vw, 330px); aspect-ratio: 760 / 960; overflow: hidden; -webkit-mask-image: linear-gradient(#000 55%, transparent); mask-image: linear-gradient(#000 55%, transparent); }
 .closing-shot img { width: 100%; height: auto;
   -webkit-mask: url(/shots/framed-18-pro-max/phone-mask.svg) center / 100% 100% no-repeat;
   mask: url(/shots/framed-18-pro-max/phone-mask.svg) center / 100% 100% no-repeat; }
@@ -752,15 +727,9 @@ main:focus { outline: none; }
   }
   /* Arriving through a page crossfade, the top of the page is simply there. */
   .soft-arrival :is(.hero, .gallery) .rise, .soft-arrival .shots figure + figure figcaption { animation: none; }
-  /* The screens' light comes up as they're dealt, and is simply there
-     whenever they are. */
-  .motion .gallery::before { opacity: 0; transition: opacity var(--dur-scene) var(--ease-state) .35s; }
-  .motion .gallery:has(.in-view)::before, .soft-arrival .gallery::before { opacity: 1; }
-  .soft-arrival .gallery::before { transition: none; }
+  /* The dots under the row come up once the phones are dealt. */
   .motion .shots-dots { transition: opacity var(--dur-reveal) var(--ease-state) .9s; }
   .motion .gallery:not(:has(.in-view)) .shots-dots { opacity: 0; }
-  .motion .closing::before { opacity: 0; transition: opacity var(--dur-scene) var(--ease-state) .2s; }
-  .motion .closing:has(.closing-shot .in-view)::before { opacity: 1; }
 }
 /* On paper nothing waits to be scrolled to: what hasn't arrived yet would
    print as its first frame, blank or faded. */
@@ -775,8 +744,7 @@ main:focus { outline: none; }
   html .lock-scene { --bg: #fff; --ink: #111; --muted: #4a4a4f; --faint: #5c5c61; --dim: #6e6e73; --rule: #d2d2d7;
     --blue: #1d4fc0; color-scheme: light; }
   .site-head { position: static; }
-  .site-head::before, .lang, .film-controls, .film-progress, .skip, .handoff,
-  :is(.gallery, .closing, .missing-body)::before, .shots-dots, .door-light { display: none; }
+  .site-head::before, .lang, .film-controls, .film-progress, .skip, .handoff, .shots-dots, .door-light { display: none; }
   .motion :is(.dots, .dots i) { animation: none; }
   .long-read > .toc { position: static; }
 }
@@ -1331,10 +1299,6 @@ main:focus { outline: none; }
     scrollbar-width: thin; scrollbar-color: rgb(255 255 255 / .18) transparent; }
   .shots figure { flex: none; width: min(56vw, 300px); max-width: none; scroll-snap-align: center; }
   .shots figure:first-child { scroll-snap-align: start; }
-  /* The Lock Screen's light, behind it where it starts the row (--lead is
-     its width). Swiped on, the light goes with it, tied to the row's own
-     scrolling by the browser (where it can be: not in a row that runs
-     right to left, as above); elsewhere it stays where the row starts. */
   /* A dot for each screen, the one in the middle lit (presentation.js). The
      dot is small; what answers a finger is the whole button around it. */
   .shots-dots { display: flex; justify-content: center; margin-top: calc(-1 * var(--space-2)); }
@@ -1344,16 +1308,6 @@ main:focus { outline: none; }
     border-radius: 50%; background: var(--ink); opacity: .24; transition: opacity var(--dur-state) var(--ease-state); }
   .shots-dots button:hover::before { opacity: .45; }
   .shots-dots .is-current::before, .shots-dots .is-current:hover::before { opacity: 1; }
-  .gallery { --lead: min(56vw, 300px); timeline-scope: --row; }
-  .shots.wrap { scroll-timeline: --row inline; }
-  .gallery::before { inset: -6% 0 8%;
-    background: radial-gradient(calc(var(--lead) * .8) 58% at calc(var(--side) + var(--lead) / 2) 40%,
-      rgb(var(--screen-glow) / .36), rgb(var(--screen-glow) / .1) 62%, transparent); }
-  @supports (animation-timeline: scroll()) {
-    @media (prefers-reduced-motion: no-preference) {
-      html:not([dir="rtl"]) .gallery::before { animation: glow-follow linear both; animation-timeline: --row; animation-range: 0% 34%; }
-    }
-  }
   .safety-body, .code, .guard-foot { grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); }
   .safety-facts { align-self: end; padding-bottom: var(--space-6); }
   .safety-art { min-height: 0; }
@@ -1390,7 +1344,6 @@ main:focus { outline: none; }
   .buy-get { flex-direction: column; align-items: flex-start; gap: var(--space-4); }
   .shots.wrap { --step: calc(min(64vw, 280px) + var(--space-4)); }
   .shots figure { width: min(64vw, 280px); }
-  .gallery { --lead: min(64vw, 280px); }
   .display { font-size: clamp(36px, 10.4vw, 56px); }
   /* One above the other: the phone, the facts under it. */
   .safety-body { grid-template-columns: minmax(0, 1fr); border-bottom: 0; }
@@ -1404,9 +1357,7 @@ main:focus { outline: none; }
   .guard-foot { grid-template-columns: minmax(0, 1fr); row-gap: var(--space-4); margin-top: var(--space-7); }
   .closing { grid-template-columns: minmax(0, 1fr); }
   .closing-copy { padding-bottom: var(--space-7); }
-  :is(.closing, .missing-body) { --shot-w: min(62vw, 260px); }
-  .closing-shot { justify-self: center; }
-  :is(.closing, .missing-body) > .closing-shot, :is(.closing, .missing-body)::before { grid-area: 2 / 1; }
+  .closing-shot { width: min(62vw, 260px); justify-self: center; }
   .missing-body { grid-template-columns: minmax(0, 1fr); }
   .missing-copy { padding-bottom: var(--space-7); }
   .page { padding: 40px 0 64px; }
