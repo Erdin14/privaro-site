@@ -29,7 +29,9 @@ for its language's country ({{PRICE}}), and price.js swaps in the visitor's
 own country's price in their browser.
 i18n/timezones.json maps time zones to countries; it was generated from the
 IANA tz database (zone.tab plus its links) and only needs a refresh if that
-changes.
+changes. An old name is the country of the place it names, not of the zone
+it now links to: Chrome still reports Pacific/Truk, which is Micronesia,
+though an older tz database linked it to Papua New Guinea's zone.
 """
 import base64
 import csv
@@ -204,11 +206,22 @@ def load_pricing():
                 prices[cc] = price
     if data["base"] not in prices:
         raise SystemExit("prices.json: the base country needs a price")
+    # Places with no App Store of their own, and the country whose store they
+    # buy from. A place given a price of its own would be shown that price
+    # instead, so the two can't both be.
+    via = data.get("storefront", {})
+    for place, store in via.items():
+        if store not in prices:
+            raise SystemExit(f"prices.json: storefront {place} buys from {store}, which has no price")
+        if place in prices:
+            raise SystemExit(f"prices.json: {place} has a price of its own; take it out of storefront")
     with open(os.path.join(ROOT, "i18n", "timezones.json"), encoding="utf-8") as f:
         zones = json.load(f)
     return {"base": data["base"], "lang": data["lang_country"], "prices": prices, "usd_local": data["usd_local"],
-            # Only the time zones of countries with a price matter to price.js.
-            "zones": {z: cc for z, cc in zones.items() if cc in prices}}
+            "via": via,
+            # Only the time zones of countries with a price matter to price.js:
+            # a zone names the country whose store its people buy from.
+            "zones": {z: via.get(cc, cc) for z, cc in zones.items() if via.get(cc, cc) in prices}}
 
 
 def price_tokens(pricing, code):
@@ -649,6 +662,7 @@ def main():
     with open(os.path.join(ROOT, "templates", "price.js"), encoding="utf-8") as f:
         script = f.read()
     data = {"base": pricing["base"], "lang": pricing["lang"], "zones": pricing["zones"], "usd": pricing["usd_local"],
+            "via": dict(sorted(pricing["via"].items())),
             "prices": {cc: [cur, amt] for cc, (cur, amt) in sorted(pricing["prices"].items())}}
     write("price.js", script.replace("/*DATA*/null", json.dumps(data, ensure_ascii=False, separators=(",", ":"))))
     for page, _ in PAGES.items():
