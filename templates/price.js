@@ -8,6 +8,9 @@
   if (!DATA || !spans.length) return;
   const lang = document.documentElement.lang;
   const listed = cc => cc && Object.prototype.hasOwnProperty.call(DATA.prices, cc);
+  // A place with no App Store of its own buys from another country's
+  // (Puerto Rico from the United States'). The time zones already say so.
+  const store = cc => DATA.via[cc] || cc;
 
   function country() {
     try {
@@ -16,7 +19,8 @@
     } catch (e) { /* no Intl time zone support: fall through */ }
     for (const tag of navigator.languages || [navigator.language]) {
       const region = /-([a-z]{2})(?:-|$)/i.exec(tag || '');
-      if (region && listed(region[1].toUpperCase())) return region[1].toUpperCase();
+      const cc = region && store(region[1].toUpperCase());
+      if (listed(cc)) return cc;
     }
     return listed(DATA.lang[lang]) ? DATA.lang[lang] : DATA.base;
   }
