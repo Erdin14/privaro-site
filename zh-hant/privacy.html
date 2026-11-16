@@ -126,7 +126,7 @@ window.addEventListener("keydown", interrupt, { capture: true });
         <li>我們<strong>不會</strong>收集、查看或儲存你的照片、影片或任何保險庫內容。</li>
         <li>我們<strong>沒有</strong>使用者帳號，使用本 App 時也<strong>不會</strong>要求你提供姓名、電子郵件或電話號碼。</li>
         <li>我們<strong>沒有</strong>營運接收你保險庫資料的伺服器。</li>
-        <li>我們<strong>不會</strong>使用廣告、分析、當機回報或追蹤 SDK。iPhone 版 App 中唯一的第三方 SDK 是用於 Pro 購買的 RevenueCat（見「iPhone：購買」）。如果你在 iPhone 設定中選擇與 App 開發者分享分析資料，Apple 可能會提供當機報告和彙總統計給我們；這些來自 iOS 而非 Privaro，不含保險庫中的任何內容。Android 版 App 沒有連網權限，因此無法連線到我們或任何其他人。</li>
+        <li>我們<strong>不會</strong>使用廣告、分析、當機回報或追蹤 SDK。iPhone 版 App 中唯一的第三方 SDK 是用於 Pro 購買的 RevenueCat（見「iPhone：購買」）。如果你在 iPhone 設定中選擇與 App 開發者分享分析資料，Apple 可能會提供當機報告和彙總統計給我們；這些來自 iOS 而非 Privaro，不含保險庫中的任何內容。Android 版 App 沒有連網權限，因此無法連線到我們或任何其他人。如果你選擇與 Google 分享使用情形和診斷資料，Google 可能會透過 Google Play 管理中心提供當機報告給我們；這些來自 Google 而非 Privaro，不含保險庫中的任何內容。</li>
         <li>我們<strong>不會</strong>向任何人出售或出租你的個人資訊。</li>
         <li>我們<strong>不會</strong>在其他 App 或網站上追蹤你。</li>
       </ul>
@@ -177,13 +177,13 @@ window.addEventListener("keydown", interrupt, { capture: true });
       <p>Android 版 App 把一切都保存在你的手機上。它沒有 Android 的網際網路使用權限，因此 App 本身永遠無法連網：既不能連線到我們，也不能連線到任何其他伺服器。沒有帳號、沒有廣告、沒有分析，也沒有追蹤。如果你從 App 中開啟本隱私權政策，它會在你的網頁瀏覽器中開啟，由瀏覽器從本網站載入（見「本網站」）。</p>
       <ul>
         <li><strong>你的保險庫。</strong>你的照片、影片和縮圖，以及保險庫的完整索引（說明、檔名、日期和相簿），都會在手機上以 AES-256-GCM 加密，並保存在 App 的私有儲存空間中。它們不包含在 Android 雲端備份和裝置間轉移中。沒有 iCloud 或 Google 雲端硬碟備份。</li>
-        <li><strong>加密金鑰。</strong>金鑰由你的 Privaro 密碼與 Android Keystore 共同保護，後者使用手機的安全硬體。我們從不接收你的金鑰或內容，因此無法存取、解密或復原你的保險庫。</li>
+        <li><strong>加密金鑰和復原密鑰。</strong>加密金鑰由你的 Privaro 密碼與 Android Keystore 共同保護，後者使用手機的安全硬體。設定時你可以建立復原密鑰（可以略過此步驟，之後也可以在設定中更換）；如果你忘記密碼，它可以解鎖保險庫。它在你的手機上僅以無法讀取的形式儲存，我們也永遠看不到它。我們從不接收你的金鑰或內容，因此無法存取、解密或復原你的保險庫：如果你忘記密碼且沒有復原密鑰，我們無法替你復原資料。</li>
         <li><strong>指紋或臉部解鎖。</strong>如果你用指紋或臉部解鎖，由 Android 內建的生物辨識提示進行驗證。Privaro 永遠不會看到、接收或儲存你的生物辨識資料。</li>
         <li><strong>相機。</strong>用於 App 內相機和闖入拍照：如果你開啟此功能（Pro 功能），在輸入錯誤密碼後，App 會用前置鏡頭拍一張照片。闖入照片經過加密，並留在你的手機上。</li>
         <li><strong>麥克風。</strong>僅用於為你用 App 內相機拍攝的影片錄製聲音。</li>
-        <li><strong>照片和檔案。</strong>你透過 Android 系統的相片挑選器和檔案挑選器匯入項目，因此 App 只會取得你選取的項目，絕不會取得你的整個圖庫。</li>
-        <li><strong>購買（Google Play）。</strong>Privaro Pro 是透過 Google Play 帳款服務（Google Play Billing）進行的一次性購買。Google Play 依據 <a href="https://policies.google.com/privacy">Google 隱私權政策</a>處理購買和付款；我們不會收到你的付款資訊。Android 版 App 不使用 RevenueCat。關於你的購買，它只在手機上保存你是否擁有 Pro 以及購買時間（顯示為「會員起始日」）。</li>
-        <li><strong>內容何時離開你的手機。</strong>只在你選擇時：當你透過 Android 分享選單分享項目、將副本儲存到手機的圖庫（Pictures/Privaro 或 Movies/Privaro），或建立受密碼保護的 Secure Share 檔案或備份檔案時。副本去往何處、在那裡如何受到保護，取決於你把它傳送或儲存到哪裡；例如，圖庫中的副本不再加密，有權存取你照片的其他 App 都能看到它。匯出時，你可以選擇從副本中移除位置等中繼資料。</li>
+        <li><strong>照片和檔案。</strong>你透過 Android 系統的相片挑選器和檔案挑選器匯入項目，因此 App 只會取得你選取的項目，絕不會取得你的整個圖庫。另有一項設定可在匯入時移除照片的中繼資料。</li>
+        <li><strong>購買（Google Play）。</strong>Privaro Pro 是透過 Google Play 帳款服務（Google Play Billing）進行的一次性購買。Google Play 依據 <a href="https://policies.google.com/privacy">Google 隱私權政策</a>處理購買和付款。Google Play 會提供基本訂單資料給我們，例如訂單編號、日期、產品、價格和國家/地區，我們用於退款、稅務和記帳；我們絕不會收到你的付款資訊。法律依據是履行我們與你的契約，以及我們在稅務和記帳方面的法定義務。Android 版 App 不使用 RevenueCat。關於你的購買，它只在手機上保存你是否擁有 Pro 以及購買時間（顯示為「會員起始日」）。</li>
+        <li><strong>內容何時離開你的手機。</strong>只在你選擇時：當你透過 Android 分享選單分享項目、將副本儲存到手機的圖庫（Pictures/Privaro 或 Movies/Privaro），或建立受密碼保護的 Secure Share 檔案或備份檔案時。副本去往何處、在那裡如何受到保護，取決於你把它傳送或儲存到哪裡；例如，圖庫中的副本不再加密，有權存取你照片的其他 App 都能看到它。分享、儲存到圖庫或建立 Secure Share 檔案時，你可以選擇從副本中移除位置等中繼資料，也可以為個別照片設定在匯出時一律移除位置。備份檔案會刻意保留原始中繼資料。</li>
         <li><strong>安全記錄。</strong>App 會記錄解鎖、解鎖失敗和匯出，但絕不記錄你的任何內容。記錄在手機上加密，並保留你所選擇的天數（預設 30 天）。</li>
       </ul>
       <p>Android 版 App 沒有 iCloud 備份、Wi-Fi 傳輸、依位置鎖定、隱私掃描，也沒有 Apple Watch App。本政策中關於這些功能的內容僅適用於 iPhone 版 App。</p>
@@ -199,7 +199,7 @@ window.addEventListener("keydown", interrupt, { capture: true });
     <h2 id="retention-h">資料保留與刪除</h2>
     <div class="article-body">
       <p><strong>iPhone 版 App。</strong>你的內容會留在你的裝置上，直到你將其刪除。刪除的項目會移到「最近刪除」，並在 30 天後永久移除（或依你的選擇立即移除）。刪除 App 會移除保險庫的檔案；iOS 可能會在裝置上保留 App 的部分鑰匙圈項目，但沒有這些檔案，它們什麼也打不開。如果你開啟了 iCloud 備份，可以在 App 內或透過 iCloud 儲存空間設定將其移除。匯出的備份和分享的檔案會留在你儲存或傳送到的地方。由於我們不持有你的保險庫資料，因此沒有這類資料需要刪除。你可以要求我們刪除 RevenueCat 為你的安裝保存的購買記錄，或你寄給我們的電子郵件。</p>
-      <p><strong>Android 版 App。</strong>你的內容會留在你的手機上，直到你將其刪除。刪除的項目會在「最近刪除」中保留 30 天，然後永久移除。安全記錄保留你所選擇的天數（預設 30 天）。如果你設定了選用的脅迫清除密碼，輸入它就會清除保險庫。解除安裝 App 會刪除其中的所有內容。你分享的項目、儲存到圖庫的副本，以及 Secure Share 檔案和備份檔案，會留在你儲存或傳送到的地方。由於我們不持有你的保險庫資料，因此沒有這類資料需要刪除。你的 Google Play 購買記錄由 Google 依據其隱私權政策保存。你可以要求我們刪除你寄給我們的電子郵件。</p>
+      <p><strong>Android 版 App。</strong>你的內容會留在你的手機上，直到你將其刪除。刪除的項目會在「最近刪除」中保留 30 天，然後永久移除。安全記錄保留你所選擇的天數（預設 30 天）。如果你設定了選用的脅迫清除密碼，輸入它就會清除保險庫。解除安裝 App 會刪除其中的所有內容。你分享的項目、儲存到圖庫的副本，以及 Secure Share 檔案和備份檔案，會留在你儲存或傳送到的地方。由於我們不持有你的保險庫資料，因此沒有這類資料需要刪除。Google Play 提供給我們的訂單資料，我們會依稅務和記帳規定要求的期間保存；Google 則依據其隱私權政策保存它自己的購買記錄。你可以要求我們刪除你寄給我們的電子郵件。</p>
     </div>
   </section>
   <section class="article" id="children" aria-labelledby="children-h">
@@ -218,7 +218,7 @@ window.addEventListener("keydown", interrupt, { capture: true });
   <section class="article" id="security" aria-labelledby="security-h">
     <h2 id="security-h">安全性</h2>
     <div class="article-body">
-      <p>兩個 App 都在你的裝置上以 AES-256-GCM 加密你的內容。iPhone 版 App 將金鑰儲存在 iOS 鑰匙圈中，並使用 PBKDF2 密碼雜湊和 iOS 檔案保護。Android 版 App 以你的密碼和 Android Keystore 保護金鑰，並將保險庫保存在 App 的私有儲存空間中。沒有任何儲存或傳輸方式是百分之百安全的，而你選擇使用的功能（例如 Wi-Fi 傳輸，僅限 iPhone）具有上述的限制。你有責任妥善保管你的密碼，iPhone 上的復原密鑰以及你建立的受密碼保護檔案的密碼也是如此。</p>
+      <p>兩個 App 都在你的裝置上以 AES-256-GCM 加密你的內容。iPhone 版 App 將金鑰儲存在 iOS 鑰匙圈中，並使用 PBKDF2 密碼雜湊和 iOS 檔案保護。Android 版 App 以你的密碼和 Android Keystore 保護金鑰，並將保險庫保存在 App 的私有儲存空間中。沒有任何儲存或傳輸方式是百分之百安全的，而你選擇使用的功能（例如 Wi-Fi 傳輸，僅限 iPhone）具有上述的限制。你有責任妥善保管你的密碼和復原密鑰，你建立的受密碼保護檔案的密碼也是如此。</p>
     </div>
   </section>
   <section class="article" id="changes" aria-labelledby="changes-h">
