@@ -8,3 +8,5 @@
 *.txt text eol=lf
 _headers text eol=lf
 _redirects text eol=lf
+# Google's official Google Play badges, kept exactly as Google publishes them.
+badges/*.svg -text

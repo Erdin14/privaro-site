@@ -68,8 +68,11 @@
         <a class="appstore" href="{{APP_STORE}}" aria-label="{{badge_label}}">
           <img src="/appstore-badge-white.svg" width="150" height="50" alt="{{badge_label}}" />
         </a>
-        <p class="buy-note"><span>{{buy_free}}</span> <span>{{buy_pro}}</span></p>
+        <p class="buy-note"><span>{{buy_free}}</span> <span>{{buy_pro}}</span> <span class="also"><a href="{{ANDROID_URL}}">{{home_android}}</a></span></p>
       </div>
+      <!-- The way to the Android page is words, not Google's badge: this page
+           shows iPhones, and Apple's guidelines keep its products' pictures
+           apart from other platforms'. -->
       <!-- On a computer the badge opens the App Store on the wrong device: the
            same address as a code the phone's camera reads. Only shown where
            there's a mouse and room (styles.css); it says nothing the badge

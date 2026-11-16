@@ -5,18 +5,24 @@
      on phones they're a row under the name, the globe and the download, so
      they come after those. One list, moved by CSS, was read out and tabbed
      through in an order nobody saw: "Pro features" before the name it sat
-     under. -->
+     under. On wide screens the list ends with "Android" (the platform's
+     name, the same in every language, so written here rather than in the
+     strings). Not on phones: a fourth word took the row onto a second line
+     at 360px in Spanish, Portuguese, Japanese and Russian; there the way to
+     it is under the homepage's badge, and in the footer. The download goes
+     to the App Store, and to Google Play on the Android page (build.py). -->
 <header class="site-head">
   <div class="head-bar">
     <nav class="head-links head-links-wide" aria-label="Privaro">
       <a href="{{PRO_URL}}">{{footer_pro}}</a>
       <a href="{{SECURITY_URL}}">{{footer_security}}</a>
       <a href="{{FAQ_URL}}">{{footer_faq}}</a>
+      <a href="{{ANDROID_URL}}">Android</a>
     </nav>
     <a class="brand" href="{{HOME_URL}}"><img src="/logo.png" width="28" height="28" alt="" />Privaro</a>
     <div class="head-end">
       {{SWITCHER}}
-      <a class="head-get" href="{{APP_STORE}}" aria-label="{{badge_label}}">{{nav_download}}</a>
+      <a class="head-get" href="{{HEAD_GET_URL}}" aria-label="{{HEAD_GET_LABEL}}">{{nav_download}}</a>
     </div>
     <nav class="head-links head-links-phone" aria-label="Privaro">
       <a href="{{PRO_URL}}">{{footer_pro}}</a>

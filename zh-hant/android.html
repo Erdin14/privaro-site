@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" dir="ltr" class="graphite-site">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Privaro Android 版</title>
+<meta name="description" content="與 iPhone 上相同的加密照片與影片保險庫，適用於 Android 10 以上版本。沒有連網權限，不需要帳號，備份可在 iPhone 和 Android 之間互相轉移。" />
+<meta name="color-scheme" content="dark" />
+<link rel="canonical" href="https://privaroapp.nl/zh-hant/android" />
+<link rel="alternate" hreflang="en" href="https://privaroapp.nl/android" />
+<link rel="alternate" hreflang="es" href="https://privaroapp.nl/es/android" />
+<link rel="alternate" hreflang="fr" href="https://privaroapp.nl/fr/android" />
+<link rel="alternate" hreflang="de" href="https://privaroapp.nl/de/android" />
+<link rel="alternate" hreflang="it" href="https://privaroapp.nl/it/android" />
+<link rel="alternate" hreflang="pt-BR" href="https://privaroapp.nl/pt-br/android" />
+<link rel="alternate" hreflang="zh-Hans" href="https://privaroapp.nl/zh/android" />
+<link rel="alternate" hreflang="ko" href="https://privaroapp.nl/ko/android" />
+<link rel="alternate" hreflang="nl" href="https://privaroapp.nl/nl/android" />
+<link rel="alternate" hreflang="ja" href="https://privaroapp.nl/ja/android" />
+<link rel="alternate" hreflang="zh-Hant" href="https://privaroapp.nl/zh-hant/android" />
+<link rel="alternate" hreflang="ru" href="https://privaroapp.nl/ru/android" />
+<link rel="alternate" hreflang="tr" href="https://privaroapp.nl/tr/android" />
+<link rel="alternate" hreflang="id" href="https://privaroapp.nl/id/android" />
+<link rel="alternate" hreflang="hi" href="https://privaroapp.nl/hi/android" />
+<link rel="alternate" hreflang="ar" href="https://privaroapp.nl/ar/android" />
+<link rel="alternate" hreflang="ur" href="https://privaroapp.nl/ur/android" />
+<link rel="alternate" hreflang="x-default" href="https://privaroapp.nl/android" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Privaro" />
+<meta property="og:title" content="Privaro Android 版" />
+<meta property="og:description" content="與 iPhone 上相同的加密照片與影片保險庫，適用於 Android 10 以上版本。沒有連網權限，不需要帳號，備份可在 iPhone 和 Android 之間互相轉移。" />
+<meta property="og:url" content="https://privaroapp.nl/zh-hant/android" />
+<meta property="og:image" content="https://privaroapp.nl/og.jpg?v=0ab53eaf83" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Privaro. A vault only you can open. Download on the App Store. Two iPhones: the lock screen in front, and behind it the vault with its photos." />
+<meta property="og:locale" content="zh_TW" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
+<link rel="apple-touch-icon" href="/logo.png" />
+<link rel="stylesheet" href="/styles.css?v=bafc9c13b4" />
+<script>
+(() => {
+let transition;
+window.addEventListener("pagereveal", event => {
+transition = event.viewTransition;
+if (!transition) {
+document.documentElement.classList.remove("page-crossfade");
+return;
+}
+const current = transition;
+document.documentElement.classList.add("page-crossfade");
+current.finished.catch(() => {}).finally(() => {
+if (transition !== current) return;
+transition = null;
+document.documentElement.classList.remove("page-crossfade");
+});
+});
+const interrupt = () => transition?.skipTransition();
+window.addEventListener("pointerdown", interrupt, { capture: true, passive: true });
+window.addEventListener("keydown", interrupt, { capture: true });
+})();
+</script>
+</head>
+<body class="lock-scene">
+
+<a class="skip" href="#main">跳至主要內容</a>
+<header class="site-head">
+  <div class="head-bar">
+    <nav class="head-links head-links-wide" aria-label="Privaro">
+      <a href="/zh-hant/pro">Pro 功能</a>
+      <a href="/zh-hant/security">安全性</a>
+      <a href="/zh-hant/faq">常見問題</a>
+      <a href="/zh-hant/android" aria-current="page">Android</a>
+    </nav>
+    <a class="brand" href="/zh-hant/"><img src="/logo.png" width="28" height="28" alt="" />Privaro</a>
+    <div class="head-end">
+      <details class="lang"><summary aria-label="語言: 繁體中文"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>繁體中文</span><svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg></summary><div class="lang-menu"><p class="lang-head">語言</p><div class="lang-list"><a href="/android" lang="en" hreflang="en"><span>English</span></a><a href="/es/android" lang="es" hreflang="es"><span>Español</span></a><a href="/fr/android" lang="fr" hreflang="fr"><span>Français</span></a><a href="/de/android" lang="de" hreflang="de"><span>Deutsch</span></a><a href="/it/android" lang="it" hreflang="it"><span>Italiano</span></a><a href="/pt-br/android" lang="pt-BR" hreflang="pt-BR"><span>Português</span></a><a href="/zh/android" lang="zh-Hans" hreflang="zh-Hans"><span>简体中文</span></a><a href="/ko/android" lang="ko" hreflang="ko"><span>한국어</span></a><a href="/nl/android" lang="nl" hreflang="nl"><span>Nederlands</span></a><a href="/ja/android" lang="ja" hreflang="ja"><span>日本語</span></a><a href="/zh-hant/android" lang="zh-Hant" hreflang="zh-Hant" class="active" aria-current="true"><span>繁體中文</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></a><a href="/ru/android" lang="ru" hreflang="ru"><span>Русский</span></a><a href="/tr/android" lang="tr" hreflang="tr"><span>Türkçe</span></a><a href="/id/android" lang="id" hreflang="id"><span>Bahasa Indonesia</span></a><a href="/hi/android" lang="hi" hreflang="hi"><span>हिन्दी</span></a><a href="/ar/android" lang="ar" hreflang="ar"><span>العربية</span></a><a href="/ur/android" lang="ur" hreflang="ur"><span>اردو</span></a></div></div></details>
+      <a class="head-get" href="https://play.google.com/store/apps/details?id=com.erdincz.privaro.app" aria-label="在 Google Play 上取得 Privaro">下載</a>
+    </div>
+    <nav class="head-links head-links-phone" aria-label="Privaro">
+      <a href="/zh-hant/pro">Pro 功能</a>
+      <a href="/zh-hant/security">安全性</a>
+      <a href="/zh-hant/faq">常見問題</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="page wrap android">
+
+  <section class="android-hero" aria-labelledby="android-title">
+    <h1 id="android-title">Privaro<wbr> Android 版。</h1>
+    <p class="intro">與 iPhone 上相同的加密保險庫，適用於 Android 10 以上版本。裡面的一切都在你的手機上加密，而且 App 完全沒有連網權限。</p>
+    <div class="play-get">
+      <a class="play" href="https://play.google.com/store/apps/details?id=com.erdincz.privaro.app" aria-label="在 Google Play 上取得 Privaro"><img src="/badges/google-play-zh-hant.svg" width="169" height="50" alt="在 Google Play 上取得 Privaro" /></a>
+      <p class="buy-note"><span>免費下載。需要 Android 10 以上版本。</span> <span>Pro 為選用：在 Google Play 一次購買，終身有效。</span></p>
+    </div>
+  </section>
+
+  <section class="android-shots" aria-label="Android 上的 App">
+    <figure><div class="shot-slot" data-shot="lock"><span>Android screenshot to come</span></div><figcaption><strong>鎖定畫面</strong> <span>用指紋、臉部或它自己的密碼打開。</span></figcaption></figure>
+    <figure><div class="shot-slot" data-shot="vault"><span>Android screenshot to come</span></div><figcaption><strong>保險庫</strong> <span>照片和影片，在你的手機上加密。</span></figcaption></figure>
+    <figure><div class="shot-slot" data-shot="albums"><span>Android screenshot to come</span></div><figcaption><strong>相簿</strong> <span>有子資料夾的相簿，封面由你挑選。</span></figcaption></figure>
+    <figure><div class="shot-slot" data-shot="privacy"><span>Android screenshot to come</span></div><figcaption><strong>隱私模式</strong> <span>在家、外出、旅行或最高：由你決定 Privaro 有多嚴格。</span></figcaption></figure>
+  </section>
+
+  <section class="android-block" aria-labelledby="android-safe">
+    <h2 id="android-safe" class="android-title">在你的手機上<wbr>加密。 <span class="answer">而且從不連網。</span></h2>
+    <dl class="ledger">
+      <div><dt>AES-256-GCM</dt><dd>每張照片和每段影片，以及保險庫的完整索引，都在你的手機上加密，和 iPhone 上一樣。</dd></div>
+      <div><dt>沒有連網權限</dt><dd>App 沒有 Android 的網際網路使用權限，因此無法連網，連我們這裡也連不上。</dd></div>
+      <div><dt>密碼與安全硬體</dt><dd>你的密碼是加密的一部分，與手機的安全硬體（Android Keystore）共同運作。</dd></div>
+      <div><dt>不需要帳號</dt><dd>無須註冊，也沒有 Privaro 伺服器保存你的照片。</dd></div>
+    </dl>
+  </section>
+
+  <section class="android-block" aria-labelledby="android-iphone">
+    <h2 id="android-iphone" class="android-title">與你的 iPhone<wbr>搭配使用。</h2>
+    <div class="android-body">
+      <p class="android-lead">在 iPhone 上製作的受密碼保護的備份可以在 Android 上復原，在 Android 上製作的也可以在 iPhone 上復原。安全分享檔案在兩邊都能打開。</p>
+      <h3 class="android-sub">從 iPhone 轉移</h3>
+      <ol class="steps">
+        <li>在 iPhone 上匯出備份並為它設定密碼。（在 iPhone 上，匯出備份屬於 Pro 功能。）</li>
+        <li>把備份檔案拷貝到你的 Android 手機。</li>
+        <li>在 Android 上，設定 Privaro 時選擇「復原備份」，或之後在「設定 > 備份與復原」中操作，然後輸入備份的密碼。</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="android-features" aria-labelledby="android-all">
+    <h2 id="android-all" class="android-title">Android 版的<wbr>所有功能。</h2>
+    <div class="feature-group">
+      <h3 class="group-name">解鎖</h3>
+      <ul>
+        <li><h4>它自己的密碼</h4><p>6 位數字、8 位數字，或英文字母加數字。每次輸錯後，下一次前的等待時間都會變長。</p></li>
+        <li><h4>指紋或臉部</h4><p>用指紋或臉部解鎖。Privaro 只接受手機認定為高強度的生物辨識。</p></li>
+        <li><h4>復原密鑰</h4><p>忘記密碼時，它可以打開保險庫。你在設定時建立它（可以略過這一步），也可以在設定中更換。</p></li>
+      </ul>
+    </div>
+    <div class="feature-group">
+      <h3 class="group-name">低調隱藏</h3>
+      <ul>
+        <li><h4>偽裝 App 圖像</h4><p>把 Privaro 藏在計算機、備忘錄或天氣圖示後面。</p></li>
+        <li><h4>計算機偽裝</h4><p>Privaro 可以偽裝成計算機。</p></li>
+        <li><h4>誘餌保險庫</h4><p>設定第二組密碼，打開另一個裝有無害照片的獨立保險庫。如果你被迫解鎖 Privaro，就輸入這組密碼，你真正的保險庫會一直隱藏起來。</p></li>
+        <li><h4>脅迫清除</h4><p>設定一組密碼，一輸入就會清除整個保險庫，包括誘餌保險庫。這是為最壞的情況準備的，而且無法復原。</p></li>
+        <li><h4>隱私模式</h4><p>決定 Privaro 有多嚴格：在家、外出、旅行或最高。</p></li>
+      </ul>
+    </div>
+    <div class="feature-group">
+      <h3 class="group-name">有人嘗試時</h3>
+      <ul>
+        <li><h4>闖入拍照</h4><p>輸入錯誤密碼後，Privaro 可以用前置鏡頭拍一張照片，讓你知道有人嘗試過。</p></li>
+        <li><h4>安全記錄</h4><p>記錄解鎖、失敗的嘗試和匯出，從不記錄你的內容，依你選擇的天數保留（預設 30 天）。</p></li>
+        <li><h4>封鎖截圖</h4><p>防止截圖拍下保險庫。</p></li>
+        <li><h4>緊急鎖定</h4><p>一個能立即鎖住保險庫的按鈕。</p></li>
+        <li><h4>覆蓋鎖定</h4><p>把手機螢幕朝下放，保險庫就會鎖定。</p></li>
+      </ul>
+    </div>
+    <div class="feature-group">
+      <h3 class="group-name">你的照片和影片</h3>
+      <ul>
+        <li><h4>相簿</h4><p>有子資料夾和封面的相簿，以及智慧相簿。</p></li>
+        <li><h4>個別相簿密碼</h4><p>為相簿設定專屬密碼。即使保險庫的其他部分已打開，它仍會保持鎖定。</p></li>
+        <li><h4>最近刪除</h4><p>刪除的項目會在這裡保留 30 天，然後徹底消失。</p></li>
+        <li><h4>匯入照片</h4><p>透過系統相片挑選器、從檔案匯入，或用 App 內相機拍攝。用 App 內相機拍的照片絕不會出現在手機圖庫中。</p></li>
+        <li><h4>影片</h4><p>直接從加密檔案播放。</p></li>
+        <li><h4>分享與儲存</h4><p>分享副本或儲存到圖庫，如果需要，可先清除位置等中繼資料。</p></li>
+        <li><h4>安全分享</h4><p>將照片或影片以加密檔案傳送給其他 Privaro 使用者，只有用你選擇的通關密語才能打開。傳送過程中不會經過我們。</p></li>
+      </ul>
+    </div>
+    <div class="feature-group">
+      <h3 class="group-name">個人化</h3>
+      <ul>
+        <li><h4>鎖定畫面主題</h4><p>選擇鎖定畫面的外觀。</p></li>
+        <li><h4>17 種語言</h4><p>Privaro 支援 17 種語言。</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="android-block" aria-labelledby="android-pro">
+    <h2 id="android-pro" class="android-title">Pro，一次購買，<wbr>終身有效。</h2>
+    <div class="android-body">
+      <p class="android-lead">Pro 是透過 Google Play 進行的一次性購買，終身有效。它解除免費版的限制，並加入下面的功能。</p>
+      <table class="plans">
+        <thead><tr><td></td><th scope="col">免費版</th><th scope="col">Pro</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">儲存空間</th><td>每個保險庫 2.5 GB</td><td>不限</td></tr>
+          <tr><th scope="row">相簿</th><td>5</td><td>不限</td></tr>
+        </tbody>
+      </table>
+      <h3 class="android-sub">Pro 增加</h3>
+      <ul class="marks">
+        <li class="mark-yes">不限儲存空間和相簿數量</li>
+        <li class="mark-yes">封鎖截圖</li>
+        <li class="mark-yes">闖入拍照</li>
+        <li class="mark-yes">匯出備份</li>
+        <li class="mark-yes">個別相簿密碼</li>
+        <li class="mark-yes">偽裝 App 圖像</li>
+        <li class="mark-yes">安全分享</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="android-block" aria-labelledby="android-not">
+    <h2 id="android-not" class="android-title">Android 上<wbr>暫時還沒有。</h2>
+    <div class="android-body">
+      <p class="android-lead">以下功能 iPhone 版有，但 Android 版暫時還沒有：</p>
+      <ul class="marks">
+        <li class="mark-no">iCloud 備份</li>
+        <li class="mark-no">依位置鎖定</li>
+        <li class="mark-no">隱私掃描</li>
+        <li class="mark-no">Wi-Fi 傳輸</li>
+        <li class="mark-no">Apple Watch 版 App</li>
+        <li class="mark-no">捷徑</li>
+        <li class="mark-no">免費 7 天 Pro 禮物</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="get play-end" aria-label="在 Google Play 上取得 Privaro">
+    <div class="buy">
+      <div class="buy-get">
+        <a class="play" href="https://play.google.com/store/apps/details?id=com.erdincz.privaro.app" aria-label="在 Google Play 上取得 Privaro"><img src="/badges/google-play-zh-hant.svg" width="169" height="50" alt="在 Google Play 上取得 Privaro" loading="lazy" /></a>
+        <p class="buy-note"><span>免費下載。需要 Android 10 以上版本。</span></p>
+      </div>
+    </div>
+    <p class="trademark">Google Play 和 Google Play 標誌是 Google LLC 的商標。</p>
+  </section>
+
+</main>
+
+<footer class="site-foot wrap">
+  <nav class="foot-links">
+    <a href="/zh-hant/pro">Pro 功能</a>
+    <a href="/zh-hant/android" aria-current="page">Android</a>
+    <a href="/zh-hant/faq">常見問題</a>
+    <a href="/zh-hant/security">安全性</a>
+    <a href="/zh-hant/privacy">隱私權政策</a>
+    <a href="/zh-hant/terms">使用條款</a>
+    <a href="mailto:erdincdubu@icloud.com">聯絡我們</a>
+    <details class="lang"><summary aria-label="語言: 繁體中文"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>繁體中文</span><svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg></summary><div class="lang-menu"><p class="lang-head">語言</p><div class="lang-list"><a href="/android" lang="en" hreflang="en"><span>English</span></a><a href="/es/android" lang="es" hreflang="es"><span>Español</span></a><a href="/fr/android" lang="fr" hreflang="fr"><span>Français</span></a><a href="/de/android" lang="de" hreflang="de"><span>Deutsch</span></a><a href="/it/android" lang="it" hreflang="it"><span>Italiano</span></a><a href="/pt-br/android" lang="pt-BR" hreflang="pt-BR"><span>Português</span></a><a href="/zh/android" lang="zh-Hans" hreflang="zh-Hans"><span>简体中文</span></a><a href="/ko/android" lang="ko" hreflang="ko"><span>한국어</span></a><a href="/nl/android" lang="nl" hreflang="nl"><span>Nederlands</span></a><a href="/ja/android" lang="ja" hreflang="ja"><span>日本語</span></a><a href="/zh-hant/android" lang="zh-Hant" hreflang="zh-Hant" class="active" aria-current="true"><span>繁體中文</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></a><a href="/ru/android" lang="ru" hreflang="ru"><span>Русский</span></a><a href="/tr/android" lang="tr" hreflang="tr"><span>Türkçe</span></a><a href="/id/android" lang="id" hreflang="id"><span>Bahasa Indonesia</span></a><a href="/hi/android" lang="hi" hreflang="hi"><span>हिन्दी</span></a><a href="/ar/android" lang="ar" hreflang="ar"><span>العربية</span></a><a href="/ur/android" lang="ur" hreflang="ur"><span>اردو</span></a></div></div></details>
+  </nav>
+  <p class="foot-note">© <span id="year">2026</span> Privaro. 荷蘭製作。本網站不使用 Cookie，也沒有追蹤器。</p>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+const langs = document.querySelectorAll('.lang');
+const still = matchMedia('(prefers-reduced-motion: reduce)');
+const shut = lang => {
+if (!lang.open || lang.classList.contains('leaving')) return;
+if (still.matches) { lang.open = false; return; }
+lang.classList.add('leaving');
+setTimeout(() => { lang.open = false; lang.classList.remove('leaving'); }, 200);
+};
+document.addEventListener('click', e => langs.forEach(lang => {
+if (!lang.open) return;
+const summary = e.target.closest ? e.target.closest('summary') : null;
+if (summary && lang.contains(summary)) { e.preventDefault(); shut(lang); }
+else if (e.target === lang || !lang.contains(e.target)) shut(lang);
+}));
+document.addEventListener('keydown', e => {
+if (e.key !== 'Escape') return;
+langs.forEach(lang => { if (lang.open) { shut(lang); lang.querySelector('summary').focus(); } });
+});
+</script>
+
+<script src="/presentation.js?v=2bf42b0be9" data-enlarge="放大截圖：{name}" data-close="關閉檢視器" data-previous="上一張截圖" data-next="下一張截圖" defer></script>
+</body>
+</html>
