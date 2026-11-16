@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="{{LANG}}" dir="{{DIR}}" class="graphite-site">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{{meta_title_android}}</title>
+<meta name="description" content="{{meta_desc_android}}" />
+<meta name="color-scheme" content="dark" />
+{{SEO}}
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
+<link rel="apple-touch-icon" href="/logo.png" />
+<link rel="stylesheet" href="/styles.css" />
+<script>
+// Register before first reveal, including restored history entries.
+(() => {
+  let transition;
+  window.addEventListener("pagereveal", event => {
+    transition = event.viewTransition;
+    if (!transition) {
+      document.documentElement.classList.remove("page-crossfade");
+      return;
+    }
+    const current = transition;
+    document.documentElement.classList.add("page-crossfade");
+    current.finished.catch(() => {}).finally(() => {
+      if (transition !== current) return;
+      transition = null;
+      document.documentElement.classList.remove("page-crossfade");
+    });
+  });
+  // Intent takes priority over decoration; never consume the user's event.
+  const interrupt = () => transition?.skipTransition();
+  window.addEventListener("pointerdown", interrupt, { capture: true, passive: true });
+  window.addEventListener("keydown", interrupt, { capture: true });
+})();
+</script>
+</head>
+<body class="lock-scene">
+
+{{HEADER}}
+
+<!-- Privaro for Android. Every claim here is one the owner gave for the
+     Android app; the features the two apps share use the Pro page's own
+     names and words (prof*), so the pages can't disagree.
+
+     Brand rules, both stores':
+     - Google's "Get it on Google Play" badge (badges/, from Google's Partner
+       Marketing Hub, unchanged) in the page's own language, at least 28px
+       high, with a quarter of its height clear around it.
+     - Apple: no App Store badge sits beside it here (where the two are
+       shown together, Apple's black badge goes first), and no iPhone
+       picture is on this page, so no Apple product image appears next to
+       another platform's. iPhone comes first wherever both are named.
+     The header's download link leads to Google Play on this page alone
+     (build.py). The Play listing only answers once the app is published:
+     this page goes live then, not before. -->
+<main id="main" class="page wrap android">
+
+  <section class="android-hero" aria-labelledby="android-title">
+    <h1 id="android-title">{{android_h1}}</h1>
+    <p class="intro">{{android_intro}}</p>
+    <div class="play-get">
+      <a class="play" href="{{PLAY_STORE}}" aria-label="{{android_badge_label}}"><img src="{{PLAY_BADGE}}" width="169" height="50" alt="{{android_badge_label}}" /></a>
+      <p class="buy-note"><span>{{android_buy_free}}</span> <span>{{android_buy_pro}}</span></p>
+    </div>
+  </section>
+
+  <!-- SCREENSHOTS TO COME. Four places for real Android screenshots, one per
+       screen the homepage shows for iPhone. Never an iPhone screenshot here,
+       and none made up. When they arrive: put each in shots/android/ (one set
+       per language, as the iPhone ones are), swap each .shot-slot for a
+       <picture> with alt text, and take this note and the placeholder style
+       out of styles.css. -->
+  <section class="android-shots" aria-label="{{android_shots_label}}">
+    <figure><div class="shot-slot" data-shot="lock"><span>Android screenshot to come</span></div><figcaption><strong>{{cap_lock}}</strong> <span>{{android_shot_lock_d}}</span></figcaption></figure>
+    <figure><div class="shot-slot" data-shot="vault"><span>Android screenshot to come</span></div><figcaption><strong>{{cap_vault}}</strong> <span>{{android_shot_vault_d}}</span></figcaption></figure>
+    <figure><div class="shot-slot" data-shot="albums"><span>Android screenshot to come</span></div><figcaption><strong>{{cap_albums}}</strong> <span>{{android_shot_albums_d}}</span></figcaption></figure>
+    <figure><div class="shot-slot" data-shot="privacy"><span>Android screenshot to come</span></div><figcaption><strong>{{cap_privacy}}</strong> <span>{{android_shot_privacy_d}}</span></figcaption></figure>
+  </section>
+
+  <!-- How it's kept private: the homepage's statement, said for Android, and
+       the facts behind it as the homepage sets them. -->
+  <section class="android-block" aria-labelledby="android-safe">
+    <h2 id="android-safe" class="android-title">{{android_same_h}} <span class="answer">{{android_same_sub}}</span></h2>
+    <dl class="ledger">
+      <div><dt>AES-256-GCM</dt><dd>{{android_fact1_d}}</dd></div>
+      <div><dt>{{android_fact2_t}}</dt><dd>{{android_fact2_d}}</dd></div>
+      <div><dt>{{android_fact3_t}}</dt><dd>{{android_fact3_d}}</dd></div>
+      <div><dt>{{fact2_t}}</dt><dd>{{fact2_d}}</dd></div>
+    </dl>
+  </section>
+
+  <!-- The two apps together, and how to move a vault over. -->
+  <section class="android-block" aria-labelledby="android-iphone">
+    <h2 id="android-iphone" class="android-title">{{android_iphone_h}}</h2>
+    <div class="android-body">
+      <p class="android-lead">{{android_iphone_d}}</p>
+      <h3 class="android-sub">{{android_move_h}}</h3>
+      <ol class="steps">
+        <li>{{android_move_1}}</li>
+        <li>{{android_move_2}}</li>
+        <li>{{android_move_3}}</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Everything in the app, in five groups, each feature with what it does.
+       Pro's limits and features are told once, in the next section. -->
+  <section class="android-features" aria-labelledby="android-all">
+    <h2 id="android-all" class="android-title">{{android_features_h}}</h2>
+    <div class="feature-group">
+      <h3 class="group-name">{{android_g1}}</h3>
+      <ul>
+        <li><h4>{{android_pass_t}}</h4><p>{{android_pass_d}}</p></li>
+        <li><h4>{{android_bio_t}}</h4><p>{{android_bio_d}}</p></li>
+        <li><h4>{{android_rec_t}}</h4><p>{{android_rec_d}}</p></li>
+      </ul>
+    </div>
+    <div class="feature-group">
+      <h3 class="group-name">{{android_g2}}</h3>
+      <ul>
+        <li><h4>{{prof12_t}}</h4><p>{{android_icon_d}}</p></li>
+        <li><h4>{{android_calc_t}}</h4><p>{{android_calc_d}}</p></li>
+        <li><h4>{{prof8_t}}</h4><p>{{prof8_d}}</p></li>
+        <li><h4>{{prof9_t}}</h4><p>{{prof9_d}}</p></li>
+        <li><h4>{{cap_privacy}}</h4><p>{{android_modes_d}}</p></li>
+      </ul>
+    </div>
+    <div class="feature-group">
+      <h3 class="group-name">{{android_g3}}</h3>
+      <ul>
+        <li><h4>{{prof5_t}}</h4><p>{{android_breakin_d}}</p></li>
+        <li><h4>{{android_history_t}}</h4><p>{{android_history_d}}</p></li>
+        <li><h4>{{android_block_t}}</h4><p>{{android_block_d}}</p></li>
+        <li><h4>{{android_panic_t}}</h4><p>{{android_panic_d}}</p></li>
+        <li><h4>{{android_facedown_t}}</h4><p>{{android_facedown_d}}</p></li>
+      </ul>
+    </div>
+    <div class="feature-group">
+      <h3 class="group-name">{{android_g4}}</h3>
+      <ul>
+        <li><h4>{{cap_albums}}</h4><p>{{android_albums_d}}</p></li>
+        <li><h4>{{prof7_t}}</h4><p>{{prof7_d}}</p></li>
+        <li><h4>{{android_deleted_t}}</h4><p>{{android_deleted_d}}</p></li>
+        <li><h4>{{android_import_t}}</h4><p>{{android_import_d}}</p></li>
+        <li><h4>{{android_video_t}}</h4><p>{{android_video_d}}</p></li>
+        <li><h4>{{android_share_t}}</h4><p>{{android_share_d}}</p></li>
+        <li><h4>{{prof13_t}}</h4><p>{{prof13_d}}</p></li>
+      </ul>
+    </div>
+    <div class="feature-group">
+      <h3 class="group-name">{{android_g5}}</h3>
+      <ul>
+        <li><h4>{{android_themes_t}}</h4><p>{{android_themes_d}}</p></li>
+        <li><h4>{{android_langs_t}}</h4><p>{{android_langs_d}}</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Pro on Android: bought once through Google Play. No price here: Google
+       Play shows it, in the buyer's own currency. -->
+  <section class="android-block" aria-labelledby="android-pro">
+    <h2 id="android-pro" class="android-title">{{android_pro_h}}</h2>
+    <div class="android-body">
+      <p class="android-lead">{{android_pro_d}}</p>
+      <table class="plans">
+        <thead><tr><td></td><th scope="col">{{pro_free}}</th><th scope="col">Pro</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">{{pro_s1}}</th><td>{{android_per_vault}}</td><td>{{android_unlimited}}</td></tr>
+          <tr><th scope="row">{{pro_s2}}</th><td>5</td><td>{{android_unlimited}}</td></tr>
+        </tbody>
+      </table>
+      <h3 class="android-sub">{{android_pro_adds}}</h3>
+      <ul class="marks">
+        <li class="mark-yes">{{android_pro_unl}}</li>
+        <li class="mark-yes">{{android_block_t}}</li>
+        <li class="mark-yes">{{prof5_t}}</li>
+        <li class="mark-yes">{{android_export_t}}</li>
+        <li class="mark-yes">{{prof7_t}}</li>
+        <li class="mark-yes">{{prof12_t}}</li>
+        <li class="mark-yes">{{prof13_t}}</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Said plainly, so nobody expects them. -->
+  <section class="android-block" aria-labelledby="android-not">
+    <h2 id="android-not" class="android-title">{{android_not_h}}</h2>
+    <div class="android-body">
+      <p class="android-lead">{{android_not_d}}</p>
+      <ul class="marks">
+        <li class="mark-no">{{android_not_icloud}}</li>
+        <li class="mark-no">{{prof11_t}}</li>
+        <li class="mark-no">{{android_not_scan}}</li>
+        <li class="mark-no">{{prof10_t}}</li>
+        <li class="mark-no">{{android_not_watch}}</li>
+        <li class="mark-no">{{android_not_shortcuts}}</li>
+        <li class="mark-no">{{android_not_gift}}</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Where the page ends: the way to Google Play, as the other reading
+       pages end with the way to the App Store, and the line Google asks for
+       where its marks are used. -->
+  <section class="get play-end" aria-label="{{android_badge_label}}">
+    <div class="buy">
+      <div class="buy-get">
+        <a class="play" href="{{PLAY_STORE}}" aria-label="{{android_badge_label}}"><img src="{{PLAY_BADGE}}" width="169" height="50" alt="{{android_badge_label}}" loading="lazy" /></a>
+        <p class="buy-note"><span>{{android_buy_free}}</span></p>
+      </div>
+    </div>
+    <p class="trademark">{{android_tm}}</p>
+  </section>
+
+</main>
+
+{{FOOTER}}
+</body>
+</html>

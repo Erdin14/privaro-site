@@ -1701,6 +1701,346 @@
     <xhtml:link rel="alternate" hreflang="ur" href="https://privaroapp.nl/ur/terms" />
   </url>
   <url>
+    <loc>https://privaroapp.nl/android</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://privaroapp.nl/android" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://privaroapp.nl/es/android" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://privaroapp.nl/fr/android" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://privaroapp.nl/de/android" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://privaroapp.nl/it/android" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://privaroapp.nl/pt-br/android" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://privaroapp.nl/zh/android" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://privaroapp.nl/ko/android" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://privaroapp.nl/nl/android" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://privaroapp.nl/ja/android" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://privaroapp.nl/zh-hant/android" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://privaroapp.nl/ru/android" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://privaroapp.nl/tr/android" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://privaroapp.nl/id/android" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://privaroapp.nl/hi/android" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://privaroapp.nl/ar/android" />
+    <xhtml:link rel="alternate" hreflang="ur" href="https://privaroapp.nl/ur/android" />
+  </url>
+  <url>
+    <loc>https://privaroapp.nl/es/android</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://privaroapp.nl/android" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://privaroapp.nl/es/android" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://privaroapp.nl/fr/android" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://privaroapp.nl/de/android" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://privaroapp.nl/it/android" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://privaroapp.nl/pt-br/android" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://privaroapp.nl/zh/android" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://privaroapp.nl/ko/android" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://privaroapp.nl/nl/android" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://privaroapp.nl/ja/android" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://privaroapp.nl/zh-hant/android" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://privaroapp.nl/ru/android" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://privaroapp.nl/tr/android" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://privaroapp.nl/id/android" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://privaroapp.nl/hi/android" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://privaroapp.nl/ar/android" />
+    <xhtml:link rel="alternate" hreflang="ur" href="https://privaroapp.nl/ur/android" />
+  </url>
+  <url>
+    <loc>https://privaroapp.nl/fr/android</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://privaroapp.nl/android" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://privaroapp.nl/es/android" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://privaroapp.nl/fr/android" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://privaroapp.nl/de/android" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://privaroapp.nl/it/android" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://privaroapp.nl/pt-br/android" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://privaroapp.nl/zh/android" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://privaroapp.nl/ko/android" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://privaroapp.nl/nl/android" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://privaroapp.nl/ja/android" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://privaroapp.nl/zh-hant/android" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://privaroapp.nl/ru/android" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://privaroapp.nl/tr/android" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://privaroapp.nl/id/android" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://privaroapp.nl/hi/android" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://privaroapp.nl/ar/android" />
+    <xhtml:link rel="alternate" hreflang="ur" href="https://privaroapp.nl/ur/android" />
+  </url>
+  <url>
+    <loc>https://privaroapp.nl/de/android</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://privaroapp.nl/android" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://privaroapp.nl/es/android" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://privaroapp.nl/fr/android" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://privaroapp.nl/de/android" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://privaroapp.nl/it/android" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://privaroapp.nl/pt-br/android" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://privaroapp.nl/zh/android" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://privaroapp.nl/ko/android" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://privaroapp.nl/nl/android" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://privaroapp.nl/ja/android" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://privaroapp.nl/zh-hant/android" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://privaroapp.nl/ru/android" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://privaroapp.nl/tr/android" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://privaroapp.nl/id/android" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://privaroapp.nl/hi/android" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://privaroapp.nl/ar/android" />
+    <xhtml:link rel="alternate" hreflang="ur" href="https://privaroapp.nl/ur/android" />
+  </url>
+  <url>
+    <loc>https://privaroapp.nl/it/android</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://privaroapp.nl/android" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://privaroapp.nl/es/android" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://privaroapp.nl/fr/android" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://privaroapp.nl/de/android" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://privaroapp.nl/it/android" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://privaroapp.nl/pt-br/android" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://privaroapp.nl/zh/android" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://privaroapp.nl/ko/android" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://privaroapp.nl/nl/android" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://privaroapp.nl/ja/android" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://privaroapp.nl/zh-hant/android" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://privaroapp.nl/ru/android" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://privaroapp.nl/tr/android" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://privaroapp.nl/id/android" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://privaroapp.nl/hi/android" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://privaroapp.nl/ar/android" />
+    <xhtml:link rel="alternate" hreflang="ur" href="https://privaroapp.nl/ur/android" />
+  </url>
+  <url>
+    <loc>https://privaroapp.nl/pt-br/android</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://privaroapp.nl/android" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://privaroapp.nl/es/android" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://privaroapp.nl/fr/android" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://privaroapp.nl/de/android" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://privaroapp.nl/it/android" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://privaroapp.nl/pt-br/android" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://privaroapp.nl/zh/android" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://privaroapp.nl/ko/android" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://privaroapp.nl/nl/android" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://privaroapp.nl/ja/android" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://privaroapp.nl/zh-hant/android" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://privaroapp.nl/ru/android" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://privaroapp.nl/tr/android" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://privaroapp.nl/id/android" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://privaroapp.nl/hi/android" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://privaroapp.nl/ar/android" />
+    <xhtml:link rel="alternate" hreflang="ur" href="https://privaroapp.nl/ur/android" />
+  </url>
+  <url>
+    <loc>https://privaroapp.nl/zh/android</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://privaroapp.nl/android" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://privaroapp.nl/es/android" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://privaroapp.nl/fr/android" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://privaroapp.nl/de/android" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://privaroapp.nl/it/android" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://privaroapp.nl/pt-br/android" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://privaroapp.nl/zh/android" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://privaroapp.nl/ko/android" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://privaroapp.nl/nl/android" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://privaroapp.nl/ja/android" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://privaroapp.nl/zh-hant/android" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://privaroapp.nl/ru/android" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://privaroapp.nl/tr/android" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://privaroapp.nl/id/android" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://privaroapp.nl/hi/android" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://privaroapp.nl/ar/android" />
+    <xhtml:link rel="alternate" hreflang="ur" href="https://privaroapp.nl/ur/android" />
+  </url>
+  <url>
+    <loc>https://privaroapp.nl/ko/android</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://privaroapp.nl/android" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://privaroapp.nl/es/android" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://privaroapp.nl/fr/android" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://privaroapp.nl/de/android" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://privaroapp.nl/it/android" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://privaroapp.nl/pt-br/android" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://privaroapp.nl/zh/android" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://privaroapp.nl/ko/android" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://privaroapp.nl/nl/android" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://privaroapp.nl/ja/android" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://privaroapp.nl/zh-hant/android" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://privaroapp.nl/ru/android" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://privaroapp.nl/tr/android" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://privaroapp.nl/id/android" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://privaroapp.nl/hi/android" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://privaroapp.nl/ar/android" />
+    <xhtml:link rel="alternate" hreflang="ur" href="https://privaroapp.nl/ur/android" />
+  </url>
+  <url>
+    <loc>https://privaroapp.nl/nl/android</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://privaroapp.nl/android" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://privaroapp.nl/es/android" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://privaroapp.nl/fr/android" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://privaroapp.nl/de/android" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://privaroapp.nl/it/android" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://privaroapp.nl/pt-br/android" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://privaroapp.nl/zh/android" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://privaroapp.nl/ko/android" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://privaroapp.nl/nl/android" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://privaroapp.nl/ja/android" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://privaroapp.nl/zh-hant/android" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://privaroapp.nl/ru/android" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://privaroapp.nl/tr/android" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://privaroapp.nl/id/android" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://privaroapp.nl/hi/android" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://privaroapp.nl/ar/android" />
+    <xhtml:link rel="alternate" hreflang="ur" href="https://privaroapp.nl/ur/android" />
+  </url>
+  <url>
+    <loc>https://privaroapp.nl/ja/android</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://privaroapp.nl/android" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://privaroapp.nl/es/android" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://privaroapp.nl/fr/android" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://privaroapp.nl/de/android" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://privaroapp.nl/it/android" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://privaroapp.nl/pt-br/android" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://privaroapp.nl/zh/android" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://privaroapp.nl/ko/android" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://privaroapp.nl/nl/android" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://privaroapp.nl/ja/android" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://privaroapp.nl/zh-hant/android" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://privaroapp.nl/ru/android" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://privaroapp.nl/tr/android" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://privaroapp.nl/id/android" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://privaroapp.nl/hi/android" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://privaroapp.nl/ar/android" />
+    <xhtml:link rel="alternate" hreflang="ur" href="https://privaroapp.nl/ur/android" />
+  </url>
+  <url>
+    <loc>https://privaroapp.nl/zh-hant/android</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://privaroapp.nl/android" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://privaroapp.nl/es/android" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://privaroapp.nl/fr/android" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://privaroapp.nl/de/android" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://privaroapp.nl/it/android" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://privaroapp.nl/pt-br/android" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://privaroapp.nl/zh/android" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://privaroapp.nl/ko/android" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://privaroapp.nl/nl/android" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://privaroapp.nl/ja/android" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://privaroapp.nl/zh-hant/android" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://privaroapp.nl/ru/android" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://privaroapp.nl/tr/android" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://privaroapp.nl/id/android" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://privaroapp.nl/hi/android" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://privaroapp.nl/ar/android" />
+    <xhtml:link rel="alternate" hreflang="ur" href="https://privaroapp.nl/ur/android" />
+  </url>
+  <url>
+    <loc>https://privaroapp.nl/ru/android</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://privaroapp.nl/android" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://privaroapp.nl/es/android" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://privaroapp.nl/fr/android" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://privaroapp.nl/de/android" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://privaroapp.nl/it/android" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://privaroapp.nl/pt-br/android" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://privaroapp.nl/zh/android" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://privaroapp.nl/ko/android" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://privaroapp.nl/nl/android" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://privaroapp.nl/ja/android" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://privaroapp.nl/zh-hant/android" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://privaroapp.nl/ru/android" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://privaroapp.nl/tr/android" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://privaroapp.nl/id/android" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://privaroapp.nl/hi/android" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://privaroapp.nl/ar/android" />
+    <xhtml:link rel="alternate" hreflang="ur" href="https://privaroapp.nl/ur/android" />
+  </url>
+  <url>
+    <loc>https://privaroapp.nl/tr/android</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://privaroapp.nl/android" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://privaroapp.nl/es/android" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://privaroapp.nl/fr/android" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://privaroapp.nl/de/android" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://privaroapp.nl/it/android" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://privaroapp.nl/pt-br/android" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://privaroapp.nl/zh/android" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://privaroapp.nl/ko/android" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://privaroapp.nl/nl/android" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://privaroapp.nl/ja/android" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://privaroapp.nl/zh-hant/android" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://privaroapp.nl/ru/android" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://privaroapp.nl/tr/android" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://privaroapp.nl/id/android" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://privaroapp.nl/hi/android" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://privaroapp.nl/ar/android" />
+    <xhtml:link rel="alternate" hreflang="ur" href="https://privaroapp.nl/ur/android" />
+  </url>
+  <url>
+    <loc>https://privaroapp.nl/id/android</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://privaroapp.nl/android" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://privaroapp.nl/es/android" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://privaroapp.nl/fr/android" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://privaroapp.nl/de/android" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://privaroapp.nl/it/android" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://privaroapp.nl/pt-br/android" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://privaroapp.nl/zh/android" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://privaroapp.nl/ko/android" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://privaroapp.nl/nl/android" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://privaroapp.nl/ja/android" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://privaroapp.nl/zh-hant/android" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://privaroapp.nl/ru/android" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://privaroapp.nl/tr/android" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://privaroapp.nl/id/android" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://privaroapp.nl/hi/android" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://privaroapp.nl/ar/android" />
+    <xhtml:link rel="alternate" hreflang="ur" href="https://privaroapp.nl/ur/android" />
+  </url>
+  <url>
+    <loc>https://privaroapp.nl/hi/android</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://privaroapp.nl/android" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://privaroapp.nl/es/android" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://privaroapp.nl/fr/android" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://privaroapp.nl/de/android" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://privaroapp.nl/it/android" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://privaroapp.nl/pt-br/android" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://privaroapp.nl/zh/android" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://privaroapp.nl/ko/android" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://privaroapp.nl/nl/android" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://privaroapp.nl/ja/android" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://privaroapp.nl/zh-hant/android" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://privaroapp.nl/ru/android" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://privaroapp.nl/tr/android" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://privaroapp.nl/id/android" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://privaroapp.nl/hi/android" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://privaroapp.nl/ar/android" />
+    <xhtml:link rel="alternate" hreflang="ur" href="https://privaroapp.nl/ur/android" />
+  </url>
+  <url>
+    <loc>https://privaroapp.nl/ar/android</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://privaroapp.nl/android" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://privaroapp.nl/es/android" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://privaroapp.nl/fr/android" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://privaroapp.nl/de/android" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://privaroapp.nl/it/android" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://privaroapp.nl/pt-br/android" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://privaroapp.nl/zh/android" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://privaroapp.nl/ko/android" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://privaroapp.nl/nl/android" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://privaroapp.nl/ja/android" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://privaroapp.nl/zh-hant/android" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://privaroapp.nl/ru/android" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://privaroapp.nl/tr/android" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://privaroapp.nl/id/android" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://privaroapp.nl/hi/android" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://privaroapp.nl/ar/android" />
+    <xhtml:link rel="alternate" hreflang="ur" href="https://privaroapp.nl/ur/android" />
+  </url>
+  <url>
+    <loc>https://privaroapp.nl/ur/android</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://privaroapp.nl/android" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://privaroapp.nl/es/android" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://privaroapp.nl/fr/android" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://privaroapp.nl/de/android" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://privaroapp.nl/it/android" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://privaroapp.nl/pt-br/android" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://privaroapp.nl/zh/android" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://privaroapp.nl/ko/android" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://privaroapp.nl/nl/android" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://privaroapp.nl/ja/android" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://privaroapp.nl/zh-hant/android" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://privaroapp.nl/ru/android" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://privaroapp.nl/tr/android" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://privaroapp.nl/id/android" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://privaroapp.nl/hi/android" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://privaroapp.nl/ar/android" />
+    <xhtml:link rel="alternate" hreflang="ur" href="https://privaroapp.nl/ur/android" />
+  </url>
+  <url>
     <loc>https://privaroapp.nl/security</loc>
   </url>
   <url>

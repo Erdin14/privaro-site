@@ -185,10 +185,10 @@ img { max-width: 100%; display: block; }
    colour is a picture clipped to the letters; where that can't be done,
    on paper, in forced colours and under a selection, they're plain ink. */
 @supports ((-webkit-background-clip: text) or (background-clip: text)) {
-  :is(.display .rise, .page h1, .faq-more h2, .pro-figure p, .chapter h2) {
+  :is(.display .rise, .page h1, .faq-more h2, .pro-figure p, .chapter h2, .android-title) {
     background-image: var(--lit); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
-  :is(.display .rise, .page h1, .faq-more h2, .pro-figure p, .chapter h2)::selection,
-  :is(.display .rise, .page h1, .faq-more h2, .pro-figure p, .chapter h2) *::selection { -webkit-text-fill-color: var(--ink); }
+  :is(.display .rise, .page h1, .faq-more h2, .pro-figure p, .chapter h2, .android-title)::selection,
+  :is(.display .rise, .page h1, .faq-more h2, .pro-figure p, .chapter h2, .android-title) *::selection { -webkit-text-fill-color: var(--ink); }
 }
 /* The name is lit the same way, but by a light laid over it rather than
    clipped to it: its last two letters turn over (see .roll), and letters
@@ -200,7 +200,7 @@ img { max-width: 100%; display: block; }
 .wordmark::after { content: ""; position: absolute; inset: -.12em 0 0; pointer-events: none;
   background: var(--lit); mix-blend-mode: darken; }
 @media (forced-colors: active), print {
-  :is(.display .rise, .page h1, .faq-more h2, .pro-figure p, .chapter h2) { background-image: none; -webkit-text-fill-color: currentColor; }
+  :is(.display .rise, .page h1, .faq-more h2, .pro-figure p, .chapter h2, .android-title) { background-image: none; -webkit-text-fill-color: currentColor; }
   .wordmark::after { content: none; }
 }
 /* Browsers set code in their own monospace; here it's the text like the rest. */
@@ -1037,6 +1037,76 @@ main:focus { outline: none; }
 .pro-pay p { font-size: var(--size-lead); line-height: 1.45; color: var(--ink); }
 .pro-pay .appstore { margin-top: var(--space-4); }
 
+/* Android. The Pro page's centred title, and Google's badge under it; four
+   places for the app's screens; then each section as the Questions page sets
+   an answer: its statement large on the left, what backs it up on the right,
+   between hairlines. The features are rows as on the Pro page; what Pro adds
+   is checked and what isn't on Android yet is dashed, with the same marks.
+   Google's badge is never scaled, dimmed or animated: its guidelines ask
+   that it be shown exactly as it is, at least 28px high, with a quarter of
+   its height clear around it. */
+.android { --android-columns: minmax(0, 1fr) minmax(300px, 480px); }
+.android-hero { display: flex; flex-direction: column; align-items: center; text-align: center; }
+.android-hero h1 { font-size: clamp(44px, 5.6vw, 76px); }
+.android-hero .intro { max-width: 36em; margin-top: var(--space-4); font-size: var(--size-lead); line-height: 1.55; }
+.play { display: inline-block; flex: none; }
+.play img { height: 50px; width: auto; }
+.play-get { display: flex; flex-direction: column; align-items: center; gap: var(--space-4); margin-top: var(--space-7); }
+.play-get .buy-note { text-align: center; }
+/* Where the Android screenshots go: a phone's shape, outlined and labelled,
+   so nobody takes it for the finished page. Taken out with the note in
+   android.html when the real screenshots arrive. */
+.android-shots { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-7) var(--gutter); margin-top: var(--space-9); }
+.android-shots figure { min-width: 0; margin: 0; }
+.shot-slot { display: grid; place-items: center; aspect-ratio: 9 / 19.5; padding: var(--space-4); border: 1.5px dashed rgb(255 255 255 / .24);
+  border-radius: 32px; background: rgb(255 255 255 / .025); color: var(--faint); font-size: var(--size-small); line-height: 1.4;
+  text-align: center; letter-spacing: .04em; text-transform: uppercase; }
+.android-shots figcaption { margin-top: var(--space-5); padding-inline: 2px; font-size: var(--size-text); line-height: 1.5;
+  letter-spacing: var(--track-text); }
+.android-shots figcaption strong { display: block; font-size: var(--size-lead); font-weight: 600; line-height: 1.35; letter-spacing: -.012em; color: var(--ink);
+  overflow-wrap: break-word; -webkit-hyphens: auto; hyphens: auto; }
+.android-shots figcaption > span { display: block; margin-top: var(--space-1); color: var(--muted); }
+/* A section: its statement on the left, the rest on the right. */
+.android-block, .feature-group { display: grid; grid-template-columns: var(--android-columns); column-gap: var(--space-7); align-items: baseline; }
+.android-block, .android-features { margin-top: var(--space-9); padding-top: var(--space-7); border-top: 1px solid var(--rule); }
+.android-title { font-family: var(--display); font-size: clamp(32px, 4vw, 52px); font-weight: 700; line-height: 1.05;
+  letter-spacing: var(--track-display); text-wrap: balance; }
+.android-title .answer { display: block; font-weight: 400; letter-spacing: -.034em; }
+.android-lead { font-size: var(--size-lead); line-height: 1.55; letter-spacing: var(--track-text); color: var(--muted); }
+.android-sub { margin-top: var(--space-6); font-size: var(--size-lead); font-weight: 600; line-height: 1.4; letter-spacing: -.012em; }
+/* Moving from iPhone: three numbered steps. */
+.steps { list-style: none; counter-reset: step; display: grid; row-gap: var(--space-3); margin-top: var(--space-3); }
+.steps li { position: relative; padding-inline-start: 34px; font-size: var(--size-lead); line-height: 1.55; color: var(--muted);
+  counter-increment: step; }
+.steps li::before { content: counter(step); position: absolute; inset-inline-start: 0; top: 0; width: 22px; text-align: end;
+  color: var(--ink); font-weight: 600; font-variant-numeric: tabular-nums; }
+/* Everything in the app: each group's name on the left, its features on
+   the right, each a name and what it does. */
+.android-features > .android-title { margin-bottom: var(--space-3); }
+.feature-group { margin-top: var(--space-7); }
+.group-name { font-size: var(--size-small); font-weight: 500; line-height: 1.4; color: var(--faint); }
+.feature-group ul { list-style: none; display: grid; row-gap: var(--space-5); }
+.feature-group h4 { font-size: var(--size-lead); font-weight: 600; line-height: 1.4; letter-spacing: -.012em; }
+.feature-group p { margin-top: var(--space-1); font-size: var(--size-text); line-height: 1.55; letter-spacing: var(--track-text); color: var(--muted); }
+/* Free and Pro, side by side, between hairlines. */
+.plans { width: 100%; margin-top: var(--space-6); border-collapse: collapse; table-layout: fixed; font-size: var(--size-lead); line-height: 1.4; }
+.plans :is(th, td) { overflow-wrap: break-word; -webkit-hyphens: auto; hyphens: auto; }
+.plans :is(thead td, tbody th) { width: 30%; }
+.plans :is(th, td) { padding: var(--space-3) var(--space-3) var(--space-3) 0; text-align: start; vertical-align: baseline; }
+.plans thead :is(th, td) { padding-top: 0; font-size: var(--size-small); font-weight: 500; color: var(--faint); }
+.plans tbody tr { border-top: 1px solid var(--rule); }
+.plans tbody th { font-weight: 400; color: var(--muted); }
+.plans tbody td { font-weight: 600; }
+.plans tbody td:first-of-type { color: var(--muted); font-weight: 400; }
+/* What Pro adds, checked; what isn't on Android yet, dashed. */
+.marks { --mark-line: calc(var(--size-lead) * 1.5); list-style: none; display: grid; row-gap: var(--space-2); margin-top: var(--space-4); }
+.marks li { position: relative; padding-inline-start: 30px; font-size: var(--size-lead); line-height: 1.5; }
+.marks .mark-no { color: var(--muted); }
+.android .marks:first-child { margin-top: 0; }
+.play-end { margin-top: var(--space-9); padding-top: var(--space-7); border-top: 1px solid var(--rule); }
+.play-end .play img { height: 48px; }
+.trademark { margin-top: var(--space-6); font-size: 12px; line-height: 1.5; color: var(--faint); }
+
 /* Not found: what happened and where to go instead, on one side; on the
    other the Lock Screen, fading out at its foot into the page. */
 /* Centred between the header and the footer, however tall the window. */
@@ -1282,6 +1352,11 @@ main:focus { outline: none; }
 :lang(ur) .page h1 { line-height: 1.6; }
 :lang(ur) :is(.tagline, .display, .limit, .qa h2, .faq-more h2, .article h2, .code h3) { line-height: 1.45; }
 :lang(ur) .mask { padding-block: .35em .45em; margin-block: -.35em -.45em; }
+:is(:lang(ar), :lang(ur), :lang(hi)) :is(.android-title, .android-title .answer, .android-shots figcaption strong) { letter-spacing: 0; }
+:is(:lang(ar), :lang(hi)) .android-title { line-height: 1.3; }
+:lang(ur) .android-title { line-height: 1.45; }
+:is(:lang(zh), :lang(ja)) .android-title { word-break: keep-all; overflow-wrap: anywhere; }
+:is(:lang(zh), :lang(ja), :lang(ko)) .android-title { letter-spacing: -.01em; }
 
 /* Tablets and narrower windows: the hero stacks, and the phones become a row
    that scrolls sideways from edge to edge, the next one peeking in. */
@@ -1328,6 +1403,8 @@ main:focus { outline: none; }
   .qa > div, .faq-more { grid-template-columns: minmax(0, 1fr); row-gap: var(--space-3); }
   .faq-more { row-gap: var(--space-5); }
   .pro-pay { margin-top: var(--space-5); }
+  .android-block, .feature-group { grid-template-columns: minmax(0, 1fr); row-gap: var(--space-5); }
+  .feature-group { row-gap: var(--space-4); }
 }
 @media (max-width: 760px) {
   :root { --side: 20px; --size-lead: 16px; }
@@ -1372,6 +1449,10 @@ main:focus { outline: none; }
   .pro-list li { grid-template-columns: minmax(0, 1fr); row-gap: var(--space-1); padding-inline-start: 30px; }
   .basics ul { gap: var(--space-2) var(--space-5); }
   .pro-price { margin-top: var(--space-7); padding-block: var(--space-7); }
+  .android-shots { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-6) var(--space-4); margin-top: var(--space-8); }
+  .shot-slot { border-radius: 24px; }
+  .android-block, .android-features, .play-end { margin-top: var(--space-8); padding-top: var(--space-6); }
+  .play-get { margin-top: var(--space-6); }
   .legal-index ol { columns: 1; }
   .articles { row-gap: var(--space-7); margin-top: var(--space-8); }
   .article h2, .article-body { padding-inline-start: 40px; }

@@ -17,7 +17,7 @@ Requires Python 3; no packages need installing:
 python3 tests/publication.py
 ```
 
-The publication check verifies 120 pages (seven in each of 17 languages, and the
+The publication check verifies 137 pages (eight in each of 17 languages, and the
 404), local links/assets and their versions, CSP hashes, required special
 files, excluded paths, stale-output cleanup and repeatable builds. It also
 checks what a search engine reads: every canonical, `hreflang`, `og:url` and
@@ -103,6 +103,51 @@ can run on a photo the visitor picks, which never leaves the tab.
   they go. Where the view is smaller (a short window, a narrow column, a
   small phone) the script draws the whole scene smaller to fit, so nothing
   is cut off. Change a pose, and measure and change its reach with it.
+
+## The Android page (/android)
+
+`/android` is Privaro for Android, in all 17 languages: `templates/android.html`,
+`i18n/strings-android.json` (its words, plus the homepage's "Also for Android
+phones"), and the "Android" part of `styles.css`. Features the two apps share
+use the Pro page's own names and words (`prof*`), so the pages can't disagree.
+
+**Not live until the app is on Google Play.** The Play address
+(`PLAY_STORE` in `build.py`) only answers once the app is published. Before
+release:
+
+1. Replace the four marked screenshot places ("Android screenshot to come",
+   `.shot-slot`) with real Android screenshots (never iPhone ones), put them
+   in `shots/android/`, give each alt text in every language, and take the
+   placeholder style out of `styles.css` and its check out of
+   `tests/publication.py`.
+2. Check the Play address opens the listing, in a browser that isn't signed
+   in to the developer account.
+3. Run `python3 build.py` and `python3 tests/publication.py`.
+
+How the stores' brand rules are kept:
+
+- **Google:** `badges/` holds Google's official "Get it on Google Play"
+  badges, one per page language, as SVG from Google's Partner Marketing Hub
+  ("Google Play Badge guidelines.zip", Digital/svg), copied byte for byte
+  (`.gitattributes` keeps git from touching them). Google's rules: the badge
+  in the page's language, unaltered (so it isn't scaled, dimmed or animated
+  on hover as the App Store badge is), at least 28px high, a quarter of its
+  height clear around it, and the same size or larger than any other store's
+  badge beside it. The page carries the line "Google Play and the Google Play
+  logo are trademarks of Google LLC." The test checks each page uses its
+  own language's badge, at least 28px high.
+- **Apple:** where another store's badge is shown, Apple wants its black
+  badge, first in the row; and Apple's products are never pictured beside
+  another platform's. So the Android page has no App Store badge and no
+  iPhone picture, and the homepage, which shows iPhones, links to it in
+  words, not with Google's badge. Wherever both are named, iPhone comes
+  first. The test checks the Android page has no App Store badge or iPhone
+  screenshot.
+
+Links to it: the header on wide screens (not on phones, where a fourth word
+put the row on two lines in four languages), every footer, and a line under
+the homepage's App Store badge. On the Android page the header's "Download"
+goes to Google Play; everywhere else to the App Store.
 
 ## What is published, and what stays in the source
 

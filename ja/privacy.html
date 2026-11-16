@@ -39,7 +39,7 @@
 <meta name="apple-itunes-app" content="app-id=6783131829" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=b4eddef047" />
+<link rel="stylesheet" href="/styles.css?v=bafc9c13b4" />
 <script>
 (() => {
 let transition;
@@ -72,6 +72,7 @@ window.addEventListener("keydown", interrupt, { capture: true });
       <a href="/ja/pro">Pro の機能</a>
       <a href="/ja/security">セキュリティ</a>
       <a href="/ja/faq">よくある質問</a>
+      <a href="/ja/android">Android</a>
     </nav>
     <a class="brand" href="/ja/"><img src="/logo.png" width="28" height="28" alt="" />Privaro</a>
     <div class="head-end">
@@ -90,23 +91,24 @@ window.addEventListener("keydown", interrupt, { capture: true });
 
   <header class="legal-hero">
     <h1>プライバシーポリシー</h1>
-    <p class="updated">施行日：2026年6月28日 · 最終更新日：2026年11月14日</p>
-    <p class="intro">Privaro（以下「Privaro」「本アプリ」「当方」）は、オランダの個人開発者 Erdinc Zarbo が提供する、iOS 向けの暗号化されたプライベートな写真・ビデオ保管庫です。本プライバシーポリシーでは、Privaro があなたの情報をどのように扱うかを説明します。</p>
+    <p class="updated">施行日：2026年6月28日 · 最終更新日：2026年11月16日</p>
+    <p class="intro">Privaro（以下「Privaro」「本アプリ」「当方」）は、オランダの個人開発者 Erdinc Zarbo が提供する、iPhone と Android 向けの暗号化されたプライベートな写真・ビデオ保管庫です。本プライバシーポリシーでは、Privaro の iPhone アプリと Android アプリがあなたの情報をどのように扱うかを説明します。ほとんどの内容は両方に当てはまります。両アプリで異なる点については、どちらのアプリの話かを明記しています。見出しが「iPhone」で始まる項目は iPhone アプリのみに適用され、「Android アプリ」の項目では Android アプリについて説明しています。</p>
   </header>
 
   <aside class="legal-callout" aria-label="要点：">
     <p class="legal-callout-label">要点：</p>
-    <p class="legal-callout-body">Privaro は設計の段階からプライバシーを守るよう作られています。<strong>写真、ビデオ、アルバム、キャプション、タグはデバイス上で暗号化され、当方に送られることはありません。</strong>アカウントの仕組みはなく、コンテンツを保存するサーバーも運用しておらず、保管庫の中身を当方が見ることはできません。広告もトラッキングもありません。ご自身でバックアップや共有を選んだものを除けば、デバイスの外に出るデータは、Pro の購入の販売と確認に必要なものだけで、Apple と RevenueCat が扱います。</p>
+    <p class="legal-callout-body">Privaro は設計の段階からプライバシーを守るよう作られています。<strong>写真、ビデオ、アルバム、キャプション、タグはデバイス上で暗号化され、当方に送られることはありません。</strong>アカウントの仕組みはなく、コンテンツを保存するサーバーも運用しておらず、保管庫の中身を当方が見ることはできません。広告もトラッキングもありません。ご自身でバックアップや共有を選んだものを除けば、デバイスの外に出るデータは、Pro の購入の販売と確認に必要なものだけです。iPhone では Apple と RevenueCat が、Android では Google Play が扱い、Android アプリ自体はインターネットに一切接続しません。</p>
   </aside>
 
   <nav class="legal-index" aria-labelledby="legal-index-h">
     <p id="legal-index-h" class="legal-index-label">このページの内容</p>
     <ol>
       <li><a href="#not-collected">当方が収集しない情報</a></li>
-      <li><a href="#on-device">コンテンツはデバイス上に（暗号化されて）保管されます</a></li>
-      <li><a href="#optional-features">データがデバイスの外に出るオプション機能</a></li>
-      <li><a href="#permissions">デバイスのアクセス許可とその理由</a></li>
-      <li><a href="#purchases">購入（Apple と RevenueCat）</a></li>
+      <li><a href="#on-device">iPhone：コンテンツはデバイス上に（暗号化されて）保管されます</a></li>
+      <li><a href="#optional-features">iPhone：データがデバイスの外に出るオプション機能</a></li>
+      <li><a href="#permissions">iPhone：デバイスのアクセス許可とその理由</a></li>
+      <li><a href="#purchases">iPhone：購入（Apple と RevenueCat）</a></li>
+      <li><a href="#android">Android アプリ</a></li>
       <li><a href="#website">このウェブサイト</a></li>
       <li><a href="#retention">データの保持と削除</a></li>
       <li><a href="#children">子どものプライバシー</a></li>
@@ -125,21 +127,21 @@ window.addEventListener("keydown", interrupt, { capture: true });
         <li>当方は、あなたの写真、ビデオ、その他の保管庫のコンテンツを収集、閲覧、保存<strong>しません</strong>。</li>
         <li>ユーザーアカウントは<strong>ありません</strong>。アプリを使うために、名前、メールアドレス、電話番号を求めることも<strong>ありません</strong>。</li>
         <li>保管庫のデータを受け取るサーバーは運用して<strong>いません</strong>。</li>
-        <li>広告、分析、クラッシュレポート、トラッキングのための SDK は使用<strong>しません</strong>。アプリに含まれる唯一の第三者 SDK は、Pro の購入のための RevenueCat です（「購入」を参照）。デバイスの設定で App デベロッパと解析データを共有することを選んでいる場合、Apple からクラッシュレポートや集計された統計が当方に提供されることがあります。これらは Privaro ではなく iOS から送られるもので、保管庫の内容は一切含まれません。</li>
+        <li>広告、分析、クラッシュレポート、トラッキングのための SDK は使用<strong>しません</strong>。iPhone アプリに含まれる唯一の第三者 SDK は、Pro の購入のための RevenueCat です（「iPhone：購入」を参照）。iPhone の設定で App デベロッパと解析データを共有することを選んでいる場合、Apple からクラッシュレポートや集計された統計が当方に提供されることがあります。これらは Privaro ではなく iOS から送られるもので、保管庫の内容は一切含まれません。Android アプリはインターネットにアクセスできないため、当方にも他の誰にも接続できません。Google と使用状況や診断データを共有することを選んでいる場合、Google から Google Play Console を通じてクラッシュレポートが当方に提供されることがあります。これらは Privaro ではなく Google から送られるもので、保管庫の内容は一切含まれません。</li>
         <li>あなたの個人情報を誰かに販売したり貸し出したりすることは<strong>ありません</strong>。</li>
         <li>ほかのアプリや Web サイトをまたいであなたを追跡することは<strong>ありません</strong>。</li>
       </ul>
     </div>
   </section>
   <section class="article" id="on-device" aria-labelledby="on-device-h">
-    <h2 id="on-device-h">コンテンツはデバイス上に（暗号化されて）保管されます</h2>
+    <h2 id="on-device-h">iPhone：コンテンツはデバイス上に（暗号化されて）保管されます</h2>
     <div class="article-body">
       <p>Privaro に追加したもの（写真、ビデオ、サムネール、アルバム、キャプション、タグ、ファイル名）はすべて、業界標準の AES-256-GCM 暗号化によりデバイス上で暗号化されます。暗号鍵はデバイス上で生成されて iOS のキーチェーンに保存され、デバイスのパスコードによって保護され、iCloud キーチェーンと同期されることも、デバイスのバックアップに含まれることもありません。Privaro のパスコードと生体認証は、アプリで保管庫を開けられる人を制御します。暗号化されたファイルは完全なファイル保護が適用されたアプリ専用の領域に保存され、iCloud やコンピュータへのデバイスのバックアップには含まれません。</p>
       <p>暗号化はデバイス上で行われ、鍵がデバイスから出ることはない（オプションの iCloud バックアップに、復旧キーでロックされたコピーとして含まれる場合を除く）ため、当方が保管庫のコンテンツにアクセスしたり、復号したり、復旧したりすることはできません。パスコードを忘れ、復旧キーも失くした場合、当方がデータを復旧することはできません。</p>
     </div>
   </section>
   <section class="article" id="optional-features" aria-labelledby="optional-features-h">
-    <h2 id="optional-features-h">データがデバイスの外に出るオプション機能</h2>
+    <h2 id="optional-features-h">iPhone：データがデバイスの外に出るオプション機能</h2>
     <div class="article-body">
       <p>以下の機能はデフォルトでオフになっており、あなたが使うことを選んだときにだけ動作します。</p>
       <ul>
@@ -150,7 +152,7 @@ window.addEventListener("keydown", interrupt, { capture: true });
     </div>
   </section>
   <section class="article" id="permissions" aria-labelledby="permissions-h">
-    <h2 id="permissions-h">デバイスのアクセス許可とその理由</h2>
+    <h2 id="permissions-h">iPhone：デバイスのアクセス許可とその理由</h2>
     <div class="article-body">
       <p>Privaro は必要なときにだけ以下を求め、データは記載された目的のためにデバイス上で使われます。</p>
       <ul>
@@ -164,10 +166,28 @@ window.addEventListener("keydown", interrupt, { capture: true });
     </div>
   </section>
   <section class="article" id="purchases" aria-labelledby="purchases-h">
-    <h2 id="purchases-h">購入（Apple と RevenueCat）</h2>
+    <h2 id="purchases-h">iPhone：購入（Apple と RevenueCat）</h2>
     <div class="article-body">
       <p>Privaro Pro は、Apple の StoreKit／App Store を通じて買い切りで販売されます。取引と支払いは Apple が処理し、当方が支払い情報を受け取ることはありません。購入状況は Apple アカウントを通じて管理されます。<a href="https://www.apple.com/legal/privacy/">Apple のプライバシーポリシー</a>をご覧ください。</p>
       <p>Pro を持っているかの確認時、および Pro の購入や復元の際、アプリは App Store での購入を確認するサービスである RevenueCat（RevenueCat, Inc.、米国）を使用します。RevenueCat が受け取るのは、あなたのインストールごとに RevenueCat が作成するランダムな ID（氏名や Apple アカウントではありません）、App Store の購入情報、Pro の画面が表示されたことの記録、そして IP アドレス、デバイスやシステムの情報、アプリのバージョンなど、各リクエストに伴う技術情報です。保管庫の内容を受け取ることは一切ありません。当方はこれらを、お支払いいただいた Pro の機能を提供し、不正を防ぎ、購入に関する統計を確認するために使用します。法的根拠は、あなたとの契約の履行と、アプリを運営するうえでの当方の正当な利益です。<a href="https://www.revenuecat.com/privacy">RevenueCat のプライバシーポリシー</a>をご覧ください。米国へのこの移転について、RevenueCat のデータ処理規約は EU の標準契約条項を用いています。</p>
+    </div>
+  </section>
+  <section class="article" id="android" aria-labelledby="android-h">
+    <h2 id="android-h">Android アプリ</h2>
+    <div class="article-body">
+      <p>Android アプリは、すべてをあなたのスマートフォンの中に保管します。インターネットを使うための Android の権限を持っていないため、アプリ自体がオンラインになることはなく、当方にも他のどのサーバーにも接続できません。アカウント、広告、分析、トラッキングはありません。アプリからこのプライバシーポリシーを開くと、Web ブラウザで開き、ブラウザがこのウェブサイトから読み込みます（「このウェブサイト」を参照）。</p>
+      <ul>
+        <li><strong>保管庫。</strong>写真、ビデオ、サムネール、そして保管庫の索引全体（キャプション、ファイル名、日付、アルバム）は、スマートフォン上で AES-256-GCM により暗号化され、アプリ専用のストレージに保管されます。これらは Android のクラウドバックアップや、デバイス間の移行の対象外です。iCloud や Google ドライブへのバックアップはありません。</li>
+        <li><strong>暗号鍵と復旧キー。</strong>暗号鍵は、Privaro のパスコードと、スマートフォンのセキュリティハードウェアを使う Android Keystore によって保護されます。セットアップ時に復旧キーを作成できます（この手順は省略でき、後から設定で新しいキーに置き換えることもできます）。パスコードを忘れたときは、このキーで保管庫のロックを解除できます。復旧キーはスマートフォン上に読み取れない形でのみ保存され、当方がそれを見ることはありません。当方があなたの鍵やコンテンツを受け取ることはないため、保管庫にアクセスすることも、復号することも、復元することもできません。パスコードを忘れ、復旧キーもない場合、当方がデータを復元することはできません。</li>
+        <li><strong>指紋認証・顔認証。</strong>指紋や顔でロックを解除する場合、確認するのは Android 自身の生体認証画面です。Privaro が生体データを見たり、受け取ったり、保存したりすることはありません。</li>
+        <li><strong>カメラ。</strong>アプリ内カメラと侵入捕獲のため。侵入捕獲をオンにすると（Pro の機能）、間違ったパスコードが入力された後に、アプリがフロントカメラで写真を撮影します。侵入時の写真は暗号化され、スマートフォン上に残ります。</li>
+        <li><strong>マイク。</strong>アプリ内カメラで撮影するビデオの音声を録音するためだけに使います。</li>
+        <li><strong>写真とファイル。</strong>項目は Android のシステムの写真選択ツールとファイル選択ツールで読み込むため、アプリが受け取るのはあなたが選んだ項目だけで、ライブラリ全体を受け取ることはありません。読み込み時に写真からメタデータを削除する設定もあります。</li>
+        <li><strong>購入（Google Play）。</strong>Privaro Pro は、Google Play 課金（Google Play Billing）による買い切りの購入です。購入と支払いは Google Play が <a href="https://policies.google.com/privacy">Google のプライバシー ポリシー</a>に基づいて処理します。Google Play からは、注文番号、日付、商品、価格、国などの基本的な注文情報が当方に提供され、返金、税務、経理に使用します。支払い情報を当方が受け取ることはありません。法的根拠は、あなたとの契約の履行と、税務・経理に関する当方の法的義務です。Android アプリは RevenueCat を使用しません。購入についてアプリがスマートフォンに保存するのは、Pro を持っているかどうかと、購入した時期（「メンバー登録日」として表示）だけです。</li>
+        <li><strong>スマートフォンの外に出るとき。</strong>あなたが選んだときだけです。Android の共有シートで項目を共有したとき、スマートフォンのギャラリー（Pictures/Privaro または Movies/Privaro）にコピーを保存したとき、パスワードで保護された Secure Share ファイルやバックアップファイルを作成したときです。コピーの行き先と、そこでの保護のされ方は、送信先や保存先によって決まります。たとえばギャラリーのコピーは暗号化されておらず、写真にアクセスできる他のアプリから見えます。共有、ギャラリーへの保存、Secure Share ファイルの作成の際には、位置情報などのメタデータをコピーから削除することを選べます。また、特定の写真について、書き出すときに常に位置情報を削除するよう設定することもできます。バックアップファイルは、意図的に元のメタデータを保持します。</li>
+        <li><strong>セキュリティ履歴。</strong>アプリは、ロック解除、ロック解除の失敗、書き出しを記録しますが、コンテンツは一切記録しません。履歴はスマートフォン上で暗号化され、あなたが選んだ日数（既定は 30 日）保管されます。</li>
+      </ul>
+      <p>Android アプリには、iCloud バックアップ、Wi-Fi 転送、位置ベースのロック、プライバシースキャン、Apple Watch アプリはありません。本ポリシーでこれらの機能について述べている内容は、iPhone アプリのみに適用されます。</p>
     </div>
   </section>
   <section class="article" id="website" aria-labelledby="website-h">
@@ -179,7 +199,8 @@ window.addEventListener("keydown", interrupt, { capture: true });
   <section class="article" id="retention" aria-labelledby="retention-h">
     <h2 id="retention-h">データの保持と削除</h2>
     <div class="article-body">
-      <p>コンテンツは、あなたが削除するまでデバイス上に残ります。項目を削除すると「最近削除されたもの」に移動し、30日後に（または選択すれば直ちに）完全に削除されます。アプリを削除すると保管庫のファイルも削除されます。iOS がアプリのキーチェーン項目の一部をデバイスに残すことがありますが、ファイルがなければそれで開けるものはありません。iCloud バックアップをオンにしていた場合は、アプリ内または iCloud ストレージの設定から削除できます。書き出したバックアップや共有したファイルは、保存先や送信先に残ります。当方は保管庫のデータを保有していないため、削除すべき保管庫のデータはありません。RevenueCat があなたのインストールについて保管している購入記録や、当方に送られたメールの削除はご依頼いただけます。</p>
+      <p><strong>iPhone アプリ。</strong>コンテンツは、あなたが削除するまでデバイス上に残ります。項目を削除すると「最近削除されたもの」に移動し、30日後に（または選択すれば直ちに）完全に削除されます。アプリを削除すると保管庫のファイルも削除されます。iOS がアプリのキーチェーン項目の一部をデバイスに残すことがありますが、ファイルがなければそれで開けるものはありません。iCloud バックアップをオンにしていた場合は、アプリ内または iCloud ストレージの設定から削除できます。書き出したバックアップや共有したファイルは、保存先や送信先に残ります。当方は保管庫のデータを保有していないため、削除すべき保管庫のデータはありません。RevenueCat があなたのインストールについて保管している購入記録や、当方に送られたメールの削除はご依頼いただけます。</p>
+      <p><strong>Android アプリ。</strong>コンテンツは、あなたが削除するまでスマートフォン上に残ります。削除した項目は 30 日間「最近削除されたもの」に残り、その後完全に削除されます。セキュリティ履歴は、あなたが選んだ日数（既定は 30 日）保管されます。オプションの緊急消去用パスコードを設定した場合、それを入力すると保管庫が消去されます。アプリをアンインストールすると、アプリ内のものはすべて削除されます。共有した項目、ギャラリーに保存したコピー、Secure Share ファイルやバックアップファイルは、保存先や送信先に残ります。当方は保管庫のデータを保有していないため、削除すべき保管庫のデータはありません。Google Play から提供される注文情報は、税務・経理の規則で求められる期間保管します。Google は、自社のプライバシー ポリシーに基づいて独自に購入の記録を保管します。当方に送られたメールの削除はご依頼いただけます。</p>
     </div>
   </section>
   <section class="article" id="children" aria-labelledby="children-h">
@@ -198,7 +219,7 @@ window.addEventListener("keydown", interrupt, { capture: true });
   <section class="article" id="security" aria-labelledby="security-h">
     <h2 id="security-h">セキュリティ</h2>
     <div class="article-body">
-      <p>当方は、デバイス上での AES-256-GCM 暗号化、鍵の保存のための iOS キーチェーン、PBKDF2 によるパスコードのハッシュ化、iOS のファイル保護を使用しています。100% 安全な保存方法や通信方法は存在せず、Wi-Fi 転送など、あなたが使うことを選んだ機能には上記の制限があります。パスコードと復旧キーを安全に保管する責任はあなたにあります。</p>
+      <p>両アプリとも、コンテンツをデバイス上で AES-256-GCM により暗号化します。iPhone アプリは鍵を iOS キーチェーンに保存し、PBKDF2 によるパスコードのハッシュ化と iOS のファイル保護を使用します。Android アプリは、あなたのパスコードと Android Keystore で鍵を保護し、保管庫をアプリ専用のストレージに保管します。100% 安全な保存方法や通信方法は存在せず、Wi-Fi 転送（iPhone のみ）など、あなたが使うことを選んだ機能には上記の制限があります。パスコードと復旧キーを安全に保管する責任はあなたにあり、あなたが作成したパスワード保護ファイルのパスワードについても同様です。</p>
     </div>
   </section>
   <section class="article" id="changes" aria-labelledby="changes-h">
@@ -224,6 +245,7 @@ window.addEventListener("keydown", interrupt, { capture: true });
 <footer class="site-foot wrap">
   <nav class="foot-links">
     <a href="/ja/pro">Pro の機能</a>
+    <a href="/ja/android">Android</a>
     <a href="/ja/faq">よくある質問</a>
     <a href="/ja/security">セキュリティ</a>
     <a href="/ja/privacy" aria-current="page">プライバシーポリシー</a>

@@ -29,7 +29,7 @@ for forbidden in ("build.py", "templates", "i18n", "index.legacy.html", "screens
                   "vercel.json", ".git", ".env", "tests", "og", "README.md", "transitions.css", "decrypt.js"):
     assert not (dist / forbidden).exists(), forbidden
 pages = list(dist.rglob("*.html"))
-assert len(pages) == 120, "seven pages in each of 17 languages, and the 404, must remain"
+assert len(pages) == 137, "eight pages in each of 17 languages, and the 404, must remain"
 assert {str(p.relative_to(dist)).replace('\\', '/') for p in pages} == {
     p.replace('\\', '/') for p in build.public_pages()
 }
@@ -140,7 +140,7 @@ for page in pages:
 
 sitemap = (dist / "sitemap.xml").read_text(encoding="utf-8")
 locations = re.findall(r"<loc>([^<]+)</loc>", sitemap)
-assert len(locations) == len(set(locations)) == 87, "five pages in 17 languages, the security overview and the demo"
+assert len(locations) == len(set(locations)) == 104, "six pages in 17 languages, the security overview and the demo"
 for location in locations + re.findall(r'<xhtml:link rel="alternate" hreflang="[^"]+" href="([^"]+)"', sitemap):
     target = served(location[len(origin):])
     assert target is not None, f"sitemap: {location} is not served directly"
@@ -207,7 +207,8 @@ for page in pages:
     assert order == sorted(order), page
     wide, phone = (re.findall(r'<a href="([^"]+)"', head[head.index(name):].split("</nav>")[0])
                    for name in ("head-links-wide", "head-links-phone"))
-    assert wide == phone and len(wide) == 3, page
+    # Android is in the wide list only (header.html says why).
+    assert len(wide) == 4 and wide[:3] == phone and wide[3].endswith("android"), page
 
 # Translations: every string in every language, in that language's script.
 # (One label once had its seventeen values under the wrong languages.)
@@ -259,6 +260,32 @@ assert set(vercel) <= {"$schema", "redirects", "headers"}, "vercel.json may only
 assert vercel["redirects"] == [{"source": "/:path((?!\\.well-known/).*)",
                                 "destination": "https://privaroapp.nl/:path", "permanent": True}], vercel["redirects"]
 assert [h["source"] for h in vercel.get("headers", [])] == ["/.well-known/apple-app-site-association"]
+
+# The Android page (/android). Google's badge, in the page's own language,
+# exactly as Google publishes it, at least 28px high; the way to Google Play
+# from the badges and the header's download link; and nothing of Apple's
+# beside it: no App Store badge (Apple wants its black badge first wherever
+# another store's is shown) and no iPhone screenshot (Apple's products are
+# never pictured alongside another platform's).
+badges = sorted(p.name for p in (dist / "badges").iterdir())
+assert badges == sorted(f"google-play-{folder or 'en'}.svg" for _, folder, _, _ in build.LANGS), badges
+for code, folder, _, _ in build.LANGS:
+    android = (dist / folder / "android.html").read_text(encoding="utf-8")
+    badge = build.play_badge(code)
+    imgs = re.findall(r'<img src="(/badges/[^"]+)" width="(\d+)" height="(\d+)"', android)
+    assert imgs and all(src == badge for src, _, _ in imgs), (code, imgs)
+    assert all(int(h) >= 28 for _, _, h in imgs), code
+    assert android.count(f'href="{build.PLAY_STORE}"') == 3, code
+    assert build.APP_STORE not in android and "appstore-badge" not in android and build.SHOTS not in android, code
+    assert "Android screenshot to come" in android, f"{code}: the screenshot places are marked until real ones arrive"
+    # Every page links to it, in its own language, from the header and footer.
+    for page in ("index", "pro", "faq", "privacy", "terms", "security", "encryption"):
+        html = (dist / build.out_path(page, code)).read_text(encoding="utf-8")
+        assert html.count(f'href="{build.page_url("android", code)}"') >= 2, (code, page)
+        assert f'class="head-get" href="{build.APP_STORE}"' in html, (code, page)
+    assert f'class="head-get" href="{build.PLAY_STORE}"' in android, code
+    # The page claims no price: Google Play shows it.
+    assert 'data-price' not in android and "price.js" not in android, code
 
 def snapshot():
     return {str(p.relative_to(dist)): hashlib.sha256(p.read_bytes()).hexdigest()

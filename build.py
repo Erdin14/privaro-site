@@ -47,6 +47,9 @@ from html import unescape
 ROOT = os.path.dirname(os.path.abspath(__file__))
 BASE_URL = "https://privaroapp.nl"
 APP_STORE = "https://apps.apple.com/app/id6783131829"
+# The Android app's Google Play listing. It only answers once the app is
+# published; /android goes live then, not before.
+PLAY_STORE = "https://play.google.com/store/apps/details?id=com.erdincz.privaro.app"
 PUBLIC_DIR = os.path.join(ROOT, "dist")
 
 # Security headers for every response, on both hosts. Nothing on the site needs
@@ -111,7 +114,8 @@ AUTONYM = {code: name for code, _, _, name in LANGS}
 # Written right to left: the page gets dir="rtl" and the CSS mirrors itself.
 RTL = {"ar", "ur"}
 
-PAGES = {"index": "index.html", "pro": "pro.html", "faq": "faq.html", "privacy": "privacy.html", "terms": "terms.html"}
+PAGES = {"index": "index.html", "pro": "pro.html", "faq": "faq.html", "privacy": "privacy.html", "terms": "terms.html",
+         "android": "android.html"}
 # Written in English only. Each language still gets its own copy, the English
 # words inside that language's header, footer and language menu, with a line
 # saying so: following "Security" from the Dutch pages used to land on a page
@@ -119,7 +123,14 @@ PAGES = {"index": "index.html", "pro": "pro.html", "faq": "faq.html", "privacy":
 ENGLISH_ONLY = {"security": "security.html", "encryption": "encryption.html"}
 # Which meta_title_* / meta_desc_* strings each page uses.
 META = {"index": "home", "pro": "pro", "faq": "faq", "privacy": "privacy", "terms": "terms", "security": "security",
-        "encryption": "encryption"}
+        "encryption": "encryption", "android": "android"}
+
+
+def play_badge(code):
+    """Google's own "Get it on Google Play" badge in a page's language, as
+    Google's badge guidelines ask: the files in badges/ are Google's, from its
+    Partner Marketing Hub, byte for byte (.gitattributes keeps git off them)."""
+    return f"/badges/google-play-{FOLDER[code] or 'en'}.svg"
 
 GLOBE = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
          'stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/>'
@@ -235,7 +246,7 @@ def load_strings():
     strings = {}
     for fname in ("i18n/strings.json", "i18n/strings-pro.json", "i18n/strings-faq.json",
                   "i18n/strings-privacy.json", "i18n/strings-terms.json", "i18n/strings-security.json",
-                  "i18n/strings-encryption.json"):
+                  "i18n/strings-encryption.json", "i18n/strings-android.json"):
         with open(os.path.join(ROOT, fname), encoding="utf-8") as f:
             strings.update(json.load(f))
     return strings
@@ -472,7 +483,14 @@ def render(html, page, code, htmllang, head, strings, pricing, here=None):
     html = html.replace("{{DIR}}", "rtl" if code in RTL else "ltr")
     html = html.replace("{{SHOTS}}", SHOTS + (FOLDER[code] + "/" if FOLDER[code] else ""))
     html = html.replace("{{SEO}}", head)
+    # The header's download link: the App Store, except on the Android page,
+    # where it's Google Play.
+    android = page == "android"
+    html = html.replace("{{HEAD_GET_URL}}", PLAY_STORE if android else APP_STORE)
+    html = html.replace("{{HEAD_GET_LABEL}}", "{{android_badge_label}}" if android else "{{badge_label}}")
     html = html.replace("{{APP_STORE}}", APP_STORE)
+    html = html.replace("{{PLAY_STORE}}", PLAY_STORE)
+    html = html.replace("{{PLAY_BADGE}}", play_badge(code))
     # An English-only page under another language's header: its own words are
     # marked as English, left to right, and what is in the reader's language
     # inside it (the line saying so, the way to the App Store) is marked back.
@@ -490,6 +508,7 @@ def render(html, page, code, htmllang, head, strings, pricing, here=None):
     html = html.replace("{{TERMS_URL}}", page_url("terms", code))
     html = html.replace("{{SECURITY_URL}}", page_url("security", code))
     html = html.replace("{{ENCRYPTION_URL}}", page_url("encryption", code))
+    html = html.replace("{{ANDROID_URL}}", page_url("android", code))
     for key, vals in strings.items():
         html = html.replace("{{" + key + "}}", vals.get(code, vals["en"]))
     for token, value in price_tokens(pricing, code).items():
@@ -624,7 +643,7 @@ def package_public_site():
         "appstore-badge.svg", "appstore-badge-white.svg", "qr-appstore.svg", "logo.png", "favicon.png", "og.jpg",
     ]
     # Only media belongs in these asset trees; hidden/build/config files do not.
-    for directory in ("art", "shots", "film"):
+    for directory in ("art", "shots", "film", "badges"):
         for current, dirs, names in os.walk(os.path.join(ROOT, directory)):
             if any(os.path.islink(os.path.join(current, name)) for name in dirs + names):
                 raise SystemExit("Refusing symlinks in public asset trees")
