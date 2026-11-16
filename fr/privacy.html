@@ -91,22 +91,23 @@ window.addEventListener("keydown", interrupt, { capture: true });
   <header class="legal-hero">
     <h1>Politique de confidentialité</h1>
     <p class="updated">Date d’entrée en vigueur : 28 juin 2026 · Dernière mise à jour : 14 novembre 2026</p>
-    <p class="intro">Privaro (« Privaro », « l’app », « nous » ou « notre ») est un coffre privé et chiffré pour photos et vidéos sur iOS, fourni par Erdinc Zarbo, une personne physique établie aux Pays-Bas. Cette politique de confidentialité explique comment Privaro traite vos informations.</p>
+    <p class="intro">Privaro (« Privaro », « l’app », « nous » ou « notre ») est un coffre privé et chiffré pour photos et vidéos sur iPhone et Android, fourni par Erdinc Zarbo, une personne physique établie aux Pays-Bas. Cette politique de confidentialité explique comment Privaro traite vos informations, dans l’app iPhone et dans l’app Android. L’essentiel s’applique aux deux. Lorsque les apps diffèrent, la politique précise de laquelle il s’agit : les sections dont le titre commence par « iPhone » ne concernent que l’app iPhone, et « L’app Android » décrit l’app Android.</p>
   </header>
 
   <aside class="legal-callout" aria-label="En bref :">
     <p class="legal-callout-label">En bref :</p>
-    <p class="legal-callout-body">Privaro est conçu pour être privé par nature. <strong>Vos photos, vidéos, albums, légendes et tags sont chiffrés sur votre appareil et ne nous sont jamais transmis.</strong> Il n’y a pas de système de comptes, nous n’exploitons aucun serveur stockant votre contenu et nous ne pouvons pas voir ce que contient votre coffre. Il n’y a ni publicité ni suivi. En dehors de ce que vous choisissez de sauvegarder ou de partager, les seules données qui quittent votre appareil sont celles nécessaires pour vendre et confirmer l’achat de Pro, dont s’occupent Apple et RevenueCat.</p>
+    <p class="legal-callout-body">Privaro est conçu pour être privé par nature. <strong>Vos photos, vidéos, albums, légendes et tags sont chiffrés sur votre appareil et ne nous sont jamais transmis.</strong> Il n’y a pas de système de comptes, nous n’exploitons aucun serveur stockant votre contenu et nous ne pouvons pas voir ce que contient votre coffre. Il n’y a ni publicité ni suivi. En dehors de ce que vous choisissez de sauvegarder ou de partager, les seules données qui quittent votre appareil sont celles nécessaires pour vendre et confirmer l’achat de Pro : sur iPhone, Apple et RevenueCat s’en occupent ; sur Android, c’est Google Play, et l’app elle-même n’a aucun accès à Internet.</p>
   </aside>
 
   <nav class="legal-index" aria-labelledby="legal-index-h">
     <p id="legal-index-h" class="legal-index-label">Sur cette page</p>
     <ol>
       <li><a href="#not-collected">Informations que nous ne collectons pas</a></li>
-      <li><a href="#on-device">Votre contenu reste sur votre appareil (et il est chiffré)</a></li>
-      <li><a href="#optional-features">Fonctionnalités optionnelles impliquant une sortie de données</a></li>
-      <li><a href="#permissions">Autorisations de l’appareil et raisons</a></li>
-      <li><a href="#purchases">Achats (Apple et RevenueCat)</a></li>
+      <li><a href="#on-device">iPhone : votre contenu reste sur votre appareil (et il est chiffré)</a></li>
+      <li><a href="#optional-features">iPhone : fonctionnalités optionnelles impliquant une sortie de données</a></li>
+      <li><a href="#permissions">iPhone : autorisations de l’appareil et raisons</a></li>
+      <li><a href="#purchases">iPhone : achats (Apple et RevenueCat)</a></li>
+      <li><a href="#android">L’app Android</a></li>
       <li><a href="#website">Ce site web</a></li>
       <li><a href="#retention">Conservation et suppression des données</a></li>
       <li><a href="#children">Confidentialité des enfants</a></li>
@@ -125,21 +126,21 @@ window.addEventListener("keydown", interrupt, { capture: true });
         <li>Nous ne collectons, ne voyons et ne stockons <strong>pas</strong> vos photos, vidéos ni aucun contenu du coffre.</li>
         <li>Nous n’avons <strong>pas</strong> de comptes utilisateur et ne demandons <strong>pas</strong> votre nom, votre e-mail ni votre numéro de téléphone pour utiliser l’app.</li>
         <li>Nous n’exploitons <strong>aucun</strong> serveur recevant les données de votre coffre.</li>
-        <li>Nous n’utilisons <strong>aucun</strong> SDK de publicité, d’analyse, de rapport de plantage ou de suivi. Le seul SDK tiers de l’app est RevenueCat, pour l’achat de Pro (voir « Achats »). Si vous avez choisi, dans les réglages de votre appareil, de partager des analyses avec les développeurs d’apps, Apple peut nous transmettre des rapports de plantage et des statistiques agrégées ; ils proviennent d’iOS, pas de Privaro, et ne contiennent rien de votre coffre.</li>
+        <li>Nous n’utilisons <strong>aucun</strong> SDK de publicité, d’analyse, de rapport de plantage ou de suivi. Dans l’app iPhone, le seul SDK tiers est RevenueCat, pour l’achat de Pro (voir « iPhone : achats »). Si vous avez choisi, dans les réglages de votre iPhone, de partager des analyses avec les développeurs d’apps, Apple peut nous transmettre des rapports de plantage et des statistiques agrégées ; ils proviennent d’iOS, pas de Privaro, et ne contiennent rien de votre coffre. L’app Android n’a pas accès à Internet : elle ne peut se connecter ni à nous ni à personne d’autre.</li>
         <li>Nous ne vendons ni ne louons vos informations personnelles à <strong>personne</strong>.</li>
         <li>Nous ne vous suivons <strong>pas</strong> à travers d’autres apps ou sites web.</li>
       </ul>
     </div>
   </section>
   <section class="article" id="on-device" aria-labelledby="on-device-h">
-    <h2 id="on-device-h">Votre contenu reste sur votre appareil (et il est chiffré)</h2>
+    <h2 id="on-device-h">iPhone : votre contenu reste sur votre appareil (et il est chiffré)</h2>
     <div class="article-body">
       <p>Tout ce que vous ajoutez à Privaro (photos, vidéos, miniatures, albums, légendes, tags et noms de fichiers) est chiffré sur votre appareil avec le chiffrement AES-256-GCM, standard du secteur. La clé est générée sur votre appareil et conservée dans le trousseau iOS ; elle est protégée par le code de votre appareil, n’est jamais synchronisée avec le trousseau iCloud et n’est jamais incluse dans les sauvegardes de l’appareil. Votre code Privaro et la biométrie déterminent qui peut ouvrir le coffre dans l’app. Les fichiers chiffrés sont stockés dans l’espace privé de l’app avec une protection de fichier complète et sont exclus des sauvegardes de l’appareil sur iCloud ou sur un ordinateur.</p>
       <p>Comme le chiffrement a lieu sur votre appareil et que la clé ne le quitte jamais (sauf sous la forme d’une copie verrouillée par votre clé de récupération dans une sauvegarde iCloud facultative), nous n’avons aucun moyen d’accéder à votre contenu, de le déchiffrer ou de le récupérer. Si vous oubliez votre code et perdez votre clé de récupération, nous ne pouvons pas récupérer vos données pour vous.</p>
     </div>
   </section>
   <section class="article" id="optional-features" aria-labelledby="optional-features-h">
-    <h2 id="optional-features-h">Fonctionnalités optionnelles impliquant une sortie de données</h2>
+    <h2 id="optional-features-h">iPhone : fonctionnalités optionnelles impliquant une sortie de données</h2>
     <div class="article-body">
       <p>Ces fonctionnalités sont désactivées par défaut et ne fonctionnent que si vous choisissez de les utiliser :</p>
       <ul>
@@ -150,7 +151,7 @@ window.addEventListener("keydown", interrupt, { capture: true });
     </div>
   </section>
   <section class="article" id="permissions" aria-labelledby="permissions-h">
-    <h2 id="permissions-h">Autorisations de l’appareil et raisons</h2>
+    <h2 id="permissions-h">iPhone : autorisations de l’appareil et raisons</h2>
     <div class="article-body">
       <p>Privaro ne les demande qu’en cas de besoin, et les données sont utilisées sur votre appareil pour l’usage indiqué :</p>
       <ul>
@@ -164,10 +165,28 @@ window.addEventListener("keydown", interrupt, { capture: true });
     </div>
   </section>
   <section class="article" id="purchases" aria-labelledby="purchases-h">
-    <h2 id="purchases-h">Achats (Apple et RevenueCat)</h2>
+    <h2 id="purchases-h">iPhone : achats (Apple et RevenueCat)</h2>
     <div class="article-body">
       <p>Privaro Pro est vendu sous forme d’achat unique via StoreKit / l’App Store d’Apple. Apple traite la transaction et votre paiement ; nous ne recevons pas vos informations de paiement. Le statut de l’achat est géré par votre compte Apple. Consultez la <a href="https://www.apple.com/legal/privacy/">politique de confidentialité d’Apple</a>.</p>
       <p>Pour vérifier si vous avez Pro, et lorsque vous l’achetez ou le restaurez, l’app utilise RevenueCat (RevenueCat, Inc., États-Unis), un service qui confirme les achats sur l’App Store. RevenueCat reçoit un identifiant aléatoire qu’il crée pour votre installation (ni votre nom ni votre compte Apple), les informations de votre achat sur l’App Store, une indication lorsque l’écran Pro s’affiche, ainsi que les informations techniques qui accompagnent chaque requête, comme votre adresse IP, des détails sur l’appareil et le système, et la version de l’app. Il ne reçoit jamais rien de votre coffre. Nous utilisons ces informations pour vous fournir les fonctions Pro que vous avez payées, prévenir la fraude et consulter des statistiques sur les achats. La base juridique est l’exécution de notre contrat avec vous et notre intérêt légitime à faire fonctionner l’app. Voir la <a href="https://www.revenuecat.com/privacy">politique de confidentialité de RevenueCat</a>. Pour ce transfert vers les États-Unis, les conditions de traitement des données de RevenueCat s’appuient sur les clauses contractuelles types de l’UE.</p>
+    </div>
+  </section>
+  <section class="article" id="android" aria-labelledby="android-h">
+    <h2 id="android-h">L’app Android</h2>
+    <div class="article-body">
+      <p>L’app Android garde tout sur votre téléphone. Elle n’a pas l’autorisation Android d’utiliser Internet : l’app elle-même ne peut donc jamais se connecter, ni à nous ni à aucun autre serveur. Il n’y a ni compte, ni publicité, ni analyse, ni suivi. Si vous ouvrez cette politique de confidentialité depuis l’app, elle s’ouvre dans votre navigateur, qui la charge depuis ce site (voir « Ce site web »).</p>
+      <ul>
+        <li><strong>Votre coffre.</strong> Vos photos, vidéos et miniatures, ainsi que tout l’index du coffre (légendes, noms de fichiers, dates et albums), sont chiffrés sur votre téléphone avec AES-256-GCM et conservés dans le stockage privé de l’app. Ils sont exclus des sauvegardes cloud d’Android et des transferts d’un appareil à l’autre. Il n’y a pas de sauvegarde iCloud ni Google Drive.</li>
+        <li><strong>Clés de chiffrement.</strong> Les clés sont protégées par votre code Privaro, associé à l’Android Keystore, qui s’appuie sur le matériel de sécurité de votre téléphone. Nous ne recevons jamais vos clés ni votre contenu : nous ne pouvons donc ni accéder à votre coffre, ni le déchiffrer, ni le récupérer.</li>
+        <li><strong>Déverrouillage par empreinte ou visage.</strong> Si vous déverrouillez avec votre empreinte ou votre visage, c’est la fenêtre biométrique d’Android elle-même qui le vérifie. Privaro ne voit, ne reçoit ni ne stocke jamais vos données biométriques.</li>
+        <li><strong>Appareil photo.</strong> Pour l’appareil photo intégré, et pour les captures d’intrusion : si vous activez cette fonction (Pro), l’app prend une photo avec la caméra avant après la saisie d’un code erroné. Ces photos sont chiffrées et restent sur votre téléphone.</li>
+        <li><strong>Micro.</strong> Uniquement pour enregistrer le son des vidéos que vous filmez avec l’appareil photo intégré.</li>
+        <li><strong>Photos et fichiers.</strong> Vous importez des éléments via le sélecteur de photos et le sélecteur de fichiers du système Android : l’app ne reçoit que les éléments que vous choisissez, jamais toute votre bibliothèque.</li>
+        <li><strong>Achats (Google Play).</strong> Privaro Pro est un achat unique via Google Play Billing. Google Play traite l’achat et votre paiement conformément aux <a href="https://policies.google.com/privacy">Règles de confidentialité de Google</a> ; nous ne recevons pas vos informations de paiement. L’app Android n’utilise pas RevenueCat. Tout ce qu’elle conserve sur votre achat, sur votre téléphone, c’est si vous possédez Pro et quand vous l’avez acheté (affiché comme « Membre depuis »).</li>
+        <li><strong>Quand quelque chose quitte votre téléphone.</strong> Uniquement quand vous le choisissez : lorsque vous partagez des éléments via le menu de partage d’Android, enregistrez une copie dans la galerie de votre téléphone (dans Pictures/Privaro ou Movies/Privaro), ou créez un fichier Secure Share ou un fichier de sauvegarde protégés par mot de passe. La destination d’une copie et sa protection dépendent alors de l’endroit où vous l’envoyez ou l’enregistrez ; une copie dans votre galerie, par exemple, n’est plus chiffrée, et les autres apps qui ont accès à vos photos peuvent la voir. Lors d’un export, vous pouvez choisir de retirer des copies les métadonnées, comme la localisation.</li>
+        <li><strong>Historique de sécurité.</strong> L’app enregistre les déverrouillages, les tentatives de déverrouillage échouées et les exports, mais jamais rien de votre contenu. L’historique est chiffré sur votre téléphone et conservé pendant le nombre de jours que vous choisissez (30 par défaut).</li>
+      </ul>
+      <p>L’app Android n’a ni sauvegarde iCloud, ni transfert Wi-Fi, ni verrouillage par lieu, ni analyse de confidentialité, ni app Apple Watch. Ce que cette politique dit de ces fonctions ne concerne que l’app iPhone.</p>
     </div>
   </section>
   <section class="article" id="website" aria-labelledby="website-h">
@@ -179,7 +198,8 @@ window.addEventListener("keydown", interrupt, { capture: true });
   <section class="article" id="retention" aria-labelledby="retention-h">
     <h2 id="retention-h">Conservation et suppression des données</h2>
     <div class="article-body">
-      <p>Votre contenu reste sur votre appareil jusqu’à ce que vous le supprimiez. Les éléments supprimés passent dans « Supprimés récemment » et sont effacés définitivement au bout de 30 jours (ou immédiatement, si vous le choisissez). Supprimer l’app efface les fichiers du coffre ; iOS peut conserver sur l’appareil certaines entrées du trousseau de l’app, mais sans les fichiers elles n’ouvrent rien. Si vous avez activé la sauvegarde iCloud, vous pouvez la supprimer depuis l’app ou depuis les réglages de stockage iCloud. Les sauvegardes exportées et les fichiers partagés restent là où vous les avez enregistrés ou envoyés. Comme nous ne détenons pas les données de votre coffre, il n’y a rien à en supprimer. Vous pouvez nous demander de supprimer les données d’achat que RevenueCat conserve pour votre installation, ou les e-mails que vous nous avez envoyés.</p>
+      <p><strong>App iPhone.</strong> Votre contenu reste sur votre appareil jusqu’à ce que vous le supprimiez. Les éléments supprimés passent dans « Supprimés récemment » et sont effacés définitivement au bout de 30 jours (ou immédiatement, si vous le choisissez). Supprimer l’app efface les fichiers du coffre ; iOS peut conserver sur l’appareil certaines entrées du trousseau de l’app, mais sans les fichiers elles n’ouvrent rien. Si vous avez activé la sauvegarde iCloud, vous pouvez la supprimer depuis l’app ou depuis les réglages de stockage iCloud. Les sauvegardes exportées et les fichiers partagés restent là où vous les avez enregistrés ou envoyés. Comme nous ne détenons pas les données de votre coffre, il n’y a rien à en supprimer. Vous pouvez nous demander de supprimer les données d’achat que RevenueCat conserve pour votre installation, ou les e-mails que vous nous avez envoyés.</p>
+      <p><strong>App Android.</strong> Votre contenu reste sur votre téléphone jusqu’à ce que vous le supprimiez. Les éléments supprimés restent 30 jours dans « Supprimés récemment », puis sont effacés définitivement. L’historique de sécurité est conservé pendant le nombre de jours que vous choisissez (30 par défaut). Si vous définissez le code facultatif d’effacement sous contrainte, sa saisie efface le coffre. Désinstaller l’app efface tout ce qu’elle contient. Les éléments partagés, les copies enregistrées dans votre galerie et les fichiers Secure Share et de sauvegarde restent là où vous les avez enregistrés ou envoyés. Comme nous ne détenons pas les données de votre coffre, il n’y a rien à en supprimer. Google conserve la trace de votre achat Google Play conformément à ses propres règles de confidentialité. Vous pouvez nous demander de supprimer les e-mails que vous nous avez envoyés.</p>
     </div>
   </section>
   <section class="article" id="children" aria-labelledby="children-h">
@@ -198,7 +218,7 @@ window.addEventListener("keydown", interrupt, { capture: true });
   <section class="article" id="security" aria-labelledby="security-h">
     <h2 id="security-h">Sécurité</h2>
     <div class="article-body">
-      <p>Nous utilisons le chiffrement AES-256-GCM sur l’appareil, le trousseau iOS pour le stockage de la clé, le hachage du code par PBKDF2 et la protection des fichiers iOS. Aucune méthode de stockage ou de transmission n’est sûre à 100 %, et les fonctions telles que le transfert Wi-Fi que vous choisissez d’utiliser comportent les limites décrites ci-dessus. Il vous appartient de conserver en lieu sûr votre code et votre clé de récupération.</p>
+      <p>Les deux apps chiffrent votre contenu sur votre appareil avec AES-256-GCM. L’app iPhone conserve sa clé dans le trousseau iOS et utilise le hachage du code par PBKDF2 et la protection des fichiers iOS. L’app Android protège ses clés avec votre code et l’Android Keystore, et conserve le coffre dans le stockage privé de l’app. Aucune méthode de stockage ou de transmission n’est sûre à 100 %, et les fonctions telles que le transfert Wi-Fi (iPhone uniquement) que vous choisissez d’utiliser comportent les limites décrites ci-dessus. Il vous appartient de conserver en lieu sûr votre code, ainsi que votre clé de récupération sur iPhone et les mots de passe des fichiers protégés que vous créez.</p>
     </div>
   </section>
   <section class="article" id="changes" aria-labelledby="changes-h">

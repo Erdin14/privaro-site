@@ -91,22 +91,23 @@ window.addEventListener("keydown", interrupt, { capture: true });
   <header class="legal-hero">
     <h1>隐私政策</h1>
     <p class="updated">生效日期：2026 年 6 月 28 日 · 最后更新：2026 年 11 月 14 日</p>
-    <p class="intro">Privaro（“Privaro”“本应用”“我们”）是一款面向 iOS 的私密加密照片与视频保险库，由荷兰的个人开发者 Erdinc Zarbo 提供。本隐私政策说明 Privaro 如何处理你的信息。</p>
+    <p class="intro">Privaro（“Privaro”“本应用”“我们”）是一款面向 iPhone 和 Android 的私密加密照片与视频保险库，由荷兰的个人开发者 Erdinc Zarbo 提供。本隐私政策说明 Privaro 的 iPhone 应用和 Android 应用如何处理你的信息。大部分内容同时适用于两者。两个应用的不同之处，本政策会注明所指的是哪一个：标题以“iPhone”开头的部分仅适用于 iPhone 应用，“Android 应用”部分则说明 Android 应用。</p>
   </header>
 
   <aside class="legal-callout" aria-label="简而言之：">
     <p class="legal-callout-label">简而言之：</p>
-    <p class="legal-callout-body">Privaro 从设计之初就以隐私为前提。<strong>你的照片、视频、相簿、说明和标签均在设备上加密，绝不会发送给我们。</strong>我们没有账户系统，不运营存储你内容的服务器，也无法看到保险库中的内容。没有广告，也没有跟踪。除了你自己选择备份或分享的内容，离开设备的数据只有销售和确认 Pro 购买所需的信息，由 Apple 和 RevenueCat 处理。</p>
+    <p class="legal-callout-body">Privaro 从设计之初就以隐私为前提。<strong>你的照片、视频、相簿、说明和标签均在设备上加密，绝不会发送给我们。</strong>我们没有账户系统，不运营存储你内容的服务器，也无法看到保险库中的内容。没有广告，也没有跟踪。除了你自己选择备份或分享的内容，离开设备的数据只有销售和确认 Pro 购买所需的信息：在 iPhone 上由 Apple 和 RevenueCat 处理；在 Android 上由 Google Play 处理，而应用本身完全没有联网权限。</p>
   </aside>
 
   <nav class="legal-index" aria-labelledby="legal-index-h">
     <p id="legal-index-h" class="legal-index-label">本页内容</p>
     <ol>
       <li><a href="#not-collected">我们不收集的信息</a></li>
-      <li><a href="#on-device">你的内容留在设备上（并且已加密）</a></li>
-      <li><a href="#optional-features">会让数据离开设备的可选功能</a></li>
-      <li><a href="#permissions">设备权限及申请原因</a></li>
-      <li><a href="#purchases">购买（Apple 和 RevenueCat）</a></li>
+      <li><a href="#on-device">iPhone：你的内容留在设备上（并且已加密）</a></li>
+      <li><a href="#optional-features">iPhone：会让数据离开设备的可选功能</a></li>
+      <li><a href="#permissions">iPhone：设备权限及申请原因</a></li>
+      <li><a href="#purchases">iPhone：购买（Apple 和 RevenueCat）</a></li>
+      <li><a href="#android">Android 应用</a></li>
       <li><a href="#website">本网站</a></li>
       <li><a href="#retention">数据保留与删除</a></li>
       <li><a href="#children">儿童隐私</a></li>
@@ -125,21 +126,21 @@ window.addEventListener("keydown", interrupt, { capture: true });
         <li>我们<strong>不会</strong>收集、查看或存储你的照片、视频或任何保险库内容。</li>
         <li>我们<strong>没有</strong>账户系统，也<strong>不会</strong>为使用本应用而索取你的姓名、电子邮件或电话号码。</li>
         <li>我们<strong>不会</strong>运营任何接收你保险库数据的服务器。</li>
-        <li>我们<strong>不会</strong>使用广告、分析、崩溃报告或跟踪类 SDK。应用中唯一的第三方 SDK 是用于 Pro 购买的 RevenueCat（见“购买”）。如果你在设备设置中选择与应用开发者共享分析数据，Apple 可能会向我们提供崩溃报告和汇总统计；这些来自 iOS 而非 Privaro，不含保险库中的任何内容。</li>
+        <li>我们<strong>不会</strong>使用广告、分析、崩溃报告或跟踪类 SDK。iPhone 应用中唯一的第三方 SDK 是用于 Pro 购买的 RevenueCat（见“iPhone：购买”）。如果你在 iPhone 设置中选择与应用开发者共享分析数据，Apple 可能会向我们提供崩溃报告和汇总统计；这些来自 iOS 而非 Privaro，不含保险库中的任何内容。Android 应用没有联网权限，因此无法连接到我们或任何其他人。</li>
         <li>我们<strong>不会</strong>向任何人出售或出租你的个人信息。</li>
         <li>我们<strong>不会</strong>跨其他应用或网站跟踪你。</li>
       </ul>
     </div>
   </section>
   <section class="article" id="on-device" aria-labelledby="on-device-h">
-    <h2 id="on-device-h">你的内容留在设备上（并且已加密）</h2>
+    <h2 id="on-device-h">iPhone：你的内容留在设备上（并且已加密）</h2>
     <div class="article-body">
       <p>你添加到 Privaro 的一切（照片、视频、缩略图、相簿、说明、标签和文件名）都会在你的设备上使用业界标准的 AES-256-GCM 加密。密钥在设备上生成并保存在 iOS 钥匙串中，受设备密码保护，从不同步到 iCloud 钥匙串，也从不包含在设备备份中。你的 Privaro 密码和生物识别决定谁能在应用中打开保险库。加密文件存放在应用的私有存储空间中并启用完整文件保护，且不会包含在设备的 iCloud 或电脑备份内。</p>
       <p>由于加密在你的设备上完成，且密钥从不离开设备（唯一的例外是可选 iCloud 备份中一份用你的恢复密钥锁定的副本），我们无法访问、解密或恢复你的保险库内容。如果你忘记密码且丢失了恢复密钥，我们无法替你恢复数据。</p>
     </div>
   </section>
   <section class="article" id="optional-features" aria-labelledby="optional-features-h">
-    <h2 id="optional-features-h">会让数据离开设备的可选功能</h2>
+    <h2 id="optional-features-h">iPhone：会让数据离开设备的可选功能</h2>
     <div class="article-body">
       <p>以下功能默认关闭，只有在你选择使用时才会运行：</p>
       <ul>
@@ -150,7 +151,7 @@ window.addEventListener("keydown", interrupt, { capture: true });
     </div>
   </section>
   <section class="article" id="permissions" aria-labelledby="permissions-h">
-    <h2 id="permissions-h">设备权限及申请原因</h2>
+    <h2 id="permissions-h">iPhone：设备权限及申请原因</h2>
     <div class="article-body">
       <p>Privaro 仅在需要时申请这些权限，数据仅在你的设备上用于所述目的：</p>
       <ul>
@@ -164,10 +165,28 @@ window.addEventListener("keydown", interrupt, { capture: true });
     </div>
   </section>
   <section class="article" id="purchases" aria-labelledby="purchases-h">
-    <h2 id="purchases-h">购买（Apple 和 RevenueCat）</h2>
+    <h2 id="purchases-h">iPhone：购买（Apple 和 RevenueCat）</h2>
     <div class="article-body">
       <p>Privaro Pro 通过 Apple 的 StoreKit / App Store 以一次性购买的方式出售。交易与付款由 Apple 处理，我们不会收到你的付款信息。购买状态通过你的 Apple 账户管理。请参阅 <a href="https://www.apple.com/legal/privacy/">Apple 隐私政策</a>。</p>
       <p>在检查你是否拥有 Pro，以及你购买或恢复 Pro 时，应用会使用 RevenueCat（RevenueCat, Inc.，美国）——一项确认 App Store 购买的服务。RevenueCat 会收到它为你的安装生成的随机 ID（不是你的姓名或 Apple 账户）、你的 App Store 购买信息、Pro 页面被显示时的一条记录，以及每次请求附带的技术信息，例如你的 IP 地址、设备和系统信息以及应用版本。它从不接收保险库中的任何内容。我们以此为你提供已付费的 Pro 功能、防止欺诈并查看购买统计。法律依据是履行我们与你之间的合同，以及我们在运营应用方面的正当利益。请参阅 <a href="https://www.revenuecat.com/privacy">RevenueCat 隐私政策</a>。就这一向美国的数据传输，RevenueCat 的数据处理条款采用欧盟标准合同条款。</p>
+    </div>
+  </section>
+  <section class="article" id="android" aria-labelledby="android-h">
+    <h2 id="android-h">Android 应用</h2>
+    <div class="article-body">
+      <p>Android 应用把一切都保存在你的手机上。它没有 Android 的联网权限，因此应用本身永远无法联网：既不能连接到我们，也不能连接到任何其他服务器。没有账户、没有广告、没有分析，也没有跟踪。如果你从应用中打开本隐私政策，它会在你的网页浏览器中打开，由浏览器从本网站加载（见“本网站”）。</p>
+      <ul>
+        <li><strong>你的保险库。</strong>你的照片、视频和缩略图，以及保险库的完整索引（说明、文件名、日期和相簿），都会在手机上用 AES-256-GCM 加密，并保存在应用的私有存储空间中。它们不包含在 Android 云备份和设备间迁移中。没有 iCloud 或 Google Drive 备份。</li>
+        <li><strong>加密密钥。</strong>密钥由你的 Privaro 密码与 Android Keystore 共同保护，后者使用手机的安全硬件。我们从不接收你的密钥或内容，因此无法访问、解密或恢复你的保险库。</li>
+        <li><strong>指纹或面部解锁。</strong>如果你用指纹或面部解锁，由 Android 自带的生物识别提示进行验证。Privaro 绝不会看到、接收或存储你的生物识别数据。</li>
+        <li><strong>相机。</strong>用于应用内相机和闯入拍照：如果你开启此功能（Pro 功能），在输入错误密码后，应用会用前置摄像头拍一张照片。闯入照片会被加密并保留在你的手机上。</li>
+        <li><strong>麦克风。</strong>仅用于为你用应用内相机拍摄的视频录制声音。</li>
+        <li><strong>照片和文件。</strong>你通过 Android 系统的照片选择器和文件选择器导入项目，因此应用只会获得你选中的项目，绝不会获得你的整个图库。</li>
+        <li><strong>购买（Google Play）。</strong>Privaro Pro 是通过 Google Play 结算（Google Play Billing）进行的一次性购买。Google Play 依据 <a href="https://policies.google.com/privacy">Google 隐私权政策</a>处理购买和付款；我们不会收到你的付款信息。Android 应用不使用 RevenueCat。关于你的购买，它只在手机上保存你是否拥有 Pro 以及购买时间（显示为“会员起始日期”）。</li>
+        <li><strong>内容何时离开你的手机。</strong>只在你选择时：当你通过 Android 分享菜单分享项目、将副本保存到手机图库（Pictures/Privaro 或 Movies/Privaro），或创建受密码保护的 Secure Share 文件或备份文件时。副本去往何处、在那里如何受到保护，取决于你把它发送或保存到哪里；例如，图库中的副本不再加密，有权访问你照片的其他应用都能看到它。导出时，你可以选择从副本中移除位置等元数据。</li>
+        <li><strong>安全记录。</strong>应用会记录解锁、解锁失败和导出，但绝不记录你的任何内容。记录在手机上加密，并保留你所选择的天数（默认 30 天）。</li>
+      </ul>
+      <p>Android 应用没有 iCloud 备份、Wi-Fi 传输、基于位置的锁定、隐私扫描，也没有 Apple Watch 应用。本政策中关于这些功能的内容仅适用于 iPhone 应用。</p>
     </div>
   </section>
   <section class="article" id="website" aria-labelledby="website-h">
@@ -179,7 +198,8 @@ window.addEventListener("keydown", interrupt, { capture: true });
   <section class="article" id="retention" aria-labelledby="retention-h">
     <h2 id="retention-h">数据保留与删除</h2>
     <div class="article-body">
-      <p>你的内容会一直保留在设备上，直到你删除它。删除的项目会移入“最近删除”，并在 30 天后永久移除（如果你选择，也可立即移除）。删除应用会清除保险库的文件；iOS 可能会在设备上保留应用的部分钥匙串条目，但没有这些文件，它们什么也打不开。若你启用了 iCloud 备份，可在应用内或通过 iCloud 存储设置将其移除。导出的备份和分享的文件会留在你保存或发送到的地方。由于我们不持有你的保险库数据，因此没有这类数据需要删除。你可以要求我们删除 RevenueCat 为你的安装保存的购买记录，或你发给我们的邮件。</p>
+      <p><strong>iPhone 应用。</strong>你的内容会一直保留在设备上，直到你删除它。删除的项目会移入“最近删除”，并在 30 天后永久移除（如果你选择，也可立即移除）。删除应用会清除保险库的文件；iOS 可能会在设备上保留应用的部分钥匙串条目，但没有这些文件，它们什么也打不开。若你启用了 iCloud 备份，可在应用内或通过 iCloud 存储设置将其移除。导出的备份和分享的文件会留在你保存或发送到的地方。由于我们不持有你的保险库数据，因此没有这类数据需要删除。你可以要求我们删除 RevenueCat 为你的安装保存的购买记录，或你发给我们的邮件。</p>
+      <p><strong>Android 应用。</strong>你的内容会一直保留在手机上，直到你删除它。删除的项目会在“最近删除”中保留 30 天，然后被永久移除。安全记录保留你所选择的天数（默认 30 天）。如果你设置了可选的胁迫清除密码，输入它就会抹除保险库。卸载应用会删除其中的所有内容。你分享的项目、保存到图库的副本，以及 Secure Share 文件和备份文件，会留在你保存或发送到的地方。由于我们不持有你的保险库数据，因此没有这类数据需要删除。你的 Google Play 购买记录由 Google 依据其隐私权政策保存。你可以要求我们删除你发给我们的邮件。</p>
     </div>
   </section>
   <section class="article" id="children" aria-labelledby="children-h">
@@ -198,7 +218,7 @@ window.addEventListener("keydown", interrupt, { capture: true });
   <section class="article" id="security" aria-labelledby="security-h">
     <h2 id="security-h">安全</h2>
     <div class="article-body">
-      <p>我们采用设备端 AES-256-GCM 加密、使用 iOS 钥匙串存储密钥、以 PBKDF2 对密码进行哈希，并启用 iOS 文件保护。没有任何存储或传输方式是 100% 安全的，你选择使用的 Wi-Fi 传输等功能也存在上文所述的限制。妥善保管你的密码和恢复密钥是你的责任。</p>
+      <p>两个应用都在你的设备上用 AES-256-GCM 加密你的内容。iPhone 应用将密钥存储在 iOS 钥匙串中，并采用 PBKDF2 密码哈希和 iOS 文件保护。Android 应用用你的密码和 Android Keystore 保护密钥，并将保险库保存在应用的私有存储空间中。没有任何存储或传输方式是 100% 安全的，你选择使用的 Wi-Fi 传输（仅限 iPhone）等功能也存在上文所述的限制。妥善保管你的密码是你的责任，iPhone 上的恢复密钥以及你创建的受密码保护文件的密码也是如此。</p>
     </div>
   </section>
   <section class="article" id="changes" aria-labelledby="changes-h">

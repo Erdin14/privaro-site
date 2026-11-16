@@ -91,22 +91,23 @@ window.addEventListener("keydown", interrupt, { capture: true });
   <header class="legal-hero">
     <h1>Política de Privacidade</h1>
     <p class="updated">Data de vigência: 28 de junho de 2026 · Última atualização: 14 de novembro de 2026</p>
-    <p class="intro">O Privaro (“Privaro”, “o app”, “nós” ou “nosso”) é um cofre privado e criptografado de fotos e vídeos para iOS, fornecido por Erdinc Zarbo, pessoa física nos Países Baixos. Esta Política de Privacidade explica como o Privaro trata suas informações.</p>
+    <p class="intro">O Privaro (“Privaro”, “o app”, “nós” ou “nosso”) é um cofre privado e criptografado de fotos e vídeos para iPhone e Android, fornecido por Erdinc Zarbo, pessoa física nos Países Baixos. Esta Política de Privacidade explica como o Privaro trata suas informações, no app para iPhone e no app para Android. Quase tudo vale para os dois. Onde os apps são diferentes, a política diz de qual está falando: as seções cujo título começa com “iPhone” valem só para o app para iPhone, e “O app para Android” descreve o app para Android.</p>
   </header>
 
   <aside class="legal-callout" aria-label="Resumindo:">
     <p class="legal-callout-label">Resumindo:</p>
-    <p class="legal-callout-body">O Privaro foi feito para ser privado por padrão. <strong>Suas fotos, vídeos, álbuns, legendas e tags são criptografados no seu aparelho e nunca são enviados para nós.</strong> Não há sistema de contas, não operamos servidores que armazenem seu conteúdo e não conseguimos ver o que há no seu cofre. Não há anúncios nem rastreamento. Fora o que você decide guardar em backup ou compartilhar, os únicos dados que saem do seu aparelho são os necessários para vender e confirmar a compra do Pro, o que a Apple e a RevenueCat fazem.</p>
+    <p class="legal-callout-body">O Privaro foi feito para ser privado por padrão. <strong>Suas fotos, vídeos, álbuns, legendas e tags são criptografados no seu aparelho e nunca são enviados para nós.</strong> Não há sistema de contas, não operamos servidores que armazenem seu conteúdo e não conseguimos ver o que há no seu cofre. Não há anúncios nem rastreamento. Fora o que você decide guardar em backup ou compartilhar, os únicos dados que saem do seu aparelho são os necessários para vender e confirmar a compra do Pro: no iPhone, a Apple e a RevenueCat cuidam disso; no Android, o Google Play, e o próprio app não tem nenhum acesso à internet.</p>
   </aside>
 
   <nav class="legal-index" aria-labelledby="legal-index-h">
     <p id="legal-index-h" class="legal-index-label">Nesta página</p>
     <ol>
       <li><a href="#not-collected">Informações que não coletamos</a></li>
-      <li><a href="#on-device">Seu conteúdo fica no seu aparelho (e é criptografado)</a></li>
-      <li><a href="#optional-features">Recursos opcionais em que dados saem do aparelho</a></li>
-      <li><a href="#permissions">Permissões do aparelho e por que pedimos</a></li>
-      <li><a href="#purchases">Compras (Apple e RevenueCat)</a></li>
+      <li><a href="#on-device">iPhone: seu conteúdo fica no seu aparelho (e é criptografado)</a></li>
+      <li><a href="#optional-features">iPhone: recursos opcionais em que dados saem do aparelho</a></li>
+      <li><a href="#permissions">iPhone: permissões do aparelho e por que pedimos</a></li>
+      <li><a href="#purchases">iPhone: compras (Apple e RevenueCat)</a></li>
+      <li><a href="#android">O app para Android</a></li>
       <li><a href="#website">Este site</a></li>
       <li><a href="#retention">Retenção e exclusão de dados</a></li>
       <li><a href="#children">Privacidade de crianças</a></li>
@@ -125,21 +126,21 @@ window.addEventListener("keydown", interrupt, { capture: true });
         <li><strong>Não</strong> coletamos, vemos nem armazenamos suas fotos, vídeos ou qualquer conteúdo do cofre.</li>
         <li><strong>Não</strong> temos contas de usuário e <strong>não</strong> pedimos seu nome, e-mail ou telefone para usar o app.</li>
         <li><strong>Não</strong> operamos servidor algum que receba os dados do seu cofre.</li>
-        <li><strong>Não</strong> usamos SDKs de publicidade, análise, relatório de falhas ou rastreamento. O único SDK de terceiros no app é a RevenueCat, para a compra do Pro (veja “Compras”). Se você escolheu, nos ajustes do aparelho, compartilhar análises com desenvolvedores de apps, a Apple pode nos fornecer relatórios de falhas e estatísticas agregadas; eles vêm do iOS, não do Privaro, e não contêm nada do seu cofre.</li>
+        <li><strong>Não</strong> usamos SDKs de publicidade, análise, relatório de falhas ou rastreamento. No app para iPhone, o único SDK de terceiros é a RevenueCat, para a compra do Pro (veja “iPhone: compras”). Se você escolheu, nos ajustes do iPhone, compartilhar análises com desenvolvedores de apps, a Apple pode nos fornecer relatórios de falhas e estatísticas agregadas; eles vêm do iOS, não do Privaro, e não contêm nada do seu cofre. O app para Android não tem acesso à internet, então não consegue se conectar a nós nem a mais ninguém.</li>
         <li><strong>Não</strong> vendemos nem alugamos suas informações pessoais a ninguém.</li>
         <li><strong>Não</strong> rastreamos você em outros apps ou sites.</li>
       </ul>
     </div>
   </section>
   <section class="article" id="on-device" aria-labelledby="on-device-h">
-    <h2 id="on-device-h">Seu conteúdo fica no seu aparelho (e é criptografado)</h2>
+    <h2 id="on-device-h">iPhone: seu conteúdo fica no seu aparelho (e é criptografado)</h2>
     <div class="article-body">
       <p>Tudo o que você adiciona ao Privaro (fotos, vídeos, miniaturas, álbuns, legendas, tags e nomes de arquivo) é criptografado no seu aparelho com criptografia AES-256-GCM, padrão do setor. A chave é gerada no seu aparelho e guardada nas Chaves do iOS; ela é protegida pela senha do aparelho, nunca é sincronizada com as Chaves do iCloud e nunca entra nos backups do aparelho. A sua senha do Privaro e a biometria controlam quem pode abrir o cofre no app. Os arquivos criptografados ficam no armazenamento privado do app com proteção de arquivo completa e ficam de fora dos backups do aparelho no iCloud ou em um computador.</p>
       <p>Como a criptografia acontece no seu aparelho e a chave nunca sai dele (a não ser como uma cópia trancada com a sua chave de recuperação dentro de um backup opcional no iCloud), não temos como acessar, descriptografar ou recuperar o conteúdo do seu cofre. Se você esquecer sua senha e perder sua chave de recuperação, não conseguimos recuperar seus dados por você.</p>
     </div>
   </section>
   <section class="article" id="optional-features" aria-labelledby="optional-features-h">
-    <h2 id="optional-features-h">Recursos opcionais em que dados saem do aparelho</h2>
+    <h2 id="optional-features-h">iPhone: recursos opcionais em que dados saem do aparelho</h2>
     <div class="article-body">
       <p>Esses recursos vêm desativados e só funcionam quando você escolhe usá-los:</p>
       <ul>
@@ -150,7 +151,7 @@ window.addEventListener("keydown", interrupt, { capture: true });
     </div>
   </section>
   <section class="article" id="permissions" aria-labelledby="permissions-h">
-    <h2 id="permissions-h">Permissões do aparelho e por que pedimos</h2>
+    <h2 id="permissions-h">iPhone: permissões do aparelho e por que pedimos</h2>
     <div class="article-body">
       <p>O Privaro pede essas permissões apenas quando necessário, e os dados são usados no seu aparelho para a finalidade indicada:</p>
       <ul>
@@ -164,10 +165,28 @@ window.addEventListener("keydown", interrupt, { capture: true });
     </div>
   </section>
   <section class="article" id="purchases" aria-labelledby="purchases-h">
-    <h2 id="purchases-h">Compras (Apple e RevenueCat)</h2>
+    <h2 id="purchases-h">iPhone: compras (Apple e RevenueCat)</h2>
     <div class="article-body">
       <p>O Privaro Pro é vendido como compra única pela StoreKit / App Store da Apple. A Apple processa a transação e o pagamento; não recebemos seus dados de pagamento. O status da compra é gerenciado pela sua Apple Account. Consulte a <a href="https://www.apple.com/legal/privacy/">Política de Privacidade da Apple</a>.</p>
       <p>Para verificar se você tem o Pro, e quando você o compra ou restaura, o app usa a RevenueCat (RevenueCat, Inc., Estados Unidos), um serviço que confirma compras na App Store. A RevenueCat recebe um ID aleatório que ela cria para a sua instalação (não o seu nome nem a sua Conta Apple), as informações da sua compra na App Store, um aviso quando a tela do Pro é exibida e as informações técnicas que acompanham cada solicitação, como seu endereço IP, dados do aparelho e do sistema e a versão do app. Ela nunca recebe nada do seu cofre. Usamos isso para liberar os recursos do Pro que você pagou, evitar fraudes e ver estatísticas de compras. A base legal é a execução do nosso contrato com você e o nosso legítimo interesse em manter o app funcionando. Veja a <a href="https://www.revenuecat.com/privacy">Política de Privacidade da RevenueCat</a>. Para essa transferência aos Estados Unidos, os termos de tratamento de dados da RevenueCat usam as cláusulas contratuais-padrão da UE.</p>
+    </div>
+  </section>
+  <section class="article" id="android" aria-labelledby="android-h">
+    <h2 id="android-h">O app para Android</h2>
+    <div class="article-body">
+      <p>O app para Android mantém tudo no seu celular. Ele não tem a permissão do Android para usar a internet, então o próprio app nunca pode ficar online: não consegue se conectar a nós nem a nenhum outro servidor. Não há contas, anúncios, análises nem rastreamento. Se você abrir esta Política de Privacidade pelo app, ela abre no seu navegador, que a carrega deste site (veja “Este site”).</p>
+      <ul>
+        <li><strong>Seu cofre.</strong> Suas fotos, vídeos e miniaturas, e todo o índice do cofre (legendas, nomes de arquivo, datas e álbuns), são criptografados no seu celular com AES-256-GCM e guardados no armazenamento privado do app. Eles ficam fora dos backups na nuvem do Android e das transferências de um aparelho para outro. Não há backup no iCloud nem no Google Drive.</li>
+        <li><strong>Chaves de criptografia.</strong> As chaves são protegidas pela sua senha do Privaro junto com o Android Keystore, que usa o hardware de segurança do seu celular. Nunca recebemos suas chaves nem seu conteúdo, então não conseguimos acessar, descriptografar nem recuperar seu cofre.</li>
+        <li><strong>Desbloqueio por digital ou rosto.</strong> Se você desbloqueia com a digital ou o rosto, quem verifica é o próprio aviso biométrico do Android. O Privaro nunca vê, recebe nem armazena seus dados biométricos.</li>
+        <li><strong>Câmera.</strong> Para a câmera do app e para a captura de invasores: se você ativar (um recurso Pro), o app tira uma foto com a câmera frontal depois que uma senha errada é digitada. Essas fotos são criptografadas e ficam no seu celular.</li>
+        <li><strong>Microfone.</strong> Só para gravar o som dos vídeos que você faz com a câmera do app.</li>
+        <li><strong>Fotos e arquivos.</strong> Você importa itens pelo seletor de fotos e pelo seletor de arquivos do sistema Android, então o app recebe só os itens que você escolhe, nunca a sua biblioteca inteira.</li>
+        <li><strong>Compras (Google Play).</strong> O Privaro Pro é uma compra única pelo Google Play Billing. O Google Play processa a compra e o seu pagamento de acordo com a <a href="https://policies.google.com/privacy">Política de Privacidade do Google</a>; não recebemos seus dados de pagamento. O app para Android não usa a RevenueCat. Sobre a sua compra, ele guarda no celular apenas se você tem o Pro e quando o comprou (mostrado como “Membro desde”).</li>
+        <li><strong>Quando algo sai do seu celular.</strong> Só quando você escolhe: quando compartilha itens pelo menu de compartilhamento do Android, salva uma cópia na galeria do celular (em Pictures/Privaro ou Movies/Privaro), ou cria um arquivo Secure Share ou um arquivo de backup protegidos por senha. Para onde uma cópia vai e como fica protegida passa a depender de onde você a envia ou salva; uma cópia na galeria, por exemplo, não está mais criptografada, e outros apps com acesso às suas fotos podem vê-la. Ao exportar, você pode escolher remover das cópias metadados como a localização.</li>
+        <li><strong>Histórico de segurança.</strong> O app registra desbloqueios, tentativas de desbloqueio malsucedidas e exportações, mas nunca nada do seu conteúdo. O histórico é criptografado no celular e mantido pelo número de dias que você escolher (30 por padrão).</li>
+      </ul>
+      <p>O app para Android não tem backup no iCloud, transferência por Wi-Fi, bloqueio por localização, verificação de privacidade nem app para Apple Watch. O que esta política diz sobre esses recursos vale só para o app para iPhone.</p>
     </div>
   </section>
   <section class="article" id="website" aria-labelledby="website-h">
@@ -179,7 +198,8 @@ window.addEventListener("keydown", interrupt, { capture: true });
   <section class="article" id="retention" aria-labelledby="retention-h">
     <h2 id="retention-h">Retenção e exclusão de dados</h2>
     <div class="article-body">
-      <p>Seu conteúdo fica no seu aparelho até você excluí-lo. Itens excluídos vão para “Apagados recentemente” e são removidos definitivamente após 30 dias (ou na hora, se você preferir). Excluir o app remove os arquivos do cofre; o iOS pode manter no aparelho alguns itens das Chaves do app, mas sem os arquivos eles não abrem nada. Se você ativou o backup no iCloud, pode removê-lo pelo app ou nos ajustes de armazenamento do iCloud. Backups exportados e arquivos compartilhados ficam onde você os salvou ou enviou. Como não guardamos os dados do seu cofre, não há nada deles para excluir. Você pode nos pedir para excluir os registros de compra que a RevenueCat mantém sobre a sua instalação ou os e-mails que nos enviou.</p>
+      <p><strong>App para iPhone.</strong> Seu conteúdo fica no seu aparelho até você excluí-lo. Itens excluídos vão para “Apagados recentemente” e são removidos definitivamente após 30 dias (ou na hora, se você preferir). Excluir o app remove os arquivos do cofre; o iOS pode manter no aparelho alguns itens das Chaves do app, mas sem os arquivos eles não abrem nada. Se você ativou o backup no iCloud, pode removê-lo pelo app ou nos ajustes de armazenamento do iCloud. Backups exportados e arquivos compartilhados ficam onde você os salvou ou enviou. Como não guardamos os dados do seu cofre, não há nada deles para excluir. Você pode nos pedir para excluir os registros de compra que a RevenueCat mantém sobre a sua instalação ou os e-mails que nos enviou.</p>
+      <p><strong>App para Android.</strong> Seu conteúdo fica no seu celular até você excluí-lo. Itens excluídos ficam 30 dias em “Apagados recentemente” e depois são removidos definitivamente. O histórico de segurança é mantido pelo número de dias que você escolher (30 por padrão). Se você definir a senha opcional de apagamento sob coação, digitá-la apaga o cofre. Desinstalar o app apaga tudo o que há nele. Itens que você compartilhou, cópias salvas na galeria e arquivos Secure Share e de backup ficam onde você os salvou ou enviou. Como não guardamos os dados do seu cofre, não há nada deles para excluir. O Google mantém o registro da sua compra no Google Play de acordo com a própria política de privacidade. Você pode nos pedir para excluir os e-mails que nos enviou.</p>
     </div>
   </section>
   <section class="article" id="children" aria-labelledby="children-h">
@@ -198,7 +218,7 @@ window.addEventListener("keydown", interrupt, { capture: true });
   <section class="article" id="security" aria-labelledby="security-h">
     <h2 id="security-h">Segurança</h2>
     <div class="article-body">
-      <p>Usamos criptografia AES-256-GCM no aparelho, as Chaves do iOS para guardar a chave, hash de senha com PBKDF2 e a proteção de arquivos do iOS. Nenhum método de armazenamento ou transmissão é 100% seguro, e recursos como a transferência por Wi-Fi que você escolher usar têm as limitações descritas acima. Você é responsável por manter sua senha e sua chave de recuperação em segurança.</p>
+      <p>Os dois apps criptografam seu conteúdo no aparelho com AES-256-GCM. O app para iPhone guarda a chave nas Chaves do iOS e usa hash de senha com PBKDF2 e a proteção de arquivos do iOS. O app para Android protege as chaves com a sua senha e o Android Keystore, e guarda o cofre no armazenamento privado do app. Nenhum método de armazenamento ou transmissão é 100% seguro, e recursos como a transferência por Wi-Fi (só no iPhone) que você escolher usar têm as limitações descritas acima. Você é responsável por manter em segurança a sua senha, além da sua chave de recuperação no iPhone e das senhas dos arquivos protegidos que criar.</p>
     </div>
   </section>
   <section class="article" id="changes" aria-labelledby="changes-h">

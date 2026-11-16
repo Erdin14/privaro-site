@@ -91,22 +91,23 @@ window.addEventListener("keydown", interrupt, { capture: true });
   <header class="legal-hero">
     <h1>Política de privacidad</h1>
     <p class="updated">Fecha de entrada en vigor: 28 de junio de 2026 · Última actualización: 14 de noviembre de 2026</p>
-    <p class="intro">Privaro («Privaro», «la app», «nosotros» o «nuestro») es una bóveda privada y cifrada de fotos y vídeos para iOS, ofrecida por Erdinc Zarbo, una persona física de los Países Bajos. Esta Política de privacidad explica cómo trata Privaro tu información.</p>
+    <p class="intro">Privaro («Privaro», «la app», «nosotros» o «nuestro») es una bóveda privada y cifrada de fotos y vídeos para iPhone y Android, ofrecida por Erdinc Zarbo, una persona física de los Países Bajos. Esta Política de privacidad explica cómo trata Privaro tu información, en la app para iPhone y en la app para Android. Casi todo se aplica a ambas. Donde las apps difieren, la política indica a cuál se refiere: las secciones cuyo título empieza por «iPhone» se aplican solo a la app para iPhone, y «La app para Android» describe la app para Android.</p>
   </header>
 
   <aside class="legal-callout" aria-label="En resumen:">
     <p class="legal-callout-label">En resumen:</p>
-    <p class="legal-callout-body">Privaro está diseñado para ser privado desde su base. <strong>Tus fotos, vídeos, álbumes, descripciones y etiquetas se cifran en tu dispositivo y nunca se nos envían.</strong> No hay sistema de cuentas, no operamos servidores que almacenen tu contenido y no podemos ver qué hay en tu bóveda. No hay anuncios ni rastreo. Aparte de lo que tú decidas respaldar o compartir, los únicos datos que salen de tu dispositivo son los necesarios para vender y confirmar la compra de Pro, de lo que se encargan Apple y RevenueCat.</p>
+    <p class="legal-callout-body">Privaro está diseñado para ser privado desde su base. <strong>Tus fotos, vídeos, álbumes, descripciones y etiquetas se cifran en tu dispositivo y nunca se nos envían.</strong> No hay sistema de cuentas, no operamos servidores que almacenen tu contenido y no podemos ver qué hay en tu bóveda. No hay anuncios ni rastreo. Aparte de lo que tú decidas respaldar o compartir, los únicos datos que salen de tu dispositivo son los necesarios para vender y confirmar la compra de Pro: en iPhone se encargan Apple y RevenueCat; en Android, Google Play, y la propia app no tiene ningún acceso a internet.</p>
   </aside>
 
   <nav class="legal-index" aria-labelledby="legal-index-h">
     <p id="legal-index-h" class="legal-index-label">En esta página</p>
     <ol>
       <li><a href="#not-collected">Información que no recopilamos</a></li>
-      <li><a href="#on-device">Tu contenido permanece en tu dispositivo (y está cifrado)</a></li>
-      <li><a href="#optional-features">Funciones opcionales en las que los datos salen de tu dispositivo</a></li>
-      <li><a href="#permissions">Permisos del dispositivo y por qué los pedimos</a></li>
-      <li><a href="#purchases">Compras (Apple y RevenueCat)</a></li>
+      <li><a href="#on-device">iPhone: tu contenido permanece en tu dispositivo (y está cifrado)</a></li>
+      <li><a href="#optional-features">iPhone: funciones opcionales en las que los datos salen de tu dispositivo</a></li>
+      <li><a href="#permissions">iPhone: permisos del dispositivo y por qué los pedimos</a></li>
+      <li><a href="#purchases">iPhone: compras (Apple y RevenueCat)</a></li>
+      <li><a href="#android">La app para Android</a></li>
       <li><a href="#website">Este sitio web</a></li>
       <li><a href="#retention">Conservación y eliminación de datos</a></li>
       <li><a href="#children">Privacidad de los menores</a></li>
@@ -125,21 +126,21 @@ window.addEventListener("keydown", interrupt, { capture: true });
         <li><strong>No</strong> recopilamos, vemos ni almacenamos tus fotos, vídeos ni ningún contenido de la bóveda.</li>
         <li><strong>No</strong> tenemos cuentas de usuario y <strong>no</strong> pedimos tu nombre, correo electrónico ni teléfono para usar la app.</li>
         <li><strong>No</strong> operamos ningún servidor que reciba los datos de tu bóveda.</li>
-        <li><strong>No</strong> usamos SDK de publicidad, analítica, informes de fallos ni seguimiento. El único SDK de terceros de la app es RevenueCat, para la compra de Pro (consulta «Compras»). Si en los ajustes de tu dispositivo elegiste compartir análisis con los desarrolladores de apps, Apple puede darnos informes de fallos y estadísticas agregadas; proceden de iOS, no de Privaro, y no contienen nada de tu bóveda.</li>
+        <li><strong>No</strong> usamos SDK de publicidad, analítica, informes de fallos ni seguimiento. En la app para iPhone, el único SDK de terceros es RevenueCat, para la compra de Pro (consulta «iPhone: compras»). Si en los ajustes de tu iPhone elegiste compartir análisis con los desarrolladores de apps, Apple puede darnos informes de fallos y estadísticas agregadas; proceden de iOS, no de Privaro, y no contienen nada de tu bóveda. La app para Android no tiene acceso a internet, así que no puede conectarse con nosotros ni con nadie más.</li>
         <li><strong>No</strong> vendemos ni alquilamos tu información personal a nadie.</li>
         <li><strong>No</strong> te rastreamos en otras apps ni sitios web.</li>
       </ul>
     </div>
   </section>
   <section class="article" id="on-device" aria-labelledby="on-device-h">
-    <h2 id="on-device-h">Tu contenido permanece en tu dispositivo (y está cifrado)</h2>
+    <h2 id="on-device-h">iPhone: tu contenido permanece en tu dispositivo (y está cifrado)</h2>
     <div class="article-body">
       <p>Todo lo que añades a Privaro (fotos, vídeos, miniaturas, álbumes, descripciones, etiquetas y nombres de archivo) se cifra en tu dispositivo con cifrado AES-256-GCM, un estándar del sector. La clave se genera en tu dispositivo y se guarda en el Llavero de iOS; está protegida por el código de tu dispositivo, nunca se sincroniza con el Llavero de iCloud y nunca se incluye en las copias de seguridad del dispositivo. Tu código de Privaro y la biometría controlan quién puede abrir la bóveda en la app. Los archivos cifrados se guardan en el almacenamiento privado de la app con protección de archivos completa y quedan excluidos de las copias de seguridad del dispositivo en iCloud o en un ordenador.</p>
       <p>Como el cifrado ocurre en tu dispositivo y la clave nunca sale de él (salvo como una copia bloqueada con tu clave de recuperación dentro de una copia opcional en iCloud), no podemos acceder a tu contenido, descifrarlo ni recuperarlo. Si olvidas tu código y pierdes tu clave de recuperación, no podemos recuperar tus datos por ti.</p>
     </div>
   </section>
   <section class="article" id="optional-features" aria-labelledby="optional-features-h">
-    <h2 id="optional-features-h">Funciones opcionales en las que los datos salen de tu dispositivo</h2>
+    <h2 id="optional-features-h">iPhone: funciones opcionales en las que los datos salen de tu dispositivo</h2>
     <div class="article-body">
       <p>Estas funciones están desactivadas por defecto y solo funcionan cuando decides usarlas:</p>
       <ul>
@@ -150,7 +151,7 @@ window.addEventListener("keydown", interrupt, { capture: true });
     </div>
   </section>
   <section class="article" id="permissions" aria-labelledby="permissions-h">
-    <h2 id="permissions-h">Permisos del dispositivo y por qué los pedimos</h2>
+    <h2 id="permissions-h">iPhone: permisos del dispositivo y por qué los pedimos</h2>
     <div class="article-body">
       <p>Privaro los solicita solo cuando hacen falta, y los datos se usan en tu dispositivo para el fin indicado:</p>
       <ul>
@@ -164,10 +165,28 @@ window.addEventListener("keydown", interrupt, { capture: true });
     </div>
   </section>
   <section class="article" id="purchases" aria-labelledby="purchases-h">
-    <h2 id="purchases-h">Compras (Apple y RevenueCat)</h2>
+    <h2 id="purchases-h">iPhone: compras (Apple y RevenueCat)</h2>
     <div class="article-body">
       <p>Privaro Pro se vende como compra única a través de StoreKit / la App Store de Apple. Apple procesa la transacción y tu pago; nosotros no recibimos tus datos de pago. El estado de la compra se gestiona mediante tu Apple Account. Consulta la <a href="https://www.apple.com/legal/privacy/">Política de privacidad de Apple</a>.</p>
       <p>Para comprobar si tienes Pro, y cuando lo compras o lo restauras, la app usa RevenueCat (RevenueCat, Inc., Estados Unidos), un servicio que confirma las compras del App Store. RevenueCat recibe un ID aleatorio que crea para tu instalación (no tu nombre ni tu cuenta de Apple), la información de tu compra en el App Store, un aviso cuando se muestra la pantalla de Pro y los datos técnicos que acompañan a cada solicitud, como tu dirección IP, datos del dispositivo y del sistema y la versión de la app. Nunca recibe nada de tu bóveda. Usamos esto para darte las funciones de Pro que has pagado, evitar fraudes y ver estadísticas de compras. La base jurídica es la ejecución de nuestro contrato contigo y nuestro interés legítimo en hacer funcionar la app. Consulta la <a href="https://www.revenuecat.com/privacy">política de privacidad de RevenueCat</a>. Para esta transferencia a Estados Unidos, las condiciones de tratamiento de datos de RevenueCat se basan en las cláusulas contractuales tipo de la UE.</p>
+    </div>
+  </section>
+  <section class="article" id="android" aria-labelledby="android-h">
+    <h2 id="android-h">La app para Android</h2>
+    <div class="article-body">
+      <p>La app para Android guarda todo en tu teléfono. No tiene el permiso de Android para usar internet, así que la propia app nunca puede conectarse: no puede conectar con nosotros ni con ningún otro servidor. No hay cuentas, ni anuncios, ni analítica, ni rastreo. Si abres esta Política de privacidad desde la app, se abre en tu navegador, que la carga desde este sitio web (consulta «Este sitio web»).</p>
+      <ul>
+        <li><strong>Tu bóveda.</strong> Tus fotos, vídeos y miniaturas, y todo el índice de la bóveda (descripciones, nombres de archivo, fechas y álbumes), se cifran en tu teléfono con AES-256-GCM y se guardan en el almacenamiento privado de la app. Quedan excluidos de las copias de seguridad en la nube de Android y de las transferencias de un dispositivo a otro. No hay copia de seguridad en iCloud ni en Google Drive.</li>
+        <li><strong>Claves de cifrado.</strong> Las claves están protegidas por tu código de Privaro junto con el Android Keystore, que usa el hardware de seguridad de tu teléfono. Nunca recibimos tus claves ni tu contenido, así que no podemos acceder a tu bóveda, descifrarla ni recuperarla.</li>
+        <li><strong>Desbloqueo con huella o rostro.</strong> Si desbloqueas con tu huella o tu rostro, lo comprueba el propio aviso biométrico de Android. Privaro nunca ve, recibe ni almacena tus datos biométricos.</li>
+        <li><strong>Cámara.</strong> Para la cámara integrada y para las capturas de intrusos: si lo activas (una función Pro), la app hace una foto con la cámara frontal cuando se introduce un código incorrecto. Esas fotos se cifran y se quedan en tu teléfono.</li>
+        <li><strong>Micrófono.</strong> Solo para grabar el sonido de los vídeos que haces con la cámara integrada.</li>
+        <li><strong>Fotos y archivos.</strong> Importas elementos con el selector de fotos y el selector de archivos del sistema Android, así que la app recibe solo los elementos que eliges, nunca toda tu biblioteca.</li>
+        <li><strong>Compras (Google Play).</strong> Privaro Pro es una compra única a través de Google Play Billing. Google Play procesa la compra y tu pago conforme a la <a href="https://policies.google.com/privacy">Política de privacidad de Google</a>; no recibimos tus datos de pago. La app para Android no usa RevenueCat. Lo único que guarda en tu teléfono sobre tu compra es si tienes Pro y cuándo lo compraste (se muestra como «Miembro desde»).</li>
+        <li><strong>Cuando algo sale de tu teléfono.</strong> Solo cuando tú lo eliges: cuando compartes elementos con el menú de compartir de Android, guardas una copia en la galería de tu teléfono (en Pictures/Privaro o Movies/Privaro), o creas un archivo de Secure Share o un archivo de copia de seguridad protegidos con contraseña. A dónde va una copia y cómo queda protegida depende entonces de dónde la envíes o la guardes; una copia en tu galería, por ejemplo, ya no está cifrada, y otras apps con acceso a tus fotos pueden verla. Al exportar, puedes elegir quitar de las copias metadatos como la ubicación.</li>
+        <li><strong>Historial de seguridad.</strong> La app registra los desbloqueos, los intentos fallidos de desbloqueo y las exportaciones, pero nunca nada de tu contenido. El historial se cifra en tu teléfono y se guarda durante los días que elijas (30 por defecto).</li>
+      </ul>
+      <p>La app para Android no tiene copia de seguridad en iCloud, transferencia por Wi-Fi, bloqueo por ubicación, análisis de privacidad ni app para Apple Watch. Lo que esta política dice sobre esas funciones se aplica solo a la app para iPhone.</p>
     </div>
   </section>
   <section class="article" id="website" aria-labelledby="website-h">
@@ -179,7 +198,8 @@ window.addEventListener("keydown", interrupt, { capture: true });
   <section class="article" id="retention" aria-labelledby="retention-h">
     <h2 id="retention-h">Conservación y eliminación de datos</h2>
     <div class="article-body">
-      <p>Tu contenido permanece en tu dispositivo hasta que lo borres. Al eliminar elementos, pasan a «Eliminados recientemente» y se borran definitivamente a los 30 días (o de inmediato, si así lo eliges). Al eliminar la app se borran los archivos de la bóveda; iOS puede conservar en el dispositivo algunas entradas del Llavero de la app, pero sin los archivos no abren nada. Si activaste la copia de seguridad en iCloud, puedes eliminarla desde la app o desde los ajustes de almacenamiento de iCloud. Las copias exportadas y los archivos compartidos permanecen donde los guardaste o enviaste. Como no guardamos los datos de tu bóveda, no hay nada de ellos que borrar. Puedes pedirnos que eliminemos los registros de compra que RevenueCat conserva sobre tu instalación o los correos que nos hayas enviado.</p>
+      <p><strong>App para iPhone.</strong> Tu contenido permanece en tu dispositivo hasta que lo borres. Al eliminar elementos, pasan a «Eliminados recientemente» y se borran definitivamente a los 30 días (o de inmediato, si así lo eliges). Al eliminar la app se borran los archivos de la bóveda; iOS puede conservar en el dispositivo algunas entradas del Llavero de la app, pero sin los archivos no abren nada. Si activaste la copia de seguridad en iCloud, puedes eliminarla desde la app o desde los ajustes de almacenamiento de iCloud. Las copias exportadas y los archivos compartidos permanecen donde los guardaste o enviaste. Como no guardamos los datos de tu bóveda, no hay nada de ellos que borrar. Puedes pedirnos que eliminemos los registros de compra que RevenueCat conserva sobre tu instalación o los correos que nos hayas enviado.</p>
+      <p><strong>App para Android.</strong> Tu contenido permanece en tu teléfono hasta que lo borres. Los elementos eliminados quedan 30 días en «Eliminados recientemente» y después se borran definitivamente. El historial de seguridad se guarda durante los días que elijas (30 por defecto). Si configuras el código opcional de borrado de coacción, introducirlo borra la bóveda. Al desinstalar la app se borra todo lo que contiene. Los elementos que compartiste, las copias guardadas en tu galería y los archivos de Secure Share y de copia de seguridad permanecen donde los guardaste o enviaste. Como no guardamos los datos de tu bóveda, no hay nada de ellos que borrar. Google conserva el registro de tu compra en Google Play conforme a su propia política de privacidad. Puedes pedirnos que eliminemos los correos que nos hayas enviado.</p>
     </div>
   </section>
   <section class="article" id="children" aria-labelledby="children-h">
@@ -198,7 +218,7 @@ window.addEventListener("keydown", interrupt, { capture: true });
   <section class="article" id="security" aria-labelledby="security-h">
     <h2 id="security-h">Seguridad</h2>
     <div class="article-body">
-      <p>Usamos cifrado AES-256-GCM en el dispositivo, el Llavero de iOS para guardar la clave, hash del código con PBKDF2 y la protección de archivos de iOS. Ningún método de almacenamiento o transmisión es 100 % seguro, y funciones como la transferencia por Wi-Fi que decidas usar tienen las limitaciones descritas arriba. Eres responsable de guardar a buen recaudo tu código y tu clave de recuperación.</p>
+      <p>Las dos apps cifran tu contenido en tu dispositivo con AES-256-GCM. La app para iPhone guarda su clave en el Llavero de iOS y usa hash del código con PBKDF2 y la protección de archivos de iOS. La app para Android protege sus claves con tu código y el Android Keystore, y guarda la bóveda en el almacenamiento privado de la app. Ningún método de almacenamiento o transmisión es 100 % seguro, y funciones como la transferencia por Wi-Fi (solo iPhone) que decidas usar tienen las limitaciones descritas arriba. Eres responsable de guardar a buen recaudo tu código, y también tu clave de recuperación en iPhone y las contraseñas de los archivos protegidos que crees.</p>
     </div>
   </section>
   <section class="article" id="changes" aria-labelledby="changes-h">

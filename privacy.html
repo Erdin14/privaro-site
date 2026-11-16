@@ -91,22 +91,23 @@ window.addEventListener("keydown", interrupt, { capture: true });
   <header class="legal-hero">
     <h1>Privacy Policy</h1>
     <p class="updated">Effective date: June 28, 2026 · Last updated: November 14, 2026</p>
-    <p class="intro">Privaro (“Privaro,” “the app,” “we,” “us,” or “our”) is a private, encrypted photo and video vault for iOS, provided by Erdinc Zarbo, an individual developer in the Netherlands. This Privacy Policy explains how Privaro handles your information.</p>
+    <p class="intro">Privaro (“Privaro,” “the app,” “we,” “us,” or “our”) is a private, encrypted photo and video vault for iPhone and Android, provided by Erdinc Zarbo, an individual developer in the Netherlands. This Privacy Policy explains how Privaro handles your information, in the iPhone app and in the Android app. Most of it applies to both. Where the apps differ, the policy says which one it means: sections whose titles start with “iPhone” apply only to the iPhone app, and “The Android app” describes the Android app.</p>
   </header>
 
   <aside class="legal-callout" aria-label="The short version:">
     <p class="legal-callout-label">The short version:</p>
-    <p class="legal-callout-body">Privaro is built to be private by design. <strong>Your photos, videos, albums, captions, and tags are encrypted on your device and never sent to us.</strong> We have no account system, we do not operate servers that store your content, and we cannot see what is in your vault. There are no ads and no tracking. Apart from what you choose to back up or share, the only data that leaves your device is what’s needed to sell and confirm the Pro purchase, which Apple and RevenueCat handle.</p>
+    <p class="legal-callout-body">Privaro is built to be private by design. <strong>Your photos, videos, albums, captions, and tags are encrypted on your device and never sent to us.</strong> We have no account system, we do not operate servers that store your content, and we cannot see what is in your vault. There are no ads and no tracking. Apart from what you choose to back up or share, the only data that leaves your device is what’s needed to sell and confirm the Pro purchase: on iPhone, Apple and RevenueCat handle it; on Android, Google Play does, and the app itself has no internet access at all.</p>
   </aside>
 
   <nav class="legal-index" aria-labelledby="legal-index-h">
     <p id="legal-index-h" class="legal-index-label">On this page</p>
     <ol>
       <li><a href="#not-collected">Information we do not collect</a></li>
-      <li><a href="#on-device">Your content stays on your device (and is encrypted)</a></li>
-      <li><a href="#optional-features">Optional features that involve data leaving your device</a></li>
-      <li><a href="#permissions">Device permissions and why we ask</a></li>
-      <li><a href="#purchases">Purchases (Apple and RevenueCat)</a></li>
+      <li><a href="#on-device">iPhone: your content stays on your device (and is encrypted)</a></li>
+      <li><a href="#optional-features">iPhone: optional features that involve data leaving your device</a></li>
+      <li><a href="#permissions">iPhone: device permissions and why we ask</a></li>
+      <li><a href="#purchases">iPhone: purchases (Apple and RevenueCat)</a></li>
+      <li><a href="#android">The Android app</a></li>
       <li><a href="#website">This website</a></li>
       <li><a href="#retention">Data retention and deletion</a></li>
       <li><a href="#children">Children’s privacy</a></li>
@@ -125,21 +126,21 @@ window.addEventListener("keydown", interrupt, { capture: true });
         <li>We do <strong>not</strong> collect, see, or store your photos, videos, or any vault content.</li>
         <li>We do <strong>not</strong> have user accounts, and we do <strong>not</strong> ask for your name, email, or phone number to use the app.</li>
         <li>We do <strong>not</strong> operate a server that receives your vault data.</li>
-        <li>We do <strong>not</strong> use advertising, analytics, crash-reporting, or tracking SDKs. The only third-party SDK in the app is RevenueCat, for the Pro purchase (see “Purchases”). If you have chosen in your device’s settings to share analytics with app developers, Apple may give us crash reports and aggregated statistics; these come from iOS, not from Privaro, and contain nothing from your vault.</li>
+        <li>We do <strong>not</strong> use advertising, analytics, crash-reporting, or tracking SDKs. In the iPhone app, the only third-party SDK is RevenueCat, for the Pro purchase (see “iPhone: purchases”). If you have chosen in your iPhone’s settings to share analytics with app developers, Apple may give us crash reports and aggregated statistics; these come from iOS, not from Privaro, and contain nothing from your vault. The Android app has no internet access, so it cannot connect to us or to anyone else.</li>
         <li>We do <strong>not</strong> sell or rent your personal information to anyone.</li>
         <li>We do <strong>not</strong> track you across other apps or websites.</li>
       </ul>
     </div>
   </section>
   <section class="article" id="on-device" aria-labelledby="on-device-h">
-    <h2 id="on-device-h">Your content stays on your device (and is encrypted)</h2>
+    <h2 id="on-device-h">iPhone: your content stays on your device (and is encrypted)</h2>
     <div class="article-body">
       <p>Everything you add to Privaro (photos, videos, thumbnails, albums, captions, tags, and file names) is encrypted on your device using industry-standard AES-256-GCM encryption. The encryption key is generated on your device and stored in the iOS Keychain; it is protected by your device passcode, is never synced to iCloud Keychain, and is never included in device backups. Your Privaro passcode and biometrics control who can open the vault in the app. Encrypted files are stored in the app’s private storage with full file protection and are excluded from the device’s backups to iCloud or a computer.</p>
       <p>Because encryption happens on your device and the key never leaves it (except as a copy locked with your recovery key inside an optional iCloud backup), we have no ability to access, decrypt, or recover your vault content. If you forget your passcode and lose your recovery key, we cannot recover your data for you.</p>
     </div>
   </section>
   <section class="article" id="optional-features" aria-labelledby="optional-features-h">
-    <h2 id="optional-features-h">Optional features that involve data leaving your device</h2>
+    <h2 id="optional-features-h">iPhone: optional features that involve data leaving your device</h2>
     <div class="article-body">
       <p>These features are off by default and only operate when you choose to use them:</p>
       <ul>
@@ -150,7 +151,7 @@ window.addEventListener("keydown", interrupt, { capture: true });
     </div>
   </section>
   <section class="article" id="permissions" aria-labelledby="permissions-h">
-    <h2 id="permissions-h">Device permissions and why we ask</h2>
+    <h2 id="permissions-h">iPhone: device permissions and why we ask</h2>
     <div class="article-body">
       <p>Privaro requests these only when needed, and the data is used on your device for the stated purpose:</p>
       <ul>
@@ -164,10 +165,28 @@ window.addEventListener("keydown", interrupt, { capture: true });
     </div>
   </section>
   <section class="article" id="purchases" aria-labelledby="purchases-h">
-    <h2 id="purchases-h">Purchases (Apple and RevenueCat)</h2>
+    <h2 id="purchases-h">iPhone: purchases (Apple and RevenueCat)</h2>
     <div class="article-body">
       <p>Privaro Pro is sold as a one-time purchase through Apple’s StoreKit / App Store. Apple processes the transaction and your payment; we do not receive your payment details. Purchase status is handled through your Apple Account. See <a href="https://www.apple.com/legal/privacy/">Apple’s Privacy Policy</a>.</p>
       <p>To check whether you have Pro, and when you buy or restore it, the app uses RevenueCat (RevenueCat, Inc., United States), a service that confirms App Store purchases. RevenueCat receives a random ID it creates for your installation (not your name or Apple Account), your App Store purchase information, a note when the Pro screen is shown, and the technical information that comes with each request, such as your IP address, device and system details, and app version. It never receives anything from your vault. We use this to give you the Pro features you paid for, to prevent fraud, and to see statistics about purchases. The legal basis is the performance of our contract with you and our legitimate interest in running the app. See <a href="https://www.revenuecat.com/privacy">RevenueCat’s Privacy Policy</a>. For this transfer to the United States, RevenueCat’s data processing terms use the EU Standard Contractual Clauses.</p>
+    </div>
+  </section>
+  <section class="article" id="android" aria-labelledby="android-h">
+    <h2 id="android-h">The Android app</h2>
+    <div class="article-body">
+      <p>The Android app keeps everything on your phone. It does not have Android’s permission to use the internet, so the app itself can never go online: it cannot connect to us or to any other server. There are no accounts, no ads, no analytics, and no tracking. If you open this Privacy Policy from the app, it opens in your web browser, which loads it from this website (see “This website”).</p>
+      <ul>
+        <li><strong>Your vault.</strong> Your photos, videos, and thumbnails, and the vault’s whole index (captions, file names, dates, and albums), are encrypted on your phone with AES-256-GCM and kept in the app’s private storage. They are excluded from Android’s cloud backups and from device-to-device transfers. There is no iCloud or Google Drive backup.</li>
+        <li><strong>Encryption keys.</strong> The keys are protected by your Privaro passcode together with the Android Keystore, which uses your phone’s secure hardware. We never receive your keys or your content, so we cannot access, decrypt, or recover your vault.</li>
+        <li><strong>Fingerprint or face unlock.</strong> If you unlock with your fingerprint or face, Android’s own biometric prompt checks it. Privaro never sees, receives, or stores your biometric data.</li>
+        <li><strong>Camera.</strong> For the in-app camera, and for break-in photos: if you turn this on (a Pro feature), the app takes a photo with the front camera after a wrong passcode is entered. Break-in photos are encrypted and stay on your phone.</li>
+        <li><strong>Microphone.</strong> Only to record sound with videos you take with the in-app camera.</li>
+        <li><strong>Photos and files.</strong> You import items through Android’s system photo picker and file picker, so the app gets only the items you pick, never your whole library.</li>
+        <li><strong>Purchases (Google Play).</strong> Privaro Pro is a one-time purchase through Google Play Billing. Google Play processes the purchase and your payment under <a href="https://policies.google.com/privacy">Google’s Privacy Policy</a>; we do not receive your payment details. The Android app does not use RevenueCat. All it keeps about your purchase, on your phone, is whether you own Pro and when you bought it (shown as “Member since”).</li>
+        <li><strong>When something leaves your phone.</strong> Only when you choose: when you share items through Android’s share sheet, save a copy to your phone’s gallery (in Pictures/Privaro or Movies/Privaro), or create a password-protected Secure Share file or backup file. Where a copy goes, and how it is protected there, then depends on where you send or save it; a copy in your gallery, for example, is no longer encrypted, and other apps with access to your photos can see it. When you export, you can choose to remove metadata, such as location, from the copies.</li>
+        <li><strong>Security history.</strong> The app records unlocks, failed unlock attempts, and exports, but never any of your content. The history is encrypted on your phone and kept for the number of days you choose (30 by default).</li>
+      </ul>
+      <p>The Android app does not have iCloud Backup, Wi-Fi Transfer, Location-Based Lock, Privacy Scan, or an Apple Watch app. What this policy says about those features applies only to the iPhone app.</p>
     </div>
   </section>
   <section class="article" id="website" aria-labelledby="website-h">
@@ -179,7 +198,8 @@ window.addEventListener("keydown", interrupt, { capture: true });
   <section class="article" id="retention" aria-labelledby="retention-h">
     <h2 id="retention-h">Data retention and deletion</h2>
     <div class="article-body">
-      <p>Your content stays on your device until you delete it. Deleting items moves them to “Recently Deleted,” and they are permanently removed after 30 days (or immediately if you choose). Deleting the app removes the vault’s files; iOS may keep some of the app’s Keychain entries on the device, but without the files they open nothing. If you enabled iCloud Backup, you can remove that from within the app or via your iCloud storage settings. Exported backups and shared files stay wherever you saved or sent them. Because we don’t hold your vault data, there is none for us to delete. You can ask us to delete the purchase records RevenueCat keeps for your installation, or emails you have sent us.</p>
+      <p><strong>iPhone app.</strong> Your content stays on your device until you delete it. Deleting items moves them to “Recently Deleted,” and they are permanently removed after 30 days (or immediately if you choose). Deleting the app removes the vault’s files; iOS may keep some of the app’s Keychain entries on the device, but without the files they open nothing. If you enabled iCloud Backup, you can remove that from within the app or via your iCloud storage settings. Exported backups and shared files stay wherever you saved or sent them. Because we don’t hold your vault data, there is none for us to delete. You can ask us to delete the purchase records RevenueCat keeps for your installation, or emails you have sent us.</p>
+      <p><strong>Android app.</strong> Your content stays on your phone until you delete it. Deleted items stay in “Recently Deleted” for 30 days and are then permanently removed. The security history is kept for the number of days you choose (30 by default). If you set the optional duress passcode, entering it erases the vault. Uninstalling the app deletes everything in it. Items you shared, copies saved to your gallery, and Secure Share and backup files stay wherever you saved or sent them. We don’t hold any of your vault data, so there is none for us to delete. Google keeps the record of your Google Play purchase under its own privacy policy. You can ask us to delete emails you have sent us.</p>
     </div>
   </section>
   <section class="article" id="children" aria-labelledby="children-h">
@@ -198,7 +218,7 @@ window.addEventListener("keydown", interrupt, { capture: true });
   <section class="article" id="security" aria-labelledby="security-h">
     <h2 id="security-h">Security</h2>
     <div class="article-body">
-      <p>We use on-device AES-256-GCM encryption, the iOS Keychain for key storage, PBKDF2 passcode hashing, and iOS file protection. No method of storage or transmission is 100% secure, and features like Wi-Fi Transfer that you choose to use have the limitations described above. You are responsible for keeping your passcode and recovery key safe.</p>
+      <p>Both apps encrypt your content on your device with AES-256-GCM. The iPhone app keeps its key in the iOS Keychain and uses PBKDF2 passcode hashing and iOS file protection. The Android app protects its keys with your passcode and the Android Keystore, and keeps the vault in the app’s private storage. No method of storage or transmission is 100% secure, and features like Wi-Fi Transfer (iPhone only) that you choose to use have the limitations described above. You are responsible for keeping your passcode safe, as well as your recovery key on iPhone and the passwords of any password-protected files you create.</p>
     </div>
   </section>
   <section class="article" id="changes" aria-labelledby="changes-h">
