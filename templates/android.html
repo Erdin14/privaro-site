@@ -65,17 +65,18 @@
     </div>
   </section>
 
-  <!-- SCREENSHOTS TO COME. Four places for real Android screenshots, one per
-       screen the homepage shows for iPhone. Never an iPhone screenshot here,
-       and none made up. When they arrive: put each in shots/android/ (one set
-       per language, as the iPhone ones are), swap each .shot-slot for a
-       <picture> with alt text, and take this note and the placeholder style
-       out of styles.css. -->
+  <!-- The four screens the homepage shows for iPhone, on Android: real
+       screenshots of the Android app, never an iPhone one and none made up.
+       Each language has its own, in shots/android/ (laid out as the iPhone
+       ones are), with the same photos, favourites and albums as the iPhone
+       screenshots. The Android app's tools/website-shots.sh takes them on an
+       emulator and tools/website-shots-frame.js puts them in a plain phone's
+       frame. -->
   <section class="android-shots" aria-label="{{android_shots_label}}">
-    <figure><div class="shot-slot" data-shot="lock"><span>Android screenshot to come</span></div><figcaption><strong>{{cap_lock}}</strong> <span>{{android_shot_lock_d}}</span></figcaption></figure>
-    <figure><div class="shot-slot" data-shot="vault"><span>Android screenshot to come</span></div><figcaption><strong>{{cap_vault}}</strong> <span>{{android_shot_vault_d}}</span></figcaption></figure>
-    <figure><div class="shot-slot" data-shot="albums"><span>Android screenshot to come</span></div><figcaption><strong>{{cap_albums}}</strong> <span>{{android_shot_albums_d}}</span></figcaption></figure>
-    <figure><div class="shot-slot" data-shot="privacy"><span>Android screenshot to come</span></div><figcaption><strong>{{cap_privacy}}</strong> <span>{{android_shot_privacy_d}}</span></figcaption></figure>
+    <figure><picture><source srcset="{{ANDROID_SHOTS}}shot-lock.webp" type="image/webp" /><img src="{{ANDROID_SHOTS}}shot-lock.jpg" width="760" height="1600" alt="{{alt_android_lock}}" decoding="async" /></picture><figcaption><strong>{{cap_lock}}</strong> <span>{{android_shot_lock_d}}</span></figcaption></figure>
+    <figure><picture><source srcset="{{ANDROID_SHOTS}}shot-vault.webp" type="image/webp" /><img src="{{ANDROID_SHOTS}}shot-vault.jpg" width="760" height="1600" alt="{{alt_android_vault}}" decoding="async" /></picture><figcaption><strong>{{cap_vault}}</strong> <span>{{android_shot_vault_d}}</span></figcaption></figure>
+    <figure><picture><source srcset="{{ANDROID_SHOTS}}shot-albums.webp" type="image/webp" /><img src="{{ANDROID_SHOTS}}shot-albums.jpg" width="760" height="1600" alt="{{alt_android_albums}}" decoding="async" /></picture><figcaption><strong>{{cap_albums}}</strong> <span>{{android_shot_albums_d}}</span></figcaption></figure>
+    <figure><picture><source srcset="{{ANDROID_SHOTS}}shot-privacy.webp" type="image/webp" /><img src="{{ANDROID_SHOTS}}shot-privacy.jpg" width="760" height="1600" alt="{{alt_android_privacy}}" decoding="async" /></picture><figcaption><strong>{{cap_privacy}}</strong> <span>{{android_shot_privacy_d}}</span></figcaption></figure>
   </section>
 
   <!-- How it's kept private: the homepage's statement, said for Android, and

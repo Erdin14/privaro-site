@@ -111,18 +111,22 @@ can run on a photo the visitor picks, which never leaves the tab.
 phones"), and the "Android" part of `styles.css`. Features the two apps share
 use the Pro page's own names and words (`prof*`), so the pages can't disagree.
 
+Its four screenshots (lock screen, vault, albums, Privacy Mode) are the
+Android app's own, never an iPhone's, one set per language in `shots/android/`
+(laid out as `shots/framed-18-pro-max/` is), with the same photos, favourites
+and albums as the iPhone ones. The Android app's `tools/website-shots.sh`
+takes them on an emulator and `tools/website-shots-frame.js` puts them in a
+plain phone frame, 760 by 1600, with `phone-mask.svg` drawn from the same
+measurements; the alt text is `alt_android_*` in `i18n/strings-android.json`.
+To change them, run both again and copy the framed set over `shots/android/`.
+
 **Not live until the app is on Google Play.** The Play address
 (`PLAY_STORE` in `build.py`) only answers once the app is published. Before
 release:
 
-1. Replace the four marked screenshot places ("Android screenshot to come",
-   `.shot-slot`) with real Android screenshots (never iPhone ones), put them
-   in `shots/android/`, give each alt text in every language, and take the
-   placeholder style out of `styles.css` and its check out of
-   `tests/publication.py`.
-2. Check the Play address opens the listing, in a browser that isn't signed
+1. Check the Play address opens the listing, in a browser that isn't signed
    in to the developer account.
-3. Run `python3 build.py` and `python3 tests/publication.py`.
+2. Run `python3 build.py` and `python3 tests/publication.py`.
 
 How the stores' brand rules are kept:
 
