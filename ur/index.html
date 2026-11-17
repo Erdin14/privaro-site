@@ -40,11 +40,12 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=7363c0581d" />
+<link rel="stylesheet" href="/styles.css?v=3fa26a5dbc" />
 <script>
 (() => {
 const root = document.documentElement;
 if (!matchMedia('(prefers-reduced-motion: reduce)').matches) root.classList.add('motion');
+if (/Android/i.test(navigator.userAgent)) root.classList.add('on-android');
 let transition;
 window.addEventListener("pagereveal", event => {
 transition = event.viewTransition;
@@ -103,12 +104,14 @@ window.addEventListener("keydown", interrupt, { capture: true });
     <div class="buy">
       <span class="rule rise" style="--anim:draw;--d:.15s" aria-hidden="true"></span>
       <div class="buy-get">
-        <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="App Store سے Privaro ڈاؤن لوڈ کریں">
+        <a class="appstore for-ios" href="https://apps.apple.com/app/id6783131829" aria-label="App Store سے Privaro ڈاؤن لوڈ کریں">
           <img src="/appstore-badge-white.svg" width="150" height="50" alt="App Store سے Privaro ڈاؤن لوڈ کریں" />
         </a>
-        <p class="buy-note"><span>مفت ڈاؤن لوڈ۔ iOS 17.6 یا اس کے بعد کا ورژن درکار ہے۔</span> <span>Pro اختیاری ہے: <span class="price" data-price="pro">Rs 1,500</span> کی ایک بار ادائیگی، کوئی تجدید نہیں۔</span> <span class="also"><a href="/ur/android">Android فونز کے لیے بھی</a></span></p>
+        <a class="android-get for-android" href="/ur/android">Android کے لیے Privaro</a>
+        <p class="buy-note for-ios"><span>مفت ڈاؤن لوڈ۔ iOS 17.6 یا اس کے بعد کا ورژن درکار ہے۔</span> <span>Pro اختیاری ہے: <span class="price" data-price="pro">Rs 1,500</span> کی ایک بار ادائیگی، کوئی تجدید نہیں۔</span> <span class="also"><a href="/ur/android">Android فونز کے لیے بھی</a></span></p>
+        <p class="buy-note for-android"><span>مفت ڈاؤن لوڈ۔ Android 10 یا اس کے بعد کا ورژن درکار ہے۔</span> <span>Pro اختیاری ہے: Google Play پر ایک بار کی خریداری، ہمیشہ کے لیے۔</span></p>
       </div>
-      <p class="handoff" aria-hidden="true"><img src="/qr-appstore.svg" width="72" height="72" alt="" /><span>اپنے iPhone سے اسکین کریں</span></p>
+      <p class="handoff for-ios" aria-hidden="true"><img src="/qr-appstore.svg" width="72" height="72" alt="" /><span>اپنے iPhone سے اسکین کریں</span></p>
     </div>
   </section>
 
@@ -193,12 +196,14 @@ window.addEventListener("keydown", interrupt, { capture: true });
       <h2 id="closing-title" class="display"><span class="mask"><span class="rise" style="--anim:mask-rise">پاسپورٹ، رسیدوں اور سرپرائز منصوبوں کے لیے۔</span></span></h2>
       <div class="buy">
         <div class="buy-get">
-          <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="App Store سے Privaro ڈاؤن لوڈ کریں">
+          <a class="appstore for-ios" href="https://apps.apple.com/app/id6783131829" aria-label="App Store سے Privaro ڈاؤن لوڈ کریں">
             <img src="/appstore-badge-white.svg" width="150" height="50" alt="App Store سے Privaro ڈاؤن لوڈ کریں" loading="lazy" />
           </a>
-          <p class="buy-note"><span>مفت ڈاؤن لوڈ۔ iOS 17.6 یا اس کے بعد کا ورژن درکار ہے۔</span></p>
+          <a class="android-get for-android" href="/ur/android">Android کے لیے Privaro</a>
+          <p class="buy-note for-ios"><span>مفت ڈاؤن لوڈ۔ iOS 17.6 یا اس کے بعد کا ورژن درکار ہے۔</span> <span class="also"><a href="/ur/android">Android فونز کے لیے بھی</a></span></p>
+          <p class="buy-note for-android"><span>مفت ڈاؤن لوڈ۔ Android 10 یا اس کے بعد کا ورژن درکار ہے۔</span></p>
         </div>
-        <p class="handoff" aria-hidden="true"><img src="/qr-appstore.svg" width="72" height="72" alt="" loading="lazy" /><span>اپنے iPhone سے اسکین کریں</span></p>
+        <p class="handoff for-ios" aria-hidden="true"><img src="/qr-appstore.svg" width="72" height="72" alt="" loading="lazy" /><span>اپنے iPhone سے اسکین کریں</span></p>
       </div>
     </div>
     <div class="closing-shot"><picture><source srcset="/shots/framed-18-pro-max/ur/shot-lock.webp" type="image/webp" /><img class="rise" style="--anim:phone-up" src="/shots/framed-18-pro-max/ur/shot-lock.jpg" width="760" height="1573" alt="" loading="lazy" decoding="async" /></picture></div>

@@ -40,11 +40,12 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=7363c0581d" />
+<link rel="stylesheet" href="/styles.css?v=3fa26a5dbc" />
 <script>
 (() => {
 const root = document.documentElement;
 if (!matchMedia('(prefers-reduced-motion: reduce)').matches) root.classList.add('motion');
+if (/Android/i.test(navigator.userAgent)) root.classList.add('on-android');
 let transition;
 window.addEventListener("pagereveal", event => {
 transition = event.viewTransition;
@@ -103,12 +104,14 @@ window.addEventListener("keydown", interrupt, { capture: true });
     <div class="buy">
       <span class="rule rise" style="--anim:draw;--d:.15s" aria-hidden="true"></span>
       <div class="buy-get">
-        <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="Privaro’yu App Store’dan indirin">
+        <a class="appstore for-ios" href="https://apps.apple.com/app/id6783131829" aria-label="Privaro’yu App Store’dan indirin">
           <img src="/appstore-badge-white.svg" width="150" height="50" alt="Privaro’yu App Store’dan indirin" />
         </a>
-        <p class="buy-note"><span>Ücretsiz indirin. iOS 17.6 veya üstü gerekir.</span> <span>Pro isteğe bağlıdır: tek seferlik <span class="price" data-price="pro">₺999,99</span>, yenileme yok.</span> <span class="also"><a href="/tr/android">Android telefonlar için de var</a></span></p>
+        <a class="android-get for-android" href="/tr/android">Android için Privaro</a>
+        <p class="buy-note for-ios"><span>Ücretsiz indirin. iOS 17.6 veya üstü gerekir.</span> <span>Pro isteğe bağlıdır: tek seferlik <span class="price" data-price="pro">₺999,99</span>, yenileme yok.</span> <span class="also"><a href="/tr/android">Android telefonlar için de var</a></span></p>
+        <p class="buy-note for-android"><span>Ücretsiz indirin. Android 10 veya sonrası gerekir.</span> <span>Pro isteğe bağlıdır: Google Play üzerinden tek bir satın alım, ömür boyu.</span></p>
       </div>
-      <p class="handoff" aria-hidden="true"><img src="/qr-appstore.svg" width="72" height="72" alt="" /><span>iPhone’unuzla tarayın</span></p>
+      <p class="handoff for-ios" aria-hidden="true"><img src="/qr-appstore.svg" width="72" height="72" alt="" /><span>iPhone’unuzla tarayın</span></p>
     </div>
   </section>
 
@@ -193,12 +196,14 @@ window.addEventListener("keydown", interrupt, { capture: true });
       <h2 id="closing-title" class="display"><span class="mask"><span class="rise" style="--anim:mask-rise">Pasaportlar, fişler ve sürpriz planlar için.</span></span></h2>
       <div class="buy">
         <div class="buy-get">
-          <a class="appstore" href="https://apps.apple.com/app/id6783131829" aria-label="Privaro’yu App Store’dan indirin">
+          <a class="appstore for-ios" href="https://apps.apple.com/app/id6783131829" aria-label="Privaro’yu App Store’dan indirin">
             <img src="/appstore-badge-white.svg" width="150" height="50" alt="Privaro’yu App Store’dan indirin" loading="lazy" />
           </a>
-          <p class="buy-note"><span>Ücretsiz indirin. iOS 17.6 veya üstü gerekir.</span></p>
+          <a class="android-get for-android" href="/tr/android">Android için Privaro</a>
+          <p class="buy-note for-ios"><span>Ücretsiz indirin. iOS 17.6 veya üstü gerekir.</span> <span class="also"><a href="/tr/android">Android telefonlar için de var</a></span></p>
+          <p class="buy-note for-android"><span>Ücretsiz indirin. Android 10 veya sonrası gerekir.</span></p>
         </div>
-        <p class="handoff" aria-hidden="true"><img src="/qr-appstore.svg" width="72" height="72" alt="" loading="lazy" /><span>iPhone’unuzla tarayın</span></p>
+        <p class="handoff for-ios" aria-hidden="true"><img src="/qr-appstore.svg" width="72" height="72" alt="" loading="lazy" /><span>iPhone’unuzla tarayın</span></p>
       </div>
     </div>
     <div class="closing-shot"><picture><source srcset="/shots/framed-18-pro-max/tr/shot-lock.webp" type="image/webp" /><img class="rise" style="--anim:phone-up" src="/shots/framed-18-pro-max/tr/shot-lock.jpg" width="760" height="1573" alt="" loading="lazy" decoding="async" /></picture></div>

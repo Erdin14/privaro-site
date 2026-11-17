@@ -19,6 +19,9 @@
 (() => {
   const root = document.documentElement;
   if (!matchMedia('(prefers-reduced-motion: reduce)').matches) root.classList.add('motion');
+  // On an Android phone the App Store has nothing to offer, so the way to
+  // the Android page takes the badge's place (.for-android in styles.css).
+  if (/Android/i.test(navigator.userAgent)) root.classList.add('on-android');
   let transition;
   window.addEventListener("pagereveal", event => {
     transition = event.viewTransition;
@@ -65,19 +68,24 @@
     <div class="buy">
       <span class="rule rise" style="--anim:draw;--d:.15s" aria-hidden="true"></span>
       <div class="buy-get">
-        <a class="appstore" href="{{APP_STORE}}" aria-label="{{badge_label}}">
+        <a class="appstore for-ios" href="{{APP_STORE}}" aria-label="{{badge_label}}">
           <img src="/appstore-badge-white.svg" width="150" height="50" alt="{{badge_label}}" />
         </a>
-        <p class="buy-note"><span>{{buy_free}}</span> <span>{{buy_pro}}</span> <span class="also"><a href="{{ANDROID_URL}}">{{home_android}}</a></span></p>
+        <a class="android-get for-android" href="{{ANDROID_URL}}">{{meta_title_android}}</a>
+        <p class="buy-note for-ios"><span>{{buy_free}}</span> <span>{{buy_pro}}</span> <span class="also"><a href="{{ANDROID_URL}}">{{home_android}}</a></span></p>
+        <p class="buy-note for-android"><span>{{android_buy_free}}</span> <span>{{android_buy_pro}}</span></p>
       </div>
       <!-- The way to the Android page is words, not Google's badge: this page
            shows iPhones, and Apple's guidelines keep its products' pictures
-           apart from other platforms'. -->
+           apart from other platforms'. On an Android phone (the line in
+           <head>) it takes the App Store badge's place, as a button, with the
+           Android app's own two sentences; everywhere else, and without the
+           script, it's the line under the badge. -->
       <!-- On a computer the badge opens the App Store on the wrong device: the
            same address as a code the phone's camera reads. Only shown where
            there's a mouse and room (styles.css); it says nothing the badge
            doesn't, so screen readers skip it. -->
-      <p class="handoff" aria-hidden="true"><img src="/qr-appstore.svg" width="72" height="72" alt="" /><span>{{home_scan}}</span></p>
+      <p class="handoff for-ios" aria-hidden="true"><img src="/qr-appstore.svg" width="72" height="72" alt="" /><span>{{home_scan}}</span></p>
     </div>
   </section>
 
@@ -172,12 +180,14 @@
       <h2 id="closing-title" class="display"><span class="mask"><span class="rise" style="--anim:mask-rise">{{home_cta_title}}</span></span></h2>
       <div class="buy">
         <div class="buy-get">
-          <a class="appstore" href="{{APP_STORE}}" aria-label="{{badge_label}}">
+          <a class="appstore for-ios" href="{{APP_STORE}}" aria-label="{{badge_label}}">
             <img src="/appstore-badge-white.svg" width="150" height="50" alt="{{badge_label}}" loading="lazy" />
           </a>
-          <p class="buy-note"><span>{{buy_free}}</span></p>
+          <a class="android-get for-android" href="{{ANDROID_URL}}">{{meta_title_android}}</a>
+          <p class="buy-note for-ios"><span>{{buy_free}}</span> <span class="also"><a href="{{ANDROID_URL}}">{{home_android}}</a></span></p>
+          <p class="buy-note for-android"><span>{{android_buy_free}}</span></p>
         </div>
-        <p class="handoff" aria-hidden="true"><img src="/qr-appstore.svg" width="72" height="72" alt="" loading="lazy" /><span>{{home_scan}}</span></p>
+        <p class="handoff for-ios" aria-hidden="true"><img src="/qr-appstore.svg" width="72" height="72" alt="" loading="lazy" /><span>{{home_scan}}</span></p>
       </div>
     </div>
     <div class="closing-shot"><picture><source srcset="{{SHOTS}}shot-lock.webp" type="image/webp" /><img class="rise" style="--anim:phone-up" src="{{SHOTS}}shot-lock.jpg" width="760" height="1573" alt="" loading="lazy" decoding="async" /></picture></div>
