@@ -291,8 +291,15 @@ for code, folder, _, _ in build.LANGS:
     for page in ("index", "pro", "faq", "privacy", "terms", "security", "encryption"):
         html = (dist / build.out_path(page, code)).read_text(encoding="utf-8")
         assert html.count(f'href="{build.page_url("android", code)}"') >= 2, (code, page)
-        assert f'class="head-get" href="{build.APP_STORE}"' in html, (code, page)
+        # The header's download: the App Store's, and Google Play's for an
+        # Android phone, which the page's <head> marks before it's drawn.
+        assert f'class="head-get for-ios" href="{build.APP_STORE}"' in html, (code, page)
+        assert f'class="head-get for-android" href="{build.PLAY_STORE}"' in html, (code, page)
+        assert -1 < html.find("classList.add('on-android')") < html.index("</head>"), (code, page)
     assert f'class="head-get" href="{build.PLAY_STORE}"' in android, code
+    # On an Android phone the homepage's badges give way to the Android page.
+    home = (dist / build.out_path("index", code)).read_text(encoding="utf-8")
+    assert home.count(f'class="android-get for-android" href="{build.page_url("android", code)}"') == 2, code
     # The page claims no price: Google Play shows it.
     assert 'data-price' not in android and "price.js" not in android, code
 

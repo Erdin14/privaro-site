@@ -20,7 +20,8 @@
   const root = document.documentElement;
   if (!matchMedia('(prefers-reduced-motion: reduce)').matches) root.classList.add('motion');
   // On an Android phone the App Store has nothing to offer, so the way to
-  // the Android page takes the badge's place (.for-android in styles.css).
+  // the Android page takes the badge's place, and the header's download goes
+  // to Google Play (.for-android in styles.css).
   if (/Android/i.test(navigator.userAgent)) root.classList.add('on-android');
   let transition;
   window.addEventListener("pagereveal", event => {

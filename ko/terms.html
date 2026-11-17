@@ -39,9 +39,10 @@
 <meta name="apple-itunes-app" content="app-id=6783131829" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=3fa26a5dbc" />
+<link rel="stylesheet" href="/styles.css?v=fab411243b" />
 <script>
 (() => {
+if (/Android/i.test(navigator.userAgent)) document.documentElement.classList.add('on-android');
 let transition;
 window.addEventListener("pagereveal", event => {
 transition = event.viewTransition;
@@ -77,7 +78,8 @@ window.addEventListener("keydown", interrupt, { capture: true });
     <a class="brand" href="/ko/"><img src="/logo.png" width="28" height="28" alt="" />Privaro</a>
     <div class="head-end">
       <details class="lang"><summary aria-label="언어: 한국어"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg><span>한국어</span><svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg></summary><div class="lang-menu"><p class="lang-head">언어</p><div class="lang-list"><a href="/terms" lang="en" hreflang="en"><span>English</span></a><a href="/es/terms" lang="es" hreflang="es"><span>Español</span></a><a href="/fr/terms" lang="fr" hreflang="fr"><span>Français</span></a><a href="/de/terms" lang="de" hreflang="de"><span>Deutsch</span></a><a href="/it/terms" lang="it" hreflang="it"><span>Italiano</span></a><a href="/pt-br/terms" lang="pt-BR" hreflang="pt-BR"><span>Português</span></a><a href="/zh/terms" lang="zh-Hans" hreflang="zh-Hans"><span>简体中文</span></a><a href="/ko/terms" lang="ko" hreflang="ko" class="active" aria-current="true"><span>한국어</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></a><a href="/nl/terms" lang="nl" hreflang="nl"><span>Nederlands</span></a><a href="/ja/terms" lang="ja" hreflang="ja"><span>日本語</span></a><a href="/zh-hant/terms" lang="zh-Hant" hreflang="zh-Hant"><span>繁體中文</span></a><a href="/ru/terms" lang="ru" hreflang="ru"><span>Русский</span></a><a href="/tr/terms" lang="tr" hreflang="tr"><span>Türkçe</span></a><a href="/id/terms" lang="id" hreflang="id"><span>Bahasa Indonesia</span></a><a href="/hi/terms" lang="hi" hreflang="hi"><span>हिन्दी</span></a><a href="/ar/terms" lang="ar" hreflang="ar"><span>العربية</span></a><a href="/ur/terms" lang="ur" hreflang="ur"><span>اردو</span></a></div></div></details>
-      <a class="head-get" href="https://apps.apple.com/app/id6783131829" aria-label="App Store에서 Privaro 다운로드">다운로드</a>
+      <a class="head-get for-ios" href="https://apps.apple.com/app/id6783131829" aria-label="App Store에서 Privaro 다운로드">다운로드</a>
+      <a class="head-get for-android" href="https://play.google.com/store/apps/details?id=com.erdincz.privaro.app" aria-label="Google Play에서 Privaro 다운로드">다운로드</a>
     </div>
     <nav class="head-links head-links-phone" aria-label="Privaro">
       <a href="/ko/pro">Pro 기능</a>
