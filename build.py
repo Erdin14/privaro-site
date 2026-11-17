@@ -487,10 +487,15 @@ def render(html, page, code, htmllang, head, strings, pricing, here=None):
     html = html.replace("{{ANDROID_SHOTS}}", ANDROID_SHOTS + (FOLDER[code] + "/" if FOLDER[code] else ""))
     html = html.replace("{{SEO}}", head)
     # The header's download link: the App Store, except on the Android page,
-    # where it's Google Play.
+    # where it's Google Play. Elsewhere an Android phone (the line in each
+    # page's <head>) gets a second one, to Google Play, in its place
+    # (.for-android in styles.css).
     android = page == "android"
-    html = html.replace("{{HEAD_GET_URL}}", PLAY_STORE if android else APP_STORE)
-    html = html.replace("{{HEAD_GET_LABEL}}", "{{android_badge_label}}" if android else "{{badge_label}}")
+    get = '<a class="head-get{mark}" href="{url}" aria-label="{label}">{{{{nav_download}}}}</a>'
+    play = get.format(mark="", url=PLAY_STORE, label="{{android_badge_label}}")
+    html = html.replace("{{HEAD_GET}}", play if android else
+                        get.format(mark=" for-ios", url=APP_STORE, label="{{badge_label}}") + "\n      "
+                        + play.replace('class="head-get"', 'class="head-get for-android"'))
     html = html.replace("{{APP_STORE}}", APP_STORE)
     html = html.replace("{{PLAY_STORE}}", PLAY_STORE)
     html = html.replace("{{PLAY_BADGE}}", play_badge(code))

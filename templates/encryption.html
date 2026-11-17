@@ -14,6 +14,9 @@
 <script>
 // Register before first reveal, including restored history entries.
 (() => {
+  // An Android phone: the header's download goes to Google Play, not the
+  // App Store (.for-android in styles.css).
+  if (/Android/i.test(navigator.userAgent)) document.documentElement.classList.add('on-android');
   let transition;
   window.addEventListener("pagereveal", event => {
     transition = event.viewTransition;

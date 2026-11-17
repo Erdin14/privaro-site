@@ -10,7 +10,9 @@
      strings). Not on phones: a fourth word took the row onto a second line
      at 360px in Spanish, Portuguese, Japanese and Russian; there the way to
      it is under the homepage's badge, and in the footer. The download goes
-     to the App Store, and to Google Play on the Android page (build.py). -->
+     to the App Store, and to Google Play on the Android page; on an Android
+     phone (the line in each page's <head>), to Google Play on every page
+     (build.py). -->
 <header class="site-head">
   <div class="head-bar">
     <nav class="head-links head-links-wide" aria-label="Privaro">
@@ -22,7 +24,7 @@
     <a class="brand" href="{{HOME_URL}}"><img src="/logo.png" width="28" height="28" alt="" />Privaro</a>
     <div class="head-end">
       {{SWITCHER}}
-      <a class="head-get" href="{{HEAD_GET_URL}}" aria-label="{{HEAD_GET_LABEL}}">{{nav_download}}</a>
+      {{HEAD_GET}}
     </div>
     <nav class="head-links head-links-phone" aria-label="Privaro">
       <a href="{{PRO_URL}}">{{footer_pro}}</a>

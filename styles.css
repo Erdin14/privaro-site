@@ -226,7 +226,7 @@ main:focus { outline: none; }
 .appstore img { height: 44px; width: auto; }
 
 /* Pressed controls give a little under the finger, then spring back. */
-:is(.appstore, .head-get, .film-button, .lang summary, .shot-viewer button) {
+:is(.appstore, .android-get, .head-get, .film-button, .lang summary, .shot-viewer button) {
   transition: scale var(--dur-move) var(--ease-spring), color var(--dur-state) var(--ease-state),
     background-color var(--dur-state) var(--ease-state), border-color var(--dur-state) var(--ease-state),
     opacity var(--dur-state) var(--ease-state); }
@@ -234,9 +234,9 @@ main:focus { outline: none; }
    comes up to meet it. (It used to dim, which is what a control that's
    switched off does.) */
 @media (hover: hover) and (pointer: fine) {
-  .appstore:hover { scale: 1.03; }
+  :is(.appstore, .android-get):hover { scale: 1.03; }
 }
-:is(.appstore, .head-get, .film-button, .lang summary, .shot-viewer button):active {
+:is(.appstore, .android-get, .head-get, .film-button, .lang summary, .shot-viewer button):active {
   scale: .97; transition-duration: var(--dur-press); transition-timing-function: var(--ease-state); }
 
 /* Header, on every page: the seam. One hairline across the top of the page,
@@ -448,6 +448,25 @@ main:focus { outline: none; }
 .buy-note { font-size: var(--size-text); line-height: 1.5; letter-spacing: var(--track-text); color: var(--muted); }
 .buy-note > span { display: block; }
 .buy-note > span:first-child { color: var(--ink); }
+/* On an Android phone (the line in each page's <head> marks it) the App
+   Store has nothing to offer: what's marked .for-ios gives way to what's
+   marked .for-android, the header's download to Google Play and, on the
+   homepage, the badge to the way to the Android page. Without the script,
+   the page is the iPhone's, as it always was. */
+:root:not(.on-android) .for-android, .on-android .for-ios { display: none; }
+/* The way to the Android page, on the homepage: under the badge, a "go on"
+   link like the page's others (.more). On an Android phone it takes the
+   badge's place instead: words on a white button the badge's height, never
+   Google's badge, since the page shows iPhones. */
+.buy-note .also a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--dim);
+  text-decoration-thickness: 1px; text-underline-offset: 4px;
+  transition: text-decoration-color var(--dur-state) var(--ease-state); }
+.buy-note .also a:hover { text-decoration-color: var(--ink); }
+.buy-note .also { margin-top: var(--space-2); }
+.android-get { display: inline-flex; flex: none; align-items: center; height: 48px; padding-inline: 22px;
+  border-radius: 10px; background: #fff; color: #000; font-size: var(--size-lead); font-weight: 600;
+  letter-spacing: -.01em; white-space: nowrap; }
+.android-get:hover { text-decoration: none; }
 
 /* The gallery: the four screens side by side, upright and aligned, each
    labelled with what it's for. A phone leans a little toward the pointer
@@ -881,7 +900,7 @@ main:focus { outline: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   .shot-open { transition-duration: var(--dur-state); }
-  :is(.appstore, .head-get, .film-button, .lang summary, .shot-viewer button):active, .appstore:hover { scale: none; }
+  :is(.appstore, .android-get, .head-get, .film-button, .lang summary, .shot-viewer button):active, :is(.appstore, .android-get):hover { scale: none; }
   .skip { transition: none; }
 }
 

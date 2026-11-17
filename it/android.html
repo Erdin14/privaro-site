@@ -38,9 +38,10 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/logo.png" />
-<link rel="stylesheet" href="/styles.css?v=7363c0581d" />
+<link rel="stylesheet" href="/styles.css?v=fab411243b" />
 <script>
 (() => {
+if (/Android/i.test(navigator.userAgent)) document.documentElement.classList.add('on-android');
 let transition;
 window.addEventListener("pagereveal", event => {
 transition = event.viewTransition;
