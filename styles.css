@@ -1053,14 +1053,23 @@ main:focus { outline: none; }
 .play img { height: 50px; width: auto; }
 .play-get { display: flex; flex-direction: column; align-items: center; gap: var(--space-4); margin-top: var(--space-7); }
 .play-get .buy-note { text-align: center; }
-/* Where the Android screenshots go: a phone's shape, outlined and labelled,
-   so nobody takes it for the finished page. Taken out with the note in
-   android.html when the real screenshots arrive. */
+/* The app's four screens, in a row as on the homepage, two by two where
+   four would be too small to read. Each is the phone in its frame, a plain
+   one with no maker's design (the page shows no brand's phone), cut to its
+   outline (body and side buttons) by a mask drawn from the same measurements,
+   as the homepage's are. WebP, with the JPEG for browsers without it; the
+   <picture> takes no space of its own. The height cap is the homepage's,
+   for this frame's proportions (760 by 1600). */
 .android-shots { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-7) var(--gutter); margin-top: var(--space-9); }
-.android-shots figure { min-width: 0; margin: 0; }
-.shot-slot { display: grid; place-items: center; aspect-ratio: 9 / 19.5; padding: var(--space-4); border: 1.5px dashed rgb(255 255 255 / .24);
-  border-radius: 32px; background: rgb(255 255 255 / .025); color: var(--faint); font-size: var(--size-small); line-height: 1.4;
-  text-align: center; letter-spacing: .04em; text-transform: uppercase; }
+.android-shots figure { min-width: 0; max-width: min(312px, 72vh * .475); margin: 0; }
+.android-shots picture { display: contents; }
+.android-shots img { display: block; width: 100%; height: auto;
+  -webkit-mask: url(/shots/android/phone-mask.svg) center / 100% 100% no-repeat;
+  mask: url(/shots/android/phone-mask.svg) center / 100% 100% no-repeat; }
+@media (max-width: 1180px) {
+  .android-shots { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .android-shots figure { max-width: 312px; }
+}
 .android-shots figcaption { margin-top: var(--space-5); padding-inline: 2px; font-size: var(--size-text); line-height: 1.5;
   letter-spacing: var(--track-text); }
 .android-shots figcaption strong { display: block; font-size: var(--size-lead); font-weight: 600; line-height: 1.35; letter-spacing: -.012em; color: var(--ink);

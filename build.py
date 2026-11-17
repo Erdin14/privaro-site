@@ -106,6 +106,8 @@ FOLDER = {code: folder for code, folder, _, _ in LANGS}
 # The homepage screenshots, taken in each language. English's sit at the top of
 # the folder, every other language's in a subfolder named like its pages' folder.
 SHOTS = "/shots/framed-18-pro-max/"
+# The Android page's screenshots, laid out the same way. Never an iPhone's.
+ANDROID_SHOTS = "/shots/android/"
 OG_LOCALE = {"en": "en_US", "es": "es_ES", "fr": "fr_FR", "de": "de_DE", "it": "it_IT",
              "pt-BR": "pt_BR", "zh-Hans": "zh_CN", "ko": "ko_KR", "nl": "nl_NL",
              "ja": "ja_JP", "zh-Hant": "zh_TW", "ru": "ru_RU", "tr": "tr_TR", "id": "id_ID",
@@ -482,6 +484,7 @@ def render(html, page, code, htmllang, head, strings, pricing, here=None):
     html = html.replace("{{LANG}}", htmllang)
     html = html.replace("{{DIR}}", "rtl" if code in RTL else "ltr")
     html = html.replace("{{SHOTS}}", SHOTS + (FOLDER[code] + "/" if FOLDER[code] else ""))
+    html = html.replace("{{ANDROID_SHOTS}}", ANDROID_SHOTS + (FOLDER[code] + "/" if FOLDER[code] else ""))
     html = html.replace("{{SEO}}", head)
     # The header's download link: the App Store, except on the Android page,
     # where it's Google Play.

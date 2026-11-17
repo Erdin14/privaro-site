@@ -269,6 +269,7 @@ assert [h["source"] for h in vercel.get("headers", [])] == ["/.well-known/apple-
 # never pictured alongside another platform's).
 badges = sorted(p.name for p in (dist / "badges").iterdir())
 assert badges == sorted(f"google-play-{folder or 'en'}.svg" for _, folder, _, _ in build.LANGS), badges
+assert (dist / "shots/android/phone-mask.svg").is_file()
 for code, folder, _, _ in build.LANGS:
     android = (dist / folder / "android.html").read_text(encoding="utf-8")
     badge = build.play_badge(code)
@@ -277,7 +278,15 @@ for code, folder, _, _ in build.LANGS:
     assert all(int(h) >= 28 for _, _, h in imgs), code
     assert android.count(f'href="{build.PLAY_STORE}"') == 3, code
     assert build.APP_STORE not in android and "appstore-badge" not in android and build.SHOTS not in android, code
-    assert "Android screenshot to come" in android, f"{code}: the screenshot places are marked until real ones arrive"
+    # Its four screenshots: the Android app's own, in this page's language,
+    # each as WebP and JPEG, with alt text, and published.
+    shots = build.ANDROID_SHOTS + (folder + "/" if folder else "")
+    for name in ("lock", "vault", "albums", "privacy"):
+        jpg, webp = f"{shots}shot-{name}.jpg", f"{shots}shot-{name}.webp"
+        assert f'<source srcset="{webp}" type="image/webp" />' in android, (code, name)
+        assert re.search(rf'<img src="{re.escape(jpg)}" width="760" height="1600" alt="[^"]+"', android), (code, name)
+        assert (dist / jpg.lstrip("/")).is_file() and (dist / webp.lstrip("/")).is_file(), (code, name)
+    assert "shot-slot" not in android and "screenshot to come" not in android, code
     # Every page links to it, in its own language, from the header and footer.
     for page in ("index", "pro", "faq", "privacy", "terms", "security", "encryption"):
         html = (dist / build.out_path(page, code)).read_text(encoding="utf-8")
